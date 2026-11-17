@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#111111">
-<title><?= e($title) ?> · Koncerty &amp; Festivaly</title>
+<title><?= e($title) ?> · <?= e(L('site-name')) ?></title>
 <?php $basePath = rtrim((string)parse_url(cfg('app.base_url'), PHP_URL_PATH), '/'); ?>
 <link rel="stylesheet" href="<?= e($basePath) ?>/assets/css/site.css">
 <?php foreach (cfg('app.languages') as $l): ?>
@@ -13,10 +13,10 @@
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="<?= e(url()) ?>">Koncerty <span>&amp;</span> Festivaly</a>
+  <a class="brand" href="<?= e(url()) ?>"><?= e(L('site-name')) ?></a>
   <div class="header-actions">
-    <a class="login-link" href="<?= e(url('login')) ?>">Přihlásit</a>
-    <nav class="language-switch" aria-label="Jazyk">
+    <a class="login-link" href="<?= e(url('login')) ?>">[nav-login]</a>
+    <nav class="language-switch" aria-label="[language-label]">
 <?php foreach (cfg('app.languages') as $l): ?>
       <a href="<?= e(url($GLOBALS['KF_ROUTE'] ?? '', $l)) ?>?setlang"<?= lang_code() === $l ? ' aria-current="page"' : '' ?>><?= e(strtoupper($l)) ?></a>
 <?php endforeach; ?>
@@ -24,6 +24,6 @@
   </div>
 </header>
 <main id="content" class="site-main"><?= $content ?></main>
-<footer class="site-footer">Koncerty &amp; Festivaly</footer>
+<footer class="site-footer"><?= e(L('site-name')) ?></footer>
 </body>
 </html>
