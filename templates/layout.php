@@ -13,7 +13,7 @@
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="<?= e(url()) ?>"><?= e(L('site-name')) ?></a>
+  <a class="brand" href="<?= e(url()) ?>"><span class="brand-word">Koncerty</span> <span class="brand-amp">&amp;</span> <span class="brand-word">Festivaly</span></a>
   <div class="header-actions">
     <a class="login-link" href="<?= e(url('login')) ?>">[nav-login]</a>
     <nav class="language-switch" aria-label="[language-label]">
