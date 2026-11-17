@@ -2,10 +2,14 @@ name: Import FTP to GitHub
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/ftp-to-github.yml
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: ftp-import
@@ -13,11 +17,13 @@ concurrency:
 
 jobs:
   import:
-    name: Download FTP and prepare review
+    name: Download FTP and commit changes to main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Install lftp
         run: |
@@ -59,8 +65,8 @@ jobs:
               "set net:timeout 30",
               f"open -p {port} {server}",
               f"user {username} {password}",
-              # Pull remote files into the checked-out repository. Never import
-              # secrets, Git metadata, or the workflow definitions from the server.
+              # Download only. Never delete repository files absent from FTP.
+              # Never import secrets, Git metadata, or workflow definitions.
               "mirror --verbose --parallel=2 "
               "--exclude-glob .env --exclude-glob '.env.*' "
               "--exclude-glob .git --exclude-glob '.git/**' "
@@ -74,20 +80,26 @@ jobs:
           lftp -f /tmp/ftp-import.lftp
           rm -f /tmp/ftp-import.lftp
 
-      - name: Create pull request for review
-        uses: peter-evans/create-pull-request@v7
-        with:
-          branch: ftp-import
-          delete-branch: true
-          commit-message: "Import current website files from FTP"
-          title: "Import current website files from FTP"
-          body: |
-            This pull request contains files downloaded from the configured FTP directory.
+      - name: Commit FTP changes directly to main
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-            Review the changes before merging. The import intentionally excludes:
-            - `.env` and `.env.*`
-            - `.git` and `.github`
+          # Explicitly keep environment files and GitHub workflow files out of the commit.
+          git add -A -- . \
+            ':(exclude).env' \
+            ':(exclude).env/**' \
+            ':(exclude).env.*' \
+            ':(exclude).env.*/**' \
+            ':(exclude).github' \
+            ':(exclude).github/**'
 
-            No files are deleted from the repository by this import.
-          add-paths: |
-            **
+          if git diff --cached --quiet; then
+            echo "FTP and GitHub are already in sync; nothing to commit."
+            exit 0
+          fi
+
+          git status --short
+          git commit -m "Sync website files from FTP"
+          git push origin HEAD:main
