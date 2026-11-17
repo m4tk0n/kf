@@ -1,0 +1,44 @@
+name: Deploy GitHub to FTP
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - ".github/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Upload changed website files to FTP
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT || 21 }}
+          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          protocol: ftp
+          state-name: .ftp-deploy-sync-state.json
+          dangerous-clean-slate: false
+          log-level: standard
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.env
+            **/.env.*
+            **/.ftp-deploy-sync-state.json
