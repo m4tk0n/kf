@@ -1,0 +1,70 @@
+:root {
+  color-scheme: dark;
+  --bg: #101010;
+  --panel: #191919;
+  --panel-soft: #202020;
+  --line: #303030;
+  --text: #f2f2f2;
+  --muted: #a0a0a0;
+  --accent: #e3b341;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+html { min-width: 320px; background: var(--bg); }
+body { margin: 0; color: var(--text); background: var(--bg); }
+a { color: inherit; text-decoration: none; }
+button, input, select { font: inherit; }
+.site-header {
+  min-height: 58px; padding: 10px max(14px, calc((100vw - 980px) / 2));
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  border-bottom: 1px solid var(--line); background: #151515;
+}
+.brand { font-size: 17px; font-weight: 800; letter-spacing: -.45px; white-space: nowrap; }
+.brand span { color: var(--accent); }
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.login-link { padding: 7px 11px; border: 1px solid #555; border-radius: 6px; font-size: 13px; }
+.language-switch { display: flex; gap: 5px; }
+.language-switch a { padding: 5px 6px; color: var(--muted); font-size: 11px; }
+.language-switch a[aria-current="page"] { color: var(--accent); }
+.site-main { width: min(100% - 28px, 980px); margin: 0 auto; }
+.page-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 22px 0 14px; }
+.eyebrow { margin: 0 0 5px; color: var(--accent); font-size: 10px; font-weight: 800; letter-spacing: 1.5px; }
+h1 { margin: 0; font-size: 25px; line-height: 1.15; }
+.muted { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+.filter-link { padding: 7px 11px; border: 1px solid var(--line); border-radius: 6px; font-size: 12px; }
+.date-panel { display: grid; grid-template-columns: 40px 40px minmax(120px, 1fr) 40px 40px; gap: 5px; padding: 7px; background: var(--panel); border: 1px solid var(--line); border-radius: 9px; }
+.date-panel button { min-height: 38px; color: var(--text); background: var(--panel-soft); border: 0; border-radius: 5px; }
+.date-arrow { font-size: 19px; cursor: pointer; }
+.date-current { display: flex; justify-content: center; align-items: center; gap: 9px; font-size: 13px; font-weight: 700; }
+.date-current span { color: var(--muted); font-size: 12px; font-weight: 500; }
+.event-section { margin-top: 22px; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 9px; }
+h2 { margin: 0; font-size: 16px; }
+.count { color: var(--muted); font-size: 12px; }
+.empty-state { display: flex; min-height: 145px; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; background: var(--panel); border: 1px solid var(--line); border-radius: 9px; }
+.empty-icon { margin-bottom: 9px; color: #777; font-size: 12px; }
+.empty-state strong { font-size: 14px; }
+.empty-state p { max-width: 360px; margin: 5px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.filters { margin: 20px 0 28px; padding: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 9px; }
+.filter-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; margin-top: 11px; }
+.filter-grid label { display: grid; gap: 5px; color: var(--muted); font-size: 11px; }
+.filter-grid input, .filter-grid select { width: 100%; min-width: 0; height: 37px; padding: 0 9px; color: var(--text); background: #111; border: 1px solid var(--line); border-radius: 5px; font-size: 12px; }
+.site-footer { padding: 13px 14px; border-top: 1px solid var(--line); color: #777; text-align: center; font-size: 11px; }
+@media (max-width: 520px) {
+  .site-header { min-height: 52px; padding: 8px 12px; gap: 6px; }
+  .brand { font-size: 14px; }
+  .header-actions { gap: 6px; }
+  .login-link { padding: 6px 8px; font-size: 12px; }
+  .language-switch { display: none; }
+  .site-main { width: calc(100% - 24px); }
+  .page-heading { padding: 16px 0 11px; }
+  h1 { font-size: 22px; }
+  .muted { font-size: 12px; }
+  .date-panel { grid-template-columns: 32px 32px minmax(0, 1fr) 32px 32px; gap: 4px; padding: 5px; }
+  .date-panel button { min-height: 35px; }
+  .date-current { flex-direction: column; gap: 1px; font-size: 12px; line-height: 1.1; }
+  .date-current span { font-size: 10px; }
+  .filter-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .filter-grid label:first-child { grid-column: 1 / -1; }
+  .filters { margin-top: 15px; padding: 11px; }
+}
