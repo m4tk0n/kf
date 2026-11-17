@@ -30,6 +30,6 @@ $route = array_slice($parts, 1);
 $GLOBALS['KF_ROUTE'] = implode('/', $route);
 
 match ($route[0] ?? '') {
-    ''      => page('home'),
+    ''      => page('home', ['title' => L('home-title')]),
     default => page('404', ['title' => L('err-404')], 404),
 };
