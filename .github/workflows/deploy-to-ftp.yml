@@ -23,6 +23,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Normalize FTP target directory
+        id: ftp-dir
+        env:
+          FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
+        run: |
+          set -euo pipefail
+          if [ -z "${FTP_REMOTE_DIR:-}" ]; then
+            echo "Missing GitHub Secret FTP_REMOTE_DIR"
+            exit 1
+          fi
+          server_dir="${FTP_REMOTE_DIR%/}/"
+          printf 'server_dir=%s\n' "$server_dir" >> "$GITHUB_OUTPUT"
+          echo "FTP target directory format validated."
+
       - name: Deploy to FTP server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -30,7 +44,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT || 21 }}
-          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          server-dir: ${{ steps.ftp-dir.outputs.server_dir }}
           protocol: ftp
           state-name: .ftp-deploy-sync-state.json
           dangerous-clean-slate: false
