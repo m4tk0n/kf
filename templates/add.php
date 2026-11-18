@@ -44,8 +44,9 @@ unset($_SESSION['add_error'], $_SESSION['add_success']);
     <form class="account-form add-form" method="post" action="<?= e(url('add')) ?>?type=<?= e($type) ?>" autocomplete="off"<?= $type === 'venue' ? ' enctype="multipart/form-data"' : '' ?>>
       <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token'] ?? '') ?>">
       <input type="hidden" name="type" value="<?= e($type) ?>">
-      <label><?= e(L('add-name')) ?>
-        <input name="name" maxlength="120" required value="<?= e($_POST['name'] ?? '') ?>">
+      <label class="autocomplete-field"><?= e(L('add-name')) ?>
+        <input name="name" maxlength="120" required value="<?= e($_POST['name'] ?? '') ?>" data-autocomplete="venues" data-min-chars="3" aria-autocomplete="list" aria-expanded="false">
+        <div class="autocomplete-results" role="listbox" hidden></div>
       </label>
       <?php if ($type === 'band'): ?>
         <label><?= e(L('country-label')) ?>
@@ -59,10 +60,10 @@ unset($_SESSION['add_error'], $_SESSION['add_success']);
           </select>
         </label>
       <?php elseif ($type === 'venue'): ?>
-        <label><?= e(L('country-label')) ?>
-          <select name="country" required><option value="">—</option>
-            <?php foreach ($countries as $country): ?><option value="<?= e($country['iso2']) ?>"<?= (($_POST['country'] ?? '') === $country['iso2']) ? ' selected' : '' ?>><?= e($country['name']) ?> (<?= e($country['iso2']) ?>)</option><?php endforeach; ?>
-          </select>
+        <label class="autocomplete-field"><?= e(L('country-label')) ?>
+          <input name="country_display" maxlength="100" required value="<?= e($_POST['country_display'] ?? $_POST['country'] ?? '') ?>" data-autocomplete="countries" data-min-chars="2" aria-autocomplete="list" aria-expanded="false" autocomplete="off">
+          <input type="hidden" name="country" value="<?= e($_POST['country'] ?? '') ?>">
+          <div class="autocomplete-results" role="listbox" hidden></div>
         </label>
         <label><?= e(L('add-city')) ?>
           <input name="city" maxlength="100" required value="<?= e($_POST['city'] ?? '') ?>">
@@ -108,6 +109,101 @@ unset($_SESSION['add_error'], $_SESSION['add_success']);
         <label><?= e(L('add-starts')) ?><input type="datetime-local" name="starts_at" required></label>
         <label><?= e(L('add-ends')) ?><input type="datetime-local" name="ends_at"></label>
       <?php endif; ?>
+
+      <?php if ($type === 'venue'): ?>
+      <script>
+      (() => {
+        const form = document.querySelector('.add-form');
+        if (!form) return;
+        const base = <?= json_encode(url(''), JSON_UNESCAPED_SLASHES) ?>;
+        const fields = form.querySelectorAll('[data-autocomplete]');
+        fields.forEach((input) => {
+          const wrap = input.closest('.autocomplete-field');
+          const list = wrap.querySelector('.autocomplete-results');
+          const kind = input.dataset.autocomplete;
+          const min = Number(input.dataset.minChars || 2);
+          let timer = 0;
+          let active = -1;
+          let items = [];
+          const hiddenCountry = kind === 'countries' ? form.querySelector('input[name="country"]') : null;
+          const close = () => { list.hidden = true; input.setAttribute('aria-expanded', 'false'); active = -1; };
+          const choose = (item) => {
+            if (kind === 'countries') {
+              input.value = item.label;
+              hiddenCountry.value = item.code.toUpperCase();
+            } else {
+              input.value = item.value;
+            }
+            close();
+          };
+          const render = (rows) => {
+            items = rows;
+            list.replaceChildren();
+            rows.forEach((item, index) => {
+              const option = document.createElement('button');
+              option.type = 'button';
+              option.className = 'autocomplete-option';
+              option.setAttribute('role', 'option');
+              option.textContent = kind === 'countries' ? item.label : item.value;
+              if (kind === 'countries' && item.other) {
+                const extra = document.createElement('small');
+                extra.textContent = item.other;
+                option.append(extra);
+              }
+              option.addEventListener('click', () => choose(item));
+              list.append(option);
+            });
+            list.hidden = rows.length === 0;
+            input.setAttribute('aria-expanded', rows.length ? 'true' : 'false');
+          };
+          input.addEventListener('input', () => {
+            if (hiddenCountry) hiddenCountry.value = '';
+            const term = input.value.trim();
+            clearTimeout(timer);
+            if (term.length < min) { close(); return; }
+            timer = setTimeout(async () => {
+              try {
+                const response = await fetch(base + 'suggest/' + (kind === 'venues' ? 'venues' : 'countries') + '?q=' + encodeURIComponent(term), {
+                  headers: { 'Accept': 'application/json' },
+                  credentials: 'same-origin'
+                });
+                if (!response.ok) throw new Error('Autocomplete request failed');
+                render(await response.json());
+              } catch (_) { close(); }
+            }, 180);
+          });
+          input.addEventListener('keydown', (event) => {
+            if (list.hidden || !items.length) return;
+            if (event.key === 'Escape') { close(); return; }
+            if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+              event.preventDefault();
+              active = (active + (event.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+              [...list.children].forEach((node, i) => node.classList.toggle('active', i === active));
+            }
+            if (event.key === 'Enter' && active >= 0) {
+              event.preventDefault();
+              choose(items[active]);
+            }
+          });
+          input.addEventListener('blur', () => setTimeout(close, 140));
+        });
+        form.addEventListener('submit', (event) => {
+          const countryInput = form.querySelector('input[name="country_display"]');
+          const countryCode = form.querySelector('input[name="country"]');
+          if (countryInput && !countryCode.value && /^[a-z]{2}$/i.test(countryInput.value.trim())) {
+            countryCode.value = countryInput.value.trim().toUpperCase();
+          }
+          if (countryInput && !countryCode.value) {
+            event.preventDefault();
+            countryInput.setCustomValidity('Vyberte zemi z našeptávače nebo zadejte její dvoupísmenný ISO kód.');
+            countryInput.reportValidity();
+            countryInput.addEventListener('input', () => countryInput.setCustomValidity(''), { once: true });
+          }
+        });
+      })();
+      </script>
+      <?php endif; ?>
+
       <button type="submit" class="primary-button"><?= e(L('add-submit')) ?></button>
     </form>
   <?php endif; ?>
