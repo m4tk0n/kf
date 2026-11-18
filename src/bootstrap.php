@@ -13,3 +13,12 @@ if (!preg_match('/^[a-z0-9]{1,10}_$/', cfg('db.prefix'))) {
 date_default_timezone_set(cfg('app.timezone'));
 error_reporting(E_ALL);
 ini_set('display_errors', cfg('app.debug') ? '1' : '0');
+
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start([
+        'cookie_httponly' => true,
+        'cookie_secure' => str_starts_with(cfg('app.base_url'), 'https'),
+        'cookie_samesite' => 'Lax',
+        'use_strict_mode' => true,
+    ]);
+}
