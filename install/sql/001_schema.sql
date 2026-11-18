@@ -86,11 +86,13 @@ CREATE TABLE IF NOT EXISTS `{p}event_bands` (
 CREATE TABLE IF NOT EXISTS `{p}users` (
   `id`        INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `email`     VARCHAR(190) NOT NULL,
+  `display_name` VARCHAR(80) NULL,
   `pass`      VARCHAR(255) NOT NULL,
   `role`      TINYINT UNSIGNED NOT NULL DEFAULT 1,
   `state`     TINYINT UNSIGNED NOT NULL DEFAULT 0,
   `confirmed` TINYINT UNSIGNED NOT NULL DEFAULT 0,
   `prefs`     JSON NULL,
+  `deletion_scheduled_at` DATETIME NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
