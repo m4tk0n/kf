@@ -378,14 +378,39 @@ function require_login(?string $returnTo = null): array
 
 function require_role(int $minimumRole): array
 {
-    $user = require_login();
-    if ((int)$user['role'] < $minimumRole) {
-        // Deliberately do not reveal that a protected route exists.
-        http_response_code(404);
+    $user = refresh_authenticated_user();
+    if ($user === null || (int)$user['role'] < $minimumRole) {
+        // Anonymous and unauthorised visitors get the identical 404: the route's existence is not revealed.
         header('Cache-Control: no-store, private');
-        exit('Not Found');
+        page('404', ['title' => L('err-404')], 404);
+        exit;
     }
     return $user;
+}
+
+/** Přispívat smí jen uživatel ve stavu 0 (ok); stav 1 (no_contrib) a 2 (blocked) ne. */
+function require_contributor(): array
+{
+    $user = require_login();
+    if ((int)($user['state'] ?? 2) !== 0) {
+        http_response_code(403);
+        header('Cache-Control: no-store, private');
+        exit('Forbidden');
+    }
+    return $user;
+}
+
+/** Limit čekajících návrhů na uživatele (limits.pending_per_user); důvěryhodní a vyšší role jsou vyňati. */
+function assert_pending_limit(array $user): void
+{
+    if ((int)$user['role'] >= 2) {
+        return;
+    }
+    $q = db()->prepare('SELECT COUNT(*) FROM ' . tbl('pending') . ' WHERE user_id = ?');
+    $q->execute([(int)$user['id']]);
+    if ((int)$q->fetchColumn() >= (int)cfg('limits.pending_per_user')) {
+        throw new RuntimeException(L('add-error-limit'));
+    }
 }
 
 function require_csrf_token(): void

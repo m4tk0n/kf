@@ -34,10 +34,9 @@ CREATE TABLE IF NOT EXISTS `{p}genres` (
 CREATE TABLE IF NOT EXISTS `{p}venues` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `city_id` INT UNSIGNED NOT NULL,
-  `slug` VARCHAR(80) NOT NULL,
   `name` VARCHAR(120) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `city_slug` (`city_id`, `slug`),
+  KEY `city_id` (`city_id`),
   KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

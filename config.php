@@ -33,6 +33,7 @@ return [
     ],
     'img' => [
         'format' => 'webp', 'quality' => 80, 'max_bytes' => 3145728,
+        'max_pixels' => 16000000,
         'folder_divisor' => 1000,
         'band'  => ['s' => 96,  'l' => 400],
         'event' => ['s' => 150, 'l' => 600],

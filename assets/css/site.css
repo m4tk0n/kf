@@ -213,3 +213,29 @@ h2 { margin: 0; font-size: 16px; }
 }
 .autocomplete-option small { color: var(--muted); font-size: 11px; }
 .autocomplete-option:hover, .autocomplete-option.active { background: #333; color: var(--accent); }
+
+/* Detail klubu, náhled a upozornìní na existující klub */
+.venue-detail { padding: 15px; background: var(--panel); border: 1px solid var(--line); border-radius: 9px; }
+.venue-title { margin: 0 0 4px; font-size: 19px; }
+.venue-place { margin: 0 0 12px; color: var(--muted); font-size: 12px; }
+.venue-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin: 0 0 14px; }
+.venue-gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); border-radius: 6px; }
+.venue-gallery img:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.venue-description { margin: 0 0 14px; font-size: 13px; line-height: 1.55; overflow-wrap: anywhere; }
+.venue-info { display: grid; gap: 8px; margin: 0; font-size: 13px; }
+.venue-info div { display: grid; gap: 2px; }
+.venue-info dt { color: var(--muted); font-size: 11px; }
+.venue-info dd { margin: 0; overflow-wrap: anywhere; }
+.venue-info a, .venue-exists a { color: var(--accent); font-weight: 700; }
+.venue-exists { margin-top: 6px; padding: 9px 10px; border: 1px solid var(--accent); border-radius: 6px; color: var(--text); font-size: 12px; line-height: 1.6; }
+.venue-exists[hidden] { display: none; }
+.venue-exists small { color: var(--muted); }
+.preview-urls { overflow-wrap: anywhere; margin: 12px 0 0; }
+.preview-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+.preview-actions button { min-height: 44px; cursor: pointer; font: inherit; }
+.kept-images { margin: 0; padding: 10px; border: 1px solid var(--line); border-radius: 6px; }
+.kept-images legend { padding: 0 6px; color: var(--muted); font-size: 12px; }
+.kept-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+.kept-image img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 5px; }
+.kept-image span { display: flex; align-items: center; gap: 6px; }
+.account-form .kept-image input[type="checkbox"] { width: auto; height: auto; }
