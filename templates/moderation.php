@@ -1,4 +1,5 @@
 <?php
+lang_load('events');
 $rows = is_array($rows ?? null) ? $rows : [];
 $counts = is_array($counts ?? null) ? $counts : ['event'=>0,'venue'=>0,'band'=>0];
 $type = (string)($type ?? '');
