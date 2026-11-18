@@ -36,7 +36,7 @@ function ai_scan(string $directory, string $root, array &$files): void
     }
 
     foreach ($items as $name) {
-        if ($name === '.' || $name === '..' || ai_excluded($name) || $name === '.git') {
+        if ($name === '.' || $name === '..' || ai_excluded($name) || $name === '.git' || $name === 'ai-backups') {
             continue;
         }
 
@@ -81,7 +81,7 @@ function ai_resolve_file(string $root, string $relative): string|false
     }
 
     foreach (explode('/', $relative) as $part) {
-        if (ai_excluded($part) || $part === '.git') {
+        if (ai_excluded($part) || $part === '.git' || $part === 'ai-backups') {
             return false;
         }
     }
@@ -103,7 +103,215 @@ function ai_is_text(string $content): bool
     return !str_contains($content, "\0");
 }
 
+
+
+/**
+ * Zapisovací API. Klíč AI_WRITE_KEY se načítá přímo z .env a nikdy se neposílá klientovi.
+ */
+function ai_read_write_key(string $root): string
+{
+    $envFile = $root . DIRECTORY_SEPARATOR . '.env';
+    if (!is_file($envFile) || is_link($envFile)) {
+        return '';
+    }
+    foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) ?: [] as $line) {
+        if (preg_match('/^\s*AI_WRITE_KEY\s*=\s*(.*?)\s*$/', $line, $match)) {
+            $value = trim($match[1]);
+            if (strlen($value) >= 2 && (($value[0] === '"' && str_ends_with($value, '"')) || ($value[0] === "'" && str_ends_with($value, "'")))) {
+                $value = substr($value, 1, -1);
+            }
+            return $value;
+        }
+    }
+    return '';
+}
+
+function ai_authorized(string $root): bool
+{
+    $expected = ai_read_write_key($root);
+    if ($expected === '' || strlen($expected) < 32) {
+        return false;
+    }
+
+    $headers = function_exists('getallheaders') ? getallheaders() : [];
+    $authorization = (string)($_SERVER['HTTP_AUTHORIZATION'] ?? $headers['Authorization'] ?? $headers['authorization'] ?? '');
+    if (!preg_match('/^Bearer\s+(.+)$/i', trim($authorization), $match)) {
+        return false;
+    }
+    return hash_equals($expected, trim($match[1]));
+}
+
+function ai_validate_write_path(string $relative): string|false
+{
+    $relative = str_replace('\\', '/', trim($relative));
+    if ($relative === '' || str_starts_with($relative, '/') || str_contains($relative, "\0") || preg_match('~(^|/)\.\.?(/|$)~', $relative)) {
+        return false;
+    }
+    $parts = explode('/', $relative);
+    foreach ($parts as $part) {
+        if ($part === '' || ai_excluded($part) || $part === '.git' || $part === 'ai-backups') {
+            return false;
+        }
+    }
+    // Záměrně nelze měnit samotné administrační API.
+    if ($parts[0] === 'ai') {
+        return false;
+    }
+    return implode('/', $parts);
+}
+
+function ai_safe_target(string $root, string $relative, bool $mustExist): string|false
+{
+    $parent = dirname($relative);
+    $parentPath = $parent === '.' ? $root : realpath($root . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $parent));
+    if ($parentPath === false || !str_starts_with($parentPath, $root . DIRECTORY_SEPARATOR) && $parentPath !== $root) {
+        return false;
+    }
+    $target = $parentPath . DIRECTORY_SEPARATOR . basename($relative);
+    if (is_link($target)) {
+        return false;
+    }
+    if ($mustExist && !is_file($target)) {
+        return false;
+    }
+    if (!$mustExist && file_exists($target)) {
+        return false;
+    }
+    return $target;
+}
+
+function ai_backup_file(string $root, string $relative, string $source): string|false
+{
+    $backupRoot = $root . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'ai-backups';
+    if (!is_dir($backupRoot) && !@mkdir($backupRoot, 0750, true) && !is_dir($backupRoot)) {
+        return false;
+    }
+    $folder = gmdate('Ymd-His') . '-' . bin2hex(random_bytes(4));
+    $destination = $backupRoot . DIRECTORY_SEPARATOR . $folder . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $relative);
+    if (!@mkdir(dirname($destination), 0750, true)) {
+        return false;
+    }
+    if (!@copy($source, $destination)) {
+        return false;
+    }
+    @chmod($destination, 0600);
+    return 'data/ai-backups/' . $folder . '/' . $relative;
+}
+
+function ai_write_api(string $root): never
+{
+    header('Cache-Control: no-store');
+    if (!ai_authorized($root)) {
+        ai_json(['ok' => false, 'error' => 'Unauthorized. Check AI_WRITE_KEY and Bearer token.'], 401);
+    }
+    if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
+        header('Allow: POST');
+        ai_json(['ok' => false, 'error' => 'Use POST with a JSON body.'], 405);
+    }
+
+    $length = (int)($_SERVER['CONTENT_LENGTH'] ?? 0);
+    if ($length > 2097152) {
+        ai_json(['ok' => false, 'error' => 'Request too large (maximum 2 MB).'], 413);
+    }
+    $raw = file_get_contents('php://input');
+    $data = json_decode($raw === false ? '' : $raw, true);
+    if (!is_array($data)) {
+        ai_json(['ok' => false, 'error' => 'Invalid JSON body.'], 400);
+    }
+
+    $action = (string)($data['action'] ?? '');
+    $relative = ai_validate_write_path((string)($data['file'] ?? $data['path'] ?? ''));
+    if ($relative === false) {
+        ai_json(['ok' => false, 'error' => 'Invalid or protected path.'], 400);
+    }
+
+    if ($action === 'create' || $action === 'write') {
+        if (!array_key_exists('content', $data) || !is_string($data['content'])) {
+            ai_json(['ok' => false, 'error' => 'The content field must be a string.'], 400);
+        }
+        if (strlen($data['content']) > 2097152) {
+            ai_json(['ok' => false, 'error' => 'File too large (maximum 2 MB).'], 413);
+        }
+
+        $exists = file_exists($root . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $relative));
+        if ($action === 'create' && $exists) {
+            ai_json(['ok' => false, 'error' => 'File already exists. Use write to replace it.'], 409);
+        }
+        if ($action === 'write' && !$exists) {
+            ai_json(['ok' => false, 'error' => 'File does not exist. Use create first.'], 404);
+        }
+        $target = ai_safe_target($root, $relative, $action === 'write');
+        if ($target === false) {
+            ai_json(['ok' => false, 'error' => 'Target directory must exist; symbolic links are not allowed.'], 400);
+        }
+
+        $backup = null;
+        if ($action === 'write') {
+            $backup = ai_backup_file($root, $relative, $target);
+            if ($backup === false) {
+                ai_json(['ok' => false, 'error' => 'Could not create a backup; file was not changed.'], 500);
+            }
+        }
+        $written = @file_put_contents($target, $data['content'], LOCK_EX);
+        if ($written === false) {
+            ai_json(['ok' => false, 'error' => 'Could not write file.', 'backup' => $backup], 500);
+        }
+        ai_json(['ok' => true, 'action' => $action, 'file' => $relative, 'bytes' => $written, 'backup' => $backup]);
+    }
+
+    if ($action === 'mkdir') {
+        $target = $root . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $relative);
+        $parent = dirname($target);
+        $realParent = realpath($parent);
+        if ($realParent === false || ($realParent !== $root && !str_starts_with($realParent, $root . DIRECTORY_SEPARATOR)) || file_exists($target) || is_link($target)) {
+            ai_json(['ok' => false, 'error' => 'Invalid directory target or it already exists.'], 409);
+        }
+        if (!@mkdir($target, 0755)) {
+            ai_json(['ok' => false, 'error' => 'Could not create directory.'], 500);
+        }
+        ai_json(['ok' => true, 'action' => 'mkdir', 'path' => $relative]);
+    }
+
+    if ($action === 'rename') {
+        $target = ai_safe_target($root, $relative, true);
+        $newRelative = ai_validate_write_path((string)($data['new_path'] ?? ''));
+        if ($target === false || $newRelative === false) {
+            ai_json(['ok' => false, 'error' => 'Invalid source or destination path.'], 400);
+        }
+        $newTarget = ai_safe_target($root, $newRelative, false);
+        if ($newTarget === false) {
+            ai_json(['ok' => false, 'error' => 'Destination directory must exist and target must not exist.'], 409);
+        }
+        $backup = ai_backup_file($root, $relative, $target);
+        if ($backup === false) {
+            ai_json(['ok' => false, 'error' => 'Could not create a backup; file was not renamed.'], 500);
+        }
+        if (!@rename($target, $newTarget)) {
+            ai_json(['ok' => false, 'error' => 'Rename failed.', 'backup' => $backup], 500);
+        }
+        ai_json(['ok' => true, 'action' => 'rename', 'from' => $relative, 'to' => $newRelative, 'backup' => $backup]);
+    }
+
+    if ($action === 'delete') {
+        $target = ai_safe_target($root, $relative, true);
+        if ($target === false) {
+            ai_json(['ok' => false, 'error' => 'File not found or access denied.'], 404);
+        }
+        $backup = ai_backup_file($root, $relative, $target);
+        if ($backup === false) {
+            ai_json(['ok' => false, 'error' => 'Could not create a backup; file was not deleted.'], 500);
+        }
+        if (!@unlink($target)) {
+            ai_json(['ok' => false, 'error' => 'Delete failed.', 'backup' => $backup], 500);
+        }
+        ai_json(['ok' => true, 'action' => 'delete', 'file' => $relative, 'backup' => $backup]);
+    }
+
+    ai_json(['ok' => false, 'error' => 'Unknown action. Use create, write, rename, delete or mkdir.'], 400);
+}
+
 $action = (string)($_GET['action'] ?? '');
+if ($action === 'write') { ai_write_api($root); }
 
 if ($action === 'list') {
     $files = ai_get_files($root);
