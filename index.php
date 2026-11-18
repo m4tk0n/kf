@@ -51,11 +51,11 @@ if (in_array($routeName, ['suggest/venues', 'suggest/countries'], true)) {
         echo json_encode(array_map(static fn(array $row): array => ['value' => $row['name']], $stmt->fetchAll()), JSON_UNESCAPED_UNICODE);
         exit;
     }
-    $stmt = db()->prepare('SELECT id, iso2, iso3, cs, en FROM ' . tbl('countries') . ' WHERE iso2 LIKE ? OR iso3 LIKE ? OR cs LIKE ? OR en LIKE ? ORDER BY cs LIMIT 12');
-    $like = '%' . $term . '%';
-    $stmt->execute([$like, $like, $like, $like]);
-    $countryRows = $stmt->fetchAll();
     $labelField = lang_code() === 'en' ? 'en' : 'cs';
+    $stmt = db()->prepare('SELECT id, iso2, iso3, cs, en FROM ' . tbl('countries') . " WHERE iso2 LIKE ? OR iso3 LIKE ? OR {$labelField} LIKE ? ORDER BY {$labelField} LIMIT 12");
+    $like = '%' . $term . '%';
+    $stmt->execute([$like, $like, $like]);
+    $countryRows = $stmt->fetchAll();
     echo json_encode(array_map(static fn(array $row): array => [
         'id' => (int)$row['id'],
         'iso3' => strtolower($row['iso3']),
