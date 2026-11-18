@@ -4,14 +4,33 @@ declare(strict_types=1);
 // Moderace: fronta `pending` -> hotové tabulky. Schválení i zamítnutí smaže řádek z pending.
 // Klub: DB (id, city_id, name) + JSON (adresa, telefon, GPS, popis) + fotky {id}_{slug}_{n}.webp.
 
-function mod_pending_rows(): array
+function mod_pending_counts(): array
 {
-    $rows = db()->query(
-        'SELECT p.id, p.type, p.name, p.country_id, p.city, p.payload, u.display_name, u.email
-         FROM ' . tbl('pending') . ' p
-         LEFT JOIN ' . tbl('users') . ' u ON u.id = p.user_id
-         ORDER BY p.id DESC'
-    )->fetchAll();
+    $counts = ['event' => 0, 'venue' => 0, 'band' => 0];
+    $rows = db()->query('SELECT type, COUNT(*) AS total FROM ' . tbl('pending') . ' GROUP BY type')->fetchAll();
+    foreach ($rows as $row) {
+        $kind = (string)(cfg('enums.pending_type')[(int)$row['type']] ?? '');
+        if (isset($counts[$kind])) $counts[$kind] = (int)$row['total'];
+    }
+    return $counts;
+}
+
+function mod_pending_rows(?string $kind = null): array
+{
+    $sql = 'SELECT p.id, p.type, p.name, p.country_id, p.city, p.payload, u.display_name, u.email
+            FROM ' . tbl('pending') . ' p
+            LEFT JOIN ' . tbl('users') . ' u ON u.id = p.user_id';
+    $args = [];
+    if ($kind !== null) {
+        $typeId = array_search($kind, cfg('enums.pending_type'), true);
+        if ($typeId === false || !in_array($kind, ['event', 'venue', 'band'], true)) return [];
+        $sql .= ' WHERE p.type = ?';
+        $args[] = (int)$typeId;
+    }
+    $sql .= ' ORDER BY p.id DESC';
+    $stmt = db()->prepare($sql);
+    $stmt->execute($args);
+    $rows = $stmt->fetchAll();
     foreach ($rows as &$row) {
         $decoded = json_decode((string)$row['payload'], true);
         $row['data'] = is_array($decoded) ? $decoded : [];
@@ -63,6 +82,7 @@ function mod_fetch(int $id): array
     }
     $decoded = json_decode((string)$row['payload'], true);
     $row['data'] = is_array($decoded) ? $decoded : [];
+    $row['name'] = trim((string)($row['name'] ?? '')) !== '' ? $row['name'] : (string)($row['data']['name'] ?? '');
     $row['kind'] = (string)(cfg('enums.pending_type')[(int)$row['type']] ?? 'unknown');
     return $row;
 }
@@ -254,5 +274,79 @@ function mod_approve_event(array $row): void
             $pdo->rollBack();
         }
         throw $e;
+    }
+}
+
+
+/** Uloží editované údaje návrhu ještě před schválením. */
+function mod_update_pending(int $id, array $input): void
+{
+    $row = mod_fetch($id);
+    $kind = $row['kind'];
+    $name = trim((string)($input['name'] ?? ''));
+    if ($name === '' || mb_strlen($name, 'UTF-8') > 120) throw new RuntimeException(L('add-error-name'));
+    $data = $row['data'];
+    $data['name'] = $name;
+
+    if ($kind === 'venue') {
+        $city = trim((string)($input['city'] ?? ''));
+        $countryId = (int)($input['country_id'] ?? 0);
+        $address = trim((string)($input['address'] ?? ''));
+        $phone = trim((string)($input['phone'] ?? ''));
+        $description = trim((string)($input['description'] ?? ''));
+        if ($city === '' || mb_strlen($city, 'UTF-8') > 100 || $countryId < 1 ||
+            mb_strlen($address, 'UTF-8') > 190 || mb_strlen($phone, 'UTF-8') > 40 ||
+            mb_strlen($description, 'UTF-8') > 3000) {
+            throw new RuntimeException(L('add-error-venue-fields'));
+        }
+        $check = db()->prepare('SELECT 1 FROM ' . tbl('countries') . ' WHERE id = ?');
+        $check->execute([$countryId]);
+        if (!$check->fetchColumn()) throw new RuntimeException(L('add-error-reference'));
+        $lat = trim((string)($input['latitude'] ?? ''));
+        $lng = trim((string)($input['longitude'] ?? ''));
+        if (($lat !== '' || $lng !== '') && ($lat === '' || $lng === '' || !is_numeric($lat) || !is_numeric($lng) ||
+            (float)$lat < -90 || (float)$lat > 90 || (float)$lng < -180 || (float)$lng > 180)) {
+            throw new RuntimeException(L('add-error-gps'));
+        }
+        $data['address'] = $address;
+        $data['phone'] = $phone;
+        $data['description'] = $description;
+        $data['gps'] = $lat !== '' ? ['latitude' => (float)$lat, 'longitude' => (float)$lng] : null;
+        $row['country_id'] = $countryId;
+        $row['city'] = $city;
+    } elseif ($kind === 'band') {
+        $countryId = (int)($input['country_id'] ?? 0);
+        $genreId = (int)($input['genre_id'] ?? 0);
+        $check = db()->prepare('SELECT 1 FROM ' . tbl('countries') . ' WHERE id = ?');
+        $check->execute([$countryId]);
+        if (!$check->fetchColumn()) throw new RuntimeException(L('add-error-reference'));
+        $check = db()->prepare('SELECT 1 FROM ' . tbl('genres') . ' WHERE id = ?');
+        $check->execute([$genreId]);
+        if (!$check->fetchColumn()) throw new RuntimeException(L('add-error-reference'));
+        $data['country_id'] = $countryId;
+        $data['genre_id'] = $genreId;
+    } elseif ($kind === 'event') {
+        $venueId = (int)($input['venue_id'] ?? 0);
+        $eventType = (int)($input['event_type'] ?? 0);
+        $startRaw = trim((string)($input['starts_at'] ?? ''));
+        $endRaw = trim((string)($input['ends_at'] ?? ''));
+        $start = DateTime::createFromFormat('Y-m-d\\TH:i', $startRaw);
+        $end = $endRaw !== '' ? DateTime::createFromFormat('Y-m-d\\TH:i', $endRaw) : null;
+        $check = db()->prepare('SELECT 1 FROM ' . tbl('venues') . ' WHERE id = ?');
+        $check->execute([$venueId]);
+        if (!$check->fetchColumn() || !in_array($eventType, [1,2,3], true) || !$start ||
+            ($endRaw !== '' && (!$end || $end < $start))) throw new RuntimeException(L('add-error-event'));
+        $data['venue_id'] = $venueId;
+        $data['event_type'] = $eventType;
+        $data['starts_at'] = $start->format('Y-m-d H:i:s');
+        $data['ends_at'] = $end ? $end->format('Y-m-d H:i:s') : null;
+    }
+
+    $payload = json_encode($data, JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    if ($kind === 'venue') {
+        db()->prepare('UPDATE ' . tbl('pending') . ' SET name=?, country_id=?, city=?, payload=? WHERE id=?')
+            ->execute([$name, (int)$row['country_id'], (string)$row['city'], $payload, $id]);
+    } else {
+        db()->prepare('UPDATE ' . tbl('pending') . ' SET payload=? WHERE id=?')->execute([$payload, $id]);
     }
 }

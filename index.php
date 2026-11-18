@@ -325,14 +325,16 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     exit;
 }
 
-// Schvalování příspěvků: akce jsou dostupné pouze moderátorům a administrátorům.
-if ($routeName === 'moderation' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
+// Schvalování: přehled -> kategorie -> detail návrhu.
+if ($routeName === 'moderation' && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     require_csrf();
     $action = (string)($_POST['action'] ?? '');
     $id = filter_var($_POST['id'] ?? null, FILTER_VALIDATE_INT);
+    $kind = (string)($_POST['kind'] ?? '');
     try {
-        if (!$id || $id < 1) {
-            throw new RuntimeException(L('mod-error-missing'));
+        if (!$id || $id < 1) throw new RuntimeException(L('mod-error-missing'));
+        if ($action === 'save' || $action === 'approve') {
+            mod_update_pending((int)$id, $_POST);
         }
         if ($action === 'approve') {
             mod_approve((int)$id);
@@ -340,29 +342,47 @@ if ($routeName === 'moderation' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'PO
         } elseif ($action === 'reject') {
             mod_reject((int)$id);
             $_SESSION['moderation_notice'] = L('mod-rejected');
+        } elseif ($action === 'save') {
+            $_SESSION['moderation_notice'] = L('mod-saved');
         } else {
             throw new RuntimeException(L('mod-error-action'));
         }
     } catch (Throwable $e) {
-        $_SESSION['moderation_error'] = $e instanceof RuntimeException
-            ? $e->getMessage()
-            : L('mod-error-action');
-        if (!$e instanceof RuntimeException) {
-            error_log('K&F moderation: ' . $e->getMessage());
-        }
+        $_SESSION['moderation_error'] = $e instanceof RuntimeException ? $e->getMessage() : L('mod-error-action');
+        if (!$e instanceof RuntimeException) error_log('K&F moderation: ' . $e->getMessage());
     }
-    header('Location: ' . url('moderation'), true, 303);
+    $target = 'moderation';
+    if (in_array($kind, ['event', 'venue', 'band'], true)) $target .= '?type=' . rawurlencode($kind);
+    if (($action === 'save' || !empty($_SESSION['moderation_error'])) && $id) $target .= (str_contains($target, '?') ? '&' : '?') . 'id=' . (int)$id;
+    header('Location: ' . url($target), true, 303);
     exit;
 }
 
+
 if ($routeName === 'moderation') {
-    $moderationRows = mod_pending_rows();
+    $moderationType = (string)($_GET['type'] ?? '');
+    if (!in_array($moderationType, ['event', 'venue', 'band'], true)) $moderationType = '';
+    $moderationId = max(0, (int)($_GET['id'] ?? 0));
+    $moderationRow = null;
+    if ($moderationId > 0) {
+        try {
+            $moderationRow = mod_fetch($moderationId);
+            $moderationType = $moderationRow['kind'];
+        } catch (Throwable $e) {
+            $_SESSION['moderation_error'] = $e->getMessage();
+        }
+    }
+    $moderationRows = $moderationType !== '' ? mod_pending_rows($moderationType) : [];
+    $moderationCounts = mod_pending_counts();
     $moderationNotice = (string)($_SESSION['moderation_notice'] ?? '');
     $moderationError = (string)($_SESSION['moderation_error'] ?? '');
     unset($_SESSION['moderation_notice'], $_SESSION['moderation_error']);
     page('moderation', [
         'title' => L('moderation-title'),
         'rows' => $moderationRows,
+        'counts' => $moderationCounts,
+        'type' => $moderationType,
+        'selected' => $moderationRow,
         'notice' => $moderationNotice,
         'error' => $moderationError,
     ]);

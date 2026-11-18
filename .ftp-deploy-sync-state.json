@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1795017850331,
+    "generatedTime": 1795018353954,
     "data": [
         {
             "type": "file",
@@ -46,12 +46,6 @@
             "name": "docs"
         },
         {
-            "type": "file",
-            "name": "index.php",
-            "size": 18825,
-            "hash": "adbf4c87cf6da7627d8e337d70fbd8189a39a4e2e6e5885e692e77cb4e69e89e"
-        },
-        {
             "type": "folder",
             "name": "install"
         },
@@ -72,8 +66,10 @@
             "hash": "540fbe720be6feb88554c2a0f81261a479be973ab07f76c2f94e162369095f6a"
         },
         {
-            "type": "folder",
-            "name": "src"
+            "type": "file",
+            "name": "index.php",
+            "size": 19947,
+            "hash": "8bd225da9fc92fbe3dae2e4ae97904ef611eb69b2f84327f5dfa032b74ad3a4a"
         },
         {
             "type": "folder",
@@ -84,16 +80,20 @@
             "name": "tools"
         },
         {
-            "type": "file",
-            "name": "admin/bands.php",
-            "size": 6442,
-            "hash": "665ac4999f211de6a9a25b80e2d2f29cf5c6314628564c59b8965f5803ec6d57"
+            "type": "folder",
+            "name": "src"
         },
         {
             "type": "file",
             "name": "ai/index.php",
             "size": 20181,
             "hash": "5108ca9a8f5db601f6b1936ec87d3e51541a5982e620eea5fadbfb497261bc42"
+        },
+        {
+            "type": "file",
+            "name": "admin/bands.php",
+            "size": 6442,
+            "hash": "665ac4999f211de6a9a25b80e2d2f29cf5c6314628564c59b8965f5803ec6d57"
         },
         {
             "type": "folder",
@@ -117,9 +117,9 @@
         },
         {
             "type": "file",
-            "name": "install/index.php",
-            "size": 20827,
-            "hash": "86c34402c61966135704491dcb4af30d13278a61b9a4bffa915a4c3e113635bb"
+            "name": "install/installed.lock",
+            "size": 25,
+            "hash": "b1696fd265f724124ad933837deb67dc513dfc6ae5beae499b9ea4380b5f315a"
         },
         {
             "type": "folder",
@@ -128,12 +128,6 @@
         {
             "type": "folder",
             "name": "install/sql"
-        },
-        {
-            "type": "file",
-            "name": "install/installed.lock",
-            "size": 25,
-            "hash": "b1696fd265f724124ad933837deb67dc513dfc6ae5beae499b9ea4380b5f315a"
         },
         {
             "type": "folder",
@@ -145,33 +139,9 @@
         },
         {
             "type": "file",
-            "name": "src/bootstrap.php",
-            "size": 2667,
-            "hash": "fe47ea7686a89f46b0c885efe9cd3a3c701d302ef525fba5806d8934ab44e80c"
-        },
-        {
-            "type": "file",
-            "name": "src/google_auth.php",
-            "size": 10022,
-            "hash": "11025b892c8eb9fb70843c0ef112aecd7fd3009dc457b7b7c06d710931827e77"
-        },
-        {
-            "type": "file",
-            "name": "src/helpers.php",
-            "size": 17450,
-            "hash": "86833037e2475d89769f3623665d49c9bc77b25fb6635a64186961f7100292bb"
-        },
-        {
-            "type": "file",
-            "name": "src/moderation.php",
-            "size": 10432,
-            "hash": "96eb51d339227d4a92d2a6fef5df2e9b86c583578c3dd633a8607058046fd70e"
-        },
-        {
-            "type": "file",
-            "name": "src/venues.php",
-            "size": 17856,
-            "hash": "d4ed31b6506c20dfde79efa758d577b6be089ad3ae0e3fcfe2e0b1f5d6229cbc"
+            "name": "install/index.php",
+            "size": 20827,
+            "hash": "86c34402c61966135704491dcb4af30d13278a61b9a4bffa915a4c3e113635bb"
         },
         {
             "type": "file",
@@ -181,27 +151,27 @@
         },
         {
             "type": "file",
-            "name": "templates/add.php",
-            "size": 10819,
-            "hash": "f26b4ec7d4b30df7d35ee64fa689541e063578966f20edf49cef0396d7b6b513"
-        },
-        {
-            "type": "file",
             "name": "templates/home.php",
             "size": 8555,
             "hash": "6348cff61678c7839e46d841962dbf8b8c4ea1277aaa2263a1f3bf2d993a614c"
         },
         {
             "type": "file",
-            "name": "templates/login.php",
-            "size": 820,
-            "hash": "ef2bf50ce468119867dbf8bd0a9a1b2e5aa072ae22182842813c7adcea893e75"
-        },
-        {
-            "type": "file",
             "name": "templates/layout.php",
             "size": 5262,
             "hash": "4b83ea2bf28a0fc5d15617615517b90e0bdc9f94c19aa91cfa06f666a38d9567"
+        },
+        {
+            "type": "file",
+            "name": "templates/add.php",
+            "size": 10819,
+            "hash": "f26b4ec7d4b30df7d35ee64fa689541e063578966f20edf49cef0396d7b6b513"
+        },
+        {
+            "type": "file",
+            "name": "templates/login.php",
+            "size": 820,
+            "hash": "ef2bf50ce468119867dbf8bd0a9a1b2e5aa072ae22182842813c7adcea893e75"
         },
         {
             "type": "file",
@@ -238,6 +208,36 @@
             "name": "tools/verify-project.php",
             "size": 3395,
             "hash": "72703dabc64b2d30a69179fe25dffcaf3065c1c5d5b3bbf003ed745337d6be09"
+        },
+        {
+            "type": "file",
+            "name": "src/bootstrap.php",
+            "size": 2667,
+            "hash": "fe47ea7686a89f46b0c885efe9cd3a3c701d302ef525fba5806d8934ab44e80c"
+        },
+        {
+            "type": "file",
+            "name": "src/google_auth.php",
+            "size": 10022,
+            "hash": "11025b892c8eb9fb70843c0ef112aecd7fd3009dc457b7b7c06d710931827e77"
+        },
+        {
+            "type": "file",
+            "name": "src/helpers.php",
+            "size": 17450,
+            "hash": "86833037e2475d89769f3623665d49c9bc77b25fb6635a64186961f7100292bb"
+        },
+        {
+            "type": "file",
+            "name": "src/moderation.php",
+            "size": 15210,
+            "hash": "e247162bfd2b85190e8b7acbe436ae9c2bff8c56b663cd7db36fa55de22cdcee"
+        },
+        {
+            "type": "file",
+            "name": "src/venues.php",
+            "size": 17856,
+            "hash": "d4ed31b6506c20dfde79efa758d577b6be089ad3ae0e3fcfe2e0b1f5d6229cbc"
         },
         {
             "type": "file",
