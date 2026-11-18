@@ -114,3 +114,61 @@ function complete_provider_login(
     header('Location: ' . url(''), true, 303);
     exit;
 }
+
+/**
+ * Explicitly link an additional provider while the user is already authenticated.
+ * The current K&F session proves ownership of the account; OAuth proves ownership
+ * of the external identity. Email equality is not required for this operation.
+ */
+function complete_provider_link(string $provider, string $providerId, int $userId): never
+{
+    $current = refresh_authenticated_user();
+    if (!$current || (int)$current['id'] !== $userId ||
+        !in_array($provider, ['google', 'facebook'], true) ||
+        $providerId === '' || strlen($providerId) > 191) {
+        http_response_code(404);
+        exit('Not Found');
+    }
+
+    $pdo = db();
+    $identities = tbl('user_identities');
+    $pdo->beginTransaction();
+    try {
+        $byIdentity = $pdo->prepare(
+            "SELECT user_id FROM {$identities} WHERE provider = ? AND provider_id = ? LIMIT 1"
+        );
+        $byIdentity->execute([$provider, $providerId]);
+        $owner = $byIdentity->fetchColumn();
+        if ($owner !== false && (int)$owner !== $userId) {
+            throw new RuntimeException('This external account is already linked to another K&F account.');
+        }
+
+        $byUser = $pdo->prepare(
+            "SELECT provider_id FROM {$identities} WHERE user_id = ? AND provider = ? LIMIT 1"
+        );
+        $byUser->execute([$userId, $provider]);
+        $linkedId = $byUser->fetchColumn();
+        if ($linkedId !== false && !hash_equals((string)$linkedId, $providerId)) {
+            throw new RuntimeException('A different account from this provider is already linked.');
+        }
+
+        if ($owner === false) {
+            $insert = $pdo->prepare(
+                "INSERT INTO {$identities} (user_id, provider, provider_id) VALUES (?, ?, ?)"
+            );
+            $insert->execute([$userId, $provider, $providerId]);
+        }
+        $pdo->commit();
+    } catch (Throwable $e) {
+        if ($pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
+        throw $e;
+    }
+
+    session_regenerate_id(true);
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    header('Cache-Control: no-store');
+    header('Location: ' . url('settings'), true, 303);
+    exit;
+}

@@ -42,10 +42,18 @@ function require_facebook_auth(string $action): never
         }
         $redirectUri = rtrim(cfg('app.base_url'), '/') . '/auth/facebook/callback';
 
-        if ($action === 'start') {
-            if (refresh_authenticated_user()) {
+        if ($action === 'start' || $action === 'link_start') {
+            $currentUser = refresh_authenticated_user();
+            if ($action === 'start' && $currentUser) {
                 header('Location: ' . url(''), true, 303);
                 exit;
+            }
+            if ($action === 'link_start' && !$currentUser) {
+                http_response_code(404);
+                exit('Not Found');
+            }
+            if ($action === 'link_start') {
+                $_SESSION['facebook_oauth_link_user_id'] = (int)$currentUser['id'];
             }
             $state = bin2hex(random_bytes(32));
             $_SESSION['facebook_oauth_state'] = $state;
@@ -118,6 +126,15 @@ function require_facebook_auth(string $action): never
         }
 
         $picture = (string)($profile['picture']['data']['url'] ?? '');
+        $linkUserId = (int)($_SESSION['facebook_oauth_link_user_id'] ?? 0);
+        unset($_SESSION['facebook_oauth_link_user_id']);
+        if ($linkUserId > 0) {
+            $current = refresh_authenticated_user();
+            if (!$current || (int)$current['id'] !== $linkUserId) {
+                throw new RuntimeException('The K&F session expired during account linking.');
+            }
+            complete_provider_link('facebook', (string)$profile['id'], $linkUserId);
+        }
         complete_provider_login(
             'facebook',
             (string)$profile['id'],

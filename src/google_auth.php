@@ -32,10 +32,18 @@ function require_google_auth(string $action): never
         $clientSecret = env('GOOGLE_CLIENT_SECRET');
         $redirectUri = rtrim(cfg('app.base_url'), '/') . '/auth/google/callback';
 
-        if ($action === 'start') {
-            if (refresh_authenticated_user()) {
+        if ($action === 'start' || $action === 'link_start') {
+            $currentUser = refresh_authenticated_user();
+            if ($action === 'start' && $currentUser) {
                 header('Location: ' . url(''), true, 303);
                 exit;
+            }
+            if ($action === 'link_start' && !$currentUser) {
+                http_response_code(404);
+                exit('Not Found');
+            }
+            if ($action === 'link_start') {
+                $_SESSION['google_oauth_link_user_id'] = (int)$currentUser['id'];
             }
             $state = bin2hex(random_bytes(32));
             $nonce = bin2hex(random_bytes(32));
@@ -121,6 +129,11 @@ function require_google_auth(string $action): never
             throw new RuntimeException('Google identity token validation failed.');
         }
 
+        $linkUserId = (int)($_SESSION['google_oauth_link_user_id'] ?? 0);
+        unset($_SESSION['google_oauth_link_user_id']);
+        if ($linkUserId > 0) {
+            complete_provider_link('google', (string)$identity['sub'], $linkUserId);
+        }
         complete_provider_login(
             'google',
             (string)$identity['sub'],

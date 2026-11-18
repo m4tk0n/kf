@@ -121,7 +121,9 @@ match ($routeName) {
     'profile' => page('profile', ['title' => L('profile-title')]),
     'settings' => page('settings', ['title' => L('settings-title')]),
     'auth/google/start' => require_google_auth('start'),
+    'auth/google/link/start' => require_google_auth('link_start'),
     'auth/facebook/start' => require_facebook_auth('start'),
+    'auth/facebook/link/start' => require_facebook_auth('link_start'),
     'auth/google/callback' => require_google_auth('callback'),
     default => page('404', ['title' => L('err-404')], 404),
 };
