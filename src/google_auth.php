@@ -22,7 +22,7 @@ function google_oauth_request(string $url, array $options = []): array
     $status = 0;
 
     foreach ($headers as $header) {
-        if (preg_match('~^HTTP/\\S+\\s+(\\d{3})~', $header, $m)) {
+        if (preg_match('~^HTTP/\S+\s+(\d{3})~', $header, $m)) {
             $status = (int)$m[1];
         }
     }
@@ -95,7 +95,7 @@ function require_google_auth(string $action): never
 
         $token = google_oauth_request('https://oauth2.googleapis.com/token', [
             'method' => 'POST',
-            'header' => "Content-Type: application/x-www-form-urlencoded\\r\\nAccept: application/json\\r\\n",
+            'header' => "Content-Type: application/x-www-form-urlencoded\r\nAccept: application/json\r\n",
             'content' => http_build_query([
                 'code' => $code,
                 'client_id' => $clientId,
@@ -111,7 +111,7 @@ function require_google_auth(string $action): never
         }
 
         $identity = google_oauth_request('https://openidconnect.googleapis.com/v1/userinfo', [
-            'header' => "Authorization: Bearer {$accessToken}\\r\\nAccept: application/json\\r\\n",
+            'header' => "Authorization: Bearer {$accessToken}\r\nAccept: application/json\r\n",
         ]);
 
         if (empty($identity['sub']) || empty($identity['email']) || empty($identity['email_verified'])) {
