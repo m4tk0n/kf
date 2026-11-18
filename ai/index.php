@@ -324,7 +324,7 @@ if ($action === 'list') {
     ]);
 }
 
-if ($action === 'read') {
+if ($action === 'txt' || $action === 'read') {
     $relative = (string)($_GET['file'] ?? '');
     $path = ai_resolve_file($root, $relative);
     if ($path === false) {
@@ -340,57 +340,9 @@ if ($action === 'read') {
     }
 
     header('Content-Type: text/plain; charset=utf-8');
+    header('Content-Disposition: inline; filename="' . basename($relative) . '.txt"');
     echo $content;
     exit;
-}
-
-if ($action === 'all') {
-    // Strojově čitelný výstup: JSON místo jednoho velkého textového dumpu.
-    // Volitelný limit chrání před příliš velkou odpovědí; soubory se nikdy nerozdělují.
-    $maxBytes = isset($_GET['max_bytes']) ? (int)$_GET['max_bytes'] : 1500000;
-    $maxBytes = max(10000, min($maxBytes, 2000000));
-    $files = [];
-    $skipped = [];
-    $totalBytes = 0;
-
-    foreach (ai_get_files($root) as $file) {
-        $path = ai_resolve_file($root, $file['path']);
-        if ($path === false) {
-            continue;
-        }
-        $content = @file_get_contents($path);
-        if ($content === false || !ai_is_text($content)) {
-            $skipped[] = ['path' => $file['path'], 'reason' => 'unreadable_or_binary'];
-            continue;
-        }
-
-        $bytes = strlen($content);
-        if ($totalBytes + $bytes > $maxBytes) {
-            $skipped[] = ['path' => $file['path'], 'reason' => 'response_size_limit', 'size' => $bytes];
-            continue;
-        }
-
-        $files[] = [
-            'path' => $file['path'],
-            'size' => $bytes,
-            'content' => $content,
-        ];
-        $totalBytes += $bytes;
-    }
-
-    ai_json([
-        'ok' => true,
-        'project' => '/_kf/',
-        'generated_at' => gmdate('c'),
-        'format' => 'json',
-        'file_count' => count($files),
-        'total_bytes' => $totalBytes,
-        'max_bytes' => $maxBytes,
-        'truncated' => count($skipped) > 0,
-        'files' => $files,
-        'skipped' => $skipped,
-        'read_hint' => '?action=read&file=PATH',
-    ]);
 }
 
 ?><!doctype html>
@@ -426,12 +378,12 @@ a{color:var(--accent)}.meta{font-size:12px;color:var(--muted);margin-top:8px}
 <aside>
 <div class="toolbar">
 <button id="refresh">Obnovit seznam</button>
-<button id="all">Zobrazit vše (JSON)</button>
+
 </div>
 <input id="search" type="search" placeholder="Filtrovat soubory…">
 <div id="stats" class="meta">Načítám seznam…</div>
 <div id="files"></div>
-<div class="meta">API: <a href="?action=list">files.json</a> · <a href="?action=all">all.json</a></div>
+<div class="meta">API: <a href="?action=list">files.json</a></div>
 </aside>
 <section>
 <div id="current">Vyber soubor ze seznamu.</div>
@@ -458,7 +410,10 @@ function renderList(){
   const button=document.createElement('button');button.className='file'+(selected===file.path?' active':'');
   button.textContent=file.path;
   const small=document.createElement('small');small.textContent=(file.size||0).toLocaleString('cs-CZ')+' B';button.appendChild(small);
-  button.addEventListener('click',()=>readFile(file.path));listEl.appendChild(button);
+  button.addEventListener('click',()=>readFile(file.path));
+  const link=document.createElement('a');link.href='?action=txt&file='+encodeURIComponent(file.path);link.target='_blank';link.rel='noopener';link.textContent='TXT';link.className='file';
+  link.style.display='inline-block';link.style.width='auto';link.style.marginLeft='6px';link.style.padding='5px 8px';link.textContent='Otevřít TXT';
+  const row=document.createElement('div');row.appendChild(button);row.appendChild(link);listEl.appendChild(row);
  });
 }
 async function readFile(path){
@@ -472,7 +427,6 @@ async function readFile(path){
 }
 searchEl.addEventListener('input',renderList);
 document.getElementById('refresh').addEventListener('click',loadList);
-document.getElementById('all').addEventListener('click',()=>window.open('?action=all','_blank'));
 loadList();
 </script>
 </body>
