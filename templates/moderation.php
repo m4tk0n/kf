@@ -30,6 +30,7 @@ $backToType = $kind !== '' ? url('moderation') . '?type=' . rawurlencode($kind) 
     <h1><?= e($title ?? L('moderation-title')) ?></h1>
     <a class="back-button" href="<?= e(url()) ?>"><?= e(L('back-button')) ?></a>
   </div>
+  <?php if (!$selected && $type === ''): ?><p class="moderation-intro"><?= e(L('moderation-description')) ?></p><?php endif; ?>
   <?php if (($notice ?? '') !== ''): ?><p class="form-message success"><?= e($notice) ?></p><?php endif; ?>
   <?php if (($error ?? '') !== ''): ?><p class="form-message error" role="alert"><?= e($error) ?></p><?php endif; ?>
 
