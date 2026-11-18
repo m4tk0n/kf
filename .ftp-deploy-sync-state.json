@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794981634728,
+    "generatedTime": 1794981673832,
     "data": [
         {
             "type": "file",
@@ -104,8 +104,8 @@
         {
             "type": "file",
             "name": "install/index.php",
-            "size": 16473,
-            "hash": "3e2b888edab232391e7ae38d1326d58812e7a0b95d319db1c7e53118e62ada0b"
+            "size": 17307,
+            "hash": "a7f96d6fe53611a35f8aeb3451c053ee40ff95907f3fa613def4683d126c503b"
         },
         {
             "type": "file",
@@ -137,15 +137,15 @@
         },
         {
             "type": "file",
-            "name": "src/google_auth.php",
-            "size": 8679,
-            "hash": "42a5773dfa447e040d91d141dc1cb2fbee8d135a3e89a8ecbf52b95f76d205f9"
-        },
-        {
-            "type": "file",
             "name": "src/helpers.php",
             "size": 10267,
             "hash": "d906418969e995255291f14365770141ebe4c4b823d29aad2654ebbc6700cc0d"
+        },
+        {
+            "type": "file",
+            "name": "src/google_auth.php",
+            "size": 8679,
+            "hash": "42a5773dfa447e040d91d141dc1cb2fbee8d135a3e89a8ecbf52b95f76d205f9"
         },
         {
             "type": "file",
@@ -241,15 +241,15 @@
         },
         {
             "type": "file",
-            "name": "install/sql/999_meta.sql",
-            "size": 336,
-            "hash": "0ea434e0149dff2fb81a9702a5da25eaebc8ac393f33378fa6627214779a4b52"
-        },
-        {
-            "type": "file",
             "name": "lang/cs/common.ini",
             "size": 2976,
             "hash": "897ebe3753e7699b705faed9df59b7d9ff7265ab0e4a79852385854e7ec6346e"
+        },
+        {
+            "type": "file",
+            "name": "install/sql/999_meta.sql",
+            "size": 336,
+            "hash": "0ea434e0149dff2fb81a9702a5da25eaebc8ac393f33378fa6627214779a4b52"
         },
         {
             "type": "file",
