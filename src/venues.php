@@ -147,10 +147,18 @@ function venue_find_duplicate(int $countryId, string $city, string $address, int
         }
     }
 
-    $q = db()->prepare('SELECT id, name FROM ' . tbl('pending') . ' WHERE type = ? AND dupkey = ? LIMIT 1');
-    $q->execute([venue_pending_type(), venue_dupkey($countryId, $city, $address)]);
-    $row = $q->fetch();
-    return $row ? ['id' => 0, 'name' => (string)$row['name']] : null;
+    $q = db()->prepare(
+        'SELECT id, name, payload FROM ' . tbl('pending') . '
+         WHERE type = ? AND country_id = ? AND city = ? AND id <> ?'
+    );
+    $q->execute([venue_pending_type(), $countryId, $city, $ignorePendingId]);
+    foreach ($q->fetchAll() as $row) {
+        $pendingData = json_decode((string)$row['payload'], true);
+        if (is_array($pendingData) && slugify((string)($pendingData['address'] ?? '')) === $addrKey) {
+            return ['id' => (int)$row['id'], 'name' => (string)$row['name']];
+        }
+    }
+    return null;
 }
 
 // ---------- validace formuláře ----------
