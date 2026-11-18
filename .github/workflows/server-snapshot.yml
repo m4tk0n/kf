@@ -27,6 +27,11 @@ jobs:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Download current files from the live AI Code Viewer
         env:
           SOURCE_URL: https://7x.wz.cz/_kf/ai/
@@ -110,6 +115,7 @@ jobs:
           fi
 
           cp -a snapshot/. .
+          rm -rf snapshot
           git add -A
           if git diff --cached --quiet; then
             echo "Live server snapshot is unchanged."
