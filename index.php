@@ -170,7 +170,7 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
             $payload += ['country_id'=>(int)$ref['country_id'], 'genre_id'=>(int)$ref['genre_id']];
             $dupkey = 'band:' . slugify($name);
         } elseif ($type === 'venue') {
-            $countryCode = strtoupper(trim((string)($_POST['country'] ?? '')));
+            $countryId = (int)($_POST['country_id'] ?? 0);
             $city = trim((string)($_POST['city'] ?? ''));
             $address = trim((string)($_POST['address'] ?? ''));
             $phone = trim((string)($_POST['phone'] ?? ''));
@@ -178,13 +178,13 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
             $latitudeRaw = trim((string)($_POST['latitude'] ?? ''));
             $longitudeRaw = trim((string)($_POST['longitude'] ?? ''));
 
-            if (!preg_match('/^[A-Z]{2}$/', $countryCode) || $city === '' ||
+            if ($countryId < 1 || $city === '' ||
                 mb_strlen($city, 'UTF-8') > 100 || mb_strlen($address, 'UTF-8') > 190 ||
                 mb_strlen($phone, 'UTF-8') > 40 || mb_strlen($description, 'UTF-8') > 3000) {
                 throw new RuntimeException(L('add-error-venue-fields'));
             }
-            $countryQuery = db()->prepare('SELECT id FROM ' . tbl('countries') . ' WHERE iso2 = ? LIMIT 1');
-            $countryQuery->execute([$countryCode]);
+            $countryQuery = db()->prepare('SELECT id FROM ' . tbl('countries') . ' WHERE id = ? LIMIT 1');
+            $countryQuery->execute([$countryId]);
             $countryId = (int)$countryQuery->fetchColumn();
             if ($countryId < 1) throw new RuntimeException(L('add-error-reference'));
 
