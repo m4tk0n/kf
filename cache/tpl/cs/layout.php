@@ -44,10 +44,7 @@ $roleLabel = L('role-' . $roleName);
         </div>
         <a class="account-menu-link" href="<?= e(url('profile')) ?>"><?= e(L('account-profile')) ?></a>
         <a class="account-menu-link" href="<?= e(url('settings')) ?>"><?= e(L('account-settings')) ?></a>
-        <div class="account-menu-section"><?= e(L('account-add')) ?></div>
-        <a class="account-menu-link" href="<?= e(url('add')) ?>?type=event"><?= e(L('add-event')) ?></a>
-        <a class="account-menu-link" href="<?= e(url('add')) ?>?type=venue"><?= e(L('add-venue')) ?></a>
-        <a class="account-menu-link" href="<?= e(url('add')) ?>?type=band"><?= e(L('add-band')) ?></a>
+        <a class="account-menu-link" href="<?= e(url('add')) ?>"><?= e(L('account-add')) ?></a>
 <?php if (in_array((int)($currentUser['role'] ?? 0), [3, 4], true)): ?>
         <div class="account-menu-section"><?= e(L('account-management')) ?></div>
         <a class="account-menu-link" href="<?= e(url('moderation')) ?>"><?= e(L('account-approvals')) ?></a>
