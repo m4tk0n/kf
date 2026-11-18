@@ -25,13 +25,16 @@
 </header>
 <?php if (($GLOBALS['KF_ROUTE'] ?? '') === ''): ?>
 <nav class="section-nav" aria-label="[section-navigation]">
-  <form method="get" action="<?= e(url()) ?>">
+  <form class="section-toolbar" method="get" action="<?= e(url()) ?>">
     <label class="sr-only" for="section-select">[section-navigation]</label>
     <select id="section-select" name="section" onchange="this.form.submit()">
       <option value="events"<?= (($_GET['section'] ?? 'events') === 'events') ? ' selected' : '' ?>>[section-events]</option>
       <option value="venues"<?= (($_GET['section'] ?? '') === 'venues') ? ' selected' : '' ?>>[section-venues]</option>
       <option value="bands"<?= (($_GET['section'] ?? '') === 'bands') ? ' selected' : '' ?>>[section-bands]</option>
     </select>
+    <label class="sr-only" for="global-search">[search-label]</label>
+    <input id="global-search" class="global-search" type="search" name="q" value="<?= e($_GET['q'] ?? '') ?>" placeholder="[search-placeholder]" autocomplete="off">
+    <a class="filter-button" href="#filtry">[filter-button]</a>
   </form>
 </nav>
 <?php endif; ?>
