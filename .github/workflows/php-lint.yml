@@ -22,3 +22,5 @@ jobs:
         run: |
           set -euo pipefail
           find . -type f -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
+
+# Syntax validation is independent of the FTP deployment workflow.
