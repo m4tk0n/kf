@@ -7,6 +7,8 @@ $hasGps = $venue['lat'] !== null && $venue['lng'] !== null;
     <h1><?= e($venue['name']) ?></h1>
     <a class="back-button" href="<?= e($backUrl) ?>"><?= e(L('back-button')) ?></a>
   </div>
+  <?php if (!empty($_SESSION['user']['id'])): ?><div class="venue-edit-action"><a class="primary-button" href="<?= e(url('venue-edit/' . (int)$venue['id'])) ?>"><?= e(L('venue-edit-button')) ?></a></div><?php endif; ?>
+  <?php if (($venueEditNotice ?? '') !== ''): ?><p class="form-message success"><?= e($venueEditNotice) ?></p><?php endif; ?>
   <p class="venue-location-line"><?= e($venue['city']) ?> (<?= e($venue['country_code']) ?>)</p>
 
   <?php if (!empty($venue['images'])): ?>

@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1795022565026,
+    "generatedTime": 1795022630725,
     "data": [
         {
             "type": "file",
@@ -17,11 +17,11 @@
         },
         {
             "type": "folder",
-            "name": "ai"
+            "name": "admin"
         },
         {
             "type": "folder",
-            "name": "admin"
+            "name": "ai"
         },
         {
             "type": "folder",
@@ -48,8 +48,8 @@
         {
             "type": "file",
             "name": "index.php",
-            "size": 20322,
-            "hash": "afb5999d738ebe3e15ec9dede8b07ee3a955d812940878d338efc5a3df69a11a"
+            "size": 24437,
+            "hash": "d2eaefeec2cdeb32981df0ea4ac1d55a5921fa8cb1103e8b89fae8c1f99afded"
         },
         {
             "type": "folder",
@@ -85,15 +85,15 @@
         },
         {
             "type": "file",
-            "name": "ai/index.php",
-            "size": 20181,
-            "hash": "5108ca9a8f5db601f6b1936ec87d3e51541a5982e620eea5fadbfb497261bc42"
-        },
-        {
-            "type": "file",
             "name": "admin/bands.php",
             "size": 6442,
             "hash": "665ac4999f211de6a9a25b80e2d2f29cf5c6314628564c59b8965f5803ec6d57"
+        },
+        {
+            "type": "file",
+            "name": "ai/index.php",
+            "size": 20181,
+            "hash": "5108ca9a8f5db601f6b1936ec87d3e51541a5982e620eea5fadbfb497261bc42"
         },
         {
             "type": "folder",
@@ -164,8 +164,8 @@
         {
             "type": "file",
             "name": "src/moderation.php",
-            "size": 15326,
-            "hash": "846b1fa1ad158006c9587816047baed6feb8eee0e8432773dae0eb1c19d30f12"
+            "size": 20319,
+            "hash": "f53d4808e03be9505aaf696ccd11c8d180ed6db816a38fe8cfd757cdf18f4c47"
         },
         {
             "type": "file",
@@ -199,6 +199,12 @@
         },
         {
             "type": "file",
+            "name": "templates/login.php",
+            "size": 820,
+            "hash": "ef2bf50ce468119867dbf8bd0a9a1b2e5aa072ae22182842813c7adcea893e75"
+        },
+        {
+            "type": "file",
             "name": "templates/moderation.php",
             "size": 11564,
             "hash": "a54e58ad45c9aa677159631bcb2eada220f14997f842a9d3a4d9a36b69ad7021"
@@ -208,12 +214,6 @@
             "name": "templates/profile.php",
             "size": 2370,
             "hash": "d3332c8424e5f8c5bbb2be5212753cb11a70aa6188aba8117e357613ac6489ab"
-        },
-        {
-            "type": "file",
-            "name": "templates/login.php",
-            "size": 820,
-            "hash": "ef2bf50ce468119867dbf8bd0a9a1b2e5aa072ae22182842813c7adcea893e75"
         },
         {
             "type": "file",
@@ -235,15 +235,15 @@
         },
         {
             "type": "file",
-            "name": "tools/project-preflight.php",
-            "size": 2767,
-            "hash": "542a53ec93b3e13db3f0df6ddc40865743349a14ecb117f89f823869d3e12a84"
-        },
-        {
-            "type": "file",
             "name": "tools/verify-project.php",
             "size": 3395,
             "hash": "72703dabc64b2d30a69179fe25dffcaf3065c1c5d5b3bbf003ed745337d6be09"
+        },
+        {
+            "type": "file",
+            "name": "tools/project-preflight.php",
+            "size": 2767,
+            "hash": "542a53ec93b3e13db3f0df6ddc40865743349a14ecb117f89f823869d3e12a84"
         },
         {
             "type": "file",
@@ -261,15 +261,15 @@
         },
         {
             "type": "file",
-            "name": "install/migrations/002_venue_changes.migration.sql",
-            "size": 473,
-            "hash": "8e2b112e69075133a5e94c84f46158b997cc023e0f97a33c15cd4b1596f54788"
-        },
-        {
-            "type": "file",
             "name": "install/migrations/001_auth.sql",
             "size": 1749,
             "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
+        },
+        {
+            "type": "file",
+            "name": "install/migrations/002_venue_changes.migration.sql",
+            "size": 473,
+            "hash": "8e2b112e69075133a5e94c84f46158b997cc023e0f97a33c15cd4b1596f54788"
         },
         {
             "type": "file",
@@ -339,15 +339,15 @@
         },
         {
             "type": "file",
-            "name": "lang/en/install.ini",
-            "size": 2538,
-            "hash": "ac203678e4c4a0f2bce330e38ecce44366c03f12379df5c5971881e70215444e"
-        },
-        {
-            "type": "file",
             "name": "lang/en/events.ini",
             "size": 167,
             "hash": "3f76fa9d1821f59f516a760ebecd0a0d0c9dcb1ab889fd211666ca1340304136"
+        },
+        {
+            "type": "file",
+            "name": "lang/en/install.ini",
+            "size": 2538,
+            "hash": "ac203678e4c4a0f2bce330e38ecce44366c03f12379df5c5971881e70215444e"
         },
         {
             "type": "file",
