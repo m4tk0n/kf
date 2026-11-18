@@ -6,7 +6,7 @@ $profile = $record->fetch() ?: [];
 $csrf = (string)($_SESSION['csrf_token'] ?? '');
 ?>
 <section class="account-page">
-  <h1><?= e(L('profile-title')) ?></h1>
+  <div class="account-page-heading"><h1><?= e(L('profile-title')) ?></h1><a class="back-button" href="<?= e(url()) ?>"><?= e(L('back-button')) ?></a></div>
   <?php if (!empty($_SESSION['profile_error'])): ?><p class="form-message error"><?= e($_SESSION['profile_error']) ?></p><?php unset($_SESSION['profile_error']); endif; ?>
   <?php if (!empty($_SESSION['profile_notice'])): ?><p class="form-message success"><?= e($_SESSION['profile_notice']) ?></p><?php unset($_SESSION['profile_notice']); endif; ?>
   <form method="post" action="<?= e(url('profile/save')) ?>" class="account-form">
