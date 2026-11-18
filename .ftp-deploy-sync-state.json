@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794985017456,
+    "generatedTime": 1794985475261,
     "data": [
         {
             "type": "file",
@@ -44,8 +44,8 @@
         {
             "type": "file",
             "name": "index.php",
-            "size": 8292,
-            "hash": "f74a6ce8ba56780896486fe526fed963e358278fcfbc851fc26bb65831769cb7"
+            "size": 8374,
+            "hash": "d42a8e4fa52a00947475ecc21c220a67528248eac69457ae3b16f1ba35d92b04"
         },
         {
             "type": "folder",
@@ -203,11 +203,11 @@
         },
         {
             "type": "folder",
-            "name": "cache/tpl/cs"
+            "name": "cache/tpl/en"
         },
         {
             "type": "folder",
-            "name": "cache/tpl/en"
+            "name": "cache/tpl/cs"
         },
         {
             "type": "file",
@@ -253,15 +253,15 @@
         },
         {
             "type": "file",
-            "name": "install/migrations/001_auth.sql",
-            "size": 1749,
-            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
+            "name": "lang/cs/common.ini",
+            "size": 4482,
+            "hash": "4c0096af7102281817df0c31d57974950529277e14862aeebe9df98a6e84ff7e"
         },
         {
             "type": "file",
-            "name": "lang/cs/common.ini",
-            "size": 4506,
-            "hash": "e4df62d74198a388d4afd22f2db02d28e1d724a215cc1e4be001da77a7e6a4f9"
+            "name": "install/migrations/001_auth.sql",
+            "size": 1749,
+            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
         },
         {
             "type": "file",
@@ -295,7 +295,13 @@
         },
         {
             "type": "file",
-            "name": "cache/tpl/cs/layout.php",
+            "name": "cache/tpl/en/home.php",
+            "size": 64,
+            "hash": "8255936fc286258c8c446edf199fb025df84885d235bf27a54caeae6d36208ae"
+        },
+        {
+            "type": "file",
+            "name": "cache/tpl/en/layout.php",
             "size": 657,
             "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
         },
@@ -307,13 +313,7 @@
         },
         {
             "type": "file",
-            "name": "cache/tpl/en/home.php",
-            "size": 64,
-            "hash": "8255936fc286258c8c446edf199fb025df84885d235bf27a54caeae6d36208ae"
-        },
-        {
-            "type": "file",
-            "name": "cache/tpl/en/layout.php",
+            "name": "cache/tpl/cs/layout.php",
             "size": 657,
             "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
         }
