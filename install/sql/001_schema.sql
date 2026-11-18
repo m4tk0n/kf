@@ -101,8 +101,14 @@ CREATE TABLE IF NOT EXISTS `{p}pending` (
   `type` TINYINT UNSIGNED NOT NULL,
   `dupkey` VARCHAR(160) NOT NULL,
   `user_id` INT UNSIGNED NOT NULL,
+  `name` VARCHAR(120) NULL,
+  `country_id` SMALLINT UNSIGNED NULL,
+  `city` VARCHAR(100) NULL,
+  `address` VARCHAR(190) NULL,
+  `phone` VARCHAR(40) NULL,
   `payload` JSON NOT NULL,
   PRIMARY KEY (`id`),
   KEY `type_key` (`type`, `dupkey`),
-  KEY `user_id` (`user_id`)
+  KEY `user_id` (`user_id`),
+  KEY `country_city` (`country_id`, `city`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
