@@ -213,3 +213,19 @@ h2 { margin: 0; font-size: 16px; }
 }
 .autocomplete-option small { color: var(--muted); font-size: 11px; }
 .autocomplete-option:hover, .autocomplete-option.active { background: #333; color: var(--accent); }
+
+
+/* Submission moderation */
+.moderation-count { margin: -7px 0 14px; color: var(--muted); font-size: 12px; }
+.moderation-list { display: grid; gap: 10px; }
+.moderation-item { padding: 13px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+.moderation-item-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.moderation-item h2 { min-width: 0; overflow-wrap: anywhere; font-size: 15px; }
+.moderation-type { flex: 0 0 auto; padding: 4px 7px; border: 1px solid var(--line); border-radius: 5px; color: var(--accent); font-size: 10px; }
+.moderation-meta { display: grid; gap: 4px; margin-top: 8px; color: var(--muted); font-size: 11px; line-height: 1.45; overflow-wrap: anywhere; }
+.moderation-actions { display: flex; gap: 8px; margin-top: 12px; }
+.moderation-actions form { flex: 1 1 0; margin: 0; }
+.moderation-actions button { width: 100%; min-height: 39px; padding: 0 10px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); background: var(--panel-soft); font-size: 12px; font-weight: 700; cursor: pointer; }
+.moderation-actions .approve-button { border-color: #477b52; color: #a6e2b1; }
+.moderation-actions .reject-button { border-color: #8b4141; color: #ffaaaa; }
+@media (max-width: 380px) { .moderation-item { padding: 10px; } .moderation-actions { gap: 6px; } }
