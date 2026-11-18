@@ -35,38 +35,15 @@ $route = array_slice($parts, 1);
 $routeName = implode('/', $route);
 $GLOBALS['KF_ROUTE'] = $routeName;
 
-/*
- * Re-check the signed-in account on every full or partial page request.
- * The database is the source of truth for role and account state; session
- * values are only a cache and must never grant permissions by themselves.
- */
-if (is_array($_SESSION['user'] ?? null) && !empty($_SESSION['user']['id'])) {
-    $users = tbl('users');
-    $check = db()->prepare("SELECT id, role, state, confirmed FROM {$users} WHERE id = ? LIMIT 1");
-    $check->execute([(int)$_SESSION['user']['id']]);
-    $freshUser = $check->fetch();
-
-    if (!$freshUser || (int)$freshUser['state'] === 2 || (int)$freshUser['confirmed'] !== 1) {
-        unset($_SESSION['user']);
-        session_regenerate_id(true);
-    } else {
-        $_SESSION['user']['role'] = (int)$freshUser['role'];
-        $_SESSION['user']['state'] = (int)$freshUser['state'];
-    }
-}
-
+// Revalidate every authenticated request against the database. Any DB error fails closed.
+refresh_authenticated_user();
 if (is_array($_SESSION['user'] ?? null) && empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 
 function require_csrf(): void
 {
-    $submitted = (string)($_POST['csrf_token'] ?? '');
-    $expected = (string)($_SESSION['csrf_token'] ?? '');
-    if ($submitted === '' || $expected === '' || !hash_equals($expected, $submitted)) {
-        http_response_code(403);
-        exit('Forbidden');
-    }
+    require_csrf_token();
 }
 
 if (in_array($routeName, ['logout', 'profile/save', 'account/delete-request', 'account/delete-cancel'], true)) {
