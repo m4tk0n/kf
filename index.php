@@ -46,9 +46,12 @@ if ($authenticatedUser !== null) {
     header('Cache-Control: private, no-store, max-age=0');
     header('Pragma: no-cache');
 }
-if (in_array($routeName, ['profile', 'settings'], true) && $authenticatedUser === null) {
-    header('Location: ' . url('login'), true, 303);
-    exit;
+if (in_array($routeName, ['profile', 'settings'], true)) {
+    if ($authenticatedUser === null) {
+        header('Location: ' . url('login'), true, 303);
+        exit;
+    }
+    require_permission($routeName === 'profile' ? 'account.profile' : 'account.settings');
 }
 if (is_array($_SESSION['user'] ?? null) && empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));

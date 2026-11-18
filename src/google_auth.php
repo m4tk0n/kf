@@ -44,6 +44,8 @@ function require_google_auth(string $action): never
             }
             if ($action === 'link_start') {
                 $_SESSION['google_oauth_link_user_id'] = (int)$currentUser['id'];
+            } else {
+                unset($_SESSION['google_oauth_link_user_id']);
             }
             $state = bin2hex(random_bytes(32));
             $nonce = bin2hex(random_bytes(32));
@@ -142,6 +144,12 @@ function require_google_auth(string $action): never
             (string)($identity['picture'] ?? '')
         );
     } catch (Throwable $e) {
+        unset(
+            $_SESSION['google_oauth_state'],
+            $_SESSION['google_oauth_nonce'],
+            $_SESSION['google_oauth_verifier'],
+            $_SESSION['google_oauth_link_user_id']
+        );
         error_log('Google OAuth: ' . $e->getMessage());
         http_response_code(400);
         header('Cache-Control: no-store');

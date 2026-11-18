@@ -54,6 +54,8 @@ function require_facebook_auth(string $action): never
             }
             if ($action === 'link_start') {
                 $_SESSION['facebook_oauth_link_user_id'] = (int)$currentUser['id'];
+            } else {
+                unset($_SESSION['facebook_oauth_link_user_id']);
             }
             $state = bin2hex(random_bytes(32));
             $_SESSION['facebook_oauth_state'] = $state;
@@ -143,6 +145,7 @@ function require_facebook_auth(string $action): never
             $picture
         );
     } catch (Throwable $e) {
+        unset($_SESSION['facebook_oauth_state'], $_SESSION['facebook_oauth_link_user_id']);
         error_log('Facebook OAuth: ' . $e->getMessage());
         http_response_code(400);
         header('Cache-Control: no-store');
