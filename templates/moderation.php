@@ -51,7 +51,7 @@ $typeLabels = [
               <?php if (!empty($data['phone'])): ?><span><?= e(L('add-phone')) ?>: <?= e($data['phone']) ?></span><?php endif; ?>
               <?php if (!empty($data['description'])): ?><span><?= e(L('add-description')) ?>: <?= e($data['description']) ?></span><?php endif; ?>
               <?php
-                $uploadedImages = array_values(array_filter((array)($data['images'] ?? []), static fn(array $image): bool => ($image['type'] ?? '') === 'upload'));
+                $uploadedImages = array_values(array_filter((array)($data['images'] ?? []), static fn($image): bool => is_array($image) && ($image['type'] ?? '') === 'upload'));
               ?>
               <?php if ($uploadedImages): ?>
                 <span><?= e(L('add-image-files')) ?>: <?= count($uploadedImages) ?></span>
