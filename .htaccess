@@ -2,7 +2,7 @@ Options -Indexes
 RewriteEngine On
 
 # Interní soubory a složky nejsou dostupné z webu
-RewriteRule ^(\\.|config\\.php$|src/|lang/|templates/|data/|cache/|install/sql/|install/installed\\.lock$) - [F,L]
+RewriteRule ^(\.|config\.php$|src/|lang/|templates/|data/|cache/|install/(sql|migrations)/|install/installed\.lock$) - [F,L]
 
 RewriteRule ^install/?$ install/index.php [L]
 
