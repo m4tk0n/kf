@@ -69,7 +69,7 @@ function inst_plan(PDO $db,string $p):array{
 function inst_apply(PDO $db,string $p,array $plan):void{
  foreach($plan['create'] as $x)$db->exec($x['sql']);
  foreach($plan['columns'] as $x)$db->exec('ALTER TABLE '.inst_id($x['table']).' ADD COLUMN '.inst_id($x['column']).' '.$x['definition']);
- foreach($plan['indexes'] as $x){$v=$x['definition'];$cols=implode(',',array_map('trim',explode(',',$v['columns'])));$u=str_starts_with($v['kind'],'UNIQUE')?'UNIQUE ':'';$db->exec('ALTER TABLE '.inst_id($x['table']).' ADD '.($x['name']==='PRIMARY'?'PRIMARY KEY':'INDEX '.inst_id($x['name'])).' ('.$cols.')');}
+ foreach($plan['indexes'] as $x){$v=$x['definition'];$cols=implode(',',array_map('trim',explode(',',$v['columns'])));$u=str_starts_with($v['kind'],'UNIQUE')?'UNIQUE ':'';$db->exec('ALTER TABLE '.inst_id($x['table']).' ADD '.($x['name']==='PRIMARY'?'PRIMARY KEY':$u.'INDEX '.inst_id($x['name'])).' ('.$cols.')');}
  foreach($plan['foreign'] as $x){$v=$x['definition'];$db->exec('ALTER TABLE '.inst_id($x['table']).' ADD CONSTRAINT '.inst_id($x['name']).' FOREIGN KEY ('.$v['columns'].') REFERENCES '.inst_id($v['ref_table']).' ('.$v['ref_columns'].') '.$v['tail']);}
  $fs=glob(__DIR__.'/sql/*.sql')?:[];sort($fs,SORT_NATURAL);foreach($fs as $f)foreach(inst_split(inst_sql($f,$p)) as $s)$db->exec($s);
  $mt=$p.'schema_migrations';$db->exec('CREATE TABLE IF NOT EXISTS '.inst_id($mt).' (migration VARCHAR(190) NOT NULL, applied_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY(migration)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci');
