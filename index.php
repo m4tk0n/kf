@@ -333,9 +333,8 @@ if ($routeName === 'moderation' && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST'
     $kind = (string)($_POST['kind'] ?? '');
     try {
         if (!$id || $id < 1) throw new RuntimeException(L('mod-error-missing'));
-        if ($action === 'save' || $action === 'approve') {
-            mod_update_pending((int)$id, $_POST);
-        }
+        if ($kind === 'venue_change' && ($action === 'save' || $action === 'approve')) mod_update_venue_change((int)$id, $_POST);
+        elseif ($action === 'save' || $action === 'approve') mod_update_pending((int)$id, $_POST);
         if ($action === 'approve') {
             mod_approve((int)$id);
             $_SESSION['moderation_notice'] = L('mod-approved');
@@ -352,7 +351,7 @@ if ($routeName === 'moderation' && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST'
         if (!$e instanceof RuntimeException) error_log('K&F moderation: ' . $e->getMessage());
     }
     $target = 'moderation';
-    if (in_array($kind, ['event', 'venue', 'band'], true)) $target .= '?type=' . rawurlencode($kind);
+    if (in_array($kind, ['event', 'venue', 'band', 'venue_change'], true)) $target .= '?type=' . rawurlencode($kind);
     if (($action === 'save' || !empty($_SESSION['moderation_error'])) && $id) $target .= (str_contains($target, '?') ? '&' : '?') . 'id=' . (int)$id;
     header('Location: ' . url($target), true, 303);
     exit;
@@ -361,7 +360,7 @@ if ($routeName === 'moderation' && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST'
 
 if ($routeName === 'moderation') {
     $moderationType = (string)($_GET['type'] ?? '');
-    if (!in_array($moderationType, ['event', 'venue', 'band'], true)) $moderationType = '';
+    if (!in_array($moderationType, ['event', 'venue', 'band', 'venue_change'], true)) $moderationType = '';
     $moderationId = max(0, (int)($_GET['id'] ?? 0));
     $moderationRow = null;
     if ($moderationId > 0) {
@@ -389,13 +388,42 @@ if ($routeName === 'moderation') {
     exit;
 }
 
+
+if (preg_match('~^venue-edit/(\d+)$~', $routeName, $editMatch)) {
+    $user=require_login();$venueId=(int)$editMatch[1];$venue=venue_load($venueId);
+    if($venue===null){page('404',['title'=>L('err-404')],404);exit;}
+    if(($_SERVER['REQUEST_METHOD']??'GET')==='POST'){
+        require_csrf();
+        try{
+            $name=trim((string)($_POST['name']??''));$city=trim((string)($_POST['city']??''));$countryId=(int)($_POST['country_id']??0);
+            $address=trim((string)($_POST['address']??''));$phone=trim((string)($_POST['phone']??''));$description=trim((string)($_POST['description']??''));
+            if($name===''||mb_strlen($name,'UTF-8')>120||$city===''||mb_strlen($city,'UTF-8')>100||$countryId<1||mb_strlen($address,'UTF-8')>190||mb_strlen($phone,'UTF-8')>40||mb_strlen($description,'UTF-8')>3000)throw new RuntimeException(L('add-error-venue-fields'));
+            $check=db()->prepare('SELECT 1 FROM '.tbl('countries').' WHERE id=?');$check->execute([$countryId]);if(!$check->fetchColumn())throw new RuntimeException(L('add-error-reference'));
+            $lat=trim((string)($_POST['latitude']??''));$lng=trim((string)($_POST['longitude']??''));
+            if(($lat!==''||$lng!=='')&&($lat===''||$lng===''||!is_numeric($lat)||!is_numeric($lng)||(float)$lat < -90||(float)$lat>90||(float)$lng < -180||(float)$lng>180))throw new RuntimeException(L('add-error-gps'));
+            $raw=venue_data($venueId);$descriptions=[];foreach(['cs','en'] as $code)$descriptions[$code]=(string)($raw['desc_'.$code]??'');$descriptions[lang_code()]=$description;
+            $cityQ=db()->prepare('SELECT c.country_id FROM '.tbl('venues').' v JOIN '.tbl('cities').' c ON c.id=v.city_id WHERE v.id=?');$cityQ->execute([$venueId]);$oldCountry=(int)$cityQ->fetchColumn();
+            $original=['name'=>$venue['name'],'city'=>$venue['city'],'country_id'=>$oldCountry,'address'=>$venue['address'],'phone'=>$venue['phone'],'description'=>$venue['description']];
+            $proposed=['name'=>$name,'city'=>$city,'country_id'=>$countryId,'address'=>$address,'phone'=>$phone,'description'=>$description,'descriptions'=>$descriptions,'gps'=>$lat!==''?['latitude'=>(float)$lat,'longitude'=>(float)$lng]:null];
+            $pdo=db();$pending=$pdo->prepare('SELECT id FROM '.tbl('venue_changes').' WHERE venue_id=? LIMIT 1');$pending->execute([$venueId]);
+            if($pending->fetchColumn())throw new RuntimeException(L('venue-edit-pending'));
+            $pdo->prepare('INSERT INTO '.tbl('venue_changes').' (venue_id,user_id,original_data,proposed_data) VALUES (?,?,?,?)')->execute([$venueId,(int)$user['id'],json_encode($original,JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE),json_encode($proposed,JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES)]);
+            $_SESSION['venue_edit_notice']=L('venue-edit-submitted');
+            header('Location: '.url('venue/'.$venueId.'/'.slugify($venue['name'])),true,303);exit;
+        }catch(Throwable $e){$_SESSION['venue_edit_error']=$e instanceof RuntimeException?$e->getMessage():L('add-error-save');if(!$e instanceof RuntimeException)error_log('K&F venue edit: '.$e->getMessage());header('Location: '.url('venue-edit/'.$venueId),true,303);exit;}
+    }
+    $raw=venue_data($venueId);$cq=db()->prepare('SELECT c.country_id FROM '.tbl('venues').' v JOIN '.tbl('cities').' c ON c.id=v.city_id WHERE v.id=?');$cq->execute([$venueId]);
+    $countries=db()->query('SELECT id,iso2,'.(lang_code()==='en'?'en':'cs').' AS label FROM '.tbl('countries').' ORDER BY label')->fetchAll();
+    page('venue-edit',['title'=>L('venue-edit-title'),'venue'=>$venue,'country_id'=>(int)$cq->fetchColumn(),'countries'=>$countries,'description'=>$raw['desc_'.lang_code()]??$venue['description'],'error'=>(string)($_SESSION['venue_edit_error']??'')]);unset($_SESSION['venue_edit_error']);exit;
+}
+
 // Detail konkrétního klubu. ID je rozhodující; slug v URL slouží jen pro čitelnou adresu.
 if (preg_match('~^venue/(\\d+)(?:/[^/]+)?$~', $routeName, $venueMatch)) {
     $venue = venue_load((int)$venueMatch[1]);
     if ($venue === null) {
         page('404', ['title' => L('err-404')], 404);
     } else {
-        page('venue-detail', ['title' => $venue['name'], 'venue' => $venue]);
+        page('venue-detail', ['title' => $venue['name'], 'venue' => $venue, 'venueEditNotice' => (string)($_SESSION['venue_edit_notice'] ?? '')]); unset($_SESSION['venue_edit_notice']);
     }
     exit;
 }
