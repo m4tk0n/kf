@@ -33,7 +33,6 @@ return [
     ],
     'img' => [
         'format' => 'webp', 'quality' => 80, 'max_bytes' => 3145728,
-        'max_pixels' => 16000000,
         'folder_divisor' => 1000,
         'band'  => ['s' => 96,  'l' => 400],
         'event' => ['s' => 150, 'l' => 600],
@@ -48,7 +47,7 @@ return [
         'event_type'   => [1 => 'concert', 2 => 'festival', 3 => 'other'],
         'role'         => [1 => 'user', 2 => 'trusted', 3 => 'moderator', 4 => 'admin'],
         'user_state'   => [0 => 'ok', 1 => 'no_contrib', 2 => 'blocked'],
-        'pending_type' => [1 => 'event', 2 => 'band', 3 => 'venue', 4 => 'city', 5 => 'genre'],
+        'pending_type' => [1 => 'event', 2 => 'venue', 3 => 'band', 4 => 'city', 5 => 'genre'],
     ],
     // Pravidla množného čísla: vrací příponu klíče (one / few / many)
     'plural' => [

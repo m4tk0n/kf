@@ -10,7 +10,7 @@ function mod_pending_rows(): array
         'SELECT p.id, p.type, p.name, p.country_id, p.city, p.payload, u.display_name, u.email
          FROM ' . tbl('pending') . ' p
          LEFT JOIN ' . tbl('users') . ' u ON u.id = p.user_id
-         ORDER BY p.id'
+         ORDER BY p.id DESC'
     )->fetchAll();
     foreach ($rows as &$row) {
         $decoded = json_decode((string)$row['payload'], true);

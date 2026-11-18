@@ -30,7 +30,6 @@ if (isset($_GET['setlang'])) {
 }
 
 lang_code($parts[0]);
-lang_load('limits');
 $route = array_slice($parts, 1);
 $routeName = implode('/', $route);
 $GLOBALS['KF_ROUTE'] = $routeName;
@@ -74,9 +73,6 @@ if ($authenticatedUser !== null) {
 // Protected pages use one server-side identity check; page templates keep their own layout.
 if (in_array($routeName, ['profile', 'settings', 'add'], true)) {
     $authenticatedUser = require_login();
-}
-if ($routeName === 'add') {
-    require_contributor(); // Blocked and no_contrib users cannot open the form or submit.
 }
 if ($routeName === 'moderation') {
     require_role(3); // Moderator (3) and administrator (4).
@@ -152,7 +148,7 @@ if (in_array($routeName, ['logout', 'profile/save', 'account/delete-request', 'a
 
 if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     require_csrf();
-    $user = require_contributor();
+    $user = require_role(1);
     $type = (string)($_POST['type'] ?? '');
     $typeIds = ['event' => 1, 'venue' => 2, 'band' => 3];
     if (!isset($typeIds[$type])) { http_response_code(400); exit('Invalid submission type'); }
@@ -165,7 +161,6 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
 
     try {
         if ($error !== '') throw new RuntimeException($error);
-        assert_pending_limit($user);
 
         if ($type === 'band') {
             $q = db()->prepare('SELECT c.id country_id, g.id genre_id FROM ' . tbl('countries') . ' c CROSS JOIN ' . tbl('genres') . ' g WHERE c.iso2 = ? AND g.id = ?');
@@ -212,10 +207,10 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
                 foreach (preg_split('/\\R/u', $urlsRaw) ?: [] as $imageUrl) {
                     $imageUrl = trim($imageUrl);
                     if ($imageUrl === '') continue;
-                    $urlParts = parse_url($imageUrl);
-                    if (mb_strlen($imageUrl, 'UTF-8') > 2048 || !is_array($urlParts) ||
-                        !in_array(strtolower((string)($urlParts['scheme'] ?? '')), ['http', 'https'], true) ||
-                        empty($urlParts['host']) || preg_match('/[\\r\\n\\s]/', $imageUrl)) {
+                    $parts = parse_url($imageUrl);
+                    if (mb_strlen($imageUrl, 'UTF-8') > 2048 || !is_array($parts) ||
+                        !in_array(strtolower((string)($parts['scheme'] ?? '')), ['http', 'https'], true) ||
+                        empty($parts['host']) || preg_match('/[\\r\\n\\s]/', $imageUrl)) {
                         throw new RuntimeException(L('add-error-image-url'));
                     }
                     $imageUrls[] = ['type' => 'url', 'value' => $imageUrl];
@@ -270,7 +265,6 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
                     throw new RuntimeException(L('add-error-image-upload'));
                 }
                 $maxBytes = (int)cfg('img.max_bytes');
-                $maxPixels = (int)cfg('img.max_pixels');
                 $maxDimension = (int)cfg('img.venue.l');
                 $finfo = new finfo(FILEINFO_MIME_TYPE);
                 for ($i = 0; $i < $fileCount; $i++) {
@@ -286,13 +280,7 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
                         throw new RuntimeException(L('add-error-image-type'));
                     }
                     $raw = file_get_contents($tmp);
-                    // Rozměry se čtou z hlavičky ještě před dekódováním, aby malý soubor s obřím rozlišením nevyčerpal paměť.
-                    $info = $raw !== false ? @getimagesizefromstring($raw) : false;
-                    if (!$info || $info[0] < 1 || $info[1] < 1 || $info[0] > 10000 || $info[1] > 10000 ||
-                        $info[0] * $info[1] > $maxPixels) {
-                        throw new RuntimeException(L('add-error-image-type'));
-                    }
-                    $source = @imagecreatefromstring($raw);
+                    $source = $raw !== false ? @imagecreatefromstring($raw) : false;
                     if (!$source) throw new RuntimeException(L('add-error-image-type'));
                     $width = imagesx($source);
                     $height = imagesy($source);
@@ -334,6 +322,50 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
         if (!$e instanceof RuntimeException) error_log('K&F add submission: '.$e->getMessage());
     }
     header('Location: ' . url('add') . '?type=' . rawurlencode($type), true, 303);
+    exit;
+}
+
+// Schvalování příspěvků: akce jsou dostupné pouze moderátorům a administrátorům.
+if ($routeName === 'moderation' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
+    require_csrf();
+    $action = (string)($_POST['action'] ?? '');
+    $id = filter_var($_POST['id'] ?? null, FILTER_VALIDATE_INT);
+    try {
+        if (!$id || $id < 1) {
+            throw new RuntimeException(L('mod-error-missing'));
+        }
+        if ($action === 'approve') {
+            mod_approve((int)$id);
+            $_SESSION['moderation_notice'] = L('mod-approved');
+        } elseif ($action === 'reject') {
+            mod_reject((int)$id);
+            $_SESSION['moderation_notice'] = L('mod-rejected');
+        } else {
+            throw new RuntimeException(L('mod-error-action'));
+        }
+    } catch (Throwable $e) {
+        $_SESSION['moderation_error'] = $e instanceof RuntimeException
+            ? $e->getMessage()
+            : L('mod-error-action');
+        if (!$e instanceof RuntimeException) {
+            error_log('K&F moderation: ' . $e->getMessage());
+        }
+    }
+    header('Location: ' . url('moderation'), true, 303);
+    exit;
+}
+
+if ($routeName === 'moderation') {
+    $moderationRows = mod_pending_rows();
+    $moderationNotice = (string)($_SESSION['moderation_notice'] ?? '');
+    $moderationError = (string)($_SESSION['moderation_error'] ?? '');
+    unset($_SESSION['moderation_notice'], $_SESSION['moderation_error']);
+    page('moderation', [
+        'title' => L('moderation-title'),
+        'rows' => $moderationRows,
+        'notice' => $moderationNotice,
+        'error' => $moderationError,
+    ]);
     exit;
 }
 
