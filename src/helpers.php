@@ -301,10 +301,85 @@ function refresh_authenticated_user(): ?array
     return $_SESSION['user'];
 }
 
-function require_role(int $minimumRole): array
+function current_request_return_path(): string
+{
+    $requestUri = (string)($_SERVER['REQUEST_URI'] ?? '/');
+    $requestPath = (string)(parse_url($requestUri, PHP_URL_PATH) ?: '/');
+    $basePath = rtrim((string)parse_url(cfg('app.base_url'), PHP_URL_PATH), '/');
+
+    if ($basePath !== '' && str_starts_with($requestPath, $basePath . '/')) {
+        $relativePath = substr($requestPath, strlen($basePath));
+    } elseif ($basePath === '') {
+        $relativePath = $requestPath;
+    } else {
+        return '';
+    }
+
+    $query = (string)(parse_url($requestUri, PHP_URL_QUERY) ?? '');
+    return $relativePath . ($query !== '' ? '?' . $query : '');
+}
+
+/**
+ * Accept only an in-app path beginning with a configured language code.
+ * Absolute URLs, protocol-relative URLs and path traversal are rejected.
+ */
+function safe_auth_return_path(?string $candidate): string
+{
+    $candidate = trim((string)$candidate);
+    if ($candidate === '' || str_contains($candidate, "\r") || str_contains($candidate, "\n") ||
+        str_contains($candidate, '\\\\') || str_starts_with($candidate, '//')) {
+        return '';
+    }
+
+    $parts = parse_url($candidate);
+    if (!is_array($parts) || isset($parts['scheme']) || isset($parts['host']) ||
+        isset($parts['user']) || isset($parts['pass']) || isset($parts['fragment'])) {
+        return '';
+    }
+
+    $path = (string)($parts['path'] ?? '');
+    if ($path === '' || !str_starts_with($path, '/')) {
+        return '';
+    }
+
+    $segments = explode('/', trim($path, '/'));
+    if (!$segments || !in_array($segments[0], cfg('app.languages'), true)) {
+        return '';
+    }
+    foreach ($segments as $segment) {
+        if ($segment === '.' || $segment === '..') return '';
+    }
+
+    $route = implode('/', array_slice($segments, 1));
+    if (in_array($route, ['login', 'auth/google/start', 'auth/google/callback'], true)) {
+        return '';
+    }
+
+    return $path . (isset($parts['query']) && $parts['query'] !== '' ? '?' . $parts['query'] : '');
+}
+
+function require_login(?string $returnTo = null): array
 {
     $user = refresh_authenticated_user();
-    if (!$user || (int)$user['role'] < $minimumRole) {
+    if ($user !== null) {
+        return $user;
+    }
+
+    $target = safe_auth_return_path($returnTo ?? current_request_return_path());
+    $loginUrl = url('login');
+    if ($target !== '') {
+        $loginUrl .= '?next=' . rawurlencode($target);
+    }
+
+    header('Cache-Control: no-store, private');
+    header('Location: ' . $loginUrl, true, 303);
+    exit;
+}
+
+function require_role(int $minimumRole): array
+{
+    $user = require_login();
+    if ((int)$user['role'] < $minimumRole) {
         // Deliberately do not reveal that a protected route exists.
         http_response_code(404);
         header('Cache-Control: no-store, private');
