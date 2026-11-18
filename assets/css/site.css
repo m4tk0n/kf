@@ -47,6 +47,9 @@ button, input, select { font: inherit; }
 .empty-state p { max-width: 360px; margin: 5px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .listing { display: grid; gap: 7px; }
 .listing-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 7px; }
+.listing-row-link { color: inherit; text-decoration: none; }
+.listing-row-link:hover { border-color: var(--accent); }
+.listing-row-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .listing-main { display: grid; min-width: 0; gap: 3px; }
 .listing-main strong { overflow-wrap: anywhere; font-size: 13px; }
 .listing-main span, .listing-row time { color: var(--muted); font-size: 11px; }
