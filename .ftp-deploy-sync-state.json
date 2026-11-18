@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794981798725,
+    "generatedTime": 1794982036827,
     "data": [
         {
             "type": "file",
@@ -104,8 +104,8 @@
         {
             "type": "file",
             "name": "install/index.php",
-            "size": 19973,
-            "hash": "9182e0d65155bd149e3bb80fd50a5dc96864a58c3f74b2904b26beaaf94fc74b"
+            "size": 21133,
+            "hash": "aaa05ff6ab48b615f0a8d604310765038caf95318e5706630a0da719f7e5a922"
         },
         {
             "type": "file",
@@ -155,9 +155,9 @@
         },
         {
             "type": "file",
-            "name": "templates/login.php",
-            "size": 718,
-            "hash": "453cf046a9664e51995a66d31b3315ef6a999525db2c7053fc0a620496d390c5"
+            "name": "templates/layout.php",
+            "size": 4708,
+            "hash": "3a4704b7da256c0030b7f73384d5bf582b041975fb9057aab5d090f56ad82455"
         },
         {
             "type": "file",
@@ -167,9 +167,9 @@
         },
         {
             "type": "file",
-            "name": "templates/layout.php",
-            "size": 4708,
-            "hash": "3a4704b7da256c0030b7f73384d5bf582b041975fb9057aab5d090f56ad82455"
+            "name": "templates/login.php",
+            "size": 718,
+            "hash": "453cf046a9664e51995a66d31b3315ef6a999525db2c7053fc0a620496d390c5"
         },
         {
             "type": "file",
@@ -211,15 +211,15 @@
         },
         {
             "type": "file",
-            "name": "install/sql/003_seed_countries.sql",
-            "size": 10899,
-            "hash": "5e445919944256887255055fa3490a3bd24388194182c6245b13521fa0877e50"
-        },
-        {
-            "type": "file",
             "name": "install/sql/002_seed_genres.sql",
             "size": 5440,
             "hash": "cfa7275df980fcb263de62045d9fe8cdbcca70f099222ad1d58aa2ef151f9d70"
+        },
+        {
+            "type": "file",
+            "name": "install/sql/003_seed_countries.sql",
+            "size": 10899,
+            "hash": "5e445919944256887255055fa3490a3bd24388194182c6245b13521fa0877e50"
         },
         {
             "type": "file",
@@ -253,15 +253,15 @@
         },
         {
             "type": "file",
-            "name": "lang/cs/install.ini",
-            "size": 2666,
-            "hash": "6c552dc394ee6908f2ef87fbc7291e8637da276ba18cba83f2984b0edb5a2549"
-        },
-        {
-            "type": "file",
             "name": "lang/cs/events.ini",
             "size": 181,
             "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
+        },
+        {
+            "type": "file",
+            "name": "lang/cs/install.ini",
+            "size": 2666,
+            "hash": "6c552dc394ee6908f2ef87fbc7291e8637da276ba18cba83f2984b0edb5a2549"
         },
         {
             "type": "file",
