@@ -104,8 +104,6 @@ CREATE TABLE IF NOT EXISTS `{p}pending` (
   `name` VARCHAR(120) NULL,
   `country_id` SMALLINT UNSIGNED NULL,
   `city` VARCHAR(100) NULL,
-  `address` VARCHAR(190) NULL,
-  `phone` VARCHAR(40) NULL,
   `payload` JSON NOT NULL,
   PRIMARY KEY (`id`),
   KEY `type_key` (`type`, `dupkey`),
