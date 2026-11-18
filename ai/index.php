@@ -356,7 +356,8 @@ function ai_generate_source_copies(string $root): void
         $safeBase = preg_replace('/[^A-Za-z0-9._-]+/', '_', basename($relative));
         $copyName = hash('sha256', $relative) . '__' . $safeBase . '.txt';
         $destination = $copyDir . DIRECTORY_SEPARATOR . $copyName;
-        $header = "ORIGINAL PATH: /_kf/" . $relative . "\n"
+        $header = "// " . $relative . "\n"
+            . "ORIGINAL PATH: /_kf/" . $relative . "\n"
             . "ORIGINAL FILENAME: " . basename($relative) . "\n"
             . "COPY FILENAME: " . $copyName . "\n"
             . "GENERATED: " . date('Y-m-d H:i:s') . "\n"
