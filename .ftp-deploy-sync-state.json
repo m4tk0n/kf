@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1795020133331,
+    "generatedTime": 1795020624598,
     "data": [
         {
             "type": "file",
@@ -34,8 +34,8 @@
         {
             "type": "file",
             "name": "config.php",
-            "size": 2362,
-            "hash": "2732000b29a4882a9bec0baa7c226a968a5745e68ceb77f1534f74f32b3c9cac"
+            "size": 2540,
+            "hash": "8d1d933d6cc041395dd7657a202c1b20fd99ed79ae95c15742b380d672e0f21e"
         },
         {
             "type": "folder",
@@ -46,14 +46,14 @@
             "name": "docs"
         },
         {
-            "type": "file",
-            "name": "index.php",
-            "size": 19947,
-            "hash": "8bd225da9fc92fbe3dae2e4ae97904ef611eb69b2f84327f5dfa032b74ad3a4a"
-        },
-        {
             "type": "folder",
             "name": "install"
+        },
+        {
+            "type": "file",
+            "name": "index.php",
+            "size": 19914,
+            "hash": "84f4e98a3c365022e58422f21be5400f6ea73a5f6789195e2dd9e7fe10c1c853"
         },
         {
             "type": "file",
@@ -158,8 +158,8 @@
         {
             "type": "file",
             "name": "src/helpers.php",
-            "size": 17450,
-            "hash": "86833037e2475d89769f3623665d49c9bc77b25fb6635a64186961f7100292bb"
+            "size": 18092,
+            "hash": "f2c12ed2a768ab60c7cff658cf4d54a10019fb35db80847a5384df416d387f6c"
         },
         {
             "type": "file",
@@ -175,33 +175,33 @@
         },
         {
             "type": "file",
-            "name": "templates/add.php",
-            "size": 10819,
-            "hash": "f26b4ec7d4b30df7d35ee64fa689541e063578966f20edf49cef0396d7b6b513"
-        },
-        {
-            "type": "file",
             "name": "templates/404.php",
             "size": 67,
             "hash": "883eda5d2f21409f2129c73b2cc1722bb659249b444056578fe8794ac66d0451"
         },
         {
             "type": "file",
-            "name": "templates/home.php",
-            "size": 8555,
-            "hash": "6348cff61678c7839e46d841962dbf8b8c4ea1277aaa2263a1f3bf2d993a614c"
+            "name": "templates/add.php",
+            "size": 10819,
+            "hash": "f26b4ec7d4b30df7d35ee64fa689541e063578966f20edf49cef0396d7b6b513"
         },
         {
             "type": "file",
             "name": "templates/layout.php",
-            "size": 5262,
-            "hash": "4b83ea2bf28a0fc5d15617615517b90e0bdc9f94c19aa91cfa06f666a38d9567"
+            "size": 5266,
+            "hash": "7523391ddda027055178a54910471c30d055637c35e9ec9514b215640ab2d15e"
         },
         {
             "type": "file",
             "name": "templates/login.php",
             "size": 820,
             "hash": "ef2bf50ce468119867dbf8bd0a9a1b2e5aa072ae22182842813c7adcea893e75"
+        },
+        {
+            "type": "file",
+            "name": "templates/home.php",
+            "size": 8555,
+            "hash": "6348cff61678c7839e46d841962dbf8b8c4ea1277aaa2263a1f3bf2d993a614c"
         },
         {
             "type": "file",
@@ -229,15 +229,15 @@
         },
         {
             "type": "file",
-            "name": "tools/project-preflight.php",
-            "size": 2767,
-            "hash": "542a53ec93b3e13db3f0df6ddc40865743349a14ecb117f89f823869d3e12a84"
-        },
-        {
-            "type": "file",
             "name": "tools/verify-project.php",
             "size": 3395,
             "hash": "72703dabc64b2d30a69179fe25dffcaf3065c1c5d5b3bbf003ed745337d6be09"
+        },
+        {
+            "type": "file",
+            "name": "tools/project-preflight.php",
+            "size": 2767,
+            "hash": "542a53ec93b3e13db3f0df6ddc40865743349a14ecb117f89f823869d3e12a84"
         },
         {
             "type": "file",
@@ -309,6 +309,12 @@
         },
         {
             "type": "file",
+            "name": "lang/cs/events.ini",
+            "size": 181,
+            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
+        },
+        {
+            "type": "file",
             "name": "lang/cs/install.ini",
             "size": 2666,
             "hash": "6c552dc394ee6908f2ef87fbc7291e8637da276ba18cba83f2984b0edb5a2549"
@@ -327,27 +333,9 @@
         },
         {
             "type": "file",
-            "name": "lang/cs/events.ini",
-            "size": 181,
-            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
-        },
-        {
-            "type": "file",
             "name": "lang/en/install.ini",
             "size": 2538,
             "hash": "ac203678e4c4a0f2bce330e38ecce44366c03f12379df5c5971881e70215444e"
-        },
-        {
-            "type": "file",
-            "name": "cache/tpl/cs/home.php",
-            "size": 69,
-            "hash": "c72a62e59816ef9de997f7a2e0e471a1ddf0c7a396f2d4c7501301c81a093844"
-        },
-        {
-            "type": "file",
-            "name": "cache/tpl/cs/layout.php",
-            "size": 657,
-            "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
         },
         {
             "type": "file",
@@ -358,6 +346,18 @@
         {
             "type": "file",
             "name": "cache/tpl/en/layout.php",
+            "size": 657,
+            "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
+        },
+        {
+            "type": "file",
+            "name": "cache/tpl/cs/home.php",
+            "size": 69,
+            "hash": "c72a62e59816ef9de997f7a2e0e471a1ddf0c7a396f2d4c7501301c81a093844"
+        },
+        {
+            "type": "file",
+            "name": "cache/tpl/cs/layout.php",
             "size": 657,
             "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
         }

@@ -43,6 +43,11 @@ return [
         'emails_per_hour' => 30, 'trusted_after' => 5,
     ],
     'auth' => ['password_min' => 8],
+    'permissions' => [
+        'moderation' => ['moderator', 'admin'],
+        'administration' => ['admin'],
+        'auto_publish' => ['trusted', 'moderator', 'admin'],
+    ],
     'enums' => [
         'event_type'   => [1 => 'concert', 2 => 'festival', 3 => 'other'],
         'role'         => [1 => 'user', 2 => 'trusted', 3 => 'moderator', 4 => 'admin'],

@@ -75,10 +75,10 @@ if (in_array($routeName, ['profile', 'settings', 'add'], true)) {
     $authenticatedUser = require_login();
 }
 if ($routeName === 'moderation') {
-    require_role(3); // Moderator (3) and administrator (4).
+    require_permission('moderation');
 }
 if ($routeName === 'admin') {
-    require_role(4); // Administrator is role ID 4.
+    require_permission('administration');
 }
 if ((is_array($_SESSION['user'] ?? null) || $routeName === 'add') && empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));

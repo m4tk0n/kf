@@ -45,11 +45,11 @@ $roleLabel = L('role-' . $roleName);
         <a class="account-menu-link" href="<?= e(url('profile')) ?>"><?= e(L('account-profile')) ?></a>
         <a class="account-menu-link" href="<?= e(url('settings')) ?>"><?= e(L('account-settings')) ?></a>
         <a class="account-menu-link" href="<?= e(url('add')) ?>"><?= e(L('account-add')) ?></a>
-<?php if (in_array((int)($currentUser['role'] ?? 0), [3, 4], true)): ?>
+<?php if (user_has_permission('moderation', $currentUser)): ?>
         <div class="account-menu-section"><?= e(L('account-management')) ?></div>
         <a class="account-menu-link" href="<?= e(url('moderation')) ?>"><?= e(L('account-approvals')) ?></a>
 <?php endif; ?>
-<?php if ((int)($currentUser['role'] ?? 0) === 4): ?>
+<?php if (user_has_permission('administration', $currentUser)): ?>
         <a class="account-menu-link" href="<?= e(url('admin')) ?>"><?= e(L('account-administration')) ?></a>
 <?php endif; ?>
         <form method="post" action="<?= e(url('logout')) ?>">

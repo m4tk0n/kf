@@ -378,39 +378,35 @@ function require_login(?string $returnTo = null): array
 
 function require_role(int $minimumRole): array
 {
-    $user = refresh_authenticated_user();
-    if ($user === null || (int)$user['role'] < $minimumRole) {
-        // Anonymous and unauthorised visitors get the identical 404: the route's existence is not revealed.
+    $user = require_login();
+    if ((int)$user['role'] < $minimumRole) {
+        // Deliberately do not reveal that a protected route exists.
+        http_response_code(404);
         header('Cache-Control: no-store, private');
-        page('404', ['title' => L('err-404')], 404);
-        exit;
+        exit('Not Found');
     }
     return $user;
 }
 
-/** Přispívat smí jen uživatel ve stavu 0 (ok); stav 1 (no_contrib) a 2 (blocked) ne. */
-function require_contributor(): array
+function user_has_permission(string $permission, ?array $user = null): bool
+{
+    $user ??= $_SESSION['user'] ?? null;
+    if (!is_array($user)) return false;
+
+    $allowedRoles = cfg('permissions.' . $permission);
+    $roleName = cfg('enums.role')[(int)($user['role'] ?? 0)] ?? null;
+    return is_string($roleName) && in_array($roleName, $allowedRoles, true);
+}
+
+function require_permission(string $permission): array
 {
     $user = require_login();
-    if ((int)($user['state'] ?? 2) !== 0) {
-        http_response_code(403);
+    if (!user_has_permission($permission, $user)) {
+        http_response_code(404);
         header('Cache-Control: no-store, private');
-        exit('Forbidden');
+        exit('Not Found');
     }
     return $user;
-}
-
-/** Limit čekajících návrhů na uživatele (limits.pending_per_user); důvěryhodní a vyšší role jsou vyňati. */
-function assert_pending_limit(array $user): void
-{
-    if ((int)$user['role'] >= 2) {
-        return;
-    }
-    $q = db()->prepare('SELECT COUNT(*) FROM ' . tbl('pending') . ' WHERE user_id = ?');
-    $q->execute([(int)$user['id']]);
-    if ((int)$q->fetchColumn() >= (int)cfg('limits.pending_per_user')) {
-        throw new RuntimeException(L('add-error-limit'));
-    }
 }
 
 function require_csrf_token(): void
