@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794976775641,
+    "generatedTime": 1794976869627,
     "data": [
         {
             "type": "file",
@@ -14,6 +14,10 @@
             "name": "SERVER-SNAPSHOT.md",
             "size": 822,
             "hash": "e94aeb44eee7c02c6050b913263451ec70856c2e424f23b47c866112f0d03900"
+        },
+        {
+            "type": "folder",
+            "name": "admin"
         },
         {
             "type": "folder",
@@ -54,14 +58,14 @@
             "hash": "4e0723fd8ce7c6f5de63b9017cb835a28ab5d144fb987ba10dd7a978be12713d"
         },
         {
+            "type": "folder",
+            "name": "lang"
+        },
+        {
             "type": "file",
             "name": "popis.txt",
             "size": 214,
             "hash": "540fbe720be6feb88554c2a0f81261a479be973ab07f76c2f94e162369095f6a"
-        },
-        {
-            "type": "folder",
-            "name": "lang"
         },
         {
             "type": "folder",
@@ -70,6 +74,12 @@
         {
             "type": "folder",
             "name": "templates"
+        },
+        {
+            "type": "file",
+            "name": "admin/bands.php",
+            "size": 6419,
+            "hash": "2629c8afd4c1af3a7283c0a58eecd313fe479c5d40568a9949889f80d5f2d1ba"
         },
         {
             "type": "file",
@@ -141,15 +151,15 @@
         },
         {
             "type": "file",
-            "name": "templates/layout.php",
-            "size": 4456,
-            "hash": "8ab5a78ec673e3b6b4f6778287dc4cdb8dd670ae13f17207f3d3d18de21ff255"
-        },
-        {
-            "type": "file",
             "name": "templates/home.php",
             "size": 8555,
             "hash": "6348cff61678c7839e46d841962dbf8b8c4ea1277aaa2263a1f3bf2d993a614c"
+        },
+        {
+            "type": "file",
+            "name": "templates/layout.php",
+            "size": 4456,
+            "hash": "8ab5a78ec673e3b6b4f6778287dc4cdb8dd670ae13f17207f3d3d18de21ff255"
         },
         {
             "type": "file",
@@ -170,10 +180,6 @@
             "hash": "8ec0aea575357c4973db51c70ac565b33885231801223688ed80035f764f5d6e"
         },
         {
-            "type": "folder",
-            "name": "cache/tpl/cs"
-        },
-        {
             "type": "file",
             "name": "assets/css/site.css",
             "size": 11531,
@@ -181,19 +187,23 @@
         },
         {
             "type": "folder",
-            "name": "cache/tpl/en"
+            "name": "cache/tpl/cs"
         },
         {
-            "type": "file",
-            "name": "install/sql/001_schema.sql",
-            "size": 4031,
-            "hash": "c699f2a808a100310b8ba41c2a15b606b157ca70475a28e5c44d7152789b3344"
+            "type": "folder",
+            "name": "cache/tpl/en"
         },
         {
             "type": "file",
             "name": "install/sql/002_seed_genres.sql",
             "size": 5440,
             "hash": "cfa7275df980fcb263de62045d9fe8cdbcca70f099222ad1d58aa2ef151f9d70"
+        },
+        {
+            "type": "file",
+            "name": "install/sql/001_schema.sql",
+            "size": 4031,
+            "hash": "c699f2a808a100310b8ba41c2a15b606b157ca70475a28e5c44d7152789b3344"
         },
         {
             "type": "file",
