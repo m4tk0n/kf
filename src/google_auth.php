@@ -11,7 +11,7 @@ function google_oauth_request(string $url, array $options = []): array
     $headers = $http_response_header ?? [];
     $status = 0;
     foreach ($headers as $header) {
-        if (preg_match('~^HTTP/\\S+\\s+(\\d{3})~', $header, $m)) $status = (int)$m[1];
+        if (preg_match('~^HTTP/\S+\s+(\d{3})~', $header, $m)) $status = (int)$m[1];
     }
     if ($body === false || $status < 200 || $status >= 300) {
         throw new RuntimeException('Google authentication request failed.');
@@ -75,7 +75,7 @@ function require_google_auth(string $action): never
 
         $token = google_oauth_request('https://oauth2.googleapis.com/token', [
             'method' => 'POST',
-            'header' => "Content-Type: application/x-www-form-urlencoded\\r\\nAccept: application/json\\r\\n",
+            'header' => "Content-Type: application/x-www-form-urlencoded\r\nAccept: application/json\r\n",
             'content' => http_build_query([
                 'code' => $code,
                 'client_id' => $clientId,
@@ -91,7 +91,7 @@ function require_google_auth(string $action): never
         // Google validates the JWT signature before returning its claims from tokeninfo.
         $identity = google_oauth_request(
             'https://oauth2.googleapis.com/tokeninfo?id_token=' . rawurlencode($idToken),
-            ['header' => "Accept: application/json\\r\\n"]
+            ['header' => "Accept: application/json\r\n"]
         );
         $issuer = (string)($identity['iss'] ?? '');
         $expires = (int)($identity['exp'] ?? 0);
