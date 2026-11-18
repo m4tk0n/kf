@@ -72,6 +72,12 @@ foreach(cfg('install.writable') as $directory) {
     $checks['Writable: '.cfg('paths.'.$directory)]=is_dir($target)&&is_writable($target);
 }
 $checks['Database connection']=$dbConnected;
+$requestHttps = (!empty($_SERVER['HTTPS']) && strtolower((string)$_SERVER['HTTPS']) !== 'off')
+    || (int)($_SERVER['SERVER_PORT'] ?? 0) === 443;
+if ($installed) {
+    $checks['HTTPS connection'] = $requestHttps;
+    $checks['APP_KEY configured'] = strlen((string)cfg('app.key')) >= 32;
+}
 
 if ($_SERVER['REQUEST_METHOD']==='POST') {
     $posted=(string)($_POST['csrf']??'');
@@ -92,6 +98,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
                 $done=true; $notice=L('inst-installed');
             } elseif($action==='upgrade'&&$installed) {
                 $submitted=(string)($_POST['install_key']??''); $appKey=(string)cfg('app.key');
+                if(!$requestHttps) throw new RuntimeException('Installer upgrade requires HTTPS');
                 if(strlen($appKey)<32||$submitted===''||!hash_equals($appKey,$submitted)) throw new RuntimeException('Invalid installation key');
                 if(!$tables['users']) throw new RuntimeException('Users table missing');
                 foreach(['id','email','role','state','confirmed'] as $required) if(empty($columns[$required])) throw new RuntimeException('Unexpected users schema');
