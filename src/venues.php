@@ -50,6 +50,11 @@ function venue_description(array $data): string
             return $text;
         }
     }
+    // Starší i aktuální payload z formuláře používá description + lang.
+    $description = trim((string)($data['description'] ?? ''));
+    if ($description !== '') {
+        return $description;
+    }
     foreach ($data as $key => $value) {
         if (str_starts_with((string)$key, 'desc_') && is_string($value) && trim($value) !== '') {
             return trim($value);
