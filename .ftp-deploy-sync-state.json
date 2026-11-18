@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1795024529106,
+    "generatedTime": 1795024971897,
     "data": [
         {
             "type": "file",
@@ -52,14 +52,14 @@
             "hash": "7af820701ec34f9743192b807042ae2183ce97fd1b4beb769723b30625a4d50f"
         },
         {
+            "type": "folder",
+            "name": "install"
+        },
+        {
             "type": "file",
             "name": "kf.zip",
             "size": 11820,
             "hash": "4e0723fd8ce7c6f5de63b9017cb835a28ab5d144fb987ba10dd7a978be12713d"
-        },
-        {
-            "type": "folder",
-            "name": "install"
         },
         {
             "type": "folder",
@@ -137,23 +137,11 @@
         },
         {
             "type": "folder",
-            "name": "lang/en"
-        },
-        {
-            "type": "folder",
             "name": "lang/cs"
         },
         {
-            "type": "file",
-            "name": "src/google_auth.php",
-            "size": 10022,
-            "hash": "11025b892c8eb9fb70843c0ef112aecd7fd3009dc457b7b7c06d710931827e77"
-        },
-        {
-            "type": "file",
-            "name": "src/helpers.php",
-            "size": 18092,
-            "hash": "f2c12ed2a768ab60c7cff658cf4d54a10019fb35db80847a5384df416d387f6c"
+            "type": "folder",
+            "name": "lang/en"
         },
         {
             "type": "file",
@@ -163,9 +151,21 @@
         },
         {
             "type": "file",
+            "name": "src/helpers.php",
+            "size": 18092,
+            "hash": "f2c12ed2a768ab60c7cff658cf4d54a10019fb35db80847a5384df416d387f6c"
+        },
+        {
+            "type": "file",
             "name": "src/moderation.php",
             "size": 20319,
             "hash": "f53d4808e03be9505aaf696ccd11c8d180ed6db816a38fe8cfd757cdf18f4c47"
+        },
+        {
+            "type": "file",
+            "name": "src/google_auth.php",
+            "size": 10022,
+            "hash": "11025b892c8eb9fb70843c0ef112aecd7fd3009dc457b7b7c06d710931827e77"
         },
         {
             "type": "file",
@@ -188,8 +188,8 @@
         {
             "type": "file",
             "name": "templates/home.php",
-            "size": 10004,
-            "hash": "4c1a0c6b9c1f4a3c6f2b8dbe0bd20bfcd018384868d6c0cae520b761fd5c88c6"
+            "size": 11082,
+            "hash": "0b763287aa872b2a640e8892e87badd07c06a984d391e8b469603113090e1b7e"
         },
         {
             "type": "file",
@@ -321,24 +321,6 @@
         },
         {
             "type": "file",
-            "name": "lang/en/common.ini",
-            "size": 6656,
-            "hash": "a85f9ba37cb7f80df7011ab548ab2eb773a636078c7faadd977c6c3dd1a33a6e"
-        },
-        {
-            "type": "file",
-            "name": "lang/en/events.ini",
-            "size": 167,
-            "hash": "3f76fa9d1821f59f516a760ebecd0a0d0c9dcb1ab889fd211666ca1340304136"
-        },
-        {
-            "type": "file",
-            "name": "lang/en/install.ini",
-            "size": 2538,
-            "hash": "ac203678e4c4a0f2bce330e38ecce44366c03f12379df5c5971881e70215444e"
-        },
-        {
-            "type": "file",
             "name": "lang/cs/common.ini",
             "size": 6970,
             "hash": "e0e33de4478acd431658140571b40fd8508544bd04caefb027042091771a2131"
@@ -357,9 +339,21 @@
         },
         {
             "type": "file",
-            "name": "cache/tpl/cs/home.php",
-            "size": 69,
-            "hash": "c72a62e59816ef9de997f7a2e0e471a1ddf0c7a396f2d4c7501301c81a093844"
+            "name": "lang/en/common.ini",
+            "size": 6656,
+            "hash": "a85f9ba37cb7f80df7011ab548ab2eb773a636078c7faadd977c6c3dd1a33a6e"
+        },
+        {
+            "type": "file",
+            "name": "lang/en/install.ini",
+            "size": 2538,
+            "hash": "ac203678e4c4a0f2bce330e38ecce44366c03f12379df5c5971881e70215444e"
+        },
+        {
+            "type": "file",
+            "name": "lang/en/events.ini",
+            "size": 167,
+            "hash": "3f76fa9d1821f59f516a760ebecd0a0d0c9dcb1ab889fd211666ca1340304136"
         },
         {
             "type": "file",
@@ -378,6 +372,12 @@
             "name": "cache/tpl/en/layout.php",
             "size": 657,
             "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
+        },
+        {
+            "type": "file",
+            "name": "cache/tpl/cs/home.php",
+            "size": 69,
+            "hash": "c72a62e59816ef9de997f7a2e0e471a1ddf0c7a396f2d4c7501301c81a093844"
         }
     ]
 }

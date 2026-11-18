@@ -89,14 +89,21 @@ if ($section === 'events') {
         }
     }
 } elseif ($section === 'venues') {
+    $search = trim((string)($_GET['q'] ?? ''));
     $sql = 'SELECT v.id, v.name, ' . (lang_code() === 'cs' ? 'c.cs' : 'c.en') . ' AS city_name,
                    co.iso2 AS country_code
             FROM ' . tbl('venues') . ' v
             JOIN ' . tbl('cities') . ' c ON c.id = v.city_id
-            JOIN ' . tbl('countries') . ' co ON co.id = c.country_id
-            ORDER BY v.name ASC
-            LIMIT ' . (int)cfg('paging.venues');
-    $items = db()->query($sql)->fetchAll();
+            JOIN ' . tbl('countries') . ' co ON co.id = c.country_id';
+    if (mb_strlen($search, 'UTF-8') >= 3) {
+        $sql .= ' WHERE v.name LIKE ? OR c.cs LIKE ? OR c.en LIKE ? OR co.iso2 LIKE ?';
+        $like = '%' . $search . '%';
+        $stmt = db()->prepare($sql . ' ORDER BY v.name ASC LIMIT ' . (int)cfg('paging.venues'));
+        $stmt->execute([$like, $like, $like, $like]);
+        $items = $stmt->fetchAll();
+    } else {
+        $items = db()->query($sql . ' ORDER BY v.name ASC LIMIT ' . (int)cfg('paging.venues'))->fetchAll();
+    }
 } else {
     $sql = 'SELECT b.name, co.iso2 AS country_code
             FROM ' . tbl('bands') . ' b
@@ -168,6 +175,56 @@ $arrow = static function (?string $target, string $label, string $glyph): string
     </nav>
   <?php endif; ?>
 </section>
+
+<?php if ($section === 'venues'): ?>
+<script>
+(() => {
+  const form = document.querySelector('.section-toolbar');
+  const search = document.getElementById('global-search');
+  const section = form?.querySelector('[name="section"]');
+  if (!form || !search || section?.value !== 'venues') return;
+  let timer;
+  let requestId = 0;
+  let wasSearching = new URLSearchParams(window.location.search).get('q')?.trim().length >= 3;
+
+  search.addEventListener('input', () => {
+    clearTimeout(timer);
+    const length = search.value.trim().length;
+    if (length >= 3 || (wasSearching && length < 3)) {
+      timer = setTimeout(async () => {
+        const currentRequest = ++requestId;
+        const url = new URL(window.location.href);
+        url.searchParams.set('section', 'venues');
+        if (length >= 3) url.searchParams.set('q', search.value.trim());
+        else url.searchParams.delete('q');
+
+        try {
+          const response = await fetch(url.href, {
+            headers: { 'X-Partial': '1' },
+            credentials: 'same-origin'
+          });
+          if (!response.ok) throw new Error('Venue search failed');
+          const html = await response.text();
+          if (currentRequest !== requestId) return;
+
+          const parsed = new DOMParser().parseFromString(html, 'text/html');
+          const updatedList = parsed.querySelector('.event-section');
+          const currentList = document.querySelector('.event-section');
+          if (!updatedList || !currentList) return;
+
+          currentList.replaceWith(updatedList);
+          history.replaceState({}, '', url.href);
+          wasSearching = length >= 3;
+          search.focus({ preventScroll: true });
+        } catch (error) {
+          console.error(error);
+        }
+      }, 250);
+    }
+  });
+})();
+</script>
+<?php endif; ?>
 
 <?php if ($section === 'events'): ?>
 <section class="filters" id="filtry">

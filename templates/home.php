@@ -184,14 +184,41 @@ $arrow = static function (?string $target, string $label, string $glyph): string
   const section = form?.querySelector('[name="section"]');
   if (!form || !search || section?.value !== 'venues') return;
   let timer;
+  let requestId = 0;
   let wasSearching = new URLSearchParams(window.location.search).get('q')?.trim().length >= 3;
+
   search.addEventListener('input', () => {
     clearTimeout(timer);
     const length = search.value.trim().length;
     if (length >= 3 || (wasSearching && length < 3)) {
-      timer = setTimeout(() => {
-        wasSearching = length >= 3;
-        form.requestSubmit();
+      timer = setTimeout(async () => {
+        const currentRequest = ++requestId;
+        const url = new URL(window.location.href);
+        url.searchParams.set('section', 'venues');
+        if (length >= 3) url.searchParams.set('q', search.value.trim());
+        else url.searchParams.delete('q');
+
+        try {
+          const response = await fetch(url.href, {
+            headers: { 'X-Partial': '1' },
+            credentials: 'same-origin'
+          });
+          if (!response.ok) throw new Error('Venue search failed');
+          const html = await response.text();
+          if (currentRequest !== requestId) return;
+
+          const parsed = new DOMParser().parseFromString(html, 'text/html');
+          const updatedList = parsed.querySelector('.event-section');
+          const currentList = document.querySelector('.event-section');
+          if (!updatedList || !currentList) return;
+
+          currentList.replaceWith(updatedList);
+          history.replaceState({}, '', url.href);
+          wasSearching = length >= 3;
+          search.focus({ preventScroll: true });
+        } catch (error) {
+          console.error(error);
+        }
       }, 250);
     }
   });
