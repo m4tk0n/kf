@@ -426,12 +426,12 @@ a{color:var(--accent)}.meta{font-size:12px;color:var(--muted);margin-top:8px}
 <aside>
 <div class="toolbar">
 <button id="refresh">Obnovit seznam</button>
-<button id="all">Zobrazit vše (TXT)</button>
+<button id="all">Zobrazit vše (JSON)</button>
 </div>
 <input id="search" type="search" placeholder="Filtrovat soubory…">
 <div id="stats" class="meta">Načítám seznam…</div>
 <div id="files"></div>
-<div class="meta">API: <a href="?action=list">files.json</a> · <a href="?action=all">all.txt</a></div>
+<div class="meta">API: <a href="?action=list">files.json</a> · <a href="?action=all">all.json</a></div>
 </aside>
 <section>
 <div id="current">Vyber soubor ze seznamu.</div>
