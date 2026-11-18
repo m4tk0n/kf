@@ -44,6 +44,13 @@ $roleLabel = L('role-' . $roleName);
         </div>
         <a class="account-menu-link" href="<?= e(url('profile')) ?>"><?= e(L('account-profile')) ?></a>
         <a class="account-menu-link" href="<?= e(url('settings')) ?>"><?= e(L('account-settings')) ?></a>
+<?php if (in_array((int)($currentUser['role'] ?? 0), [3, 4], true)): ?>
+        <div class="account-menu-section"><?= e(L('account-management')) ?></div>
+        <a class="account-menu-link" href="<?= e(url('moderation')) ?>"><?= e(L('account-moderation')) ?></a>
+<?php endif; ?>
+<?php if ((int)($currentUser['role'] ?? 0) === 4): ?>
+        <a class="account-menu-link" href="<?= e(url('admin')) ?>"><?= e(L('account-administration')) ?></a>
+<?php endif; ?>
         <form method="post" action="<?= e(url('logout')) ?>">
           <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token']) ?>">
           <button type="submit" class="logout-button"><?= e(L('account-logout')) ?></button>

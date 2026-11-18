@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794982578752,
+    "generatedTime": 1794982588598,
     "data": [
         {
             "type": "file",
@@ -115,11 +115,11 @@
         },
         {
             "type": "folder",
-            "name": "install/sql"
+            "name": "install/migrations"
         },
         {
             "type": "folder",
-            "name": "install/migrations"
+            "name": "install/sql"
         },
         {
             "type": "folder",
@@ -173,15 +173,21 @@
         },
         {
             "type": "file",
+            "name": "templates/profile.php",
+            "size": 2370,
+            "hash": "d3332c8424e5f8c5bbb2be5212753cb11a70aa6188aba8117e357613ac6489ab"
+        },
+        {
+            "type": "file",
             "name": "templates/settings.php",
             "size": 230,
             "hash": "8ec0aea575357c4973db51c70ac565b33885231801223688ed80035f764f5d6e"
         },
         {
             "type": "file",
-            "name": "templates/profile.php",
-            "size": 2370,
-            "hash": "d3332c8424e5f8c5bbb2be5212753cb11a70aa6188aba8117e357613ac6489ab"
+            "name": "templates/role-center.php",
+            "size": 519,
+            "hash": "36c42d67c8cea59cdaf071f273e6aa95ca80421ea4675e0dca26b2af2babc106"
         },
         {
             "type": "file",
@@ -199,6 +205,12 @@
         },
         {
             "type": "file",
+            "name": "install/migrations/001_auth.sql",
+            "size": 1749,
+            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
+        },
+        {
+            "type": "file",
             "name": "install/sql/001_schema.sql",
             "size": 3847,
             "hash": "d9980305823f9fa42502a9e3529322a0604a867d66781f624571f013eb37840b"
@@ -208,12 +220,6 @@
             "name": "install/sql/002_seed_genres.sql",
             "size": 5440,
             "hash": "cfa7275df980fcb263de62045d9fe8cdbcca70f099222ad1d58aa2ef151f9d70"
-        },
-        {
-            "type": "file",
-            "name": "install/sql/003_seed_countries.sql",
-            "size": 10899,
-            "hash": "5e445919944256887255055fa3490a3bd24388194182c6245b13521fa0877e50"
         },
         {
             "type": "file",
@@ -235,15 +241,15 @@
         },
         {
             "type": "file",
-            "name": "install/sql/999_meta.sql",
-            "size": 336,
-            "hash": "0ea434e0149dff2fb81a9702a5da25eaebc8ac393f33378fa6627214779a4b52"
+            "name": "install/sql/003_seed_countries.sql",
+            "size": 10899,
+            "hash": "5e445919944256887255055fa3490a3bd24388194182c6245b13521fa0877e50"
         },
         {
             "type": "file",
-            "name": "install/migrations/001_auth.sql",
-            "size": 1749,
-            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
+            "name": "install/sql/999_meta.sql",
+            "size": 336,
+            "hash": "0ea434e0149dff2fb81a9702a5da25eaebc8ac393f33378fa6627214779a4b52"
         },
         {
             "type": "file",
@@ -271,15 +277,15 @@
         },
         {
             "type": "file",
-            "name": "lang/en/events.ini",
-            "size": 167,
-            "hash": "3f76fa9d1821f59f516a760ebecd0a0d0c9dcb1ab889fd211666ca1340304136"
-        },
-        {
-            "type": "file",
             "name": "lang/en/install.ini",
             "size": 2538,
             "hash": "ac203678e4c4a0f2bce330e38ecce44366c03f12379df5c5971881e70215444e"
+        },
+        {
+            "type": "file",
+            "name": "lang/en/events.ini",
+            "size": 167,
+            "hash": "3f76fa9d1821f59f516a760ebecd0a0d0c9dcb1ab889fd211666ca1340304136"
         },
         {
             "type": "file",
