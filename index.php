@@ -51,7 +51,7 @@ if ($routeName === 'moderation') {
 if ($routeName === 'admin') {
     require_role(4); // Administrator is role ID 4.
 }
-if (is_array($_SESSION['user'] ?? null) && empty($_SESSION['csrf_token'])) {
+if ((is_array($_SESSION['user'] ?? null) || $routeName === 'add') && empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 
@@ -118,6 +118,10 @@ if (in_array($routeName, ['logout', 'profile/save', 'account/delete-request', 'a
 
 
 if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
+    if ($authenticatedUser === null) {
+        header('Location: ' . url('login'), true, 303);
+        exit;
+    }
     require_csrf();
     $user = require_role(1);
     $type = (string)($_POST['type'] ?? '');

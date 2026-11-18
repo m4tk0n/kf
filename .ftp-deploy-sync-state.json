@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794985475261,
+    "generatedTime": 1794985517467,
     "data": [
         {
             "type": "file",
@@ -44,8 +44,8 @@
         {
             "type": "file",
             "name": "index.php",
-            "size": 8374,
-            "hash": "d42a8e4fa52a00947475ecc21c220a67528248eac69457ae3b16f1ba35d92b04"
+            "size": 8515,
+            "hash": "a52854d439904a89daf2a72e1f3fa4162fc72c3527381cb023171b65997e33af"
         },
         {
             "type": "folder",
@@ -108,6 +108,10 @@
             "hash": "86c34402c61966135704491dcb4af30d13278a61b9a4bffa915a4c3e113635bb"
         },
         {
+            "type": "folder",
+            "name": "install/migrations"
+        },
+        {
             "type": "file",
             "name": "install/installed.lock",
             "size": 25,
@@ -116,10 +120,6 @@
         {
             "type": "folder",
             "name": "install/sql"
-        },
-        {
-            "type": "folder",
-            "name": "install/migrations"
         },
         {
             "type": "folder",
@@ -203,11 +203,17 @@
         },
         {
             "type": "folder",
-            "name": "cache/tpl/en"
+            "name": "cache/tpl/cs"
         },
         {
             "type": "folder",
-            "name": "cache/tpl/cs"
+            "name": "cache/tpl/en"
+        },
+        {
+            "type": "file",
+            "name": "install/migrations/001_auth.sql",
+            "size": 1749,
+            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
         },
         {
             "type": "file",
@@ -259,12 +265,6 @@
         },
         {
             "type": "file",
-            "name": "install/migrations/001_auth.sql",
-            "size": 1749,
-            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
-        },
-        {
-            "type": "file",
             "name": "lang/cs/events.ini",
             "size": 181,
             "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
@@ -278,8 +278,8 @@
         {
             "type": "file",
             "name": "lang/en/common.ini",
-            "size": 4274,
-            "hash": "9226b0f0979a179020dc559a98b7fe0100376605ca1157805228889fa3765091"
+            "size": 4244,
+            "hash": "ef4b294555b90ee126054a53a747c388414105f19ac51e5f1b71f7d4a2c7c58a"
         },
         {
             "type": "file",
@@ -295,18 +295,6 @@
         },
         {
             "type": "file",
-            "name": "cache/tpl/en/home.php",
-            "size": 64,
-            "hash": "8255936fc286258c8c446edf199fb025df84885d235bf27a54caeae6d36208ae"
-        },
-        {
-            "type": "file",
-            "name": "cache/tpl/en/layout.php",
-            "size": 657,
-            "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
-        },
-        {
-            "type": "file",
             "name": "cache/tpl/cs/home.php",
             "size": 69,
             "hash": "c72a62e59816ef9de997f7a2e0e471a1ddf0c7a396f2d4c7501301c81a093844"
@@ -314,6 +302,18 @@
         {
             "type": "file",
             "name": "cache/tpl/cs/layout.php",
+            "size": 657,
+            "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
+        },
+        {
+            "type": "file",
+            "name": "cache/tpl/en/home.php",
+            "size": 64,
+            "hash": "8255936fc286258c8c446edf199fb025df84885d235bf27a54caeae6d36208ae"
+        },
+        {
+            "type": "file",
+            "name": "cache/tpl/en/layout.php",
             "size": 657,
             "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
         }
