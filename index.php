@@ -31,5 +31,7 @@ $GLOBALS['KF_ROUTE'] = implode('/', $route);
 match (implode('/', $route)) {
     ''      => page('home', ['title' => L('home-title')]),
     'login' => page('login', ['title' => L('login-title')]),
+    'auth/google/start' => require_google_auth('start'),
+    'auth/google/callback' => require_google_auth('callback'),
     default => page('404', ['title' => L('err-404')], 404),
 };
