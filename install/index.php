@@ -1,193 +1,105 @@
 <?php
 declare(strict_types=1);
-
-try {
-    require dirname(__DIR__) . '/src/bootstrap.php';
-} catch (Throwable $ex) {
-    http_response_code(500);
-    exit('Config error: ' . htmlspecialchars($ex->getMessage(), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'));
-}
-
+try { require dirname(__DIR__) . '/src/bootstrap.php'; }
+catch (Throwable $ex) { http_response_code(500); exit('Config error: ' . htmlspecialchars($ex->getMessage(), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')); }
 lang_load('install');
-$want = $_GET['lang'] ?? cfg('app.default_lang');
-lang_code(in_array($want, cfg('app.languages'), true) ? $want : cfg('app.default_lang'));
-
-header('Content-Type: text/html; charset=utf-8');
-header('Cache-Control: no-store, private');
-header('X-Robots-Tag: noindex, nofollow');
-
-$prefix = cfg('db.prefix');
-$lock = __DIR__ . '/installed.lock';
-$token = hash_hmac('sha256', 'kf-install-maintenance', cfg('app.key'));
-$errors = [];
-$done = false;
-$dbAvailable = false;
-$installed = false;
-$tableCount = 0;
-$checks = [];
-
-function install_table_exists(PDO $pdo, string $name): bool
-{
-    $stmt = $pdo->prepare('SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = DATABASE() AND table_name = ?');
-    $stmt->execute([$name]);
-    return (int)$stmt->fetchColumn() > 0;
+$want=$_GET['lang']??cfg('app.default_lang');
+lang_code(in_array($want,cfg('app.languages'),true)?$want:cfg('app.default_lang'));
+header('Content-Type: text/html; charset=utf-8'); header('Cache-Control: no-store, private'); header('X-Robots-Tag: noindex, nofollow');
+$prefix=cfg('db.prefix'); $lock=__DIR__.'/installed.lock'; $token=hash_hmac('sha256','kf-install-maintenance',cfg('app.key'));
+$errors=[]; $done=false; $dbAvailable=false; $pdo=null; $tableCount=0;
+$plan=['create'=>[],'columns'=>[],'indexes'=>[],'foreign'=>[],'mismatches'=>[],'seeds'=>[],'migrations'=>[],'manual'=>[]];
+function inst_id(string $s):string{return chr(96).str_replace(chr(96),chr(96).chr(96),$s).chr(96);}
+function inst_split(string $sql):array{
+ $out=[];$buf='';$q='';$line=false;$block=false;$n=strlen($sql);
+ for($i=0;$i<$n;$i++){ $c=$sql[$i];$nx=$i+1<$n?$sql[$i+1]:'';
+  if($line){if($c==="\n"){$line=false;$buf.=$c;}continue;}
+  if($block){if($c==='*'&&$nx==='/'){$block=false;$i++;}continue;}
+  if($q!==''){$buf.=$c;if($c==='\\'&&$i+1<$n){$buf.=$sql[++$i];continue;}if($c===$q){if($nx===$q)$buf.=$sql[++$i];else $q='';}continue;}
+  if(($c==='-'&&$nx==='-'&&($i+2>=$n||ctype_space($sql[$i+2])))||$c==='#'){$line=true;if($c==='-')$i++;continue;}
+  if($c==='/'&&$nx==='*'){$block=true;$i++;continue;}
+  if($c==="'"||$c==='"'||ord($c)===96){$q=$c;$buf.=$c;continue;}
+  if($c===';'){if(trim($buf)!=='')$out[]=trim($buf);$buf='';}else $buf.=$c;
+ }
+ if(trim($buf)!=='')$out[]=trim($buf);return $out;
 }
-
-function install_run_sql_file(PDO $pdo, string $file, string $prefix): void
-{
-    $sql = file_get_contents($file);
-    if ($sql === false) {
-        throw new RuntimeException('Nelze přečíst SQL soubor: ' . basename($file));
-    }
-    $sql = str_replace('{p}', $prefix, $sql);
-    $sql = (string)preg_replace('/^\\s*--.*$/m', '', $sql);
-    $statements = preg_split('/;\\s*(?:\\r?\\n|$)/', $sql) ?: [];
-    foreach ($statements as $statement) {
-        if (trim($statement) !== '') {
-            $pdo->exec($statement);
-        }
-    }
+function inst_parts(string $s):array{
+ $out=[];$b='';$d=0;$q='';$n=strlen($s);
+ for($i=0;$i<$n;$i++){ $c=$s[$i];$nx=$i+1<$n?$s[$i+1]:'';
+  if($q!==''){$b.=$c;if($c==='\\'&&$i+1<$n){$b.=$s[++$i];continue;}if($c===$q){if($nx===$q)$b.=$s[++$i];else $q='';}continue;}
+  if($c==="'"||$c==='"'||ord($c)===96){$q=$c;$b.=$c;continue;}
+  if($c==='(')$d++;if($c===')')$d--;
+  if($c===','&&$d===0){$out[]=trim($b);$b='';}else $b.=$c;
+ }if(trim($b)!=='')$out[]=trim($b);return $out;
 }
-
-try {
-    $pdo = db();
-    $dbAvailable = true;
-    $metaTable = $prefix . 'meta';
-    $installed = install_table_exists($pdo, $metaTable);
-    $stmt = $pdo->prepare('SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = DATABASE() AND table_name LIKE ?');
-    $stmt->execute([$prefix . '%']);
-    $tableCount = (int)$stmt->fetchColumn();
-} catch (Throwable $ex) {
-    $errors[] = L('inst-db-unavailable') . ' ' . $ex->getMessage();
+function inst_sql(string $f,string $p):string{$s=file_get_contents($f);if($s===false)throw new RuntimeException('Nelze přečíst '.basename($f));return str_replace('{p}',$p,$s);}
+function inst_create_def(string $s):?array{
+ if(!preg_match('/^CREATE\s+TABLE\s+(?:IF\s+NOT\s+EXISTS\s+)?\x60([^\x60]+)\x60\s*\((.*)\)\s*(?:ENGINE|DEFAULT|;|$)/is',$s,$m))return null;
+ $r=['table'=>$m[1],'columns'=>[],'indexes'=>[],'foreign'=>[],'sql'=>$s];
+ foreach(inst_parts($m[2]) as $d){
+  if(preg_match('/^\x60([^\x60]+)\x60\s+(.+)$/s',$d,$x)){$r['columns'][$x[1]]=$x[2];continue;}
+  if(preg_match('/^(PRIMARY\s+KEY|UNIQUE\s+(?:KEY|INDEX)|KEY|INDEX)\s*(?:\x60([^\x60]+)\x60)?\s*\(([^)]+)\)/i',$d,$x)){
+   $k=strtoupper(preg_replace('/\s+/',' ',trim($x[1])));$name=str_starts_with($k,'PRIMARY')?'PRIMARY':($x[2]??'');
+   $r['indexes'][$name]=['kind'=>$k,'columns'=>str_replace(' ','',str_replace(chr(96),'',$x[3]))];continue;
+  }
+  if(preg_match('/^CONSTRAINT\s+\x60([^\x60]+)\x60\s+FOREIGN\s+KEY\s*\(([^)]+)\)\s+REFERENCES\s+\x60([^\x60]+)\x60\s*\(([^)]+)\)(.*)$/is',$d,$x))
+   $r['foreign'][$x[1]]=['columns'=>str_replace(' ','',str_replace(chr(96),'',$x[2])),'ref_table'=>$x[3],'ref_columns'=>str_replace(' ','',str_replace(chr(96),'',$x[4])),'tail'=>trim($x[5])];
+ }return $r;
 }
-
-$checks['PHP ' . cfg('install.min_php')] = version_compare(PHP_VERSION, cfg('install.min_php'), '>=');
-foreach (cfg('install.extensions') as $extension) {
-    $checks['ext ' . $extension] = extension_loaded($extension);
+function inst_expected(string $p):array{$out=[];$fs=glob(__DIR__.'/sql/*.sql')?:[];sort($fs,SORT_NATURAL);foreach($fs as $f)foreach(inst_split(inst_sql($f,$p)) as $s){$d=inst_create_def($s);if($d)$out[$d['table']]=$d;}return $out;}
+function inst_cols(PDO $db,string $t):array{$s=$db->prepare('SELECT COLUMN_NAME,COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME=?');$s->execute([$t]);$a=[];foreach($s->fetchAll(PDO::FETCH_ASSOC) as $r)$a[$r['COLUMN_NAME']]=$r;return $a;}
+function inst_indexes(PDO $db,string $t):array{$s=$db->prepare('SELECT INDEX_NAME,NON_UNIQUE,SEQ_IN_INDEX,COLUMN_NAME FROM information_schema.STATISTICS WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME=? ORDER BY INDEX_NAME,SEQ_IN_INDEX');$s->execute([$t]);$a=[];foreach($s->fetchAll(PDO::FETCH_ASSOC) as $r){$n=$r['INDEX_NAME'];$a[$n]??=['unique'=>(int)$r['NON_UNIQUE']===0,'columns'=>[]];$a[$n]['columns'][]=$r['COLUMN_NAME'];}return $a;}
+function inst_fks(PDO $db,string $t):array{$s=$db->prepare('SELECT CONSTRAINT_NAME,COLUMN_NAME,REFERENCED_TABLE_NAME,REFERENCED_COLUMN_NAME FROM information_schema.KEY_COLUMN_USAGE WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME=? AND REFERENCED_TABLE_NAME IS NOT NULL ORDER BY CONSTRAINT_NAME,ORDINAL_POSITION');$s->execute([$t]);$a=[];foreach($s->fetchAll(PDO::FETCH_ASSOC) as $r){$n=$r['CONSTRAINT_NAME'];$a[$n]??=['columns'=>[],'ref_table'=>$r['REFERENCED_TABLE_NAME'],'ref_columns'=>[]];$a[$n]['columns'][]=$r['COLUMN_NAME'];$a[$n]['ref_columns'][]=$r['REFERENCED_COLUMN_NAME'];}return $a;}
+function inst_plan(PDO $db,string $p):array{
+ $r=['create'=>[],'columns'=>[],'indexes'=>[],'foreign'=>[],'mismatches'=>[],'seeds'=>[],'migrations'=>[],'manual'=>[]];$schema=inst_expected($p);
+ foreach($schema as $t=>$d){$cols=inst_cols($db,$t);if(!$cols){$r['create'][]=['table'=>$t,'sql'=>$d['sql']];continue;}
+  foreach($d['columns'] as $c=>$def){if(!isset($cols[$c]))$r['columns'][]=['table'=>$t,'column'=>$c,'definition'=>$def];else{$want=strtolower(strtok(trim($def),' '));$have=strtolower($cols[$c]['COLUMN_TYPE']);if($want!==''&&!str_starts_with($have,$want)&&!str_starts_with($want,$have))$r['mismatches'][]=['table'=>$t,'name'=>$c,'actual'=>$have,'expected'=>$want];}}
+  $ix=inst_indexes($db,$t);foreach($d['indexes'] as $n=>$v){$want=array_map('trim',explode(',',$v['columns']));if(!isset($ix[$n]))$r['indexes'][]=['table'=>$t,'name'=>$n,'definition'=>$v];elseif($ix[$n]['columns']!==$want)$r['mismatches'][]=['table'=>$t,'name'=>'index '.$n,'actual'=>implode(',',$ix[$n]['columns']),'expected'=>implode(',',$want)];}
+  $fk=inst_fks($db,$t);foreach($d['foreign'] as $n=>$v)if(!isset($fk[$n]))$r['foreign'][]=['table'=>$t,'name'=>$n,'definition'=>$v];
+ }
+ $fs=glob(__DIR__.'/sql/*.sql')?:[];sort($fs,SORT_NATURAL);foreach($fs as $f)foreach(inst_split(inst_sql($f,$p)) as $s)if(preg_match('/^INSERT\s+IGNORE\s+INTO\s+\x60([^\x60]+)\x60/i',$s,$m)){
+  $count=null;if(preg_match('/\bVALUES\s*(.*)$/is',$s,$v))$count=count(inst_parts(trim($v[1])));elseif(($pos=stripos($s,'SELECT'))!==false){try{$q=$db->query('SELECT COUNT(*) FROM ('.substr($s,$pos).') AS preview_rows');$count=(int)$q->fetchColumn();}catch(Throwable $e){}}
+  $r['seeds'][]=['file'=>basename($f),'table'=>$m[1],'count'=>$count];
+ }
+ $mt=$p.'schema_migrations';$exists=(bool)$db->query("SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=DATABASE() AND table_name=".$db->quote($mt))->fetchColumn();
+ foreach(glob(__DIR__.'/migrations/*.sql')?:[] as $f){$s=inst_sql($f,$p);$destructive=(bool)preg_match('/\b(DROP\s+(?:TABLE|COLUMN|INDEX)|TRUNCATE|DELETE\s+FROM)\b/i',$s);$r['migrations'][]=['name'=>basename($f),'status'=>'manual','destructive'=>$destructive];if($destructive)$r['manual'][]=['name'=>basename($f),'reason'=>'Obsahuje destruktivní SQL; automaticky se nespustí.'];}
+ foreach(glob(__DIR__.'/migrations/*.migration.sql')?:[] as $f){$n=basename($f);$applied=false;if($exists){$q=$db->prepare('SELECT 1 FROM '.inst_id($mt).' WHERE migration=?');$q->execute([$n]);$applied=(bool)$q->fetchColumn();}$unsafe=(bool)preg_match('/\b(DROP\s+(?:TABLE|COLUMN|INDEX)|TRUNCATE|DELETE\s+FROM)\b/i',inst_sql($f,$p));$status=$applied?'applied':($unsafe?'blocked':'pending');$r['migrations'][]=['name'=>$n,'status'=>$status,'destructive'=>$unsafe,'file'=>$f];if($unsafe)$r['manual'][]=['name'=>$n,'reason'=>'Obsahuje destruktivní SQL; automaticky se nespustí.'];}
+ return $r;
 }
-$checks['gd webp'] = function_exists('imagewebp');
-foreach (cfg('install.writable') as $dir) {
-    $path = path($dir);
-    if (!is_dir($path)) {
-        @mkdir($path, 0755, true);
-    }
-    $checks['dir ' . cfg("paths.$dir")] = is_dir($path) && is_writable($path);
+function inst_apply(PDO $db,string $p,array $plan):void{
+ foreach($plan['create'] as $x)$db->exec($x['sql']);
+ foreach($plan['columns'] as $x)$db->exec('ALTER TABLE '.inst_id($x['table']).' ADD COLUMN '.inst_id($x['column']).' '.$x['definition']);
+ foreach($plan['indexes'] as $x){$v=$x['definition'];$cols=implode(',',array_map('trim',explode(',',$v['columns'])));$u=str_starts_with($v['kind'],'UNIQUE')?'UNIQUE ':'';$db->exec('ALTER TABLE '.inst_id($x['table']).' ADD '.$u.'INDEX '.inst_id($x['name']).' ('.$cols.')');}
+ foreach($plan['foreign'] as $x){$v=$x['definition'];$db->exec('ALTER TABLE '.inst_id($x['table']).' ADD CONSTRAINT '.inst_id($x['name']).' FOREIGN KEY ('.$v['columns'].') REFERENCES '.inst_id($v['ref_table']).' ('.$v['ref_columns'].') '.$v['tail']);}
+ $fs=glob(__DIR__.'/sql/*.sql')?:[];sort($fs,SORT_NATURAL);foreach($fs as $f)foreach(inst_split(inst_sql($f,$p)) as $s)$db->exec($s);
+ $mt=$p.'schema_migrations';$db->exec('CREATE TABLE IF NOT EXISTS '.inst_id($mt).' (migration VARCHAR(190) NOT NULL, applied_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY(migration)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci');
+ foreach($plan['migrations'] as $m)if(($m['status']??'')==='pending'&&!empty($m['file'])){foreach(inst_split(inst_sql($m['file'],$p)) as $s)$db->exec($s);$q=$db->prepare('INSERT INTO '.inst_id($mt).' (migration) VALUES (?)');$q->execute([$m['name']]);}
+ if(file_put_contents(__DIR__.'/installed.lock',date('c').PHP_EOL,LOCK_EX)===false)throw new RuntimeException(L('inst-lock-write-fail'));
 }
-$checks['DB connection'] = $dbAvailable;
-
-if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
-    if (!hash_equals($token, (string)($_POST['token'] ?? ''))) {
-        $errors[] = L('inst-invalid-token');
-    }
-    if (!$dbAvailable) {
-        $errors[] = L('inst-db-unavailable');
-    }
-    if (in_array(false, $checks, true)) {
-        $errors[] = L('inst-fail');
-    }
-
-    if (!$errors) {
-        try {
-            // Všechny základní SQL soubory jsou opakovatelně bezpečné:
-            // CREATE TABLE IF NOT EXISTS a INSERT IGNORE. Žádná tabulka ani záznam se nemaže.
-            $files = glob(__DIR__ . '/sql/*.sql') ?: [];
-            sort($files, SORT_NATURAL);
-            foreach ($files as $file) {
-                install_run_sql_file($pdo, $file, $prefix);
-            }
-
-            // Budoucí automatické migrace musí mít příponu .migration.sql.
-            // Starší ruční migrační soubory se záměrně nespouštějí.
-            $migrationTable = $prefix . 'schema_migrations';
-            $pdo->exec("CREATE TABLE IF NOT EXISTS `{$migrationTable}` (
-                `migration` VARCHAR(190) NOT NULL,
-                `applied_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-                PRIMARY KEY (`migration`)
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci");
-
-            $migrations = glob(__DIR__ . '/migrations/*.migration.sql') ?: [];
-            sort($migrations, SORT_NATURAL);
-            foreach ($migrations as $migration) {
-                $name = basename($migration);
-                $stmt = $pdo->prepare("SELECT 1 FROM `{$migrationTable}` WHERE migration = ? LIMIT 1");
-                $stmt->execute([$name]);
-                if ($stmt->fetchColumn()) {
-                    continue;
-                }
-                install_run_sql_file($pdo, $migration, $prefix);
-                $stmt = $pdo->prepare("INSERT INTO `{$migrationTable}` (migration) VALUES (?)");
-                $stmt->execute([$name]);
-            }
-
-            if (file_put_contents($lock, date('c') . PHP_EOL, LOCK_EX) === false) {
-                throw new RuntimeException(L('inst-lock-write-fail'));
-            }
-            $installed = install_table_exists($pdo, $metaTable);
-            $done = true;
-        } catch (Throwable $ex) {
-            $errors[] = L('inst-update-failed') . ' ' . $ex->getMessage();
-        }
-    }
-}
-
-$allChecksOk = !in_array(false, $checks, true);
+try{$pdo=db();$dbAvailable=true;$q=$pdo->prepare('SELECT COUNT(*) FROM information_schema.tables WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME LIKE ?');$q->execute([$prefix.'%']);$tableCount=(int)$q->fetchColumn();$plan=inst_plan($pdo,$prefix);}catch(Throwable $ex){$errors[]=L('inst-db-unavailable').' '.$ex->getMessage();}
+$checks=['PHP '.cfg('install.min_php')=>version_compare(PHP_VERSION,cfg('install.min_php'),'>=')];foreach(cfg('install.extensions') as $x)$checks['ext '.$x]=extension_loaded($x);$checks['gd webp']=function_exists('imagewebp');foreach(cfg('install.writable') as $d){$v=path($d);if(!is_dir($v))@mkdir($v,0755,true);$checks['dir '.cfg("paths.$d")]=is_dir($v)&&is_writable($v);}$checks['DB connection']=$dbAvailable;
+if(($_SERVER['REQUEST_METHOD']??'GET')==='POST'){if(!hash_equals($token,(string)($_POST['token']??'')))$errors[]=L('inst-invalid-token');if(!$dbAvailable)$errors[]=L('inst-db-unavailable');if(in_array(false,$checks,true))$errors[]=L('inst-fail');if(!$errors){try{$plan=inst_plan($pdo,$prefix);if(($_POST['action']??'')!=='apply')throw new RuntimeException('Invalid action');inst_apply($pdo,$prefix,$plan);$done=true;$plan=inst_plan($pdo,$prefix);}catch(Throwable $ex){$errors[]=L('inst-update-failed').' '.$ex->getMessage();}}}
+$ok=!in_array(false,$checks,true);$changes=count($plan['create'])+count($plan['columns'])+count($plan['indexes'])+count($plan['foreign'])+count(array_filter($plan['migrations'],static fn($m)=>$m['status']==='pending'));
 ?>
-<!doctype html>
-<html lang="<?= e(lang_code()) ?>">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?= e(L('inst-title')) ?></title>
+<!doctype html><html lang="<?= e(lang_code()) ?>"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title><?= e(L('inst-title')) ?></title>
 <style>
-:root{color-scheme:light dark;--bg:#10151d;--panel:#19212c;--line:#303b49;--muted:#aab6c5;--ok:#39b978;--bad:#e16b6b;--accent:#5798e8}
-*{box-sizing:border-box}body{font:16px/1.5 system-ui,sans-serif;margin:0;padding:20px;background:var(--bg);color:#f2f5f8}
-main{width:min(100%,620px);margin:0 auto}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
-h1{font-size:1.45rem;margin:0 0 6px}h2{font-size:1.05rem;margin:22px 0 10px}.muted{color:var(--muted)}
-.status{display:flex;align-items:center;gap:10px;padding:13px;border:1px solid var(--line);border-radius:10px;margin:18px 0}
-.dot{width:11px;height:11px;border-radius:50%;background:var(--ok);flex:none}.bad .dot{background:var(--bad)}
-ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line)}
-.ok{color:var(--ok)}.fail{color:var(--bad)}button{width:100%;border:0;border-radius:9px;padding:13px 16px;background:var(--accent);color:white;font:inherit;font-weight:650;margin-top:18px;cursor:pointer}
-button:disabled{opacity:.45;cursor:not-allowed}.error{padding:11px;border:1px solid var(--bad);border-radius:8px;color:var(--bad);margin:10px 0;overflow-wrap:anywhere}
-.lang{display:flex;justify-content:flex-end;gap:14px;margin-bottom:12px}a{color:var(--accent)}.note{font-size:.9rem;color:var(--muted);margin-top:12px}
-</style>
-</head>
-<body>
-<main>
-  <nav class="lang"><a href="?lang=cs">CZ</a><a href="?lang=en">EN</a></nav>
-  <section class="panel">
-    <h1><?= e(L('inst-title')) ?></h1>
-    <p class="muted"><?= e(L('inst-subtitle')) ?></p>
-
-    <?php if ($installed || is_file($lock)): ?>
-      <div class="status"><span class="dot"></span><div><strong><?= e(L('inst-already-done')) ?></strong><br><span class="muted"><?= e(L('inst-already-desc')) ?></span></div></div>
-    <?php else: ?>
-      <div class="status <?= $tableCount > 0 ? 'bad' : '' ?>"><span class="dot"></span><div><strong><?= e(L('inst-not-installed')) ?></strong><br><span class="muted"><?= e(L('inst-not-installed-desc')) ?></span></div></div>
-    <?php endif; ?>
-
-    <h2><?= e(L('inst-status')) ?></h2>
-    <ul>
-      <li><span><?= e(L('inst-db-status')) ?></span><strong class="<?= $dbAvailable ? 'ok' : 'fail' ?>"><?= e($dbAvailable ? L('inst-db-connected') : L('inst-db-error')) ?></strong></li>
-      <li><span><?= e(L('inst-prefix-tables')) ?></span><strong><?= (int)$tableCount ?></strong></li>
-      <li><span><?= e(L('inst-lock-status')) ?></span><strong><?= e(is_file($lock) ? L('inst-lock-present') : L('inst-lock-missing')) ?></strong></li>
-    </ul>
-
-    <h2><?= e(L('inst-checks')) ?></h2>
-    <ul>
-      <?php foreach ($checks as $name => $ok): ?>
-        <li><span><?= e($name) ?></span><strong class="<?= $ok ? 'ok' : 'fail' ?>"><?= e($ok ? L('inst-check-ok') : L('inst-check-fail')) ?></strong></li>
-      <?php endforeach; ?>
-    </ul>
-
-    <?php foreach ($errors as $error): ?><p class="error"><?= e($error) ?></p><?php endforeach; ?>
-    <?php if ($done): ?><p class="ok"><?= e(L('inst-update-done')) ?></p><?php endif; ?>
-
-    <form method="post">
-      <input type="hidden" name="token" value="<?= e($token) ?>">
-      <button type="submit" <?= (!$dbAvailable || !$allChecksOk) ? 'disabled' : '' ?>><?= e($installed || is_file($lock) ? L('inst-run-again') : L('inst-run-first')) ?></button>
-    </form>
-    <p class="note"><?= e(L('inst-safe-note')) ?></p>
-    <p><a href="<?= e(rtrim(cfg('app.base_url'), '/') . '/') ?>"><?= e(L('inst-open')) ?></a></p>
-  </section>
-</main>
-</body>
-</html>
+:root{color-scheme:light dark;--bg:#10151d;--panel:#19212c;--line:#303b49;--muted:#aab6c5;--ok:#39b978;--bad:#e16b6b;--accent:#5798e8;--warn:#e3b45c}*{box-sizing:border-box}body{font:15px/1.5 system-ui,sans-serif;margin:0;padding:16px;background:var(--bg);color:#f2f5f8}main{width:min(100%,760px);margin:auto}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}h1{font-size:1.4rem;margin:0 0 5px}h2{font-size:1.05rem;margin:22px 0 8px}.muted{color:var(--muted)}.lang{text-align:right;margin-bottom:10px}a{color:var(--accent)}.status{padding:12px;border:1px solid var(--line);border-radius:9px;margin:15px 0}.ok{color:var(--ok)}.fail{color:var(--bad)}.warn{color:var(--warn)}ul{list-style:none;padding:0;margin:0}li{padding:7px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.tag{display:inline-block;min-width:82px;color:var(--muted);font-size:.82rem}.error{padding:10px;border:1px solid var(--bad);border-radius:8px;color:var(--bad);overflow-wrap:anywhere}button{width:100%;border:0;border-radius:9px;padding:13px;background:var(--accent);color:white;font:inherit;font-weight:700;margin-top:16px;cursor:pointer}button:disabled{opacity:.4}.note{font-size:.88rem;color:var(--muted)}
+</style></head><body><main><nav class="lang"><a href="?lang=cs">CZ</a> · <a href="?lang=en">EN</a></nav><section class="panel">
+<h1><?= e(L('inst-title')) ?></h1><p class="muted"><?= e(L('inst-subtitle')) ?></p>
+<div class="status"><strong><?= e(is_file($lock)?L('inst-already-done'):L('inst-not-installed')) ?></strong><br><span class="muted"><?= (int)$tableCount ?> <?= e(L('inst-prefix-tables')) ?> · <?= e(is_file($lock)?L('inst-lock-present'):L('inst-lock-missing')) ?></span></div>
+<h2><?= e(L('inst-checks')) ?></h2><ul><?php foreach($checks as $n=>$v): ?><li><?= e($n) ?> <strong class="<?= $v?'ok':'fail' ?>"><?= e($v?L('inst-check-ok'):L('inst-check-fail')) ?></strong></li><?php endforeach; ?></ul>
+<h2><?= e(L('inst-plan')) ?></h2>
+<?php if($plan['create']||$plan['columns']||$plan['indexes']||$plan['foreign']): ?><ul>
+<?php foreach($plan['create'] as $x): ?><li><span class="tag"><?= e(L('inst-new-table')) ?></span><?= e($x['table']) ?></li><?php endforeach; ?>
+<?php foreach($plan['columns'] as $x): ?><li><span class="tag"><?= e(L('inst-new-column')) ?></span><?= e($x['table'].'.'.$x['column']) ?> <span class="muted"><?= e($x['definition']) ?></span></li><?php endforeach; ?>
+<?php foreach($plan['indexes'] as $x): ?><li><span class="tag"><?= e(L('inst-new-index')) ?></span><?= e($x['table'].'.'.$x['name']) ?></li><?php endforeach; ?>
+<?php foreach($plan['foreign'] as $x): ?><li><span class="tag"><?= e(L('inst-new-fk')) ?></span><?= e($x['table'].'.'.$x['name']) ?></li><?php endforeach; ?>
+</ul><?php else: ?><p class="ok"><?= e(L('inst-no-schema-changes')) ?></p><?php endif; ?>
+<h2><?= e(L('inst-data')) ?></h2><ul><?php foreach($plan['seeds'] as $x): ?><li><?= e($x['file']) ?> → <?= e($x['table']) ?>: <?= $x['count']===null?e(L('inst-count-unknown')):((int)$x['count'].' '.e(L('inst-candidate-rows'))) ?></li><?php endforeach; ?></ul>
+<h2><?= e(L('inst-migrations')) ?></h2><ul><?php foreach($plan['migrations'] as $x): ?><li><strong><?= e($x['name']) ?></strong> — <span class="<?= $x['status']==='pending'?'warn':($x['status']==='applied'?'ok':'muted') ?>"><?= e(L('inst-migration-'.$x['status'])) ?></span><?php if(!empty($x['destructive'])): ?> <span class="fail"><?= e(L('inst-destructive')) ?></span><?php endif; ?></li><?php endforeach; ?></ul>
+<?php if($plan['mismatches']): ?><h2><?= e(L('inst-mismatches')) ?></h2><ul><?php foreach($plan['mismatches'] as $x): ?><li class="warn"><?= e($x['table'].'.'.$x['name']) ?>: <?= e((string)$x['actual']) ?> → <?= e((string)$x['expected']) ?> (<?= e(L('inst-manual-review')) ?>)</li><?php endforeach; ?></ul><?php endif; ?>
+<?php if($plan['manual']): ?><h2><?= e(L('inst-manual')) ?></h2><ul><?php foreach($plan['manual'] as $x): ?><li class="fail"><?= e($x['name'].': '.$x['reason']) ?></li><?php endforeach; ?></ul><?php endif; ?>
+<?php foreach($errors as $x): ?><p class="error"><?= e($x) ?></p><?php endforeach; ?><?php if($done): ?><p class="ok"><?= e(L('inst-update-done')) ?></p><?php endif; ?>
+<form method="post"><input type="hidden" name="token" value="<?= e($token) ?>"><input type="hidden" name="action" value="apply"><button type="submit" <?= (!$dbAvailable||!$ok||$changes===0)?'disabled':'' ?>><?= e(L('inst-confirm-apply')) ?></button></form>
+<p class="note"><?= e(L('inst-safe-note')) ?></p><p><a href="<?= e(rtrim(cfg('app.base_url'),'/').'/') ?>"><?= e(L('inst-open')) ?></a></p>
+</section></main></body></html>
