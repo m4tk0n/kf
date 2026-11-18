@@ -89,7 +89,7 @@ function venue_events(int $venueId, bool $past): array
             FROM ' . tbl('events') . ' e
             LEFT JOIN ' . tbl('event_bands') . ' eb ON eb.event_id = e.id
             LEFT JOIN ' . tbl('bands') . ' b ON b.id = eb.band_id
-            WHERE e.venue_id = ? AND e.starts_at ' . $comparison . ' NOW()
+            WHERE e.venue_id = ? AND COALESCE(e.ends_at, e.starts_at) ' . $comparison . ' NOW()
             GROUP BY e.id, e.name, e.type, e.starts_at, e.ends_at
             ORDER BY e.starts_at ' . $direction . ', e.id ' . $direction;
     $q = db()->prepare($sql);
