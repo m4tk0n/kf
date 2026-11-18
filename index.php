@@ -36,7 +36,15 @@ $routeName = implode('/', $route);
 $GLOBALS['KF_ROUTE'] = $routeName;
 
 // Revalidate every authenticated request against the database. Any DB error fails closed.
-refresh_authenticated_user();
+$authenticatedUser = refresh_authenticated_user();
+if ($authenticatedUser !== null) {
+    header('Cache-Control: private, no-store, max-age=0');
+    header('Pragma: no-cache');
+}
+if (in_array($routeName, ['profile', 'settings'], true) && $authenticatedUser === null) {
+    header('Location: ' . url('login'), true, 303);
+    exit;
+}
 if (is_array($_SESSION['user'] ?? null) && empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
