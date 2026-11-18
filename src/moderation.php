@@ -6,7 +6,7 @@ declare(strict_types=1);
 
 function mod_pending_counts(): array
 {
-    $counts = ['event' => 0, 'venue' => 0, 'band' => 0];
+    $counts = ['event' => 0, 'venue' => 0, 'band' => 0, 'venue_change' => (int)db()->query('SELECT COUNT(*) FROM ' . tbl('venue_changes'))->fetchColumn()];
     $rows = db()->query('SELECT type, COUNT(*) AS total FROM ' . tbl('pending') . ' GROUP BY type')->fetchAll();
     foreach ($rows as $row) {
         $kind = (string)(cfg('enums.pending_type')[(int)$row['type']] ?? '');
@@ -23,6 +23,12 @@ function mod_pending_rows(?string $kind = null): array
     $args = [];
     if ($kind !== null) {
         $typeId = array_search($kind, cfg('enums.pending_type'), true);
+        if ($kind === 'venue_change') {
+            $q = db()->query('SELECT vc.id, vc.venue_id, vc.proposed_data AS payload, u.display_name, u.email FROM ' . tbl('venue_changes') . ' vc LEFT JOIN ' . tbl('users') . ' u ON u.id=vc.user_id ORDER BY vc.id DESC');
+            $rows = $q->fetchAll();
+            foreach ($rows as &$row) { $row['data'] = json_decode((string)$row['payload'], true) ?: []; $row['kind'] = 'venue_change'; }
+            return $rows;
+        }
         if ($typeId === false || !in_array($kind, ['event', 'venue', 'band'], true)) return [];
         $sql .= ' WHERE p.type = ?';
         $args[] = (int)$typeId;
@@ -74,6 +80,10 @@ function mod_pending_dir(int $pendingId): string
 
 function mod_fetch(int $id): array
 {
+    $change = db()->prepare('SELECT vc.*, v.name AS current_name, c.country_id, c.' . (lang_code() === 'en' ? 'en' : 'cs') . ' AS current_city FROM ' . tbl('venue_changes') . ' vc JOIN ' . tbl('venues') . ' v ON v.id=vc.venue_id JOIN ' . tbl('cities') . ' c ON c.id=v.city_id WHERE vc.id=? LIMIT 1');
+    $change->execute([$id]);
+    $changeRow = $change->fetch();
+    if ($changeRow) { $changeRow['data'] = json_decode((string)$changeRow['proposed_data'], true) ?: []; $changeRow['original'] = json_decode((string)$changeRow['original_data'], true) ?: []; $changeRow['kind'] = 'venue_change'; $changeRow['name'] = (string)($changeRow['data']['name'] ?? $changeRow['current_name']); $changeRow['city'] = (string)($changeRow['data']['city'] ?? $changeRow['current_city']); return $changeRow; }
     $q = db()->prepare('SELECT id, type, name, country_id, city, payload FROM ' . tbl('pending') . ' WHERE id = ? LIMIT 1');
     $q->execute([$id]);
     $row = $q->fetch();
@@ -90,6 +100,7 @@ function mod_fetch(int $id): array
 function mod_reject(int $id): void
 {
     $row = mod_fetch($id);
+    if ($row['kind'] === 'venue_change') { db()->prepare('DELETE FROM ' . tbl('venue_changes') . ' WHERE id=?')->execute([$id]); return; }
     db()->prepare('DELETE FROM ' . tbl('pending') . ' WHERE id = ?')->execute([$id]);
     if ($row['kind'] === 'venue') {
         venue_remove_dir(mod_pending_dir($id));
@@ -101,10 +112,45 @@ function mod_approve(int $id): void
     $row = mod_fetch($id);
     match ($row['kind']) {
         'venue' => mod_approve_venue($row),
+        'venue_change' => mod_approve_venue_change($row),
         'band' => mod_approve_band($row),
         'event' => mod_approve_event($row),
         default => throw new RuntimeException(L('mod-error-type')),
     };
+}
+
+
+function mod_approve_venue_change(array $row): void
+{
+    $data = $row['data']; $venueId = (int)$row['venue_id']; $pdo = db();
+    $pdo->beginTransaction();
+    try {
+        $q=$pdo->prepare('SELECT id FROM '.tbl('cities').' WHERE country_id=? AND (slug=? OR cs=? OR en=?) LIMIT 1');
+        $q->execute([(int)$data['country_id'],slugify((string)$data['city']),(string)$data['city'],(string)$data['city']]);
+        $cityId=(int)$q->fetchColumn();
+        if($cityId<1){$slug=slugify((string)$data['city'])?:'city-'.substr(sha1((string)$data['city']),0,8);$pdo->prepare('INSERT INTO '.tbl('cities').' (country_id,slug,cs,en) VALUES (?,?,?,?)')->execute([(int)$data['country_id'],substr($slug,0,80),(string)$data['city'],(string)$data['city']]);$cityId=(int)$pdo->lastInsertId();}
+        $pdo->prepare('UPDATE '.tbl('venues').' SET city_id=?,name=? WHERE id=?')->execute([$cityId,(string)$data['name'],$venueId]);
+        $current=venue_data($venueId);$current['address']=(string)($data['address']??'');$current['phone']=(string)($data['phone']??'');
+        if(is_array($data['gps']??null))$current['gps']=$data['gps'];else unset($current['gps']);
+        foreach((array)($data['descriptions']??[]) as $code=>$description) if(in_array($code,['cs','en'],true))$current['desc_'.$code]=(string)$description;
+        venue_write_data($venueId,$current);
+        $pdo->prepare('DELETE FROM '.tbl('venue_changes').' WHERE id=?')->execute([(int)$row['id']]);$pdo->commit();
+    } catch(Throwable $e){if($pdo->inTransaction())$pdo->rollBack();throw $e;}
+}
+
+function mod_update_venue_change(int $id, array $input): void
+{
+    $row=mod_fetch($id);if($row['kind']!=='venue_change')throw new RuntimeException(L('mod-error-missing'));
+    $name=trim((string)($input['name']??''));$city=trim((string)($input['city']??''));$countryId=(int)($input['country_id']??0);
+    $address=trim((string)($input['address']??''));$phone=trim((string)($input['phone']??''));$description=trim((string)($input['description']??''));
+    if($name===''||mb_strlen($name,'UTF-8')>120||$city===''||mb_strlen($city,'UTF-8')>100||$countryId<1||mb_strlen($address,'UTF-8')>190||mb_strlen($phone,'UTF-8')>40||mb_strlen($description,'UTF-8')>3000)throw new RuntimeException(L('add-error-venue-fields'));
+    $q=db()->prepare('SELECT 1 FROM '.tbl('countries').' WHERE id=?');$q->execute([$countryId]);if(!$q->fetchColumn())throw new RuntimeException(L('add-error-reference'));
+    $lat=trim((string)($input['latitude']??''));$lng=trim((string)($input['longitude']??''));
+    if(($lat!==''||$lng!=='')&&($lat===''||$lng===''||!is_numeric($lat)||!is_numeric($lng)||(float)$lat < -90||(float)$lat>90||(float)$lng < -180||(float)$lng>180))throw new RuntimeException(L('add-error-gps'));
+    $data=$row['data'];$data['name']=$name;$data['city']=$city;$data['country_id']=$countryId;$data['address']=$address;$data['phone']=$phone;
+    $data['gps']=$lat!==''?['latitude'=>(float)$lat,'longitude'=>(float)$lng]:null;$data['description']=$description;
+    $data['descriptions']=(array)($data['descriptions']??[]);$data['descriptions'][lang_code()]=$description;
+    db()->prepare('UPDATE '.tbl('venue_changes').' SET proposed_data=? WHERE id=?')->execute([json_encode($data,JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES),$id]);
 }
 
 /** Unikátní slug v tabulce: základ, pak základ-2, základ-3 … (délka se hlídá podle sloupce). */
