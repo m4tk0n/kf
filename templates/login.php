@@ -11,7 +11,6 @@
         <span><?= e(L('login-facebook')) ?></span>
       </button>
     </div>
-    <p class="login-setup-note"><?= e(L('login-setup-note')) ?></p>
     <a class="login-back" href="<?= e(url()) ?>"><?= e(L('login-back')) ?></a>
   </div>
 </section>
