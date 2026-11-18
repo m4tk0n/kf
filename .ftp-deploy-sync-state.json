@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794987104698,
+    "generatedTime": 1794987304156,
     "data": [
         {
             "type": "file",
@@ -21,11 +21,11 @@
         },
         {
             "type": "folder",
-            "name": "ai"
+            "name": "assets"
         },
         {
             "type": "folder",
-            "name": "assets"
+            "name": "ai"
         },
         {
             "type": "folder",
@@ -49,6 +49,10 @@
         },
         {
             "type": "folder",
+            "name": "docs"
+        },
+        {
+            "type": "folder",
             "name": "install"
         },
         {
@@ -56,10 +60,6 @@
             "name": "kf.zip",
             "size": 11820,
             "hash": "4e0723fd8ce7c6f5de63b9017cb835a28ab5d144fb987ba10dd7a978be12713d"
-        },
-        {
-            "type": "folder",
-            "name": "lang"
         },
         {
             "type": "file",
@@ -77,6 +77,10 @@
         },
         {
             "type": "folder",
+            "name": "lang"
+        },
+        {
+            "type": "folder",
             "name": "tools"
         },
         {
@@ -86,14 +90,20 @@
             "hash": "665ac4999f211de6a9a25b80e2d2f29cf5c6314628564c59b8965f5803ec6d57"
         },
         {
+            "type": "folder",
+            "name": "assets/css"
+        },
+        {
             "type": "file",
             "name": "ai/index.php",
             "size": 20181,
             "hash": "5108ca9a8f5db601f6b1936ec87d3e51541a5982e620eea5fadbfb497261bc42"
         },
         {
-            "type": "folder",
-            "name": "assets/css"
+            "type": "file",
+            "name": "cron/delete-expired-accounts.php",
+            "size": 458,
+            "hash": "176e995551d507106ee513d8c3baf2e533d0b94f77b138a7563e4c2f97e4827c"
         },
         {
             "type": "folder",
@@ -101,9 +111,9 @@
         },
         {
             "type": "file",
-            "name": "cron/delete-expired-accounts.php",
-            "size": 458,
-            "hash": "176e995551d507106ee513d8c3baf2e533d0b94f77b138a7563e4c2f97e4827c"
+            "name": "docs/AI-WORKFLOW.md",
+            "size": 3806,
+            "hash": "f8e126e14e70f4830d7e340e1358798279c31b09460260ad134e9280bfd8022e"
         },
         {
             "type": "file",
@@ -124,14 +134,6 @@
         {
             "type": "folder",
             "name": "install/sql"
-        },
-        {
-            "type": "folder",
-            "name": "lang/cs"
-        },
-        {
-            "type": "folder",
-            "name": "lang/en"
         },
         {
             "type": "file",
@@ -159,12 +161,6 @@
         },
         {
             "type": "file",
-            "name": "templates/add.php",
-            "size": 6476,
-            "hash": "ab29d45c2099b98ff211f6fb17501f5fbd00162465a54bccb7ddb80537538ef3"
-        },
-        {
-            "type": "file",
             "name": "templates/home.php",
             "size": 8555,
             "hash": "6348cff61678c7839e46d841962dbf8b8c4ea1277aaa2263a1f3bf2d993a614c"
@@ -174,6 +170,12 @@
             "name": "templates/layout.php",
             "size": 5262,
             "hash": "4b83ea2bf28a0fc5d15617615517b90e0bdc9f94c19aa91cfa06f666a38d9567"
+        },
+        {
+            "type": "file",
+            "name": "templates/add.php",
+            "size": 6476,
+            "hash": "ab29d45c2099b98ff211f6fb17501f5fbd00162465a54bccb7ddb80537538ef3"
         },
         {
             "type": "file",
@@ -198,6 +200,20 @@
             "name": "templates/settings.php",
             "size": 230,
             "hash": "8ec0aea575357c4973db51c70ac565b33885231801223688ed80035f764f5d6e"
+        },
+        {
+            "type": "folder",
+            "name": "lang/cs"
+        },
+        {
+            "type": "folder",
+            "name": "lang/en"
+        },
+        {
+            "type": "file",
+            "name": "tools/project-preflight.php",
+            "size": 2767,
+            "hash": "542a53ec93b3e13db3f0df6ddc40865743349a14ecb117f89f823869d3e12a84"
         },
         {
             "type": "file",
@@ -239,12 +255,6 @@
         },
         {
             "type": "file",
-            "name": "install/sql/003_seed_countries.sql",
-            "size": 10899,
-            "hash": "5e445919944256887255055fa3490a3bd24388194182c6245b13521fa0877e50"
-        },
-        {
-            "type": "file",
             "name": "install/sql/004_seed_cities_cz.sql",
             "size": 3501,
             "hash": "829b3727cced90413fbe853e0e2db7f32469dcc95175530e7cd2529081bfb065"
@@ -269,9 +279,9 @@
         },
         {
             "type": "file",
-            "name": "lang/cs/common.ini",
-            "size": 5428,
-            "hash": "b6c54e07bcab6f8261cee527d4d03853a458826dc651f9970a80b91d6131aa65"
+            "name": "install/sql/003_seed_countries.sql",
+            "size": 10899,
+            "hash": "5e445919944256887255055fa3490a3bd24388194182c6245b13521fa0877e50"
         },
         {
             "type": "file",
@@ -281,21 +291,27 @@
         },
         {
             "type": "file",
+            "name": "lang/cs/common.ini",
+            "size": 5428,
+            "hash": "b6c54e07bcab6f8261cee527d4d03853a458826dc651f9970a80b91d6131aa65"
+        },
+        {
+            "type": "file",
             "name": "lang/cs/install.ini",
             "size": 2666,
             "hash": "6c552dc394ee6908f2ef87fbc7291e8637da276ba18cba83f2984b0edb5a2549"
         },
         {
             "type": "file",
-            "name": "lang/en/common.ini",
-            "size": 5125,
-            "hash": "95376757f2a412940f82c512493dd9901c6843b943c879f3fb0317a2f70d08f4"
-        },
-        {
-            "type": "file",
             "name": "lang/en/events.ini",
             "size": 167,
             "hash": "3f76fa9d1821f59f516a760ebecd0a0d0c9dcb1ab889fd211666ca1340304136"
+        },
+        {
+            "type": "file",
+            "name": "lang/en/common.ini",
+            "size": 5125,
+            "hash": "95376757f2a412940f82c512493dd9901c6843b943c879f3fb0317a2f70d08f4"
         },
         {
             "type": "file",
@@ -311,15 +327,15 @@
         },
         {
             "type": "file",
-            "name": "cache/tpl/cs/layout.php",
-            "size": 657,
-            "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
-        },
-        {
-            "type": "file",
             "name": "cache/tpl/en/home.php",
             "size": 64,
             "hash": "8255936fc286258c8c446edf199fb025df84885d235bf27a54caeae6d36208ae"
+        },
+        {
+            "type": "file",
+            "name": "cache/tpl/cs/layout.php",
+            "size": 657,
+            "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
         },
         {
             "type": "file",
