@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794986767393,
+    "generatedTime": 1794987104698,
     "data": [
         {
             "type": "file",
@@ -74,6 +74,10 @@
         {
             "type": "folder",
             "name": "templates"
+        },
+        {
+            "type": "folder",
+            "name": "tools"
         },
         {
             "type": "file",
@@ -194,6 +198,12 @@
             "name": "templates/settings.php",
             "size": 230,
             "hash": "8ec0aea575357c4973db51c70ac565b33885231801223688ed80035f764f5d6e"
+        },
+        {
+            "type": "file",
+            "name": "tools/verify-project.php",
+            "size": 3395,
+            "hash": "72703dabc64b2d30a69179fe25dffcaf3065c1c5d5b3bbf003ed745337d6be09"
         },
         {
             "type": "file",
