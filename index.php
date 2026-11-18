@@ -35,6 +35,38 @@ lang_code($parts[0]);
 $route = array_slice($parts, 1);
 $GLOBALS['KF_ROUTE'] = implode('/', $route);
 
+// Logout is accepted only as a CSRF-protected POST request.
+if (implode('/', $route) === 'logout') {
+    if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
+        http_response_code(405);
+        header('Allow: POST');
+        exit('Method Not Allowed');
+    }
+
+    $submittedToken = (string)($_POST['csrf_token'] ?? '');
+    $sessionToken = (string)($_SESSION['csrf_token'] ?? '');
+    if ($sessionToken === '' || $submittedToken === '' || !hash_equals($sessionToken, $submittedToken)) {
+        http_response_code(403);
+        exit('Forbidden');
+    }
+
+    $_SESSION = [];
+    if (ini_get('session.use_cookies')) {
+        $params = session_get_cookie_params();
+        setcookie(session_name(), '', [
+            'expires' => time() - 42000,
+            'path' => $params['path'],
+            'domain' => $params['domain'],
+            'secure' => $params['secure'],
+            'httponly' => $params['httponly'],
+            'samesite' => $params['samesite'] ?? 'Lax',
+        ]);
+    }
+    session_destroy();
+    header('Location: ' . url('', $parts[0]), true, 303);
+    exit;
+}
+
 match (implode('/', $route)) {
     ''      => page('home', ['title' => L('home-title')]),
     'login' => page('login', ['title' => L('login-title')]),
