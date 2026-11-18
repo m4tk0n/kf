@@ -23,23 +23,16 @@ if (empty($_SESSION['csrf_token'])) {
 }
 $avatarLetter = mb_strtoupper(mb_substr(trim((string)$currentUser['name']), 0, 1, 'UTF-8'), 'UTF-8');
 $avatarUrl = (string)($currentUser['picture'] ?? '');
-if (!preg_match('~^https://[a-z0-9.-]+/[^\s]*$~i', $avatarUrl)) {
-    $avatarUrl = '';
-}
+if (!preg_match('~^https://[a-z0-9.-]+/[^\s]*$~i', $avatarUrl)) $avatarUrl = '';
 ?>
     <details class="account-menu">
       <summary class="user-avatar" aria-label="<?= e(L('account-menu')) ?>" title="<?= e(L('account-menu')) ?>">
-<?php if ($avatarUrl !== ''): ?>
-        <img src="<?= e($avatarUrl) ?>" alt="">
-<?php else: ?>
-        <?= e($avatarLetter) ?>
-<?php endif; ?>
+<?php if ($avatarUrl !== ''): ?><img src="<?= e($avatarUrl) ?>" alt=""><?php else: ?><?= e($avatarLetter) ?><?php endif; ?>
       </summary>
       <div class="account-dropdown">
-        <div class="account-identity">
-          <strong><?= e($currentUser['name']) ?></strong>
-          <span><?= e($currentUser['email'] ?? '') ?></span>
-        </div>
+        <div class="account-identity"><strong><?= e($currentUser['name']) ?></strong></div>
+        <a class="account-menu-link" href="<?= e(url('profile')) ?>"><?= e(L('account-profile')) ?></a>
+        <a class="account-menu-link" href="<?= e(url('settings')) ?>"><?= e(L('account-settings')) ?></a>
         <form method="post" action="<?= e(url('logout')) ?>">
           <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token']) ?>">
           <button type="submit" class="logout-button"><?= e(L('account-logout')) ?></button>
@@ -49,7 +42,7 @@ if (!preg_match('~^https://[a-z0-9.-]+/[^\s]*$~i', $avatarUrl)) {
 <?php else: ?>
     <a class="login-link" href="<?= e(url('login')) ?>"><?= e(L('nav-login')) ?></a>
 <?php endif; ?>
-    <nav class="language-switch" aria-label="[language-label]">
+    <nav class="language-switch" aria-label="<?= e(L('language-label')) ?>">
 <?php foreach (cfg('app.languages') as $l): ?>
       <a href="<?= e(url($GLOBALS['KF_ROUTE'] ?? '', $l)) ?>?setlang"<?= lang_code() === $l ? ' aria-current="page"' : '' ?>><?= e(strtoupper($l)) ?></a>
 <?php endforeach; ?>
@@ -57,17 +50,17 @@ if (!preg_match('~^https://[a-z0-9.-]+/[^\s]*$~i', $avatarUrl)) {
   </div>
 </header>
 <?php if (($GLOBALS['KF_ROUTE'] ?? '') === ''): ?>
-<nav class="section-nav" aria-label="[section-navigation]">
+<nav class="section-nav" aria-label="<?= e(L('section-navigation')) ?>">
   <form class="section-toolbar" method="get" action="<?= e(url()) ?>">
-    <label class="sr-only" for="section-select">[section-navigation]</label>
+    <label class="sr-only" for="section-select"><?= e(L('section-navigation')) ?></label>
     <select id="section-select" name="section" onchange="this.form.submit()">
-      <option value="events"<?= (($_GET['section'] ?? 'events') === 'events') ? ' selected' : '' ?>>[section-events]</option>
-      <option value="venues"<?= (($_GET['section'] ?? '') === 'venues') ? ' selected' : '' ?>>[section-venues]</option>
-      <option value="bands"<?= (($_GET['section'] ?? '') === 'bands') ? ' selected' : '' ?>>[section-bands]</option>
+      <option value="events"<?= (($_GET['section'] ?? 'events') === 'events') ? ' selected' : '' ?>><?= e(L('section-events')) ?></option>
+      <option value="venues"<?= (($_GET['section'] ?? '') === 'venues') ? ' selected' : '' ?>><?= e(L('section-venues')) ?></option>
+      <option value="bands"<?= (($_GET['section'] ?? '') === 'bands') ? ' selected' : '' ?>><?= e(L('section-bands')) ?></option>
     </select>
-    <label class="sr-only" for="global-search">[search-label]</label>
-    <input id="global-search" class="global-search" type="search" name="q" value="<?= e($_GET['q'] ?? '') ?>" placeholder="[search-placeholder]" autocomplete="off">
-    <a class="filter-button" href="#filtry">[home-filters]</a>
+    <label class="sr-only" for="global-search"><?= e(L('search-label')) ?></label>
+    <input id="global-search" class="global-search" type="search" name="q" value="<?= e($_GET['q'] ?? '') ?>" placeholder="<?= e(L('search-placeholder')) ?>" autocomplete="off">
+    <a class="filter-button" href="#filtry"><?= e(L('home-filters')) ?></a>
   </form>
 </nav>
 <?php endif; ?>
