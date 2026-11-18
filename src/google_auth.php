@@ -118,19 +118,58 @@ function require_google_auth(string $action): never
             throw new RuntimeException('Google did not provide a verified email identity.');
         }
 
+        // Google has verified ownership of this email address.
+        // Link to the existing local account or create a new one.
+        $email = mb_strtolower(trim((string)$identity['email']), 'UTF-8');
+        $name = trim((string)($identity['name'] ?? ''));
+        $pdo = db();
+        $users = tbl('users');
+
+        $findUser = $pdo->prepare("SELECT id, email, role, state FROM {$users} WHERE email = ? LIMIT 1");
+        $findUser->execute([$email]);
+        $user = $findUser->fetch();
+
+        if (!$user) {
+            $randomPassword = bin2hex(random_bytes(32));
+            try {
+                $insertUser = $pdo->prepare(
+                    "INSERT INTO {$users} (email, pass, role, state, confirmed) VALUES (?, ?, 1, 0, 1)"
+                );
+                $insertUser->execute([$email, password_hash($randomPassword, PASSWORD_DEFAULT)]);
+                $user = [
+                    'id' => (int)$pdo->lastInsertId(),
+                    'email' => $email,
+                    'role' => 1,
+                    'state' => 0,
+                ];
+            } catch (PDOException $insertError) {
+                // A concurrent first sign-in may have created the same email.
+                $findUser->execute([$email]);
+                $user = $findUser->fetch();
+                if (!$user) {
+                    throw $insertError;
+                }
+            }
+        } elseif ((int)$user['confirmed'] === 0) {
+            $pdo->prepare("UPDATE {$users} SET confirmed = 1 WHERE id = ?")->execute([(int)$user['id']]);
+        }
+
+        if ((int)$user['state'] === 2) {
+            throw new RuntimeException('This user account is blocked.');
+        }
+
         session_regenerate_id(true);
-        $_SESSION['google_pending_identity'] = [
+        $_SESSION['user'] = [
+            'id' => (int)$user['id'],
+            'email' => (string)$user['email'],
+            'name' => $name !== '' ? $name : (string)$user['email'],
+            'role' => (int)$user['role'],
+            'state' => (int)$user['state'],
             'provider' => 'google',
             'provider_id' => (string)$identity['sub'],
-            'email' => (string)$identity['email'],
-            'name' => (string)($identity['name'] ?? ''),
             'picture' => (string)($identity['picture'] ?? ''),
-            'email_verified' => true,
         ];
-
-        // Local account lookup/creation will be connected after confirming
-        // the current users table schema; this is not a full login yet.
-        header('Location: ' . url('login?google=verified', $returnLang), true, 302);
+        header('Location: ' . url('', $returnLang), true, 302);
         exit;
     } catch (Throwable $e) {
         error_log('Google OAuth: ' . $e->getMessage());
