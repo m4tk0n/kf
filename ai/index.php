@@ -47,6 +47,11 @@ function ai_scan(string $directory, string $root, array &$files): void
 
         $relative = ltrim(str_replace(DIRECTORY_SEPARATOR, '/', substr($path, strlen($root))), '/');
 
+        // Generated source copies must never be copied into themselves.
+        if ($relative === 'ai/copy' || str_starts_with($relative, 'ai/copy/')) {
+            continue;
+        }
+
         if (is_dir($path)) {
             ai_scan($path, $root, $files);
             continue;
@@ -309,6 +314,81 @@ function ai_write_api(string $root): never
 
     ai_json(['ok' => false, 'error' => 'Unknown action. Use create, write, rename, delete or mkdir.'], 400);
 }
+
+
+/**
+ * Vytvoří textové kopie zdrojových souborů do /ai/copy.
+ * Každá kopie začíná jednoznačnou cestou původního souboru.
+ */
+function ai_generate_source_copies(string $root): void
+{
+    $copyDir = $root . DIRECTORY_SEPARATOR . 'ai' . DIRECTORY_SEPARATOR . 'copy';
+    if (!is_dir($copyDir) && !@mkdir($copyDir, 0755, true) && !is_dir($copyDir)) {
+        return;
+    }
+    if (is_link($copyDir) || !is_writable($copyDir)) {
+        return;
+    }
+
+    $files = ai_get_files($root);
+    $active = [];
+    $manifest = [
+        'PROJECT: /_kf/',
+        'GENERATED: ' . date('Y-m-d H:i:s'),
+        'FILES: ' . count($files),
+        str_repeat('=', 72),
+        '',
+    ];
+
+    foreach ($files as $file) {
+        $relative = (string)$file['path'];
+        $source = ai_resolve_file($root, $relative);
+        if ($source === false || (int)$file['size'] > 2097152) {
+            continue;
+        }
+
+        $content = @file_get_contents($source);
+        if ($content === false || !ai_is_text($content)) {
+            continue;
+        }
+
+        // Zachováme příponu původního souboru a cestu zakódujeme do názvu.
+        $copyName = str_replace('/', '__', $relative) . '.txt';
+        $destination = $copyDir . DIRECTORY_SEPARATOR . $copyName;
+        $header = "ORIGINAL PATH: /_kf/" . $relative . "\n"
+            . "ORIGINAL FILENAME: " . basename($relative) . "\n"
+            . "COPY FILENAME: " . $copyName . "\n"
+            . "GENERATED: " . date('Y-m-d H:i:s') . "\n"
+            . str_repeat('-', 72) . "\n\n";
+        $temporary = $destination . '.tmp';
+        if (@file_put_contents($temporary, $header . $content, LOCK_EX) === false) {
+            @unlink($temporary);
+            continue;
+        }
+        if (!@rename($temporary, $destination)) {
+            @unlink($temporary);
+            continue;
+        }
+
+        $active[$copyName] = true;
+        $manifest[] = $copyName . '  <-  ' . $relative;
+    }
+
+    // Odstraníme pouze naše staré TXT kopie; jiné soubory v adresáři necháme.
+    foreach (glob($copyDir . DIRECTORY_SEPARATOR . '*.txt') ?: [] as $oldCopy) {
+        if (is_file($oldCopy) && !is_link($oldCopy) && !isset($active[basename($oldCopy)]) && basename($oldCopy) !== 'index.txt') {
+            @unlink($oldCopy);
+        }
+    }
+
+    $manifestPath = $copyDir . DIRECTORY_SEPARATOR . 'index.txt';
+    $manifestTmp = $manifestPath . '.tmp';
+    if (@file_put_contents($manifestTmp, implode("\n", $manifest) . "\n", LOCK_EX) !== false) {
+        @rename($manifestTmp, $manifestPath);
+    }
+}
+
+ai_generate_source_copies($root);
 
 $action = (string)($_GET['action'] ?? '');
 if ($action === 'write') { ai_write_api($root); }
