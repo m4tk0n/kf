@@ -19,5 +19,7 @@ jobs:
       - name: PHP syntax check
         run: |
           find . -type f -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
+      - name: Project preflight
+        run: php tools/project-preflight.php
       - name: Project consistency checks
         run: php tools/verify-project.php
