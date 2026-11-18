@@ -130,7 +130,7 @@ h2 { margin: 0; font-size: 16px; }
 
 .account-menu { margin-left: auto; }
 .account-dropdown { right: 0; left: auto; text-align: left; }
-.account-identity { display: flex; flex-direction: column; align-items: flex-end; padding: 7px 8px 8px; border-bottom: 0; text-align: right; }
+.account-identity { display: flex; flex-direction: column; align-items: flex-end; padding: 7px 8px 8px; border-bottom: 1px solid var(--line); text-align: right; }
 .account-identity strong { display: inline-block; width: fit-content; padding-bottom: 0; border-bottom: 0; text-align: right; }
 .account-menu-link { display: block; padding: 11px 9px; border-bottom: 0; font-size: 13px; text-align: right; }
 .account-menu-link:hover { color: var(--accent); }
