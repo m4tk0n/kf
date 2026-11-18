@@ -34,7 +34,6 @@ $backToType = $kind !== '' ? url('moderation') . '?type=' . rawurlencode($kind) 
   <?php if (($error ?? '') !== ''): ?><p class="form-message error" role="alert"><?= e($error) ?></p><?php endif; ?>
 
   <?php if (!$selected && $type === ''): ?>
-    <p class="add-intro"><?= e(L('moderation-description')) ?></p>
     <div class="moderation-categories">
       <?php foreach (['event','venue','band'] as $key): ?>
         <?php $count = (int)($counts[$key] ?? 0); ?>
