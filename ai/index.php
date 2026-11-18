@@ -353,7 +353,8 @@ function ai_generate_source_copies(string $root): void
         }
 
         // Zachováme příponu původního souboru a cestu zakódujeme do názvu.
-        $copyName = str_replace('/', '__', $relative) . '.txt';
+        $safeBase = preg_replace('/[^A-Za-z0-9._-]+/', '_', basename($relative));
+        $copyName = hash('sha256', $relative) . '__' . $safeBase . '.txt';
         $destination = $copyDir . DIRECTORY_SEPARATOR . $copyName;
         $header = "ORIGINAL PATH: /_kf/" . $relative . "\n"
             . "ORIGINAL FILENAME: " . basename($relative) . "\n"
