@@ -1,0 +1,15 @@
+Options -Indexes
+RewriteEngine On
+
+# Interní soubory a složky nejsou dostupné z webu
+RewriteRule ^(\.|config\.php$|src/|lang/|templates/|data/|cache/|install/sql/|install/installed\.lock$|kf\.zip$|popis\.txt$) - [F,L]
+
+RewriteRule ^install/?$ install/index.php [L]
+
+# AI Code Viewer je samostatná fyzická složka, ne jazyková routa aplikace.
+RewriteRule ^ai/?$ ai/index.php [L]
+
+# Existující soubory (obrázky, skripty) se vydají přímo, vše ostatní jde do index.php
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+RewriteRule ^ index.php [L]
