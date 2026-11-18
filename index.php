@@ -122,11 +122,16 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     $type = (string)($_POST['type'] ?? '');
     $typeIds = ['event' => 1, 'venue' => 2, 'band' => 3];
     if (!isset($typeIds[$type])) { http_response_code(400); exit('Invalid submission type'); }
+
     $name = trim((string)($_POST['name'] ?? ''));
     $error = $name === '' || mb_strlen($name, 'UTF-8') > 120 ? L('add-error-name') : '';
     $payload = ['name' => $name];
+    $venueFields = null;
+    $savedFiles = [];
+
     try {
         if ($error !== '') throw new RuntimeException($error);
+
         if ($type === 'band') {
             $q = db()->prepare('SELECT c.id country_id, g.id genre_id FROM ' . tbl('countries') . ' c CROSS JOIN ' . tbl('genres') . ' g WHERE c.iso2 = ? AND g.id = ?');
             $q->execute([strtoupper((string)($_POST['country'] ?? '')), (int)($_POST['genre'] ?? 0)]);
@@ -135,12 +140,67 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
             $payload += ['country_id'=>(int)$ref['country_id'], 'genre_id'=>(int)$ref['genre_id']];
             $dupkey = 'band:' . slugify($name);
         } elseif ($type === 'venue') {
-            $city = (int)($_POST['city_id'] ?? 0);
-            $q = db()->prepare('SELECT id FROM ' . tbl('cities') . ' WHERE id=?');
-            $q->execute([$city]);
-            if (!$q->fetchColumn()) throw new RuntimeException(L('add-error-reference'));
-            $payload['city_id'] = $city;
-            $dupkey = 'venue:' . $city . ':' . slugify($name);
+            $countryCode = strtoupper(trim((string)($_POST['country'] ?? '')));
+            $city = trim((string)($_POST['city'] ?? ''));
+            $address = trim((string)($_POST['address'] ?? ''));
+            $phone = trim((string)($_POST['phone'] ?? ''));
+            $description = trim((string)($_POST['description'] ?? ''));
+            $latitudeRaw = trim((string)($_POST['latitude'] ?? ''));
+            $longitudeRaw = trim((string)($_POST['longitude'] ?? ''));
+
+            if (!preg_match('/^[A-Z]{2}$/', $countryCode) || $city === '' ||
+                mb_strlen($city, 'UTF-8') > 100 || mb_strlen($address, 'UTF-8') > 190 ||
+                mb_strlen($phone, 'UTF-8') > 40 || mb_strlen($description, 'UTF-8') > 3000) {
+                throw new RuntimeException(L('add-error-venue-fields'));
+            }
+            $countryQuery = db()->prepare('SELECT id FROM ' . tbl('countries') . ' WHERE iso2 = ? LIMIT 1');
+            $countryQuery->execute([$countryCode]);
+            $countryId = (int)$countryQuery->fetchColumn();
+            if ($countryId < 1) throw new RuntimeException(L('add-error-reference'));
+
+            $latitude = null;
+            $longitude = null;
+            if ($latitudeRaw !== '' || $longitudeRaw !== '') {
+                if ($latitudeRaw === '' || $longitudeRaw === '' || !is_numeric($latitudeRaw) || !is_numeric($longitudeRaw)) {
+                    throw new RuntimeException(L('add-error-gps'));
+                }
+                $latitude = (float)$latitudeRaw;
+                $longitude = (float)$longitudeRaw;
+                if ($latitude < -90 || $latitude > 90 || $longitude < -180 || $longitude > 180) {
+                    throw new RuntimeException(L('add-error-gps'));
+                }
+            }
+
+            $imageUrls = [];
+            $urlsRaw = trim((string)($_POST['image_urls'] ?? ''));
+            if ($urlsRaw !== '') {
+                foreach (preg_split('/\\R/u', $urlsRaw) ?: [] as $imageUrl) {
+                    $imageUrl = trim($imageUrl);
+                    if ($imageUrl === '') continue;
+                    $parts = parse_url($imageUrl);
+                    if (mb_strlen($imageUrl, 'UTF-8') > 2048 || !is_array($parts) ||
+                        !in_array(strtolower((string)($parts['scheme'] ?? '')), ['http', 'https'], true) ||
+                        empty($parts['host']) || preg_match('/[\\r\\n\\s]/', $imageUrl)) {
+                        throw new RuntimeException(L('add-error-image-url'));
+                    }
+                    $imageUrls[] = ['type' => 'url', 'value' => $imageUrl];
+                    if (count($imageUrls) > 10) throw new RuntimeException(L('add-error-image-count'));
+                }
+            }
+
+            $payload = [
+                'description' => $description,
+                'gps' => $latitude !== null ? ['latitude' => $latitude, 'longitude' => $longitude] : null,
+                'images' => $imageUrls,
+            ];
+            $venueFields = [
+                'name' => $name,
+                'country_id' => $countryId,
+                'city' => $city,
+                'address' => $address !== '' ? $address : null,
+                'phone' => $phone !== '' ? $phone : null,
+            ];
+            $dupkey = 'venue:' . $countryId . ':' . slugify($city) . ':' . slugify($name);
         } else {
             $venue = (int)($_POST['venue_id'] ?? 0);
             $eventType = (int)($_POST['event_type'] ?? 1);
@@ -154,10 +214,80 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
             $payload += ['venue_id'=>$venue,'event_type'=>$eventType,'starts_at'=>$start->format('Y-m-d H:i:s'),'ends_at'=>$end ? $end->format('Y-m-d H:i:s') : null];
             $dupkey = 'event:' . slugify($name) . ':' . $start->format('YmdHi');
         }
-        $stmt = db()->prepare('INSERT INTO ' . tbl('pending') . ' (type, dupkey, user_id, payload) VALUES (?, ?, ?, ?)');
-        $stmt->execute([$typeIds[$type], $dupkey, (int)$user['id'], json_encode($payload, JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE)]);
+
+        if ($type === 'venue') {
+            $pdo = db();
+            $pdo->beginTransaction();
+            $stmt = $pdo->prepare('INSERT INTO ' . tbl('pending') . ' (type, dupkey, user_id, name, country_id, city, address, phone, payload) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+            $stmt->execute([
+                $typeIds[$type], $dupkey, (int)$user['id'], $venueFields['name'],
+                $venueFields['country_id'], $venueFields['city'], $venueFields['address'],
+                $venueFields['phone'], json_encode($payload, JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+            ]);
+            $pendingId = (int)$pdo->lastInsertId();
+
+            $files = $_FILES['images'] ?? null;
+            if (is_array($files) && isset($files['name']) && is_array($files['name'])) {
+                $fileCount = count($files['name']);
+                if ($fileCount > 5) throw new RuntimeException(L('add-error-image-count'));
+                $uploadDir = path('img', 'pending/venue/' . $pendingId);
+                if (!is_dir($uploadDir) && !mkdir($uploadDir, 0755, true) && !is_dir($uploadDir)) {
+                    throw new RuntimeException(L('add-error-image-upload'));
+                }
+                $maxBytes = (int)cfg('img.max_bytes');
+                $maxDimension = (int)cfg('img.venue.l');
+                $finfo = new finfo(FILEINFO_MIME_TYPE);
+                for ($i = 0; $i < $fileCount; $i++) {
+                    $uploadError = (int)($files['error'][$i] ?? UPLOAD_ERR_NO_FILE);
+                    if ($uploadError === UPLOAD_ERR_NO_FILE) continue;
+                    if ($uploadError !== UPLOAD_ERR_OK || (int)($files['size'][$i] ?? 0) < 1 ||
+                        (int)$files['size'][$i] > $maxBytes || !is_uploaded_file((string)$files['tmp_name'][$i])) {
+                        throw new RuntimeException(L('add-error-image-upload'));
+                    }
+                    $tmp = (string)$files['tmp_name'][$i];
+                    $mime = $finfo->file($tmp);
+                    if (!in_array($mime, ['image/jpeg', 'image/png', 'image/webp', 'image/gif'], true)) {
+                        throw new RuntimeException(L('add-error-image-type'));
+                    }
+                    $raw = file_get_contents($tmp);
+                    $source = $raw !== false ? @imagecreatefromstring($raw) : false;
+                    if (!$source) throw new RuntimeException(L('add-error-image-type'));
+                    $width = imagesx($source);
+                    $height = imagesy($source);
+                    if ($width < 1 || $height < 1 || $width > 10000 || $height > 10000) {
+                        imagedestroy($source);
+                        throw new RuntimeException(L('add-error-image-type'));
+                    }
+                    $scale = min(1, $maxDimension / max($width, $height));
+                    $newWidth = max(1, (int)round($width * $scale));
+                    $newHeight = max(1, (int)round($height * $scale));
+                    $target = imagecreatetruecolor($newWidth, $newHeight);
+                    imagealphablending($target, false);
+                    imagesavealpha($target, true);
+                    imagecopyresampled($target, $source, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
+                    $filename = bin2hex(random_bytes(12)) . '.webp';
+                    $absolute = $uploadDir . '/' . $filename;
+                    $relative = 'img/pending/venue/' . $pendingId . '/' . $filename;
+                    $saved = imagewebp($target, $absolute, (int)cfg('img.quality'));
+                    imagedestroy($source);
+                    imagedestroy($target);
+                    if (!$saved) throw new RuntimeException(L('add-error-image-upload'));
+                    $savedFiles[] = $absolute;
+                    $payload['images'][] = ['type' => 'upload', 'value' => $relative];
+                }
+            }
+
+            $update = $pdo->prepare('UPDATE ' . tbl('pending') . ' SET payload = ? WHERE id = ?');
+            $update->execute([json_encode($payload, JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), $pendingId]);
+            $pdo->commit();
+        } else {
+            $stmt = db()->prepare('INSERT INTO ' . tbl('pending') . ' (type, dupkey, user_id, payload) VALUES (?, ?, ?, ?)');
+            $stmt->execute([$typeIds[$type], $dupkey, (int)$user['id'], json_encode($payload, JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE)]);
+        }
         $_SESSION['add_success'] = L('add-submitted');
     } catch (Throwable $e) {
+        if (isset($pdo) && $pdo instanceof PDO && $pdo->inTransaction()) $pdo->rollBack();
+        foreach ($savedFiles as $file) if (is_file($file)) @unlink($file);
         $_SESSION['add_error'] = $e instanceof RuntimeException ? $e->getMessage() : L('add-error-save');
         if (!$e instanceof RuntimeException) error_log('K&F add submission: '.$e->getMessage());
     }
