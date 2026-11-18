@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794977280218,
+    "generatedTime": 1794978087823,
     "data": [
         {
             "type": "file",
@@ -128,8 +128,8 @@
         {
             "type": "file",
             "name": "src/bootstrap.php",
-            "size": 725,
-            "hash": "f0b952347ad1bf60ceeb554e2b129d55d1834ee46c60ab8baabfca79169b4909"
+            "size": 1882,
+            "hash": "99a71b423057a536bb65a7b13bbac87b6513e1c1273e9c1c6696d1a210175f93"
         },
         {
             "type": "file",
@@ -140,14 +140,8 @@
         {
             "type": "file",
             "name": "src/helpers.php",
-            "size": 7707,
-            "hash": "d0d046bfa414a92be35e66ab8c8c98ca99a6de7435443d3082533302cada17d8"
-        },
-        {
-            "type": "file",
-            "name": "templates/404.php",
-            "size": 67,
-            "hash": "883eda5d2f21409f2129c73b2cc1722bb659249b444056578fe8794ac66d0451"
+            "size": 10064,
+            "hash": "0e2779e30e6f6908153a85ca7d6b346f8d1c4c4e7843a3551ee8eebaa6448f65"
         },
         {
             "type": "file",
@@ -181,6 +175,12 @@
         },
         {
             "type": "file",
+            "name": "templates/404.php",
+            "size": 67,
+            "hash": "883eda5d2f21409f2129c73b2cc1722bb659249b444056578fe8794ac66d0451"
+        },
+        {
+            "type": "file",
             "name": "assets/css/site.css",
             "size": 11938,
             "hash": "18fe6efc32b4831cb68155c2306f2dbd6b2ca8d0b7f6b59db370e1818c4ce7a4"
@@ -207,15 +207,15 @@
         },
         {
             "type": "file",
-            "name": "install/sql/003_seed_countries.sql",
-            "size": 10899,
-            "hash": "5e445919944256887255055fa3490a3bd24388194182c6245b13521fa0877e50"
-        },
-        {
-            "type": "file",
             "name": "install/sql/004_seed_cities_cz.sql",
             "size": 3501,
             "hash": "829b3727cced90413fbe853e0e2db7f32469dcc95175530e7cd2529081bfb065"
+        },
+        {
+            "type": "file",
+            "name": "install/sql/003_seed_countries.sql",
+            "size": 10899,
+            "hash": "5e445919944256887255055fa3490a3bd24388194182c6245b13521fa0877e50"
         },
         {
             "type": "file",
@@ -237,15 +237,15 @@
         },
         {
             "type": "file",
-            "name": "lang/cs/events.ini",
-            "size": 181,
-            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
-        },
-        {
-            "type": "file",
             "name": "lang/cs/install.ini",
             "size": 670,
             "hash": "d25e1efded64f886351dec497a8ade5419e31035e1e084cc36bb324f2166debd"
+        },
+        {
+            "type": "file",
+            "name": "lang/cs/events.ini",
+            "size": 181,
+            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
         },
         {
             "type": "file",
@@ -267,13 +267,19 @@
         },
         {
             "type": "file",
+            "name": "cache/tpl/cs/layout.php",
+            "size": 657,
+            "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
+        },
+        {
+            "type": "file",
             "name": "cache/tpl/cs/home.php",
             "size": 69,
             "hash": "c72a62e59816ef9de997f7a2e0e471a1ddf0c7a396f2d4c7501301c81a093844"
         },
         {
             "type": "file",
-            "name": "cache/tpl/cs/layout.php",
+            "name": "cache/tpl/en/layout.php",
             "size": 657,
             "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
         },
@@ -282,12 +288,6 @@
             "name": "cache/tpl/en/home.php",
             "size": 64,
             "hash": "8255936fc286258c8c446edf199fb025df84885d235bf27a54caeae6d36208ae"
-        },
-        {
-            "type": "file",
-            "name": "cache/tpl/en/layout.php",
-            "size": 657,
-            "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
         }
     ]
 }

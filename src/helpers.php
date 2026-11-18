@@ -248,3 +248,73 @@ function page(string $tpl, array $vars = [], int $status = 200): void
     }
     echo view('layout', ['content' => $content, 'title' => $title]);
 }
+
+
+// ---------- autentizace a oprávnění ----------
+// Session obsahuje pouze interní stav; role se nikdy nepovažuje za důvěryhodnou
+// hodnotu ze session a při autorizaci se vždy načítá z databáze.
+const KF_SESSION_IDLE_TTL = 1800;       // 30 minut nečinnosti
+const KF_SESSION_ABSOLUTE_TTL = 43200;  // 12 hodin od přihlášení
+
+function clear_authenticated_session(): void
+{
+    unset($_SESSION['user'], $_SESSION['csrf_token']);
+    session_regenerate_id(true);
+}
+
+function refresh_authenticated_user(): ?array
+{
+    $sessionUser = $_SESSION['user'] ?? null;
+    if (!is_array($sessionUser) || empty($sessionUser['id'])) {
+        return null;
+    }
+
+    $now = time();
+    $created = (int)($_SESSION['auth_created_at'] ?? 0);
+    $lastSeen = (int)($_SESSION['auth_last_seen_at'] ?? 0);
+    if ($created <= 0 || $lastSeen <= 0 ||
+        $now - $lastSeen > KF_SESSION_IDLE_TTL ||
+        $now - $created > KF_SESSION_ABSOLUTE_TTL) {
+        clear_authenticated_session();
+        return null;
+    }
+
+    $users = tbl('users');
+    $stmt = db()->prepare("SELECT id, role, state, confirmed FROM {$users} WHERE id = ? LIMIT 1");
+    $stmt->execute([(int)$sessionUser['id']]);
+    $fresh = $stmt->fetch();
+
+    if (!$fresh || (int)$fresh['state'] === 2 || (int)$fresh['confirmed'] !== 1) {
+        clear_authenticated_session();
+        return null;
+    }
+
+    // Role and state are refreshed from DB; no permission is taken from cookie/session.
+    $_SESSION['user']['role'] = (int)$fresh['role'];
+    $_SESSION['user']['state'] = (int)$fresh['state'];
+    $_SESSION['auth_last_seen_at'] = $now;
+    return $_SESSION['user'];
+}
+
+function require_role(int $minimumRole): array
+{
+    $user = refresh_authenticated_user();
+    if (!$user || (int)$user['role'] < $minimumRole) {
+        // Deliberately do not reveal that a protected route exists.
+        http_response_code(404);
+        header('Cache-Control: no-store, private');
+        exit('Not Found');
+    }
+    return $user;
+}
+
+function require_csrf_token(): void
+{
+    $submitted = (string)($_POST['csrf_token'] ?? '');
+    $expected = (string)($_SESSION['csrf_token'] ?? '');
+    if ($submitted === '' || $expected === '' || !hash_equals($expected, $submitted)) {
+        http_response_code(403);
+        header('Cache-Control: no-store, private');
+        exit('Forbidden');
+    }
+}
