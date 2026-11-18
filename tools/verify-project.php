@@ -57,8 +57,6 @@ check(str_contains($index, "'phone' => \$phone !== '' ? \$phone : null"),
     'Venue phone is not written into JSON payload.', $errors);
 check(str_contains($index, "'description' => \$description"),
     'Venue description is not written into JSON payload.', $errors);
-check(str_contains("'gps' => \$latitude"),
-    'Internal verifier sanity check failed.', $errors);
 check(str_contains($index, "'gps' => \$latitude"),
     'Venue GPS is not written into JSON payload.', $errors);
 check(str_contains($index, "'images' => \$imageUrls"),

@@ -72,7 +72,7 @@ $backToType = $kind !== '' ? url('moderation') . '?type=' . rawurlencode($kind) 
             $rowData = is_array($row['data'] ?? null) ? $row['data'] : [];
             $name = trim((string)($rowData['name'] ?? $row['name'] ?? '')) ?: '—';
             $submittedBy = trim((string)($row['display_name'] ?? '')) ?: (string)($row['email'] ?? '—');
-            $meta = in_array($type, ['venue','venue_change'], true) ? trim((string)($row['city'] ?? '') . ' · ' . (string)($rowData['address'] ?? ''), ' ·') :
+            $meta = in_array($type, ['venue','venue_change'], true) ? trim((string)($rowData['city'] ?? $row['city'] ?? '') . ' · ' . (string)($rowData['address'] ?? ''), ' ·') :
                 ($type === 'event' ? (string)($rowData['starts_at'] ?? '') : '');
           ?>
           <a class="moderation-list-row" href="<?= e(url('moderation')) ?>?type=<?= e($type) ?>&id=<?= (int)$row['id'] ?>">
