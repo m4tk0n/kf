@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794981587840,
+    "generatedTime": 1794981634728,
     "data": [
         {
             "type": "file",
@@ -104,8 +104,8 @@
         {
             "type": "file",
             "name": "install/index.php",
-            "size": 15790,
-            "hash": "7c776ccec28139d94ae9183c9db8a244ab1a8c8e2a3288119843015d657684f2"
+            "size": 16473,
+            "hash": "3e2b888edab232391e7ae38d1326d58812e7a0b95d319db1c7e53118e62ada0b"
         },
         {
             "type": "file",
@@ -131,6 +131,12 @@
         },
         {
             "type": "file",
+            "name": "src/bootstrap.php",
+            "size": 1882,
+            "hash": "99a71b423057a536bb65a7b13bbac87b6513e1c1273e9c1c6696d1a210175f93"
+        },
+        {
+            "type": "file",
             "name": "src/google_auth.php",
             "size": 8679,
             "hash": "42a5773dfa447e040d91d141dc1cb2fbee8d135a3e89a8ecbf52b95f76d205f9"
@@ -140,12 +146,6 @@
             "name": "src/helpers.php",
             "size": 10267,
             "hash": "d906418969e995255291f14365770141ebe4c4b823d29aad2654ebbc6700cc0d"
-        },
-        {
-            "type": "file",
-            "name": "src/bootstrap.php",
-            "size": 1882,
-            "hash": "99a71b423057a536bb65a7b13bbac87b6513e1c1273e9c1c6696d1a210175f93"
         },
         {
             "type": "file",
@@ -167,15 +167,15 @@
         },
         {
             "type": "file",
-            "name": "templates/profile.php",
-            "size": 2370,
-            "hash": "d3332c8424e5f8c5bbb2be5212753cb11a70aa6188aba8117e357613ac6489ab"
-        },
-        {
-            "type": "file",
             "name": "templates/login.php",
             "size": 718,
             "hash": "453cf046a9664e51995a66d31b3315ef6a999525db2c7053fc0a620496d390c5"
+        },
+        {
+            "type": "file",
+            "name": "templates/profile.php",
+            "size": 2370,
+            "hash": "d3332c8424e5f8c5bbb2be5212753cb11a70aa6188aba8117e357613ac6489ab"
         },
         {
             "type": "file",
@@ -271,15 +271,15 @@
         },
         {
             "type": "file",
-            "name": "lang/en/install.ini",
-            "size": 1502,
-            "hash": "d221632902351fd8b3d18dadcd630dc11d1d026dcd2540f6a297324073b7a87e"
-        },
-        {
-            "type": "file",
             "name": "lang/en/events.ini",
             "size": 167,
             "hash": "3f76fa9d1821f59f516a760ebecd0a0d0c9dcb1ab889fd211666ca1340304136"
+        },
+        {
+            "type": "file",
+            "name": "lang/en/install.ini",
+            "size": 2329,
+            "hash": "af026c2831990533f75f8b6d2e2f3c443bcb4de43b91fd6d72e911c380af4bca"
         },
         {
             "type": "file",
