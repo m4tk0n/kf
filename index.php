@@ -40,7 +40,8 @@ if ($authenticatedUser !== null) {
     header('Cache-Control: private, no-store, max-age=0');
     header('Pragma: no-cache');
 }
-if (in_array($routeName, ['profile', 'settings', 'add'], true) && $authenticatedUser === null) {
+// The add page is public; authentication is required only when a submission is posted.
+if (in_array($routeName, ['profile', 'settings'], true) && $authenticatedUser === null) {
     header('Location: ' . url('login'), true, 303);
     exit;
 }
