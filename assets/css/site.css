@@ -28,7 +28,7 @@ button, input, select { font: inherit; }
 .language-switch a { padding: 5px 6px; color: var(--muted); font-size: 11px; }
 .language-switch a[aria-current="page"] { color: var(--accent); }
 .section-nav { width: min(100% - 28px, 980px); margin: 10px auto 0; }
-.section-toolbar { display: grid; grid-template-columns: minmax(112px, 0.9fr) minmax(0, 2fr) auto; gap: 7px; margin: 0; }
+.section-toolbar { display: grid; grid-template-columns: minmax(132px, 1.2fr) minmax(0, 1.8fr) auto; gap: 7px; margin: 0; }
 .section-toolbar select, .global-search { width: 100%; min-width: 0; height: 42px; padding: 0 11px; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 7px; font-size: 13px; }
 .section-toolbar select { font-weight: 700; }
 .global-search { appearance: none; }
@@ -64,7 +64,7 @@ h2 { margin: 0; font-size: 16px; }
   .login-link { padding: 6px 8px; font-size: 12px; }
   .language-switch { display: none; }
   .section-nav { width: calc(100% - 24px); margin-top: 8px; }
-  .section-toolbar { grid-template-columns: minmax(92px, 0.9fr) minmax(0, 2fr) auto; gap: 5px; }
+  .section-toolbar { grid-template-columns: minmax(132px, 1.25fr) minmax(0, 1.5fr) auto; gap: 5px; }
   .section-toolbar select, .global-search, .filter-button { height: 40px; padding-left: 8px; padding-right: 8px; font-size: 12px; }
   .filter-button { min-width: 54px; }
   .site-main { width: calc(100% - 24px); }
