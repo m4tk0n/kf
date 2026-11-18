@@ -61,8 +61,8 @@ unset($_SESSION['add_error'], $_SESSION['add_success']);
         </label>
       <?php elseif ($type === 'venue'): ?>
         <label class="autocomplete-field"><?= e(L('country-label')) ?>
-          <input name="country_display" maxlength="100" required value="<?= e($_POST['country_display'] ?? $_POST['country'] ?? '') ?>" data-autocomplete="countries" data-min-chars="2" aria-autocomplete="list" aria-expanded="false" autocomplete="off">
-          <input type="hidden" name="country" value="<?= e($_POST['country'] ?? '') ?>">
+          <input name="country_display" maxlength="100" required value="<?= e($_POST['country_display'] ?? '') ?>" data-autocomplete="countries" data-min-chars="2" aria-autocomplete="list" aria-expanded="false" autocomplete="off">
+          <input type="hidden" name="country_id" value="<?= e($_POST['country_id'] ?? '') ?>">
           <div class="autocomplete-results" role="listbox" hidden></div>
         </label>
         <label><?= e(L('add-city')) ?>
@@ -125,12 +125,12 @@ unset($_SESSION['add_error'], $_SESSION['add_success']);
           let timer = 0;
           let active = -1;
           let items = [];
-          const hiddenCountry = kind === 'countries' ? form.querySelector('input[name="country"]') : null;
+          const hiddenCountry = kind === 'countries' ? form.querySelector('input[name="country_id"]') : null;
           const close = () => { list.hidden = true; input.setAttribute('aria-expanded', 'false'); active = -1; };
           const choose = (item) => {
             if (kind === 'countries') {
-              input.value = item.label;
-              hiddenCountry.value = item.code.toUpperCase();
+              input.value = item.iso3;
+              hiddenCountry.value = String(item.id);
             } else {
               input.value = item.value;
             }
@@ -145,11 +145,7 @@ unset($_SESSION['add_error'], $_SESSION['add_success']);
               option.className = 'autocomplete-option';
               option.setAttribute('role', 'option');
               option.textContent = kind === 'countries' ? item.label : item.value;
-              if (kind === 'countries' && item.other) {
-                const extra = document.createElement('small');
-                extra.textContent = item.other;
-                option.append(extra);
-              }
+              
               option.addEventListener('click', () => choose(item));
               list.append(option);
             });
@@ -189,13 +185,10 @@ unset($_SESSION['add_error'], $_SESSION['add_success']);
         });
         form.addEventListener('submit', (event) => {
           const countryInput = form.querySelector('input[name="country_display"]');
-          const countryCode = form.querySelector('input[name="country"]');
-          if (countryInput && !countryCode.value && /^[a-z]{2}$/i.test(countryInput.value.trim())) {
-            countryCode.value = countryInput.value.trim().toUpperCase();
-          }
-          if (countryInput && !countryCode.value) {
+          const countryId = form.querySelector('input[name="country_id"]');
+          if (countryInput && !countryId.value) {
             event.preventDefault();
-            countryInput.setCustomValidity('Vyberte zemi z našeptávače nebo zadejte její dvoupísmenný ISO kód.');
+            countryInput.setCustomValidity('Vyberte zemi z našeptávače.');
             countryInput.reportValidity();
             countryInput.addEventListener('input', () => countryInput.setCustomValidity(''), { once: true });
           }

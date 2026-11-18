@@ -51,15 +51,15 @@ if (in_array($routeName, ['suggest/venues', 'suggest/countries'], true)) {
         echo json_encode(array_map(static fn(array $row): array => ['value' => $row['name']], $stmt->fetchAll()), JSON_UNESCAPED_UNICODE);
         exit;
     }
-    $stmt = db()->prepare('SELECT iso2, iso3, cs, en FROM ' . tbl('countries') . ' WHERE iso2 LIKE ? OR iso3 LIKE ? OR cs LIKE ? OR en LIKE ? ORDER BY cs LIMIT 12');
+    $stmt = db()->prepare('SELECT id, iso2, iso3, cs, en FROM ' . tbl('countries') . ' WHERE iso2 LIKE ? OR iso3 LIKE ? OR cs LIKE ? OR en LIKE ? ORDER BY cs LIMIT 12');
     $like = '%' . $term . '%';
     $stmt->execute([$like, $like, $like, $like]);
     $countryRows = $stmt->fetchAll();
     $labelField = lang_code() === 'en' ? 'en' : 'cs';
     echo json_encode(array_map(static fn(array $row): array => [
-        'code' => strtolower($row['iso2']),
+        'id' => (int)$row['id'],
+        'iso3' => strtolower($row['iso3']),
         'label' => strtolower($row['iso2']) . '.' . strtolower($row['iso3']) . '.' . $row[$labelField],
-        'other' => strtolower($row['iso2']) . '.' . strtolower($row['iso3']) . '.' . $row[$labelField === 'cs' ? 'en' : 'cs'],
     ], $countryRows), JSON_UNESCAPED_UNICODE);
     exit;
 }
@@ -170,7 +170,7 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
             $payload += ['country_id'=>(int)$ref['country_id'], 'genre_id'=>(int)$ref['genre_id']];
             $dupkey = 'band:' . slugify($name);
         } elseif ($type === 'venue') {
-            $countryCode = strtoupper(trim((string)($_POST['country'] ?? '')));
+            $countryId = (int)($_POST['country_id'] ?? 0);
             $city = trim((string)($_POST['city'] ?? ''));
             $address = trim((string)($_POST['address'] ?? ''));
             $phone = trim((string)($_POST['phone'] ?? ''));
@@ -178,13 +178,13 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
             $latitudeRaw = trim((string)($_POST['latitude'] ?? ''));
             $longitudeRaw = trim((string)($_POST['longitude'] ?? ''));
 
-            if (!preg_match('/^[A-Z]{2}$/', $countryCode) || $city === '' ||
+            if ($countryId < 1 || $city === '' ||
                 mb_strlen($city, 'UTF-8') > 100 || mb_strlen($address, 'UTF-8') > 190 ||
                 mb_strlen($phone, 'UTF-8') > 40 || mb_strlen($description, 'UTF-8') > 3000) {
                 throw new RuntimeException(L('add-error-venue-fields'));
             }
-            $countryQuery = db()->prepare('SELECT id FROM ' . tbl('countries') . ' WHERE iso2 = ? LIMIT 1');
-            $countryQuery->execute([$countryCode]);
+            $countryQuery = db()->prepare('SELECT id FROM ' . tbl('countries') . ' WHERE id = ? LIMIT 1');
+            $countryQuery->execute([$countryId]);
             $countryId = (int)$countryQuery->fetchColumn();
             if ($countryId < 1) throw new RuntimeException(L('add-error-reference'));
 
