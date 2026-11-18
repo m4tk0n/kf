@@ -154,3 +154,9 @@ h2 { margin: 0; font-size: 16px; }
 .account-page-heading h1 { margin: 0; }
 .back-button { display: inline-flex; min-height: 34px; align-items: center; justify-content: center; padding: 0 11px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); background: var(--panel-soft); font-size: 12px; white-space: nowrap; }
 .back-button:hover { border-color: var(--accent); }
+
+/* Keep the signed-in header spacing identical above and below the avatar. */
+.site-header:has(.user-avatar) { min-height: 0; padding-block: 10px; }
+@media (max-width: 520px) {
+  .site-header:has(.user-avatar) { padding-block: 8px; }
+}
