@@ -124,7 +124,7 @@ $arrow = static function (?string $target, string $label, string $glyph): string
 </form>
 <?php endif; ?>
 
-<section class="event-section listing-section<?= $section === 'venues' ? ' listing-section--venues' : '' ?>">
+<section class="event-section listing-section">
   <?php if (!$items): ?>
     <div class="empty-state">
       <div class="empty-icon" aria-hidden="true">[img]</div>

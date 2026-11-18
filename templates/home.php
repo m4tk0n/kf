@@ -134,13 +134,13 @@ $arrow = static function (?string $target, string $label, string $glyph): string
   <?php else: ?>
     <div class="listing">
       <?php foreach ($items as $item): ?>
-        <article class="listing-row">
+        <?php if ($section === 'venues'): ?>
+          <a class="listing-row listing-row-link" href="<?= e(url('venue/' . (int)$item['id'] . '/' . slugify((string)$item['name']))) ?>">
+        <?php else: ?>
+          <article class="listing-row">
+        <?php endif; ?>
           <div class="listing-main">
-            <?php if ($section === 'venues'): ?>
-              <a class="listing-title-link" href="<?= e(url('venue/' . (int)$item['id'] . '/' . slugify((string)$item['name']))) ?>"><strong><?= e($item['name']) ?></strong></a>
-            <?php else: ?>
-              <strong><?= e($item['name']) ?></strong>
-            <?php endif; ?>
+            <strong><?= e($item['name']) ?></strong>
             <?php if ($section === 'events'): ?>
               <?php $typeKey = cfg('enums.event_type')[(int)$item['type']] ?? 'other'; ?>
               <span><?php if ($typeKey !== 'concert'): ?><?= e(L('event-type-' . $typeKey)) ?> · <?php endif; ?><?= e($item['venue_name']) ?> · <?= e($item['city_name']) ?> (<?= e($item['country_code']) ?>)</span>
@@ -156,7 +156,7 @@ $arrow = static function (?string $target, string $label, string $glyph): string
           <?php if ($section === 'events'): ?>
             <time datetime="<?= e(date('c', strtotime($item['starts_at']))) ?>"><?= e(date(L('fmt-datetime'), strtotime($item['starts_at']))) ?></time>
           <?php endif; ?>
-        </article>
+        <?php if ($section === 'venues'): ?></a><?php else: ?></article><?php endif; ?>
       <?php endforeach; ?>
     </div>
   <?php endif; ?>
