@@ -17,7 +17,35 @@
   <div class="header-actions">
 <?php $currentUser = $_SESSION['user'] ?? null; ?>
 <?php if (is_array($currentUser) && !empty($currentUser['name'])): ?>
-    <span class="user-avatar" aria-label="<?= e(L('account-menu')) ?>"><?= e(mb_strtoupper(mb_substr(trim((string)$currentUser['name']), 0, 1, 'UTF-8'), 'UTF-8')) ?></span>
+<?php
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+$avatarLetter = mb_strtoupper(mb_substr(trim((string)$currentUser['name']), 0, 1, 'UTF-8'), 'UTF-8');
+$avatarUrl = (string)($currentUser['picture'] ?? '');
+if (!preg_match('~^https://[a-z0-9.-]+/[^\s]*$~i', $avatarUrl)) {
+    $avatarUrl = '';
+}
+?>
+    <details class="account-menu">
+      <summary class="user-avatar" aria-label="<?= e(L('account-menu')) ?>" title="<?= e(L('account-menu')) ?>">
+<?php if ($avatarUrl !== ''): ?>
+        <img src="<?= e($avatarUrl) ?>" alt="">
+<?php else: ?>
+        <?= e($avatarLetter) ?>
+<?php endif; ?>
+      </summary>
+      <div class="account-dropdown">
+        <div class="account-identity">
+          <strong><?= e($currentUser['name']) ?></strong>
+          <span><?= e($currentUser['email'] ?? '') ?></span>
+        </div>
+        <form method="post" action="<?= e(url('logout')) ?>">
+          <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token']) ?>">
+          <button type="submit" class="logout-button"><?= e(L('account-logout')) ?></button>
+        </form>
+      </div>
+    </details>
 <?php else: ?>
     <a class="login-link" href="<?= e(url('login')) ?>"><?= e(L('nav-login')) ?></a>
 <?php endif; ?>
