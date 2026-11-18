@@ -7,11 +7,9 @@ declare(strict_types=1);
  */
 require dirname(__DIR__) . '/src/bootstrap.php';
 
-$user = $_SESSION['user'] ?? null;
-if (!is_array($user) || (int)($user['role'] ?? 0) !== 4) {
-    http_response_code(403);
-    exit('Přístup odepřen.');
-}
+// Oprávnění se ověřuje stejným mechanismem jako v hlavním routeru:
+ // role se vždy načítá z databáze, nikoli ze zastaralé hodnoty v session.
+$user = require_role(4);
 
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
