@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794974650689,
+    "generatedTime": 1794975047874,
     "data": [
         {
             "type": "file",
@@ -17,11 +17,11 @@
         },
         {
             "type": "folder",
-            "name": "assets"
+            "name": "ai"
         },
         {
             "type": "folder",
-            "name": "ai"
+            "name": "assets"
         },
         {
             "type": "folder",
@@ -58,10 +58,6 @@
             "name": "lang"
         },
         {
-            "type": "folder",
-            "name": "src"
-        },
-        {
             "type": "file",
             "name": "popis.txt",
             "size": 214,
@@ -69,17 +65,21 @@
         },
         {
             "type": "folder",
-            "name": "templates"
+            "name": "src"
         },
         {
             "type": "folder",
-            "name": "assets/css"
+            "name": "templates"
         },
         {
             "type": "file",
             "name": "ai/index.php",
             "size": 20181,
             "hash": "5108ca9a8f5db601f6b1936ec87d3e51541a5982e620eea5fadbfb497261bc42"
+        },
+        {
+            "type": "folder",
+            "name": "assets/css"
         },
         {
             "type": "folder",
@@ -98,14 +98,14 @@
             "hash": "b382c200e474003b5491c7950522e4b7e29fdc2501ae227b4a01322a61314b81"
         },
         {
-            "type": "folder",
-            "name": "install/sql"
-        },
-        {
             "type": "file",
             "name": "install/installed.lock",
             "size": 25,
             "hash": "b1696fd265f724124ad933837deb67dc513dfc6ae5beae499b9ea4380b5f315a"
+        },
+        {
+            "type": "folder",
+            "name": "install/sql"
         },
         {
             "type": "folder",
@@ -216,8 +216,8 @@
         {
             "type": "file",
             "name": "lang/cs/common.ini",
-            "size": 2765,
-            "hash": "a6eab696e2b77afd452b0f17a6531eabf054306d9d665e980a2a03639c578633"
+            "size": 2817,
+            "hash": "329a230a66b247a87e89724e5d3178d090aaf99329b991dc9f2a79bf3a558bcd"
         },
         {
             "type": "file",
@@ -227,15 +227,15 @@
         },
         {
             "type": "file",
-            "name": "lang/en/install.ini",
-            "size": 674,
-            "hash": "a0230e4558eeda387b0806f82d0be6eac6fab7b960998d65953f830cdd43bab2"
-        },
-        {
-            "type": "file",
             "name": "lang/en/common.ini",
             "size": 2624,
             "hash": "7d326b2d07612884d50387c81193c4b45181fee82dffc639b7fcc6ebf651e32c"
+        },
+        {
+            "type": "file",
+            "name": "lang/en/install.ini",
+            "size": 674,
+            "hash": "a0230e4558eeda387b0806f82d0be6eac6fab7b960998d65953f830cdd43bab2"
         },
         {
             "type": "file",
