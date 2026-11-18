@@ -17,7 +17,7 @@
   <div class="header-actions">
 <?php $currentUser = $_SESSION['user'] ?? null; ?>
 <?php if (is_array($currentUser) && !empty($currentUser['name'])): ?>
-    <a class="user-avatar" href="<?= e(url('profile')) ?>" aria-label="<?= e(L('account-menu')) ?>"><?= e(mb_strtoupper(mb_substr(trim((string)$currentUser['name']), 0, 1, 'UTF-8'), 'UTF-8')) ?></a>
+    <span class="user-avatar" aria-label="<?= e(L('account-menu')) ?>"><?= e(mb_strtoupper(mb_substr(trim((string)$currentUser['name']), 0, 1, 'UTF-8'), 'UTF-8')) ?></span>
 <?php else: ?>
     <a class="login-link" href="<?= e(url('login')) ?>"><?= e(L('nav-login')) ?></a>
 <?php endif; ?>
