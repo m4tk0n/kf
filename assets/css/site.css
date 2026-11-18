@@ -313,6 +313,14 @@ a.moderation-category:hover { border-color:var(--accent); background:var(--panel
 
 
 /* Venue detail */
+
+.venue-events { margin-top:22px; }
+.venue-events h2 { margin:0 0 10px; font-size:16px; }
+.venue-events + .venue-events { margin-top:20px; }
+.venue-events-empty { margin:0; padding:12px; color:var(--muted); background:var(--panel); border:1px solid var(--line); border-radius:7px; font-size:12px; }
+.venue-events .listing { display:grid; gap:6px; }
+.venue-events .listing-row { min-height:54px; }
+
 .listing-title-link { color:inherit; text-decoration:none; }
 .listing-title-link:hover strong { text-decoration:underline; }
 .venue-detail-page { width:min(100%, 760px); }
