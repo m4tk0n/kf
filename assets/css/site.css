@@ -130,10 +130,12 @@ h2 { margin: 0; font-size: 16px; }
 
 .account-menu { margin-left: auto; }
 .account-dropdown { right: 0; left: auto; text-align: left; }
-.account-identity { padding-bottom: 8px; }
-.account-menu-link { display: block; padding: 11px 9px; border-bottom: 1px solid var(--line); font-size: 13px; }
+.account-identity { padding: 7px 8px 8px; border-bottom: 0; }
+.account-identity strong { display: inline-block; width: fit-content; padding-bottom: 7px; border-bottom: 1px solid var(--line); }
+.account-menu-link { display: block; padding: 11px 9px; border-bottom: 1px solid var(--line); font-size: 13px; text-align: right; }
 .account-menu-link:hover { color: var(--accent); }
 .account-dropdown form { margin-top: 7px; }
+.logout-button { text-align: right; }
 .account-page { width: min(100%, 560px); margin: 22px auto; }
 .account-page h1 { margin: 0 0 18px; font-size: 21px; }
 .account-form { display: grid; gap: 13px; padding: 15px; background: var(--panel); border: 1px solid var(--line); border-radius: 9px; }
