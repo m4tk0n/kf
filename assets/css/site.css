@@ -283,3 +283,27 @@ a.moderation-category:hover { border-color:var(--accent); background:var(--panel
 .moderation-empty-notice { display:grid; gap:5px; margin-top:15px; padding:16px; border:1px solid var(--line); border-radius:8px; background:var(--panel-soft); }
 .moderation-empty-notice strong { font-size:14px; }
 .moderation-empty-notice p { margin:0; color:var(--muted); font-size:12px; line-height:1.5; }
+
+
+/* Compact moderation dashboard and controls */
+.moderation-page { width: min(100%, 700px); }
+.moderation-intro { margin: -8px 0 14px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.moderation-categories { gap: 7px; }
+.moderation-category { min-height: 48px; padding: 9px 12px; border-radius: 7px; }
+.moderation-category span:first-child { font-size: 13px; }
+.moderation-category strong { min-width: 30px; height: 27px; padding: 0 7px; border-radius: 5px; font-size: 12px; }
+.moderation-category-arrow { font-size: 19px; }
+.moderation-list-row { min-height: 54px; padding: 9px 11px; }
+.moderation-list-main strong { font-size: 13px; }
+.moderation-edit-actions { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.moderation-edit-actions button { min-height: 36px; padding: 0 7px; border-radius: 5px; font-size: 11px; }
+.moderation-edit-form { gap: 10px; padding: 12px; }
+.moderation-preview { margin-bottom: 12px; }
+.moderation-empty-notice { margin-top: 12px; padding: 12px; }
+.moderation-subheading { margin-bottom: 12px; }
+@media (max-width: 520px) {
+  .moderation-category { min-height: 46px; padding: 8px 10px; }
+  .moderation-edit-actions { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+  .moderation-edit-actions button { min-height: 35px; padding: 0 4px; font-size: 10px; }
+  .moderation-intro { margin-top: -9px; }
+}
