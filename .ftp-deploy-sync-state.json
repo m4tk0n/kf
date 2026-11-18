@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794977268605,
+    "generatedTime": 1794977280218,
     "data": [
         {
             "type": "file",
@@ -69,11 +69,11 @@
         },
         {
             "type": "folder",
-            "name": "templates"
+            "name": "src"
         },
         {
             "type": "folder",
-            "name": "src"
+            "name": "templates"
         },
         {
             "type": "file",
@@ -108,14 +108,14 @@
             "hash": "b382c200e474003b5491c7950522e4b7e29fdc2501ae227b4a01322a61314b81"
         },
         {
-            "type": "folder",
-            "name": "install/sql"
-        },
-        {
             "type": "file",
             "name": "install/installed.lock",
             "size": 25,
             "hash": "b1696fd265f724124ad933837deb67dc513dfc6ae5beae499b9ea4380b5f315a"
+        },
+        {
+            "type": "folder",
+            "name": "install/sql"
         },
         {
             "type": "folder",
@@ -127,9 +127,21 @@
         },
         {
             "type": "file",
-            "name": "templates/home.php",
-            "size": 8555,
-            "hash": "6348cff61678c7839e46d841962dbf8b8c4ea1277aaa2263a1f3bf2d993a614c"
+            "name": "src/bootstrap.php",
+            "size": 725,
+            "hash": "f0b952347ad1bf60ceeb554e2b129d55d1834ee46c60ab8baabfca79169b4909"
+        },
+        {
+            "type": "file",
+            "name": "src/google_auth.php",
+            "size": 8054,
+            "hash": "bbde52449a3885778ac0f574bfd505084a73a56b9e043ecf2eaee1c86f184629"
+        },
+        {
+            "type": "file",
+            "name": "src/helpers.php",
+            "size": 7707,
+            "hash": "d0d046bfa414a92be35e66ab8c8c98ca99a6de7435443d3082533302cada17d8"
         },
         {
             "type": "file",
@@ -139,9 +151,15 @@
         },
         {
             "type": "file",
+            "name": "templates/home.php",
+            "size": 8555,
+            "hash": "6348cff61678c7839e46d841962dbf8b8c4ea1277aaa2263a1f3bf2d993a614c"
+        },
+        {
+            "type": "file",
             "name": "templates/layout.php",
-            "size": 4456,
-            "hash": "8ab5a78ec673e3b6b4f6778287dc4cdb8dd670ae13f17207f3d3d18de21ff255"
+            "size": 4708,
+            "hash": "3a4704b7da256c0030b7f73384d5bf582b041975fb9057aab5d090f56ad82455"
         },
         {
             "type": "file",
@@ -163,27 +181,9 @@
         },
         {
             "type": "file",
-            "name": "src/helpers.php",
-            "size": 7707,
-            "hash": "d0d046bfa414a92be35e66ab8c8c98ca99a6de7435443d3082533302cada17d8"
-        },
-        {
-            "type": "file",
-            "name": "src/google_auth.php",
-            "size": 8054,
-            "hash": "bbde52449a3885778ac0f574bfd505084a73a56b9e043ecf2eaee1c86f184629"
-        },
-        {
-            "type": "file",
-            "name": "src/bootstrap.php",
-            "size": 725,
-            "hash": "f0b952347ad1bf60ceeb554e2b129d55d1834ee46c60ab8baabfca79169b4909"
-        },
-        {
-            "type": "file",
             "name": "assets/css/site.css",
-            "size": 11531,
-            "hash": "5d22011f8815e8a50ba909489839e76dcd0cdd800571764fc630ce450a8fd4a1"
+            "size": 11938,
+            "hash": "18fe6efc32b4831cb68155c2306f2dbd6b2ca8d0b7f6b59db370e1818c4ce7a4"
         },
         {
             "type": "folder",
@@ -231,6 +231,12 @@
         },
         {
             "type": "file",
+            "name": "lang/cs/common.ini",
+            "size": 2976,
+            "hash": "897ebe3753e7699b705faed9df59b7d9ff7265ab0e4a79852385854e7ec6346e"
+        },
+        {
+            "type": "file",
             "name": "lang/cs/events.ini",
             "size": 181,
             "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
@@ -244,20 +250,14 @@
         {
             "type": "file",
             "name": "lang/en/common.ini",
-            "size": 2670,
-            "hash": "4001da74d2bbe4a0bc8b351366649b75ac0a45be352f502e9ba8caacd8a66e4a"
+            "size": 2808,
+            "hash": "6424f527cd084f2d73c8143243e630f2b0541737cfdc548677882a3f057c9b52"
         },
         {
             "type": "file",
             "name": "lang/en/events.ini",
             "size": 167,
             "hash": "3f76fa9d1821f59f516a760ebecd0a0d0c9dcb1ab889fd211666ca1340304136"
-        },
-        {
-            "type": "file",
-            "name": "lang/cs/common.ini",
-            "size": 2817,
-            "hash": "329a230a66b247a87e89724e5d3178d090aaf99329b991dc9f2a79bf3a558bcd"
         },
         {
             "type": "file",
