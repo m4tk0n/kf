@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794984147836,
+    "generatedTime": 1794984303199,
     "data": [
         {
             "type": "file",
@@ -38,10 +38,6 @@
             "hash": "6008315a498173cae055f1db9ca9d7df76fb146604178623b5b84e7fa79091d8"
         },
         {
-            "type": "folder",
-            "name": "cron"
-        },
-        {
             "type": "file",
             "name": "index.php",
             "size": 5132,
@@ -50,6 +46,10 @@
         {
             "type": "folder",
             "name": "install"
+        },
+        {
+            "type": "folder",
+            "name": "cron"
         },
         {
             "type": "file",
@@ -97,12 +97,6 @@
         },
         {
             "type": "file",
-            "name": "cron/delete-expired-accounts.php",
-            "size": 458,
-            "hash": "176e995551d507106ee513d8c3baf2e533d0b94f77b138a7563e4c2f97e4827c"
-        },
-        {
-            "type": "file",
             "name": "install/index.php",
             "size": 20827,
             "hash": "86c34402c61966135704491dcb4af30d13278a61b9a4bffa915a4c3e113635bb"
@@ -122,6 +116,12 @@
             "name": "install/sql"
         },
         {
+            "type": "file",
+            "name": "cron/delete-expired-accounts.php",
+            "size": 458,
+            "hash": "176e995551d507106ee513d8c3baf2e533d0b94f77b138a7563e4c2f97e4827c"
+        },
+        {
             "type": "folder",
             "name": "lang/cs"
         },
@@ -137,15 +137,15 @@
         },
         {
             "type": "file",
-            "name": "src/helpers.php",
-            "size": 15004,
-            "hash": "4ea20aa9d73c5ca71f9521673d9b352330baacf959b06f1d2942443c78ab2dbd"
-        },
-        {
-            "type": "file",
             "name": "src/google_auth.php",
             "size": 9688,
             "hash": "4891bec8d8a461ffae648401a8ab1e6d14d97e522a5117054f59715142553002"
+        },
+        {
+            "type": "file",
+            "name": "src/helpers.php",
+            "size": 15004,
+            "hash": "4ea20aa9d73c5ca71f9521673d9b352330baacf959b06f1d2942443c78ab2dbd"
         },
         {
             "type": "file",
@@ -168,8 +168,8 @@
         {
             "type": "file",
             "name": "templates/layout.php",
-            "size": 5554,
-            "hash": "998dc7b692e77fa6f22d2452298d092293353cb3a9f1585d6e9a97942f1ce256"
+            "size": 5659,
+            "hash": "714dcbead20521b93ac72618ab860cba853b001a9481766a3a00e150e6381272"
         },
         {
             "type": "file",
@@ -185,15 +185,15 @@
         },
         {
             "type": "file",
-            "name": "templates/role-center.php",
-            "size": 519,
-            "hash": "36c42d67c8cea59cdaf071f273e6aa95ca80421ea4675e0dca26b2af2babc106"
-        },
-        {
-            "type": "file",
             "name": "templates/settings.php",
             "size": 230,
             "hash": "8ec0aea575357c4973db51c70ac565b33885231801223688ed80035f764f5d6e"
+        },
+        {
+            "type": "file",
+            "name": "templates/role-center.php",
+            "size": 519,
+            "hash": "36c42d67c8cea59cdaf071f273e6aa95ca80421ea4675e0dca26b2af2babc106"
         },
         {
             "type": "file",
@@ -247,6 +247,12 @@
         },
         {
             "type": "file",
+            "name": "install/sql/006_auth.sql",
+            "size": 1379,
+            "hash": "79796c725d88f60b8752787e20f870f32f2f6ea64583134bba83d298d7414ace"
+        },
+        {
+            "type": "file",
             "name": "install/sql/999_meta.sql",
             "size": 336,
             "hash": "0ea434e0149dff2fb81a9702a5da25eaebc8ac393f33378fa6627214779a4b52"
@@ -256,12 +262,6 @@
             "name": "lang/cs/common.ini",
             "size": 3855,
             "hash": "15b9e3e4cffcb974cb432560b053dcd78f13693c1f1ed841714c3a0b5b07eb58"
-        },
-        {
-            "type": "file",
-            "name": "install/sql/006_auth.sql",
-            "size": 1379,
-            "hash": "79796c725d88f60b8752787e20f870f32f2f6ea64583134bba83d298d7414ace"
         },
         {
             "type": "file",

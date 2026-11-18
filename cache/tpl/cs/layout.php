@@ -54,6 +54,7 @@ $roleLabel = L('role-' . $roleName);
 <?php endif; ?>
 <?php if ((int)($currentUser['role'] ?? 0) === 4): ?>
         <a class="account-menu-link" href="<?= e(url('admin')) ?>"><?= e(L('account-administration')) ?></a>
+        <a class="account-menu-link" href="<?= e(url('admin/bands.php')) ?>"><?= e(L('add-band')) ?></a>
 <?php endif; ?>
         <form method="post" action="<?= e(url('logout')) ?>">
           <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token']) ?>">
