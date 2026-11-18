@@ -189,6 +189,8 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
             }
 
             $payload = [
+                'address' => $address !== '' ? $address : null,
+                'phone' => $phone !== '' ? $phone : null,
                 'description' => $description,
                 'gps' => $latitude !== null ? ['latitude' => $latitude, 'longitude' => $longitude] : null,
                 'images' => $imageUrls,
@@ -197,8 +199,6 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
                 'name' => $name,
                 'country_id' => $countryId,
                 'city' => $city,
-                'address' => $address !== '' ? $address : null,
-                'phone' => $phone !== '' ? $phone : null,
             ];
             $dupkey = 'venue:' . $countryId . ':' . slugify($city) . ':' . slugify($name);
         } else {
@@ -218,11 +218,11 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
         if ($type === 'venue') {
             $pdo = db();
             $pdo->beginTransaction();
-            $stmt = $pdo->prepare('INSERT INTO ' . tbl('pending') . ' (type, dupkey, user_id, name, country_id, city, address, phone, payload) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+            $stmt = $pdo->prepare('INSERT INTO ' . tbl('pending') . ' (type, dupkey, user_id, name, country_id, city, payload) VALUES (?, ?, ?, ?, ?, ?, ?)');
             $stmt->execute([
                 $typeIds[$type], $dupkey, (int)$user['id'], $venueFields['name'],
-                $venueFields['country_id'], $venueFields['city'], $venueFields['address'],
-                $venueFields['phone'], json_encode($payload, JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+                $venueFields['country_id'], $venueFields['city'],
+                json_encode($payload, JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
             ]);
             $pendingId = (int)$pdo->lastInsertId();
 
