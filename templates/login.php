@@ -1,6 +1,5 @@
 <section class="login-page">
   <div class="login-card">
-    <div class="login-mark" aria-hidden="true">K<span>&amp;</span>F</div>
     <h1><?= e(L('login-title')) ?></h1>
     <div class="social-login-list">
       <button class="social-login social-google" type="button" disabled aria-disabled="true">
