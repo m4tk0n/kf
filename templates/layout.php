@@ -5,8 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#111111">
 <title><?= e($title) ?> · <?= e(L('site-name')) ?></title>
-<?php $basePath = rtrim((string)parse_url(cfg('app.base_url'), PHP_URL_PATH), '/'); ?>
-<link rel="stylesheet" href="<?= e($basePath) ?>/assets/css/site.css">
+<?php
+$basePath = rtrim((string)parse_url(cfg('app.base_url'), PHP_URL_PATH), '/');
+$cssFile = __DIR__ . '/../assets/css/site.css';
+$cssVersion = is_file($cssFile) ? (string)filemtime($cssFile) : '1';
+$jsFiles = glob(__DIR__ . '/../assets/js/*.js') ?: [];
+?>
+<link rel="stylesheet" href="<?= e($basePath) ?>/assets/css/site.css?v=<?= e($cssVersion) ?>">
 <?php foreach (cfg('app.languages') as $l): ?>
 <link rel="alternate" hreflang="<?= e($l) ?>" href="<?= e(url($GLOBALS['KF_ROUTE'] ?? '', $l)) ?>">
 <?php endforeach; ?>
@@ -66,5 +71,8 @@ if (!preg_match('~^https://[a-z0-9.-]+/[^\s]*$~i', $avatarUrl)) $avatarUrl = '';
 <?php endif; ?>
 <main id="content" class="site-main"><?= $content ?></main>
 <footer class="site-footer"><?= e(L('site-name')) ?></footer>
+<?php foreach ($jsFiles as $jsFile): ?>
+<script src="<?= e($basePath) ?>/assets/js/<?= e(basename($jsFile)) ?>?v=<?= e((string)filemtime($jsFile)) ?>" defer></script>
+<?php endforeach; ?>
 </body>
 </html>
