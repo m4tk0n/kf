@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794988399063,
+    "generatedTime": 1794988424966,
     "data": [
         {
             "type": "file",
@@ -42,14 +42,14 @@
             "name": "cron"
         },
         {
-            "type": "folder",
-            "name": "docs"
-        },
-        {
             "type": "file",
             "name": "index.php",
-            "size": 17316,
-            "hash": "6aad8cbeda717c76e0fdd66f322958bace26ffcbb1053115138afacb55620702"
+            "size": 17174,
+            "hash": "b8ce037213543051dd14505a8ea1c89ad4299b39c4ad93db2883962ab56238ae"
+        },
+        {
+            "type": "folder",
+            "name": "docs"
         },
         {
             "type": "folder",
@@ -85,15 +85,15 @@
         },
         {
             "type": "file",
-            "name": "admin/bands.php",
-            "size": 6442,
-            "hash": "665ac4999f211de6a9a25b80e2d2f29cf5c6314628564c59b8965f5803ec6d57"
-        },
-        {
-            "type": "file",
             "name": "ai/index.php",
             "size": 20181,
             "hash": "5108ca9a8f5db601f6b1936ec87d3e51541a5982e620eea5fadbfb497261bc42"
+        },
+        {
+            "type": "file",
+            "name": "admin/bands.php",
+            "size": 6442,
+            "hash": "665ac4999f211de6a9a25b80e2d2f29cf5c6314628564c59b8965f5803ec6d57"
         },
         {
             "type": "folder",
@@ -129,19 +129,19 @@
         },
         {
             "type": "folder",
-            "name": "install/sql"
-        },
-        {
-            "type": "folder",
             "name": "install/migrations"
         },
         {
             "type": "folder",
-            "name": "lang/en"
+            "name": "install/sql"
         },
         {
             "type": "folder",
             "name": "lang/cs"
+        },
+        {
+            "type": "folder",
+            "name": "lang/en"
         },
         {
             "type": "file",
@@ -163,15 +163,15 @@
         },
         {
             "type": "file",
-            "name": "templates/add.php",
-            "size": 10819,
-            "hash": "f26b4ec7d4b30df7d35ee64fa689541e063578966f20edf49cef0396d7b6b513"
-        },
-        {
-            "type": "file",
             "name": "templates/404.php",
             "size": 67,
             "hash": "883eda5d2f21409f2129c73b2cc1722bb659249b444056578fe8794ac66d0451"
+        },
+        {
+            "type": "file",
+            "name": "templates/add.php",
+            "size": 10819,
+            "hash": "f26b4ec7d4b30df7d35ee64fa689541e063578966f20edf49cef0396d7b6b513"
         },
         {
             "type": "file",
@@ -237,6 +237,12 @@
         },
         {
             "type": "file",
+            "name": "install/migrations/001_auth.sql",
+            "size": 1749,
+            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
+        },
+        {
+            "type": "file",
             "name": "install/sql/001_schema.sql",
             "size": 3987,
             "hash": "0c65c1f176fced75736a01a198df6e5b7d6c129c243a4a9d348e2022f01886a9"
@@ -279,9 +285,21 @@
         },
         {
             "type": "file",
-            "name": "install/migrations/001_auth.sql",
-            "size": 1749,
-            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
+            "name": "lang/cs/common.ini",
+            "size": 5428,
+            "hash": "b6c54e07bcab6f8261cee527d4d03853a458826dc651f9970a80b91d6131aa65"
+        },
+        {
+            "type": "file",
+            "name": "lang/cs/events.ini",
+            "size": 181,
+            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
+        },
+        {
+            "type": "file",
+            "name": "lang/cs/install.ini",
+            "size": 2666,
+            "hash": "6c552dc394ee6908f2ef87fbc7291e8637da276ba18cba83f2984b0edb5a2549"
         },
         {
             "type": "file",
@@ -303,27 +321,15 @@
         },
         {
             "type": "file",
-            "name": "lang/cs/common.ini",
-            "size": 5428,
-            "hash": "b6c54e07bcab6f8261cee527d4d03853a458826dc651f9970a80b91d6131aa65"
-        },
-        {
-            "type": "file",
-            "name": "lang/cs/events.ini",
-            "size": 181,
-            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
-        },
-        {
-            "type": "file",
-            "name": "lang/cs/install.ini",
-            "size": 2666,
-            "hash": "6c552dc394ee6908f2ef87fbc7291e8637da276ba18cba83f2984b0edb5a2549"
-        },
-        {
-            "type": "file",
             "name": "cache/tpl/cs/home.php",
             "size": 69,
             "hash": "c72a62e59816ef9de997f7a2e0e471a1ddf0c7a396f2d4c7501301c81a093844"
+        },
+        {
+            "type": "file",
+            "name": "cache/tpl/cs/layout.php",
+            "size": 657,
+            "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
         },
         {
             "type": "file",
@@ -334,12 +340,6 @@
         {
             "type": "file",
             "name": "cache/tpl/en/layout.php",
-            "size": 657,
-            "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
-        },
-        {
-            "type": "file",
-            "name": "cache/tpl/cs/layout.php",
             "size": 657,
             "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
         }
