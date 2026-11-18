@@ -32,6 +32,8 @@ function inst_parts(string $s):array{
   if($c===','&&$d===0){$out[]=trim($b);$b='';}else $b.=$c;
  }if(trim($b)!=='')$out[]=trim($b);return $out;
 }
+function inst_safe_base(string $s):bool{return (bool)preg_match('/^(CREATE\\s+TABLE\\s+IF\\s+NOT\\s+EXISTS|INSERT\\s+IGNORE\\s+INTO)\\b/i',ltrim($s));}
+function inst_safe_migration(string $s):bool{return (bool)preg_match('/^(CREATE\\s+TABLE\\s+IF\\s+NOT\\s+EXISTS|ALTER\\s+TABLE\\s+.+\\s+ADD\\s+(?:COLUMN|INDEX|UNIQUE\\s+INDEX|CONSTRAINT)\\b|CREATE\\s+(?:UNIQUE\\s+)?INDEX)\\b/i',ltrim($s));}
 function inst_sql(string $f,string $p):string{$s=file_get_contents($f);if($s===false)throw new RuntimeException('Nelze přečíst '.basename($f));return str_replace('{p}',$p,$s);}
 function inst_create_def(string $s):?array{
  if(!preg_match('/^CREATE\s+TABLE\s+(?:IF\s+NOT\s+EXISTS\s+)?\x60([^\x60]+)\x60\s*\((.*)\)\s*(?:ENGINE|DEFAULT|;|$)/is',$s,$m))return null;
@@ -72,9 +74,9 @@ function inst_apply(PDO $db,string $p,array $plan):void{
  foreach($plan['columns'] as $x)$db->exec('ALTER TABLE '.inst_id($x['table']).' ADD COLUMN '.inst_id($x['column']).' '.$x['definition']);
  foreach($plan['indexes'] as $x){$v=$x['definition'];$cols=implode(',',array_map('trim',explode(',',$v['columns'])));$u=str_starts_with($v['kind'],'UNIQUE')?'UNIQUE ':'';$db->exec('ALTER TABLE '.inst_id($x['table']).' ADD '.($x['name']==='PRIMARY'?'PRIMARY KEY':$u.'INDEX '.inst_id($x['name'])).' ('.$cols.')');}
  foreach($plan['foreign'] as $x){$v=$x['definition'];$db->exec('ALTER TABLE '.inst_id($x['table']).' ADD CONSTRAINT '.inst_id($x['name']).' FOREIGN KEY ('.$v['columns'].') REFERENCES '.inst_id($v['ref_table']).' ('.$v['ref_columns'].') '.$v['tail']);}
- $fs=glob(__DIR__.'/sql/*.sql')?:[];sort($fs,SORT_NATURAL);foreach($fs as $f)foreach(inst_split(inst_sql($f,$p)) as $s)$db->exec($s);
+ $fs=glob(__DIR__.'/sql/*.sql')?:[];sort($fs,SORT_NATURAL);foreach($fs as $f)foreach(inst_split(inst_sql($f,$p)) as $s)if(inst_safe_base($s))$db->exec($s);
  $mt=$p.'schema_migrations';$db->exec('CREATE TABLE IF NOT EXISTS '.inst_id($mt).' (migration VARCHAR(190) NOT NULL, applied_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY(migration)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci');
- foreach($plan['migrations'] as $m)if(($m['status']??'')==='pending'&&!empty($m['file'])){foreach(inst_split(inst_sql($m['file'],$p)) as $s)$db->exec($s);$q=$db->prepare('INSERT INTO '.inst_id($mt).' (migration) VALUES (?)');$q->execute([$m['name']]);}
+ foreach($plan['migrations'] as $m)if(($m['status']??'')==='pending'&&!empty($m['file'])){foreach(inst_split(inst_sql($m['file'],$p)) as $s)if(inst_safe_migration($s))$db->exec($s);$q=$db->prepare('INSERT INTO '.inst_id($mt).' (migration) VALUES (?)');$q->execute([$m['name']]);}
  if(file_put_contents(__DIR__.'/installed.lock',date('c').PHP_EOL,LOCK_EX)===false)throw new RuntimeException(L('inst-lock-write-fail'));
 }
 try{$pdo=db();$dbAvailable=true;$q=$pdo->prepare('SELECT COUNT(*) FROM information_schema.tables WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME LIKE ?');$q->execute([$prefix.'%']);$tableCount=(int)$q->fetchColumn();$plan=inst_plan($pdo,$prefix);}catch(Throwable $ex){$errors[]=L('inst-db-unavailable').' '.$ex->getMessage();}
