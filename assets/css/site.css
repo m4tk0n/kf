@@ -164,3 +164,8 @@ h2 { margin: 0; font-size: 16px; }
 /* Remove the details element's inline/baseline space around the avatar. */
 .account-menu { display: flex; align-items: center; line-height: 0; }
 .user-avatar { flex: 0 0 36px; vertical-align: middle; }
+
+
+/* User role displayed next to the account name. */
+.account-name-line { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 7px; }
+.account-role { display: inline-flex; align-items: center; min-height: 20px; padding: 2px 7px; border: 1px solid #4a4a4a; border-radius: 4px; color: var(--accent); font-size: 10px; font-weight: 700; line-height: 1.2; white-space: nowrap; }
