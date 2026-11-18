@@ -35,4 +35,35 @@ $hasGps = $venue['lat'] !== null && $venue['lng'] !== null;
       <p><?= nl2br(e($venue['description'])) ?></p>
     </section>
   <?php endif; ?>
+
+  <?php lang_load('events'); ?>
+  <?php foreach ([
+      ['title' => lang_code() === 'cs' ? 'Minulé akce' : 'Past events', 'items' => $venue['past_events']],
+      ['title' => lang_code() === 'cs' ? 'Budoucí akce' : 'Upcoming events', 'items' => $venue['future_events']],
+  ] as $eventGroup): ?>
+    <section class="venue-events">
+      <h2><?= e($eventGroup['title']) ?></h2>
+      <?php if (!$eventGroup['items']): ?>
+        <p class="venue-events-empty"><?= e(lang_code() === 'cs' ? 'Žádné akce.' : 'No events.') ?></p>
+      <?php else: ?>
+        <div class="listing">
+          <?php foreach ($eventGroup['items'] as $event): ?>
+            <article class="listing-row">
+              <div class="listing-main">
+                <strong><?= e($event['name']) ?></strong>
+                <?php $typeKey = cfg('enums.event_type')[(int)$event['type']] ?? 'other'; ?>
+                <?php if ($typeKey !== 'concert'): ?>
+                  <span><?= e(L('event-type-' . $typeKey)) ?></span>
+                <?php endif; ?>
+                <?php if (!empty($event['bands'])): ?>
+                  <span><?= e($event['bands']) ?></span>
+                <?php endif; ?>
+              </div>
+              <time datetime="<?= e(date('c', strtotime($event['starts_at']))) ?>"><?= e(date(L('fmt-datetime'), strtotime($event['starts_at']))) ?></time>
+            </article>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+    </section>
+  <?php endforeach; ?>
 </section>
