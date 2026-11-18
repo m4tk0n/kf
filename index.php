@@ -40,7 +40,7 @@ if ($authenticatedUser !== null) {
     header('Cache-Control: private, no-store, max-age=0');
     header('Pragma: no-cache');
 }
-if (in_array($routeName, ['profile', 'settings'], true) && $authenticatedUser === null) {
+if (in_array($routeName, ['profile', 'settings', 'add'], true) && $authenticatedUser === null) {
     header('Location: ' . url('login'), true, 303);
     exit;
 }
@@ -120,6 +120,7 @@ match ($routeName) {
     'login' => page('login', ['title' => L('login-title')]),
     'profile' => page('profile', ['title' => L('profile-title')]),
     'settings' => page('settings', ['title' => L('settings-title')]),
+    'add' => page('add', ['title' => L('add-title')]),
     'moderation' => page('role-center', ['title' => L('moderation-title'), 'center' => 'moderation']),
     'admin' => page('role-center', ['title' => L('admin-title'), 'center' => 'admin']),
     'auth/google/start' => require_google_auth('start'),
