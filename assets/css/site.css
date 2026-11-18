@@ -269,3 +269,17 @@ h2 { margin: 0; font-size: 16px; }
  .moderation-preview { padding:9px; }
  .moderation-edit-actions { grid-template-columns:1fr; }
 }
+
+
+/* Moderation category buttons and empty queue state */
+.moderation-categories { display:flex; flex-direction:column; gap:9px; }
+.moderation-category { position:relative; display:flex; width:100%; min-height:58px; align-items:center; justify-content:space-between; gap:12px; padding:12px 15px; border:1px solid var(--line); border-radius:8px; background:var(--panel); color:var(--text); text-decoration:none; transition:border-color .15s, background .15s; }
+.moderation-category span:first-child { flex:1; font-size:14px; font-weight:700; }
+.moderation-category strong { display:inline-flex; min-width:42px; height:32px; align-items:center; justify-content:center; padding:0 9px; border:1px solid var(--accent); border-radius:6px; background:var(--panel-soft); color:var(--accent); font-size:13px; font-weight:800; }
+.moderation-category-arrow { color:var(--accent); font-size:22px; line-height:1; }
+a.moderation-category:hover { border-color:var(--accent); background:var(--panel-soft); }
+.moderation-category.is-disabled { cursor:not-allowed; opacity:.48; background:var(--panel-soft); }
+.moderation-category.is-disabled strong { border-color:var(--line); color:var(--muted); }
+.moderation-empty-notice { display:grid; gap:5px; margin-top:15px; padding:16px; border:1px solid var(--line); border-radius:8px; background:var(--panel-soft); }
+.moderation-empty-notice strong { font-size:14px; }
+.moderation-empty-notice p { margin:0; color:var(--muted); font-size:12px; line-height:1.5; }

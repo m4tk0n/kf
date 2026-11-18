@@ -37,12 +37,27 @@ $backToType = $kind !== '' ? url('moderation') . '?type=' . rawurlencode($kind) 
     <p class="add-intro"><?= e(L('moderation-description')) ?></p>
     <div class="moderation-categories">
       <?php foreach (['event','venue','band'] as $key): ?>
-        <a class="moderation-category" href="<?= e(url('moderation')) ?>?type=<?= e($key) ?>">
-          <span><?= e($typeLabels[$key]) ?></span>
-          <strong><?= (int)($counts[$key] ?? 0) ?></strong>
-        </a>
+        <?php $count = (int)($counts[$key] ?? 0); ?>
+        <?php if ($count > 0): ?>
+          <a class="moderation-category" href="<?= e(url('moderation')) ?>?type=<?= e($key) ?>">
+            <span><?= e($typeLabels[$key]) ?></span>
+            <strong>(<?= $count ?>)</strong>
+            <span class="moderation-category-arrow" aria-hidden="true">›</span>
+          </a>
+        <?php else: ?>
+          <div class="moderation-category is-disabled" aria-disabled="true">
+            <span><?= e($typeLabels[$key]) ?></span>
+            <strong>(0)</strong>
+          </div>
+        <?php endif; ?>
       <?php endforeach; ?>
     </div>
+    <?php if (array_sum(array_map('intval', $counts)) === 0): ?>
+      <div class="moderation-empty-notice" role="status">
+        <strong><?= e(L('mod-empty-title')) ?></strong>
+        <p><?= e(L('mod-empty-description')) ?></p>
+      </div>
+    <?php endif; ?>
   <?php elseif (!$selected): ?>
     <div class="account-page-heading moderation-subheading">
       <h2><?= e($typeLabels[$type] ?? L('moderation-title')) ?></h2>
