@@ -389,6 +389,17 @@ if ($routeName === 'moderation') {
     exit;
 }
 
+// Detail konkrétního klubu. ID je rozhodující; slug v URL slouží jen pro čitelnou adresu.
+if (preg_match('~^venue/(\\d+)(?:/[^/]+)?$~', $routeName, $venueMatch)) {
+    $venue = venue_load((int)$venueMatch[1]);
+    if ($venue === null) {
+        page('404', ['title' => L('err-404')], 404);
+    } else {
+        page('venue-detail', ['title' => $venue['name'], 'venue' => $venue]);
+    }
+    exit;
+}
+
 match ($routeName) {
     ''      => page('home', ['title' => L('home-title')]),
     'login' => page('login', ['title' => L('login-title')]),

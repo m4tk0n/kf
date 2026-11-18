@@ -1,37 +1,38 @@
 <?php
-// Detail klubu. Stejnou šablonu používá skutečný detail i náhled před odesláním,
-// takže náhled vypadá přesně jako výsledek. Očekává proměnnou $venue (viz venue_load()).
-$v = $venue;
-$mapUrl = '';
-if (($v['lat'] ?? null) !== null && ($v['lng'] ?? null) !== null) {
-    $lat = rawurlencode((string)$v['lat']);
-    $lng = rawurlencode((string)$v['lng']);
-    $mapUrl = 'https://www.openstreetmap.org/?mlat=' . $lat . '&mlon=' . $lng . '#map=17/' . $lat . '/' . $lng;
-}
-$phoneHref = preg_replace('/[^0-9+]/', '', (string)($v['phone'] ?? ''));
+$backUrl = url() . '?section=venues';
+$hasGps = $venue['lat'] !== null && $venue['lng'] !== null;
 ?>
-<article class="venue-detail">
-  <h2 class="venue-title"><?= e($v['name']) ?></h2>
-  <p class="venue-place"><?= e($v['city']) ?><?= $v['country_code'] !== '' ? ' (' . e($v['country_code']) . ')' : '' ?></p>
-  <?php if (!empty($v['images'])): ?>
+<section class="account-page venue-detail-page">
+  <div class="account-page-heading">
+    <h1><?= e($venue['name']) ?></h1>
+    <a class="back-button" href="<?= e($backUrl) ?>"><?= e(L('back-button')) ?></a>
+  </div>
+  <p class="venue-location-line"><?= e($venue['city']) ?> (<?= e($venue['country_code']) ?>)</p>
+
+  <?php if (!empty($venue['images'])): ?>
     <div class="venue-gallery">
-      <?php foreach ($v['images'] as $imageUrl): ?>
-        <img src="<?= e($imageUrl) ?>" alt="<?= e($v['name']) ?>" loading="lazy">
+      <?php foreach ($venue['images'] as $image): ?>
+        <img src="<?= e($image) ?>" alt="<?= e($venue['name']) ?>" loading="lazy">
       <?php endforeach; ?>
     </div>
   <?php endif; ?>
-  <?php if (trim((string)$v['description']) !== ''): ?>
-    <p class="venue-description"><?= nl2br(e($v['description'])) ?></p>
-  <?php endif; ?>
-  <dl class="venue-info">
-    <?php if ($v['address'] !== ''): ?>
-      <div><dt><?= e(L('add-address')) ?></dt><dd><?= e($v['address']) ?></dd></div>
+
+  <dl class="venue-facts">
+    <?php if ($venue['address'] !== ''): ?>
+      <div><dt><?= e(lang_code() === 'cs' ? 'Adresa' : 'Address') ?></dt><dd><?= e($venue['address']) ?></dd></div>
     <?php endif; ?>
-    <?php if ($v['phone'] !== ''): ?>
-      <div><dt><?= e(L('add-phone')) ?></dt><dd><?php if ($phoneHref !== ''): ?><a href="tel:<?= e($phoneHref) ?>"><?= e($v['phone']) ?></a><?php else: ?><?= e($v['phone']) ?><?php endif; ?></dd></div>
+    <?php if ($venue['phone'] !== ''): ?>
+      <div><dt><?= e(lang_code() === 'cs' ? 'Telefon' : 'Phone') ?></dt><dd><a href="tel:<?= e(preg_replace('/[^+0-9]/', '', $venue['phone'])) ?>"><?= e($venue['phone']) ?></a></dd></div>
     <?php endif; ?>
-    <?php if ($mapUrl !== ''): ?>
-      <div><dt><?= e(L('venue-map')) ?></dt><dd><a href="<?= e($mapUrl) ?>" target="_blank" rel="noopener"><?= e(L('venue-open-map')) ?></a></dd></div>
+    <?php if ($hasGps): ?>
+      <div><dt>GPS</dt><dd><a href="https://www.openstreetmap.org/?mlat=<?= rawurlencode((string)$venue['lat']) ?>&amp;mlon=<?= rawurlencode((string)$venue['lng']) ?>#map=16/<?= rawurlencode((string)$venue['lat']) ?>/<?= rawurlencode((string)$venue['lng']) ?>" target="_blank" rel="noopener noreferrer"><?= e($venue['lat'] . ', ' . $venue['lng']) ?></a></dd></div>
     <?php endif; ?>
   </dl>
-</article>
+
+  <?php if ($venue['description'] !== ''): ?>
+    <section class="venue-description">
+      <h2><?= e(lang_code() === 'cs' ? 'O klubu' : 'About the venue') ?></h2>
+      <p><?= nl2br(e($venue['description'])) ?></p>
+    </section>
+  <?php endif; ?>
+</section>
