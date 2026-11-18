@@ -2,6 +2,11 @@ name: Read live server through AI Code Viewer
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - SERVER-SNAPSHOT.md
   workflow_run:
     workflows:
       - Deploy GitHub to FTP
