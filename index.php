@@ -2,13 +2,19 @@
 declare(strict_types=1);
 
 require __DIR__ . '/src/bootstrap.php';
+require __DIR__ . '/src/provider_auth.php';
 require __DIR__ . '/src/google_auth.php';
+require __DIR__ . '/src/facebook_auth.php';
 
 $base  = rtrim((string)parse_url(cfg('app.base_url'), PHP_URL_PATH), '/');
 $uri   = (string)parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $path  = trim(substr($uri, strlen($base)), '/');
 $parts = $path === '' ? [] : explode('/', $path);
 $langs = cfg('app.languages');
+
+if ($path === 'auth/facebook/callback') {
+    require_facebook_auth('callback');
+}
 
 if ($path === 'auth/google/callback') {
     $returnLang = (string)($_SESSION['google_oauth_lang'] ?? cfg('app.default_lang'));
@@ -40,9 +46,12 @@ if ($authenticatedUser !== null) {
     header('Cache-Control: private, no-store, max-age=0');
     header('Pragma: no-cache');
 }
-if (in_array($routeName, ['profile', 'settings'], true) && $authenticatedUser === null) {
-    header('Location: ' . url('login'), true, 303);
-    exit;
+if (in_array($routeName, ['profile', 'settings'], true)) {
+    if ($authenticatedUser === null) {
+        header('Location: ' . url('login'), true, 303);
+        exit;
+    }
+    require_permission($routeName === 'profile' ? 'account.profile' : 'account.settings');
 }
 if (is_array($_SESSION['user'] ?? null) && empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -115,6 +124,9 @@ match ($routeName) {
     'profile' => page('profile', ['title' => L('profile-title')]),
     'settings' => page('settings', ['title' => L('settings-title')]),
     'auth/google/start' => require_google_auth('start'),
+    'auth/google/link/start' => require_google_auth('link_start'),
+    'auth/facebook/start' => require_facebook_auth('start'),
+    'auth/facebook/link/start' => require_facebook_auth('link_start'),
     'auth/google/callback' => require_google_auth('callback'),
     default => page('404', ['title' => L('err-404')], 404),
 };

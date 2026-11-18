@@ -24,20 +24,35 @@ if (strtolower((string)parse_url(cfg('app.base_url'), PHP_URL_SCHEME)) === 'http
     header('Strict-Transport-Security: max-age=31536000');
 }
 
-// PHP stores session data on the server. The browser receives only a random ID.
-$https = strtolower((string)parse_url(cfg('app.base_url'), PHP_URL_SCHEME)) === 'https';
-$cookiePath = rtrim((string)parse_url(cfg('app.base_url'), PHP_URL_PATH), '/') . '/';
-session_name('KFSESSID');
-ini_set('session.use_strict_mode', '1');
-ini_set('session.use_only_cookies', '1');
-ini_set('session.use_trans_sid', '0');
-ini_set('session.cookie_httponly', '1');
-ini_set('session.cookie_secure', $https ? '1' : '0');
-ini_set('session.cookie_samesite', 'Lax');
-ini_set('session.sid_length', '48');
-ini_set('session.sid_bits_per_character', '6');
-ini_set('session.gc_maxlifetime', (string)KF_SESSION_ABSOLUTE_TTL);
-if (session_status() !== PHP_SESSION_ACTIVE) {
+// Browser stores only the opaque PHP session ID. All session data stays server-side in MySQL.
+// The installer and CLI maintenance scripts do not need an authenticated session.
+$scriptPath = (string)parse_url((string)($_SERVER['SCRIPT_NAME'] ?? ''), PHP_URL_PATH);
+$isInstaller = str_contains($scriptPath, '/install/');
+if (PHP_SAPI !== 'cli' && !$isInstaller) {
+    if (!extension_loaded('sodium')) {
+        throw new RuntimeException('The sodium PHP extension is required for encrypted database sessions.');
+    }
+    if (strlen((string)cfg('app.key')) < 32) {
+        throw new RuntimeException('APP_KEY must contain at least 32 characters.');
+    }
+
+    require_once __DIR__ . '/session_handler.php';
+    require_once __DIR__ . '/auth.php';
+
+    $https = strtolower((string)parse_url(cfg('app.base_url'), PHP_URL_SCHEME)) === 'https';
+    $cookiePath = rtrim((string)parse_url(cfg('app.base_url'), PHP_URL_PATH), '/') . '/';
+    session_name('KFSESSID');
+    ini_set('session.use_strict_mode', '1');
+    ini_set('session.use_only_cookies', '1');
+    ini_set('session.use_trans_sid', '0');
+    ini_set('session.cookie_httponly', '1');
+    ini_set('session.cookie_secure', $https ? '1' : '0');
+    ini_set('session.cookie_samesite', 'Lax');
+    ini_set('session.sid_length', '48');
+    ini_set('session.sid_bits_per_character', '6');
+    ini_set('session.gc_maxlifetime', (string)KF_SESSION_ABSOLUTE_TTL);
+    ini_set('session.lazy_write', '0');
+
     session_set_cookie_params([
         'lifetime' => 0,
         'path' => $cookiePath,
@@ -45,6 +60,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         'httponly' => true,
         'samesite' => 'Lax',
     ]);
+    $sessionHandler = new KfDatabaseSessionHandler();
+    session_set_save_handler($sessionHandler, true);
     session_start();
 }
-

@@ -7,11 +7,7 @@ declare(strict_types=1);
  */
 require dirname(__DIR__) . '/src/bootstrap.php';
 
-$user = $_SESSION['user'] ?? null;
-if (!is_array($user) || (int)($user['role'] ?? 0) !== 4) {
-    http_response_code(403);
-    exit('Přístup odepřen.');
-}
+$user = require_permission('bands.create');
 
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
