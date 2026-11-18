@@ -125,7 +125,7 @@ function require_google_auth(string $action): never
         $pdo = db();
         $users = tbl('users');
 
-        $findUser = $pdo->prepare("SELECT id, email, role, state, confirmed FROM {$users} WHERE email = ? LIMIT 1");
+        $findUser = $pdo->prepare("SELECT id, email, display_name, deletion_scheduled_at, role, state, confirmed FROM {$users} WHERE email = ? LIMIT 1");
         $findUser->execute([$email]);
         $user = $findUser->fetch();
 
@@ -159,10 +159,16 @@ function require_google_auth(string $action): never
         }
 
         session_regenerate_id(true);
+        // A successful sign-in during the grace period cancels account deletion.
+        if (!empty($user['deletion_scheduled_at'])) {
+            $pdo->prepare("UPDATE {$users} SET deletion_scheduled_at = NULL WHERE id = ?")->execute([(int)$user['id']]);
+        }
+        $displayName = trim((string)($user['display_name'] ?? ''));
+        if ($displayName === '') $displayName = $name !== '' ? $name : (string)$user['email'];
         $_SESSION['user'] = [
             'id' => (int)$user['id'],
             'email' => (string)$user['email'],
-            'name' => $name !== '' ? $name : (string)$user['email'],
+            'name' => $displayName,
             'role' => (int)$user['role'],
             'state' => (int)$user['state'],
             'provider' => 'google',
