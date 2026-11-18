@@ -10,6 +10,13 @@ $path  = trim(substr($uri, strlen($base)), '/');
 $parts = $path === '' ? [] : explode('/', $path);
 $langs = cfg('app.languages');
 
+// Google OAuth callback is deliberately outside the language-prefixed routes.
+if ($path === 'auth/google/callback') {
+    $returnLang = (string)($_SESSION['google_oauth_lang'] ?? cfg('app.default_lang'));
+    lang_code(in_array($returnLang, $langs, true) ? $returnLang : cfg('app.default_lang'));
+    require_google_auth('callback');
+}
+
 if (!$parts || !in_array($parts[0], $langs, true)) {
     $qs = $_SERVER['QUERY_STRING'] ?? '';
     header('Location: ' . rtrim(cfg('app.base_url'), '/') . '/' . detect_lang() . '/' . $path . ($qs !== '' ? '?' . $qs : ''), true, 302);
@@ -32,6 +39,7 @@ match (implode('/', $route)) {
     ''      => page('home', ['title' => L('home-title')]),
     'login' => page('login', ['title' => L('login-title')]),
     'auth/google/start' => require_google_auth('start'),
+    // Keep compatibility with an older language-prefixed callback URL.
     'auth/google/callback' => require_google_auth('callback'),
     default => page('404', ['title' => L('err-404')], 404),
 };
