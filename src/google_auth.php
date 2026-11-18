@@ -74,7 +74,7 @@ function require_google_auth(string $action): never
 
         $token = google_oauth_request('https://oauth2.googleapis.com/token', [
             'method' => 'POST',
-            'header' => "Content-Type: application/x-www-form-urlencoded\\r\\nAccept: application/json\\r\\n",
+            'header' => "Content-Type: application/x-www-form-urlencoded\r\nAccept: application/json\r\n",
             'content' => http_build_query([
                 'code' => $code,
                 'client_id' => $clientId,
@@ -89,7 +89,7 @@ function require_google_auth(string $action): never
         // Google verifies the token signature and returns its claims through tokeninfo.
         $identity = google_oauth_request(
             'https://oauth2.googleapis.com/tokeninfo?id_token=' . rawurlencode($idToken),
-            ['header' => "Accept: application/json\\r\\n"]
+            ['header' => "Accept: application/json\r\n"]
         );
         $issuer = (string)($identity['iss'] ?? '');
         $expires = (int)($identity['exp'] ?? 0);
