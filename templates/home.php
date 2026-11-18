@@ -184,13 +184,16 @@ $arrow = static function (?string $target, string $label, string $glyph): string
   const section = form?.querySelector('[name="section"]');
   if (!form || !search || section?.value !== 'venues') return;
   let timer;
+  let wasSearching = new URLSearchParams(window.location.search).get('q')?.trim().length >= 3;
   search.addEventListener('input', () => {
     clearTimeout(timer);
-    timer = setTimeout(() => {
-      if (search.value.trim().length >= 3 || search.value.trim().length === 0) {
+    const length = search.value.trim().length;
+    if (length >= 3 || (wasSearching && length < 3)) {
+      timer = setTimeout(() => {
+        wasSearching = length >= 3;
         form.requestSubmit();
-      }
-    }, 250);
+      }, 250);
+    }
   });
 })();
 </script>
