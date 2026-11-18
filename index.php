@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 require __DIR__ . '/src/bootstrap.php';
+require __DIR__ . '/src/google_auth.php';
 
 $base  = rtrim((string)parse_url(cfg('app.base_url'), PHP_URL_PATH), '/');
 $uri   = (string)parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -27,7 +28,7 @@ lang_code($parts[0]);
 $route = array_slice($parts, 1);
 $GLOBALS['KF_ROUTE'] = implode('/', $route);
 
-match ($route[0] ?? '') {
+match (implode('/', $route)) {
     ''      => page('home', ['title' => L('home-title')]),
     'login' => page('login', ['title' => L('login-title')]),
     default => page('404', ['title' => L('err-404')], 404),
