@@ -34,7 +34,7 @@
     </select>
     <label class="sr-only" for="global-search">[search-label]</label>
     <input id="global-search" class="global-search" type="search" name="q" value="<?= e($_GET['q'] ?? '') ?>" placeholder="[search-placeholder]" autocomplete="off">
-    <a class="filter-button" href="#filtry">[filter-button]</a>
+    <a class="filter-button" href="#filtry">[home-filters]</a>
   </form>
 </nav>
 <?php endif; ?>
