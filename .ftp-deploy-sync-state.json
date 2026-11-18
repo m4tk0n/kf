@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794983628858,
+    "generatedTime": 1794983641203,
     "data": [
         {
             "type": "file",
@@ -104,8 +104,8 @@
         {
             "type": "file",
             "name": "install/index.php",
-            "size": 21155,
-            "hash": "da015f0564ccd7deeefc1a8204b0ec37e5c84ea970c6b880ff5bbda7226723b6"
+            "size": 20827,
+            "hash": "86c34402c61966135704491dcb4af30d13278a61b9a4bffa915a4c3e113635bb"
         },
         {
             "type": "file",
@@ -131,21 +131,21 @@
         },
         {
             "type": "file",
-            "name": "src/google_auth.php",
-            "size": 8679,
-            "hash": "42a5773dfa447e040d91d141dc1cb2fbee8d135a3e89a8ecbf52b95f76d205f9"
-        },
-        {
-            "type": "file",
             "name": "src/bootstrap.php",
-            "size": 1882,
-            "hash": "99a71b423057a536bb65a7b13bbac87b6513e1c1273e9c1c6696d1a210175f93"
+            "size": 2597,
+            "hash": "a3026d84b1c2c32322673e1dd82ad7ce054883c8e1f3519e707795d0be800767"
         },
         {
             "type": "file",
             "name": "src/helpers.php",
             "size": 13558,
             "hash": "a0ae99e00c4c41585cea5df72b59658025c48cc4e3fc3f143a3ee1f822981413"
+        },
+        {
+            "type": "file",
+            "name": "src/google_auth.php",
+            "size": 9694,
+            "hash": "7c6f7f9857b2739e07fad4abe54cca5b4c387547aee962e7ca507a7a521770cb"
         },
         {
             "type": "file",
@@ -167,15 +167,15 @@
         },
         {
             "type": "file",
-            "name": "templates/login.php",
-            "size": 718,
-            "hash": "453cf046a9664e51995a66d31b3315ef6a999525db2c7053fc0a620496d390c5"
-        },
-        {
-            "type": "file",
             "name": "templates/layout.php",
             "size": 5554,
             "hash": "998dc7b692e77fa6f22d2452298d092293353cb3a9f1585d6e9a97942f1ce256"
+        },
+        {
+            "type": "file",
+            "name": "templates/login.php",
+            "size": 718,
+            "hash": "453cf046a9664e51995a66d31b3315ef6a999525db2c7053fc0a620496d390c5"
         },
         {
             "type": "file",

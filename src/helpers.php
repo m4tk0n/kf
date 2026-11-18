@@ -329,7 +329,7 @@ function require_csrf_token(): void
  * Database-backed PHP sessions. The browser stores only the random session ID;
  * the serialized session payload stays in the prefixed sessions table.
  */
-final class KfDatabaseSessionHandler implements SessionHandlerInterface
+final class KfDatabaseSessionHandler implements SessionHandlerInterface, SessionUpdateTimestampHandlerInterface
 {
     private PDO $pdo;
     private string $table;
@@ -360,6 +360,40 @@ final class KfDatabaseSessionHandler implements SessionHandlerInterface
             return (string)$payload;
         } catch (Throwable $e) {
             error_log('K&F session read failed: ' . $e->getMessage());
+            return false;
+        }
+    }
+
+    public function validateId(string $id): bool
+    {
+        try {
+            $stmt = $this->pdo->prepare(
+                "SELECT 1 FROM {$this->table} WHERE id_hash = ? AND expires_at > UTC_TIMESTAMP() LIMIT 1"
+            );
+            $stmt->execute([hash('sha256', $id)]);
+            return (bool)$stmt->fetchColumn();
+        } catch (Throwable $e) {
+            error_log('K&F session validation failed: ' . $e->getMessage());
+            return false;
+        }
+    }
+
+    public function updateTimestamp(string $id, string $data): bool
+    {
+        try {
+            $stmt = $this->pdo->prepare(
+                "UPDATE {$this->table}
+                 SET user_id = ?, last_activity = UTC_TIMESTAMP(),
+                     expires_at = DATE_ADD(UTC_TIMESTAMP(), INTERVAL 12 HOUR)
+                 WHERE id_hash = ? AND expires_at > UTC_TIMESTAMP()"
+            );
+            $userId = $_SESSION['user']['id'] ?? null;
+            $userId = is_numeric($userId) && (int)$userId > 0 ? (int)$userId : null;
+            $stmt->bindValue(1, $userId, $userId === null ? PDO::PARAM_NULL : PDO::PARAM_INT);
+            $stmt->bindValue(2, hash('sha256', $id), PDO::PARAM_STR);
+            return $stmt->execute() && $stmt->rowCount() >= 0;
+        } catch (Throwable $e) {
+            error_log('K&F session timestamp update failed: ' . $e->getMessage());
             return false;
         }
     }
