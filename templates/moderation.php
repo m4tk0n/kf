@@ -125,7 +125,7 @@ $backToType = $kind !== '' ? url('moderation') . '?type=' . rawurlencode($kind) 
         </section>
       <?php endif; ?>
       <label><?= e(L('add-name')) ?><input name="name" maxlength="120" required value="<?= e($selected['name']) ?>"></label>
-      <?php if ($kind === 'venue'): ?>
+      <?php if (in_array($kind, ['venue','venue_change'], true)): ?>
         <label><?= e(L('country-label')) ?><select name="country_id" required><?php foreach ($countries as $country): ?><option value="<?= (int)$country['id'] ?>"<?= (int)$country['id'] === $countryId ? ' selected' : '' ?>><?= e($country['country_name']) ?> (<?= e($country['iso2']) ?>)</option><?php endforeach; ?></select></label>
         <label><?= e(L('add-city')) ?><input name="city" maxlength="100" required value="<?= e($selected['city'] ?? '') ?>"></label>
         <label><?= e(L('add-address')) ?><input name="address" maxlength="190" value="<?= e($data['address'] ?? '') ?>"></label>
