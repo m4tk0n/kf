@@ -2,7 +2,7 @@
   <div class="login-card">
     <h1><?= e(L('login-title')) ?></h1>
     <div class="social-login-list">
-      <a class="social-login social-google" href="<?= e(url('auth/google/start')) ?>">
+      <a class="social-login social-google" href="<?= e(url('auth/google/start') . (($next = safe_auth_return_path($_GET['next'] ?? '')) !== '' ? '?next=' . rawurlencode($next) : '')) ?>">
         <span class="social-brand social-google-mark" aria-hidden="true">G</span>
         <span><?= e(L('login-google')) ?></span>
       </a>

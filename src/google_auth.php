@@ -38,6 +38,7 @@ function require_google_auth(string $action): never
             $_SESSION['google_oauth_state'] = $state;
             $_SESSION['google_oauth_nonce'] = $nonce;
             $_SESSION['google_oauth_lang'] = lang_code();
+            $_SESSION['google_oauth_return'] = safe_auth_return_path($_GET['next'] ?? '');
 
             $query = http_build_query([
                 'client_id' => $clientId,
@@ -66,7 +67,8 @@ function require_google_auth(string $action): never
         }
 
         $returnLang = (string)($_SESSION['google_oauth_lang'] ?? cfg('app.default_lang'));
-        unset($_SESSION['google_oauth_lang']);
+        $returnTo = safe_auth_return_path($_SESSION['google_oauth_return'] ?? '');
+        unset($_SESSION['google_oauth_lang'], $_SESSION['google_oauth_return']);
         if (!in_array($returnLang, cfg('app.languages'), true)) $returnLang = cfg('app.default_lang');
 
         $code = (string)($_GET['code'] ?? '');
@@ -202,7 +204,10 @@ function require_google_auth(string $action): never
         ];
 
         header('Cache-Control: no-store');
-        header('Location: ' . url('', $returnLang), true, 303);
+        $destination = $returnTo !== ''
+            ? rtrim(cfg('app.base_url'), '/') . $returnTo
+            : url('', $returnLang);
+        header('Location: ' . $destination, true, 303);
         exit;
     } catch (Throwable $e) {
         error_log('Google OAuth: ' . $e->getMessage());

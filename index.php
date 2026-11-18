@@ -40,10 +40,9 @@ if ($authenticatedUser !== null) {
     header('Cache-Control: private, no-store, max-age=0');
     header('Pragma: no-cache');
 }
-// The add page is public; authentication is required only when a submission is posted.
-if (in_array($routeName, ['profile', 'settings', 'add'], true) && $authenticatedUser === null) {
-    header('Location: ' . url('login'), true, 303);
-    exit;
+// Protected pages use one server-side identity check; page templates keep their own layout.
+if (in_array($routeName, ['profile', 'settings', 'add'], true)) {
+    $authenticatedUser = require_login();
 }
 if ($routeName === 'moderation') {
     require_role(3); // Moderator (3) and administrator (4).
