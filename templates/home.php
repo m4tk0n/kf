@@ -89,7 +89,7 @@ if ($section === 'events') {
         }
     }
 } elseif ($section === 'venues') {
-    $sql = 'SELECT v.name, ' . (lang_code() === 'cs' ? 'c.cs' : 'c.en') . ' AS city_name,
+    $sql = 'SELECT v.id, v.name, ' . (lang_code() === 'cs' ? 'c.cs' : 'c.en') . ' AS city_name,
                    co.iso2 AS country_code
             FROM ' . tbl('venues') . ' v
             JOIN ' . tbl('cities') . ' c ON c.id = v.city_id
@@ -136,7 +136,11 @@ $arrow = static function (?string $target, string $label, string $glyph): string
       <?php foreach ($items as $item): ?>
         <article class="listing-row">
           <div class="listing-main">
-            <strong><?= e($item['name']) ?></strong>
+            <?php if ($section === 'venues'): ?>
+              <a class="listing-title-link" href="<?= e(url('venue/' . (int)$item['id'] . '/' . slugify((string)$item['name']))) ?>"><strong><?= e($item['name']) ?></strong></a>
+            <?php else: ?>
+              <strong><?= e($item['name']) ?></strong>
+            <?php endif; ?>
             <?php if ($section === 'events'): ?>
               <?php $typeKey = cfg('enums.event_type')[(int)$item['type']] ?? 'other'; ?>
               <span><?php if ($typeKey !== 'concert'): ?><?= e(L('event-type-' . $typeKey)) ?> · <?php endif; ?><?= e($item['venue_name']) ?> · <?= e($item['city_name']) ?> (<?= e($item['country_code']) ?>)</span>
