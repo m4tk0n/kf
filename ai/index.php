@@ -345,8 +345,14 @@ if ($action === 'read') {
 }
 
 if ($action === 'all') {
-    header('Content-Type: text/plain; charset=utf-8');
-    header('Content-Disposition: inline; filename="kf-source-all.txt"');
+    // Strojově čitelný výstup: JSON místo jednoho velkého textového dumpu.
+    // Volitelný limit chrání před příliš velkou odpovědí; soubory se nikdy nerozdělují.
+    $maxBytes = isset($_GET['max_bytes']) ? (int)$_GET['max_bytes'] : 1500000;
+    $maxBytes = max(10000, min($maxBytes, 2000000));
+    $files = [];
+    $skipped = [];
+    $totalBytes = 0;
+
     foreach (ai_get_files($root) as $file) {
         $path = ai_resolve_file($root, $file['path']);
         if ($path === false) {
@@ -354,18 +360,37 @@ if ($action === 'all') {
         }
         $content = @file_get_contents($path);
         if ($content === false || !ai_is_text($content)) {
+            $skipped[] = ['path' => $file['path'], 'reason' => 'unreadable_or_binary'];
             continue;
         }
-        echo "\n\n";
-        echo str_repeat('=', 80) . "\n";
-        echo 'FILE: ' . $file['path'] . "\n";
-        echo str_repeat('=', 80) . "\n";
-        echo $content;
-        if (!str_ends_with($content, "\n")) {
-            echo "\n";
+
+        $bytes = strlen($content);
+        if ($totalBytes + $bytes > $maxBytes) {
+            $skipped[] = ['path' => $file['path'], 'reason' => 'response_size_limit', 'size' => $bytes];
+            continue;
         }
+
+        $files[] = [
+            'path' => $file['path'],
+            'size' => $bytes,
+            'content' => $content,
+        ];
+        $totalBytes += $bytes;
     }
-    exit;
+
+    ai_json([
+        'ok' => true,
+        'project' => '/_kf/',
+        'generated_at' => gmdate('c'),
+        'format' => 'json',
+        'file_count' => count($files),
+        'total_bytes' => $totalBytes,
+        'max_bytes' => $maxBytes,
+        'truncated' => count($skipped) > 0,
+        'files' => $files,
+        'skipped' => $skipped,
+        'read_hint' => '?action=read&file=PATH',
+    ]);
 }
 
 ?><!doctype html>
