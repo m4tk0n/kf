@@ -1,0 +1,1 @@
+<section class="account-page"><h1><?= e(L('settings-title')) ?></h1><p><?= e(L('settings-empty')) ?></p></section>
