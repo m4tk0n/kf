@@ -115,7 +115,7 @@ $arrow = static function (?string $target, string $label, string $glyph): string
 };
 ?>
 <?php if ($section === 'events'): ?>
-<form class="date-panel" method="get" action="<?= e(url()) ?>" aria-label="[date-picker-label]">
+<form class="date-panel" method="get" action="<?= e(url()) ?>" aria-label="Choose date">
   <?= $arrow($prevPeriod, L('date-previous-period'), '‹‹') ?>
   <?= $arrow($prevDay, L('date-previous-day'), '‹') ?>
   <button class="date-current" type="submit" formaction="<?= e(url()) ?>"><?= e(date(L('fmt-date'), strtotime($cur))) ?> <span><?= e($cur === $today ? L('date-today') : L($explicit ? 'date-go-today' : 'date-nearest')) ?></span></button>
@@ -167,11 +167,11 @@ $arrow = static function (?string $target, string $label, string $glyph): string
 
 <?php if ($section === 'events'): ?>
 <section class="filters" id="filtry">
-  <h2>[search-heading]</h2>
+  <h2>Find events</h2>
   <div class="filter-grid">
-    <label>[search-label]<input type="search" placeholder="[search-placeholder]"></label>
-    <label>[country-label]<select><option>[country-all]</option><option>CZ</option></select></label>
-    <label>[event-type-label]<select><option>[event-type-all]</option><option>[event-type-concert]</option><option>[event-type-festival]</option><option>[event-type-other]</option></select></label>
+    <label>Search<input type="search" placeholder="Band, event or venue name"></label>
+    <label>Country<select><option>All countries</option><option>CZ</option></select></label>
+    <label>Event type<select><option>All types</option><option>Concert</option><option>Festival</option><option>Other</option></select></label>
   </div>
 </section>
 <?php endif; ?>
