@@ -125,7 +125,7 @@ function require_google_auth(string $action): never
         $pdo = db();
         $users = tbl('users');
 
-        $findUser = $pdo->prepare("SELECT id, email, role, state FROM {$users} WHERE email = ? LIMIT 1");
+        $findUser = $pdo->prepare("SELECT id, email, role, state, confirmed FROM {$users} WHERE email = ? LIMIT 1");
         $findUser->execute([$email]);
         $user = $findUser->fetch();
 
