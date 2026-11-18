@@ -153,32 +153,43 @@ function url(string $path = '', ?string $lang = null): string
 // Jazyk pro adresu bez jazyka: cookie z přepínače, pak hlavička prohlížeče, pak výchozí
 function detect_lang(): string
 {
-    $langs  = cfg('app.languages');
-    $cookie = $_COOKIE[cfg('app.cookie_lang')] ?? '';
-    if (in_array($cookie, $langs, true)) {
-        return $cookie;
-    }
-    $found = [];
-    foreach (explode(',', strtolower((string)($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? ''))) as $i => $item) {
-        $bits = explode(';', trim($item));
-        $q = 1.0;
-        foreach (array_slice($bits, 1) as $b) {
-            if (str_starts_with(trim($b), 'q=')) {
-                $q = (float)substr(trim($b), 2);
+    $langs = cfg('app.languages');
+    $header = strtolower((string)($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? ''));
+    $preferences = [];
+
+    foreach (explode(',', $header) as $index => $item) {
+        $parts = array_map('trim', explode(';', $item));
+        $tag = $parts[0] ?? '';
+        if ($tag === '') {
+            continue;
+        }
+
+        $quality = 1.0;
+        foreach (array_slice($parts, 1) as $parameter) {
+            if (preg_match('/^q=([0-9.]+)$/', $parameter, $match)) {
+                $quality = (float)$match[1];
+                break;
             }
         }
-        $primary = explode('-', trim($bits[0]))[0];
-        if ($primary !== '' && $q > 0 && !isset($found[$primary])) {
-            $found[$primary] = [$q, -$i];
+        if ($quality <= 0 || $quality > 1) {
+            continue;
+        }
+
+        $primary = explode('-', $tag)[0];
+        if (in_array($primary, $langs, true)) {
+            $preferences[] = [
+                'language' => $primary,
+                'quality' => $quality,
+                'order' => $index,
+            ];
         }
     }
-    arsort($found);
-    foreach (array_keys($found) as $code) {
-        if (in_array($code, $langs, true)) {
-            return $code;
-        }
-    }
-    return cfg('app.default_lang');
+
+    usort($preferences, static function (array $a, array $b): int {
+        return ($b['quality'] <=> $a['quality']) ?: ($a['order'] <=> $b['order']);
+    });
+
+    return $preferences[0]['language'] ?? cfg('app.default_lang');
 }
 
 function set_lang_cookie(string $lang): void
