@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 define('KF_ROOT', dirname(__DIR__));
 require __DIR__ . '/helpers.php';
+require __DIR__ . '/moderation.php';
 
 load_env(KF_ROOT . '/.env');
 $GLOBALS['KF_CFG'] = require KF_ROOT . '/config.php';
