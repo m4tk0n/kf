@@ -327,3 +327,6 @@ a.moderation-category:hover { border-color:var(--accent); background:var(--panel
 @media(max-width:420px) {
   .venue-facts > div { grid-template-columns:90px minmax(0,1fr); gap:8px; }
 }
+
+/* Small breathing room after the final venue row, matching the row gap. */
+.listing-section--venues .listing { padding-bottom: 7px; }
