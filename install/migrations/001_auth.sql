@@ -1,14 +1,5 @@
--- JEDNORÁZOVÁ MIGRACE PRO JIŽ NAINSTALOVANOU K&F.
--- Před spuštěním nahraď všechny výskyty {p} skutečným TABLE_PREFIX z .env.
--- Spusť pouze jednou, až po záloze databáze.
--- Odstraní starý sloupec pass (K&F používá výhradně Google/Facebook).
--- Pokud byl pass již odstraněn, tento ALTER přeskoč.
-
-ALTER TABLE `{p}users` DROP COLUMN `pass`;
-
--- Autentizace K&F: databázové sessions a externí identity.
--- {p} se při instalaci nahradí hodnotou TABLE_PREFIX.
-
+-- Authentication migration for existing K&F installations.
+-- The installer removes users.pass only after both tables have been verified.
 CREATE TABLE IF NOT EXISTS `{p}user_identities` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` INT UNSIGNED NOT NULL,
