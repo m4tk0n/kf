@@ -160,3 +160,7 @@ h2 { margin: 0; font-size: 16px; }
 @media (max-width: 520px) {
   .site-header:has(.user-avatar) { padding-block: 8px; }
 }
+
+/* Remove the details element's inline/baseline space around the avatar. */
+.account-menu { display: flex; align-items: center; line-height: 0; }
+.user-avatar { flex: 0 0 36px; vertical-align: middle; }
