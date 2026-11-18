@@ -388,6 +388,27 @@ function require_role(int $minimumRole): array
     return $user;
 }
 
+function user_has_permission(string $permission, ?array $user = null): bool
+{
+    $user ??= $_SESSION['user'] ?? null;
+    if (!is_array($user)) return false;
+
+    $allowedRoles = cfg('permissions.' . $permission);
+    $roleName = cfg('enums.role')[(int)($user['role'] ?? 0)] ?? null;
+    return is_string($roleName) && in_array($roleName, $allowedRoles, true);
+}
+
+function require_permission(string $permission): array
+{
+    $user = require_login();
+    if (!user_has_permission($permission, $user)) {
+        http_response_code(404);
+        header('Cache-Control: no-store, private');
+        exit('Not Found');
+    }
+    return $user;
+}
+
 function require_csrf_token(): void
 {
     $submitted = (string)($_POST['csrf_token'] ?? '');
