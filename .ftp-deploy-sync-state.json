@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794975719259,
+    "generatedTime": 1794976486252,
     "data": [
         {
             "type": "file",
@@ -98,6 +98,10 @@
             "hash": "b382c200e474003b5491c7950522e4b7e29fdc2501ae227b4a01322a61314b81"
         },
         {
+            "type": "folder",
+            "name": "install/sql"
+        },
+        {
             "type": "file",
             "name": "install/installed.lock",
             "size": 25,
@@ -105,15 +109,11 @@
         },
         {
             "type": "folder",
-            "name": "install/sql"
+            "name": "lang/cs"
         },
         {
             "type": "folder",
             "name": "lang/en"
-        },
-        {
-            "type": "folder",
-            "name": "lang/cs"
         },
         {
             "type": "file",
@@ -141,27 +141,27 @@
         },
         {
             "type": "file",
-            "name": "templates/home.php",
-            "size": 3953,
-            "hash": "a776bac423479d226d6523af3d6a2975cd234cb1094549bc120721554b791350"
-        },
-        {
-            "type": "file",
             "name": "templates/layout.php",
             "size": 4456,
             "hash": "8ab5a78ec673e3b6b4f6778287dc4cdb8dd670ae13f17207f3d3d18de21ff255"
         },
         {
             "type": "file",
-            "name": "templates/profile.php",
-            "size": 2370,
-            "hash": "d3332c8424e5f8c5bbb2be5212753cb11a70aa6188aba8117e357613ac6489ab"
+            "name": "templates/home.php",
+            "size": 8555,
+            "hash": "6348cff61678c7839e46d841962dbf8b8c4ea1277aaa2263a1f3bf2d993a614c"
         },
         {
             "type": "file",
             "name": "templates/login.php",
             "size": 718,
             "hash": "453cf046a9664e51995a66d31b3315ef6a999525db2c7053fc0a620496d390c5"
+        },
+        {
+            "type": "file",
+            "name": "templates/profile.php",
+            "size": 2370,
+            "hash": "d3332c8424e5f8c5bbb2be5212753cb11a70aa6188aba8117e357613ac6489ab"
         },
         {
             "type": "file",
@@ -215,6 +215,24 @@
         },
         {
             "type": "file",
+            "name": "lang/cs/common.ini",
+            "size": 2817,
+            "hash": "329a230a66b247a87e89724e5d3178d090aaf99329b991dc9f2a79bf3a558bcd"
+        },
+        {
+            "type": "file",
+            "name": "lang/cs/install.ini",
+            "size": 670,
+            "hash": "d25e1efded64f886351dec497a8ade5419e31035e1e084cc36bb324f2166debd"
+        },
+        {
+            "type": "file",
+            "name": "lang/cs/events.ini",
+            "size": 181,
+            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
+        },
+        {
+            "type": "file",
             "name": "lang/en/common.ini",
             "size": 2670,
             "hash": "4001da74d2bbe4a0bc8b351366649b75ac0a45be352f502e9ba8caacd8a66e4a"
@@ -230,24 +248,6 @@
             "name": "lang/en/install.ini",
             "size": 674,
             "hash": "a0230e4558eeda387b0806f82d0be6eac6fab7b960998d65953f830cdd43bab2"
-        },
-        {
-            "type": "file",
-            "name": "lang/cs/common.ini",
-            "size": 2817,
-            "hash": "329a230a66b247a87e89724e5d3178d090aaf99329b991dc9f2a79bf3a558bcd"
-        },
-        {
-            "type": "file",
-            "name": "lang/cs/events.ini",
-            "size": 181,
-            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
-        },
-        {
-            "type": "file",
-            "name": "lang/cs/install.ini",
-            "size": 670,
-            "hash": "d25e1efded64f886351dec497a8ade5419e31035e1e084cc36bb324f2166debd"
         },
         {
             "type": "file",
