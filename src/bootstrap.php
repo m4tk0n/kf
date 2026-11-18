@@ -24,7 +24,7 @@ if (strtolower((string)parse_url(cfg('app.base_url'), PHP_URL_SCHEME)) === 'http
     header('Strict-Transport-Security: max-age=31536000');
 }
 
-// PHP stores session data on the server. The browser receives only a random ID.
+// Sessions are persisted in the prefixed database table; only the random ID is a cookie.
 $https = strtolower((string)parse_url(cfg('app.base_url'), PHP_URL_SCHEME)) === 'https';
 $cookiePath = rtrim((string)parse_url(cfg('app.base_url'), PHP_URL_PATH), '/') . '/';
 session_name('KFSESSID');
@@ -45,6 +45,22 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         'httponly' => true,
         'samesite' => 'Lax',
     ]);
+
+    $sessionTable = tbl('sessions');
+    $tableCheck = db()->prepare(
+        'SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ?'
+    );
+    $tableCheck->execute([cfg('db.prefix') . 'sessions']);
+    $hasSessionTable = (int)$tableCheck->fetchColumn() === 1;
+    $requestPath = (string)parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+    $isInstaller = str_contains($requestPath, '/install');
+
+    if ($hasSessionTable) {
+        session_set_save_handler(new KfDatabaseSessionHandler(db(), $sessionTable), true);
+    } elseif (!$isInstaller) {
+        throw new RuntimeException('Database sessions table is missing. Run the K&F installer.');
+    }
+
     session_start();
 }
 

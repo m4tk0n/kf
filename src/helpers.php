@@ -323,3 +323,92 @@ function require_csrf_token(): void
         exit('Forbidden');
     }
 }
+
+
+/**
+ * Database-backed PHP sessions. The browser stores only the random session ID;
+ * the serialized session payload stays in the prefixed sessions table.
+ */
+final class KfDatabaseSessionHandler implements SessionHandlerInterface
+{
+    private PDO $pdo;
+    private string $table;
+
+    public function __construct(PDO $pdo, string $table)
+    {
+        $this->pdo = $pdo;
+        $this->table = $table;
+    }
+
+    public function open(string $path, string $name): bool { return true; }
+    public function close(): bool { return true; }
+
+    public function read(string $id): string|false
+    {
+        try {
+            $hash = hash('sha256', $id);
+            $stmt = $this->pdo->prepare(
+                "SELECT payload FROM {$this->table} WHERE id_hash = ? AND expires_at > UTC_TIMESTAMP() LIMIT 1"
+            );
+            $stmt->execute([$hash]);
+            $payload = $stmt->fetchColumn();
+            if ($payload === false) {
+                $delete = $this->pdo->prepare("DELETE FROM {$this->table} WHERE id_hash = ? AND expires_at <= UTC_TIMESTAMP()");
+                $delete->execute([$hash]);
+                return '';
+            }
+            return (string)$payload;
+        } catch (Throwable $e) {
+            error_log('K&F session read failed: ' . $e->getMessage());
+            return false;
+        }
+    }
+
+    public function write(string $id, string $data): bool
+    {
+        try {
+            $userId = $_SESSION['user']['id'] ?? null;
+            $userId = is_numeric($userId) && (int)$userId > 0 ? (int)$userId : null;
+            $stmt = $this->pdo->prepare(
+                "INSERT INTO {$this->table}
+                    (id_hash, user_id, payload, created_at, last_activity, expires_at)
+                 VALUES (?, ?, ?, UTC_TIMESTAMP(), UTC_TIMESTAMP(), DATE_ADD(UTC_TIMESTAMP(), INTERVAL 12 HOUR))
+                 ON DUPLICATE KEY UPDATE
+                    user_id = VALUES(user_id),
+                    payload = VALUES(payload),
+                    last_activity = UTC_TIMESTAMP(),
+                    expires_at = DATE_ADD(UTC_TIMESTAMP(), INTERVAL 12 HOUR)"
+            );
+            $stmt->bindValue(1, hash('sha256', $id), PDO::PARAM_STR);
+            $stmt->bindValue(2, $userId, $userId === null ? PDO::PARAM_NULL : PDO::PARAM_INT);
+            $stmt->bindValue(3, $data, PDO::PARAM_LOB);
+            return $stmt->execute();
+        } catch (Throwable $e) {
+            error_log('K&F session write failed: ' . $e->getMessage());
+            return false;
+        }
+    }
+
+    public function destroy(string $id): bool
+    {
+        try {
+            $stmt = $this->pdo->prepare("DELETE FROM {$this->table} WHERE id_hash = ?");
+            return $stmt->execute([hash('sha256', $id)]);
+        } catch (Throwable $e) {
+            error_log('K&F session destroy failed: ' . $e->getMessage());
+            return false;
+        }
+    }
+
+    public function gc(int $max_lifetime): int|false
+    {
+        try {
+            $stmt = $this->pdo->prepare("DELETE FROM {$this->table} WHERE expires_at <= UTC_TIMESTAMP()");
+            $stmt->execute();
+            return $stmt->rowCount();
+        } catch (Throwable $e) {
+            error_log('K&F session cleanup failed: ' . $e->getMessage());
+            return false;
+        }
+    }
+}

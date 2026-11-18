@@ -11,7 +11,7 @@ function google_oauth_request(string $url, array $options = []): array
     $headers = $http_response_header ?? [];
     $status = 0;
     foreach ($headers as $header) {
-        if (preg_match('~^HTTP/\S+\s+(\d{3})~', $header, $m)) $status = (int)$m[1];
+        if (preg_match('~^HTTP/\\S+\\s+(\\d{3})~', $header, $m)) $status = (int)$m[1];
     }
     if ($body === false || $status < 200 || $status >= 300) {
         throw new RuntimeException('Google authentication request failed.');
@@ -29,7 +29,6 @@ function require_google_auth(string $action): never
         $redirectUri = rtrim(cfg('app.base_url'), '/') . '/auth/google/callback';
 
         if ($action === 'start') {
-            // Do not start account linking/login while an authenticated session is active.
             if (refresh_authenticated_user()) {
                 header('Location: ' . url(''), true, 303);
                 exit;
@@ -75,7 +74,7 @@ function require_google_auth(string $action): never
 
         $token = google_oauth_request('https://oauth2.googleapis.com/token', [
             'method' => 'POST',
-            'header' => "Content-Type: application/x-www-form-urlencoded\r\nAccept: application/json\r\n",
+            'header' => "Content-Type: application/x-www-form-urlencoded\\r\\nAccept: application/json\\r\\n",
             'content' => http_build_query([
                 'code' => $code,
                 'client_id' => $clientId,
@@ -84,82 +83,107 @@ function require_google_auth(string $action): never
                 'grant_type' => 'authorization_code',
             ]),
         ]);
-
         $idToken = (string)($token['id_token'] ?? '');
         if ($idToken === '') throw new RuntimeException('Google did not issue an OpenID identity token.');
 
-        // Google validates the JWT signature before returning its claims from tokeninfo.
+        // Google verifies the token signature and returns its claims through tokeninfo.
         $identity = google_oauth_request(
             'https://oauth2.googleapis.com/tokeninfo?id_token=' . rawurlencode($idToken),
-            ['header' => "Accept: application/json\r\n"]
+            ['header' => "Accept: application/json\\r\\n"]
         );
         $issuer = (string)($identity['iss'] ?? '');
         $expires = (int)($identity['exp'] ?? 0);
         $verifiedEmail = ($identity['email_verified'] ?? '') === true || ($identity['email_verified'] ?? '') === 'true';
+        $googleId = trim((string)($identity['sub'] ?? ''));
 
         if (!in_array($issuer, ['accounts.google.com', 'https://accounts.google.com'], true) ||
             !hash_equals($clientId, (string)($identity['aud'] ?? '')) ||
             $expires <= time() ||
             $expectedNonce === '' ||
             !hash_equals($expectedNonce, (string)($identity['nonce'] ?? '')) ||
-            empty($identity['sub']) || empty($identity['email']) || !$verifiedEmail) {
+            $googleId === '' || empty($identity['email']) || !$verifiedEmail) {
             throw new RuntimeException('Google identity token validation failed.');
         }
 
         $email = mb_strtolower(trim((string)$identity['email']), 'UTF-8');
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) throw new RuntimeException('Invalid verified email.');
-        $name = trim((string)($identity['name'] ?? ''));
+
         $pdo = db();
         $users = tbl('users');
-
-        $findUser = $pdo->prepare("SELECT id, email, role, state, confirmed FROM {$users} WHERE email = ? LIMIT 1");
-        $findUser->execute([$email]);
-        $user = $findUser->fetch();
-
-        if (!$user) {
-            $randomPassword = bin2hex(random_bytes(32));
-            try {
-                $insertUser = $pdo->prepare(
-                    "INSERT INTO {$users} (email, pass, role, state, confirmed) VALUES (?, ?, 1, 0, 1)"
-                );
-                $insertUser->execute([$email, password_hash($randomPassword, PASSWORD_DEFAULT)]);
-                $user = [
-                    'id' => (int)$pdo->lastInsertId(), 'email' => $email,
-                    'role' => 1, 'state' => 0, 'confirmed' => 1,
-                ];
-            } catch (PDOException $insertError) {
-                $findUser->execute([$email]);
-                $user = $findUser->fetch();
-                if (!$user) throw $insertError;
-            }
-        } elseif ((int)$user['confirmed'] === 0) {
-            $pdo->prepare("UPDATE {$users} SET confirmed = 1 WHERE id = ?")->execute([(int)$user['id']]);
-            $user['confirmed'] = 1;
-        }
-
-        if ((int)$user['state'] === 2 || (int)$user['confirmed'] !== 1) {
-            throw new RuntimeException('Account is not permitted to sign in.');
-        }
-
-        $displayName = $name !== '' ? $name : (string)$user['email'];
+        $identities = tbl('user_identities');
+        $pdo->beginTransaction();
         try {
-            $profileQuery = $pdo->prepare("SELECT display_name, deletion_scheduled_at FROM {$users} WHERE id = ? LIMIT 1");
-            $profileQuery->execute([(int)$user['id']]);
-            $profileData = $profileQuery->fetch(PDO::FETCH_ASSOC);
-            if (is_array($profileData)) {
-                if (trim((string)($profileData['display_name'] ?? '')) !== '') {
-                    $displayName = trim((string)$profileData['display_name']);
+            // The provider subject is the stable identity; email is used only for first-time linking.
+            $byGoogle = $pdo->prepare(
+                "SELECT u.id, u.email, u.role, u.state, u.confirmed
+                 FROM {$identities} i
+                 INNER JOIN {$users} u ON u.id = i.user_id
+                 WHERE i.provider = 'google' AND i.provider_id = ? LIMIT 1"
+            );
+            $byGoogle->execute([$googleId]);
+            $user = $byGoogle->fetch();
+
+            if (!$user) {
+                $byEmail = $pdo->prepare(
+                    "SELECT id, email, role, state, confirmed FROM {$users} WHERE email = ? LIMIT 1"
+                );
+                $byEmail->execute([$email]);
+                $user = $byEmail->fetch();
+
+                if (!$user) {
+                    $insertUser = $pdo->prepare(
+                        "INSERT INTO {$users} (email, display_name, role, state, confirmed)
+                         VALUES (?, ?, 1, 0, 1)"
+                    );
+                    $googleName = trim((string)($identity['name'] ?? ''));
+                    $insertUser->execute([$email, $googleName !== '' ? mb_substr($googleName, 0, 80, 'UTF-8') : null]);
+                    $user = [
+                        'id' => (int)$pdo->lastInsertId(),
+                        'email' => $email,
+                        'role' => 1,
+                        'state' => 0,
+                        'confirmed' => 1,
+                    ];
+                } elseif ((int)$user['confirmed'] === 0) {
+                    $pdo->prepare("UPDATE {$users} SET confirmed = 1 WHERE id = ?")->execute([(int)$user['id']]);
+                    $user['confirmed'] = 1;
                 }
-                if (!empty($profileData['deletion_scheduled_at'])) {
-                    $pdo->prepare("UPDATE {$users} SET deletion_scheduled_at = NULL WHERE id = ?")->execute([(int)$user['id']]);
+
+                if ((int)$user['state'] === 2 || (int)$user['confirmed'] !== 1) {
+                    throw new RuntimeException('Account is not permitted to sign in.');
                 }
+
+                // Unique constraints prevent one Google identity being assigned to two accounts
+                // and prevent replacing an already linked Google account.
+                $insertIdentity = $pdo->prepare(
+                    "INSERT INTO {$identities} (user_id, provider, provider_id) VALUES (?, 'google', ?)"
+                );
+                $insertIdentity->execute([(int)$user['id'], $googleId]);
             }
-        } catch (PDOException $profileError) {
-            // The optional profile migration may not yet be installed.
-            error_log('K&F optional profile fields unavailable: ' . $profileError->getMessage());
+
+            if ((int)$user['state'] === 2 || (int)$user['confirmed'] !== 1) {
+                throw new RuntimeException('Account is not permitted to sign in.');
+            }
+            $pdo->commit();
+        } catch (Throwable $e) {
+            if ($pdo->inTransaction()) $pdo->rollBack();
+            throw $e;
         }
 
-        // Prevent session fixation; rotate ID and discard any pre-authentication data.
+        $profileQuery = $pdo->prepare(
+            "SELECT display_name, deletion_scheduled_at FROM {$users} WHERE id = ? LIMIT 1"
+        );
+        $profileQuery->execute([(int)$user['id']]);
+        $profile = $profileQuery->fetch() ?: [];
+        $displayName = trim((string)($profile['display_name'] ?? ''));
+        if ($displayName === '') $displayName = trim((string)($identity['name'] ?? ''));
+        if ($displayName === '') $displayName = (string)$user['email'];
+        if (!empty($profile['deletion_scheduled_at'])) {
+            $pdo->prepare("UPDATE {$users} SET deletion_scheduled_at = NULL WHERE id = ?")
+                ->execute([(int)$user['id']]);
+        }
+
+        // Rotate the ID to prevent session fixation; the DB handler persists the new session.
         session_regenerate_id(true);
         $_SESSION = [
             'user' => [
@@ -169,7 +193,7 @@ function require_google_auth(string $action): never
                 'role' => (int)$user['role'],
                 'state' => (int)$user['state'],
                 'provider' => 'google',
-                'provider_id' => (string)$identity['sub'],
+                'provider_id' => $googleId,
                 'picture' => (string)($identity['picture'] ?? ''),
             ],
             'auth_created_at' => time(),
