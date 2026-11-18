@@ -44,6 +44,12 @@ if (in_array($routeName, ['profile', 'settings'], true) && $authenticatedUser ==
     header('Location: ' . url('login'), true, 303);
     exit;
 }
+if ($routeName === 'moderation') {
+    require_role(3); // Moderator (3) and administrator (4).
+}
+if ($routeName === 'admin') {
+    require_role(4); // Administrator is role ID 4.
+}
 if (is_array($_SESSION['user'] ?? null) && empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
@@ -114,6 +120,8 @@ match ($routeName) {
     'login' => page('login', ['title' => L('login-title')]),
     'profile' => page('profile', ['title' => L('profile-title')]),
     'settings' => page('settings', ['title' => L('settings-title')]),
+    'moderation' => page('role-center', ['title' => L('moderation-title'), 'center' => 'moderation']),
+    'admin' => page('role-center', ['title' => L('admin-title'), 'center' => 'admin']),
     'auth/google/start' => require_google_auth('start'),
     'auth/google/callback' => require_google_auth('callback'),
     default => page('404', ['title' => L('err-404')], 404),
