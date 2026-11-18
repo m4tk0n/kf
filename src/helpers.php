@@ -327,7 +327,7 @@ function safe_auth_return_path(?string $candidate): string
 {
     $candidate = trim((string)$candidate);
     if ($candidate === '' || str_contains($candidate, "\r") || str_contains($candidate, "\n") ||
-        str_contains($candidate, '\\\\') || str_starts_with($candidate, '//')) {
+        str_contains($candidate, chr(92)) || str_starts_with($candidate, '//')) {
         return '';
     }
 
