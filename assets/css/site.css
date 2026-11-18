@@ -184,3 +184,14 @@ h2 { margin: 0; font-size: 16px; }
 .add-form { margin-top:14px; }
 .add-form .primary-button { width:100%; min-height:44px; }
 .form-message { margin:0 0 12px; padding:11px 12px; border:1px solid var(--line); border-radius:7px; color:var(--text); background:var(--panel); font-size:13px; line-height:1.45; }
+
+/* Club submission details and image fields */
+.account-form textarea {
+  width: 100%; min-width: 0; padding: 10px; color: var(--text);
+  background: #111; border: 1px solid var(--line); border-radius: 6px;
+  font: inherit; font-size: 13px; line-height: 1.45; resize: vertical;
+}
+.account-form input[type="file"] { height: auto; min-height: 42px; padding: 8px; }
+.account-form small { color: var(--muted); font-size: 11px; line-height: 1.4; }
+.form-grid-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 380px) { .form-grid-two { grid-template-columns: 1fr; } }
