@@ -70,7 +70,22 @@ function inst_plan(PDO $db,string $p):array{
   }
  }
  $mt=$p.'schema_migrations';$exists=(bool)$db->query("SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=DATABASE() AND table_name=".$db->quote($mt))->fetchColumn();
- foreach(glob(__DIR__.'/migrations/*.sql')?:[] as $f){if(str_ends_with($f,'.migration.sql'))continue;$s=inst_sql($f,$p);$destructive=(bool)preg_match('/\b(DROP\s+(?:TABLE|COLUMN|INDEX)|TRUNCATE|DELETE\s+FROM)\b/i',$s);$r['migrations'][]=['name'=>basename($f),'status'=>'manual','destructive'=>$destructive];if($destructive)$r['manual'][]=['name'=>basename($f),'reason'=>'Obsahuje destruktivní SQL; automaticky se nespustí.'];}
+ foreach(glob(__DIR__.'/migrations/*.sql')?:[] as $f){
+  if(str_ends_with($f,'.migration.sql'))continue;
+  $name=basename($f);
+  if($name==='001_auth.sql'){
+   $users=$p.'users';$identity=$p.'user_identities';$sessions=$p.'sessions';
+   $passExists=isset(inst_cols($db,$users)['pass']);
+   $identityExists=(bool)$db->query("SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=DATABASE() AND table_name=".$db->quote($identity))->fetchColumn();
+   $sessionsExists=(bool)$db->query("SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=DATABASE() AND table_name=".$db->quote($sessions))->fetchColumn();
+   $applied=!$passExists&&$identityExists&&$sessionsExists;
+   $r['migrations'][]=['name'=>$name,'status'=>$applied?'applied':'pending','destructive'=>$passExists,'file'=>$f,'legacy_auth'=>true];
+   continue;
+  }
+  $s=inst_sql($f,$p);$destructive=(bool)preg_match('/\\b(DROP\\s+(?:TABLE|COLUMN|INDEX)|TRUNCATE|DELETE\\s+FROM)\\b/i',$s);
+  $r['migrations'][]=['name'=>$name,'status'=>'manual','destructive'=>$destructive];
+  if($destructive)$r['manual'][]=['name'=>$name,'reason'=>'Obsahuje destruktivní SQL; automaticky se nespustí.'];
+ }
  foreach(glob(__DIR__.'/migrations/*.migration.sql')?:[] as $f){
   $n=basename($f);$applied=false;
   if($exists){$q=$db->prepare('SELECT 1 FROM '.inst_id($mt).' WHERE migration=?');$q->execute([$n]);$applied=(bool)$q->fetchColumn();}
@@ -91,7 +106,16 @@ function inst_apply(PDO $db,string $p,array $plan):void{
  foreach($plan['foreign'] as $x){$v=$x['definition'];$db->exec('ALTER TABLE '.inst_id($x['table']).' ADD CONSTRAINT '.inst_id($x['name']).' FOREIGN KEY ('.$v['columns'].') REFERENCES '.inst_id($v['ref_table']).' ('.$v['ref_columns'].') '.$v['tail']);}
  $fs=glob(__DIR__.'/sql/*.sql')?:[];sort($fs,SORT_NATURAL);foreach($fs as $f)foreach(inst_split(inst_sql($f,$p)) as $s)if(inst_safe_base($s))$db->exec($s);
  $mt=$p.'schema_migrations';$db->exec('CREATE TABLE IF NOT EXISTS '.inst_id($mt).' (migration VARCHAR(190) NOT NULL, applied_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY(migration)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci');
- foreach($plan['migrations'] as $m)if(($m['status']??'')==='pending'&&!empty($m['file'])){foreach(inst_split(inst_sql($m['file'],$p)) as $s)if(inst_safe_migration($s))$db->exec($s);$q=$db->prepare('INSERT INTO '.inst_id($mt).' (migration) VALUES (?)');$q->execute([$m['name']]);}
+ foreach($plan['migrations'] as $m)if(($m['status']??'')==='pending'&&!empty($m['file'])){
+  if(($m['legacy_auth']??false)===true){
+   $users=$p.'users';
+   if(isset(inst_cols($db,$users)['pass']))$db->exec('ALTER TABLE '.inst_id($users).' DROP COLUMN '.inst_id('pass'));
+   foreach(inst_split(inst_sql($m['file'],$p)) as $statement)if(preg_match('/^CREATE\\s+TABLE\\s+IF\\s+NOT\\s+EXISTS\\b/i',ltrim($statement)))$db->exec($statement);
+  }else{
+   foreach(inst_split(inst_sql($m['file'],$p)) as $s)if(inst_safe_migration($s))$db->exec($s);
+  }
+  $q=$db->prepare('INSERT INTO '.inst_id($mt).' (migration) VALUES (?) ON DUPLICATE KEY UPDATE applied_at=CURRENT_TIMESTAMP');$q->execute([$m['name']]);
+ }
  if(file_put_contents(__DIR__.'/installed.lock',date('c').PHP_EOL,LOCK_EX)===false)throw new RuntimeException(L('inst-lock-write-fail'));
 }
 try{$pdo=db();$dbAvailable=true;$q=$pdo->prepare('SELECT COUNT(*) FROM information_schema.tables WHERE TABLE_SCHEMA=DATABASE() AND LEFT(TABLE_NAME,CHAR_LENGTH(?))=?');$q->execute([$prefix,$prefix]);$tableCount=(int)$q->fetchColumn();$plan=inst_plan($pdo,$prefix);}catch(Throwable $ex){$errors[]=L('inst-db-unavailable').' '.$ex->getMessage();}
