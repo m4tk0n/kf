@@ -1,2 +1,2 @@
-<h1>[err-404]</h1>
-<p><a href="<?= e(url()) ?>">[btn-back]</a></p>
+<h1>Stránka nenalezena.</h1>
+<p><a href="<?= e(url()) ?>">Zpět</a></p>

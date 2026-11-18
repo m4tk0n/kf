@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794984303199,
+    "generatedTime": 1794984423862,
     "data": [
         {
             "type": "file",
@@ -38,6 +38,10 @@
             "hash": "6008315a498173cae055f1db9ca9d7df76fb146604178623b5b84e7fa79091d8"
         },
         {
+            "type": "folder",
+            "name": "cron"
+        },
+        {
             "type": "file",
             "name": "index.php",
             "size": 5132,
@@ -46,10 +50,6 @@
         {
             "type": "folder",
             "name": "install"
-        },
-        {
-            "type": "folder",
-            "name": "cron"
         },
         {
             "type": "file",
@@ -97,6 +97,12 @@
         },
         {
             "type": "file",
+            "name": "cron/delete-expired-accounts.php",
+            "size": 458,
+            "hash": "176e995551d507106ee513d8c3baf2e533d0b94f77b138a7563e4c2f97e4827c"
+        },
+        {
+            "type": "file",
             "name": "install/index.php",
             "size": 20827,
             "hash": "86c34402c61966135704491dcb4af30d13278a61b9a4bffa915a4c3e113635bb"
@@ -114,12 +120,6 @@
         {
             "type": "folder",
             "name": "install/sql"
-        },
-        {
-            "type": "file",
-            "name": "cron/delete-expired-accounts.php",
-            "size": 458,
-            "hash": "176e995551d507106ee513d8c3baf2e533d0b94f77b138a7563e4c2f97e4827c"
         },
         {
             "type": "folder",
@@ -168,8 +168,8 @@
         {
             "type": "file",
             "name": "templates/layout.php",
-            "size": 5659,
-            "hash": "714dcbead20521b93ac72618ab860cba853b001a9481766a3a00e150e6381272"
+            "size": 5554,
+            "hash": "998dc7b692e77fa6f22d2452298d092293353cb3a9f1585d6e9a97942f1ce256"
         },
         {
             "type": "file",
@@ -185,15 +185,15 @@
         },
         {
             "type": "file",
-            "name": "templates/settings.php",
-            "size": 230,
-            "hash": "8ec0aea575357c4973db51c70ac565b33885231801223688ed80035f764f5d6e"
-        },
-        {
-            "type": "file",
             "name": "templates/role-center.php",
             "size": 519,
             "hash": "36c42d67c8cea59cdaf071f273e6aa95ca80421ea4675e0dca26b2af2babc106"
+        },
+        {
+            "type": "file",
+            "name": "templates/settings.php",
+            "size": 230,
+            "hash": "8ec0aea575357c4973db51c70ac565b33885231801223688ed80035f764f5d6e"
         },
         {
             "type": "file",
@@ -217,15 +217,15 @@
         },
         {
             "type": "file",
-            "name": "install/sql/001_schema.sql",
-            "size": 3847,
-            "hash": "d9980305823f9fa42502a9e3529322a0604a867d66781f624571f013eb37840b"
-        },
-        {
-            "type": "file",
             "name": "install/sql/002_seed_genres.sql",
             "size": 5440,
             "hash": "cfa7275df980fcb263de62045d9fe8cdbcca70f099222ad1d58aa2ef151f9d70"
+        },
+        {
+            "type": "file",
+            "name": "install/sql/001_schema.sql",
+            "size": 3847,
+            "hash": "d9980305823f9fa42502a9e3529322a0604a867d66781f624571f013eb37840b"
         },
         {
             "type": "file",
