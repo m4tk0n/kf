@@ -41,7 +41,7 @@ if ($authenticatedUser !== null) {
     header('Pragma: no-cache');
 }
 // The add page is public; authentication is required only when a submission is posted.
-if (in_array($routeName, ['profile', 'settings'], true) && $authenticatedUser === null) {
+if (in_array($routeName, ['profile', 'settings', 'add'], true) && $authenticatedUser === null) {
     header('Location: ' . url('login'), true, 303);
     exit;
 }
@@ -118,10 +118,6 @@ if (in_array($routeName, ['logout', 'profile/save', 'account/delete-request', 'a
 
 
 if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
-    if ($authenticatedUser === null) {
-        header('Location: ' . url('login'), true, 303);
-        exit;
-    }
     require_csrf();
     $user = require_role(1);
     $type = (string)($_POST['type'] ?? '');
