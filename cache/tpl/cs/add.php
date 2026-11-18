@@ -6,14 +6,14 @@ $types = [
     'band' => ['title' => L('add-band'), 'heading' => L('add-band-heading'), 'description' => L('add-band-description')],
 ];
 $selected = $types[$type] ?? null;
-$countries = $genres = $cities = $venues = [];
+$countries = $genres = $venues = [];
 if ($selected) {
     $label = lang_code() === 'en' ? 'en' : 'cs';
     if ($type === 'band') {
         $countries = db()->query("SELECT iso2, {$label} AS name FROM " . tbl('countries') . " ORDER BY name")->fetchAll();
         $genres = db()->query("SELECT id, name FROM " . tbl('genres') . " ORDER BY name")->fetchAll();
     } elseif ($type === 'venue') {
-        $cities = db()->query("SELECT c.id, c.{$label} AS city, co.{$label} AS country FROM " . tbl('cities') . " c JOIN " . tbl('countries') . " co ON co.id=c.country_id ORDER BY co.{$label}, c.{$label}")->fetchAll();
+        $countries = db()->query("SELECT iso2, {$label} AS name FROM " . tbl('countries') . " ORDER BY name")->fetchAll();
     } else {
         $venues = db()->query("SELECT v.id, v.name, c.{$label} AS city FROM " . tbl('venues') . " v JOIN " . tbl('cities') . " c ON c.id=v.city_id ORDER BY v.name")->fetchAll();
     }
@@ -41,7 +41,7 @@ unset($_SESSION['add_error'], $_SESSION['add_success']);
     </div>
   <?php else: ?>
     <p class="add-intro"><?= e($selected['description']) ?></p>
-    <form class="account-form add-form" method="post" action="<?= e(url('add')) ?>?type=<?= e($type) ?>" autocomplete="off">
+    <form class="account-form add-form" method="post" action="<?= e(url('add')) ?>?type=<?= e($type) ?>" autocomplete="off"<?= $type === 'venue' ? ' enctype="multipart/form-data"' : '' ?>>
       <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token'] ?? '') ?>">
       <input type="hidden" name="type" value="<?= e($type) ?>">
       <label><?= e(L('add-name')) ?>
@@ -59,10 +59,38 @@ unset($_SESSION['add_error'], $_SESSION['add_success']);
           </select>
         </label>
       <?php elseif ($type === 'venue'): ?>
-        <label><?= e(L('add-city')) ?>
-          <select name="city_id" required><option value="">—</option>
-            <?php foreach ($cities as $city): ?><option value="<?= (int)$city['id'] ?>"><?= e($city['city'] . ', ' . $city['country']) ?></option><?php endforeach; ?>
+        <label><?= e(L('country-label')) ?>
+          <select name="country" required><option value="">—</option>
+            <?php foreach ($countries as $country): ?><option value="<?= e($country['iso2']) ?>"<?= (($_POST['country'] ?? '') === $country['iso2']) ? ' selected' : '' ?>><?= e($country['name']) ?> (<?= e($country['iso2']) ?>)</option><?php endforeach; ?>
           </select>
+        </label>
+        <label><?= e(L('add-city')) ?>
+          <input name="city" maxlength="100" required value="<?= e($_POST['city'] ?? '') ?>">
+        </label>
+        <label><?= e(L('add-address')) ?>
+          <input name="address" maxlength="190" value="<?= e($_POST['address'] ?? '') ?>">
+        </label>
+        <label><?= e(L('add-phone')) ?>
+          <input name="phone" type="tel" maxlength="40" value="<?= e($_POST['phone'] ?? '') ?>">
+        </label>
+        <label><?= e(L('add-description')) ?>
+          <textarea name="description" rows="4" maxlength="3000"><?= e($_POST['description'] ?? '') ?></textarea>
+        </label>
+        <div class="form-grid-two">
+          <label><?= e(L('add-latitude')) ?>
+            <input name="latitude" type="number" min="-90" max="90" step="any" inputmode="decimal" value="<?= e($_POST['latitude'] ?? '') ?>">
+          </label>
+          <label><?= e(L('add-longitude')) ?>
+            <input name="longitude" type="number" min="-180" max="180" step="any" inputmode="decimal" value="<?= e($_POST['longitude'] ?? '') ?>">
+          </label>
+        </div>
+        <label><?= e(L('add-image-urls')) ?>
+          <textarea name="image_urls" rows="3" placeholder="https://…"><?= e($_POST['image_urls'] ?? '') ?></textarea>
+          <small><?= e(L('add-image-urls-help')) ?></small>
+        </label>
+        <label><?= e(L('add-image-files')) ?>
+          <input type="file" name="images[]" accept="image/jpeg,image/png,image/webp,image/gif" multiple>
+          <small><?= e(L('add-image-files-help')) ?></small>
         </label>
       <?php else: ?>
         <label><?= e(L('add-venue')) ?>

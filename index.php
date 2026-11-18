@@ -34,6 +34,36 @@ $route = array_slice($parts, 1);
 $routeName = implode('/', $route);
 $GLOBALS['KF_ROUTE'] = $routeName;
 
+// Autocomplete pro formulář přidání klubu.
+if (in_array($routeName, ['suggest/venues', 'suggest/countries'], true)) {
+    require_login();
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: no-store, private');
+    $term = trim((string)($_GET['q'] ?? ''));
+    $minimum = $routeName === 'suggest/venues' ? 3 : 2;
+    if (mb_strlen($term, 'UTF-8') < $minimum || mb_strlen($term, 'UTF-8') > 80) {
+        echo json_encode([]);
+        exit;
+    }
+    if ($routeName === 'suggest/venues') {
+        $stmt = db()->prepare('SELECT DISTINCT name FROM ' . tbl('venues') . ' WHERE name LIKE ? ORDER BY name LIMIT 10');
+        $stmt->execute(['%' . $term . '%']);
+        echo json_encode(array_map(static fn(array $row): array => ['value' => $row['name']], $stmt->fetchAll()), JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    $stmt = db()->prepare('SELECT iso2, iso3, cs, en FROM ' . tbl('countries') . ' WHERE iso2 LIKE ? OR iso3 LIKE ? OR cs LIKE ? OR en LIKE ? ORDER BY cs LIMIT 12');
+    $like = '%' . $term . '%';
+    $stmt->execute([$like, $like, $like, $like]);
+    $countryRows = $stmt->fetchAll();
+    $labelField = lang_code() === 'en' ? 'en' : 'cs';
+    echo json_encode(array_map(static fn(array $row): array => [
+        'code' => strtolower($row['iso2']),
+        'label' => strtolower($row['iso2']) . '.' . strtolower($row['iso3']) . '.' . $row[$labelField],
+        'other' => strtolower($row['iso2']) . '.' . strtolower($row['iso3']) . '.' . $row[$labelField === 'cs' ? 'en' : 'cs'],
+    ], $countryRows), JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
 // Revalidate every authenticated request against the database. Any DB error fails closed.
 $authenticatedUser = refresh_authenticated_user();
 if ($authenticatedUser !== null) {
