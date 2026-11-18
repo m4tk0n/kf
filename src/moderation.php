@@ -137,7 +137,32 @@ function mod_approve_venue(array $row): void
             $cityId = (int)$pdo->lastInsertId();
         }
 
-        $pdo->prepare('INSERT INTO ' . tbl('venues') . ' (city_id, name) VALUES (?, ?)')->execute([$cityId, (string)$row['name']]);
+        // Current schema stores a venue slug; older installations may not have this column yet.
+        $venueTable = tbl('venues');
+        $slugColumn = $pdo->prepare(
+            'SELECT COUNT(*) FROM information_schema.COLUMNS
+             WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ? AND COLUMN_NAME = ?'
+        );
+        $slugColumn->execute([cfg('db.prefix') . 'venues', 'slug']);
+        if ((int)$slugColumn->fetchColumn() > 0) {
+            $baseSlug = slugify((string)$row['name']);
+            if ($baseSlug === '') $baseSlug = 'venue-' . $id;
+            $baseSlug = substr($baseSlug, 0, 80);
+            $venueSlug = $baseSlug;
+            $suffix = 2;
+            $slugCheck = $pdo->prepare("SELECT 1 FROM {$venueTable} WHERE city_id = ? AND slug = ? LIMIT 1");
+            while (true) {
+                $slugCheck->execute([$cityId, $venueSlug]);
+                if (!$slugCheck->fetchColumn()) break;
+                $tail = '-' . $suffix++;
+                $venueSlug = substr($baseSlug, 0, 80 - strlen($tail)) . $tail;
+            }
+            $pdo->prepare("INSERT INTO {$venueTable} (city_id, slug, name) VALUES (?, ?, ?)")
+                ->execute([$cityId, $venueSlug, (string)$row['name']]);
+        } else {
+            $pdo->prepare("INSERT INTO {$venueTable} (city_id, name) VALUES (?, ?)")
+                ->execute([$cityId, (string)$row['name']]);
+        }
         $venueId = (int)$pdo->lastInsertId();
 
         // JSON: adresa, telefon, GPS a popis v jazyce, ve kterém ho uživatel napsal.
