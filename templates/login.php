@@ -2,7 +2,6 @@
   <div class="login-card">
     <div class="login-mark" aria-hidden="true">K<span>&amp;</span>F</div>
     <h1><?= e(L('login-title')) ?></h1>
-    <p class="login-intro"><?= e(L('login-description')) ?></p>
     <div class="social-login-list">
       <button class="social-login social-google" type="button" disabled aria-disabled="true">
         <span class="social-brand social-google-mark" aria-hidden="true">G</span>
