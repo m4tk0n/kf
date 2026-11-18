@@ -284,14 +284,19 @@ function refresh_authenticated_user(): ?array
     $stmt->execute([(int)$sessionUser['id']]);
     $fresh = $stmt->fetch();
 
-    if (!$fresh || (int)$fresh['state'] === 2 || (int)$fresh['confirmed'] !== 1) {
+    $role = (int)($fresh['role'] ?? 0);
+    $state = (int)($fresh['state'] ?? 2);
+    $knownRoles = array_map('intval', array_keys(cfg('enums.role')));
+    if (!$fresh || !in_array($role, $knownRoles, true) ||
+        !in_array($state, [0, 1, 2], true) || $state === 2 ||
+        (int)$fresh['confirmed'] !== 1) {
         clear_authenticated_session();
         return null;
     }
 
     // Role and state are refreshed from DB; no permission is taken from cookie/session.
-    $_SESSION['user']['role'] = (int)$fresh['role'];
-    $_SESSION['user']['state'] = (int)$fresh['state'];
+    $_SESSION['user']['role'] = $role;
+    $_SESSION['user']['state'] = $state;
     $_SESSION['auth_last_seen_at'] = $now;
     return $_SESSION['user'];
 }
