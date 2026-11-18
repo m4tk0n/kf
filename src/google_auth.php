@@ -125,7 +125,7 @@ function require_google_auth(string $action): never
         $pdo = db();
         $users = tbl('users');
 
-        $findUser = $pdo->prepare("SELECT id, email, display_name, deletion_scheduled_at, role, state, confirmed FROM {$users} WHERE email = ? LIMIT 1");
+        $findUser = $pdo->prepare("SELECT id, email, role, state, confirmed FROM {$users} WHERE email = ? LIMIT 1");
         $findUser->execute([$email]);
         $user = $findUser->fetch();
 
@@ -158,11 +158,26 @@ function require_google_auth(string $action): never
             throw new RuntimeException('This user account is blocked.');
         }
 
-        session_regenerate_id(true);
-        // A successful sign-in during the grace period cancels account deletion.
-        if (!empty($user['deletion_scheduled_at'])) {
-            $pdo->prepare("UPDATE {$users} SET deletion_scheduled_at = NULL WHERE id = ?")->execute([(int)$user['id']]);
+        // Optional profile columns are introduced by a separate DB migration.
+        // Keep Google sign-in operational even if that migration has not run yet.
+        $user['display_name'] = null;
+        $user['deletion_scheduled_at'] = null;
+        try {
+            $profileQuery = $pdo->prepare("SELECT display_name, deletion_scheduled_at FROM {$users} WHERE id = ? LIMIT 1");
+            $profileQuery->execute([(int)$user['id']]);
+            $profileData = $profileQuery->fetch(PDO::FETCH_ASSOC);
+            if (is_array($profileData)) {
+                $user = array_merge($user, $profileData);
+                if (!empty($user['deletion_scheduled_at'])) {
+                    $pdo->prepare("UPDATE {$users} SET deletion_scheduled_at = NULL WHERE id = ?")->execute([(int)$user['id']]);
+                }
+            }
+        } catch (PDOException $profileError) {
+            // The account-profile migration is pending; base authentication still works.
+            error_log('K&F profile migration not applied yet: ' . $profileError->getMessage());
         }
+
+        session_regenerate_id(true);
         $displayName = trim((string)($user['display_name'] ?? ''));
         if ($displayName === '') $displayName = $name !== '' ? $name : (string)$user['email'];
         $_SESSION['user'] = [
