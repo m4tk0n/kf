@@ -59,13 +59,28 @@ function inst_plan(PDO $db,string $p):array{
   $ix=inst_indexes($db,$t);foreach($d['indexes'] as $n=>$v){$want=array_map('trim',explode(',',$v['columns']));if(!isset($ix[$n])){$unique=str_starts_with($v['kind'],'UNIQUE')||$n==='PRIMARY';$columnSql=implode(',',array_map(static fn($z)=>inst_id(trim($z)),explode(',',$v['columns'])));$dupes=$unique?(int)$db->query('SELECT COUNT(*) FROM (SELECT '.$columnSql.' FROM '.inst_id($t).' GROUP BY '.$columnSql.' HAVING COUNT(*)>1) AS dup_rows')->fetchColumn():0;if($dupes>0)$r['manual'][]=['name'=>$t.'.'.$n,'reason'=>'Nelze bezpečně přidat unikátní index: existují duplicitní hodnoty.'];else $r['indexes'][]=['table'=>$t,'name'=>$n,'definition'=>$v];}elseif($ix[$n]['columns']!==$want||$ix[$n]['unique']!==str_starts_with($v['kind'],'UNIQUE')&&$n!=='PRIMARY')$r['mismatches'][]=['table'=>$t,'name'=>'index '.$n,'actual'=>implode(',',$ix[$n]['columns']).($ix[$n]['unique']?' UNIQUE':''),'expected'=>implode(',',$want).(str_starts_with($v['kind'],'UNIQUE')?' UNIQUE':'')];}
   $fk=inst_fks($db,$t);foreach($d['foreign'] as $n=>$v)if(!isset($fk[$n])){$refExists=inst_cols($db,$v['ref_table']);if($refExists){$local=explode(',',$v['columns']);$remote=explode(',',$v['ref_columns']);$join=[];foreach($local as $i=>$col)$join[]='src.'.inst_id(trim($col)).'=dst.'.inst_id(trim($remote[$i]));$first=trim($local[0]);$orphans=(int)$db->query('SELECT COUNT(*) FROM '.inst_id($t).' src LEFT JOIN '.inst_id($v['ref_table']).' dst ON '.implode(' AND ',$join).' WHERE src.'.inst_id($first).' IS NOT NULL AND dst.'.inst_id(trim($remote[0])).' IS NULL')->fetchColumn();if($orphans>0)$r['manual'][]=['name'=>$t.'.'.$n,'reason'=>'Nelze bezpečně přidat cizí klíč: existují osiřelé odkazy.'];else $r['foreign'][]=['table'=>$t,'name'=>$n,'definition'=>$v];}else $r['foreign'][]=['table'=>$t,'name'=>$n,'definition'=>$v];}
  }
- $fs=glob(__DIR__.'/sql/*.sql')?:[];sort($fs,SORT_NATURAL);foreach($fs as $f)foreach(inst_split(inst_sql($f,$p)) as $s)if(preg_match('/^INSERT\s+IGNORE\s+INTO\s+\x60([^\x60]+)\x60/i',$s,$m)){
-  $count=null;if(preg_match('/\bVALUES\s*(.*)$/is',$s,$v))$count=count(inst_parts(trim($v[1])));elseif(($pos=stripos($s,'SELECT'))!==false){try{$q=$db->query('SELECT COUNT(*) FROM ('.substr($s,$pos).') AS preview_rows');$count=(int)$q->fetchColumn();}catch(Throwable $e){}}
-  $r['seeds'][]=['file'=>basename($f),'table'=>$m[1],'count'=>$count];
+ $fs=glob(__DIR__.'/sql/*.sql')?:[];sort($fs,SORT_NATURAL);
+ foreach($fs as $file)foreach(inst_split(inst_sql($file,$p)) as $statement){
+  if(!inst_safe_base($statement))$r['manual'][]=['name'=>basename($file),'reason'=>'SQL příkaz není v bezpečném automatickém seznamu a nebude spuštěn.'];
+  if(preg_match('/^INSERT\\s+IGNORE\\s+INTO\\s+\\x60([^\\x60]+)\\x60/i',$statement,$m)){
+   $count=null;
+   if(preg_match('/\\bVALUES\\s*(.*)$/is',$statement,$v))$count=count(inst_parts(trim($v[1])));
+   elseif(($pos=stripos($statement,'SELECT'))!==false){try{$q=$db->query('SELECT COUNT(*) FROM ('.substr($statement,$pos).') AS preview_rows');$count=(int)$q->fetchColumn();}catch(Throwable $e){}}
+   $r['seeds'][]=['file'=>basename($file),'table'=>$m[1],'count'=>$count];
+  }
  }
  $mt=$p.'schema_migrations';$exists=(bool)$db->query("SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=DATABASE() AND table_name=".$db->quote($mt))->fetchColumn();
  foreach(glob(__DIR__.'/migrations/*.sql')?:[] as $f){if(str_ends_with($f,'.migration.sql'))continue;$s=inst_sql($f,$p);$destructive=(bool)preg_match('/\b(DROP\s+(?:TABLE|COLUMN|INDEX)|TRUNCATE|DELETE\s+FROM)\b/i',$s);$r['migrations'][]=['name'=>basename($f),'status'=>'manual','destructive'=>$destructive];if($destructive)$r['manual'][]=['name'=>basename($f),'reason'=>'Obsahuje destruktivní SQL; automaticky se nespustí.'];}
- foreach(glob(__DIR__.'/migrations/*.migration.sql')?:[] as $f){$n=basename($f);$applied=false;if($exists){$q=$db->prepare('SELECT 1 FROM '.inst_id($mt).' WHERE migration=?');$q->execute([$n]);$applied=(bool)$q->fetchColumn();}$unsafe=(bool)preg_match('/\b(DROP\s+(?:TABLE|COLUMN|INDEX)|TRUNCATE|DELETE\s+FROM)\b/i',inst_sql($f,$p));$status=$applied?'applied':($unsafe?'blocked':'pending');$r['migrations'][]=['name'=>$n,'status'=>$status,'destructive'=>$unsafe,'file'=>$f];if($unsafe)$r['manual'][]=['name'=>$n,'reason'=>'Obsahuje destruktivní SQL; automaticky se nespustí.'];}
+ foreach(glob(__DIR__.'/migrations/*.migration.sql')?:[] as $f){
+  $n=basename($f);$applied=false;
+  if($exists){$q=$db->prepare('SELECT 1 FROM '.inst_id($mt).' WHERE migration=?');$q->execute([$n]);$applied=(bool)$q->fetchColumn();}
+  $migrationSql=inst_split(inst_sql($f,$p));$unsafe=(bool)preg_match('/\\b(DROP\\s+(?:TABLE|COLUMN|INDEX)|TRUNCATE|DELETE\\s+FROM|UPDATE\\s+|RENAME\\s+TABLE|MODIFY\\s+COLUMN|CHANGE\\s+COLUMN)\\b/i',inst_sql($f,$p));
+  foreach($migrationSql as $statement)if(!inst_safe_migration($statement))$unsafe=true;
+  $status=$applied?'applied':($unsafe?'blocked':'pending');
+  $r['migrations'][]=['name'=>$n,'status'=>$status,'destructive'=>$unsafe,'file'=>$f];
+  if($unsafe)$r['manual'][]=['name'=>$n,'reason'=>'Obsahuje nepodporovaný nebo rizikový SQL příkaz; automaticky se nespustí.'];
+ }
+
  $list=$db->prepare('SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA=DATABASE() AND LEFT(TABLE_NAME,CHAR_LENGTH(?))=? ORDER BY TABLE_NAME');$list->execute([$p,$p]);foreach($list->fetchAll(PDO::FETCH_COLUMN) as $table){$cols=inst_cols($db,$table);$r['inventory'][]=['table'=>$table,'columns'=>array_keys($cols),'expected'=>isset($schema[$table])?count($schema[$table]['columns']):null];}
  return $r;
 }
