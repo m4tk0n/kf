@@ -35,19 +35,14 @@ foreach (cfg('install.writable') as $d) {
 $token  = hash_hmac('sha256', 'install', cfg('app.key'));
 $errors = [];
 $done   = false;
-$email  = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = trim((string)($_POST['email'] ?? ''));
-    $p1    = (string)($_POST['pass'] ?? '');
-    $p2    = (string)($_POST['pass2'] ?? '');
-    $min   = (int)cfg('auth.password_min');
-
-    if (!hash_equals($token, (string)($_POST['token'] ?? ''))) $errors[] = 'Invalid token';
-    if (in_array(false, $checks, true))                        $errors[] = L('inst-fail');
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL))            $errors[] = L('inst-email-bad');
-    if (strlen($p1) < $min)                                    $errors[] = L('inst-pass-short', ['n' => $min]);
-    if ($p1 !== $p2)                                           $errors[] = L('inst-pass-mismatch');
+    if (!hash_equals($token, (string)($_POST['token'] ?? ''))) {
+        $errors[] = 'Invalid token';
+    }
+    if (in_array(false, $checks, true)) {
+        $errors[] = L('inst-fail');
+    }
 
     if (!$errors) {
         try {
@@ -60,16 +55,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             sort($files);
             foreach ($files as $f) {
                 $sql = str_replace('{p}', cfg('db.prefix'), (string)file_get_contents($f));
-                $sql = (string)preg_replace('/^\s*--.*$/m', '', $sql);
-                foreach (preg_split('/;\s*[\r\n]+/', $sql) ?: [] as $stmt) {
+                $sql = (string)preg_replace('/^\\s*--.*$/m', '', $sql);
+                foreach (preg_split('/;\\s*[\\r\\n]+/', $sql) ?: [] as $stmt) {
                     if (trim($stmt) !== '') {
                         $pdo->exec($stmt);
                     }
                 }
             }
-            $adminRole = array_search('admin', cfg('enums.role'), true);
-            $pdo->prepare('INSERT INTO ' . tbl('users') . ' (email, pass, role, confirmed) VALUES (?, ?, ?, 1)')
-                ->execute([$email, password_hash($p1, PASSWORD_DEFAULT), $adminRole]);
             file_put_contents($lock, date('c'));
             $done = true;
         } catch (Throwable $ex) {
@@ -107,12 +99,8 @@ input,button{width:100%;padding:.6rem;margin:.25rem 0 1rem;box-sizing:border-box
   <?php endforeach; ?>
   </ul>
   <?php foreach ($errors as $err): ?><p class="bad"><?= e($err) ?></p><?php endforeach; ?>
-  <h2><?= e(L('inst-admin')) ?></h2>
   <form method="post">
     <input type="hidden" name="token" value="<?= e($token) ?>">
-    <label><?= e(L('inst-email')) ?><input type="email" name="email" value="<?= e($email) ?>" required></label>
-    <label><?= e(L('inst-pass')) ?><input type="password" name="pass" autocomplete="new-password" required></label>
-    <label><?= e(L('inst-pass2')) ?><input type="password" name="pass2" autocomplete="new-password" required></label>
     <button type="submit"><?= e(L('inst-submit')) ?></button>
   </form>
 <?php endif; ?>
