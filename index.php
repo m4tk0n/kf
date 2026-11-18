@@ -23,7 +23,6 @@ if (!$parts || !in_array($parts[0], $langs, true)) {
 }
 
 if (isset($_GET['setlang'])) {
-    set_lang_cookie($parts[0]);
     $rest = $_GET;
     unset($rest['setlang']);
     header('Location: ' . url(implode('/', array_slice($parts, 1)), $parts[0]) . ($rest ? '?' . http_build_query($rest) : ''), true, 302);
