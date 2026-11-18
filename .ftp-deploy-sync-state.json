@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794986113739,
+    "generatedTime": 1794986125054,
     "data": [
         {
             "type": "file",
@@ -32,12 +32,6 @@
             "name": "cache"
         },
         {
-            "type": "file",
-            "name": "config.php",
-            "size": 2362,
-            "hash": "6008315a498173cae055f1db9ca9d7df76fb146604178623b5b84e7fa79091d8"
-        },
-        {
             "type": "folder",
             "name": "cron"
         },
@@ -50,6 +44,12 @@
         {
             "type": "folder",
             "name": "install"
+        },
+        {
+            "type": "file",
+            "name": "config.php",
+            "size": 2362,
+            "hash": "6008315a498173cae055f1db9ca9d7df76fb146604178623b5b84e7fa79091d8"
         },
         {
             "type": "file",
@@ -82,14 +82,14 @@
             "hash": "665ac4999f211de6a9a25b80e2d2f29cf5c6314628564c59b8965f5803ec6d57"
         },
         {
+            "type": "folder",
+            "name": "assets/css"
+        },
+        {
             "type": "file",
             "name": "ai/index.php",
             "size": 20181,
             "hash": "5108ca9a8f5db601f6b1936ec87d3e51541a5982e620eea5fadbfb497261bc42"
-        },
-        {
-            "type": "folder",
-            "name": "assets/css"
         },
         {
             "type": "folder",
@@ -103,23 +103,23 @@
         },
         {
             "type": "file",
-            "name": "install/installed.lock",
-            "size": 25,
-            "hash": "b1696fd265f724124ad933837deb67dc513dfc6ae5beae499b9ea4380b5f315a"
+            "name": "install/index.php",
+            "size": 20827,
+            "hash": "86c34402c61966135704491dcb4af30d13278a61b9a4bffa915a4c3e113635bb"
         },
         {
             "type": "folder",
             "name": "install/migrations"
         },
         {
-            "type": "folder",
-            "name": "install/sql"
+            "type": "file",
+            "name": "install/installed.lock",
+            "size": 25,
+            "hash": "b1696fd265f724124ad933837deb67dc513dfc6ae5beae499b9ea4380b5f315a"
         },
         {
-            "type": "file",
-            "name": "install/index.php",
-            "size": 20827,
-            "hash": "86c34402c61966135704491dcb4af30d13278a61b9a4bffa915a4c3e113635bb"
+            "type": "folder",
+            "name": "install/sql"
         },
         {
             "type": "folder",
@@ -144,8 +144,8 @@
         {
             "type": "file",
             "name": "src/helpers.php",
-            "size": 17449,
-            "hash": "a9d2c643659922fd8d6801dfbc3dd45f9205be9164424214228e2cbc11d5f236"
+            "size": 17450,
+            "hash": "86833037e2475d89769f3623665d49c9bc77b25fb6635a64186961f7100292bb"
         },
         {
             "type": "file",
@@ -167,15 +167,15 @@
         },
         {
             "type": "file",
-            "name": "templates/login.php",
-            "size": 820,
-            "hash": "ef2bf50ce468119867dbf8bd0a9a1b2e5aa072ae22182842813c7adcea893e75"
-        },
-        {
-            "type": "file",
             "name": "templates/layout.php",
             "size": 5262,
             "hash": "4b83ea2bf28a0fc5d15617615517b90e0bdc9f94c19aa91cfa06f666a38d9567"
+        },
+        {
+            "type": "file",
+            "name": "templates/login.php",
+            "size": 820,
+            "hash": "ef2bf50ce468119867dbf8bd0a9a1b2e5aa072ae22182842813c7adcea893e75"
         },
         {
             "type": "file",
@@ -211,6 +211,12 @@
         },
         {
             "type": "file",
+            "name": "install/migrations/001_auth.sql",
+            "size": 1749,
+            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
+        },
+        {
+            "type": "file",
             "name": "install/sql/001_schema.sql",
             "size": 3847,
             "hash": "d9980305823f9fa42502a9e3529322a0604a867d66781f624571f013eb37840b"
@@ -232,12 +238,6 @@
             "name": "install/sql/004_seed_cities_cz.sql",
             "size": 3501,
             "hash": "829b3727cced90413fbe853e0e2db7f32469dcc95175530e7cd2529081bfb065"
-        },
-        {
-            "type": "file",
-            "name": "install/migrations/001_auth.sql",
-            "size": 1749,
-            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
         },
         {
             "type": "file",
@@ -271,12 +271,6 @@
         },
         {
             "type": "file",
-            "name": "lang/cs/install.ini",
-            "size": 2666,
-            "hash": "6c552dc394ee6908f2ef87fbc7291e8637da276ba18cba83f2984b0edb5a2549"
-        },
-        {
-            "type": "file",
             "name": "lang/en/common.ini",
             "size": 4244,
             "hash": "ef4b294555b90ee126054a53a747c388414105f19ac51e5f1b71f7d4a2c7c58a"
@@ -292,6 +286,12 @@
             "name": "lang/en/install.ini",
             "size": 2538,
             "hash": "ac203678e4c4a0f2bce330e38ecce44366c03f12379df5c5971881e70215444e"
+        },
+        {
+            "type": "file",
+            "name": "lang/cs/install.ini",
+            "size": 2666,
+            "hash": "6c552dc394ee6908f2ef87fbc7291e8637da276ba18cba83f2984b0edb5a2549"
         },
         {
             "type": "file",
