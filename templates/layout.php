@@ -15,7 +15,12 @@
 <header class="site-header">
   <a class="brand" href="<?= e(url()) ?>"><span class="brand-word">Koncerty</span> <span class="brand-amp">&amp;</span> <span class="brand-word">Festivaly</span></a>
   <div class="header-actions">
-    <a class="login-link" href="<?= e(url('login')) ?>">[nav-login]</a>
+<?php $currentUser = $_SESSION['user'] ?? null; ?>
+<?php if (is_array($currentUser) && !empty($currentUser['name'])): ?>
+    <a class="user-avatar" href="<?= e(url('profile')) ?>" aria-label="<?= e(L('account-menu')) ?>"><?= e(mb_strtoupper(mb_substr(trim((string)$currentUser['name']), 0, 1, 'UTF-8'), 'UTF-8')) ?></a>
+<?php else: ?>
+    <a class="login-link" href="<?= e(url('login')) ?>"><?= e(L('nav-login')) ?></a>
+<?php endif; ?>
     <nav class="language-switch" aria-label="[language-label]">
 <?php foreach (cfg('app.languages') as $l): ?>
       <a href="<?= e(url($GLOBALS['KF_ROUTE'] ?? '', $l)) ?>?setlang"<?= lang_code() === $l ? ' aria-current="page"' : '' ?>><?= e(strtoupper($l)) ?></a>
