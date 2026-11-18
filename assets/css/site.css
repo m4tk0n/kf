@@ -56,7 +56,7 @@ h2 { margin: 0; font-size: 16px; }
 .filter-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; margin-top: 11px; }
 .filter-grid label { display: grid; gap: 5px; color: var(--muted); font-size: 11px; }
 .filter-grid input, .filter-grid select { width: 100%; min-width: 0; height: 37px; padding: 0 9px; color: var(--text); background: #111; border: 1px solid var(--line); border-radius: 5px; font-size: 12px; }
-.site-footer { padding: 13px 14px; border-top: 1px solid var(--line); color: #777; text-align: center; font-size: 11px; }
+.site-footer { margin-top: 7px; padding: 13px 14px; border-top: 1px solid var(--line); color: #777; text-align: center; font-size: 11px; }
 @media (max-width: 520px) {
   .site-header { min-height: 52px; padding: 8px 12px; gap: 6px; }
   .brand { gap: 3px; font-size: 11px; letter-spacing: 1px; }
@@ -328,5 +328,3 @@ a.moderation-category:hover { border-color:var(--accent); background:var(--panel
   .venue-facts > div { grid-template-columns:90px minmax(0,1fr); gap:8px; }
 }
 
-/* Small breathing room after the final venue row, matching the row gap. */
-.listing-section--venues .listing { padding-bottom: 7px; }

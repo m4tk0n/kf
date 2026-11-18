@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1795021386270,
+    "generatedTime": 1795021550868,
     "data": [
         {
             "type": "file",
@@ -42,14 +42,14 @@
             "name": "cron"
         },
         {
+            "type": "folder",
+            "name": "docs"
+        },
+        {
             "type": "file",
             "name": "index.php",
             "size": 20322,
             "hash": "afb5999d738ebe3e15ec9dede8b07ee3a955d812940878d338efc5a3df69a11a"
-        },
-        {
-            "type": "folder",
-            "name": "docs"
         },
         {
             "type": "folder",
@@ -73,11 +73,11 @@
         },
         {
             "type": "folder",
-            "name": "templates"
+            "name": "src"
         },
         {
             "type": "folder",
-            "name": "src"
+            "name": "templates"
         },
         {
             "type": "folder",
@@ -145,6 +145,36 @@
         },
         {
             "type": "file",
+            "name": "src/bootstrap.php",
+            "size": 2667,
+            "hash": "fe47ea7686a89f46b0c885efe9cd3a3c701d302ef525fba5806d8934ab44e80c"
+        },
+        {
+            "type": "file",
+            "name": "src/google_auth.php",
+            "size": 10022,
+            "hash": "11025b892c8eb9fb70843c0ef112aecd7fd3009dc457b7b7c06d710931827e77"
+        },
+        {
+            "type": "file",
+            "name": "src/helpers.php",
+            "size": 18092,
+            "hash": "f2c12ed2a768ab60c7cff658cf4d54a10019fb35db80847a5384df416d387f6c"
+        },
+        {
+            "type": "file",
+            "name": "src/moderation.php",
+            "size": 15326,
+            "hash": "846b1fa1ad158006c9587816047baed6feb8eee0e8432773dae0eb1c19d30f12"
+        },
+        {
+            "type": "file",
+            "name": "src/venues.php",
+            "size": 18067,
+            "hash": "f57112161e705f239ae086f02df7811edf6dfc978557ad8000487eb9c5cb860c"
+        },
+        {
+            "type": "file",
             "name": "templates/404.php",
             "size": 67,
             "hash": "883eda5d2f21409f2129c73b2cc1722bb659249b444056578fe8794ac66d0451"
@@ -158,8 +188,8 @@
         {
             "type": "file",
             "name": "templates/home.php",
-            "size": 8907,
-            "hash": "848453e0398e41e9f3ac50a8e13843c231e4e88a4d71921bec70878d953db1bf"
+            "size": 8845,
+            "hash": "047457c11f66854dfdbc9313969bcc612614382fb30f380ce1c21574f1c5d8bf"
         },
         {
             "type": "file",
@@ -181,15 +211,15 @@
         },
         {
             "type": "file",
-            "name": "templates/profile.php",
-            "size": 2370,
-            "hash": "d3332c8424e5f8c5bbb2be5212753cb11a70aa6188aba8117e357613ac6489ab"
-        },
-        {
-            "type": "file",
             "name": "templates/role-center.php",
             "size": 519,
             "hash": "36c42d67c8cea59cdaf071f273e6aa95ca80421ea4675e0dca26b2af2babc106"
+        },
+        {
+            "type": "file",
+            "name": "templates/profile.php",
+            "size": 2370,
+            "hash": "d3332c8424e5f8c5bbb2be5212753cb11a70aa6188aba8117e357613ac6489ab"
         },
         {
             "type": "file",
@@ -202,36 +232,6 @@
             "name": "templates/venue-detail.php",
             "size": 1827,
             "hash": "c6b0c89705bdf8fb2071ad80c20913276591830159d670ec96551ac79d8a6666"
-        },
-        {
-            "type": "file",
-            "name": "src/bootstrap.php",
-            "size": 2667,
-            "hash": "fe47ea7686a89f46b0c885efe9cd3a3c701d302ef525fba5806d8934ab44e80c"
-        },
-        {
-            "type": "file",
-            "name": "src/google_auth.php",
-            "size": 10022,
-            "hash": "11025b892c8eb9fb70843c0ef112aecd7fd3009dc457b7b7c06d710931827e77"
-        },
-        {
-            "type": "file",
-            "name": "src/moderation.php",
-            "size": 15326,
-            "hash": "846b1fa1ad158006c9587816047baed6feb8eee0e8432773dae0eb1c19d30f12"
-        },
-        {
-            "type": "file",
-            "name": "src/helpers.php",
-            "size": 18092,
-            "hash": "f2c12ed2a768ab60c7cff658cf4d54a10019fb35db80847a5384df416d387f6c"
-        },
-        {
-            "type": "file",
-            "name": "src/venues.php",
-            "size": 18067,
-            "hash": "f57112161e705f239ae086f02df7811edf6dfc978557ad8000487eb9c5cb860c"
         },
         {
             "type": "file",
@@ -248,8 +248,8 @@
         {
             "type": "file",
             "name": "assets/css/site.css",
-            "size": 23461,
-            "hash": "abeaab87b42ea1bd5b650ff45b50dcdb4579c0a1c47324c85b284bdcf1c560d4"
+            "size": 23343,
+            "hash": "5b8ac634ff4e39c51c130ae14c96f1a7cfe3c65b4928a8ee80eef0c34878ff80"
         },
         {
             "type": "folder",
