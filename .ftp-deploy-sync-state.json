@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794983641203,
+    "generatedTime": 1794983703643,
     "data": [
         {
             "type": "file",
@@ -115,11 +115,11 @@
         },
         {
             "type": "folder",
-            "name": "install/migrations"
+            "name": "install/sql"
         },
         {
             "type": "folder",
-            "name": "install/sql"
+            "name": "install/migrations"
         },
         {
             "type": "folder",
@@ -131,21 +131,21 @@
         },
         {
             "type": "file",
-            "name": "src/bootstrap.php",
-            "size": 2597,
-            "hash": "a3026d84b1c2c32322673e1dd82ad7ce054883c8e1f3519e707795d0be800767"
+            "name": "src/google_auth.php",
+            "size": 9694,
+            "hash": "7c6f7f9857b2739e07fad4abe54cca5b4c387547aee962e7ca507a7a521770cb"
         },
         {
             "type": "file",
             "name": "src/helpers.php",
-            "size": 13558,
-            "hash": "a0ae99e00c4c41585cea5df72b59658025c48cc4e3fc3f143a3ee1f822981413"
+            "size": 15004,
+            "hash": "4ea20aa9d73c5ca71f9521673d9b352330baacf959b06f1d2942443c78ab2dbd"
         },
         {
             "type": "file",
-            "name": "src/google_auth.php",
-            "size": 9694,
-            "hash": "7c6f7f9857b2739e07fad4abe54cca5b4c387547aee962e7ca507a7a521770cb"
+            "name": "src/bootstrap.php",
+            "size": 2597,
+            "hash": "a3026d84b1c2c32322673e1dd82ad7ce054883c8e1f3519e707795d0be800767"
         },
         {
             "type": "file",
@@ -161,15 +161,15 @@
         },
         {
             "type": "file",
-            "name": "templates/home.php",
-            "size": 8555,
-            "hash": "6348cff61678c7839e46d841962dbf8b8c4ea1277aaa2263a1f3bf2d993a614c"
-        },
-        {
-            "type": "file",
             "name": "templates/layout.php",
             "size": 5554,
             "hash": "998dc7b692e77fa6f22d2452298d092293353cb3a9f1585d6e9a97942f1ce256"
+        },
+        {
+            "type": "file",
+            "name": "templates/home.php",
+            "size": 8555,
+            "hash": "6348cff61678c7839e46d841962dbf8b8c4ea1277aaa2263a1f3bf2d993a614c"
         },
         {
             "type": "file",
@@ -208,12 +208,6 @@
         {
             "type": "folder",
             "name": "cache/tpl/en"
-        },
-        {
-            "type": "file",
-            "name": "install/migrations/001_auth.sql",
-            "size": 1749,
-            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
         },
         {
             "type": "file",
@@ -256,6 +250,12 @@
             "name": "install/sql/999_meta.sql",
             "size": 336,
             "hash": "0ea434e0149dff2fb81a9702a5da25eaebc8ac393f33378fa6627214779a4b52"
+        },
+        {
+            "type": "file",
+            "name": "install/migrations/001_auth.sql",
+            "size": 1749,
+            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
         },
         {
             "type": "file",
