@@ -56,7 +56,7 @@ return [
     ],
     'install' => [
         'min_php'    => '8.3.0',
-        'extensions' => ['pdo_mysql', 'gd', 'mbstring', 'json'],
+        'extensions' => ['pdo_mysql', 'gd', 'mbstring', 'json', 'sodium'],
         'writable'   => ['data', 'img', 'cache'],
     ],
 ];
