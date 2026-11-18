@@ -336,10 +336,10 @@ if ($routeName === 'moderation' && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST'
         if ($kind === 'venue_change' && ($action === 'save' || $action === 'approve')) mod_update_venue_change((int)$id, $_POST);
         elseif ($action === 'save' || $action === 'approve') mod_update_pending((int)$id, $_POST);
         if ($action === 'approve') {
-            mod_approve((int)$id);
+            mod_approve((int)$id, $kind);
             $_SESSION['moderation_notice'] = L('mod-approved');
         } elseif ($action === 'reject') {
-            mod_reject((int)$id);
+            mod_reject((int)$id, $kind);
             $_SESSION['moderation_notice'] = L('mod-rejected');
         } elseif ($action === 'save') {
             $_SESSION['moderation_notice'] = L('mod-saved');
@@ -365,7 +365,7 @@ if ($routeName === 'moderation') {
     $moderationRow = null;
     if ($moderationId > 0) {
         try {
-            $moderationRow = mod_fetch($moderationId);
+            $moderationRow = mod_fetch($moderationId, $moderationType);
             $moderationType = $moderationRow['kind'];
         } catch (Throwable $e) {
             $_SESSION['moderation_error'] = $e->getMessage();
