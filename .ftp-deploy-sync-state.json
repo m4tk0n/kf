@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1795022630725,
+    "generatedTime": 1795022696939,
     "data": [
         {
             "type": "file",
@@ -48,8 +48,8 @@
         {
             "type": "file",
             "name": "index.php",
-            "size": 24437,
-            "hash": "d2eaefeec2cdeb32981df0ea4ac1d55a5921fa8cb1103e8b89fae8c1f99afded"
+            "size": 24418,
+            "hash": "5b32bc1d41b0aac0d15db60b09d34a1f93b1e482d79eaaa74a123019622dfe8d"
         },
         {
             "type": "folder",
@@ -117,12 +117,6 @@
         },
         {
             "type": "file",
-            "name": "install/index.php",
-            "size": 20827,
-            "hash": "86c34402c61966135704491dcb4af30d13278a61b9a4bffa915a4c3e113635bb"
-        },
-        {
-            "type": "file",
             "name": "install/installed.lock",
             "size": 25,
             "hash": "b1696fd265f724124ad933837deb67dc513dfc6ae5beae499b9ea4380b5f315a"
@@ -136,12 +130,18 @@
             "name": "install/sql"
         },
         {
-            "type": "folder",
-            "name": "lang/cs"
+            "type": "file",
+            "name": "install/index.php",
+            "size": 20827,
+            "hash": "86c34402c61966135704491dcb4af30d13278a61b9a4bffa915a4c3e113635bb"
         },
         {
             "type": "folder",
             "name": "lang/en"
+        },
+        {
+            "type": "folder",
+            "name": "lang/cs"
         },
         {
             "type": "file",
@@ -163,15 +163,15 @@
         },
         {
             "type": "file",
-            "name": "src/moderation.php",
-            "size": 20319,
-            "hash": "f53d4808e03be9505aaf696ccd11c8d180ed6db816a38fe8cfd757cdf18f4c47"
-        },
-        {
-            "type": "file",
             "name": "src/venues.php",
             "size": 19064,
             "hash": "80dde3f3fc93c74a67cbbbb93b7cb1e8036d1acb9aa3734d3198e12c2360604f"
+        },
+        {
+            "type": "file",
+            "name": "src/moderation.php",
+            "size": 20319,
+            "hash": "f53d4808e03be9505aaf696ccd11c8d180ed6db816a38fe8cfd757cdf18f4c47"
         },
         {
             "type": "file",
@@ -206,8 +206,8 @@
         {
             "type": "file",
             "name": "templates/moderation.php",
-            "size": 11564,
-            "hash": "a54e58ad45c9aa677159631bcb2eada220f14997f842a9d3a4d9a36b69ad7021"
+            "size": 12475,
+            "hash": "0f1a2623d82f5fa3cdab52710ee4007c0faeda401a75ee5ff5a74b189eaac35e"
         },
         {
             "type": "file",
@@ -230,14 +230,14 @@
         {
             "type": "file",
             "name": "templates/venue-detail.php",
-            "size": 3308,
-            "hash": "b8d5278e0616ca55e9d94e7124ac9244c2a363393690d188f3faed7118ff6cf7"
+            "size": 3653,
+            "hash": "ef6c54a40dbe8922e39ab3a4b83a1792f297f19068fe0802548278c1c75cd806"
         },
         {
             "type": "file",
-            "name": "tools/verify-project.php",
-            "size": 3395,
-            "hash": "72703dabc64b2d30a69179fe25dffcaf3065c1c5d5b3bbf003ed745337d6be09"
+            "name": "templates/venue-edit.php",
+            "size": 2063,
+            "hash": "cd8c6d04cb42f96f9d7b9f539eb8a995f4e3baf383c1e679f761372a4a4cf054"
         },
         {
             "type": "file",
@@ -247,9 +247,15 @@
         },
         {
             "type": "file",
+            "name": "tools/verify-project.php",
+            "size": 3395,
+            "hash": "72703dabc64b2d30a69179fe25dffcaf3065c1c5d5b3bbf003ed745337d6be09"
+        },
+        {
+            "type": "file",
             "name": "assets/css/site.css",
-            "size": 23950,
-            "hash": "7b0331ef0b4f309889af8ef41bf89d40c18719403907de739628480ed2f1b245"
+            "size": 24362,
+            "hash": "88223d23592a322f9971ee679b6215f582a7875d275274dba35161f1a621ff30"
         },
         {
             "type": "folder",
@@ -268,8 +274,8 @@
         {
             "type": "file",
             "name": "install/migrations/002_venue_changes.migration.sql",
-            "size": 473,
-            "hash": "8e2b112e69075133a5e94c84f46158b997cc023e0f97a33c15cd4b1596f54788"
+            "size": 492,
+            "hash": "463472d6884135ccfb41e0ebb497b03edff47a120b6f625008152b271ba247a8"
         },
         {
             "type": "file",
@@ -315,27 +321,9 @@
         },
         {
             "type": "file",
-            "name": "lang/cs/common.ini",
-            "size": 6492,
-            "hash": "b8c68b67ce381bc4c7dd0b5ea63a57990f09e146a23ee614c6483353e0ff3986"
-        },
-        {
-            "type": "file",
-            "name": "lang/cs/events.ini",
-            "size": 181,
-            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
-        },
-        {
-            "type": "file",
-            "name": "lang/cs/install.ini",
-            "size": 2666,
-            "hash": "6c552dc394ee6908f2ef87fbc7291e8637da276ba18cba83f2984b0edb5a2549"
-        },
-        {
-            "type": "file",
             "name": "lang/en/common.ini",
-            "size": 6166,
-            "hash": "64adad4e6c1eb468d50efcbc790528d3d2dcca7d402b06e8fc7b3775c1d1747f"
+            "size": 6656,
+            "hash": "a85f9ba37cb7f80df7011ab548ab2eb773a636078c7faadd977c6c3dd1a33a6e"
         },
         {
             "type": "file",
@@ -348,6 +336,24 @@
             "name": "lang/en/install.ini",
             "size": 2538,
             "hash": "ac203678e4c4a0f2bce330e38ecce44366c03f12379df5c5971881e70215444e"
+        },
+        {
+            "type": "file",
+            "name": "lang/cs/common.ini",
+            "size": 6970,
+            "hash": "e0e33de4478acd431658140571b40fd8508544bd04caefb027042091771a2131"
+        },
+        {
+            "type": "file",
+            "name": "lang/cs/events.ini",
+            "size": 181,
+            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
+        },
+        {
+            "type": "file",
+            "name": "lang/cs/install.ini",
+            "size": 2666,
+            "hash": "6c552dc394ee6908f2ef87fbc7291e8637da276ba18cba83f2984b0edb5a2549"
         },
         {
             "type": "file",

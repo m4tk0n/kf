@@ -414,7 +414,7 @@ if (preg_match('~^venue-edit/(\d+)$~', $routeName, $editMatch)) {
     }
     $raw=venue_data($venueId);$cq=db()->prepare('SELECT c.country_id FROM '.tbl('venues').' v JOIN '.tbl('cities').' c ON c.id=v.city_id WHERE v.id=?');$cq->execute([$venueId]);
     $countries=db()->query('SELECT id,iso2,'.(lang_code()==='en'?'en':'cs').' AS label FROM '.tbl('countries').' ORDER BY label')->fetchAll();
-    page('venue-edit',['title'=>L('venue-edit-title'),'venue'=>$venue,'country_id'=>(int)$cq->fetchColumn(),'countries'=>$countries,'description'=>$raw['desc_'.lang_code()]??$venue['description'],'error'=>(string)($_SESSION['venue_edit_error']??'')]);unset($_SESSION['venue_edit_error']);exit;
+    page('venue-edit',['title'=>L('venue-edit-title'),'venue'=>$venue,'country_id'=>(int)$cq->fetchColumn(),'countries'=>$countries,'description'=>$raw['desc_'.lang_code()]??'','error'=>(string)($_SESSION['venue_edit_error']??'')]);unset($_SESSION['venue_edit_error']);exit;
 }
 
 // Detail konkrétního klubu. ID je rozhodující; slug v URL slouží jen pro čitelnou adresu.
