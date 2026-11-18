@@ -127,3 +127,23 @@ h2 { margin: 0; font-size: 16px; }
   .login-page { min-height: calc(100svh - 115px); padding: 18px 0; }
   .login-card { padding: 24px 17px; }
 }
+
+.account-menu { margin-left: auto; }
+.account-dropdown { right: 0; left: auto; text-align: left; }
+.account-identity { padding-bottom: 8px; }
+.account-menu-link { display: block; padding: 11px 9px; border-bottom: 1px solid var(--line); font-size: 13px; }
+.account-menu-link:hover { color: var(--accent); }
+.account-dropdown form { margin-top: 7px; }
+.account-page { width: min(100%, 560px); margin: 22px auto; }
+.account-page h1 { margin: 0 0 18px; font-size: 21px; }
+.account-form { display: grid; gap: 13px; padding: 15px; background: var(--panel); border: 1px solid var(--line); border-radius: 9px; }
+.account-form label { display: grid; gap: 6px; color: var(--muted); font-size: 12px; }
+.account-form input { width: 100%; min-width: 0; height: 42px; padding: 0 10px; color: var(--text); background: #111; border: 1px solid var(--line); border-radius: 6px; }
+.account-form input[readonly] { color: var(--muted); opacity: .85; }
+.primary-button, .danger-button { min-height: 40px; padding: 0 13px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); background: var(--panel-soft); font-size: 13px; font-weight: 700; cursor: pointer; }
+.primary-button { border-color: var(--accent); }
+.delete-account { margin-top: 25px; padding: 15px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
+.delete-account h2 { margin-bottom: 12px; }
+.danger-button { color: #fff; background: #8e2525; border-color: #b83b3b; }
+.delete-warning, .form-message.error { color: #ff7777; font-size: 13px; line-height: 1.5; }
+.form-message.success { color: #8bd49a; font-size: 13px; }
