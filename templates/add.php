@@ -45,8 +45,8 @@ unset($_SESSION['add_error'], $_SESSION['add_success']);
       <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token'] ?? '') ?>">
       <input type="hidden" name="type" value="<?= e($type) ?>">
       <label class="autocomplete-field"><?= e(L('add-name')) ?>
-        <input name="name" maxlength="120" required value="<?= e($_POST['name'] ?? '') ?>" data-autocomplete="venues" data-min-chars="3" aria-autocomplete="list" aria-expanded="false">
-        <div class="autocomplete-results" role="listbox" hidden></div>
+        <input name="name" maxlength="120" required value="<?= e($_POST['name'] ?? '') ?>"<?= $type === 'venue' ? ' data-autocomplete="venues" data-min-chars="3" aria-autocomplete="list" aria-expanded="false"' : '' ?>>
+        <?php if ($type === 'venue'): ?><div class="autocomplete-results" role="listbox" hidden></div><?php endif; ?>
       </label>
       <?php if ($type === 'band'): ?>
         <label><?= e(L('country-label')) ?>
