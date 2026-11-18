@@ -82,6 +82,7 @@ function mod_fetch(int $id): array
     }
     $decoded = json_decode((string)$row['payload'], true);
     $row['data'] = is_array($decoded) ? $decoded : [];
+    $row['name'] = trim((string)($row['name'] ?? '')) !== '' ? $row['name'] : (string)($row['data']['name'] ?? '');
     $row['kind'] = (string)(cfg('enums.pending_type')[(int)$row['type']] ?? 'unknown');
     return $row;
 }
