@@ -78,12 +78,14 @@ function mod_pending_dir(int $pendingId): string
     return path('img', 'pending/venue/' . $pendingId);
 }
 
-function mod_fetch(int $id): array
+function mod_fetch(int $id, string $kind = ''): array
 {
+    if ($kind === 'venue_change') {
     $change = db()->prepare('SELECT vc.*, v.name AS current_name, c.country_id, c.' . (lang_code() === 'en' ? 'en' : 'cs') . ' AS current_city FROM ' . tbl('venue_changes') . ' vc JOIN ' . tbl('venues') . ' v ON v.id=vc.venue_id JOIN ' . tbl('cities') . ' c ON c.id=v.city_id WHERE vc.id=? LIMIT 1');
     $change->execute([$id]);
     $changeRow = $change->fetch();
     if ($changeRow) { $changeRow['data'] = json_decode((string)$changeRow['proposed_data'], true) ?: []; $changeRow['original'] = json_decode((string)$changeRow['original_data'], true) ?: []; $changeRow['kind'] = 'venue_change'; $changeRow['name'] = (string)($changeRow['data']['name'] ?? $changeRow['current_name']); $changeRow['city'] = (string)($changeRow['data']['city'] ?? $changeRow['current_city']); return $changeRow; }
+    }
     $q = db()->prepare('SELECT id, type, name, country_id, city, payload FROM ' . tbl('pending') . ' WHERE id = ? LIMIT 1');
     $q->execute([$id]);
     $row = $q->fetch();
@@ -97,9 +99,9 @@ function mod_fetch(int $id): array
     return $row;
 }
 
-function mod_reject(int $id): void
+function mod_reject(int $id, string $kind = ''): void
 {
-    $row = mod_fetch($id);
+    $row = mod_fetch($id, $kind);
     if ($row['kind'] === 'venue_change') { db()->prepare('DELETE FROM ' . tbl('venue_changes') . ' WHERE id=?')->execute([$id]); return; }
     db()->prepare('DELETE FROM ' . tbl('pending') . ' WHERE id = ?')->execute([$id]);
     if ($row['kind'] === 'venue') {
@@ -107,9 +109,9 @@ function mod_reject(int $id): void
     }
 }
 
-function mod_approve(int $id): void
+function mod_approve(int $id, string $kind = ''): void
 {
-    $row = mod_fetch($id);
+    $row = mod_fetch($id, $kind);
     match ($row['kind']) {
         'venue' => mod_approve_venue($row),
         'venue_change' => mod_approve_venue_change($row),
@@ -140,7 +142,7 @@ function mod_approve_venue_change(array $row): void
 
 function mod_update_venue_change(int $id, array $input): void
 {
-    $row=mod_fetch($id);if($row['kind']!=='venue_change')throw new RuntimeException(L('mod-error-missing'));
+    $row=mod_fetch($id, 'venue_change');if($row['kind']!=='venue_change')throw new RuntimeException(L('mod-error-missing'));
     $name=trim((string)($input['name']??''));$city=trim((string)($input['city']??''));$countryId=(int)($input['country_id']??0);
     $address=trim((string)($input['address']??''));$phone=trim((string)($input['phone']??''));$description=trim((string)($input['description']??''));
     if($name===''||mb_strlen($name,'UTF-8')>120||$city===''||mb_strlen($city,'UTF-8')>100||$countryId<1||mb_strlen($address,'UTF-8')>190||mb_strlen($phone,'UTF-8')>40||mb_strlen($description,'UTF-8')>3000)throw new RuntimeException(L('add-error-venue-fields'));
