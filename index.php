@@ -405,8 +405,7 @@ if (preg_match('~^venue-edit/(\d+)$~', $routeName, $editMatch)) {
             $cityQ=db()->prepare('SELECT c.country_id FROM '.tbl('venues').' v JOIN '.tbl('cities').' c ON c.id=v.city_id WHERE v.id=?');$cityQ->execute([$venueId]);$oldCountry=(int)$cityQ->fetchColumn();
             $original=['name'=>$venue['name'],'city'=>$venue['city'],'country_id'=>$oldCountry,'address'=>$venue['address'],'phone'=>$venue['phone'],'description'=>$venue['description']];
             $proposed=['name'=>$name,'city'=>$city,'country_id'=>$countryId,'address'=>$address,'phone'=>$phone,'description'=>$description,'descriptions'=>$descriptions,'gps'=>$lat!==''?['latitude'=>(float)$lat,'longitude'=>(float)$lng]:null];
-            $pdo=db();$pending=$pdo->prepare('SELECT id FROM '.tbl('venue_changes').' WHERE venue_id=? LIMIT 1');$pending->execute([$venueId]);
-            if($pending->fetchColumn())throw new RuntimeException(L('venue-edit-pending'));
+            $pdo=db();
             $pdo->prepare('INSERT INTO '.tbl('venue_changes').' (venue_id,user_id,original_data,proposed_data) VALUES (?,?,?,?)')->execute([$venueId,(int)$user['id'],json_encode($original,JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE),json_encode($proposed,JSON_THROW_ON_ERROR|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES)]);
             $_SESSION['venue_edit_notice']=L('venue-edit-submitted');
             header('Location: '.url('venue/'.$venueId.'/'.slugify($venue['name'])),true,303);exit;
