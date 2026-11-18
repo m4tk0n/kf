@@ -325,6 +325,50 @@ if ($routeName === 'add' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     exit;
 }
 
+// Schvalování příspěvků: akce jsou dostupné pouze moderátorům a administrátorům.
+if ($routeName === 'moderation' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
+    require_csrf();
+    $action = (string)($_POST['action'] ?? '');
+    $id = filter_var($_POST['id'] ?? null, FILTER_VALIDATE_INT);
+    try {
+        if (!$id || $id < 1) {
+            throw new RuntimeException(L('mod-error-missing'));
+        }
+        if ($action === 'approve') {
+            mod_approve((int)$id);
+            $_SESSION['moderation_notice'] = L('mod-approved');
+        } elseif ($action === 'reject') {
+            mod_reject((int)$id);
+            $_SESSION['moderation_notice'] = L('mod-rejected');
+        } else {
+            throw new RuntimeException(L('mod-error-action'));
+        }
+    } catch (Throwable $e) {
+        $_SESSION['moderation_error'] = $e instanceof RuntimeException
+            ? $e->getMessage()
+            : L('mod-error-action');
+        if (!$e instanceof RuntimeException) {
+            error_log('K&F moderation: ' . $e->getMessage());
+        }
+    }
+    header('Location: ' . url('moderation'), true, 303);
+    exit;
+}
+
+if ($routeName === 'moderation') {
+    $moderationRows = mod_pending_rows();
+    $moderationNotice = (string)($_SESSION['moderation_notice'] ?? '');
+    $moderationError = (string)($_SESSION['moderation_error'] ?? '');
+    unset($_SESSION['moderation_notice'], $_SESSION['moderation_error']);
+    page('moderation', [
+        'title' => L('moderation-title'),
+        'rows' => $moderationRows,
+        'notice' => $moderationNotice,
+        'error' => $moderationError,
+    ]);
+    exit;
+}
+
 match ($routeName) {
     ''      => page('home', ['title' => L('home-title')]),
     'login' => page('login', ['title' => L('login-title')]),
