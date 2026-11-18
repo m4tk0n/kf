@@ -1,7 +1,7 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1794985004472,
+    "generatedTime": 1794985017456,
     "data": [
         {
             "type": "file",
@@ -103,23 +103,23 @@
         },
         {
             "type": "file",
-            "name": "install/installed.lock",
-            "size": 25,
-            "hash": "b1696fd265f724124ad933837deb67dc513dfc6ae5beae499b9ea4380b5f315a"
-        },
-        {
-            "type": "file",
             "name": "install/index.php",
             "size": 20827,
             "hash": "86c34402c61966135704491dcb4af30d13278a61b9a4bffa915a4c3e113635bb"
         },
         {
-            "type": "folder",
-            "name": "install/migrations"
+            "type": "file",
+            "name": "install/installed.lock",
+            "size": 25,
+            "hash": "b1696fd265f724124ad933837deb67dc513dfc6ae5beae499b9ea4380b5f315a"
         },
         {
             "type": "folder",
             "name": "install/sql"
+        },
+        {
+            "type": "folder",
+            "name": "install/migrations"
         },
         {
             "type": "folder",
@@ -167,27 +167,27 @@
         },
         {
             "type": "file",
-            "name": "templates/login.php",
-            "size": 718,
-            "hash": "453cf046a9664e51995a66d31b3315ef6a999525db2c7053fc0a620496d390c5"
-        },
-        {
-            "type": "file",
             "name": "templates/layout.php",
             "size": 5262,
             "hash": "4b83ea2bf28a0fc5d15617615517b90e0bdc9f94c19aa91cfa06f666a38d9567"
         },
         {
             "type": "file",
-            "name": "templates/role-center.php",
-            "size": 519,
-            "hash": "36c42d67c8cea59cdaf071f273e6aa95ca80421ea4675e0dca26b2af2babc106"
+            "name": "templates/login.php",
+            "size": 718,
+            "hash": "453cf046a9664e51995a66d31b3315ef6a999525db2c7053fc0a620496d390c5"
         },
         {
             "type": "file",
             "name": "templates/profile.php",
             "size": 2370,
             "hash": "d3332c8424e5f8c5bbb2be5212753cb11a70aa6188aba8117e357613ac6489ab"
+        },
+        {
+            "type": "file",
+            "name": "templates/role-center.php",
+            "size": 519,
+            "hash": "36c42d67c8cea59cdaf071f273e6aa95ca80421ea4675e0dca26b2af2babc106"
         },
         {
             "type": "file",
@@ -198,8 +198,8 @@
         {
             "type": "file",
             "name": "assets/css/site.css",
-            "size": 12637,
-            "hash": "067cfcbe9c8812ff246447b1ea01d83f614abb897e027dac97775f395b374751"
+            "size": 13108,
+            "hash": "641f9f63a0b1588255f88effb3f4511f2e17100a846080d257a7f677d9494487"
         },
         {
             "type": "folder",
@@ -208,12 +208,6 @@
         {
             "type": "folder",
             "name": "cache/tpl/en"
-        },
-        {
-            "type": "file",
-            "name": "install/migrations/001_auth.sql",
-            "size": 1749,
-            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
         },
         {
             "type": "file",
@@ -259,15 +253,21 @@
         },
         {
             "type": "file",
-            "name": "lang/cs/events.ini",
-            "size": 181,
-            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
+            "name": "install/migrations/001_auth.sql",
+            "size": 1749,
+            "hash": "17c2340b75535b9bfa26e1ca25cccd4293e9b4ee4d514e2f584b495d7fdc7ab0"
         },
         {
             "type": "file",
             "name": "lang/cs/common.ini",
-            "size": 3855,
-            "hash": "15b9e3e4cffcb974cb432560b053dcd78f13693c1f1ed841714c3a0b5b07eb58"
+            "size": 4506,
+            "hash": "e4df62d74198a388d4afd22f2db02d28e1d724a215cc1e4be001da77a7e6a4f9"
+        },
+        {
+            "type": "file",
+            "name": "lang/cs/events.ini",
+            "size": 181,
+            "hash": "c788c3d590edd0f33c594d69d8c4e9c12c5726ea9585217093c187ceb2459a25"
         },
         {
             "type": "file",
@@ -278,8 +278,8 @@
         {
             "type": "file",
             "name": "lang/en/common.ini",
-            "size": 3648,
-            "hash": "7a2ff98f99a65540a61fb2c1cbadd6675e1a02e741997fad51891a99e6d21715"
+            "size": 4274,
+            "hash": "9226b0f0979a179020dc559a98b7fe0100376605ca1157805228889fa3765091"
         },
         {
             "type": "file",
@@ -295,15 +295,15 @@
         },
         {
             "type": "file",
-            "name": "cache/tpl/cs/home.php",
-            "size": 69,
-            "hash": "c72a62e59816ef9de997f7a2e0e471a1ddf0c7a396f2d4c7501301c81a093844"
-        },
-        {
-            "type": "file",
             "name": "cache/tpl/cs/layout.php",
             "size": 657,
             "hash": "0b424f7baa37005db71745592bcbb52571eca6cdaef56ec0189b12fb7bcbbfd2"
+        },
+        {
+            "type": "file",
+            "name": "cache/tpl/cs/home.php",
+            "size": 69,
+            "hash": "c72a62e59816ef9de997f7a2e0e471a1ddf0c7a396f2d4c7501301c81a093844"
         },
         {
             "type": "file",
