@@ -35,6 +35,10 @@ $route = array_slice($parts, 1);
 $routeName = implode('/', $route);
 $GLOBALS['KF_ROUTE'] = $routeName;
 
+if (is_array($_SESSION['user'] ?? null) && empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
 function require_csrf(): void
 {
     $submitted = (string)($_POST['csrf_token'] ?? '');
