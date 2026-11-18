@@ -169,3 +169,12 @@ h2 { margin: 0; font-size: 16px; }
 /* User role displayed next to the account name. */
 .account-name-line { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 7px; }
 .account-role { display: inline-flex; align-items: center; min-height: 20px; padding: 2px 7px; border: 1px solid #4a4a4a; border-radius: 4px; color: var(--accent); font-size: 10px; font-weight: 700; line-height: 1.2; white-space: nowrap; }
+
+/* Account menu groups and add-to-catalogue hub */
+.account-menu-section { margin: 6px 4px 2px; padding: 9px 8px 3px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; text-align: right; }
+.add-intro { margin: -5px 0 14px; color: var(--muted); font-size: 13px; }
+.add-options { display: grid; gap: 8px; }
+.add-option { display: grid; gap: 4px; padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+.add-option strong { font-size: 14px; }
+.add-option span { color: var(--muted); font-size: 12px; line-height: 1.45; }
+.add-option:hover { border-color: var(--accent); }
