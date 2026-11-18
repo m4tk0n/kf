@@ -79,6 +79,24 @@ function venue_image_urls(int $id): array
     return array_map(static fn(string $f): string => $base . rawurlencode(basename($f)), $files);
 }
 
+/** Akce klubu rozdělené podle začátku; minulé od nejnovější, budoucí od nejbližší. */
+function venue_events(int $venueId, bool $past): array
+{
+    $comparison = $past ? '<' : '>=';
+    $direction = $past ? 'DESC' : 'ASC';
+    $sql = 'SELECT e.id, e.name, e.type, e.starts_at, e.ends_at,
+                   GROUP_CONCAT(b.name ORDER BY eb.pos, b.name SEPARATOR ", ") AS bands
+            FROM ' . tbl('events') . ' e
+            LEFT JOIN ' . tbl('event_bands') . ' eb ON eb.event_id = e.id
+            LEFT JOIN ' . tbl('bands') . ' b ON b.id = eb.band_id
+            WHERE e.venue_id = ? AND e.starts_at ' . $comparison . ' NOW()
+            GROUP BY e.id, e.name, e.type, e.starts_at, e.ends_at
+            ORDER BY e.starts_at ' . $direction . ', e.id ' . $direction;
+    $q = db()->prepare($sql);
+    $q->execute([$venueId]);
+    return $q->fetchAll();
+}
+
 /** Klub pro detail: řádek z DB + JSON + fotky. null, když neexistuje. */
 function venue_load(int $id): ?array
 {
@@ -111,6 +129,8 @@ function venue_load(int $id): ?array
         'lng'          => isset($gps['longitude']) ? (float)$gps['longitude'] : null,
         'description'  => venue_description($data),
         'images'       => venue_image_urls($id),
+        'past_events'  => venue_events($id, true),
+        'future_events'=> venue_events($id, false),
     ];
 }
 
