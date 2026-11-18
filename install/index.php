@@ -174,7 +174,7 @@ button:disabled{opacity:.45;cursor:not-allowed}.error{padding:11px;border:1px so
     <h2><?= e(L('inst-checks')) ?></h2>
     <ul>
       <?php foreach ($checks as $name => $ok): ?>
-        <li><span><?= e($name) ?></span><strong class="<?= $ok ? 'ok' : 'fail' ?>"><?= $ok ? 'OK' : 'CHYBA' ?></strong></li>
+        <li><span><?= e($name) ?></span><strong class="<?= $ok ? 'ok' : 'fail' ?>"><?= e($ok ? L('inst-check-ok') : L('inst-check-fail')) ?></strong></li>
       <?php endforeach; ?>
     </ul>
 
