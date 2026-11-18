@@ -29,14 +29,19 @@ if (empty($_SESSION['csrf_token'])) {
 }
 $avatarLetter = mb_strtoupper(mb_substr(trim((string)$currentUser['name']), 0, 1, 'UTF-8'), 'UTF-8');
 $avatarUrl = (string)($currentUser['picture'] ?? '');
-if (!preg_match('~^https://[a-z0-9.-]+/[^\s]*$~i', $avatarUrl)) $avatarUrl = '';
+if (!preg_match('~^https://[a-z0-9.-]+/[^\\s]*$~i', $avatarUrl)) $avatarUrl = '';
+$roleNames = cfg('enums.role');
+$roleName = $roleNames[(int)($currentUser['role'] ?? 0)] ?? 'unknown';
+$roleLabel = L('role-' . $roleName);
 ?>
     <details class="account-menu">
       <summary class="user-avatar" aria-label="<?= e(L('account-menu')) ?>" title="<?= e(L('account-menu')) ?>">
 <?php if ($avatarUrl !== ''): ?><img src="<?= e($avatarUrl) ?>" alt=""><?php else: ?><?= e($avatarLetter) ?><?php endif; ?>
       </summary>
       <div class="account-dropdown">
-        <div class="account-identity"><strong><?= e($currentUser['name']) ?></strong></div>
+        <div class="account-identity">
+          <div class="account-name-line"><strong><?= e($currentUser['name']) ?></strong><span class="account-role"><?= e($roleLabel) ?></span></div>
+        </div>
         <a class="account-menu-link" href="<?= e(url('profile')) ?>"><?= e(L('account-profile')) ?></a>
         <a class="account-menu-link" href="<?= e(url('settings')) ?>"><?= e(L('account-settings')) ?></a>
         <form method="post" action="<?= e(url('logout')) ?>">

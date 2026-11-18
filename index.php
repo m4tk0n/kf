@@ -35,6 +35,26 @@ $route = array_slice($parts, 1);
 $routeName = implode('/', $route);
 $GLOBALS['KF_ROUTE'] = $routeName;
 
+/*
+ * Re-check the signed-in account on every full or partial page request.
+ * The database is the source of truth for role and account state; session
+ * values are only a cache and must never grant permissions by themselves.
+ */
+if (is_array($_SESSION['user'] ?? null) && !empty($_SESSION['user']['id'])) {
+    $users = tbl('users');
+    $check = db()->prepare("SELECT id, role, state, confirmed FROM {$users} WHERE id = ? LIMIT 1");
+    $check->execute([(int)$_SESSION['user']['id']]);
+    $freshUser = $check->fetch();
+
+    if (!$freshUser || (int)$freshUser['state'] === 2 || (int)$freshUser['confirmed'] !== 1) {
+        unset($_SESSION['user']);
+        session_regenerate_id(true);
+    } else {
+        $_SESSION['user']['role'] = (int)$freshUser['role'];
+        $_SESSION['user']['state'] = (int)$freshUser['state'];
+    }
+}
+
 if (is_array($_SESSION['user'] ?? null) && empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
