@@ -1,10 +1,21 @@
 <?php
 declare(strict_types=1);
 try { require dirname(__DIR__) . '/src/bootstrap.php'; }
-catch (Throwable $ex) { http_response_code(500); exit('Config error: ' . htmlspecialchars($ex->getMessage(), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')); }
+catch (Throwable $ex) { error_log('K&F install bootstrap: ' . $ex->getMessage()); http_response_code(500); exit('Configuration error.'); }
 lang_load('install');
 $want=$_GET['lang']??cfg('app.default_lang');
 lang_code(in_array($want,cfg('app.languages'),true)?$want:cfg('app.default_lang'));
+// Po dokončené instalaci smí údržbu spouštět jen administrátor; ostatní dostanou 404.
+try {
+    $alreadyInstalled = (bool)db()->query('SELECT COUNT(*) FROM information_schema.tables WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME=' . db()->quote(cfg('db.prefix') . 'meta'))->fetchColumn();
+} catch (Throwable $ex) { $alreadyInstalled = false; }
+if ($alreadyInstalled) {
+    $installAdmin = refresh_authenticated_user();
+    if ($installAdmin === null || (int)$installAdmin['role'] < 4) {
+        http_response_code(404); header('Cache-Control: no-store, private'); header('X-Robots-Tag: noindex, nofollow');
+        exit('Not Found');
+    }
+}
 header('Content-Type: text/html; charset=utf-8'); header('Cache-Control: no-store, private'); header('X-Robots-Tag: noindex, nofollow');
 $prefix=cfg('db.prefix'); $lock=__DIR__.'/installed.lock'; $token=hash_hmac('sha256','kf-install-maintenance',cfg('app.key'));
 $errors=[]; $done=false; $dbAvailable=false; $pdo=null; $tableCount=0; $installed=false;

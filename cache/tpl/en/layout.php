@@ -10,10 +10,10 @@
 </head>
 <body>
 <header>
-  <a href="<?= e(url()) ?>">K&amp;F</a>
+  <a href="<?= e(url()) ?>">Concerts &amp; Festivals</a>
   <nav>
 <?php foreach (cfg('app.languages') as $l): ?>
-    <a href="<?= e(url($GLOBALS['KF_ROUTE'] ?? '', $l)) ?>"><?= e(strtoupper($l)) ?></a>
+    <a href="<?= e(url($GLOBALS['KF_ROUTE'] ?? '', $l)) ?>?setlang"><?= e(strtoupper($l)) ?></a>
 <?php endforeach; ?>
   </nav>
 </header>
