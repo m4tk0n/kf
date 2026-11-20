@@ -204,7 +204,7 @@ function inst_wipe_plan(): array
 }
 
 /** Provede instalaci. @return array{ok:bool,log:array<int,array{0:string,1:bool,2:string}>} */
-function inst_run(bool $wipeOptional): array
+function inst_run(bool $wipeOptional, ?callable $progress = null): array
 {
     $log = [];
     $ok = true;
@@ -226,14 +226,30 @@ function inst_run(bool $wipeOptional): array
     ];
     foreach ($groups as $label => $dir) {
         foreach (inst_sql_files($dir) as $path => $name) {
+            $item = $label . ' ' . $name;
+            if ($progress) {
+                $progress($item, 'running', 'Připravuji SQL soubor');
+            }
             try {
                 $stmts = inst_split(inst_fill((string)file_get_contents($path), $pdo));
-                foreach ($stmts as $s) {
+                $total = count($stmts);
+                foreach ($stmts as $index => $s) {
+                    if ($progress) {
+                        $progress($item, 'running', 'Příkaz ' . ($index + 1) . '/' . $total);
+                    }
                     inst_exec_retry($pdo, $s);
                 }
-                $log[] = [$label . ' ' . $name, true, count($stmts) . ' příkazů'];
+                $detail = $total . ' příkazů – dokončeno';
+                $log[] = [$item, true, $detail];
+                if ($progress) {
+                    $progress($item, 'ok', $detail);
+                }
             } catch (Throwable $e) {
-                $log[] = [$label . ' ' . $name, false, substr($e->getMessage(), 0, 300)];
+                $detail = substr($e->getMessage(), 0, 300);
+                $log[] = [$item, false, $detail];
+                if ($progress) {
+                    $progress($item, 'err', $detail);
+                }
                 $ok = false;
                 break 2; // při první chybě se končí, další soubory by selhaly kvůli cizím klíčům
             }
@@ -354,10 +370,35 @@ if ($action === 'unlock') {
 // ---------- instalace ----------
 
 if ($action === 'install') {
+    // Výstup posíláme průběžně, aby uživatel viděl skutečný postup instalace.
+    @ini_set('output_buffering', '0');
+    @ini_set('zlib.output_compression', '0');
+    while (ob_get_level() > 0) {
+        @ob_end_flush();
+    }
+    echo '<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Instalace – průběh</title><style>'
+        . ':root{color-scheme:light dark;--bg:#f5f6f8;--fg:#1c2330;--card:#fff;--bd:#d9dde5;--ok:#1a7f37;--err:#cf222e;--ac:#0b5fff}'
+        . '@media(prefers-color-scheme:dark){:root{--bg:#12151b;--fg:#e6e9ef;--card:#1b2029;--bd:#2f3745;--ok:#3fb950;--err:#f85149}}'
+        . '*{box-sizing:border-box}body{margin:0;padding:16px;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif}main{max-width:860px;margin:auto}.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px;margin:0 0 12px}table{width:100%;border-collapse:collapse}td{padding:7px 5px;border-bottom:1px solid var(--bd);vertical-align:top}.state{font-weight:700;white-space:nowrap}.ok{color:var(--ok)}.err{color:var(--err)}.muted{opacity:.75}button,.btn{display:inline-block;padding:10px 16px;border:0;border-radius:8px;background:var(--ac);color:#fff;font:inherit;text-decoration:none}</style></head><body><main><h1>Instalace – průběh</h1><div class="card"><p id="current">Připravuji instalaci…</p><table id="progress"><tr><td>Čekám na zahájení</td><td class="state">…</td></tr></table></div>';
+    echo str_repeat(' ', 4096);
+    @flush();
+
+    $progress = static function (string $item, string $state, string $detail): void {
+        $safeItem = e($item);
+        $safeDetail = e($detail);
+        $safeState = e($state === 'ok' ? 'HOTOVO' : ($state === 'err' ? 'CHYBA' : 'PRACUJI'));
+        $class = $state === 'ok' ? 'ok' : ($state === 'err' ? 'err' : 'muted');
+        echo '<script>document.getElementById("current").textContent=' . json_encode($item . ' – ' . $detail, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ';</script>';
+        echo '<tr><td>' . $safeItem . '<div class="muted">' . $safeDetail . '</div></td><td class="state ' . $class . '">' . $safeState . '</td></tr>';
+        echo str_repeat(' ', 1024);
+        @flush();
+    };
+
     try {
-        $res = inst_run(!empty($_POST['wipe_optional']));
+        $res = inst_run(!empty($_POST['wipe_optional']), $progress);
     } catch (Throwable $e) {
         $res = ['ok' => false, 'log' => [['Instalace', false, substr($e->getMessage(), 0, 300)]]];
+        $progress('Instalace', 'err', substr($e->getMessage(), 0, 300));
     }
     if ($res['ok']) {
         $prov = inst_oauth_providers();
@@ -390,7 +431,17 @@ if ($action === 'install') {
     } else {
         $body .= '<div class="card warnbox"><p>Instalace skončila chybou. Oprav SQL soubor nebo nastavení a spusť ji znovu.</p></div>';
     }
-    inst_page('Instalace – výsledek', $body);
+    echo '</table></div>' . $body . '</main></body></html>';
+    if ($res['ok'] && ($prov = inst_oauth_providers())) {
+        $provider = in_array('google', $prov, true) ? 'google' : $prov[0];
+        echo '<p>Přesměrování na přihlášení… <a href="' . e(inst_login_url($provider)) . '">Pokračovat</a></p><script>setTimeout(function(){location.replace('
+            . json_encode(inst_login_url($provider), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT)
+            . ')},1800);</script>';
+    } else {
+        echo '<p><a class="btn" href="' . e(url('install/')) . '">Zpět na přehled instalátoru</a></p>';
+    }
+    echo '</main></body></html>';
+    exit;
 }
 
 // ---------- přehled (po odemknutí) ----------
