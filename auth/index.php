@@ -132,6 +132,27 @@ function oauth_google_callback(): never
         abort(502, 'Google se nepodařilo ověřit přihlášení. Zkus to znovu.');
     }
 
+    // Ověření ID tokenu přes Google: podpis, audience, issuer, expirace a nonce.
+    if (empty($token['id_token'])) {
+        abort(502, 'Google neposlal ověřovací token.');
+    }
+    $idTokenResponse = http_request('https://oauth2.googleapis.com/tokeninfo?' . http_build_query(['id_token' => (string)$token['id_token']]), [
+        'headers' => ['Accept: application/json'],
+        'max_bytes' => 65536,
+        'timeout' => 10,
+    ]);
+    $idToken = json_decode($idTokenResponse['body'], true);
+    $validIssuer = is_array($idToken) && in_array((string)($idToken['iss'] ?? ''), ['accounts.google.com', 'https://accounts.google.com'], true);
+    if ($idTokenResponse['status'] !== 200 || !is_array($idToken)
+        || !$validIssuer
+        || !hash_equals((string)env('GOOGLE_CLIENT_ID', ''), (string)($idToken['aud'] ?? ''))
+        || (int)($idToken['exp'] ?? 0) <= time()
+        || empty($idToken['nonce'])
+        || !hash_equals((string)$data['nonce'], (string)$idToken['nonce'])) {
+        security_log('oauth_google_id_token_invalid', ['status' => $idTokenResponse['status']]);
+        abort(403, 'Google ověření přihlášení nebylo platné.');
+    }
+
     $userResponse = http_request((string)cfg('oauth.google.userinfo_url'), [
         'headers' => ['Authorization: Bearer ' . (string)$token['access_token'], 'Accept: application/json'],
         'max_bytes' => 65536,
