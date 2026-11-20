@@ -328,8 +328,11 @@ if ($action === 'install') {
     }
     if ($res['ok']) {
         $prov = inst_oauth_providers();
-        if (count($prov) === 1) {
-            header('Location: ' . inst_login_url($prov[0]), true, 303);
+        if ($prov) {
+            // Po čisté instalaci vždy pokračovat přihlášením; pokud je dostupný Google,
+            // použít ho přednostně i v případě, že jsou nakonfigurovaní další poskytovatelé.
+            $provider = in_array('google', $prov, true) ? 'google' : $prov[0];
+            header('Location: ' . inst_login_url($provider), true, 303);
             exit;
         }
     }
