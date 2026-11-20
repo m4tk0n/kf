@@ -59,6 +59,27 @@ function inst_split(string $sql): array
     return $out;
 }
 
+/** Krátce opakuje příkaz po přechodném deadlocku nebo timeoutu InnoDB. */
+function inst_exec_retry(PDO $pdo, string $sql): void
+{
+    $maxAttempts = 5;
+    for ($attempt = 1; ; $attempt++) {
+        try {
+            $pdo->exec($sql);
+            return;
+        } catch (PDOException $e) {
+            $driverCode = (int)($e->errorInfo[1] ?? 0);
+            $retryable = $driverCode === 1213 || $driverCode === 1205 || (string)$e->getCode() === '40001';
+            if (!$retryable || $attempt >= $maxAttempts) {
+                throw $e;
+            }
+            // InnoDB po deadlocku jednu transakci zruší; krátká prodleva umožní
+            // dokončení souběžného požadavku před opakováním stejného DDL.
+            usleep(200000 * $attempt);
+        }
+    }
+}
+
 function inst_fill(string $sql, PDO $pdo): string
 {
     $esc = static fn(string $v): string => substr($pdo->quote($v), 1, -1);
@@ -188,6 +209,15 @@ function inst_run(bool $wipeOptional): array
     $log = [];
     $ok = true;
     $pdo = db();
+
+    // Zabrání souběžnému spuštění dvou instalací nad stejnou databází.
+    $lockName = 'kf_install_' . substr(hash('sha256', (string)env('DB_NAME', '')), 0, 32);
+    $lock = $pdo->prepare('SELECT GET_LOCK(?, 0)');
+    $lock->execute([$lockName]);
+    if ((int)$lock->fetchColumn() !== 1) {
+        return ['ok' => false, 'log' => [['Instalace', false, 'Jiná instalace právě pracuje s databází. Zkus to znovu za chvíli.']]];
+    }
+
     $pdo->exec('SET FOREIGN_KEY_CHECKS = 0');
 
     $groups = [
@@ -199,7 +229,7 @@ function inst_run(bool $wipeOptional): array
             try {
                 $stmts = inst_split(inst_fill((string)file_get_contents($path), $pdo));
                 foreach ($stmts as $s) {
-                    $pdo->exec($s);
+                    inst_exec_retry($pdo, $s);
                 }
                 $log[] = [$label . ' ' . $name, true, count($stmts) . ' příkazů'];
             } catch (Throwable $e) {
@@ -232,6 +262,9 @@ function inst_run(bool $wipeOptional): array
         }
         session_clear_cookie();
     }
+    $release = $pdo->prepare('SELECT RELEASE_LOCK(?)');
+    $release->execute([$lockName]);
+
     return ['ok' => $ok, 'log' => $log];
 }
 
