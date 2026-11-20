@@ -260,8 +260,15 @@ function inst_run(bool $wipeOptional, ?callable $progress = null): array
     if ($ok) {
         $keep = (array)cfg('install.wipe_keep');
         foreach ((array)cfg('install.wipe_dirs') as $d) {
+            if ($progress) {
+                $progress('Mazání ' . $d . '/', 'running', 'Odstraňuji obsah složky');
+            }
             $n = dir_delete_contents(abs_path((string)$d), $keep);
-            $log[] = ['Smazáno ' . $d . '/', true, $n . ' souborů'];
+            $detail = $n . ' souborů';
+            $log[] = ['Smazáno ' . $d . '/', true, $detail];
+            if ($progress) {
+                $progress('Mazání ' . $d . '/', 'ok', $detail);
+            }
         }
         $files = (array)cfg('install.wipe_files');
         if ($wipeOptional) {
@@ -269,8 +276,15 @@ function inst_run(bool $wipeOptional, ?callable $progress = null): array
         }
         foreach ($files as $f) {
             $abs = abs_path((string)$f);
+            if ($progress) {
+                $progress('Mazání ' . $f, 'running', 'Mažu soubor');
+            }
             $done = !is_file($abs) || @unlink($abs);
-            $log[] = ['Smazán soubor ' . $f, $done, $done ? 'OK' : 'nelze smazat'];
+            $detail = $done ? 'OK' : 'nelze smazat';
+            $log[] = ['Smazán soubor ' . $f, $done, $detail];
+            if ($progress) {
+                $progress('Mazání ' . $f, $done ? 'ok' : 'err', $detail);
+            }
             $ok = $ok && $done;
         }
         foreach (array_merge((array)cfg('install.wipe_dirs'), (array)cfg('install.writable_dirs')) as $d) {
@@ -400,16 +414,6 @@ if ($action === 'install') {
         $res = ['ok' => false, 'log' => [['Instalace', false, substr($e->getMessage(), 0, 300)]]];
         $progress('Instalace', 'err', substr($e->getMessage(), 0, 300));
     }
-    if ($res['ok']) {
-        $prov = inst_oauth_providers();
-        if ($prov) {
-            // Po čisté instalaci vždy pokračovat přihlášením; pokud je dostupný Google,
-            // použít ho přednostně i v případě, že jsou nakonfigurovaní další poskytovatelé.
-            $provider = in_array('google', $prov, true) ? 'google' : $prov[0];
-            header('Location: ' . inst_login_url($provider), true, 303);
-            exit;
-        }
-    }
     $rows = '';
     foreach ($res['log'] as [$label, $okRow, $msg]) {
         $rows .= '<tr><td>' . e($label) . '</td><td>' . inst_badge($okRow ? 'ok' : 'err') . '</td><td>' . e($msg) . '</td></tr>';
@@ -431,7 +435,7 @@ if ($action === 'install') {
     } else {
         $body .= '<div class="card warnbox"><p>Instalace skončila chybou. Oprav SQL soubor nebo nastavení a spusť ji znovu.</p></div>';
     }
-    echo '</table></div>' . $body . '</main></body></html>';
+    echo '</table></div>' . $body;
     if ($res['ok'] && ($prov = inst_oauth_providers())) {
         $provider = in_array('google', $prov, true) ? 'google' : $prov[0];
         echo '<p>Přesměrování na přihlášení… <a href="' . e(inst_login_url($provider)) . '">Pokračovat</a></p><script>setTimeout(function(){location.replace('
