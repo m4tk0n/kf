@@ -1,1 +1,0 @@
-<section class="account-page"><div class="account-page-heading"><h1><?= e(L('settings-title')) ?></h1><a class="back-button" href="<?= e(url()) ?>"><?= e(L('back-button')) ?></a></div><p><?= e(L('settings-empty')) ?></p></section>
