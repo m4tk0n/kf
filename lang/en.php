@@ -1,0 +1,37 @@
+<?php
+// lang/en.php
+declare(strict_types=1);
+
+return [
+    'app.tagline' => 'Catalogue of concerts, festivals, venues and bands',
+    'nav.events' => 'Events',
+    'nav.bands' => 'Bands',
+    'nav.venues' => 'Venues',
+    'nav.login' => 'Log in',
+    'nav.logout' => 'Log out',
+    'menu.add_event' => '+ Add event',
+    'menu.add_band' => '+ Add band',
+    'menu.add_venue' => '+ Add venue',
+    'menu.my_pending' => 'My submissions',
+    'menu.profile' => 'Profile',
+    'menu.filters' => 'Filters',
+    'menu.review' => 'To review ({n})',
+    'menu.users' => 'Users',
+    'menu.settings' => 'Settings',
+    'event.type.1' => 'Concert',
+    'event.type.2' => 'Festival',
+    'event.type.3' => 'Other',
+    'common.search' => 'Search',
+    'common.save' => 'Save',
+    'common.cancel' => 'Cancel',
+    'common.edit' => 'Edit',
+    'common.submit' => 'Submit',
+    'common.close' => 'Close',
+    'common.language' => 'Language',
+    'error.403' => 'Access denied',
+    'error.404' => 'Page not found',
+    'error.429' => 'Too many requests',
+    'count.events' => ['one' => '{n} event', 'other' => '{n} events'],
+    'count.bands' => ['one' => '{n} band', 'other' => '{n} bands'],
+    'count.venues' => ['one' => '{n} venue', 'other' => '{n} venues'],
+];

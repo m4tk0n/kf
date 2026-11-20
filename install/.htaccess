@@ -1,0 +1,12 @@
+# install/.htaccess
+# Instalátor (index.php) je dostupný, ale SQL soubory a adresářové výpisy ne (viz install/sql/.htaccess).
+Options -Indexes
+<FilesMatch "\.sql$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>

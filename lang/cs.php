@@ -1,0 +1,37 @@
+<?php
+// lang/cs.php
+declare(strict_types=1);
+
+return [
+    'app.tagline' => 'Katalog koncertů, festivalů, klubů a kapel',
+    'nav.events' => 'Akce',
+    'nav.bands' => 'Kapely',
+    'nav.venues' => 'Kluby',
+    'nav.login' => 'Přihlásit se',
+    'nav.logout' => 'Odhlásit se',
+    'menu.add_event' => '+ Přidat akci',
+    'menu.add_band' => '+ Přidat kapelu',
+    'menu.add_venue' => '+ Přidat klub',
+    'menu.my_pending' => 'Moje návrhy',
+    'menu.profile' => 'Profil',
+    'menu.filters' => 'Filtry',
+    'menu.review' => 'Ke schválení ({n})',
+    'menu.users' => 'Uživatelé',
+    'menu.settings' => 'Nastavení',
+    'event.type.1' => 'Koncert',
+    'event.type.2' => 'Festival',
+    'event.type.3' => 'Ostatní',
+    'common.search' => 'Hledat',
+    'common.save' => 'Uložit',
+    'common.cancel' => 'Zrušit',
+    'common.edit' => 'Upravit',
+    'common.submit' => 'Odeslat',
+    'common.close' => 'Zavřít',
+    'common.language' => 'Jazyk',
+    'error.403' => 'Přístup odepřen',
+    'error.404' => 'Stránka nenalezena',
+    'error.429' => 'Příliš mnoho požadavků',
+    'count.events' => ['one' => '{n} akce', 'few' => '{n} akce', 'other' => '{n} akcí'],
+    'count.bands' => ['one' => '{n} kapela', 'few' => '{n} kapely', 'other' => '{n} kapel'],
+    'count.venues' => ['one' => '{n} klub', 'few' => '{n} kluby', 'other' => '{n} klubů'],
+];

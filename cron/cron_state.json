@@ -1,0 +1,10 @@
+{
+    "last_run": 1795173355,
+    "tasks": {
+        "mail_queue": 1795173355,
+        "session_cleanup": 1795173355,
+        "tmp_cleanup": 1795173355,
+        "ratelimit_cleanup": 1795173355,
+        "ai_import": 1795173355
+    }
+}
