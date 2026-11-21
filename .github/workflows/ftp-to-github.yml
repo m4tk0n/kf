@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   import:
-    name: Download FTP and commit changes to main
+    name: Replace website files in main with the live FTP copy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -25,12 +25,26 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Remove old website files from the GitHub working tree
+        run: |
+          set -euo pipefail
+          # Keep Git metadata, workflow definitions, environment files and the
+          # FTP deploy state file. All website/application files are replaced
+          # by the files downloaded from the live server in the next step.
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name '.git' \
+            ! -name '.github' \
+            ! -name '.env' \
+            ! -name '.env.*' \
+            ! -name '.ftp-deploy-sync-state.json' \
+            -exec rm -rf -- {} +
+
       - name: Install lftp
         run: |
           sudo apt-get update
           sudo apt-get install -y lftp
 
-      - name: Download website from FTP
+      - name: Download complete website from FTP
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -49,9 +63,9 @@ jobs:
           python3 - <<'PY'
           import os
           def q(value):
-              if "\n" in value or "\r" in value:
+              if "\\n" in value or "\\r" in value:
                   raise SystemExit("FTP settings must not contain newlines")
-              return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
+              return '"' + value.replace("\\\\", "\\\\\\\\").replace('"', '\\"') + '"'
 
           server = q(os.environ["FTP_SERVER"])
           username = q(os.environ["FTP_USERNAME"])
@@ -65,7 +79,7 @@ jobs:
               "set net:timeout 30",
               f"open -p {port} {server}",
               f"user {username} {password}",
-              # Download only. Never delete repository files absent from FTP.
+              # Download only; the local working tree was cleared above.
               # Never import secrets, Git metadata, or workflow definitions.
               "mirror --verbose --parallel=2 "
               "--exclude-glob .env --exclude-glob '.env.*' "
@@ -75,31 +89,45 @@ jobs:
               "bye",
           ]
           with open("/tmp/ftp-import.lftp", "w", encoding="utf-8") as f:
-              f.write("\n".join(commands) + "\n")
+              f.write("\\n".join(commands) + "\\n")
           PY
           lftp -f /tmp/ftp-import.lftp
           rm -f /tmp/ftp-import.lftp
 
-      - name: Commit FTP changes directly to main
+          # Refuse to replace GitHub with an empty or inaccessible server directory.
+          FILE_COUNT="$(find . -type f \
+            ! -path './.git/*' \
+            ! -path './.github/*' \
+            ! -name '.env' \
+            ! -name '.env.*' \
+            | wc -l)"
+          if [ "$FILE_COUNT" -eq 0 ]; then
+            echo "No website files were downloaded; refusing to commit an empty replacement."
+            exit 1
+          fi
+          echo "Downloaded website contains $FILE_COUNT files."
+
+      - name: Commit FTP copy directly to main
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # Explicitly keep environment files and GitHub workflow files out of the commit.
+          # Keep environment files, workflow definitions and deploy state out of this sync.
           git add -A -- . \
             ':(exclude).env' \
             ':(exclude).env/**' \
             ':(exclude).env.*' \
             ':(exclude).env.*/**' \
             ':(exclude).github' \
-            ':(exclude).github/**'
+            ':(exclude).github/**' \
+            ':(exclude).ftp-deploy-sync-state.json'
 
           if git diff --cached --quiet; then
-            echo "FTP and GitHub are already in sync; nothing to commit."
+            echo "GitHub and the live FTP server are already in sync."
             exit 0
           fi
 
           git status --short
-          git commit -m "Sync website files from FTP"
+          git commit -m "Replace GitHub website files with live FTP copy"
           git push origin HEAD:main
