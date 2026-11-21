@@ -100,7 +100,7 @@ ob_start();
 <input type="hidden" name="action" value="run"><input type="hidden" name="token" value="<?= e($token) ?>">
 <section class="panel">
   <div class="section-head"><div><span class="step">03</span><h2>Výběr tabulek ke smazání</h2></div><button type="button" class="text-button" data-check-all="drop_tables">Vybrat vše</button></div>
-  <div class="callout danger-lite"><strong>Pozor: nevratná operace.</strong> Označené tabulky budou smazány včetně všech dat. Neoznačených tabulek se mazání nedotkne.</div>
+  <div class="callout danger-lite"><strong>Pozor: nevratná operace.</strong> Označené tabulky budou smazány včetně všech dat. U nadřazené tabulky je nutné označit také všechny navázané tabulky; instalátor tě jinak zastaví.</div>
   <div class="choice-list">
   <?php foreach ($tables as $table): ?>
     <label class="choice"><input type="checkbox" name="drop_tables[]" value="<?= e($table['key']) ?>"><span class="choice-main"><strong><?= e($table['name']) ?></strong><small><?= $table['exists'] ? number_format($table['rows'], 0, ',', ' ') . ' záznamů' : 'Tabulka neexistuje' ?></small></span><span class="choice-tag"><?= $table['exists'] ? 'SMAZAT' : '—' ?></span></label>
