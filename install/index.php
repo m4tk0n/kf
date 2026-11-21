@@ -124,7 +124,7 @@ ob_start();
   <p class="muted">Seed soubory vkládají základní data. Spouštěj je jen tehdy, když víš, že jejich data v databázi ještě nejsou.</p>
   <div class="choice-list">
   <?php foreach ($seedFiles as $file): ?>
-    <label class="choice"><input type="checkbox" name="seed_files[]" value="<?= e($file) ?>"><span class="choice-main"><strong><?= e($file) ?></strong><small><?= $file === '10_users.sql' ? 'Systémový účet AI' : ($file === '20_countries.sql' ? 'Seznam států' : 'Počáteční data') ?></small></span><span class="choice-tag">INSERT</span></label>
+    <label class="choice"><input type="checkbox" name="seed_files[]" value="<?= e($file) ?>" checked><span class="choice-main"><strong><?= e($file) ?></strong><small><?= $file === '10_users.sql' ? 'Systémový účet AI' : ($file === '20_countries.sql' ? 'Seznam států' : 'Počáteční data') ?></small></span><span class="choice-tag">INSERT</span></label>
   <?php endforeach; ?>
   </div>
 </section>
