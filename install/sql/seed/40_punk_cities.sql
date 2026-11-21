@@ -63,6 +63,8 @@ FROM (
   UNION ALL
   SELECT 'CZ' AS iso2, 'Branice' AS name, 'Branice' AS name_ascii
   UNION ALL
+  SELECT 'CZ' AS iso2, 'Brněnec' AS name, 'Brnenec' AS name_ascii
+  UNION ALL
   SELECT 'CZ' AS iso2, 'Ústí nad Orlicí' AS name, 'Usti nad Orlici' AS name_ascii
   UNION ALL
   SELECT 'CZ' AS iso2, 'Ostrov' AS name, 'Ostrov' AS name_ascii
@@ -138,8 +140,6 @@ FROM (
   SELECT 'CZ' AS iso2, 'Spálené Poříčí' AS name, 'Spalene Porici' AS name_ascii
   UNION ALL
   SELECT 'CZ' AS iso2, 'Chvaleč' AS name, 'Chvalec' AS name_ascii
-  UNION ALL
-  SELECT 'CZ' AS iso2, 'Opařany' AS name, 'Oparany' AS name_ascii
   UNION ALL
   SELECT 'CZ' AS iso2, 'Vyškov' AS name, 'Vyskov' AS name_ascii
   UNION ALL
@@ -343,15 +343,11 @@ FROM (
   UNION ALL
   SELECT 'SK' AS iso2, 'Piešťany' AS name, 'Piestany' AS name_ascii
   UNION ALL
-  SELECT 'SK' AS iso2, 'Domaša' AS name, 'Domasa' AS name_ascii
-  UNION ALL
   SELECT 'SK' AS iso2, 'Zemianske Kostoľany' AS name, 'Zemianske Kostolany' AS name_ascii
-  UNION ALL
-  SELECT 'SK' AS iso2, 'Veľké Bierovce' AS name, 'Velke Bierovce' AS name_ascii
   UNION ALL
   SELECT 'SK' AS iso2, 'Malé Leváre' AS name, 'Male Levare' AS name_ascii
   UNION ALL
-  SELECT 'SK' AS iso2, 'Štrba' AS name, 'Strba' AS name_ascii
+  SELECT 'SK' AS iso2, 'Štrbské Pleso' AS name, 'Strbske Pleso' AS name_ascii
 ) AS v
 INNER JOIN `{prefix}countries` AS co ON co.`iso2` = v.`iso2`
 WHERE NOT EXISTS (
