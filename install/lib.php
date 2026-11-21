@@ -96,16 +96,155 @@ function inst_stream_finish(string $html): never {
     exit;
 }
 function inst_execute_selection(array $post): array {
- $steps=[];$sum=['dropped'=>0,'created'=>0,'seeded'=>0,'skipped'=>0];$ok=true;$add=static function($kind,$item,$state,$detail='')use(&$steps){$steps[]=['kind'=>$kind,'item'=>$item,'state'=>$state,'detail'=>$detail];if(!empty($GLOBALS['inst_streaming'])){echo '<div class="result-row"><span class="status '.e($state).'"></span><div><strong>'.e($item).'</strong><small>'.e($kind).'</small><p>'.e($detail).'</p></div></div>';flush();}};$p=db();$lock='kf_install_'.substr(hash('sha256',(string)env('DB_NAME','').(string)cfg('db.prefix')),0,32);$q=$p->prepare('SELECT GET_LOCK(?,0)');$q->execute([$lock]);if((int)$q->fetchColumn()!==1){$add('Zámek','Databáze','err','Jiná instalace již běží. Zkus to později.');return ['ok'=>false,'steps'=>$steps,'summary'=>$sum,'admin'=>false,'admin_url'=>''];}
- $t=(array)cfg('db.tables');$drops=array_intersect((array)($post['drop_tables']??[]),array_keys($t));$schemas=array_intersect((array)($post['schema_files']??[]),inst_sql_files((string)cfg('install.sql_tables_dir')));$seeds=array_intersect((array)($post['seed_files']??[]),inst_sql_files((string)cfg('install.sql_seed_dir')));
- $deps=['users'=>['sessions','venues','bands','events','pending'],'countries'=>['cities'],'cities'=>['venues','bands','events'],'genres'=>['bands'],'venues'=>['events'],'events'=>['event_bands'],'bands'=>['event_bands']];$selected=array_fill_keys($drops,true);$missing=[];$walk=function($parent)use(&$walk,&$missing,$deps,$selected){foreach($deps[$parent]??[] as $child){if(inst_has_table($child)&&!isset($selected[$child]))$missing[$child]=$parent;if(isset($selected[$child]))$walk($child);}};foreach($drops as $key)$walk((string)$key);if($missing){foreach($missing as $child=>$parent)$add('Závislost',$child,'err','Tabulka '.$parent.' na ni navazuje. Označ ke smazání také '.$child.'.');return ['ok'=>false,'steps'=>$steps,'summary'=>$sum,'admin'=>false,'admin_url'=>''];}
- $drops=array_values(array_intersect(array_reverse(array_keys($t)),$drops));
- try{if(($post['_full_install']??'')==='1'){foreach(inst_wipe_apply() as $w)$add($w['kind'],$w['item'],$w['state'],$w['detail']);}$p->exec('SET FOREIGN_KEY_CHECKS=0');foreach($drops as $k){$n=(string)cfg('db.prefix').$t[$k];$p->exec('DROP TABLE IF EXISTS '.chr(96).$n.chr(96));$sum['dropped']++;$add('Mazání',$n,'ok','Smazáno');}
- foreach($schemas as $f){$k=inst_table_key_from_file($f);if(inst_has_table($k)){$sum['skipped']++;$add('Struktura',$f,'skip','Tabulka existuje');continue;}$raw=file_get_contents(abs_path(trim((string)cfg('install.sql_tables_dir'),'/').'/'.$f));if(!is_string($raw))throw new RuntimeException('Nelze číst '.$f);foreach(inst_statements(inst_fill($raw,$p)) as $s){if(!preg_match('/^DROP\s+TABLE\b/i',$s))$p->exec($s);}$sum['created']++;$add('Struktura',$f,'ok','Tabulka vytvořena');}
- foreach($seeds as $f){if($f==='10_users.sql'&&inst_has_table('users')&&(int)$p->query('SELECT COUNT(*) FROM '.tbl('users'))->fetchColumn()>0){$sum['skipped']++;$add('Data',$f,'skip','AI účet existuje');continue;}if($f==='20_countries.sql'&&inst_has_table('countries')&&(int)$p->query('SELECT COUNT(*) FROM '.tbl('countries'))->fetchColumn()>0){$sum['skipped']++;$add('Data',$f,'skip','Státy již obsahují data');continue;}$raw=file_get_contents(abs_path(trim((string)cfg('install.sql_seed_dir'),'/').'/'.$f));if(!is_string($raw))throw new RuntimeException('Nelze číst '.$f);foreach(inst_statements(inst_fill($raw,$p)) as $s)$p->exec($s);$sum['seeded']++;$add('Data',$f,'ok','Data vložena');}
- }catch(Throwable $e){$ok=false;$add('Chyba','Instalace','err',$e->getMessage());}finally{try{$p->exec('SET FOREIGN_KEY_CHECKS=1');}catch(Throwable){}try{$q=$p->prepare('SELECT RELEASE_LOCK(?)');$q->execute([$lock]);}catch(Throwable){}}
- $admin=$ok&&inst_has_table('users')&&inst_user_state()['regular']===0;$provider='';foreach(['google'=>['GOOGLE_CLIENT_ID','GOOGLE_CLIENT_SECRET']] as $k=>$v)if(cfg('oauth.'.$k.'.enabled')&&(string)env($v[0],'')!==''&&(string)env($v[1],'')!==''){$provider=$k;break;}
- return ['ok'=>$ok,'steps'=>$steps,'summary'=>$sum,'admin'=>$admin,'admin_url'=>$provider?url(str_replace('{provider}',$provider,(string)cfg('oauth.login_path'))):''];
+    $steps = [];
+    $summary = ['dropped'=>0, 'created'=>0, 'seeded'=>0, 'skipped'=>0];
+    $ok = true;
+    $add = static function(string $kind, string $item, string $state, string $detail = '') use (&$steps): void {
+        $steps[] = ['kind'=>$kind, 'item'=>$item, 'state'=>$state, 'detail'=>$detail];
+        if (!empty($GLOBALS['inst_streaming'])) {
+            echo '<div class="result-row"><span class="status '.e($state).'"></span><div><strong>'.e($item).'</strong><small>'.e($kind).'</small><p>'.e($detail).'</p></div></div>';
+            flush();
+        }
+    };
+
+    $pdo = db();
+    $lockName = 'kf_install_'.substr(hash('sha256', (string)env('DB_NAME', '').(string)cfg('db.prefix')), 0, 32);
+    $lockQuery = $pdo->prepare('SELECT GET_LOCK(?, 0)');
+    $lockQuery->execute([$lockName]);
+    if ((int)$lockQuery->fetchColumn() !== 1) {
+        $add('Zámek', 'Databáze', 'err', 'Jiná instalace již běží. Zkus to později.');
+        return ['ok'=>false, 'steps'=>$steps, 'summary'=>$summary, 'admin'=>false, 'admin_url'=>''];
+    }
+
+    $tables = (array)cfg('db.tables');
+    $drops = array_values(array_intersect((array)($post['drop_tables'] ?? []), array_keys($tables)));
+    $schemaFiles = array_values(array_intersect((array)($post['schema_files'] ?? []), inst_sql_files((string)cfg('install.sql_tables_dir'))));
+    $seedFiles = array_values(array_intersect((array)($post['seed_files'] ?? []), inst_sql_files((string)cfg('install.sql_seed_dir'))));
+
+    try {
+        $dependencies = [
+            'users'=>['sessions','venues','bands','events','pending'],
+            'countries'=>['cities'],
+            'cities'=>['venues','bands','events'],
+            'genres'=>['bands'],
+            'venues'=>['events'],
+            'events'=>['event_bands'],
+            'bands'=>['event_bands'],
+        ];
+        $selected = array_fill_keys($drops, true);
+        $missing = [];
+        $walk = function(string $parent) use (&$walk, &$missing, $dependencies, $selected): void {
+            $children = $dependencies[$parent] ?? [];
+            foreach ($children as $child) {
+                if (inst_has_table($child) && !isset($selected[$child])) {
+                    $missing[$child] = $parent;
+                }
+                if (isset($selected[$child])) {
+                    $walk($child);
+                }
+            }
+        };
+        foreach ($drops as $key) {
+            $walk((string)$key);
+        }
+        if ($missing) {
+            foreach ($missing as $child => $parent) {
+                $add('Závislost', (string)$child, 'err', 'Tabulka '.$parent.' na ni navazuje. Označ ke smazání také '.$child.'.');
+            }
+            $ok = false;
+        }
+
+        if ($ok) {
+            $drops = array_values(array_intersect(array_reverse(array_keys($tables)), $drops));
+
+            if (($post['_full_install'] ?? '') === '1') {
+                foreach (inst_wipe_apply() as $step) {
+                    $add($step['kind'], $step['item'], $step['state'], $step['detail']);
+                }
+            }
+
+            $pdo->exec('SET FOREIGN_KEY_CHECKS=0');
+            foreach ($drops as $key) {
+                $tableName = (string)cfg('db.prefix').$tables[$key];
+                $pdo->exec('DROP TABLE IF EXISTS '.chr(96).$tableName.chr(96));
+                $summary['dropped']++;
+                $add('Mazání', $tableName, 'ok', 'Tabulka smazána');
+            }
+
+            foreach ($schemaFiles as $file) {
+                $key = inst_table_key_from_file($file);
+                if (inst_has_table($key)) {
+                    $summary['skipped']++;
+                    $add('Struktura', $file, 'skip', 'Tabulka již existuje');
+                    continue;
+                }
+                $path = abs_path(trim((string)cfg('install.sql_tables_dir'), '/').'/'.$file);
+                $sql = file_get_contents($path);
+                if (!is_string($sql)) {
+                    throw new RuntimeException('Nelze číst '.$file);
+                }
+                foreach (inst_statements(inst_fill($sql, $pdo)) as $statement) {
+                    if (!preg_match('/^DROP\s+TABLE\b/i', $statement)) {
+                        $pdo->exec($statement);
+                    }
+                }
+                $summary['created']++;
+                $add('Struktura', $file, 'ok', 'SQL soubor dokončen');
+            }
+
+            foreach ($seedFiles as $file) {
+                if ($file === '10_users.sql' && inst_has_table('users') && (int)$pdo->query('SELECT COUNT(*) FROM '.tbl('users'))->fetchColumn() > 0) {
+                    $summary['skipped']++;
+                    $add('Data', $file, 'skip', 'Tabulka uživatelů již obsahuje záznamy');
+                    continue;
+                }
+                if ($file === '20_countries.sql' && inst_has_table('countries') && (int)$pdo->query('SELECT COUNT(*) FROM '.tbl('countries'))->fetchColumn() > 0) {
+                    $summary['skipped']++;
+                    $add('Data', $file, 'skip', 'Tabulka států již obsahuje data');
+                    continue;
+                }
+                $path = abs_path(trim((string)cfg('install.sql_seed_dir'), '/').'/'.$file);
+                $sql = file_get_contents($path);
+                if (!is_string($sql)) {
+                    throw new RuntimeException('Nelze číst '.$file);
+                }
+                foreach (inst_statements(inst_fill($sql, $pdo)) as $statement) {
+                    $pdo->exec($statement);
+                }
+                $summary['seeded']++;
+                $add('Data', $file, 'ok', 'SQL soubor dokončen');
+            }
+        }
+    } catch (Throwable $error) {
+        $ok = false;
+        $add('Chyba', 'Instalace', 'err', $error->getMessage());
+    } finally {
+        try {
+            $pdo->exec('SET FOREIGN_KEY_CHECKS=1');
+        } catch (Throwable) {
+        }
+        try {
+            $release = $pdo->prepare('SELECT RELEASE_LOCK(?)');
+            $release->execute([$lockName]);
+        } catch (Throwable) {
+        }
+    }
+
+    $admin = $ok && inst_has_table('users') && inst_user_state()['regular'] === 0;
+    $provider = '';
+    foreach (['google'=>['GOOGLE_CLIENT_ID', 'GOOGLE_CLIENT_SECRET']] as $name => $keys) {
+        if (cfg('oauth.'.$name.'.enabled') && (string)env($keys[0], '') !== '' && (string)env($keys[1], '') !== '') {
+            $provider = $name;
+            break;
+        }
+    }
+    return [
+        'ok'=>$ok,
+        'steps'=>$steps,
+        'summary'=>$summary,
+        'admin'=>$admin,
+        'admin_url'=>$provider ? url(str_replace('{provider}', $provider, (string)cfg('oauth.login_path'))) : '',
+    ];
 }
 function inst_result_html(array $r, string $token=''): string { $s=$r['summary'];$h='<section class="hero compact"><div class="eyebrow">REPORT</div><h1>'.($r['ok']?'Hotovo':'Chyba při instalaci').'</h1></section><section class="panel"><div class="metrics"><div><strong>'.$s['dropped'].'</strong><small>Smazáno</small></div><div><strong>'.$s['created'].'</strong><small>Vytvořeno</small></div><div><strong>'.$s['seeded'].'</strong><small>Seed SQL</small></div><div><strong>'.$s['skipped'].'</strong><small>Přeskočeno</small></div></div><h2>Protokol</h2>';if(empty($GLOBALS['inst_streaming']))foreach($r['steps'] as $x)$h.='<div class="result-row"><span class="status '.e($x['state']).'"></span><div><strong>'.e($x['item']).'</strong><small>'.e($x['kind']).'</small><p>'.e($x['detail']).'</p></div></div>';if($r['ok']&&$r['admin'])$h.='<div class="admin-panel"><h2>První administrátor</h2>'.($r['admin_url']?'<p>Neexistuje běžný uživatel. První OAuth registrace získá roli admin.</p><a class="primary-button" href="'.e($r['admin_url']).'">Vytvořit první účet →</a>':'<p>Nastav OAuth přihlášení v .env.</p>').'</div>';elseif($r['ok'])$h.='<p>Běžný uživatel již existuje. Administrátorský účet nebyl vytvořen.</p>';return $h.'<p><a class="secondary-button" href="'.e(url('install/?page=overview&token='.rawurlencode($token))).'">Zpět na přehled</a></p></section>'; }
 function inst_render(string $title,string $body,bool $assets=false): never { $a='<link rel="stylesheet" href="'.e(url('install/assets/installer.css?v=2')).'">'.($assets?'<script src="'.e(url('install/assets/installer.js?v=2')).'" defer></script>':'');echo '<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><title>'.e($title).'</title>'.$a.'</head><body><main class="shell">'.$body.'<footer>K&F · instalační režim</footer></main></body></html>';exit; }
