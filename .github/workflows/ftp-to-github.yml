@@ -1,5 +1,4 @@
 name: Import FTP to GitHub
-# Triggerable by a workflow-file push when manual dispatch is unavailable.
 
 on:
   workflow_dispatch:
