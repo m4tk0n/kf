@@ -84,10 +84,13 @@ function inst_wipe_apply(): array {
 }
 
 function inst_stream_start(string $title): void {
-    while (ob_get_level() > 0) @ob_end_flush();
+    while (ob_get_level() > 0) {
+        @ob_end_flush();
+    }
     ob_implicit_flush(true);
     $GLOBALS['inst_streaming'] = true;
-    echo '<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'.e($title).'</title><link rel="stylesheet" href="'.e(url('install/assets/installer.css?v=2')).'"></head><body><main class="shell"><div class="topbar"><span class="brand">K&amp;F <span>INSTALLER</span></span></div><div class="hero"><div class="eyebrow">LIVE EXECUTION</div><h1>Probíhá instalace</h1><p>Jednotlivé kroky se zobrazují průběžně. Nezavírej tuto stránku.</p></div><section class="panel"><div class="section-head"><h2>Protokol operací</h2><span class="live-indicator">LIVE</span></div><div id="live-log">');
+    $stylesheet = e(url('install/assets/installer.css?v=2'));
+    echo '<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'.e($title).'</title><link rel="stylesheet" href="'.$stylesheet.'"></head><body><main class="shell"><div class="topbar"><span class="brand">K&amp;F <span>INSTALLER</span></span></div><div class="hero"><div class="eyebrow">LIVE EXECUTION</div><h1>Probíhá instalace</h1><p>Jednotlivé kroky se zobrazují průběžně. Nezavírej tuto stránku.</p></div><section class="panel"><div class="section-head"><h2>Protokol operací</h2><span class="live-indicator">LIVE</span></div><div id="live-log">';
     flush();
 }
 function inst_stream_finish(string $html): never {
