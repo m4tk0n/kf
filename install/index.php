@@ -52,6 +52,7 @@ if ($action === 'run') {
 
 $checks = inst_environment_checks();
 $tables = inst_database_tables();
+$tablesByKey = $tables;
 $schemaFiles = inst_sql_files((string)cfg('install.sql_tables_dir'));
 $seedFiles = inst_sql_files((string)cfg('install.sql_seed_dir'));
 $usersState = inst_user_state();
