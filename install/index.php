@@ -53,8 +53,9 @@ if ($action === 'run_full' || $action === 'run_manual') {
         $post['schema_files'] = inst_sql_files((string)cfg('install.sql_tables_dir'));
         $post['seed_files'] = inst_sql_files((string)cfg('install.sql_seed_dir'));
     }
+    inst_stream_start('Protokol instalace');
     $result = inst_execute_selection($post);
-    inst_render('Protokol instalace', inst_result_html($result, $token));
+    inst_stream_finish(inst_result_html($result, $token));
 }
 
 $page = (string)($_GET['page'] ?? 'overview');
