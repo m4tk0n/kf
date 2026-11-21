@@ -172,6 +172,20 @@ return [
         'ai_user_id' => 1,        // systémový účet AI (zakládá instalátor), autor záznamů z AI importu
         'ai_name' => 'AI',
         'first_user_admin' => true, // první běžný uživatel po čisté instalaci se stane adminem, další jsou user
+        'display_name_max' => 80,
+    ],
+
+    // Uložené filtry uživatele (JSON profil): typ => klíč tabulky v db.tables
+    'filters' => [
+        'types' => [
+            'countries' => 'countries',
+            'cities' => 'cities',
+            'venues' => 'venues',
+            'genres' => 'genres',
+            'bands' => 'bands',
+        ],
+        'max_per_type' => 100, // maximum vybraných položek jednoho typu
+        'list_limit' => 500,   // maximum položek nabízených ve formuláři jednoho typu
     ],
 
     // Přihlášení: vlastní session v tabulce sessions (PHP session_start() se nepoužívá)
@@ -220,6 +234,10 @@ return [
         'callback_path' => 'auth/{provider}/callback',
         'google' => [
             'enabled' => true,
+            'label' => 'Google',
+            'env_id' => 'GOOGLE_CLIENT_ID',
+            'env_secret' => 'GOOGLE_CLIENT_SECRET',
+            'env_redirect' => 'GOOGLE_REDIRECT_URI',
             'auth_url' => 'https://accounts.google.com/o/oauth2/v2/auth',
             'token_url' => 'https://oauth2.googleapis.com/token',
             'userinfo_url' => 'https://openidconnect.googleapis.com/v1/userinfo',
@@ -228,6 +246,10 @@ return [
         ],
         'facebook' => [
             'enabled' => true,
+            'label' => 'Facebook',
+            'env_id' => 'FACEBOOK_APP_ID',
+            'env_secret' => 'FACEBOOK_APP_SECRET',
+            'env_redirect' => 'FACEBOOK_REDIRECT_URI',
             'api_version' => 'v25.0', // ověřeno 11/2026: v25.0 podporována do 29. 7. 2028, nejnovější je v26.0
             'auth_url' => 'https://www.facebook.com/{version}/dialog/oauth',
             'token_url' => 'https://graph.facebook.com/{version}/oauth/access_token',

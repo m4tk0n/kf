@@ -199,7 +199,7 @@ function require_login(): array
             abort(403, 'Účet není aktivní');
         }
         security_log('login_required');
-        redirect('login');
+        abort(403, t('error.403'));
     }
     return $u;
 }
@@ -216,11 +216,26 @@ function require_fresh_login(): array
 
 // ---------- CSRF ----------
 
-/** CSRF token je HMAC (APP_KEY) z tokenu session; pro hosta je prázdný (hosté nemají POST formuláře). */
+/**
+ * CSRF tokeny: přihlášený = HMAC (APP_KEY) z tokenu session; host (formulář jazyka) = HMAC z IP, User-Agentu
+ * a hodinového okna. Vrací platné tokeny (host: aktuální a předchozí okno).
+ * @return string[]
+ */
+function csrf_candidates(): array
+{
+    $key = (string)env('APP_KEY', '');
+    $u = auth_resolve();
+    if ($u !== null) {
+        return [hash_hmac('sha256', 'csrf|' . $u['token_hash_hex'], $key)];
+    }
+    $w = intdiv(time(), 3600);
+    $mk = static fn(int $win): string => hash_hmac('sha256', 'csrf-guest|' . ua_hash_hex() . '|' . client_ip() . '|' . $win, $key);
+    return [$mk($w), $mk($w - 1)];
+}
+
 function csrf_token(): string
 {
-    $u = auth_resolve();
-    return $u === null ? '' : hash_hmac('sha256', 'csrf|' . $u['token_hash_hex'], (string)env('APP_KEY', ''));
+    return csrf_candidates()[0];
 }
 
 function csrf_field(): string
@@ -250,9 +265,14 @@ function csrf_verify(): void
     if (!is_post()) {
         return;
     }
-    $tok = csrf_token();
     $sent = $_POST[(string)cfg('security.csrf_field')] ?? '';
-    if ($tok === '' || !is_string($sent) || !hash_equals($tok, $sent)) {
+    $valid = false;
+    if (is_string($sent) && $sent !== '') {
+        foreach (csrf_candidates() as $tok) {
+            $valid = $valid || hash_equals($tok, $sent);
+        }
+    }
+    if (!$valid) {
         security_log('csrf_invalid');
         abort(403, 'Neplatný CSRF token');
     }

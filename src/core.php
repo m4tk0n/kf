@@ -155,6 +155,13 @@ function abort(int $code, string $message = ''): never
     if (wants_json()) {
         json_out(['error' => $message !== '' ? $message : 'error', 'status' => $code], $code);
     }
+    if (function_exists('render_error_page') && !headers_sent()) {
+        try {
+            render_error_page($code, $message);
+        } catch (Throwable) {
+            // záložní prostá stránka níže
+        }
+    }
     if (!headers_sent()) {
         http_response_code($code);
         header('Content-Type: text/html; charset=utf-8');

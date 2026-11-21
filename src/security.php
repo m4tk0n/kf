@@ -84,9 +84,11 @@ function ratelimit_cleanup(): void
 
 function send_security_headers(bool $authenticated): void
 {
-    if (headers_sent()) {
+    static $sent = false;
+    if ($sent || headers_sent()) {
         return;
     }
+    $sent = true;
     foreach ((array)cfg('security.headers') as $name => $value) {
         header($name . ': ' . $value);
     }
