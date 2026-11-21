@@ -9,6 +9,9 @@
 -- https://www.novinky.cz/clanek/kultura-punk-neni-mrtev-potvrdilo-vystoupeni-exploited-na-antifestu-40233035 (Antifest, Jaromer)
 -- https://www.novinky.cz/clanek/kultura-antifest-se-vraci-s-exploited-wattie-prozradil-proc-se-dal-na-punk-40232280 (Antifest, Jaromer)
 -- https://www.brnenecfest.cz/ (oficialni punkovy festival v Brnenci)
+-- https://digilib.k.utb.cz/bitstream/handle/10563/37008/jon%C3%A1kov%C3%A1_2016_dp.pdf (Glady v pred v Krizanove, Kuncicky Kraval, Lesni punk a Punk Rebel Podecely)
+-- https://www.punk.cz/index.asp?menu=2166 (historie presunu Antifestu z Noveho Bydzova pres Trutnov a Svojsice do Jaromere)
+-- https://www.punk.cz/data/USR_120_NOVY/KMENY0_A_F_Punk.pdf (historicky punkovy koncert v Orlove)
 -- Kazda polozka ma zaznam koncertu v archivu kapely nebo doklad festivalu.
 -- country_id se nacita podle ISO2; zadna predpokladana ID statu.
 -- Opakovane spusteni neprida mesto, ktere uz pro dany stat existuje.
