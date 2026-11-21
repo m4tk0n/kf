@@ -84,6 +84,9 @@ function inst_wipe_apply(): array {
 }
 
 function inst_stream_start(string $title): void {
+    header('X-Accel-Buffering: no');
+    @ini_set('output_buffering', 'off');
+    @ini_set('zlib.output_compression', '0');
     while (ob_get_level() > 0) {
         @ob_end_flush();
     }
