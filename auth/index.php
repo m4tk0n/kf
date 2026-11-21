@@ -180,8 +180,8 @@ function oauth_google_callback(): never
         q('UPDATE ' . tbl('users') . ' SET display_name = ?, last_login_at = ? WHERE id = ?', [mb_substr(trim((string)$profile['name']), 0, 80), $now, $userId]);
     } else {
         $existing = (int)q(
-            'SELECT COUNT(*) FROM ' . tbl('users') . ' WHERE provider <> ? AND user_state <> ?',
-            [(int)cfg('enums.oauth_provider.system'), (int)cfg('enums.user_state.deleted')]
+            'SELECT COUNT(*) FROM ' . tbl('users') . ' WHERE provider <> ?',
+            [(int)cfg('enums.oauth_provider.system')]
         )->fetchColumn();
         $role = $existing === 0 && cfg('users.first_user_admin')
             ? (int)cfg('enums.role.admin')
