@@ -154,6 +154,12 @@ FROM (
   UNION ALL
   SELECT 'CZ' AS iso2, 'Mokrá-Horákov' AS name, 'Mokra-Horakov' AS name_ascii
   UNION ALL
+  SELECT 'CZ' AS iso2, 'Kunčice u Letohradu' AS name, 'Kuncice u Letohradu' AS name_ascii
+  UNION ALL
+  SELECT 'CZ' AS iso2, 'Dřeveš' AS name, 'Dreves' AS name_ascii
+  UNION ALL
+  SELECT 'CZ' AS iso2, 'Poděčely' AS name, 'Podecely' AS name_ascii
+  UNION ALL
   SELECT 'SK' AS iso2, 'Bratislava' AS name, 'Bratislava' AS name_ascii
   UNION ALL
   SELECT 'SK' AS iso2, 'Nitra' AS name, 'Nitra' AS name_ascii
