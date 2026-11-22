@@ -5,7 +5,6 @@ $s = $view['req']['s'];
 $rows = $view['rows'];
 $kind = ['events' => 'event', 'bands' => 'band', 'venues' => 'venue'][$s];
 ?>
-<p class="count"><?= e(kf_n('count.' . $s, (int)$view['count'])) ?></p>
 <?= kf_pager($view['nav']) ?>
 <?php if (!$rows): ?>
   <p class="empty"><?= e(kf_t('empty')) ?></p>
