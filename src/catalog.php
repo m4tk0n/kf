@@ -14,14 +14,15 @@ function kf_request(): array
     if (!in_array($s, ['events', 'bands', 'venues'], true)) $s = 'events';
     $d = kf_get('d');
     if (!preg_match('/^(\d{4})-(\d{2})-(\d{2})$/', $d, $m) || !checkdate((int)$m[2], (int)$m[3], (int)$m[1])) $d = '';
-    return ['s' => $s, 'q' => mb_substr(trim(kf_get('q')), 0, 100), 'p' => max(1, (int)kf_get('p')), 'd' => $d];
+    return ['s' => $s, 'q' => mb_substr(trim(kf_get('q')), 0, 100), 'p' => max(1, (int)kf_get('p')), 'd' => $d, 'k' => preg_match('/^\d{1,5}$/', kf_get('k')) ? (int)kf_get('k') : 0];
 }
 
 function kf_url(array $req, array $over = []): string
 {
-    $p = array_merge(['s' => $req['s'], 'q' => $req['q'], 'p' => $req['p'], 'd' => $req['d']], $over);
+    $p = array_merge(['s' => $req['s'], 'q' => $req['q'], 'p' => $req['p'], 'd' => $req['d'], 'k' => $req['k']], $over);
     if ($p['s'] === 'events') unset($p['s']);
     if ((int)$p['p'] <= 1) unset($p['p']);
+    if ((int)$p['k'] <= 0) unset($p['k']);
     $p = array_filter($p, static fn($v): bool => $v !== '' && $v !== null);
     return $p ? url('') . '?' . http_build_query($p) : url('');
 }
@@ -86,43 +87,76 @@ function kf_add_months(DateTimeImmutable $d, int $n): DateTimeImmutable
     return $first->setDate((int)$first->format('Y'), (int)$first->format('n'), min((int)$d->format('j'), (int)$first->format('t')));
 }
 
-// nejbližší den s akcí (podle hledání): from = první >= t, upto = poslední <= t, after = první > t, before = poslední < t
-function kf_event_date(string $mode, string $t, string $qa): ?string
+function kf_events_filter(string $qa): array
 {
-    $d = new DateTimeImmutable($t);
-    $t1 = $d->modify('+1 day')->format('Y-m-d');
-    $t0 = $d->modify('-1 day')->format('Y-m-d');
-    [$sql, $p] = match ($mode) {
-        'from' => ['MIN(GREATEST(a.date_from, ?)) WHERE a.date_to >= ?', [$t, $t]],
-        'upto' => ['MAX(LEAST(a.date_to, ?)) WHERE a.date_from <= ?', [$t, $t]],
-        'after' => ['MIN(CASE WHEN a.date_from > ? THEN a.date_from ELSE ? END) WHERE a.date_to > ?', [$t, $t1, $t]],
-        default => ['MAX(CASE WHEN a.date_to < ? THEN a.date_to ELSE ? END) WHERE a.date_from < ?', [$t, $t0, $t]],
-    };
-    if ($qa !== '') {
-        $sql .= ' AND LOWER(a.name_ascii) LIKE ?';
-        $p[] = '%' . addcslashes($qa, '%_\\') . '%';
-    }
-    $v = q('SELECT ' . preg_replace('/ WHERE /', ' FROM ' . tbl('events') . ' a WHERE ', $sql, 1), $p)->fetchColumn();
+    return $qa !== '' ? [' AND LOWER(a.name_ascii) LIKE ?', ['%' . addcslashes($qa, '%_\\') . '%']] : ['', []];
+}
+
+// nejbližší den, ve kterém akce začíná (podle hledání): '>=' '>' = první, '<=' '<' = poslední
+function kf_day_find(string $op, string $t, string $qa): ?string
+{
+    if (!in_array($op, ['<', '<=', '>', '>='], true)) throw new InvalidArgumentException('op');
+    [$f, $p] = kf_events_filter($qa);
+    $v = q('SELECT ' . ($op[0] === '<' ? 'MAX' : 'MIN') . '(a.date_from) FROM ' . tbl('events') . ' a WHERE a.date_from ' . $op . ' ?' . $f, array_merge([$t], $p))->fetchColumn();
     return is_string($v) && preg_match('/^\d{4}-\d{2}-\d{2}$/', $v) ? $v : null;
 }
 
-// << < dd.mm.yyyy > >> : < > = předchozí/další den s akcí, << >> = o měsíc zpět/vpřed (nejbližší den s akcí)
-function kf_day_nav(array $req, string $d, string $qa): array
+// počet akcí (podle hledání), které začínají v den ($op '=') nebo od dne dále ($op '>=')
+function kf_day_count(string $op, string $t, string $qa): int
+{
+    if (!in_array($op, ['=', '>='], true)) throw new InvalidArgumentException('op');
+    [$f, $p] = kf_events_filter($qa);
+    return (int)q('SELECT COUNT(*) FROM ' . tbl('events') . ' a WHERE a.date_from ' . $op . ' ?' . $f, array_merge([$t], $p))->fetchColumn();
+}
+
+// výchozí den: první den akce, která dnes běží nebo teprve začne
+function kf_default_day(string $qa): string
+{
+    $today = date('Y-m-d');
+    [$f, $p] = kf_events_filter($qa);
+    $v = q('SELECT MIN(a.date_from) FROM ' . tbl('events') . ' a WHERE a.date_to >= ?' . $f, array_merge([$today], $p))->fetchColumn();
+    return is_string($v) && $v !== '' ? $v : (kf_day_find('<=', $today, $qa) ?? $today);
+}
+
+/**
+ * << < dd.mm.yyyy > >> : < > = předchozí/další den s akcí, << >> = o měsíc zpět/vpřed.
+ * Stránka = $n akcí od dne $d dále (po $k akcích téhož dne). Má-li den víc akcí než $n, šipky nejdřív
+ * projdou jeho části (nic se nepřeskočí). Šipka je zablokovaná, pokud by cílová stránka měla méně než $n akcí.
+ */
+function kf_event_nav(array $req, string $d, int $k, int $n, string $qa): array
 {
     $cur = new DateTimeImmutable($d);
-    $go = static fn(?string $to): ?string => $to === null ? null : kf_url($req, ['d' => $to, 'p' => 1]);
+    $url = static fn(string $dd, int $kk): string => kf_url($req, ['d' => $dd, 'k' => $kk, 'p' => 1]);
+    $full = static fn(string $dd, int $kk = 0): bool => kf_day_count('>=', $dd, $qa) - $kk >= $n;
+    $rem = kf_day_count('>=', $d, $qa);
+    $day = kf_day_count('=', $d, $qa);
+
+    $prev = null;
+    if ($k > 0) {
+        $prev = $url($d, max(0, $k - $n));
+    } elseif (($pd = kf_day_find('<', $d, $qa)) !== null) {
+        $pk = intdiv(kf_day_count('=', $pd, $qa) - 1, $n) * $n; // poslední část předchozího dne
+        $prev = $full($pd, $pk) ? $url($pd, $pk) : null;
+    }
+
+    $next = null;
+    if ($day > $k + $n) {
+        $next = $url($d, min($k + $n, $rem - $n)); // další část téhož dne (na konci seznamu zarovnáno na plnou stránku)
+    } elseif (($nd = kf_day_find('>', $d, $qa)) !== null && $full($nd)) {
+        $next = $url($nd, 0);
+    }
+
+    $mb = kf_day_find('<=', kf_add_months($cur, -1)->format('Y-m-d'), $qa);
+    $mf = kf_day_find('>=', kf_add_months($cur, 1)->format('Y-m-d'), $qa);
     return [
         'label' => $cur->format('d.m.Y'),
         'links' => [
-            'first' => $go(kf_event_date('upto', kf_add_months($cur, -1)->format('Y-m-d'), $qa)),
-            'prev' => $go(kf_event_date('before', $d, $qa)),
-            'next' => $go(kf_event_date('after', $d, $qa)),
-            'last' => $go(kf_event_date('from', kf_add_months($cur, 1)->format('Y-m-d'), $qa)),
+            'first' => $mb !== null && $full($mb) ? $url($mb, 0) : null,
+            'prev' => $prev,
+            'next' => $next,
+            'last' => $mf !== null && $full($mf) ? $url($mf, 0) : null,
         ],
-        'titles' => [
-            'first' => kf_t('pager.prev_month'), 'prev' => kf_t('pager.prev_day'),
-            'next' => kf_t('pager.next_day'), 'last' => kf_t('pager.next_month'),
-        ],
+        'titles' => ['first' => kf_t('pager.prev_month'), 'last' => kf_t('pager.next_month')],
     ];
 }
 
@@ -151,7 +185,7 @@ function kf_paged(string $cols, string $from, string $where, array $params, stri
 
 function kf_load(array $req): array
 {
-    $per = max(1, min((int)cfg('paging.per_page'), (int)cfg('paging.max_per_page')));
+    $per = static fn(string $kind): int => max(1, min((int)cfg('paging.per_page_' . $kind), (int)cfg('paging.max_per_page')));
     $country = 'co.`name_' . kf_lang() . '`'; // jazyk je ověřený proti app.supported_langs
     $geo = ' JOIN ' . tbl('cities') . ' c ON c.id = a.city_id JOIN ' . tbl('countries') . ' co ON co.id = c.country_id';
     $qa = kf_ascii($req['q']);
@@ -163,23 +197,24 @@ function kf_load(array $req): array
         $from = ' FROM ' . tbl('events') . ' a' . $geo . ' LEFT JOIN ' . tbl('venues') . ' v ON v.id = a.venue_id';
         $cols = 'a.id, a.name, a.type, a.date_from, a.date_to, a.time_start, a.flyer, c.name AS city, co.iso2, '
             . $country . ' AS country, v.name AS venue';
-        $today = date('Y-m-d');
-        $d = $req['d'] !== '' ? $req['d']
-            : (kf_event_date('from', $today, $qa) ?? kf_event_date('upto', $today, $qa) ?? $today);
+        $n = $per('events');
+        $d = $req['d'] !== '' ? $req['d'] : kf_default_day($qa);
+        $k = max(0, min($req['k'], kf_day_count('>=', $d, $qa) - $n));
         $rows = q(
-            'SELECT ' . $cols . $from . $where . ' AND a.date_from <= ? AND a.date_to >= ?'
-            . ' ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id LIMIT ' . (int)cfg('paging.max_per_page'),
-            array_merge($params, [$d, $d])
+            'SELECT ' . $cols . $from . $where . ' AND a.date_from >= ?'
+            . ' ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id LIMIT ' . $n . ' OFFSET ' . $k,
+            array_merge($params, [$d])
         )->fetchAll(PDO::FETCH_ASSOC);
-        return ['req' => $req, 'rows' => $rows, 'count' => count($rows), 'nav' => kf_day_nav($req, $d, $qa)];
+        $total = (int)q('SELECT COUNT(*) FROM ' . tbl('events') . ' a' . $where, $params)->fetchColumn();
+        return ['req' => $req, 'rows' => $rows, 'count' => $total, 'nav' => kf_event_nav($req, $d, $k, $n, $qa)];
     } elseif ($s === 'bands') {
         $from = ' FROM ' . tbl('bands') . ' a' . $geo . ' LEFT JOIN ' . tbl('genres') . ' g ON g.id = a.genre_id';
         $cols = 'a.id, a.name, a.logo, c.name AS city, co.iso2, ' . $country . ' AS country, g.name AS genre';
-        $r = kf_paged($cols, $from, $where, $params, 'a.name, a.id', [], $req, $per);
+        $r = kf_paged($cols, $from, $where, $params, 'a.name, a.id', [], $req, $per('bands'));
     } else {
         $from = ' FROM ' . tbl('venues') . ' a' . $geo;
         $cols = 'a.id, a.name, a.img, c.name AS city, co.iso2, ' . $country . ' AS country';
-        $r = kf_paged($cols, $from, $where, $params, 'a.name, a.id', [], $req, $per);
+        $r = kf_paged($cols, $from, $where, $params, 'a.name, a.id', [], $req, $per('venues'));
     }
     return ['req' => $req] + $r;
 }

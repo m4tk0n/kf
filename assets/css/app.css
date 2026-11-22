@@ -30,5 +30,7 @@ abbr{text-decoration:none}
 .meta{color:var(--muted);font-size:.9rem}
 .tags{font-size:.8rem;color:var(--muted)}
 .tag{border:1px solid var(--line);border-radius:6px;padding:0 6px}
+.tag.t1{color:#4da3ff}
+.tag.t2{color:#3ddc84}
 .thumb{flex:none;width:56px;height:56px;object-fit:cover;border-radius:8px}
 .empty{color:var(--muted);text-align:center;padding:32px 0}

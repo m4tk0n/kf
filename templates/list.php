@@ -21,7 +21,7 @@ $kind = ['events' => 'event', 'bands' => 'band', 'venues' => 'venue'][$s];
     <span class="body">
       <strong class="name"><?= e($r['name']) ?></strong>
       <span class="meta"><?= $r['venue'] !== null ? e($r['venue']) . ' · ' : '' ?><?= $place ?></span>
-      <span class="tags"><span class="tag"><?= e(kf_t('type.' . (int)$r['type'])) ?></span><?= $r['time_start'] !== null ? ' <span class="time">' . e(substr($r['time_start'], 0, 5)) . '</span>' : '' ?></span>
+      <span class="tags"><span class="tag t<?= (int)$r['type'] ?>"><?= e(kf_t('type.' . (int)$r['type'])) ?></span><?= $r['time_start'] !== null ? ' <span class="time">' . e(substr($r['time_start'], 0, 5)) . '</span>' : '' ?></span>
     </span>
     <?php if ((int)$r['flyer'] === 1): ?><img class="thumb" src="<?= e(kf_img('events', $id, 's')) ?>" alt="" loading="lazy"><?php endif; ?>
   <?php elseif ($s === 'bands'): ?>
