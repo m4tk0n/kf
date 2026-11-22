@@ -55,7 +55,8 @@ function dir_delete_contents(string $dir, array $keep = []): int
         $path = $dir . DIRECTORY_SEPARATOR . $name;
         if (is_dir($path) && !is_link($path)) {
             $deleted += dir_delete_contents($path, $keep);
-            if (!@rmdir($path)) {
+            $remaining = array_diff(scandir($path) ?: [], ['.', '..']);
+            if (!$remaining && !@rmdir($path)) {
                 throw new RuntimeException('Nelze odstranit adresář: ' . basename($path));
             }
         } else {
@@ -89,7 +90,7 @@ function log_append(string $relFile, string $line): void
             fwrite($fh, $tail);
         }
         fseek($fh, 0, SEEK_END);
-        fwrite($fh, preg_replace('/[\\r\\n]+/', ' ', $line) . "\\n");
+        fwrite($fh, preg_replace('/[\\r\\n]+/', ' ', $line) . "\n");
         fflush($fh);
         flock($fh, LOCK_UN);
     }
