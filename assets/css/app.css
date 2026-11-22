@@ -43,10 +43,10 @@ abbr{text-decoration:none}
 }
 .brand::first-letter{color:var(--accent)}
 .btn{
-  min-height:42px;display:inline-flex;align-items:center;justify-content:center;
-  padding:0 16px;border:1px solid rgba(255,121,93,.4);border-radius:12px;
+  min-height:32px;display:inline-flex;align-items:center;justify-content:center;
+  padding:0 9px;border:1px solid rgba(255,121,93,.4);border-radius:8px;
   background:rgba(255,121,93,.12);color:#ffad98;
-  font:650 .9rem/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font:650 .82rem/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   white-space:nowrap;cursor:pointer;
 }
 .btn:active{transform:translateY(1px)}
@@ -78,8 +78,8 @@ abbr{text-decoration:none}
 }
 .pg{
   display:inline-flex;align-items:center;justify-content:center;
-  width:42px;height:42px;flex:0 0 42px;
-  border:1px solid var(--line);border-radius:13px;
+  width:34px;height:34px;flex:0 0 34px;
+  border:1px solid var(--line);border-radius:9px;
   background:var(--surface);color:#dce6f3;
   font-size:1.1rem;font-weight:700;
   transition:background .15s,border-color .15s;
@@ -163,10 +163,10 @@ abbr{text-decoration:none}
   .bar{gap:7px;padding-bottom:10px}
   .bar input,.bar select{height:43px;padding-left:10px;font-size:.9rem}
   .bar select{flex-basis:31%;padding-right:23px;background-position:right 7px center}
-  .btn{min-height:40px;padding:0 11px;font-size:.84rem}
+  .btn{min-height:30px;padding:0 8px;font-size:.8rem}
   .main{padding-top:10px}
   .pager{gap:6px;margin-bottom:11px}
-  .pg{width:39px;height:40px;flex-basis:39px;border-radius:11px}
+  .pg{width:32px;height:32px;flex-basis:32px;border-radius:8px}
   .list{gap:8px}
   .item{gap:9px;min-height:78px;padding:11px;border-radius:14px}
   .item-event{padding-left:9px}
