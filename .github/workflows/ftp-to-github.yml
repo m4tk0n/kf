@@ -8,6 +8,9 @@ on:
       - main
     paths:
       - .github/workflows/ftp-to-github.yml
+  schedule:
+    # Check the live FTP server regularly; GitHub may start scheduled runs with a delay.
+    - cron: "*/5 * * * *"
 
 permissions:
   contents: write
@@ -73,6 +76,10 @@ jobs:
               "--exclude-glob .env --exclude-glob '.env.*' "
               "--exclude-glob .git --exclude-glob '.git/**' "
               "--exclude-glob .github --exclude-glob '.github/**' "
+              # Runtime data, uploaded images and cron state belong to the live server.
+              "--exclude-glob data --exclude-glob 'data/**' "
+              "--exclude-glob img --exclude-glob 'img/**' "
+              "--exclude-glob cron --exclude-glob 'cron/**' "
               "--exclude-glob .ftp-deploy-sync-state.json "
               f"{remote} .",
               "bye",
@@ -89,6 +96,9 @@ jobs:
             ! -path './.github/*' \
             ! -name '.env' \
             ! -name '.env.*' \
+            ! -path './data/*' \
+            ! -path './img/*' \
+            ! -path './cron/*' \
             | wc -l)"
           if [ "$FILE_COUNT" -eq 0 ]; then
             echo "No website files were downloaded; refusing to commit an empty replacement."
