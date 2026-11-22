@@ -8,9 +8,6 @@ on:
       - main
     paths:
       - .github/workflows/ftp-to-github.yml
-  schedule:
-    # Check the live FTP server regularly; GitHub may start scheduled runs with a delay.
-    - cron: "*/5 * * * *"
 
 permissions:
   contents: write
