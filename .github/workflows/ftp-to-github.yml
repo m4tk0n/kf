@@ -1,4 +1,5 @@
 name: Import FTP to GitHub
+# Manual sync requested on 2026-11-22: import the live server copy into main.
 
 on:
   workflow_dispatch:
