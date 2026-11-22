@@ -40,7 +40,7 @@ if (!function_exists('session_clear_cookie')) {
         setcookie((string)cfg('session.name'), '', [
             'expires' => time() - 86400,
             'path' => $cookiePath,
-            'secure' => (bool)cfg('session.cookie_secure_auto') && request_is_https(),
+            'secure' => (bool)cfg('session.cookie_secure_auto') ? request_is_https() : true,
             'httponly' => (bool)cfg('session.cookie_httponly'),
             'samesite' => (string)cfg('session.cookie_samesite'),
         ]);
