@@ -118,5 +118,5 @@ jobs:
           fi
 
           git status --short
-          git commit -m "Replace GitHub website files with live FTP copy"
+          git commit -m "Synchronize website files from live FTP server"
           git push origin HEAD:main
