@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 define('KF_ROOT', __DIR__);
 
-$kfCfg = require KF_ROOT . '/config.php';
-$kfSrc = KF_ROOT . '/' . $kfCfg['paths']['src'];
-unset($kfCfg);
-foreach (['core', 'db', 'storage', 'security', 'session', 'http', 'i18n', 'mail'] as $kfModule) {
-    require_once $kfSrc . '/' . $kfModule . '.php';
+// core musí být první (cfg(), env()); ostatní moduly se načítají podle cfg('paths.src')
+require_once KF_ROOT . '/src/core.php';
+
+foreach (['lang', 'catalog'] as $kfModule) {
+    require_once KF_ROOT . '/' . cfg('paths.src') . '/' . $kfModule . '.php';
 }
-unset($kfSrc, $kfModule);
+unset($kfModule);
 
 mb_internal_encoding('UTF-8');
 date_default_timezone_set((string)cfg('app.timezone'));
@@ -27,7 +27,11 @@ set_error_handler(static function (int $no, string $str, string $file, int $line
 
 set_exception_handler(static function (Throwable $e): void {
     try {
-        log_append((string)cfg('storage.error_log_file'), get_class($e) . ': ' . $e->getMessage() . ' @ ' . basename($e->getFile()) . ':' . $e->getLine());
+        @file_put_contents(
+            abs_path((string)cfg('storage.error_log_file')),
+            date('c') . ' ' . get_class($e) . ': ' . $e->getMessage() . ' @ ' . basename($e->getFile()) . ':' . $e->getLine() . "\n",
+            FILE_APPEND | LOCK_EX
+        );
     } catch (Throwable) {
         // logování nesmí způsobit další chybu
     }
