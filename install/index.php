@@ -343,34 +343,29 @@ if ($action === 'install') {
     } catch (Throwable $e) {
         $res = ['ok' => false, 'log' => [['Instalace', false, substr($e->getMessage(), 0, 300)]]];
     }
-    if ($res['ok']) {
-        $prov = inst_oauth_providers();
-        if (count($prov) === 1) {
-            header('Location: ' . inst_login_url($prov[0]), true, 303);
-            exit;
-        }
-    }
     $rows = '';
     foreach ($res['log'] as [$label, $okRow, $msg]) {
         $rows .= '<tr><td>' . e($label) . '</td><td>' . inst_badge($okRow ? 'ok' : 'err') . '</td><td>' . e($msg) . '</td></tr>';
     }
-    $body = '<div class="card"><h2>Výsledek</h2><table>' . $rows . '</table></div>';
+    $body = '<div class="card"><h2>' . ($res['ok'] ? 'Instalace dokončena' : 'Instalace nedokončena') . '</h2>'
+        . '<p>' . ($res['ok'] ? 'Instalace proběhla úspěšně. Níže je přehled skutečně provedených operací.' : 'Instalace skončila chybou. Zkontroluj neúspěšné položky a spusť instalaci znovu.') . '</p>'
+        . '<table><thead><tr><th>Operace</th><th>Stav</th><th>Podrobnosti</th></tr></thead><tbody>' . $rows . '</tbody></table></div>';
     if ($res['ok']) {
-        $body .= '<div class="card"><h2>Vytvoření admina</h2>';
+        $body .= '<div class="card"><h2>První administrátor</h2>';
         $prov = inst_oauth_providers();
         if ($prov) {
-            $body .= '<p>Přihlas se – první běžný uživatel se automaticky stane administrátorem.</p>';
+            $body .= '<p>První běžný uživatel, který se přihlásí, získá roli administrátora.</p>';
             foreach ($prov as $p) {
-                $body .= '<a class="btn" href="' . e(inst_login_url($p)) . '">Vytvořit admina přihlášením přes ' . e(ucfirst($p)) . '</a>';
+                $body .= '<a class="btn" href="' . e(inst_login_url($p)) . '">Vytvořit prvního administrátora přes ' . e(ucfirst($p)) . '</a>';
             }
         } else {
-            $body .= '<p class="warnbox">V <code>.env</code> není nastaven žádný OAuth poskytovatel. Doplň klíče a přihlas se – první přihlášený se stane administrátorem.</p>'
-                . '<a class="btn" href="' . e(url('')) . '">Otevřít aplikaci</a>';
+            $body .= '<p class="warnbox">Není nastaven žádný OAuth poskytovatel. Nejdříve doplň přihlašovací údaje Google nebo Facebook do <code>.env</code>. Poté se vrať do aplikace a přihlas prvního uživatele; ten získá roli administrátora.</p>';
         }
         $body .= '</div>';
-    } else {
-        $body .= '<div class="card warnbox"><p>Instalace skončila chybou. Oprav SQL soubor nebo nastavení a spusť ji znovu.</p></div>';
     }
+    $body .= '<div class="card"><a class="btn" href="' . e(url('install/')) . '">Zpět na úvod instalátoru</a>'
+        . (!$res['ok'] ? '<a class="btn" href="' . e(url('install/')) . '">Spustit instalaci znovu</a>' : '')
+        . '</div>';
     inst_page('Instalace – výsledek', $body);
 }
 
