@@ -29,21 +29,8 @@ function kf_url(array $req, array $over = []): string
 
 function kf_asset(string $rel): string
 {
-    static $versions = [];
-
-    $path = trim((string)cfg('paths.assets'), '/') . '/' . ltrim($rel, '/');
-    if (!isset($versions[$path])) {
-        $file = abs_path($path);
-        clearstatcache(true, $file);
-        $mtime = is_file($file) ? @filemtime($file) : false;
-        $size = is_file($file) ? @filesize($file) : false;
-
-        // Změna času nebo velikosti souboru automaticky změní URL a obejde cache prohlížeče.
-        $versions[$path] = ($mtime !== false ? (string)$mtime : '0')
-            . '-' . ($size !== false ? (string)$size : '0');
-    }
-
-    return url($path . '?v=' . rawurlencode($versions[$path]));
+    $path = (string)cfg('paths.assets') . '/' . $rel;
+    return url($path . '?v=' . (int)@filemtime(abs_path($path)));
 }
 
 function kf_ascii(string $s): string
@@ -87,9 +74,13 @@ function kf_pager(array $nav): string
     $l = $nav['links'];
     $t = $nav['titles'] ?? [];
     foreach (['first', 'prev', 'next', 'last'] as $k) $t[$k] ??= kf_t('pager.' . $k);
+    $cal = $nav['cal'] ?? null; // u akcí je datum tlačítko otevírající kalendář
+    $cur = $cal
+        ? '<button type="button" class="pager-cur" data-cal data-date="' . e($cal['date']) . '" data-cal-url="' . e($cal['cal_url']) . '" data-day-url="' . e($cal['day_url']) . '">' . e($nav['label']) . '</button>'
+        : '<span class="pager-cur">' . e($nav['label']) . '</span>';
     return '<nav class="pager" aria-label="' . e(kf_t('pager.label')) . '">'
         . $btn($l['first'], '&lt;&lt;', $t['first']) . $btn($l['prev'], '&lt;', $t['prev'])
-        . '<span class="pager-cur">' . e($nav['label']) . '</span>'
+        . $cur
         . $btn($l['next'], '&gt;', $t['next']) . $btn($l['last'], '&gt;&gt;', $t['last'])
         . '</nav>';
 }
@@ -170,7 +161,34 @@ function kf_event_nav(array $req, string $d, int $k, int $n, string $qa): array
             'last' => $mf !== null && $full($mf) ? $url($mf, 0) : null,
         ],
         'titles' => ['first' => kf_t('pager.prev_month'), 'last' => kf_t('pager.next_month')],
+        'cal' => [
+            'date' => $d,
+            'cal_url' => url('') . '?' . http_build_query(array_filter(['cal' => '__M__', 'q' => $req['q']], static fn($v): bool => $v !== '')),
+            'day_url' => kf_url($req, ['d' => '__D__', 'k' => 0, 'p' => 1]),
+        ],
     ];
+}
+
+// typy akcí podle dnů v měsíci (YYYY-MM) pro kalendář: [den => [typ, ...]]; vícedenní akce se zapíše do všech dnů
+function kf_calendar(string $month, string $qa): array
+{
+    $first = $month . '-01';
+    $last = (new DateTimeImmutable($first))->format('Y-m-t');
+    [$f, $p] = kf_events_filter($qa);
+    $rows = q('SELECT a.date_from, a.date_to, a.type FROM ' . tbl('events') . ' a WHERE a.date_from <= ? AND a.date_to >= ?' . $f, array_merge([$last, $first], $p))->fetchAll(PDO::FETCH_ASSOC);
+    $days = [];
+    foreach ($rows as $r) {
+        $to = min((string)$r['date_to'], $last);
+        for ($t = new DateTimeImmutable(max((string)$r['date_from'], $first)); $t->format('Y-m-d') <= $to; $t = $t->modify('+1 day')) {
+            $days[(int)$t->format('j')][(int)$r['type']] = true;
+        }
+    }
+    $out = [];
+    foreach ($days as $day => $types) {
+        ksort($types);
+        $out[$day] = array_keys($types);
+    }
+    return $out;
 }
 
 function kf_paged(string $cols, string $from, string $where, array $params, string $order, array $orderParams, array $req, int $per): array

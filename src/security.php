@@ -2,13 +2,18 @@
 // src/security.php
 declare(strict_types=1);
 
+function is_post(): bool
+{
+    return ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST';
+}
+
 function request_is_https(): bool
 {
     $https = strtolower((string)($_SERVER['HTTPS'] ?? ''));
     return ($https !== '' && $https !== 'off') || strtolower((string)($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')) === 'https';
 }
 
-/** IP klienta. Za reverzní proxy se bere poslední adresa z cfg('security.ip_header') (tu přidala proxy; levé části může podvrhnout klient). */
+/** IP klienta. Za reverzní proxy se bere poslední adresa z cfg('security.ip_header') (tu přidala proxy). */
 function client_ip(): string
 {
     static $ip = null;
@@ -26,22 +31,44 @@ function client_ip(): string
     return $ip;
 }
 
+function ua_hash_hex(): string
+{
+    return substr(hash('sha256', (string)($_SERVER['HTTP_USER_AGENT'] ?? '')), 0, 16);
+}
+
+/** Origin/Referer musí patřit hostiteli z BASE_URL. */
+function origin_ok(): bool
+{
+    $base = parse_url((string)env('BASE_URL', ''));
+    $src = (string)($_SERVER['HTTP_ORIGIN'] ?? '');
+    if ($src === '') {
+        $src = (string)($_SERVER['HTTP_REFERER'] ?? '');
+    }
+    if ($src === '' || !is_array($base)) {
+        return false;
+    }
+    $o = parse_url($src);
+    return is_array($o)
+        && strtolower((string)($o['host'] ?? '')) === strtolower((string)($base['host'] ?? ''))
+        && ($o['port'] ?? null) === ($base['port'] ?? null);
+}
+
 /** Bezpečnostní log: čas, IP, user_id, požadavek, důvod, kontext. */
 function security_log(string $reason, array $ctx = []): void
 {
-    $uid = auth_cached_uid();
-    $uri = substr((string)($_SERVER['REQUEST_URI'] ?? ''), 0, 200);
-    $json = $ctx ? substr((string)json_encode($ctx, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), 0, 300) : '';
-    log_append(
-        (string)cfg('storage.security_log_file'),
-        date('c') . "\t" . client_ip() . "\t" . ($uid ?? '-') . "\t" . ($_SERVER['REQUEST_METHOD'] ?? '-') . ' ' . $uri . "\t" . $reason . "\t" . $json
-    );
+    try {
+        $uri = substr((string)($_SERVER['REQUEST_URI'] ?? ''), 0, 200);
+        $json = $ctx ? substr((string)json_encode($ctx, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), 0, 300) : '';
+        log_append(
+            (string)cfg('storage.security_log_file'),
+            date('c') . "\t" . client_ip() . "\t-\t" . ($_SERVER['REQUEST_METHOD'] ?? '-') . ' ' . $uri . "\t" . $reason . "\t" . $json
+        );
+    } catch (Throwable) {
+        // logování nesmí způsobit další chybu
+    }
 }
 
-/**
- * Rate-limit podle IP a skupiny (jediný sdílený soubor). Vrací true, pokud je limit překročen.
- * $count = false jen zjišťuje stav bez započtení.
- */
+/** Rate-limit podle IP a skupiny (jediný sdílený soubor). Vrací true, pokud je limit překročen; $count = false jen zjišťuje stav. */
 function ratelimit_hit(string $bucket, int $max, bool $count = true): bool
 {
     $key = $bucket . '|' . client_ip();
@@ -69,70 +96,5 @@ function ratelimit_purge(array &$d, int $now, int $cap): void
     if ($cap > 0 && count($d) > $cap) {
         uasort($d, static fn(array $a, array $b): int => $b[1] <=> $a[1]);
         $d = array_slice($d, 0, $cap, true);
-    }
-}
-
-/** Cron: vyčistí expirované záznamy rate-limitu. */
-function ratelimit_cleanup(): void
-{
-    $now = time();
-    $cap = (int)cfg('limits.rate_limit_max_entries');
-    json_locked((string)cfg('storage.ratelimit_file'), static function (array &$d) use ($now, $cap): void {
-        ratelimit_purge($d, $now, $cap);
-    });
-}
-
-function send_security_headers(bool $authenticated): void
-{
-    static $sent = false;
-    if ($sent || headers_sent()) {
-        return;
-    }
-    $sent = true;
-    foreach ((array)cfg('security.headers') as $name => $value) {
-        header($name . ': ' . $value);
-    }
-    $csp = cfg('security.csp');
-    if (is_string($csp) && $csp !== '') {
-        header('Content-Security-Policy: ' . $csp);
-    }
-    if ($authenticated && cfg('security.no_store_for_auth')) {
-        header('Cache-Control: no-store');
-        header('Pragma: no-cache');
-    }
-}
-
-/** Podezřelé vstupy (SQLi/XSS vzory) se jen zalogují; blokování řeší prepared statements a escapování. */
-function scan_input(): void
-{
-    if (!cfg('security.scan_input')) {
-        return;
-    }
-    $patterns = (array)cfg('security.suspicious_patterns');
-    $found = null;
-    $walk = static function (mixed $v, string $path, int $depth) use (&$walk, $patterns, &$found): void {
-        if ($found !== null || $depth > 4) {
-            return;
-        }
-        if (is_array($v)) {
-            foreach ($v as $k => $item) {
-                $walk($item, $path . '[' . $k . ']', $depth + 1);
-            }
-            return;
-        }
-        if (!is_string($v) || $v === '' || strlen($v) > 4000) {
-            return;
-        }
-        foreach ($patterns as $i => $re) {
-            if (@preg_match((string)$re, $v) === 1) {
-                $found = ['field' => substr($path, 0, 60), 'pattern' => $i, 'sample' => substr($v, 0, 80)];
-                return;
-            }
-        }
-    };
-    $walk($_GET, 'GET', 0);
-    $walk($_POST, 'POST', 0);
-    if ($found !== null) {
-        security_log('suspicious_input', $found);
     }
 }

@@ -1,1 +1,30 @@
-document.addEventListener('DOMContentLoaded',()=>{const form=document.getElementById('manual-form');if(!form)return;document.querySelectorAll('[data-check-all]').forEach(button=>button.addEventListener('click',()=>{const name=button.dataset.checkAll;form.querySelectorAll('input[name="'+name+'[]"]:not(:disabled)').forEach(input=>input.checked=true);update();}));document.querySelectorAll('[data-uncheck-all]').forEach(button=>button.addEventListener('click',()=>{const name=button.dataset.uncheckAll;form.querySelectorAll('input[name="'+name+'[]"]').forEach(input=>input.checked=false);update();}));const summary=document.getElementById('selection-summary');const confirmation=form.querySelector('input[type="checkbox"][required]');const count=name=>form.querySelectorAll('input[name="'+name+'[]"]:checked').length;function update(){summary.textContent='Ke smazání: '+count('drop_tables')+' tabulek · Struktura: '+count('schema_files')+' SQL souborů · Počáteční data: '+count('seed_files')+' SQL souborů.';}form.addEventListener('change',update);form.addEventListener('submit',event=>{const drops=count('drop_tables');const schemas=count('schema_files');const seeds=count('seed_files');if(!confirmation.checked){event.preventDefault();return;}if(!drops&&!schemas&&!seeds){event.preventDefault();alert('Nejsou vybrány žádné operace.');return;}const message='Provést vybrané operace?\n\nTabulky ke smazání: '+drops+'\nSQL struktura: '+schemas+'\nSQL data: '+seeds+'\n\nTuto akci nelze vrátit.';if(!window.confirm(message))event.preventDefault();});update();});
+/* install/assets/installer.js */
+(function () {
+  'use strict';
+
+  function boxes(name) {
+    return document.querySelectorAll('input[name="' + name + '[]"]:not(:disabled)');
+  }
+  function setAll(name, state) {
+    Array.prototype.forEach.call(boxes(name), function (b) { b.checked = state; });
+    summary();
+  }
+  function count(name) {
+    return Array.prototype.filter.call(boxes(name), function (b) { return b.checked; }).length;
+  }
+  function summary() {
+    var box = document.getElementById('selection-summary');
+    if (!box) return;
+    box.textContent = 'Smazat tabulek: ' + count('drop_tables') + ' · SQL struktura: ' + count('schema_files') + ' · SQL data: ' + count('seed_files');
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-check-all]'), function (b) {
+    b.addEventListener('click', function () { setAll(b.getAttribute('data-check-all'), true); });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-uncheck-all]'), function (b) {
+    b.addEventListener('click', function () { setAll(b.getAttribute('data-uncheck-all'), false); });
+  });
+  var form = document.getElementById('manual-form');
+  if (form) form.addEventListener('change', summary);
+  summary();
+})();

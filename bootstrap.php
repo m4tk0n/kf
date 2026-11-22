@@ -7,7 +7,7 @@ define('KF_ROOT', __DIR__);
 // core musí být první (cfg(), env()); ostatní moduly se načítají podle cfg('paths.src')
 require_once KF_ROOT . '/src/core.php';
 
-foreach (['lang', 'catalog'] as $kfModule) {
+foreach (['storage', 'security', 'lang', 'catalog'] as $kfModule) {
     require_once KF_ROOT . '/' . cfg('paths.src') . '/' . $kfModule . '.php';
 }
 unset($kfModule);
