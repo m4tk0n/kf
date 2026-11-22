@@ -1,5 +1,5 @@
 name: Import FTP to GitHub
-# Manual sync requested on 2026-11-22: import the live server copy into main.
+# Incrementally synchronize the live FTP website into main.
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   import:
-    name: Replace website files in main with the live FTP copy
+    name: Incrementally synchronize website files from FTP
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -26,26 +26,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Remove old website files from the GitHub working tree
-        run: |
-          set -euo pipefail
-          # Keep Git metadata, workflow definitions, environment files and the
-          # FTP deploy state file. All website/application files are replaced
-          # by the files downloaded from the live server in the next step.
-          find . -mindepth 1 -maxdepth 1 \
-            ! -name '.git' \
-            ! -name '.github' \
-            ! -name '.env' \
-            ! -name '.env.*' \
-            ! -name '.ftp-deploy-sync-state.json' \
-            -exec rm -rf -- {} +
-
       - name: Install lftp
         run: |
           sudo apt-get update
           sudo apt-get install -y lftp
 
-      - name: Download complete website from FTP
+      - name: Download changed files and remove deleted server files
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -80,12 +66,14 @@ jobs:
               "set net:timeout 30",
               f"open -p {port} {server}",
               f"user {username} {password}",
-              # Download only; the local working tree was cleared above.
-              # Never import secrets, Git metadata, or workflow definitions.
-              "mirror --verbose --parallel=2 "
+              # Unchanged files stay untouched; new/changed files are downloaded.
+              # --delete removes local website files that no longer exist on FTP.
+              # Excluded paths are protected from transfer and deletion.
+              "mirror --verbose --delete --parallel=2 "
               "--exclude-glob .env --exclude-glob '.env.*' "
               "--exclude-glob .git --exclude-glob '.git/**' "
               "--exclude-glob .github --exclude-glob '.github/**' "
+              "--exclude-glob .ftp-deploy-sync-state.json "
               f"{remote} .",
               "bye",
           ]
