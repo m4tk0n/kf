@@ -52,7 +52,7 @@ abbr{text-decoration:none}
 .btn:active{transform:translateY(1px)}
 .bar{display:flex;align-items:center;gap:9px;padding-bottom:13px}
 .bar input,.bar select{
-  height:46px;min-width:0;border:1px solid var(--line);border-radius:13px;
+  height:32px;min-width:0;border:1px solid var(--line);border-radius:8px;
   background:var(--surface);color:var(--text);
   font:inherit;padding:0 13px;outline:none;
 }
@@ -161,7 +161,7 @@ abbr{text-decoration:none}
   .wrap{padding-left:11px;padding-right:11px}
   .top{height:54px}
   .bar{gap:7px;padding-bottom:10px}
-  .bar input,.bar select{height:43px;padding-left:10px;font-size:.9rem}
+  .bar input,.bar select{height:30px;padding-left:10px;font-size:.8rem}
   .bar select{flex-basis:31%;padding-right:23px;background-position:right 7px center}
   .btn{min-height:30px;padding:0 8px;font-size:.8rem}
   .main{padding-top:10px}
