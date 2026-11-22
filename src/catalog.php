@@ -29,8 +29,21 @@ function kf_url(array $req, array $over = []): string
 
 function kf_asset(string $rel): string
 {
-    $path = (string)cfg('paths.assets') . '/' . $rel;
-    return url($path . '?v=' . (int)@filemtime(abs_path($path)));
+    static $versions = [];
+
+    $path = trim((string)cfg('paths.assets'), '/') . '/' . ltrim($rel, '/');
+    if (!isset($versions[$path])) {
+        $file = abs_path($path);
+        clearstatcache(true, $file);
+        $mtime = is_file($file) ? @filemtime($file) : false;
+        $size = is_file($file) ? @filesize($file) : false;
+
+        // Změna času nebo velikosti souboru automaticky změní URL a obejde cache prohlížeče.
+        $versions[$path] = ($mtime !== false ? (string)$mtime : '0')
+            . '-' . ($size !== false ? (string)$size : '0');
+    }
+
+    return url($path . '?v=' . rawurlencode($versions[$path]));
 }
 
 function kf_ascii(string $s): string
