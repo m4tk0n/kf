@@ -9,24 +9,24 @@ $kind = ['events' => 'event', 'bands' => 'band', 'venues' => 'venue'][$s];
 <?php if (!$rows): ?>
   <p class="empty"><?= e(kf_t('empty')) ?></p>
 <?php else: ?>
-<ul class="list">
+<ul class="list list-<?= e($s) ?>">
 <?php foreach ($rows as $r):
     $id = (int)$r['id'];
     $place = e($r['city']) . ' <abbr title="' . e($r['country']) . '">(' . e($r['iso2']) . ')</abbr>';
 ?>
-  <li><a class="item" href="<?= e(kf_detail_url($kind, $id)) ?>">
+  <li><a class="item<?= $s === 'events' ? ' item-event item-type-' . (int)$r['type'] : ' item-' . e($kind) ?>" href="<?= e(kf_detail_url($kind, $id)) ?>">
   <?php if ($s === 'events'): ?>
     <span class="date"><?= e(kf_date_range($r['date_from'], $r['date_to'])) ?></span>
     <span class="body">
       <strong class="name"><?= e($r['name']) ?></strong>
-      <span class="meta"><?= $r['venue'] !== null ? e($r['venue']) . ' · ' : '' ?><?= $place ?></span>
+      <span class="meta"><?= $r['venue'] !== null ? '<span class="meta-venue">' . e($r['venue']) . '</span> <span class="meta-sep">·</span> ' : '' ?><?= $place ?></span>
       <span class="tags"><span class="tag t<?= (int)$r['type'] ?>"><?= e(kf_t('type.' . (int)$r['type'])) ?></span><?= $r['time_start'] !== null ? ' <span class="time">' . e(substr($r['time_start'], 0, 5)) . '</span>' : '' ?></span>
     </span>
     <?php if ((int)$r['flyer'] === 1): ?><img class="thumb" src="<?= e(kf_img('events', $id, 's')) ?>" alt="" loading="lazy"><?php endif; ?>
   <?php elseif ($s === 'bands'): ?>
     <span class="body">
       <strong class="name"><?= e($r['name']) ?></strong>
-      <span class="meta"><?= $place ?><?= $r['genre'] !== null ? ' · ' . e($r['genre']) : '' ?></span>
+      <span class="meta"><?= $place ?><?= $r['genre'] !== null ? ' <span class="meta-sep">·</span> ' . e($r['genre']) : '' ?></span>
     </span>
     <?php if ((int)$r['logo'] === 1): ?><img class="thumb" src="<?= e(kf_img('bands', $id, 's')) ?>" alt="" loading="lazy"><?php endif; ?>
   <?php else: ?>
