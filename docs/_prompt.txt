@@ -1,0 +1,196 @@
+﻿// _prompt.txt
+
+Cíl:
+Vytvoř responzivní webovou aplikaci (katalog koncertů, festivalů, klubů a kapel) v čistém PHP 8.3+ (PDO, GD, mbstring, json, curl; případně imagick), MySQL 8.0 (utf8mb4) a čistém HTML/CSS/vanilla JS bez externích frameworků. Běží na hostingu Webzdarma.cz pod URL `BASE_URL` (např. `https://7x.wz.cz/_kf/`).
+
+Ověřené prostředí hostingu (Webzdarma.cz / `7x.wz.cz`):
+- PHP 8.3.36 (FPM/FastCGI), časová zóna `Europe/Prague`, `memory_limit` 256M, `max_execution_time` 60s, `upload_max_filesize` / `post_max_size` 64M.
+- Aktivní rozšíření: `pdo_mysql`, `gd` (včetně podpory WebP), `mbstring`, `json`, `curl`, `openssl` (OpenSSL 3.5.8), `imagick` (ImageMagick 7.1.2 s podporou WebP).
+- Zend OPcache běží s `opcache.revalidate_freq = 2` a `validate_timestamps = On`.
+- Aplikace běží za reverzní proxy / HTTPS (`$_SERVER['HTTPS'] = 1`, `$_SERVER['HTTP_X_FORWARDED_PROTO'] = https`) – cookie přihlášení se proto musí nastavovat explicitně přes `setcookie()` s polem voleb (PHP `session_start()` se nepoužívá) (`httponly => true`, `samesite => 'Lax'`, `secure` podle HTTPS).
+- Zakázané funkce (`disable_functions` zahrnuje mj. `exec`, `shell_exec`, `system`, `passthru`, `proc_open`, `putenv`, `symlink`, `disk_free_space`) – nespoléhat na shell příkazy ani na `putenv()`, vše řešit čistě v PHP/cURL/PDO/souborech.
+
+Limity hostingu a hybridní architektura DB + JSON (kritické):
+- Limity serveru:
+  - databáze max 200 MB,
+  - počet souborů (inodes) max 100 000,
+  - prostor na disku 15 GB,
+  - limit odchozích e-mailů max 30/hod (`cfg('limits.emails_per_hour')`).
+- V databázi se ukládají pouze nejnutnější data potřebná pro výpisy, filtrování, vyhledávání, řazení a vazby (ID, slug, název, datum/čas, cizí klíče na město/klub/žánr/kapelu, role, stavy).
+- Pro kalendář a akce se používá vždy jedna společná tabulka (nikdy samostatná tabulka pro každý letopočet), se správným indexem na datum pro rychlé přecházení mezi roky/obdobími i vícedenní akce.
+- Veškeré detailní texty a doplňková metadata se ukládají do JSON souborů v `data/` rozdělených do `bucketů` (číslo podsložky vypočtené celočíselným dělením `id` děličem z konfigurace, např. `floor(id / cfg('img.folder_divisor'))`, např. `data/events/0/15.json`, `data/bands/0/42.json`, `data/venues/0/8.json`):
+  - V JSONu detailu jsou uloženy: dlouhý popis, www, kontakty (e-mail, telefon), přesná adresa a GPS souřadnice klubu, a příznak velkého obrázku pro detail (`flyer_l` / `logo_l` / `img_l`).
+- V databázi se nikdy neukládají celé názvy ani cesty obrázků ani JSON souborů:
+  - U obrázků je v DB pouze jednobajtový příznak existence (`TINYINT(1) UNSIGNED NOT NULL DEFAULT 0`, výchozí `0`/NULL): `flyer` u akcí, `logo` u kapel, `img` u klubů.
+  - Pokud je příznak `1` (např. `logo=1` u kapely důležité pro výpis kapel, nebo `flyer=1` u akce pro výpis akcí), názvy a cesty souborů pro obrázky (ve formátu WebP) i pro JSON soubory (včetně `bucket` podsložky) se vždy skládají dynamicky v kódu z `id` záznamu, příslušných údajů z DB (např. typ entity) a nastavení v `cfg()`.
+  - Při smazání záznamu se smažou i jeho příslušné soubory obrázků a JSON detailu. Vazby `event_bands` se mažou přes `ON DELETE CASCADE`.
+- Úspora souborů (inodes < 100 000) a DB (200 MB):
+  - Používat nejmenší vhodné typy v MySQL (`TINYINT UNSIGNED` pro flagy, role, stavy, enumy a `countries.id`; `SMALLINT UNSIGNED` pro města/žánry/kluby; `MEDIUMINT UNSIGNED` pro akce/kapely/uživatele; `CHAR(2)` / `CHAR(3)` ASCII pro `countries.iso2` / `countries.iso3`; `DECIMAL(8,5)` / `DECIMAL(9,5)` pro GPS; `TEXT` místo `MEDIUMTEXT`/`LONGTEXT`; nepovinné hodnoty jako `NULL`).
+  - Žádné logy ani cron v DB (jedinou výjimkou je malá tabulka `sessions` pro přihlášení). Rate-limit (`data/ratelimit.json`), bezpečnostní log (`data/security.log`), fronta e-mailů (`data/mail_queue.json`) a stav cronu (`cron/cron_state.json`, `cron/cron.lock`) používají fixní sdílené soubory zamykané přes `flock()` – nikdy nevytvářet samostatný soubor na každou IP, požadavek, e-mail nebo kombinaci filtrů (žádná per-page / per-filter souborová cache).
+  - Po schválení nebo zamítnutí návrhu ve frontě `pending` se záznam zpracuje/přesune a z `pending` se odstraňuje, aby fronta nebobtnala.
+  - Udržovat kompaktní, modulární architekturu zdrojových souborů místo zbytečného tříštění na stovky miniaturních souborů.
+- Struktura DB (závazná; všechny tabulky s prefixem `cfg('db.prefix')`, názvy tabulek z `cfg('db.tables')`):
+  - `countries`: `id TINYINT UNSIGNED`, `iso2 CHAR(2)` (ASCII, unikátní), `iso3 CHAR(3)` (ASCII, unikátní), `name_cs`, `name_en`. Součástí je `install/sql/seed/20_countries.sql` s kompletním ISO 3166-1 (cs + en). Název sloupce se skládá jako `name_` + jazyk ověřený proti `cfg('app.supported_langs')`, nikdy ze surového vstupu.
+  - `cities`: `id SMALLINT UNSIGNED`, `country_id` (FK na `countries.id`), `name`, `name_ascii`.
+  - `events`, `bands` a `venues` nemají sloupec státu, mají pouze `city_id` (FK na `cities.id`); stát ve výpisech a ve filtrech se získává JOINem `cities` -> `countries`.
+  - `name_ascii` (název bez diakritiky, malými písmeny) u `events`, `bands`, `venues`, `cities` a `genres` s indexem pro prefixové vyhledávání (`LIKE 'abc%'`) v našeptávači.
+  - Vazební tabulka `event_bands` (`event_id`, `band_id`, pořadí, `TIME NULL` = čas vystoupení) pro seznam kapel u akce.
+  - `users`: `id`, `provider` (0 = systémový účet, 1 = Google, 2 = Facebook; `cfg('enums.oauth_provider')`) + `provider_uid` (unikátní dvojice, podle ní se uživatel pozná; nikdy podle e-mailu), `display_name`, `role`, `user_state`, `approved_count` (počítadlo schválených příspěvků pro povýšení na `trusted`), `created_at`, `last_login_at`. E-mail, avatar, jazyk a uložené filtry jsou v JSON profilu v `data/users/`. Řádek s `id = cfg('users.ai_user_id')` (1) je systémový účet AI (`provider = 0`), který zakládá instalátor: nelze se na něj přihlásit (nevzniká pro něj session), nelze ho smazat, suspendovat ani mu změnit roli a nikdy se nepovyšuje na `trusted`.
+  - `sessions`: `token_hash BINARY(32)` (primární klíč, SHA-256 náhodného tokenu z cookie), `user_id` (FK na `users`, `ON DELETE CASCADE`), `ua_hash`, `created_at`, `last_seen_at`, `expires_at` (unixové časy, `INT UNSIGNED`), indexy na `user_id` a `expires_at`.
+  - Cizí klíče `created_by` na `users` jsou `ON DELETE SET NULL`, aby publikované záznamy přežily smazání účtu.
+  - `pending`: typ, `created_by` (FK na `users`; záznamy od AI mají `created_by = cfg('users.ai_user_id')`), `title`, `name_ascii` a `date_from` pro hledání duplicit, `source_url` pro deduplikaci záznamů od AI; detaily návrhu jsou v JSON `cfg('storage.json_buckets.pending')`.
+
+Architektura, konfigurace a verzování:
+- Aplikace se striktně řídí soubory `config.php` a `.env`.
+- `.env` obsahuje pouze tajné údaje a parametry prostředí (DB, `TABLE_PREFIX`, `BASE_URL`, `APP_KEY`, `AI_WRITE_KEY`, OAuth klíče, `MAIL_TRANSPORT` / `MAIL_FROM*`, rezervní `SMTP_*`, `INSTALL_KEY`).
+- Veškerá ostatní nastavení se čtou výhradně přes `cfg('sekce.klic')` – v kódu nesmí být žádné pevně zapsané limity, cesty, velikosti obrázků ani výchozí hodnoty.
+- Všechny DB tabulky používají prefix z `cfg('db.prefix')`.
+- Všechny vkládané CSS a JS soubory mají v URL parametr podle `filemtime()` (např. `app.css?v=1732045123`), aby se po úpravě vždy načetla aktuální verze.
+- Plná podpora jazyků `cs` a `en` ze složky `cfg('paths.lang')` včetně pravidel množného čísla `cfg('plural')`.
+
+Dvojjazyčnost (CZ / EN), dva datové soubory, detekce prohlížeče a uživatelské nastavení:
+- Aplikace je plně dvojjazyčná (`cs` a `en`) a opírá se o dva jazykové datové soubory ve složce `cfg('paths.lang')` (např. `lang/cs.php` a `lang/en.php`, případně JSON/PHP datové soubory překladů) včetně pravidel množného čísla `cfg('plural')`.
+  - Názvy zemí nejsou v jazykových souborech, ale v DB (`countries.name_cs`, `countries.name_en`); sloupec se vybírá podle aktivního jazyka ověřeného proti `cfg('app.supported_langs')`.
+- Nepřihlášený uživatel (`guest`):
+  - Při prvním načtení (pokud nemá explicitní volbu) se jazyk automaticky určí podle jazyka prohlížeče (např. z hlavičky `$_SERVER['HTTP_ACCEPT_LANGUAGE']` / preferencí prohlížeče, přičemž čeština/slovenština/příbuzné nebo preferovaný `cs`/`en` se namapuje na `cs` nebo `en`, s fallbackem na `cfg('app.default_lang')`).
+- Přihlášený uživatel (`user`, `trusted`, `moderator`, `admin`):
+  - V sekci nastavení / profilu si může nastavit, jaký jazyk (`cs` nebo `en`) chce zobrazovat **nezávisle na jazyku prohlížeče**.
+  - Tato volba se uloží do jeho uživatelského JSON profilu v `data/users/` (a/nebo session po načtení profilu z DB/JSON) a má přednost před jazykem prohlížeče, dokud ji uživatel sám nezmění.
+
+
+Formátování výstupních souborů:
+- První řádek každého vygenerovaného souboru je komentář s jeho přesnou relativní cestou a názvem (např. `/* assets/css/app.css */`, `<!-- templates/layout.php -->`, `-- install/sql/tables/10_users.sql`, `# env.example`), aby bylo u každého bloku kódu jednoznačné, o jaký soubor jde a kam patří. U PHP souborů je první řádek `<?php` a komentář s cestou (např. `// cron/cron.php`) je hned na druhém řádku. U souborů, které komentář nepřipouštějí (např. JSON), se cesta uvede jen nad blokem kódu.
+- Každý soubor vracej vždy kompletní, bez zkracování nebo vynechávání částí kódu.
+
+Bezpečnost a oprávnění (kritické):
+- Veškeré ověřování práv probíhá výhradně na serveru (session z tabulky `sessions` + kontrola aktuální role a `user_state` z DB při každém chráněném požadavku). Nikdo nesmí mít možnost přes inject, úpravu cookie nebo parametrů nasimulovat práva `user` / `trusted` / `moderator` / `admin`.
+- Nepřihlášený ani neoprávněný uživatel nesmí vidět ani v HTML kódu stránky položky menu jiných rolí a přímý přístup na chráněnou URL/akci bez oprávnění musí vrátit HTTP 403 a zalogovat incident.
+- Bezpečnostní log (`data/security.log`, s automatickou rotací velikosti): zaznamenávat pokusy o narušení, neplatné CSRF tokeny, pokusy o neoprávněný přístup/podvržení role, podezřelé vstupy (pokusy o SQLi/XSS), neplatné API klíče a opakované překročení rate-limitu (IP, čas, user_id, URL, důvod).
+- Veškeré DB dotazy přes PDO prepared statements, výstupy escapované (`htmlspecialchars`), formuláře chráněné CSRF tokenem, session cookie s `HttpOnly`, `Secure` a `SameSite=Lax`.
+- Odchozí HTTP požadavky (stažení obrázku z URL, případný interní AI import) jdou jen přes jednu společnou funkci řízenou `cfg('http.*')`: povolená schémata, blokace privátních, loopback a link-local IP (kontrola po DNS překladu i po každém přesměrování, ochrana proti SSRF), limit přesměrování, velikosti a timeoutu. Stažený i nahraný obrázek se vždy ověří (MIME, rozměry) a znovu uloží přes GD/Imagick do WebP.
+- Adresáře `data/` a `cron/` a soubor `.env` musí být chráněné proti přímému přístupu z webu (`.htaccess`, případně umístění mimo webroot). `data/ratelimit.json` se při zápisu čistí od expirovaných záznamů.
+- Přihlášení, session a ochrana proti podvrhu (kritické; vlastní implementace, PHP `session_start()` se nepoužívá):
+  - V cookie je jen náhodný token (`cfg('session.token_bytes')` bajtů z `random_bytes()`), v tabulce `sessions` pouze jeho SHA-256, takže únik DB neumožní převzít session. Cookie: `HttpOnly`, `Secure`, `SameSite=Lax`, `Path` odvozená z `BASE_URL` (nebo `cfg('session.cookie_path')`), bez `Domain`.
+  - Role ani `user_state` se nikdy neukládají do cookie ani do session; při každém chráněném požadavku se načtou z `users` (JOIN přes `sessions`). Uživatel, který není `active`, je okamžitě odhlášen (session smazána), dostane 403 a incident se zaloguje.
+  - Nový token se vytvoří při každém přihlášení (ochrana proti session fixation). Neznámý nebo expirovaný token se ignoruje a započítává do rate-limitu (`cfg('limits.auth_fail_max_hits')`) a do bezpečnostního logu. Platí absolutní limit `cfg('session.lifetime_sec')` a limit neaktivity `cfg('session.idle_sec')`; `last_seen_at` se aktualizuje nejvýše jednou za `cfg('session.touch_interval_sec')`. Při změně User-Agentu (`ua_hash`, při `cfg('session.check_user_agent')`) se session zruší a incident se zaloguje; na IP adresu se session neváže (mobilní sítě).
+  - Odhlášení, suspend, změna role i smazání účtu smažou všechny session daného uživatele. Expirované řádky maže cron (`session_cleanup`).
+  - CSRF token je odvozený z tokenu session přes HMAC s `APP_KEY`; každý POST ho vyžaduje a při `cfg('security.csrf_origin_check')` se navíc kontroluje `Origin`/`Referer` proti `BASE_URL`. Změny stavu nikdy nejdou přes GET.
+  - OAuth: parametr `state` je podepsaný (HMAC s `APP_KEY`) a vázaný na krátce platnou cookie (`cfg('session.oauth_state_cookie')`); Google používá PKCE (`cfg('oauth.google.pkce')`). Účty se spojují výhradně podle `provider` + `provider_uid`, nikdy podle e-mailu. Roli nikdy nepřiděluje klient ani e-mail: první uživatel po čisté instalaci se stane `admin`, další dostanou `user`. Parametr návratu po přihlášení smí být jen relativní cesta v rámci aplikace.
+  - Oprávnění se rozhodují na jediném místě (`can(akce, záznam)`); role, `user_id` ani `created_by` se z formulářů a URL nikdy nečtou. Uživatel upravuje jen vlastní návrhy, moderátor nemůže měnit účty adminů. Role a `user_state` smí měnit jen admin; nelze odebrat roli ani suspendovat sebe a posledního admina a všechny tyto akce se zapisují do bezpečnostního logu.
+  - Citlivé akce (smazání účtu, změna role nebo `user_state`) vyžadují nedávné přihlášení (`cfg('session.fresh_sec')`).
+  - Všechny odpovědi posílají bezpečnostní hlavičky z `cfg('security.headers')` a `cfg('security.csp')` (skripty jen z vlastního původu, bez inline JS); stránky přihlášeného uživatele mají `Cache-Control: no-store` (`cfg('security.no_store_for_auth')`).
+
+Uživatelské role a přihlášení:
+- Přihlášení přes Google a Facebook OAuth 2.0 (bez Composeru, čisté cURL, konfigurace z `cfg('oauth.*')`). Verze Facebook Graph API se čte z `cfg('oauth.facebook.api_version')` (URL v configu obsahují zástupný znak `{version}`).
+- Role podle `cfg('enums.role')`:
+  - `guest` (nepřihlášený): pouze prohlížení veřejných stránek.
+  - `1` (`user`): přihlášený uživatel, může přidávat návrhy akcí, klubů, kapel, měst a žánrů do fronty `pending` (v rámci limitů `cfg('limits')`).
+  - `2` (`trusted`): ověřený uživatel (automatické povýšení z `user` po dosažení počtu schválených příspěvků dle `cfg('limits.trusted_after')` = 5, evidovaného v `users.approved_count`) – jeho nové příspěvky se ukládají rovnou jako schválené a publikované bez čekání v `pending`.
+  - `3` (`moderator`): může přidávat do `pending`, upravovat záznamy a schvalovat/zamítat položky ve frontě `pending`.
+  - `4` (`admin`): vše jako moderátor + správa uživatelských účtů (role, `user_state`), správa nastavení a systémových přehledů.
+
+Hlavička, avatar a uživatelské menu:
+- Nepřihlášený uživatel vidí tlačítko „Přihlásit se“.
+- Přihlášený uživatel vidí místo tlačítka kulatý avatar (fotka z Google/Facebook účtu, nebo při její absenci/chybě barevné kolečko s prvním písmenem zobrazovaného jména).
+- Avatar funguje zároveň jako rozbalovací menu vykreslené na serveru čistě podle role přihlášeného uživatele:
+  - `user` / `trusted`: + Přidat akci, + Přidat kapelu, + Přidat klub, Moje návrhy, Profil, Filtry, Odhlásit se.
+  - `moderator`: navíc položka „Ke schválení (počet)“.
+  - `admin`: navíc položka „Uživatelé“ a „Nastavení“.
+- Sekce **Profil**:
+  - Možnost změnit zobrazované jméno.
+  - Zobrazení registrovaného e-mailu (pouze pro čtení).
+  - Možnost smazat účet (po potvrzení smaže uživatelský účet a osobní údaje; již publikované akce/kapely/kluby v katalogu zůstanou zachovány s `created_by = NULL`; smaže se i JSON profil, session a nevyřízené návrhy v `pending` včetně jejich souborů; akce vyžaduje nedávné přihlášení).
+- Sekce **Filtry**:
+  - Přihlášený uživatel si může vybrat a uložit (do JSON profilu uživatele v `data/users/`), co chce pouze zobrazovat ve výpisech (na výběr z dostupných států, klubů, měst, žánrů a kapel).
+  - Ve výpisech má pak možnost své uložené filtry jedním kliknutím zapnout nebo vypnout.
+
+Průběh přidávání položek, náhled a nahrávání obrázků:
+- Přidávání akce, kapely, klubu (a dalších podporovaných typů) probíhá ve dvou krocích přes dočasný stav (bez předčasného zápisu do ostrých tabulek či fronty `pending`):
+  1. Uživatel vyplní formulář a klikne na odeslání/náhled.
+  2. Zobrazí se reálný náhled ve stejné podobě jako `[event_detail]`, `[band_detail]` nebo `[venue_detail]` s rozpracovanými daty.
+  3. Pod náhledem jsou tři tlačítka:
+     - **Upravit**: vrátí zpět do formuláře se zachovanými zadanými údaji.
+     - **Odeslat**: finálně odešle záznam (pro `user` do fronty `pending`, pro `trusted`/`moderator`/`admin` rovnou publikuje).
+     - **Zrušit**: kompletně zruší aktuální rozpracování a otevře nový, čistý formulář.
+- Limity rozpracovaných/čekajících položek v `pending`: kontrolovat limity na uživatele zvlášť podle typu položky (např. max 5 čekajících položek pro `event`, `band`, `venue`, `genre` atd. dle konfigurace) i denní limit odeslání.
+- Obrázky (plakát / logo / foto):
+  - Podporovat nahrání souboru z disku i zadání URL odkazu z internetu.
+  - V UI zobrazit okamžitý náhled vybraného obrázku ihned po výběru souboru nebo zadání URL, aby si uživatel mohl ověřit správný obrázek ještě před odesláním.
+  - Obrázek z rozpracovaného formuláře se do dokončení (Odeslat/Zrušit) ukládá do `cfg('storage.tmp_dir')` pod náhodným názvem svázaným se session (jeden dočasný soubor na obrázek a rozpracování); při Odeslat se přesune na finální místo, při Zrušit se smaže. Osiřelé soubory starší než `cfg('storage.tmp_ttl_sec')` maže cron.
+  - Rozpracovaný formulář (draft) se ukládá do jednoho souboru na uživatele (`cfg('storage.draft_file')`), ne do session; smaže se při Odeslat/Zrušit nebo po `cfg('storage.tmp_ttl_sec')`.
+
+Stránky, výpisy a detaily (každá položka ve výpisu odkazuje na detail):
+- Společné chování výpisů: filtrování, fulltextové vyhledávání s našeptávačem (`cfg('paging.autocomplete*')`), stránkování (`cfg('paging.*')`) se zachováním aktivních filtrů v URL, lightbox náhled obrázků (kliknutí na plakát/logo zobrazí větší náhled přes obrazovku, další kliknutí nebo Esc náhled zavře).
+- Výpis klubů (`[venues]`):
+  - Zobrazuje: název, (stát), město (data z DB).
+- Výpis kapel (`[bands]`):
+  - Zobrazuje: malé logo pokud `logo=1` (`band.s`), název, (stát), město, genre (data z DB).
+- Výpis akcí (`[events]`):
+  - Zobrazuje: menší plakát pokud `flyer=1` (`event.s`), název, (stát) město, pokud je přiřazen klub tak i klub, typ (koncert/festival/ostatní), datum (`23.10.` pro jednodenní nebo `13.–25.10.` pro vícedenní), čas začátku (data z DB).
+- Detail klubu (`[venue_detail]` – DB + `data/venues/{bucket}/{id}.json`):
+  - Fotka (`venue.l`), název, adresa, www, kontakt, popis.
+  - Přímé GPS odkazy: Mapy.com, Google Maps, Maps.me.
+  - Minulé / předcházející akce v klubu: `datum yyyy-mm-dd {název akce}` (odkaz na `event_detail`).
+  - Budoucí / nadcházející akce v klubu: `datum yyyy-mm-dd {název akce}` (odkaz na `event_detail`).
+- Detail kapely (`[band_detail]` – DB + `data/bands/{bucket}/{id}.json`):
+  - Větší plakát/logo pokud je v JSON (`band.l`, po kliknutí na logo se zobrazí větší náhled přes obrazovku, další kliknutí náhled zavře).
+  - Název, genre, (stát) město, kontakt (e-mail, telefon), www kapely, popis.
+  - Odehrané / minulé akce kapely: `datum yyyy-mm-dd {název akce}` (odkaz na `event_detail`).
+  - Budoucí / nadcházející akce kapely: `datum yyyy-mm-dd {název akce}` (odkaz na `event_detail`).
+- Detail akce (`[event_detail]` – DB + `data/events/{bucket}/{id}.json`):
+  - Větší plakát pokud je v JSON (`event.l`, po kliknutí na plakát se zobrazí větší náhled přes obrazovku, další kliknutí náhled zavře).
+  - Název, datum, koncert/festival, (stát) město, název venue = odkaz na `venue_detail` (pokud je klub), www eventu, popis eventu (např. informace o tom, že otevřeno je 3 hodiny předem, nebo že na festival lze dojet den předem apod.), kontakt (e-mail, telefon).
+  - Seznam kapel pod sebou (u každé případně i čas vystoupení, pokud je znám; název kapely = odkaz na `band_detail`).
+
+Cron (`cron/cron.php`), fronta e-mailů a postup automatického AI importu:
+- Na Webzdarma nefunguje systémový cron, proto bude v `index.php` vloženo `require_once __DIR__ . '/cron/cron.php';`. Je-li zapnuto `cfg('cron.after_response')` a existuje `fastcgi_finish_request()`, cron se spustí až po odeslání odpovědi návštěvníkovi.
+- Veškeré nastavení a soubory cronu jsou v adresáři `cron/` (chráněném přes `.htaccess` proti přímému přístupu z webu).
+- Cron běží přes soubory: kontroluje se časová platnost, zámek proti souběhu (`cron.lock`) a poslední použití (`cron_state.json`). Aby se nespomalil server ani načítání stránky pro uživatele, zpracovává požadavky jen po malých dávkách (omezené množství na jeden běh) a bezpečně zachytává síťové chyby/timeouty.
+- Součástí cronu je také odesílání e-mailů z fronty `data/mail_queue.json` s přísným dodržením limitu max `cfg('limits.emails_per_hour')` (30 e-mailů/hod). E-maily se odesílají přes `mail()` (`cfg('mail.transport')` = `mail`) s hlavičkami z `MAIL_FROM` / `MAIL_FROM_NAME`; počet pokusů a velikost dávky dle `cfg('mail')`. SMTP je jen rezerva do budoucna (`SMTP_*` v `.env`).
+- Cron dále v rámci `cfg('cron.tasks')` maže osiřelé dočasné soubory (`cfg('storage.tmp_dir')`), čistí expirované záznamy `data/ratelimit.json` a maže expirované řádky `sessions` (`session_cleanup`). Úloha `ai_import` běží v cronu jen při `cfg('ai_import.mode')` = `internal`.
+- Postup AI importu (výchozí `cfg('ai_import.mode')` = `external`): externí worker v GitHub Actions (plánovaný workflow `.github/workflows/ai-import.yml` + skript `tools/ai_import.py`; klíč k LLM a `AI_WRITE_KEY` jsou v GitHub Secrets, na hostingu se žádný klíč k LLM neukládá) posílá data na chráněný endpoint `cfg('ai_import.endpoint')`:
+  - `GET .../sources` vrací zdroje z `cfg('ai_import.sources')` a pro deduplikaci seznam už známých `source_url`; `POST .../import` přijímá balíček `{source_url, event, venue?, bands[]}`. Oba vyžadují hlavičku `X-AI-Key` shodnou s `AI_WRITE_KEY` (porovnání přes `hash_equals`), kontrolují velikost (`max_body_bytes`) a počet položek (`max_items_per_request`), podléhají rate-limitu `cfg('limits.ai_endpoint_max_hits')` a neplatný klíč se zapisuje do bezpečnostního logu.
+  - Deduplikaci a zápis řeší server, worker je jen dodavatel dat:
+    1. Akce se hledá v DB (`events`) i ve frontě `pending` podle `source_url`, názvu a data; pokud existuje, nic se nevytváří.
+    2. Pokud neexistuje, založí se nový záznam akce do `pending` (základní údaje do `pending`, detaily do JSON), `created_by` = AI uživatel (`cfg('users.ai_user_id')`).
+    3. Klub (`venue`): pokud chybí v DB i v `pending`, založí se nový klub do `pending` z dat v balíčku (adresa, GPS, web, kontakt, popis).
+    4. Kapely (`bands`): každá se nejdřív hledá v DB i v `pending`; chybějící se založí do `pending` (žánr, město, web, kontakt, popis).
+    5. Vše, co AI vytvoří, směřuje do `pending` ke kontrole/schválení (při `cfg('ai_import.auto_approve')` = `false`).
+    6. Pokud už ve frontě `pending` existuje nedokončený záznam od AI, endpoint ho jen doplní/aktualizuje a duplicitní položku nevytváří.
+  - Při `mode = internal` provádí totéž cron sám (stahování zdrojů přes společnou bezpečnou HTTP funkci) v dávkách `max_sources_per_run` a `max_new_events_per_run`.
+
+Instalátor (`install/index.php`) a SQL po souborech:
+- Instalátor načte `.env` stejným loaderem jako aplikace a `config.php`; nic není zapsáno napevno (DB, prefix, kolace, seznam tabulek, složky, seznamy souborů ke smazání se berou z `.env` a `cfg()`).
+- Vše k instalaci je jen v adresáři `install/`: `install/index.php`, `install/sql/tables/` a `install/sql/seed/`. Soubor `install/.htaccess` (případně `install/sql/.htaccess`) zakazuje přímý přístup k `.sql` souborům; po nasazení do ostrého provozu jde celý adresář `install/` smazat. Instalátor sám nikdy nemaže adresář `install/`.
+- Je chráněn klíčem `INSTALL_KEY` z `.env`, který se zadává při každém spuštění (porovnání přes `hash_equals`, rate-limit `cfg('limits.install_key_max_hits')`, neplatné pokusy do bezpečnostního logu). Prázdný `INSTALL_KEY` = instalátor je vypnutý (403). Žádný lock soubor se nepoužívá, instalaci lze spouštět opakovaně.
+- Žádné migrace: každá instalace vypne `FOREIGN_KEY_CHECKS`, všechny tabulky smaže a znovu vytvoří a nahraje seed.
+- SQL je rozdělené po tabulkách, aby se vždy upravoval jen jeden soubor: `cfg('install.sql_tables_dir')` = `install/sql/tables/NN_<tabulka>.sql` (např. `10_users.sql`, `15_sessions.sql`, `20_countries.sql`, `30_cities.sql`, `40_genres.sql`, `50_venues.sql`, `60_bands.sql`, `70_events.sql`, `80_event_bands.sql`, `90_pending.sql`) a `cfg('install.sql_seed_dir')` = `install/sql/seed/NN_*.sql` (např. `10_users.sql` = systémový účet AI s `id = cfg('users.ai_user_id')`, `20_countries.sql` = země). Pořadí určuje číselný prefix názvu (respektuje cizí klíče). Každý soubor tabulky začíná komentářem s cestou, pak `DROP TABLE IF EXISTS {prefix}<tabulka>;` a `CREATE TABLE`. Zástupné znaky `{prefix}`, `{charset}` a `{collation}` doplní instalátor z `.env` a `cfg('db')`. Jeden příkaz = jedna `;` na konci řádku (bez `DELIMITER` a triggerů); instalátor spouští příkaz po příkazu.
+- Čistá instalace smaže i soubory, protože ID se znovu číslují od 1: obsah `cfg('install.wipe_dirs')` (kromě `cfg('install.wipe_keep')`, např. `.htaccess`), `cfg('install.wipe_files')` a volitelně `cfg('install.wipe_optional_files')` (zaškrtávátko pro `security.log`, výchozí zapnuto). Chybějící složky se vytvoří. Nezůstanou osiřelé JSON, obrázky, profily, drafty ani fronty; `.env` a kód se nemažou.
+- Vzhled: jedna přehledná stránka. Nahoře kontrola prostředí (verze PHP, rozšíření, zapisovatelné složky, nalezený `.env`, spojení s DB), pod tím tabulka všech tabulek se stavem (neexistuje / existuje + počet řádků) a výpis souborů a složek, které se smažou, pak formulář (`INSTALL_KEY`, zaškrtávátka, CSRF) a po spuštění výsledek po jednotlivých souborech (OK / chyba s textem) Pokud instalace proběhla bez chyby, instalátor hned spustí vytvoření admina přihlášením (viz níže).
+- Po čisté instalaci existuje jen systémový účet AI (`id = 1`) a žádný admin. Instalátor proto po úspěšné instalaci (bez chyby) ihned spustí přihlášení: je-li povolen a nastaven jen jeden poskytovatel (`cfg('oauth.*.enabled')` a klíče v `.env`), přesměruje rovnou na jeho OAuth, jinak zobrazí tlačítka „Vytvořit admina přihlášením přes Google / Facebook“. Přihlášený první běžný uživatel se automaticky stane `admin` (`cfg('users.first_user_admin')`), každý další je `user`. Pravidlo se vyhodnocuje atomicky při zakládání řádku v `users` (transakce; jen pokud v DB není žádný admin kromě systémového účtu). Posledního admina nelze smazat ani mu odebrat roli.
+
+
+## vzhled 
+Vime ze :
+first mobile
+-responzive
+
+ 1. zahlavi:
+vlevo ma byt nazev K&F,
+vpravo 'prihlaseni/avatar'
+
+2. panel(1 radek) ( z leva):
+rozbalovaci prepinac (akce, kapely, kluby)
+vyhledavaci pole
+btn 'filtry'
+
+3. strankovani/kalendar: 
+<< < datum > >>
+
+4. Main2:
+zde se vypisuje seznam podle prepinace akce/kluby/kapely
+zde se vypisuje detail
+zde se vypisuji vsechny stranky (profil, bastaveni, administrace, atd)
+
+ 5. strankovani stejne jako bod 3
+
