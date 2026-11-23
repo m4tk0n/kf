@@ -208,10 +208,31 @@
       }
     });
     if (new URLSearchParams(location.search).has('debug_key')) {
-      var url = new URL(location.href);
-      url.searchParams.delete('debug_key');
-      history.replaceState(history.state, '', url.pathname + url.search + url.hash);
+      var clean = new URL(location.href);
+      clean.searchParams.delete('debug_key');
+      history.replaceState(history.state, '', clean.pathname + clean.search + clean.hash);
     }
+    var logUrl = new URL(location.href);
+    logUrl.searchParams.set('debug_log', '1');
+    window.fetch(logUrl.toString(), { credentials: 'same-origin', headers: { 'Accept': 'application/json' } })
+      .then(function (response) {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.json();
+      })
+      .then(function (data) {
+        (data.entries || []).forEach(function (entry) {
+          var context = entry.context || {};
+          var details = [
+            entry.path ? entry.method + ' ' + entry.path : '',
+            context.file ? context.file + ':' + (context.line || 0) : '',
+            context.trace || '',
+            context.message || context.message === '' ? context.message : '',
+            context.class || ''
+          ].filter(Boolean).join('\\n');
+          add('SERVER ' + (entry.type || 'LOG'), details || JSON.stringify(entry));
+        });
+      })
+      .catch(function (error) { add('SERVER LOG', 'Serverový log nelze načíst.', stringify(error)); });
   });
 
 })();
