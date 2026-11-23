@@ -92,9 +92,19 @@
       });
   }
 
-  function searchFromForm(form) {
+  function searchFromForm(form, minChars) {
     if (!form) return;
     var params = new URLSearchParams(new FormData(form));
+    var query = (params.get('q') || '').trim();
+    var currentQuery = (new URLSearchParams(window.location.search).get('q') || '').trim();
+
+    // Minimální délka je společná s nastavením autocomplete v config.php.
+    // Pod limitem se nehledá; pokud už ale byl aktivní delší dotaz, vrátí se celý seznam.
+    if (query.length < minChars) {
+      if (currentQuery.length < minChars) return;
+      params.delete('q');
+    }
+
     // Nový dotaz vždy začíná od první stránky; datum a pozice pageru akcí
     // patří k předchozímu hledání a nesmí omezit nové výsledky.
     params.delete('p');
@@ -109,12 +119,13 @@
   if (view) {
     var bar = document.querySelector('.bar');
     var searchInput = bar ? bar.querySelector('input[name="q"]') : null;
+    var minSearchChars = searchInput ? Math.max(1, parseInt(searchInput.getAttribute('data-min-chars') || '2', 10) || 2) : 2;
 
     // Každá změna textu vyhledá znovu a nahradí pouze obsah výpisu.
     // Input zůstává mimo #view, takže neztrácí fokus ani mobilní klávesnici.
     if (searchInput && bar) {
       searchInput.addEventListener('input', function () {
-        searchFromForm(bar);
+        searchFromForm(bar, minSearchChars);
       });
       bar.addEventListener('submit', function (ev) {
         ev.preventDefault();
