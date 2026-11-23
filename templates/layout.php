@@ -10,7 +10,8 @@ $isList = isset($view);
 $sessionReplaced = !empty(auth_store()['replaced']);
 ?>
 <!doctype html>
-<html lang="<?= e(current_lang()) ?>">\n<head>
+<html lang="<?= e(current_lang()) ?>">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title><?= e(isset($title) && $title !== '' ? $title . ' – ' . (string)cfg('app.name') : (string)cfg('app.name')) ?></title>
