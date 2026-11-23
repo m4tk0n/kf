@@ -31,6 +31,9 @@ return [
             'events' => 'events',
             'event_bands' => 'event_bands',
             'pending' => 'pending',
+            'fav_events' => 'fav_events',
+            'fav_bands' => 'fav_bands',
+            'fav_venues' => 'fav_venues',
         ],
     ],
 
@@ -115,6 +118,7 @@ return [
         'per_page_bands' => 24,
         'per_page_venues' => 24,
         'per_page_users' => 25,
+        'detail_events' => 30,     // max. akcí v seznamech minulých / budoucích akcí v detailu klubu a kapely
         'max_per_page' => 100,
         'autocomplete_min_chars' => 2,
         'autocomplete_limit' => 10,
@@ -130,6 +134,7 @@ return [
         ],
         'submissions_per_day' => 20,
         'emails_per_hour' => 30,
+        'favorites_max' => 500, // max. oblíbených položek jednoho typu na uživatele
         'trusted_after' => 5, // počet schválených příspěvků (users.approved_count) pro povýšení user -> trusted
         'rate_limit_window_sec' => 3600,
         'rate_limit_max_hits' => 120,   // max. POST požadavků na IP za rate_limit_window_sec

@@ -12,7 +12,7 @@ if (is_file(__DIR__ . '/cron/cron.php')) {
 send_security_headers(false);
 header('Content-Type: text/html; charset=utf-8');
 
-/** Obslouží přihlášení, profil, filtry a administraci; ostatní cesty vrací do výpisu. */
+/** Obslouží přihlášení, profil, filtry, oblíbené a administraci; ostatní cesty vrací do výpisu. */
 function kf_dispatch(): void
 {
     $path = req_path();
@@ -35,6 +35,7 @@ function kf_dispatch(): void
         'profile/delete' => 'route_profile_delete',
         'filters' => 'route_filters_post',
         'filters/toggle' => 'route_filters_toggle',
+        'fav' => 'route_fav',
         'admin/users' => 'route_admin_users_post',
     ];
 
@@ -68,7 +69,7 @@ function kf_dispatch(): void
 
 kf_dispatch();
 
-// JSON data pro měsíční kalendář v pageru akcí.
+// JSON data pro měsíční kalendář v pageru akcí (respektuje hledání i oblíbené: fav=1).
 if (isset($_GET['cal'])) {
     $month = is_string($_GET['cal']) ? $_GET['cal'] : '';
     if (!preg_match('/^([0-9]{4})-(0[1-9]|1[0-2])$/', $month)) {
@@ -87,6 +88,24 @@ if (isset($_GET['cal'])) {
     exit;
 }
 
+// Detail akce / kapely / klubu: ?event=ID, ?band=ID, ?venue=ID
+$detail = kf_detail_request();
+if ($detail !== null) {
+    kf_detail_page($detail[0], $detail[1]);
+}
+
 $req = kf_request();
 $view = kf_load($req);
+
+// Částečná odpověď (jen pager + výpis + stav) pro app.js: hvězdička v liště, stránkování, kalendář.
+if (kf_get('partial') === '1') {
+    header('Cache-Control: no-store');
+    $user = auth_resolve();
+    $favActive = $user !== null && (int)$req['fav'] === 1;
+    require abs_path((string)cfg('paths.templates')) . '/list.php';
+    echo '<div hidden data-view-state data-fav="' . ($favActive ? 1 : 0) . '" data-fav-href="'
+        . e(kf_url($req, ['fav' => $favActive ? 0 : 1, 'p' => 1, 'k' => 0])) . '"></div>';
+    exit;
+}
+
 require abs_path((string)cfg('paths.templates')) . '/layout.php';

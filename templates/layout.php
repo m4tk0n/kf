@@ -1,7 +1,8 @@
 <?php
 // templates/layout.php
 /** @var array|null $view  výpis (index.php); u stránek z page() je $content */
-$req = $view['req'] ?? ['s' => 'events', 'q' => ''];
+$req = $view['req'] ?? ['s' => (string)($section ?? 'events'), 'q' => '', 'p' => 1, 'd' => '', 'k' => 0, 'fav' => 0];
+$favOn = !empty($req['fav']);
 $user = $user ?? auth_resolve();
 $menu = $menu ?? menu_items($user);
 $flash = $flash ?? flash_text();
@@ -24,6 +25,8 @@ $sessionReplaced = !empty(auth_store()['replaced']);
     <?php if ($user === null): ?>
       <a class="btn" href="<?= e(url('login')) ?>"><?= e(kf_t('login')) ?></a>
     <?php else: ?>
+      <div class="top-right">
+      <a data-favtop data-label-on="<?= e(t('fav.toggle_on')) ?>" data-label-off="<?= e(t('fav.toggle_off')) ?>" class="fav favtop<?= $favOn ? ' on' : '' ?>" href="<?= e(kf_url($req, ['fav' => $favOn ? 0 : 1, 'p' => 1, 'k' => 0])) ?>" aria-pressed="<?= $favOn ? 'true' : 'false' ?>" aria-label="<?= e(t($favOn ? 'fav.toggle_on' : 'fav.toggle_off')) ?>" title="<?= e(t($favOn ? 'fav.toggle_on' : 'fav.toggle_off')) ?>">★</a>
       <details class="umenu">
         <summary aria-label="<?= e((string)$user['display_name']) ?>"><?= avatar_html($user) ?></summary>
         <nav class="umenu-list">
@@ -33,9 +36,11 @@ $sessionReplaced = !empty(auth_store()['replaced']);
           <form method="post" action="<?= e(url('logout')) ?>"><?= csrf_field() ?><button type="submit"><?= e(t('menu.logout')) ?></button></form>
         </nav>
       </details>
+      </div>
     <?php endif; ?>
   </header>
   <form class="wrap bar" method="get" action="<?= e(url('')) ?>">
+    <?php if ($favOn && $user !== null): ?><input type="hidden" name="fav" value="1"><?php endif; ?>
     <select name="s" aria-label="<?= e(kf_t('nav.label')) ?>">
       <?php foreach (['events', 'bands', 'venues'] as $v): ?>
         <option value="<?= e($v) ?>"<?= $req['s'] === $v ? ' selected' : '' ?>><?= e(kf_t('nav.' . $v)) ?></option>
@@ -56,7 +61,7 @@ $sessionReplaced = !empty(auth_store()['replaced']);
   </section>
 </div>
 <?php endif; ?>
-<?php if ($isList): require __DIR__ . '/list.php'; else: echo $content; endif; ?>
+<?php if ($isList): ?><div id="view" data-fav="<?= $favOn && $user !== null ? 1 : 0 ?>"><?php require __DIR__ . '/list.php'; ?></div><?php else: echo $content; endif; ?>
 </main>
 </body>
 </html>

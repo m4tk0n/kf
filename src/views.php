@@ -99,6 +99,7 @@ function page(string $title, string $tpl, array $vars = [], int $status = 200): 
         'flash' => flash_text(),
         'lang' => current_lang(),
         'path' => req_path(),
+        'section' => (string)($vars['section'] ?? 'events'),
     ]);
     exit;
 }

@@ -272,3 +272,39 @@ abbr{text-decoration:none}
   .calendar-day{min-height:39px;font-size:.8rem;border-radius:7px}
   .calendar-head{margin-bottom:9px}
 }
+
+
+/* Detail akce / kapely / klubu, hvězdička oblíbených, lightbox */
+.back{margin:0 0 10px;font-size:.85rem}
+.back a{color:var(--muted)}
+.back a:hover{color:var(--text)}
+.detail-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
+.detail-head h1{margin:0;overflow-wrap:anywhere}
+.fav{flex:none;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:#64748a;font-size:1.4rem;line-height:1;cursor:pointer}
+.fav.on{color:var(--other);border-color:rgba(255,216,77,.5);background:rgba(255,216,77,.1)}
+.fav[disabled]{opacity:.6;cursor:progress}
+.fav.off{cursor:not-allowed;opacity:.55}
+.detail-img{display:block;margin:0 0 14px;cursor:zoom-in}
+.detail-img img{display:block;max-width:100%;max-height:420px;margin:0 auto;border-radius:12px;border:1px solid var(--line)}
+.detail-text{margin:14px 0 0;overflow-wrap:anywhere}
+.detail h2{margin:18px 0 8px;font-size:1.05rem}
+.detail .kv a{color:#9fc8ff;text-decoration:underline;text-underline-offset:2px}
+.maplinks{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+.evlist{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.evlist a{display:flex;gap:10px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.evlist a:hover{background:var(--surface-3)}
+.evlist time,.evlist .play{flex:none;color:var(--muted);font-variant-numeric:tabular-nums}
+.evlist .play{min-width:3rem}
+.lightbox{position:fixed;inset:0;z-index:1200;display:flex;align-items:center;justify-content:center;padding:12px;background:rgba(3,7,13,.92);cursor:zoom-out}
+.lightbox img{max-width:100%;max-height:100%;object-fit:contain}
+
+/* Globální hvězdička oblíbených vedle avataru */
+.top-right{display:flex;align-items:center;gap:10px}
+.fav.favtop{width:36px;height:36px;font-size:1.25rem;text-decoration:none}
+
+/* Hvězdička v řádku výpisu a stav načítání */
+#view.loading{opacity:.55;transition:opacity .15s}
+.list>li{position:relative}
+.list>li.has-fav .item{padding-right:52px}
+.rowfav{position:absolute;right:9px;top:50%;transform:translateY(-50%);width:34px;height:34px;font-size:1.15rem}
+

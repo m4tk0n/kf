@@ -14,15 +14,16 @@ function kf_request(): array
     if (!in_array($s, ['events', 'bands', 'venues'], true)) $s = 'events';
     $d = kf_get('d');
     if (!preg_match('/^(\d{4})-(\d{2})-(\d{2})$/', $d, $m) || !checkdate((int)$m[2], (int)$m[3], (int)$m[1])) $d = '';
-    return ['s' => $s, 'q' => mb_substr(trim(kf_get('q')), 0, 100), 'p' => max(1, (int)kf_get('p')), 'd' => $d, 'k' => preg_match('/^\d{1,5}$/', kf_get('k')) ? (int)kf_get('k') : 0];
+    return ['s' => $s, 'q' => mb_substr(trim(kf_get('q')), 0, 100), 'p' => max(1, (int)kf_get('p')), 'd' => $d, 'k' => preg_match('/^\d{1,5}$/', kf_get('k')) ? (int)kf_get('k') : 0, 'fav' => kf_get('fav') === '1' ? 1 : 0];
 }
 
 function kf_url(array $req, array $over = []): string
 {
-    $p = array_merge(['s' => $req['s'], 'q' => $req['q'], 'p' => $req['p'], 'd' => $req['d'], 'k' => $req['k']], $over);
+    $p = array_merge(['s' => $req['s'], 'q' => $req['q'], 'p' => $req['p'], 'd' => $req['d'], 'k' => $req['k'], 'fav' => $req['fav']], $over);
     if ($p['s'] === 'events') unset($p['s']);
     if ((int)$p['p'] <= 1) unset($p['p']);
     if ((int)$p['k'] <= 0) unset($p['k']);
+    if ((int)$p['fav'] <= 0) unset($p['fav']);
     $p = array_filter($p, static fn($v): bool => $v !== '' && $v !== null);
     return $p ? url('') . '?' . http_build_query($p) : url('');
 }
@@ -91,9 +92,27 @@ function kf_add_months(DateTimeImmutable $d, int $n): DateTimeImmutable
     return $first->setDate((int)$first->format('Y'), (int)$first->format('n'), min((int)$d->format('j'), (int)$first->format('t')));
 }
 
+// společný filtr výpisů, pageru i kalendáře: hledání + oblíbené (alias hlavní tabulky = a)
+function kf_list_filter(string $qa, string $kind): array
+{
+    if (!in_array($kind, ['events', 'bands', 'venues'], true)) throw new InvalidArgumentException('kind');
+    $sql = '';
+    $p = [];
+    if ($qa !== '') {
+        $sql .= ' AND LOWER(a.name_ascii) LIKE ?';
+        $p[] = '%' . addcslashes($qa, '%_\\') . '%';
+    }
+    $u = kf_get('fav') === '1' ? auth_resolve() : null; // host parametr fav ignoruje
+    if ($u !== null) {
+        $sql .= ' AND EXISTS (SELECT 1 FROM ' . tbl('fav_' . $kind) . ' f WHERE f.id = a.id AND f.user_id = ?)';
+        $p[] = (int)$u['id'];
+    }
+    return [$sql, $p];
+}
+
 function kf_events_filter(string $qa): array
 {
-    return $qa !== '' ? [' AND LOWER(a.name_ascii) LIKE ?', ['%' . addcslashes($qa, '%_\\') . '%']] : ['', []];
+    return kf_list_filter($qa, 'events');
 }
 
 // nejbližší den, ve kterém akce začíná (podle hledání): '>=' '>' = první, '<=' '<' = poslední
@@ -162,7 +181,7 @@ function kf_event_nav(array $req, string $d, int $k, int $n, string $qa): array
         'titles' => ['first' => kf_t('pager.prev_month'), 'last' => kf_t('pager.next_month')],
         'cal' => [
             'date' => $d,
-            'cal_url' => url('') . '?' . http_build_query(array_filter(['cal' => '__M__', 'q' => $req['q']], static fn($v): bool => $v !== '')),
+            'cal_url' => url('') . '?' . http_build_query(array_filter(['cal' => '__M__', 'q' => $req['q'], 'fav' => $req['fav'] ? '1' : ''], static fn($v): bool => $v !== '')),
             'day_url' => kf_url($req, ['d' => '__D__', 'k' => 0, 'p' => 1]),
         ],
     ];
@@ -225,10 +244,10 @@ function kf_load(array $req): array
     $per = static fn(string $kind): int => max(1, min((int)cfg('paging.per_page_' . $kind), (int)cfg('paging.max_per_page')));
     $country = 'co.`name_' . kf_lang() . '`'; // jazyk je ověřený proti app.supported_langs
     $geo = ' JOIN ' . tbl('cities') . ' c ON c.id = a.city_id JOIN ' . tbl('countries') . ' co ON co.id = c.country_id';
-    $qa = kf_ascii($req['q']);
-    $where = ' WHERE 1=1' . ($qa !== '' ? ' AND LOWER(a.name_ascii) LIKE ?' : '');
-    $params = $qa !== '' ? ['%' . addcslashes($qa, '%_\\') . '%'] : [];
     $s = $req['s'];
+    $qa = kf_ascii($req['q']);
+    [$f, $params] = kf_list_filter($qa, $s);
+    $where = ' WHERE 1=1' . $f;
 
     if ($s === 'events') {
         $from = ' FROM ' . tbl('events') . ' a' . $geo . ' LEFT JOIN ' . tbl('venues') . ' v ON v.id = a.venue_id';

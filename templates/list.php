@@ -7,14 +7,21 @@ $kind = ['events' => 'event', 'bands' => 'band', 'venues' => 'venue'][$s];
 ?>
 <?= kf_pager($view['nav']) ?>
 <?php if (!$rows): ?>
-  <p class="empty"><?= e(kf_t('empty')) ?></p>
+  <?php
+  $emptyKey = 'empty';
+  if (!empty($view['req']['fav']) && $user !== null) {
+      $emptyKey = fav_count((int)$user['id'], $kind) === 0 ? 'fav.empty' : 'fav.no_match';
+  }
+  ?>
+  <p class="empty"><?= e(t($emptyKey)) ?></p>
 <?php else: ?>
+<?php $favIds = $user !== null ? fav_ids_in((int)$user['id'], $kind, array_column($rows, 'id')) : []; ?>
 <ul class="list list-<?= e($s) ?>">
 <?php foreach ($rows as $r):
     $id = (int)$r['id'];
     $place = e($r['city']) . ' <abbr title="' . e($r['country']) . '">(' . e($r['iso2']) . ')</abbr>';
 ?>
-  <li><a class="item<?= $s === 'events' ? ' item-event item-type-' . (int)$r['type'] : ' item-' . e($kind) ?>" href="<?= e(kf_detail_url($kind, $id)) ?>">
+  <li<?= $user !== null ? ' class="has-fav"' : '' ?>><a class="item<?= $s === 'events' ? ' item-event item-type-' . (int)$r['type'] : ' item-' . e($kind) ?>" href="<?= e(kf_detail_url($kind, $id)) ?>">
   <?php if ($s === 'events'): ?>
     <span class="date"><?= e(kf_date_range($r['date_from'], $r['date_to'])) ?></span>
     <span class="body">
@@ -36,7 +43,7 @@ $kind = ['events' => 'event', 'bands' => 'band', 'venues' => 'venue'][$s];
     </span>
     <?php if ((int)$r['img'] === 1): ?><img class="thumb" src="<?= e(kf_img('venues', $id, 's')) ?>" alt="" loading="lazy"><?php endif; ?>
   <?php endif; ?>
-  </a></li>
+  </a><?= $user !== null ? kf_fav_button($kind, $id, isset($favIds[$id]), 'rowfav') : '' ?></li>
 <?php endforeach; ?>
 </ul>
 <?php endif; ?>

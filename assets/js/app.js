@@ -120,7 +120,8 @@
           var day = makeButton(dayFmt.format(date), 'calendar-day' + (inMonth ? '' : ' outside') + (key === selected ? ' selected' : ''), 'Vybrat ' + key, function (value) {
             return function () {
               closeCalendar();
-              window.location.href = dayTemplate.replace('__D__', encodeURIComponent(value));
+              var target = dayTemplate.replace('__D__', encodeURIComponent(value));
+              if (window.kfLoadView) window.kfLoadView(target); else window.location.href = target;
             };
           }(key));
           if (key === isoDate(new Date())) day.classList.add('today');
@@ -181,8 +182,133 @@
       };
       document.addEventListener('keydown', activeKeyHandler);
     }
-    calTrigger.addEventListener('click', openCalendar);
+    // pager se po částečném načtení nahrazuje, proto delegovaný klik a aktuální tlačítko
+    document.addEventListener('click', function (ev) {
+      var t = ev.target.closest ? ev.target.closest('[data-cal]') : null;
+      if (t) { calTrigger = t; openCalendar(); }
+    });
   }
+
+  // Výpis bez obnovení stránky: hvězdička v liště, stránkování a výběr data v kalendáři.
+  var view = document.getElementById('view');
+  var viewSeq = 0;
+  function applyViewState() {
+    var st = view.querySelector('[data-view-state]');
+    if (!st) return;
+    var on = st.getAttribute('data-fav') === '1';
+    view.setAttribute('data-fav', on ? '1' : '0');
+    var star = document.querySelector('[data-favtop]');
+    if (star) {
+      var label = star.getAttribute(on ? 'data-label-on' : 'data-label-off');
+      star.classList.toggle('on', on);
+      star.setAttribute('aria-pressed', on ? 'true' : 'false');
+      star.setAttribute('aria-label', label);
+      star.title = label;
+      star.setAttribute('href', st.getAttribute('data-fav-href'));
+    }
+    var bar = document.querySelector('.bar');
+    var hid = bar ? bar.querySelector('input[name="fav"]') : null;
+    if (bar && on && !hid) {
+      hid = document.createElement('input');
+      hid.type = 'hidden';
+      hid.name = 'fav';
+      hid.value = '1';
+      bar.insertBefore(hid, bar.firstChild);
+    }
+    if (hid && !on) hid.remove();
+    st.remove();
+  }
+  function loadView(href, push) {
+    if (!view) { window.location.href = href; return; }
+    var seq = ++viewSeq;
+    view.classList.add('loading');
+    var u = href + (href.indexOf('?') > -1 ? '&' : '?') + 'partial=1';
+    fetch(u, { credentials: 'same-origin', headers: { 'Accept': 'text/html' } })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.text();
+      })
+      .then(function (html) {
+        if (seq !== viewSeq) return;
+        view.innerHTML = html;
+        applyViewState();
+        view.classList.remove('loading');
+        if (push) history.pushState(null, '', href);
+      })
+      .catch(function () {
+        if (seq === viewSeq) window.location.href = href;
+      });
+  }
+  window.kfLoadView = view ? function (href) { loadView(href, true); } : null;
+  if (view) {
+    document.addEventListener('click', function (ev) {
+      if (ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+      var a = ev.target.closest ? ev.target.closest('[data-favtop], #view a.pg') : null;
+      if (!a) return;
+      ev.preventDefault();
+      loadView(a.getAttribute('href'), true);
+    });
+    window.addEventListener('popstate', function () { loadView(window.location.href, false); });
+  }
+
+  // Hvězdička oblíbených (detail i řádky výpisu): idempotentní add/remove, výsledný stav bere ze serveru.
+  function setFav(b, on) {
+    var label = b.getAttribute(on ? 'data-label-on' : 'data-label-off');
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    b.setAttribute('aria-label', label);
+    b.title = label;
+  }
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest ? ev.target.closest('[data-fav]') : null;
+    if (!b || b.disabled) return;
+    var body = new URLSearchParams();
+    body.set(b.getAttribute('data-csrf-field'), b.getAttribute('data-csrf'));
+    body.set('kind', b.getAttribute('data-kind'));
+    body.set('id', b.getAttribute('data-id'));
+    body.set('op', b.getAttribute('aria-pressed') === 'true' ? 'remove' : 'add');
+    b.disabled = true;
+    fetch(b.getAttribute('data-url'), { method: 'POST', credentials: 'same-origin', headers: { 'Accept': 'application/json' }, body: body })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok || !res.j || !res.j.ok) throw new Error((res.j && res.j.error) || 'error');
+        setFav(b, !!res.j.on);
+        // ve výpisu filtrovaném na oblíbené položka zmizí ihned, pak se stránka doplní z dalších záznamů
+        if (!res.j.on && b.classList.contains('rowfav') && view && view.getAttribute('data-fav') === '1') {
+          var li = b.closest('li');
+          if (li) li.remove();
+          loadView(window.location.href, false);
+        }
+      })
+      .catch(function (e) {
+        window.alert(b.getAttribute(e.message === 'limit' ? 'data-msg-limit' : 'data-msg-error'));
+      })
+      .then(function () { b.disabled = false; });
+  });
+
+  // Lightbox: kliknutí na obrázek ho zobrazí přes celou obrazovku, další kliknutí nebo Esc ho zavře.
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest ? ev.target.closest('[data-lightbox]') : null;
+    if (!a) return;
+    ev.preventDefault();
+    var box = document.createElement('div');
+    box.className = 'lightbox';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    var img = document.createElement('img');
+    img.src = a.getAttribute('href');
+    var thumb = a.querySelector('img');
+    img.alt = thumb ? thumb.alt : '';
+    box.appendChild(img);
+    document.body.appendChild(box);
+    function onKey(e) { if (e.key === 'Escape') close(); }
+    function close() {
+      box.remove();
+      document.removeEventListener('keydown', onKey);
+    }
+    box.addEventListener('click', close);
+    document.addEventListener('keydown', onKey);
+  });
 
   // zavření uživatelského menu kliknutím mimo něj
   var menu = document.querySelector('.umenu');
