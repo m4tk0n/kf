@@ -59,3 +59,15 @@
 #kf-debug .kf-debug-output > div.kf-debug-error,
 #kf-debug .kf-debug-output > div.kf-debug-error pre,
 #kf-debug .kf-debug-output > div.kf-debug-error b { color: #ff5b5b; }
+
+#kf-debug .kf-debug-bar select {
+  min-width: 78px;
+  max-width: 105px;
+  font: inherit;
+  color: #fff;
+  background: #444;
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+#kf-debug .kf-debug-empty { color: #aaa; padding: 8px 0; }
