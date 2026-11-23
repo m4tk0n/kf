@@ -41,7 +41,7 @@ return [
 
     // přihlášení
     'login.title' => 'Přihlášení',
-    'login.intro' => 'Přihlas se pomocí svého účtu. Hesla neukládáme.',
+    'login.intro' => 'Přihlas se pomocí svého účtu Google nebo Facebook. Hesla neukládáme; přihlášení ověřuje poskytovatel.',
     'login.none' => 'Není nastaven žádný způsob přihlášení.',
     'login.with' => 'Přihlásit se přes {provider}',
     'login.confirm.title' => 'Účet je přihlášen jinde',
