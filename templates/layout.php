@@ -8,6 +8,7 @@ $menu = $menu ?? menu_items($user);
 $flash = $flash ?? flash_text();
 $isList = isset($view);
 $sessionReplaced = !empty(auth_store()['replaced']);
+$debugEnabled = kf_debug_enabled($user);
 ?>
 <!doctype html>
 <html lang="<?= e(current_lang()) ?>">
@@ -29,6 +30,10 @@ $sessionReplaced = !empty(auth_store()['replaced']);
 <?php endif; ?>
 <?php if (!empty($hasLightbox)): ?>
 <script src="<?= e(kf_asset('js/lightbox.js')) ?>" defer></script>
+<?php endif; ?>
+<?php if ($debugEnabled): ?>
+<link rel="stylesheet" href="<?= e(kf_asset('css/debug.css')) ?>">
+<script src="<?= e(kf_asset('js/debug.js')) ?>" defer></script>
 <?php endif; ?>
 </head>
 <body>
