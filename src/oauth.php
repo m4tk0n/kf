@@ -258,17 +258,28 @@ function oauth_callback(string $provider): never
     if ($provider === 'google') {
         [$st, $u] = oauth_http('GET', (string)$c['userinfo_url'], ['Authorization: Bearer ' . $access]);
     } else {
+        // Facebook Graph API: ověřit požadavek také přes appsecret_proof.
         $sep = str_contains((string)$c['userinfo_url'], '?') ? '&' : '?';
-        [$st, $u] = oauth_http('GET', (string)$c['userinfo_url'] . $sep . 'access_token=' . rawurlencode($access));
+        $proof = hash_hmac('sha256', $access, (string)$c['client_secret']);
+        $query = http_build_query([
+            'access_token' => $access,
+            'appsecret_proof' => $proof,
+        ], '', '&', PHP_QUERY_RFC3986);
+        [$st, $u] = oauth_http('GET', (string)$c['userinfo_url'] . $sep . $query);
     }
     $uid = (string)($u['sub'] ?? $u['id'] ?? '');
     if ($st !== 200 || !preg_match('/^[A-Za-z0-9_\-]{1,100}$/', $uid)) {
         oauth_fail('oauth_userinfo_failed');
     }
     $email = trim((string)($u['email'] ?? ''));
-    if ($email === '' || strlen($email) > 120 || !filter_var($email, FILTER_VALIDATE_EMAIL)
-        || ($provider === 'google' && ($u['email_verified'] ?? true) === false)) {
+    $emailVerified = $provider === 'google'
+        && in_array($u['email_verified'] ?? false, [true, 1, 'true'], true);
+    // Facebook potvrzuje přihlášení účtu, ale Graph /me neposkytuje spolehlivý
+    // příznak ověření e-mailové adresy. E-mail proto může být uložen jako kontakt,
+    // nikdy však není důkazem identity ani podmínkou přihlášení.
+    if ($email === '' || strlen($email) > 120 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $email = '';
+        $emailVerified = false;
     }
     $pic = $provider === 'google' ? ($u['picture'] ?? '') : ($u['picture']['data']['url'] ?? '');
     $avatar = is_string($pic) && strlen($pic) <= 500 && str_starts_with($pic, 'https://') ? $pic : '';
@@ -277,6 +288,7 @@ function oauth_callback(string $provider): never
         'uid' => $uid,
         'name' => oauth_clean_text((string)($u['name'] ?? ''), (int)cfg('users.display_name_max')),
         'email' => $email,
+        'email_verified' => $emailVerified,
         'avatar' => $avatar,
     ]);
     if ($res['state'] !== (int)cfg('enums.user_state.active')) {
