@@ -43,6 +43,7 @@
     output.replaceChildren();
     events.slice(-100).forEach(function (event) {
       var item = document.createElement('div');
+      if (String(event.type).includes('ERROR')) item.classList.add('kf-debug-error');
       var heading = document.createElement('b');
       var body = document.createElement('pre');
       heading.textContent = event.time + '  ' + event.type;
