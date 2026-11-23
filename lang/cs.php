@@ -132,6 +132,8 @@ return [
     'flash.sessions_revoked' => 'Uživatel byl odhlášen ze všech zařízení.',
     'flash.logged_out' => 'Byl jsi odhlášen.',
     'flash.session_replaced' => 'Byli jste odhlášeni. Váš účet byl přihlášen na jiném zařízení.',
+    'flash.session_replaced_title' => 'Přihlášení ukončeno',
+    'common.understood' => 'Rozumím',
     'flash.account_deleted' => 'Účet byl smazán.',
     'flash.oauth_failed' => 'Přihlášení se nezdařilo, zkus to prosím znovu.',
     'flash.account_inactive' => 'Tento účet není aktivní.',
