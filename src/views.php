@@ -35,6 +35,9 @@ function render(string $tpl, array $vars = []): string
 /** Zpráva z parametru ?m=<kód>; zobrazí se jen kód, který existuje v jazykovém souboru. */
 function flash_text(): ?string
 {
+    if (!empty(auth_store()['replaced'])) {
+        return t('flash.session_replaced');
+    }
     $m = (string)($_GET['m'] ?? '');
     if ($m === '' || !preg_match('/^[a-z_]{1,30}$/', $m)) {
         return null;
