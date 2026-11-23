@@ -6,6 +6,7 @@ $user = $user ?? auth_resolve();
 $menu = $menu ?? menu_items($user);
 $flash = $flash ?? flash_text();
 $isList = isset($view);
+$sessionReplaced = !empty(auth_store()['replaced']);
 ?>
 <!doctype html>
 <html lang="<?= e(current_lang()) ?>">
@@ -45,7 +46,16 @@ $isList = isset($view);
   </form>
 </div>
 <main class="wrap main">
-<?php if ($flash): ?><p class="flash"><?= e($flash) ?></p><?php endif; ?>
+<?php if ($flash && !$sessionReplaced): ?><p class="flash"><?= e($flash) ?></p><?php endif; ?>
+<?php if ($sessionReplaced): ?>
+<div class="modal-backdrop" id="session-replaced-modal" role="presentation">
+  <section class="modal" role="alertdialog" aria-modal="true" aria-labelledby="session-replaced-title" aria-describedby="session-replaced-message">
+    <h2 id="session-replaced-title"><?= e(t('flash.session_replaced_title')) ?></h2>
+    <p id="session-replaced-message"><?= e($flash ?? t('flash.session_replaced')) ?></p>
+    <button class="btn" type="button" data-modal-close><?= e(t('common.understood')) ?></button>
+  </section>
+</div>
+<?php endif; ?>
 <?php if ($isList): require __DIR__ . '/list.php'; else: echo $content; endif; ?>
 </main>
 </body>
