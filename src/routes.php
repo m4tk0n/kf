@@ -115,6 +115,7 @@ function route_profile(): never
     $prof = user_profile_get((int)$u['id']);
     page(t('menu.profile'), 'profile', [
         'email' => (string)($prof['email'] ?? ''),
+        'email_verified' => !empty($prof['email_verified']),
         'provider' => (string)oauth_provider_name((int)$u['provider']),
         'fresh' => auth_is_fresh(),
         'can_delete' => can('delete_account'),
