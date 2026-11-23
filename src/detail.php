@@ -117,11 +117,9 @@ function kf_detail_load(string $kind, int $id): ?array
     $d['row'] = $row;
     $d['extra'] = kf_detail_extra($kind, $id);
     $d['fav'] = $u !== null && fav_is((int)$u['id'], $kind, $id);
-    $d['back'] = kf_url([
-        's' => KF_DETAIL_KINDS[$kind], 'q' => '', 'p' => 1,
-        'd' => $kind === 'event' ? (string)$row['date_from'] : '', 'k' => 0,
-        'fav' => kf_get('fav') === '1' && $u !== null ? 1 : 0,
-    ]);
+    // Návrat vede na přesný výpis, ze kterého byl detail otevřen.
+    // U přímého odkazu bez uloženého výpisu zůstává datum akce jako rozumný fallback.
+    $d['back'] = kf_detail_return_url($kind === 'event' ? (string)$row['date_from'] : '');
     return $d;
 }
 
