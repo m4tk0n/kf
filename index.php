@@ -69,6 +69,9 @@ function kf_dispatch(): void
 
 kf_dispatch();
 
+// Debug se načítá pro všechny celé stránky včetně detailů.
+$GLOBALS['headScripts'] = '<script src="' . e(url('debug/debug.js')) . '" defer></script>';
+
 
 // JSON data pro měsíční kalendář v pageru akcí (respektuje hledání i oblíbené: fav=1).
 if (isset($_GET['cal'])) {
@@ -109,5 +112,4 @@ if (kf_get('partial') === '1') {
     exit;
 }
 
-$headScripts = '<script src="' . e(url('debug/debug.js')) . '" defer></script>';
 require abs_path((string)cfg('paths.templates')) . '/layout.php';
