@@ -27,6 +27,27 @@ Přenáší se zejména:
 
 Datum akce z detailu nesmí při návratu přepsat datum původního výpisu. Například pokud uživatel otevře detail akce z výpisu pro 26. 11. 2026, návrat musí obnovit výpis pro 26. 11. 2026, i když samotná akce začíná 19. 12. 2026.
 
+
+### Obnovení polohy konkrétní položky ve výpisu
+
+**Stav: implementováno, čeká na praktické ověření**
+
+Při otevření detailu kliknutím na položku výpisu se do `sessionStorage` dočasně uloží:
+- ID otevřené položky,
+- její svislá poloha vůči hornímu okraji obrazovky,
+- aktuální pozice stránky.
+
+Po návratu z detailu se záznam znovu vyhledá ve výpisu a stránka se posune tak, aby byl zobrazen na stejné pozici jako před otevřením detailu. Nejde pouze o návrat na začátek výpisu ani o prosté obnovení první položky.
+
+Uložení pozice se zachová i při přechodu z detailu na související detail. Po obnovení výpisu se jednorázový stav odstraní, aby se při dalším samostatném otevření výpisu nepoužívala zastaralá pozice.
+
+Pokud prohlížeč úložiště neposkytne nebo se cílový záznam ve výpisu nenachází, výpis zůstane použitelný a zobrazí se běžným způsobem.
+
+Dotčené soubory:
+- `templates/list.php` – označení položek výpisu jejich ID,
+- `assets/js/list.js` – uložení a obnovení polohy,
+- `src/catalog.php` a `src/detail.php` – zachování návratového kontextu detailu (stávající řešení).
+
 ### Navigace mezi souvisejícími detaily
 
 Pokud uživatel přejde z jednoho detailu na jiný související detail (například z akce na kapelu nebo klub), musí se původní návratová adresa zachovat. Návrat z kteréhokoli z těchto detailů pak vede zpět do původního výpisu, nikoli na mezilehlý detail.
