@@ -60,7 +60,7 @@ $sessionReplaced = !empty(auth_store()['replaced']);
         <option value="<?= e($v) ?>"<?= $req['s'] === $v ? ' selected' : '' ?>><?= e(kf_t('nav.' . $v)) ?></option>
       <?php endforeach; ?>
     </select>
-    <input type="search" name="q" value="<?= e((string)$req['q']) ?>" maxlength="100" placeholder="<?= e(kf_t('search.placeholder')) ?>" aria-label="<?= e(kf_t('search.label')) ?>" autocomplete="off">
+    <input type="search" name="q" value="<?= e((string)$req['q']) ?>" maxlength="100" data-min-chars="<?= max(1, (int)cfg('paging.autocomplete_min_chars')) ?>" placeholder="<?= e(kf_t('search.placeholder')) ?>" aria-label="<?= e(kf_t('search.label')) ?>" autocomplete="off">
     <button class="btn" type="button" disabled><?= e(kf_t('filters')) ?></button>
   </form>
 </div>
