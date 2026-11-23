@@ -63,6 +63,7 @@ function user_login_or_register(string $provider, array $info): array
     if ($state === (int)cfg('enums.user_state.active')) {
         $prof = user_profile_get($id);
         $prof['email'] = $info['email'];
+        $prof['email_verified'] = !empty($info['email_verified']);
         $prof['avatar'] = $info['avatar'];
         user_profile_put($id, $prof);
     }
