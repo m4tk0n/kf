@@ -42,13 +42,13 @@
   }
 
   function isError(event) {
-    return String(event.type).includes('ERROR') || /^HTTP [45]\\d\\d$/.test(String(event.type));
+    return String(event.type).includes('ERROR') || /^HTTP [45]\d\d$/.test(String(event.type));
   }
 
   function matchesFilter(event) {
     var type = String(event.type);
     if (activeFilter === 'errors') return isError(event);
-    if (activeFilter === 'network') return type === 'FETCH' || type === 'FETCH ERROR' || /^HTTP \\d{3}$/.test(type);
+    if (activeFilter === 'network') return type === 'FETCH' || type === 'FETCH ERROR' || /^HTTP \d{3}$/.test(type);
     if (activeFilter === 'actions') return type === 'CLICK' || type === 'ALERT';
     if (activeFilter === 'system') return type === 'START' || type === 'INFO';
     return true;
