@@ -17,6 +17,17 @@ $sessionReplaced = !empty(auth_store()['replaced']);
 <title><?= e(isset($title) && $title !== '' ? $title . ' – ' . (string)cfg('app.name') : (string)cfg('app.name')) ?></title>
 <link rel="stylesheet" href="<?= e(kf_asset('css/app.css')) ?>">
 <script src="<?= e(kf_asset('js/app.js')) ?>" defer></script>
+<?php if ($isList): ?>
+<script src="<?= e(kf_asset('js/list.js')) ?>" defer></script>
+<script src="<?= e(kf_asset('js/calendar.js')) ?>" defer></script>
+<?php endif; ?>
+<?php if ($user !== null): ?>
+<script src="<?= e(kf_asset('js/favorites.js')) ?>" defer></script>
+<script src="<?= e(kf_asset('js/menu.js')) ?>" defer></script>
+<?php endif; ?>
+<?php if (!empty($hasLightbox)): ?>
+<script src="<?= e(kf_asset('js/lightbox.js')) ?>" defer></script>
+<?php endif; ?>
 </head>
 <body>
 <div class="head">
