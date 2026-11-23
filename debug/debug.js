@@ -2,9 +2,6 @@
 (function () {
   'use strict';
 
-  var params = new URLSearchParams(location.search);
-  if (params.get('debug') !== '1') return;
-
   var events = [];
   var panel, output, toggle;
   var nativeAlert = window.alert.bind(window);
