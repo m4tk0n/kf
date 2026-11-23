@@ -44,6 +44,10 @@ return [
     'login.intro' => 'Přihlas se pomocí svého účtu. Hesla neukládáme.',
     'login.none' => 'Není nastaven žádný způsob přihlášení.',
     'login.with' => 'Přihlásit se přes {provider}',
+    'login.confirm.title' => 'Účet je přihlášen jinde',
+    'login.confirm.text' => 'Tento účet je právě přihlášen na jiném zařízení. Pokud budete pokračovat, původní zařízení bude odhlášeno.',
+    'login.confirm.yes' => 'Přihlásit zde a odhlásit druhé zařízení',
+    'login.confirm.no' => 'Zrušit přihlášení',
 
     // uživatelské menu
     'menu.add_event' => '+ Přidat akci',
@@ -127,6 +131,7 @@ return [
     'flash.user_deleted' => 'Uživatel smazán.',
     'flash.sessions_revoked' => 'Uživatel byl odhlášen ze všech zařízení.',
     'flash.logged_out' => 'Byl jsi odhlášen.',
+    'flash.session_replaced' => 'Byli jste odhlášeni. Váš účet byl přihlášen na jiném zařízení.',
     'flash.account_deleted' => 'Účet byl smazán.',
     'flash.oauth_failed' => 'Přihlášení se nezdařilo, zkus to prosím znovu.',
     'flash.account_inactive' => 'Tento účet není aktivní.',
