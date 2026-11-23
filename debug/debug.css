@@ -1,0 +1,8 @@
+/* /debug/debug.css */
+#kf-debug{position:fixed;z-index:2147483647;left:6px;right:6px;bottom:6px;max-height:42vh;display:flex;flex-direction:column;background:#111;color:#eee;border:1px solid #777;border-radius:6px;font:12px/1.4 monospace;box-shadow:0 2px 12px #0008}
+#kf-debug header{display:flex;align-items:center;gap:6px;padding:6px;background:#292929}
+#kf-debug header b{margin-right:auto}
+#kf-debug button{font:inherit;color:#fff;background:#444;border:1px solid #777;border-radius:4px;padding:3px 8px}
+#kf-debug .kf-debug-output{overflow:auto;padding:6px}
+#kf-debug .kf-debug-output>div{padding:5px 0;border-bottom:1px solid #444}
+#kf-debug pre{white-space:pre-wrap;overflow-wrap:anywhere;margin:3px 0;color:#ddd}
