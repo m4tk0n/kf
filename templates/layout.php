@@ -11,7 +11,7 @@ $sessionReplaced = !empty(auth_store()['replaced']);
 $debugEnabled = kf_debug_enabled($user);
 ?>
 <!doctype html>
-<html lang="<?= e(current_lang()) ?>">
+<html lang="<?= e(current_lang()) ?>"<?= $debugEnabled ? ' data-debug-request-id="' . e(kf_debug_request_id()) . '"' : '' ?>>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
