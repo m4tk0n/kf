@@ -204,13 +204,22 @@
   if (originalFetch) {
     window.fetch = function () {
       var started = Date.now();
-      var url = typeof arguments[0] === 'string' ? arguments[0] : arguments[0].url;
-      add('FETCH', url);
+      var input = arguments[0];
+      var url;
+      try {
+        url = typeof input === 'string' ? input :
+          (input && typeof input.url === 'string' ? input.url : String(input));
+      } catch (e) {
+        url = '[URL se nepodařilo přečíst]';
+      }
+
+      // Diagnostické logování nesmí nikdy zabránit zavolání původního fetch().
+      try { add('FETCH', url); } catch (e) {}
       return originalFetch.apply(this, arguments).then(function (response) {
-        add('HTTP ' + response.status, url, (Date.now() - started) + ' ms');
+        try { add('HTTP ' + response.status, url, (Date.now() - started) + ' ms'); } catch (e) {}
         return response;
       }).catch(function (error) {
-        add('FETCH ERROR', url, error.stack || error);
+        try { add('FETCH ERROR', url, error && error.stack ? error.stack : String(error)); } catch (e) {}
         throw error;
       });
     };
