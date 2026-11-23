@@ -118,3 +118,30 @@ Dotčené soubory:
 - `config.php` – společná hodnota `paging.autocomplete_min_chars`,
 - `templates/layout.php` – předání hodnoty minimální délky do vyhledávacího pole,
 - `assets/js/list.js` – řízení spouštění živého vyhledávání podle této hodnoty.
+
+## 6. Přihlášení a ověření identity přes Google a Facebook
+
+**Stav: implementováno, čeká na praktické ověření obou poskytovatelů.**
+
+K&F nabízí pouze dva způsoby přihlášení: Google a Facebook. Vlastní registrace pomocí hesla ani vlastní potvrzovací e-mail se nepoužívají. Uživatel se ověří přímo u poskytovatele prostřednictvím OAuth 2.0; K&F po úspěšném návratu ověří OAuth odpověď a identifikuje účet podle dvojice provider + provider_uid.
+
+Důležitá hranice ověření:
+- Úspěšné OAuth přihlášení potvrzuje, že uživatel ovládá příslušný účet Google nebo Facebook.
+- U Google se e-mail označí jako ověřený pouze při výslovném email_verified = true v odpovědi OpenID Connect. Chybějící příznak se nepovažuje za souhlas.
+- Facebook Graph API při běžném /me přihlášení neposkytuje spolehlivý příznak ověření e-mailové adresy. Facebookem vrácený e-mail se proto může uložit jako kontaktní údaj, ale K&F jej neoznačí za ověřený. To nebrání přihlášení: ověřená je identita Facebook účtu, nikoli automaticky jeho e-mailová adresa.
+- Přístup do K&F ani identifikace uživatele se nikdy neopírá o samotnou shodu e-mailů. Účty Google a Facebook se automaticky neslučují podle e-mailu.
+- Vlastní ověřovací e-mail se neposílá a uživatel si v K&F nenastavuje heslo.
+
+Bezpečnost a implementace:
+- OAuth state je podepsaný a svázaný s krátkodobou HttpOnly cookie; Google používá PKCE.
+- Po získání tokenu se načítá identita poskytovatele. Požadavky na Facebook Graph API používají také appsecret_proof vypočtený z access tokenu a aplikačního secretu.
+- Do profilu uživatele se ukládá e-mail, avatar a příznak email_verified; tento příznak popisuje ověření e-mailu, nikoli ověření samotného OAuth účtu.
+- V profilu se u e-mailu zobrazuje, zda jej poskytovatel výslovně ověřil. U Facebooku se bez takového potvrzení zobrazuje, že e-mail není ověřen, přestože přihlášení Facebook účtu proběhlo úspěšně.
+- Nová registrace, role, session a pravidlo jednoho aktivního zařízení zůstávají společné pro oba poskytovatele.
+
+Konfigurace:
+- Tajné údaje jsou pouze v .env: GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REDIRECT_URI, FACEBOOK_APP_ID, FACEBOOK_APP_SECRET, FACEBOOK_REDIRECT_URI.
+- Přesměrovací adresy OAuth musí být shodně nastavené v konzoli Google / Meta a v .env.
+- Tlačítka se zobrazují pouze pro poskytovatele, který je povolený v config.php a má vyplněné potřebné klíče v .env.
+
+Podrobná specifikace a testovací scénáře: docs/005_prihlaseni.md.
