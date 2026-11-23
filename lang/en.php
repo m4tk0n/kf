@@ -76,6 +76,8 @@ return [
     'profile.role' => 'Role',
     'profile.email' => 'E-mail',
     'profile.email_none' => 'not provided',
+    'profile.email_verified' => 'verified by Google',
+    'profile.email_unverified' => 'email not verified by provider; account sign-in is verified',
     'profile.email_note' => 'read-only, taken from your sign-in account',
     'profile.name' => 'Display name',
     'profile.lang' => 'Language',
