@@ -25,7 +25,7 @@ Přenáší se zejména:
 - aktivní filtr oblíbených položek,
 - další parametry výpisu, které jsou součástí původního požadavku.
 
-Datum akce z detailu nesmí při návratu přepsat datum původního výpisu. Například pokud uživatel otevře detail akce z výpisu pro 26. 11. 2026, návrat musí obnovit výpis pro 26. 11. 2026, i když samotná akce začíná 19. 12. 2026.
+Datum akce z detailu nesmí při návratu přepsat datum původního výpisu. Například pokud uživatel otevře detail akce z výpisu pro 26. 11. 2026, návrat musí obnovit výpis pro 26. 11. 2026, i když samotná akce začíná 19. 12. 2026. Pokud původní výpis neměl datum výslovně nastavené (parametr `d=` je prázdný), musí se tato prázdná hodnota zachovat. Po návratu se tak znovu použije automatický výběr výchozího dne podle aktuálního data; datum začátku otevřené akce se použije pouze při přímém otevření detailu bez návratového kontextu.
 
 
 ### Obnovení polohy konkrétní položky ve výpisu
