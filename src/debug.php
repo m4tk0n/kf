@@ -40,40 +40,68 @@ function kf_debug_request_id(): string
  */
 function kf_debug_enabled(?array $user): bool
 {
-    if ((string)($_GET['debug'] ?? '') !== '1') {
-        return false;
-    }
+    $mode = (string)($_GET['debug'] ?? '');
+    $cookieName = 'KF_DEBUG';
 
-    if ($user !== null && (int)($user['role'] ?? 0) >= role_value('admin')) {
-        return true;
+    if ($mode === '0') {
+        if (!headers_sent()) {
+            $path = (string)(parse_url(url(''), PHP_URL_PATH) ?: '/');
+            setcookie($cookieName, '', [
+                'expires' => time() - 3600,
+                'path' => $path,
+                'secure' => request_is_https(),
+                'httponly' => true,
+                'samesite' => 'Strict',
+            ]);
+        }
+        return false;
     }
 
     $key = trim((string)env('DEBUG_KEY', ''));
-    if ($key === '') {
-        return false;
-    }
-
-    $cookieName = 'KF_DEBUG';
+    $keyCookie = $key !== '' ? hash('sha256', $key) : '';
+    $appKey = (string)env('APP_KEY', '');
+    $adminCookie = $appKey !== '' ? hash_hmac('sha256', 'kf-independent-debug-admin', $appKey) : '';
     $cookieValue = (string)($_COOKIE[$cookieName] ?? '');
-    $expected = hash('sha256', $key);
-    if ($cookieValue !== '' && hash_equals($expected, $cookieValue)) {
-        return true;
+    $isAdmin = $user !== null && (int)($user['role'] ?? 0) >= role_value('admin');
+
+    $authorized = false;
+    $cookieToSet = '';
+
+    if ($mode === '1' && $isAdmin && $adminCookie !== '') {
+        $authorized = true;
+        $cookieToSet = $adminCookie;
+    } elseif ($mode === '1' && $key !== '') {
+        $provided = (string)($_GET['debug_key'] ?? '');
+        if ($provided !== '' && hash_equals($key, $provided)) {
+            $authorized = true;
+            $cookieToSet = $keyCookie;
+        }
     }
 
-    $provided = (string)($_GET['debug_key'] ?? '');
-    if ($provided === '' || !hash_equals($key, $provided)) {
+    if (!$authorized && $isAdmin && $adminCookie !== '' && $cookieValue !== '' && hash_equals($adminCookie, $cookieValue)) {
+        $authorized = true;
+    }
+    if (!$authorized && $keyCookie !== '' && $cookieValue !== '' && hash_equals($keyCookie, $cookieValue)) {
+        $authorized = true;
+    }
+
+    if (!$authorized) {
         return false;
     }
 
-    $basePath = (string)(parse_url(url(''), PHP_URL_PATH) ?: '/');
-    if (!headers_sent()) {
-        setcookie($cookieName, $expected, [
+    if ($cookieToSet !== '' && !headers_sent()) {
+        $path = (string)(parse_url(url(''), PHP_URL_PATH) ?: '/');
+        setcookie($cookieName, $cookieToSet, [
             'expires' => time() + 1800,
-            'path' => $basePath,
+            'path' => $path,
             'secure' => request_is_https(),
             'httponly' => true,
             'samesite' => 'Strict',
         ]);
+    }
+
+    if (!headers_sent()) {
+        header('X-KF-Request-ID: ' . kf_debug_request_id());
     }
     return true;
 }
