@@ -206,6 +206,10 @@
       var started = Date.now();
       var input = arguments[0];
       var url;
+      if (input == null) {
+        add('FETCH ERROR', 'fetch() dostal ' + String(input),
+          'Volající kód předal neplatný vstup.\n' + (new Error('Místo volání fetch()').stack || ''));
+      }
       try {
         url = typeof input === 'string' ? input :
           (input && typeof input.url === 'string' ? input.url : String(input));
