@@ -16,6 +16,7 @@ $sessionReplaced = !empty(auth_store()['replaced']);
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title><?= e(isset($title) && $title !== '' ? $title . ' – ' . (string)cfg('app.name') : (string)cfg('app.name')) ?></title>
 <link rel="stylesheet" href="<?= e(kf_asset('css/app.css')) ?>">
+<script src="<?= e(url('debug/debug.js')) ?>" defer></script>
 <script src="<?= e(kf_asset('js/app.js')) ?>" defer></script>
 <?php if ($isList): ?>
 <script src="<?= e(kf_asset('js/list.js')) ?>" defer></script>
