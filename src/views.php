@@ -100,6 +100,7 @@ function page(string $title, string $tpl, array $vars = [], int $status = 200): 
         'lang' => current_lang(),
         'path' => req_path(),
         'section' => (string)($vars['section'] ?? 'events'),
+        'hasLightbox' => !empty($vars['d']['extra']['large']),
     ]);
     exit;
 }
