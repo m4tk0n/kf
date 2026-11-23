@@ -46,6 +46,39 @@ function route_login(): never
     page(t('nav.login'), 'login', ['providers' => oauth_available(), 'next' => $next]);
 }
 
+function route_login_confirm(): never
+{
+    $pending = oauth_pending_payload();
+    if ($pending === null) {
+        oauth_pending_cookie_set('', time() - 86400);
+        redirect('login?m=oauth_failed');
+    }
+    page(t('login.confirm.title'), 'login_confirm', ['expires' => (int)$pending['e']]);
+}
+
+function route_login_confirm_post(): never
+{
+    $pending = oauth_pending_payload();
+    if ($pending === null) {
+        oauth_pending_cookie_set('', time() - 86400);
+        redirect('login?m=oauth_failed');
+    }
+    $action = post_str('action', 10);
+    oauth_pending_cookie_set('', time() - 86400);
+    if ($action === 'cancel') {
+        redirect('login');
+    }
+    if ($action !== 'confirm') {
+        redirect('login?m=oauth_failed');
+    }
+    $user = user_get((int)$pending['u']);
+    if ($user === null || (int)$user['user_state'] !== (int)cfg('enums.user_state.active')) {
+        redirect('login?m=account_inactive');
+    }
+    session_login_replace((int)$pending['u']);
+    redirect(safe_next((string)($pending['nx'] ?? ''), ''));
+}
+
 function route_oauth_start(array $m): never
 {
     oauth_start($m[1], (string)($_GET['next'] ?? ''));
