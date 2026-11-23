@@ -101,6 +101,7 @@ function page(string $title, string $tpl, array $vars = [], int $status = 200): 
         'path' => req_path(),
         'section' => (string)($vars['section'] ?? 'events'),
         'hasLightbox' => !empty($vars['d']['extra']['large']),
+        'hasFavorites' => isset($vars['d']),
     ]);
     exit;
 }
