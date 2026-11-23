@@ -19,7 +19,7 @@
   left: 10px;
   bottom: 10px;
   width: min(560px, calc(100vw - 20px));
-  max-height: min(65vh, 520px);
+  max-height: min(33vh, 280px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -27,7 +27,7 @@
   color: #eee;
   border: 1px solid #777;
   border-radius: 7px;
-  font: 12px/1.4 monospace;
+  font: 11px/1.35 monospace;
   box-shadow: 0 2px 14px #000a;
 }
 #kf-debug[hidden], #kf-debug-toggle[hidden] { display: none; }
@@ -36,7 +36,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
-  padding: 7px;
+  padding: 6px;
   background: #292929;
   cursor: move;
   touch-action: none;
@@ -52,6 +52,6 @@
   border-radius: 4px;
   padding: 4px 8px;
 }
-#kf-debug .kf-debug-output { overflow: auto; padding: 7px; }
+#kf-debug .kf-debug-output { overflow: auto; padding: 6px; }
 #kf-debug .kf-debug-output > div { padding: 5px 0; border-bottom: 1px solid #444; }
 #kf-debug pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 3px 0; color: #ddd; }
