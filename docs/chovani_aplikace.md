@@ -93,3 +93,28 @@ Po vyřešení problému se doplní:
 Při změně dříve dohodnutého chování se aktualizuje původní pravidlo. Nesmí zůstat současně platné dvě rozporné verze.
 
 Před úpravou aplikace je nutné zkontrolovat relevantní dokumentaci. Implementace musí odpovídat dohodnutým pravidlům; existující chování se nesmí svévolně měnit při úpravě jiné části aplikace.
+
+## 5. Průběžné vyhledávání a minimální délka dotazu
+
+**Stav: implementováno, čeká na praktické ověření**
+
+Živé vyhledávání ve výpisu používá společné nastavení minimální délky dotazu určené pro autocomplete:
+
+- Zdroj nastavení: `paging.autocomplete_min_chars` v `config.php`.
+- Aktuální hodnota: `2` znaky.
+- Pravidlo platí jednotně pro všechny tři katalogy: `events`, `bands` a `venues`.
+
+Chování:
+
+1. Při zadání méně znaků, než stanoví konfigurace, se nový vyhledávací požadavek nespouští.
+2. Po dosažení minimální délky se výpis automaticky aktualizuje podle dotazu bez odeslání formuláře a bez obnovení celé stránky.
+3. Při mazání znaků z aktivního dotazu se výsledky průběžně aktualizují. Jakmile dotaz klesne pod minimum, zobrazí se celý výpis bez textového filtru.
+4. Pokud uživatel změní typ katalogu, přepnutí se provede i tehdy, když je dotaz kratší než minimum. Krátký dotaz se při tom nepoužije jako filtr.
+5. Minimum se nesmí natvrdo duplikovat v JavaScriptu. Hodnota se předává z konfigurace aplikace, aby změna `autocomplete_min_chars` automaticky ovlivnila i živé vyhledávání.
+
+Toto pravidlo určuje pouze okamžik spuštění hledání. Samotné živé vyhledávání a našeptávání autocomplete jsou odlišné funkce; mohou sdílet minimální délku dotazu, ale jejich výsledky a účel se nezaměňují.
+
+Dotčené soubory:
+- `config.php` – společná hodnota `paging.autocomplete_min_chars`,
+- `templates/layout.php` – předání hodnoty minimální délky do vyhledávacího pole,
+- `assets/js/list.js` – řízení spouštění živého vyhledávání podle této hodnoty.
