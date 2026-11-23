@@ -24,6 +24,7 @@
   var calTrigger = document.querySelector('[data-cal]');
   if (calTrigger) {
     var activeModal = null;
+    var activeKeyHandler = null;
     var lang = document.documentElement.lang || 'cs';
     var monthFmt = new Intl.DateTimeFormat(lang, { month: 'long', year: 'numeric' });
     var weekdayFmt = new Intl.DateTimeFormat(lang, { weekday: 'short' });
@@ -39,6 +40,10 @@
       if (activeModal) {
         activeModal.remove();
         activeModal = null;
+      }
+      if (activeKeyHandler) {
+        document.removeEventListener('keydown', activeKeyHandler);
+        activeKeyHandler = null;
       }
     }
     function openCalendar() {
@@ -171,16 +176,10 @@
         if (ev.target === backdrop) closeCalendar();
       });
       loadMonth();
-      var onKey = function (ev) {
-        if (ev.key === 'Escape') {
-          closeCalendar();
-          document.removeEventListener('keydown', onKey);
-        }
+      activeKeyHandler = function (ev) {
+        if (ev.key === 'Escape') closeCalendar();
       };
-      document.addEventListener('keydown', onKey);
-      backdrop.addEventListener('DOMNodeRemoved', function () {
-        document.removeEventListener('keydown', onKey);
-      }, { once: true });
+      document.addEventListener('keydown', activeKeyHandler);
     }
     calTrigger.addEventListener('click', openCalendar);
   }
