@@ -141,32 +141,23 @@ function kf_default_day(string $qa): string
 function kf_event_nav(array $req, string $d, int $k, int $n, string $qa): array
 {
     $cur = new DateTimeImmutable($d);
-    $url = static fn(string $dd, int $kk): string => kf_url($req, ['d' => $dd, 'k' => $kk, 'p' => 1]);
-    $full = static fn(string $dd, int $kk = 0): bool => kf_event_count_from($dd, $qa) - $kk >= $n;
-    $rem = kf_event_count_from($d, $qa);
+    $url = static fn(string $dd): string => kf_url($req, ['d' => $dd, 'k' => 0, 'p' => 1]);
 
-    $prev = null;
-    if ($k > 0) {
-        $prev = $url($d, max(0, $k - $n));
-    } elseif (($pd = kf_day_find('<', $d, $qa)) !== null) {
-        $pk = intdiv(max(0, kf_event_count_from($pd, $qa) - 1), $n) * $n; // poslední část výpisu od předchozího dne
-        $prev = $full($pd, $pk) ? $url($pd, $pk) : null;
-    }
+    // Šipky vždy přecházejí na předchozí/následující den, kdy začíná alespoň jedna akce.
+    // Vícedenní akce zůstává ve výpisu i v dalších dnech díky filtru date_to >= zvolený den.
+    $prevDay = kf_day_find('<', $d, $qa);
+    $nextDay = kf_day_find('>', $d, $qa);
 
-    $next = null;
-    if ($rem > $k + $n) {
-        $next = $url($d, $k + $n);
-    }
+    $monthBack = kf_day_find('<=', kf_add_months($cur, -1)->format('Y-m-d'), $qa);
+    $monthForward = kf_day_find('>=', kf_add_months($cur, 1)->format('Y-m-d'), $qa);
 
-    $mb = kf_day_find('<=', kf_add_months($cur, -1)->format('Y-m-d'), $qa);
-    $mf = kf_day_find('>=', kf_add_months($cur, 1)->format('Y-m-d'), $qa);
     return [
         'label' => $cur->format('d.m.Y'),
         'links' => [
-            'first' => $mb !== null && $full($mb) ? $url($mb, 0) : null,
-            'prev' => $prev,
-            'next' => $next,
-            'last' => $mf !== null && $full($mf) ? $url($mf, 0) : null,
+            'first' => $monthBack !== null ? $url($monthBack) : null,
+            'prev' => $prevDay !== null ? $url($prevDay) : null,
+            'next' => $nextDay !== null ? $url($nextDay) : null,
+            'last' => $monthForward !== null ? $url($monthForward) : null,
         ],
         'titles' => ['first' => kf_t('pager.prev_month'), 'last' => kf_t('pager.next_month')],
         'cal' => [
@@ -245,10 +236,10 @@ function kf_load(array $req): array
             . $country . ' AS country, v.name AS venue';
         $n = $per('events');
         $d = $req['d'] !== '' ? $req['d'] : kf_default_day($qa);
-        $k = max(0, min($req['k'], kf_event_count_from($d, $qa) - $n));
+        $k = 0; // pager akcí přechází po dnech, ne po blocích záznamů
         $rows = q(
             'SELECT ' . $cols . $from . $where . ' AND a.date_to >= ?'
-            . ' ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id LIMIT ' . $n . ' OFFSET ' . $k,
+            . ' ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id LIMIT ' . $n,
             array_merge($params, [$d])
         )->fetchAll(PDO::FETCH_ASSOC);
         $total = (int)q('SELECT COUNT(*) FROM ' . tbl('events') . ' a' . $where, $params)->fetchColumn();
