@@ -51,7 +51,13 @@
       item.append(heading, body);
       output.appendChild(item);
     });
-    output.scrollTop = output.scrollHeight;
+    // Po překreslení DOMu posuň výpis dolů, aby byl poslední záznam vždy viditelný.
+    requestAnimationFrame(function () {
+      output.scrollTop = output.scrollHeight;
+      requestAnimationFrame(function () {
+        output.scrollTop = output.scrollHeight;
+      });
+    });
   }
 
   function copy() {
