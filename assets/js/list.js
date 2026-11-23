@@ -96,12 +96,14 @@
     if (!form) return;
     var params = new URLSearchParams(new FormData(form));
     var query = (params.get('q') || '').trim();
-    var currentQuery = (new URLSearchParams(window.location.search).get('q') || '').trim();
+    var currentUrlParams = new URLSearchParams(window.location.search);
+    var currentQuery = (currentUrlParams.get('q') || '').trim();
+    var sectionChanged = (params.get('s') || '') !== (currentUrlParams.get('s') || '');
 
     // Minimální délka je společná s nastavením autocomplete v config.php.
-    // Pod limitem se nehledá; pokud už ale byl aktivní delší dotaz, vrátí se celý seznam.
+    // Pod limitem se nehledá; po zkrácení dřívějšího dotazu se vrátí celý seznam.
     if (query.length < minChars) {
-      if (currentQuery.length < minChars) return;
+      if (currentQuery.length < minChars && !sectionChanged) return;
       params.delete('q');
     }
 
