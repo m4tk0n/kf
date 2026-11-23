@@ -12,3 +12,5 @@
 .kf-debug-collapsed{max-height:36px}
 .kf-debug-collapsed .kf-debug-output{display:none}
 @media(min-width:700px){#kf-debug-panel{left:auto;width:520px;max-height:48vh}}
+
+#kf-debug-panel .kf-debug-server-php-exception strong,#kf-debug-panel .kf-debug-server-php-fatal strong{color:#ff9d8e}
