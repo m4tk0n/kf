@@ -163,6 +163,13 @@ function session_login_begin(int $userId): bool
     $pdo->beginTransaction();
     try {
         q('SELECT id FROM ' . tbl('users') . ' WHERE id = ? FOR UPDATE', [$userId])->fetch();
+        // Opětovné OAuth přihlášení na zařízení, které už má platnou session téhož účtu,
+        // není převzetí z jiného zařízení.
+        if (auth_cached_uid() === $userId) {
+            session_create($userId);
+            $pdo->commit();
+            return true;
+        }
         $now = time();
         $exists = q(
             'SELECT 1 FROM ' . tbl('sessions') . ' WHERE user_id = ? AND expires_at > ? AND last_seen_at > ? LIMIT 1',
