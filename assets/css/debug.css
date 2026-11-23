@@ -1,0 +1,14 @@
+/* assets/css/debug.css */
+#kf-debug-panel{position:fixed;z-index:2147483000;left:6px;right:6px;bottom:6px;max-height:42vh;background:#101820;color:#e8f0f5;border:1px solid #52616b;border-radius:8px;box-shadow:0 3px 18px #0008;font:12px/1.4 system-ui,sans-serif;display:flex;flex-direction:column;overflow:hidden}
+#kf-debug-panel header{display:flex;align-items:center;gap:8px;padding:6px;background:#263640;flex:0 0 auto}
+#kf-debug-panel header strong{font-size:12px;letter-spacing:.04em}
+#kf-debug-panel header span{margin-right:auto;background:#43545e;border-radius:10px;padding:1px 7px}
+#kf-debug-panel button{font:inherit;color:inherit;background:#3a4b56;border:1px solid #60727d;border-radius:5px;padding:4px 7px}
+.kf-debug-output{overflow:auto;padding:4px 7px;overscroll-behavior:contain}
+.kf-debug-line{border-bottom:1px solid #34434c;padding:4px 0}
+.kf-debug-line strong{color:#9dc9e2}
+.kf-debug-line pre{white-space:pre-wrap;overflow-wrap:anywhere;margin:2px 0;color:#e2e8ec;font:11px/1.35 ui-monospace,monospace}
+.kf-debug-alert strong,.kf-debug-js-error strong,.kf-debug-promise strong,.kf-debug-http-error strong,.kf-debug-fetch-error strong{color:#ff9d8e}
+.kf-debug-collapsed{max-height:36px}
+.kf-debug-collapsed .kf-debug-output{display:none}
+@media(min-width:700px){#kf-debug-panel{left:auto;width:520px;max-height:48vh}}
