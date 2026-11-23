@@ -129,12 +129,12 @@
       });
       bar.addEventListener('submit', function (ev) {
         ev.preventDefault();
-        searchFromForm(bar);
+        searchFromForm(bar, minSearchChars);
       });
       var sectionSelect = bar.querySelector('select[name="s"]');
       if (sectionSelect) {
         sectionSelect.addEventListener('change', function () {
-          searchFromForm(bar);
+          searchFromForm(bar, minSearchChars);
         });
       }
     }
