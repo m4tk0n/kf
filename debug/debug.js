@@ -2,8 +2,28 @@
 (function () {
   'use strict';
 
+  var storageKey = 'kf-debug-state';
+  var saved = null;
   var events = [];
   var panel, output, toggle;
+
+  try {
+    saved = JSON.parse(sessionStorage.getItem(storageKey) || 'null');
+    if (saved && Array.isArray(saved.events)) events = saved.events.slice(-200);
+  } catch (e) {}
+
+  function persist() {
+    try {
+      sessionStorage.setItem(storageKey, JSON.stringify({
+        events: events.slice(-200),
+        open: !!(panel && !panel.hidden),
+        left: panel ? panel.style.left : '',
+        top: panel ? panel.style.top : '',
+        right: panel ? panel.style.right : '',
+        bottom: panel ? panel.style.bottom : ''
+      }));
+    } catch (e) {}
+  }
   var nativeAlert = window.alert.bind(window);
 
   function add(type, message, detail) {
@@ -14,6 +34,7 @@
       detail: detail || ''
     });
     if (events.length > 200) events.shift();
+    persist();
     render();
   }
 
@@ -67,18 +88,29 @@
     document.body.appendChild(panel);
     output = panel.querySelector('.kf-debug-output');
 
+    if (saved) {
+      panel.hidden = !saved.open;
+      toggle.hidden = !!saved.open;
+      ['left', 'top', 'right', 'bottom'].forEach(function (key) {
+        if (saved[key]) panel.style[key] = saved[key];
+      });
+    }
+
     toggle.addEventListener('click', function () {
       panel.hidden = false;
       toggle.hidden = true;
+      persist();
       render();
     });
     panel.querySelector('[data-close]').addEventListener('click', function () {
       panel.hidden = true;
       toggle.hidden = false;
+      persist();
     });
     panel.querySelector('[data-copy]').addEventListener('click', copy);
     panel.querySelector('[data-clear]').addEventListener('click', function () {
       events = [];
+      persist();
       render();
     });
 
@@ -100,6 +132,7 @@
       var top = Math.max(0, Math.min(window.innerHeight - 44, drag.top + event.clientY - drag.y));
       panel.style.left = left + 'px';
       panel.style.top = top + 'px';
+      persist();
     });
     panel.querySelector('.kf-debug-bar').addEventListener('pointerup', function () { drag = null; });
     panel.querySelector('.kf-debug-bar').addEventListener('pointercancel', function () { drag = null; });
