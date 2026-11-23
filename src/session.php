@@ -5,7 +5,7 @@ declare(strict_types=1);
 /** Sdílený stav ověření pro jeden požadavek. */
 function &auth_store(): array
 {
-    static $st = ['resolved' => false, 'user' => null, 'inactive' => false];
+    static $st = ['resolved' => false, 'user' => null, 'inactive' => false, 'replaced' => false];
     return $st;
 }
 
@@ -85,8 +85,10 @@ function auth_resolve(): ?array
         [$hashHex]
     )->fetch();
     if (!$row) {
-        auth_fail('session_unknown');
+        // Token už není v DB: typicky byla session nahrazena přihlášením na jiném zařízení.
+        security_log('session_token_revoked');
         session_clear_cookie();
+        $st['replaced'] = true;
         return null;
     }
 
@@ -149,6 +151,54 @@ function session_create(int $userId): string
     $st['resolved'] = false;
     $st['user'] = null;
     return $token;
+}
+
+/**
+ * První přihlášení bez aktivní session. Zámek řádku uživatele serializuje souběžná
+ * přihlášení, aby dvě zařízení nemohla současně projít kontrolou.
+ */
+function session_login_begin(int $userId): bool
+{
+    $pdo = db();
+    $pdo->beginTransaction();
+    try {
+        q('SELECT id FROM ' . tbl('users') . ' WHERE id = ? FOR UPDATE', [$userId])->fetch();
+        $now = time();
+        $exists = q(
+            'SELECT 1 FROM ' . tbl('sessions') . ' WHERE user_id = ? AND expires_at > ? AND last_seen_at > ? LIMIT 1',
+            [$userId, $now, $now - (int)cfg('session.idle_sec')]
+        )->fetchColumn();
+        if ($exists) {
+            $pdo->commit();
+            return false;
+        }
+        session_create($userId);
+        $pdo->commit();
+        return true;
+    } catch (Throwable $e) {
+        if ($pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
+        throw $e;
+    }
+}
+
+/** Potvrzené převzetí účtu: v jedné transakci zruší staré session a vytvoří jedinou novou. */
+function session_login_replace(int $userId): void
+{
+    $pdo = db();
+    $pdo->beginTransaction();
+    try {
+        q('SELECT id FROM ' . tbl('users') . ' WHERE id = ? FOR UPDATE', [$userId])->fetch();
+        q('DELETE FROM ' . tbl('sessions') . ' WHERE user_id = ?', [$userId]);
+        session_create($userId);
+        $pdo->commit();
+    } catch (Throwable $e) {
+        if ($pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
+        throw $e;
+    }
 }
 
 function session_destroy_current(): void
