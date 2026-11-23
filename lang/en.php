@@ -44,6 +44,10 @@ return [
     'login.intro' => 'Sign in with your existing account. We do not store passwords.',
     'login.none' => 'No sign-in method is configured.',
     'login.with' => 'Log in with {provider}',
+    'login.confirm.title' => 'Account already signed in',
+    'login.confirm.text' => 'This account is currently signed in on another device. If you continue, the other device will be signed out.',
+    'login.confirm.yes' => 'Sign in here and sign out the other device',
+    'login.confirm.no' => 'Cancel sign-in',
 
     // user menu
     'menu.add_event' => '+ Add event',
@@ -127,6 +131,7 @@ return [
     'flash.user_deleted' => 'User deleted.',
     'flash.sessions_revoked' => 'The user has been logged out of all devices.',
     'flash.logged_out' => 'You have been logged out.',
+    'flash.session_replaced' => 'You have been signed out because your account was signed in on another device.',
     'flash.account_deleted' => 'Your account has been deleted.',
     'flash.oauth_failed' => 'Sign-in failed, please try again.',
     'flash.account_inactive' => 'This account is not active.',
