@@ -95,10 +95,14 @@ function kf_detail_return_url(string $fallbackDate = ''): string
         if (isset($saved['p']) && is_scalar($saved['p']) && preg_match('/^\\d{1,6}$/', (string)$saved['p'])) {
             $req['p'] = max(1, (int)$saved['p']);
         }
-        if (isset($saved['d']) && is_string($saved['d'])
-            && preg_match('/^(\\d{4})-(\\d{2})-(\\d{2})$/', $saved['d'], $m)
-            && checkdate((int)$m[2], (int)$m[3], (int)$m[1])) {
-            $req['d'] = $saved['d'];
+        if (isset($saved['d']) && is_string($saved['d'])) {
+            // Prázdné datum znamená původní automatický výběr dne; nesmí se nahradit datem akce.
+            if ($saved['d'] === '') {
+                $req['d'] = '';
+            } elseif (preg_match('/^(\\d{4})-(\\d{2})-(\\d{2})$/', $saved['d'], $m)
+                && checkdate((int)$m[2], (int)$m[3], (int)$m[1])) {
+                $req['d'] = $saved['d'];
+            }
         }
         if (isset($saved['k']) && is_scalar($saved['k']) && preg_match('/^\\d{1,5}$/', (string)$saved['k'])) {
             $req['k'] = (int)$saved['k'];
