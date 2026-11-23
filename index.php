@@ -4,14 +4,6 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/bootstrap.php';
 
-// Diagnostika se aktivuje jen po ověření admina nebo krátkodobého DEBUG_KEY cookie.
-if ((string)($_GET['debug'] ?? '') === '1' || isset($_COOKIE['KF_DEBUG']) || (string)($_GET['debug'] ?? '') === '0') {
-    if (kf_debug_enabled(auth_resolve())) {
-        header('X-KF-Request-ID: ' . kf_debug_request_id());
-    }
-}
-
-
 // cron jen registruje shutdown funkci (běží po odeslání odpovědi)
 if (is_file(__DIR__ . '/cron/cron.php')) {
     require_once __DIR__ . '/cron/cron.php';
@@ -73,20 +65,6 @@ function kf_dispatch(): void
         csrf_verify();
     }
     $handler(...$args);
-}
-
-// Chráněný endpoint: serverové PHP chyby se zobrazují pouze v autorizovaném debug režimu.
-if (isset($_GET['debug_log'])) {
-    if (!kf_debug_enabled(auth_resolve())) {
-        http_response_code(403);
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(['ok' => false, 'error' => 'forbidden']);
-        exit;
-    }
-    header('Content-Type: application/json; charset=utf-8');
-    header('Cache-Control: no-store');
-    echo json_encode(['ok' => true, 'entries' => kf_debug_log_tail()], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-    exit;
 }
 
 kf_dispatch();
