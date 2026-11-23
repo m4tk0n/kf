@@ -105,3 +105,21 @@ function kf_debug_enabled(?array $user): bool
     }
     return true;
 }
+
+/** Poslední diagnostické záznamy pro ověřeného správce/debug klienta. */
+function kf_debug_log_tail(int $limit = 80): array
+{
+    $file = abs_path((string)cfg('storage.error_log_file'));
+    $lines = @file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    if (!is_array($lines)) {
+        return [];
+    }
+    $out = [];
+    foreach (array_slice($lines, -max(1, min($limit, 150))) as $line) {
+        $decoded = json_decode((string)$line, true);
+        $out[] = is_array($decoded)
+            ? $decoded
+            : ['time' => '', 'type' => 'PHP LOG', 'context' => ['message' => (string)$line]];
+    }
+    return $out;
+}
