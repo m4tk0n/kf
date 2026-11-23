@@ -113,6 +113,17 @@ function kf_day_count(string $op, string $t, string $qa): int
     return (int)q('SELECT COUNT(*) FROM ' . tbl('events') . ' a WHERE a.date_from ' . $op . ' ?' . $f, array_merge([$t], $p))->fetchColumn();
 }
 
+
+// Počet akcí, které v daný den ještě probíhají nebo začínají později.
+function kf_event_count_from(string $date, string $qa): int
+{
+    [$f, $p] = kf_events_filter($qa);
+    return (int)q(
+        'SELECT COUNT(*) FROM ' . tbl('events') . ' a WHERE a.date_to >= ?' . $f,
+        array_merge([$date], $p)
+    )->fetchColumn();
+}
+
 // výchozí den: první den akce, která dnes běží nebo teprve začne
 function kf_default_day(string $qa): string
 {
@@ -131,23 +142,21 @@ function kf_event_nav(array $req, string $d, int $k, int $n, string $qa): array
 {
     $cur = new DateTimeImmutable($d);
     $url = static fn(string $dd, int $kk): string => kf_url($req, ['d' => $dd, 'k' => $kk, 'p' => 1]);
-    $full = static fn(string $dd, int $kk = 0): bool => kf_day_count('>=', $dd, $qa) - $kk >= $n;
-    $rem = kf_day_count('>=', $d, $qa);
+    $full = static fn(string $dd, int $kk = 0): bool => kf_event_count_from($dd, $qa) - $kk >= $n;
+    $rem = kf_event_count_from($d, $qa);
     $day = kf_day_count('=', $d, $qa);
 
     $prev = null;
     if ($k > 0) {
         $prev = $url($d, max(0, $k - $n));
     } elseif (($pd = kf_day_find('<', $d, $qa)) !== null) {
-        $pk = intdiv(kf_day_count('=', $pd, $qa) - 1, $n) * $n; // poslední část předchozího dne
+        $pk = intdiv(max(0, kf_event_count_from($pd, $qa) - 1), $n) * $n; // poslední část výpisu od předchozího dne
         $prev = $full($pd, $pk) ? $url($pd, $pk) : null;
     }
 
     $next = null;
-    if ($day > $k + $n) {
-        $next = $url($d, min($k + $n, $rem - $n)); // další část téhož dne (na konci seznamu zarovnáno na plnou stránku)
-    } elseif (($nd = kf_day_find('>', $d, $qa)) !== null && $full($nd)) {
-        $next = $url($nd, 0);
+    if ($rem > $k + $n) {
+        $next = $url($d, $k + $n);
     }
 
     $mb = kf_day_find('<=', kf_add_months($cur, -1)->format('Y-m-d'), $qa);
@@ -237,11 +246,11 @@ function kf_load(array $req): array
             . $country . ' AS country, v.name AS venue';
         $n = $per('events');
         $d = $req['d'] !== '' ? $req['d'] : kf_default_day($qa);
-        $k = max(0, min($req['k'], kf_day_count('>=', $d, $qa) - $n));
+        $k = max(0, min($req['k'], kf_event_count_from($d, $qa) - $n));
         $rows = q(
             'SELECT ' . $cols . $from . $where . ' AND a.date_from >= ?'
-            . ' ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id LIMIT ' . $n . ' OFFSET ' . $k,
-            array_merge($params, [$d])
+            . ' AND a.date_to >= ? ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id LIMIT ' . $n . ' OFFSET ' . $k,
+            array_merge($params, [$d, $d])
         )->fetchAll(PDO::FETCH_ASSOC);
         $total = (int)q('SELECT COUNT(*) FROM ' . tbl('events') . ' a' . $where, $params)->fetchColumn();
         return ['req' => $req, 'rows' => $rows, 'count' => $total, 'nav' => kf_event_nav($req, $d, $k, $n, $qa)];
