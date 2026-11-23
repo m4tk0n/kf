@@ -6,8 +6,7 @@
   if (params.get('debug') !== '1') return;
 
   var events = [];
-  var panel;
-  var output;
+  var panel, output, toggle;
   var nativeAlert = window.alert.bind(window);
 
   function add(type, message, detail) {
@@ -38,7 +37,8 @@
 
   function copy() {
     var text = events.map(function (e) {
-      return '[' + e.time + '] ' + e.type + ': ' + e.message + (e.detail ? '\n' + e.detail : '');
+      return '[' + e.time + '] ' + e.type + ': ' + e.message +
+        (e.detail ? '\n' + e.detail : '');
     }).join('\n\n');
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(function () {
@@ -50,28 +50,62 @@
   }
 
   function init() {
+    var script = document.querySelector('script[src*="debug/debug.js"]');
     var css = document.createElement('link');
     css.rel = 'stylesheet';
-    var script = document.querySelector('script[src*="debug/debug.js"]');
     css.href = new URL('debug.css', script ? script.src : location.href).href;
     document.head.appendChild(css);
 
+    toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.id = 'kf-debug-toggle';
+    toggle.textContent = 'DEBUG';
+    toggle.setAttribute('aria-label', 'Otevřít diagnostický panel');
+    document.body.appendChild(toggle);
+
     panel = document.createElement('section');
     panel.id = 'kf-debug';
-    panel.innerHTML = '<header><b>DEBUG</b><button type="button" data-copy>Kopírovat</button><button type="button" data-clear>Vymazat</button><button type="button" data-hide>×</button></header><div class="kf-debug-output"></div>';
+    panel.hidden = true;
+    panel.innerHTML = '<header class="kf-debug-bar"><strong>DEBUG</strong><span>Přetažením přesunete</span><button type="button" data-copy>Kopírovat</button><button type="button" data-clear>Vymazat</button><button type="button" data-close>×</button></header><div class="kf-debug-output"></div>';
     document.body.appendChild(panel);
     output = panel.querySelector('.kf-debug-output');
 
+    toggle.addEventListener('click', function () {
+      panel.hidden = false;
+      toggle.hidden = true;
+      render();
+    });
+    panel.querySelector('[data-close]').addEventListener('click', function () {
+      panel.hidden = true;
+      toggle.hidden = false;
+    });
     panel.querySelector('[data-copy]').addEventListener('click', copy);
     panel.querySelector('[data-clear]').addEventListener('click', function () {
       events = [];
       render();
     });
-    panel.querySelector('[data-hide]').addEventListener('click', function () {
-      panel.remove();
-      panel = null;
-      output = null;
+
+    // Přesouvání funguje myší i dotykem; hlavička je úchyt.
+    var drag = null;
+    panel.querySelector('.kf-debug-bar').addEventListener('pointerdown', function (event) {
+      if (event.target.closest('button')) return;
+      var rect = panel.getBoundingClientRect();
+      drag = { x: event.clientX, y: event.clientY, left: rect.left, top: rect.top };
+      panel.style.left = rect.left + 'px';
+      panel.style.top = rect.top + 'px';
+      panel.style.right = 'auto';
+      panel.style.bottom = 'auto';
+      event.currentTarget.setPointerCapture(event.pointerId);
     });
+    panel.querySelector('.kf-debug-bar').addEventListener('pointermove', function (event) {
+      if (!drag) return;
+      var left = Math.max(0, Math.min(window.innerWidth - panel.offsetWidth, drag.left + event.clientX - drag.x));
+      var top = Math.max(0, Math.min(window.innerHeight - 44, drag.top + event.clientY - drag.y));
+      panel.style.left = left + 'px';
+      panel.style.top = top + 'px';
+    });
+    panel.querySelector('.kf-debug-bar').addEventListener('pointerup', function () { drag = null; });
+    panel.querySelector('.kf-debug-bar').addEventListener('pointercancel', function () { drag = null; });
 
     add('START', 'Debug aktivní', location.href);
   }
@@ -95,7 +129,8 @@
     var el = event.target.closest && event.target.closest('a,button');
     if (!el) return;
     add('CLICK', el.tagName.toLowerCase() + (el.id ? '#' + el.id : '') +
-      (el.href ? ' → ' + el.href : '') + (el.textContent ? ' (' + el.textContent.trim().slice(0, 100) + ')' : ''));
+      (el.href ? ' → ' + el.href : '') +
+      (el.textContent ? ' (' + el.textContent.trim().slice(0, 100) + ')' : ''));
   }, true);
 
   var originalFetch = window.fetch;
@@ -114,5 +149,9 @@
     };
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
