@@ -52,7 +52,8 @@
   function init() {
     var css = document.createElement('link');
     css.rel = 'stylesheet';
-    css.href = new URL('debug.css', document.currentScript ? document.currentScript.src : location.href).href;
+    var script = document.querySelector('script[src*="debug/debug.js"]');
+    css.href = new URL('debug.css', script ? script.src : location.href).href;
     document.head.appendChild(css);
 
     panel = document.createElement('section');
