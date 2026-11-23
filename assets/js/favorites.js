@@ -10,7 +10,8 @@
     b.title = label;
   }
   document.addEventListener('click', function (ev) {
-    var b = ev.target.closest ? ev.target.closest('[data-fav]') : null;
+    // data-fav používá také skrytý stav výpisu; reagujeme pouze na skutečné tlačítko oblíbených.
+    var b = ev.target.closest ? ev.target.closest('button[data-fav]') : null;
     if (!b || b.disabled) return;
     var body = new URLSearchParams();
     body.set(b.getAttribute('data-csrf-field'), b.getAttribute('data-csrf'));
