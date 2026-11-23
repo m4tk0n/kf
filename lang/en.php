@@ -132,6 +132,8 @@ return [
     'flash.sessions_revoked' => 'The user has been logged out of all devices.',
     'flash.logged_out' => 'You have been logged out.',
     'flash.session_replaced' => 'You have been signed out because your account was signed in on another device.',
+    'flash.session_replaced_title' => 'You have been signed out',
+    'common.understood' => 'Understood',
     'flash.account_deleted' => 'Your account has been deleted.',
     'flash.oauth_failed' => 'Sign-in failed, please try again.',
     'flash.account_inactive' => 'This account is not active.',
