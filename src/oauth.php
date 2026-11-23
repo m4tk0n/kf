@@ -106,6 +106,38 @@ function oauth_cookie_set(string $value, int $expires): void
     ]);
 }
 
+/** Nastaví nebo smaže krátkodobou cookie čekajícího potvrzení přihlášení. */
+function oauth_pending_cookie_set(string $value, int $expires): void
+{
+    if (headers_sent()) {
+        return;
+    }
+    setcookie((string)cfg('session.pending_login_cookie'), $value, [
+        'expires' => $expires,
+        'path' => session_cookie_path(),
+        'secure' => request_is_https(),
+        'httponly' => true,
+        'samesite' => 'Lax',
+    ]);
+}
+
+/** Načte podepsané potvrzení přihlášení a ověří expiraci i vazbu na prohlížeč. */
+function oauth_pending_payload(): ?array
+{
+    $raw = (string)($_COOKIE[(string)cfg('session.pending_login_cookie')] ?? '');
+    $parts = explode('.', $raw, 2);
+    if (count($parts) !== 2 || !hash_equals(oauth_sign('pending|' . $parts[0]), $parts[1])) {
+        return null;
+    }
+    $data = json_decode(oauth_b64_decode($parts[0]), true);
+    if (!is_array($data) || (int)($data['e'] ?? 0) < time()
+        || !hash_equals((string)($data['ua'] ?? ''), ua_hash_hex())
+        || (int)($data['u'] ?? 0) < 1) {
+        return null;
+    }
+    return $data;
+}
+
 /** HTTP požadavek na poskytovatele (pevné HTTPS adresy z configu). @return array{0:int,1:array} */
 function oauth_http(string $method, string $url, array $headers = [], ?array $form = null): array
 {
@@ -251,6 +283,18 @@ function oauth_callback(string $provider): never
         security_log('oauth_login_inactive', ['user_id' => $res['id'], 'state' => $res['state']]);
         redirect('login?m=account_inactive');
     }
-    session_create($res['id']);
-    redirect(safe_next((string)($pl['nx'] ?? ''), ''));
+    $next = safe_next((string)($pl['nx'] ?? ''), '');
+    if (!session_login_begin((int)$res['id'])) {
+        $ttl = (int)cfg('session.pending_login_ttl_sec');
+        $payload = oauth_b64((string)json_encode([
+            'u' => (int)$res['id'],
+            'nx' => $next,
+            'ua' => ua_hash_hex(),
+            'n' => random_hex(16),
+            'e' => time() + $ttl,
+        ]));
+        oauth_pending_cookie_set($payload . '.' . oauth_sign('pending|' . $payload), time() + $ttl);
+        redirect('login/confirm');
+    }
+    redirect($next);
 }
