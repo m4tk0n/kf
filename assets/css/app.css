@@ -224,3 +224,20 @@ abbr{text-decoration:none}
 .fgroup summary{cursor:pointer;font-weight:650}
 .checks{display:grid;gap:4px;margin-top:8px;max-height:260px;overflow:auto}
 .log{max-height:300px;overflow:auto;padding:10px;border-radius:8px;background:#0b0f16;font-size:.75rem;white-space:pre-wrap;overflow-wrap:anywhere}
+
+
+/* Modální upozornění při odhlášení na jiném zařízení */
+.modal-backdrop{
+  position:fixed;inset:0;z-index:1000;
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;background:rgba(3,7,13,.78);
+  -webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);
+}
+.modal{
+  width:100%;max-width:420px;padding:20px;
+  border:1px solid var(--line);border-radius:14px;
+  background:var(--surface-2);box-shadow:0 18px 60px rgba(0,0,0,.55);
+}
+.modal h2{margin:0 0 9px;font-size:1.12rem;line-height:1.3}
+.modal p{margin:0 0 18px;color:var(--muted);font-size:.92rem}
+.modal .btn{min-height:36px;min-width:96px}
