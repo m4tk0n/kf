@@ -77,6 +77,21 @@ function kf_dispatch(): void
 
 kf_dispatch();
 
+// Chráněný endpoint: serverové PHP chyby se zobrazují pouze v autorizovaném debug režimu.
+if (isset($_GET['debug_log'])) {
+    if (!kf_debug_enabled(auth_resolve())) {
+        http_response_code(403);
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode(['ok' => false, 'error' => 'forbidden']);
+        exit;
+    }
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: no-store');
+    echo json_encode(['ok' => true, 'entries' => kf_debug_log_tail()], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    exit;
+}
+
+
 // JSON data pro měsíční kalendář v pageru akcí (respektuje hledání i oblíbené: fav=1).
 if (isset($_GET['cal'])) {
     $month = is_string($_GET['cal']) ? $_GET['cal'] : '';
