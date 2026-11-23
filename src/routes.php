@@ -92,7 +92,7 @@ function route_oauth_callback(array $m): never
 function route_logout(): never
 {
     session_destroy_current();
-    redirect('?m=logged_out');
+    redirect('');
 }
 
 function route_lang(): never
