@@ -201,7 +201,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     createPanel();
-    add('START', 'Diagnostika aktivní; stránka načtena.', 'URL: ' + cleanUrl(location.href) + '\nViewport: ' + innerWidth + '×' + innerHeight + '\nOnline: ' + navigator.onLine);
+    add('START', 'Diagnostika aktivní; stránka načtena.', 'Request ID: ' + (document.documentElement.getAttribute('data-debug-request-id') || '—') + '\nURL: ' + cleanUrl(location.href) + '\nViewport: ' + innerWidth + '×' + innerHeight + '\nOnline: ' + navigator.onLine);
     performance.getEntriesByType('resource').forEach(function (resource) {
       if (/\.js(?:\?|$)|\.css(?:\?|$)/i.test(resource.name)) {
         add('ASSET', cleanUrl(resource.name), Math.round(resource.duration) + ' ms · ' + Math.round(resource.transferSize || 0) + ' B');
