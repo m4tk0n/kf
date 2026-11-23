@@ -76,6 +76,8 @@ return [
     'profile.role' => 'Role',
     'profile.email' => 'E-mail',
     'profile.email_none' => 'neuveden',
+    'profile.email_verified' => 'ověřeno Googlem',
+    'profile.email_unverified' => 'e-mail není poskytovatelem ověřen; přihlášení účtu je ověřeno',
     'profile.email_note' => 'pouze pro čtení, převzato z přihlašovacího účtu',
     'profile.name' => 'Zobrazované jméno',
     'profile.lang' => 'Jazyk',
