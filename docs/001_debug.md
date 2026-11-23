@@ -38,7 +38,7 @@ Záznam lze zkopírovat tlačítkem **Kopírovat**. Panel uchovává nejvýše 3
 
 ### Serverové chyby
 
-PHP výjimky a fatální chyby se zapisují strukturovaně do `data/error.log`. Soubor je chráněn adresářovým `.htaccess`. Log obsahuje čas, ID požadavku, metodu, cestu, typ chyby, soubor, řádek a zásobník volání. Query string se do serverového logu nezapisuje.
+PHP výjimky a fatální chyby se zapisují strukturovaně do `data/error.log`. Soubor je chráněn adresářovým `.htaccess`. Log obsahuje čas, ID požadavku, metodu, cestu, typ chyby, soubor, řádek a zásobník volání. Posledních 80 serverových záznamů lze načíst přímo do panelu přes chráněný diagnostický endpoint. Query string se do serverového logu nezapisuje.
 
 ### Bezpečnost
 
