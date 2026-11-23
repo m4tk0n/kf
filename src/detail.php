@@ -119,7 +119,8 @@ function kf_detail_load(string $kind, int $id): ?array
     $d['fav'] = $u !== null && fav_is((int)$u['id'], $kind, $id);
     $d['back'] = kf_url([
         's' => KF_DETAIL_KINDS[$kind], 'q' => '', 'p' => 1,
-        'd' => $kind === 'event' ? (string)$row['date_from'] : '', 'k' => 0, 'fav' => 0,
+        'd' => $kind === 'event' ? (string)$row['date_from'] : '', 'k' => 0,
+        'fav' => kf_get('fav') === '1' && $u !== null ? 1 : 0,
     ]);
     return $d;
 }
