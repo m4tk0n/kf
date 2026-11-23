@@ -228,7 +228,7 @@
             context.trace || '',
             context.message || context.message === '' ? context.message : '',
             context.class || ''
-          ].filter(Boolean).join('\\n');
+          ].filter(Boolean).join('\n');
           add('SERVER ' + (entry.type || 'LOG'), details || JSON.stringify(entry));
         });
       })
