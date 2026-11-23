@@ -8,7 +8,7 @@ declare(strict_types=1);
   <dl class="kv">
     <dt><?= e(t('profile.provider')) ?></dt><dd><?= e(ucfirst($provider)) ?></dd>
     <dt><?= e(t('profile.role')) ?></dt><dd><?= e(t('role.' . (int)$user['role'])) ?></dd>
-    <dt><?= e(t('profile.email')) ?></dt><dd><?= $email !== '' ? e($email) : '<span class="muted">' . e(t('profile.email_none')) . '</span>' ?> <span class="muted">(<?= e(t($email_verified ? 'profile.email_verified' : 'profile.email_unverified')) ?>)</span></dd>
+    <dt><?= e(t('profile.email')) ?></dt><dd><?= $email !== '' ? e($email) . ' <span class="muted">(' . e(t($email_verified ? 'profile.email_verified' : 'profile.email_unverified')) . ')</span>' : '<span class="muted">' . e(t('profile.email_none')) . '</span>' ?></dd>
   </dl>
 
   <form method="post" action="<?= e(url('profile')) ?>" class="stack">
