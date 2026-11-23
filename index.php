@@ -68,6 +68,25 @@ function kf_dispatch(): void
 
 kf_dispatch();
 
+// JSON data pro měsíční kalendář v pageru akcí.
+if (isset($_GET['cal'])) {
+    $month = is_string($_GET['cal']) ? $_GET['cal'] : '';
+    if (!preg_match('/^([0-9]{4})-(0[1-9]|1[0-2])$/', $month)) {
+        http_response_code(400);
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode(['error' => 'invalid_month']);
+        exit;
+    }
+    $qa = kf_ascii(mb_substr(trim(is_string($_GET['q'] ?? null) ? $_GET['q'] : ''), 0, 100));
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: no-store');
+    echo json_encode(
+        ['month' => $month, 'days' => kf_calendar($month, $qa)],
+        JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES
+    );
+    exit;
+}
+
 $req = kf_request();
 $view = kf_load($req);
 require abs_path((string)cfg('paths.templates')) . '/layout.php';
