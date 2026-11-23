@@ -21,8 +21,10 @@ $sessionReplaced = !empty(auth_store()['replaced']);
 <script src="<?= e(kf_asset('js/list.js')) ?>" defer></script>
 <script src="<?= e(kf_asset('js/calendar.js')) ?>" defer></script>
 <?php endif; ?>
-<?php if ($user !== null): ?>
+<?php if ($user !== null && ($isList || !empty($hasFavorites))): ?>
 <script src="<?= e(kf_asset('js/favorites.js')) ?>" defer></script>
+<?php endif; ?>
+<?php if ($user !== null): ?>
 <script src="<?= e(kf_asset('js/menu.js')) ?>" defer></script>
 <?php endif; ?>
 <?php if (!empty($hasLightbox)): ?>
