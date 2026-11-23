@@ -75,8 +75,6 @@ function kf_dispatch(): void
     $handler(...$args);
 }
 
-kf_dispatch();
-
 // Chráněný endpoint: serverové PHP chyby se zobrazují pouze v autorizovaném debug režimu.
 if (isset($_GET['debug_log'])) {
     if (!kf_debug_enabled(auth_resolve())) {
@@ -90,6 +88,8 @@ if (isset($_GET['debug_log'])) {
     echo json_encode(['ok' => true, 'entries' => kf_debug_log_tail()], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     exit;
 }
+
+kf_dispatch();
 
 
 // JSON data pro měsíční kalendář v pageru akcí (respektuje hledání i oblíbené: fav=1).
