@@ -199,7 +199,7 @@ return [
         'fresh_sec' => 900,          // "nedávné přihlášení" pro citlivé akce (smazání účtu, změna role)
         'touch_interval_sec' => 60,  // last_seen_at se aktualizuje nejvýše jednou za tuto dobu
         'token_bytes' => 32,         // délka náhodného tokenu v cookie (v DB jen jeho SHA-256)
-        'max_per_user' => 10,        // maximální počet současných session jednoho uživatele (nejstarší se ruší)
+        'max_per_user' => 1,         // jeden účet může mít současně jen jednu session
         'cookie_path' => null,       // null => cesta z BASE_URL (např. /_kf/)
         'cookie_httponly' => true,
         'cookie_samesite' => 'Lax',
@@ -207,6 +207,8 @@ return [
         'check_user_agent' => true,  // při změně User-Agentu se session zruší a incident se zaloguje
         'oauth_state_cookie' => 'KF_OAUTH', // krátce platná cookie vázaná na podepsaný OAuth state
         'oauth_state_ttl_sec' => 600,
+        'pending_login_cookie' => 'KF_PENDING_LOGIN',
+        'pending_login_ttl_sec' => 300,
     ],
 
     'security' => [
