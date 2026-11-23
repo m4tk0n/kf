@@ -21,6 +21,7 @@ function kf_dispatch(): void
 
     $get = [
         'login' => 'route_login',
+        'login/confirm' => 'route_login_confirm',
         'profile' => 'route_profile',
         'filters' => 'route_filters',
         'admin/users' => 'route_admin_users',
@@ -28,6 +29,7 @@ function kf_dispatch(): void
     ];
     $posts = [
         'logout' => 'route_logout',
+        'login/confirm' => 'route_login_confirm_post',
         'lang' => 'route_lang',
         'profile' => 'route_profile_post',
         'profile/delete' => 'route_profile_delete',
