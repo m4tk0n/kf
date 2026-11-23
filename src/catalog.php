@@ -169,24 +169,31 @@ function kf_event_nav(array $req, string $d, int $k, int $n, string $qa): array
     ];
 }
 
-// typy akcí podle dnů v měsíci (YYYY-MM) pro kalendář: [den => [typ, ...]]; vícedenní akce se zapíše do všech dnů
+// Typy akcí pro všech 42 buněk kalendáře (pondělí až neděle); klíčem je YYYY-MM-DD.
+// Vícedenní akce se zapíše do každého dne, který zasahuje do zobrazené mřížky.
 function kf_calendar(string $month, string $qa): array
 {
-    $first = $month . '-01';
-    $last = (new DateTimeImmutable($first))->format('Y-m-t');
+    $firstOfMonth = new DateTimeImmutable($month . '-01');
+    $offset = ((int)$firstOfMonth->format('N')) - 1;
+    $first = $firstOfMonth->modify('-' . $offset . ' days')->format('Y-m-d');
+    $last = (new DateTimeImmutable($first))->modify('+41 days')->format('Y-m-d');
     [$f, $p] = kf_events_filter($qa);
-    $rows = q('SELECT a.date_from, a.date_to, a.type FROM ' . tbl('events') . ' a WHERE a.date_from <= ? AND a.date_to >= ?' . $f, array_merge([$last, $first], $p))->fetchAll(PDO::FETCH_ASSOC);
+    $rows = q(
+        'SELECT a.date_from, a.date_to, a.type FROM ' . tbl('events') . ' a'
+        . ' WHERE a.date_from <= ? AND a.date_to >= ?' . $f,
+        array_merge([$last, $first], $p)
+    )->fetchAll(PDO::FETCH_ASSOC);
     $days = [];
     foreach ($rows as $r) {
         $to = min((string)$r['date_to'], $last);
         for ($t = new DateTimeImmutable(max((string)$r['date_from'], $first)); $t->format('Y-m-d') <= $to; $t = $t->modify('+1 day')) {
-            $days[(int)$t->format('j')][(int)$r['type']] = true;
+            $days[$t->format('Y-m-d')][(int)$r['type']] = true;
         }
     }
     $out = [];
-    foreach ($days as $day => $types) {
+    foreach ($days as $date => $types) {
         ksort($types);
-        $out[$day] = array_keys($types);
+        $out[$date] = array_keys($types);
     }
     return $out;
 }
