@@ -144,7 +144,6 @@ function kf_event_nav(array $req, string $d, int $k, int $n, string $qa): array
     $url = static fn(string $dd, int $kk): string => kf_url($req, ['d' => $dd, 'k' => $kk, 'p' => 1]);
     $full = static fn(string $dd, int $kk = 0): bool => kf_event_count_from($dd, $qa) - $kk >= $n;
     $rem = kf_event_count_from($d, $qa);
-    $day = kf_day_count('=', $d, $qa);
 
     $prev = null;
     if ($k > 0) {
@@ -248,9 +247,9 @@ function kf_load(array $req): array
         $d = $req['d'] !== '' ? $req['d'] : kf_default_day($qa);
         $k = max(0, min($req['k'], kf_event_count_from($d, $qa) - $n));
         $rows = q(
-            'SELECT ' . $cols . $from . $where . ' AND a.date_from >= ?'
-            . ' AND a.date_to >= ? ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id LIMIT ' . $n . ' OFFSET ' . $k,
-            array_merge($params, [$d, $d])
+            'SELECT ' . $cols . $from . $where . ' AND a.date_to >= ?'
+            . ' ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id LIMIT ' . $n . ' OFFSET ' . $k,
+            array_merge($params, [$d])
         )->fetchAll(PDO::FETCH_ASSOC);
         $total = (int)q('SELECT COUNT(*) FROM ' . tbl('events') . ' a' . $where, $params)->fetchColumn();
         return ['req' => $req, 'rows' => $rows, 'count' => $total, 'nav' => kf_event_nav($req, $d, $k, $n, $qa)];
