@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/bootstrap.php';
 
+// Diagnostika se aktivuje jen po ověření admina nebo krátkodobého DEBUG_KEY cookie.
+if ((string)($_GET['debug'] ?? '') === '1' || isset($_COOKIE['KF_DEBUG']) || (string)($_GET['debug'] ?? '') === '0') {
+    if (kf_debug_enabled(auth_resolve())) {
+        header('X-KF-Request-ID: ' . kf_debug_request_id());
+    }
+}
+
+
 // cron jen registruje shutdown funkci (běží po odeslání odpovědi)
 if (is_file(__DIR__ . '/cron/cron.php')) {
     require_once __DIR__ . '/cron/cron.php';
