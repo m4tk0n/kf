@@ -109,4 +109,5 @@ if (kf_get('partial') === '1') {
     exit;
 }
 
+$headScripts = '<script src="' . e(url('debug/debug.js')) . '" defer></script>';
 require abs_path((string)cfg('paths.templates')) . '/layout.php';
