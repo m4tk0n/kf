@@ -18,7 +18,7 @@ Do serverového souboru `.env` přidat vlastní dlouhý náhodný klíč:
 DEBUG_KEY=vlastni-dlouhy-nahodny-tajny-klic
 ```
 
-Poté otevřít stránku s parametry `?debug=1&debug_key=VÁŠ_KLÍČ`. Server nastaví krátkodobou HttpOnly cookie, parametr s klíčem se z adresy odstraní a diagnostika bude dostupná i na dalších stránkách v daném prohlížeči. Přístup je platný 30 minut. Po testování klíč z `.env` odstranit nebo změnit.
+Poté otevřít stránku s parametry `?debug=1&debug_key=VÁŠ_KLÍČ`. Server nastaví krátkodobou HttpOnly cookie, parametr s klíčem se z adresy odstraní a diagnostika bude dostupná i na dalších stránkách v daném prohlížeči. Přístup je platný 30 minut a přetrvá při navigaci mezi stránkami. Debug vypnete přidáním `?debug=0` k URL. Po testování klíč z `.env` odstranit nebo změnit.
 
 Klíč nikdy nevkládat do GitHubu ani do veřejných souborů. Bez admin účtu a bez `DEBUG_KEY` se debug hostům nezpřístupní.
 
