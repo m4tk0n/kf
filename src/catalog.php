@@ -62,7 +62,12 @@ function kf_img(string $kind, int $id, string $size): string
 
 function kf_detail_url(string $kind, int $id): string
 {
-    return url('') . '?' . http_build_query([$kind => $id]);
+    $params = [$kind => $id];
+    // Zachovat aktivní filtr oblíbených i při otevření detailu a při přechodu mezi souvisejícími záznamy.
+    if (kf_get('fav') === '1' && auth_resolve() !== null) {
+        $params['fav'] = '1';
+    }
+    return url('') . '?' . http_build_query($params);
 }
 
 function kf_pager(array $nav): string
