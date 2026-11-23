@@ -41,7 +41,7 @@ return [
 
     // login
     'login.title' => 'Log in',
-    'login.intro' => 'Sign in with your existing account. We do not store passwords.',
+    'login.intro' => 'Sign in with your Google or Facebook account. We do not store passwords; the provider verifies the sign-in.',
     'login.none' => 'No sign-in method is configured.',
     'login.with' => 'Log in with {provider}',
     'login.confirm.title' => 'Account already signed in',
