@@ -8,7 +8,6 @@ $menu = $menu ?? menu_items($user);
 $flash = $flash ?? flash_text();
 $isList = isset($view);
 $sessionReplaced = !empty(auth_store()['replaced']);
-$debugEnabled = kf_debug_enabled($user);
 ?>
 <!doctype html>
 <html lang="<?= e(current_lang()) ?>"<?= $debugEnabled ? ' data-debug-request-id="' . e(kf_debug_request_id()) . '"' : '' ?>>
@@ -17,10 +16,6 @@ $debugEnabled = kf_debug_enabled($user);
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title><?= e(isset($title) && $title !== '' ? $title . ' – ' . (string)cfg('app.name') : (string)cfg('app.name')) ?></title>
 <link rel="stylesheet" href="<?= e(kf_asset('css/app.css')) ?>">
-<?php if ($debugEnabled): ?>
-<link rel="stylesheet" href="<?= e(kf_asset('css/debug.css')) ?>">
-<script src="<?= e(kf_asset('js/debug.js')) ?>" defer></script>
-<?php endif; ?>
 <script src="<?= e(kf_asset('js/app.js')) ?>" defer></script>
 <?php if ($isList): ?>
 <script src="<?= e(kf_asset('js/list.js')) ?>" defer></script>
