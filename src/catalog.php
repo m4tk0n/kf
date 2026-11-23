@@ -63,11 +63,50 @@ function kf_img(string $kind, int $id, string $size): string
 function kf_detail_url(string $kind, int $id): string
 {
     $params = [$kind => $id];
-    // Zachovat aktivní filtr oblíbených i při otevření detailu a při přechodu mezi souvisejícími záznamy.
+
+    // Při prvním otevření detailu uložit aktuální stav výpisu.
+    // Při přechodu na související záznam zachovat původní návratový stav.
+    $return = kf_get('return');
+    if ($return === '') {
+        $return = http_build_query(kf_request());
+    }
+    $params['return'] = $return;
+
     if (kf_get('fav') === '1' && auth_resolve() !== null) {
         $params['fav'] = '1';
     }
     return url('') . '?' . http_build_query($params);
+}
+
+/** Bezpečně obnoví pouze povolené parametry výpisu z návratového stavu detailu. */
+function kf_detail_return_url(string $fallbackDate = ''): string
+{
+    $req = ['s' => 'events', 'q' => '', 'p' => 1, 'd' => $fallbackDate, 'k' => 0, 'fav' => 0];
+    $raw = kf_get('return');
+
+    if ($raw !== '') {
+        parse_str($raw, $saved);
+        if (isset($saved['s']) && is_string($saved['s']) && in_array($saved['s'], ['events', 'bands', 'venues'], true)) {
+            $req['s'] = $saved['s'];
+        }
+        if (isset($saved['q']) && is_string($saved['q'])) {
+            $req['q'] = mb_substr(trim($saved['q']), 0, 100);
+        }
+        if (isset($saved['p']) && is_scalar($saved['p']) && preg_match('/^\\d{1,6}$/', (string)$saved['p'])) {
+            $req['p'] = max(1, (int)$saved['p']);
+        }
+        if (isset($saved['d']) && is_string($saved['d'])
+            && preg_match('/^(\\d{4})-(\\d{2})-(\\d{2})$/', $saved['d'], $m)
+            && checkdate((int)$m[2], (int)$m[3], (int)$m[1])) {
+            $req['d'] = $saved['d'];
+        }
+        if (isset($saved['k']) && is_scalar($saved['k']) && preg_match('/^\\d{1,5}$/', (string)$saved['k'])) {
+            $req['k'] = (int)$saved['k'];
+        }
+        $req['fav'] = isset($saved['fav']) && (string)$saved['fav'] === '1' ? 1 : 0;
+    }
+
+    return kf_url($req);
 }
 
 function kf_pager(array $nav): string
