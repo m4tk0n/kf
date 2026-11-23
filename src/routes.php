@@ -149,7 +149,7 @@ function admin_error_flash(string $code): string
 function route_admin_users(): never
 {
     guard('manage_users');
-    $per = (int)cfg('paging.per_page');
+    $per = (int)cfg('paging.per_page_users');
     $pageNo = max(1, (int)($_GET['page'] ?? 1));
     $total = (int)q('SELECT COUNT(*) FROM ' . tbl('users'))->fetchColumn();
     $pages = max(1, (int)ceil($total / $per));

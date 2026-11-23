@@ -111,9 +111,10 @@ return [
     ],
 
     'paging' => [
-        'per_page_events' => 3,   // akce: počet záznamů ve výpisu od vybraného data dále
+        'per_page_events' => 10,   // akce: počet záznamů ve výpisu od vybraného data dále
         'per_page_bands' => 24,
         'per_page_venues' => 24,
+        'per_page_users' => 25,
         'max_per_page' => 100,
         'autocomplete_min_chars' => 2,
         'autocomplete_limit' => 10,

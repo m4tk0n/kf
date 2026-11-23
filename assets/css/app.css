@@ -180,3 +180,47 @@ abbr{text-decoration:none}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
 }
+
+/* --- přihlášení, avatar, menu, formuláře a stránky v Main --- */
+.flash{margin:0 0 12px;padding:10px 14px;border:1px solid rgba(83,217,154,.35);border-radius:10px;background:rgba(83,217,154,.1);color:#9be8c4}
+.umenu{position:relative}
+.umenu summary{list-style:none;cursor:pointer;display:flex}
+.umenu summary::-webkit-details-marker{display:none}
+.umenu-list{position:absolute;right:0;top:44px;z-index:10;min-width:210px;padding:6px;display:grid;gap:2px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.umenu-list a,.umenu-list button{display:block;width:100%;text-align:left;padding:9px 11px;border:0;border-radius:8px;background:none;color:var(--text);font:inherit;cursor:pointer}
+.umenu-list a:hover,.umenu-list button:hover{background:var(--surface-3)}
+.umenu-list form{margin:0}
+.avatar{position:relative;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;overflow:hidden;font-weight:800;color:#0d1119}
+.avatar-ini{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.avatar-img{position:relative;width:100%;height:100%;object-fit:cover}
+.av0{background:#62aaff}.av1{background:#53d99a}.av2{background:#ffad66}.av3{background:#ff795d}
+.av4{background:#c79bff}.av5{background:#ffd966}.av6{background:#6fe0e0}.av7{background:#ff8fb3}
+.card{padding:18px;margin:0 0 14px;border:1px solid rgba(139,163,192,.17);border-radius:var(--radius);background:linear-gradient(125deg,rgba(29,42,59,.96),rgba(20,29,42,.98))}
+.card h1{margin:0 0 10px;font-size:1.35rem}
+.card h2{margin:0 0 8px;font-size:1.1rem}
+.card .lead{color:var(--muted)}
+.narrow{max-width:520px;margin-left:auto;margin-right:auto}
+.stack{display:grid;gap:12px;margin-top:14px}
+.stack label{display:grid;gap:5px;color:var(--muted);font-size:.85rem}
+.stack input[type=text],.stack select{height:36px;padding:0 11px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);font:inherit}
+.check{display:flex!important;align-items:center;gap:8px;color:var(--text)!important}
+.btn.wide{width:100%;min-height:42px;font-size:.95rem}
+.btn.small{min-height:28px;font-size:.78rem}
+.btn.ghost{background:none;border-color:var(--line);color:var(--muted)}
+.btn.danger{border-color:rgba(255,77,77,.5);background:rgba(255,77,77,.12);color:#ff9a9a}
+.warn{color:#ffc233}
+.muted{color:var(--muted)}
+.danger-zone{border-color:rgba(255,77,77,.3)}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;margin:0 0 6px}
+.kv dt{color:var(--muted)}.kv dd{margin:0;overflow-wrap:anywhere}
+.tablewrap{overflow-x:auto}
+.grid{width:100%;border-collapse:collapse;font-size:.85rem}
+.grid th,.grid td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+.grid th{color:var(--muted);font-weight:600}
+.inline{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.inline select{height:28px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--text)}
+.chip{display:inline-block;padding:2px 9px;border:1px solid var(--line);border-radius:99px;font-size:.78rem}
+.fgroup{border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.fgroup summary{cursor:pointer;font-weight:650}
+.checks{display:grid;gap:4px;margin-top:8px;max-height:260px;overflow:auto}
+.log{max-height:300px;overflow:auto;padding:10px;border-radius:8px;background:#0b0f16;font-size:.75rem;white-space:pre-wrap;overflow-wrap:anywhere}

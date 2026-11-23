@@ -39,11 +39,6 @@ function session_clear_cookie(): void
     }
 }
 
-function ua_hash_hex(): string
-{
-    return substr(hash('sha256', (string)($_SERVER['HTTP_USER_AGENT'] ?? '')), 0, 16);
-}
-
 /** Neplatný pokus o autentizaci: log + rate-limit (po překročení 429). */
 function auth_fail(string $reason): void
 {
@@ -241,22 +236,6 @@ function csrf_token(): string
 function csrf_field(): string
 {
     return '<input type="hidden" name="' . e((string)cfg('security.csrf_field')) . '" value="' . e(csrf_token()) . '">';
-}
-
-function origin_ok(): bool
-{
-    $base = parse_url(base_url());
-    $src = (string)($_SERVER['HTTP_ORIGIN'] ?? '');
-    if ($src === '') {
-        $src = (string)($_SERVER['HTTP_REFERER'] ?? '');
-    }
-    if ($src === '' || !is_array($base)) {
-        return false;
-    }
-    $o = parse_url($src);
-    return is_array($o)
-        && strtolower((string)($o['host'] ?? '')) === strtolower((string)($base['host'] ?? ''))
-        && ($o['port'] ?? null) === ($base['port'] ?? null);
 }
 
 /** Každý POST musí mít platný CSRF token a (volitelně) Origin/Referer z BASE_URL. */

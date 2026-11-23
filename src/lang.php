@@ -7,6 +7,8 @@ function kf_lang(): string
 {
     static $lang = null;
     if ($lang !== null) return $lang;
+    // profil přihlášeného > cookie > prohlížeč (i18n.php)
+    if (function_exists('current_lang')) return $lang = current_lang();
     $supported = (array)cfg('app.supported_langs');
     foreach (explode(',', strtolower((string)($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? ''))) as $part) {
         $code = substr(trim(explode(';', $part)[0]), 0, 2);
