@@ -165,10 +165,19 @@ function session_login_begin(int $userId): bool
         q('SELECT id FROM ' . tbl('users') . ' WHERE id = ? FOR UPDATE', [$userId])->fetch();
         // Opětovné OAuth přihlášení na zařízení, které už má platnou session téhož účtu,
         // není převzetí z jiného zařízení.
-        if (auth_cached_uid() === $userId) {
-            session_create($userId);
-            $pdo->commit();
-            return true;
+        $current = auth_store()['user'];
+        if ($current !== null && (int)$current['id'] === $userId) {
+            $now = time();
+            $other = q(
+                'SELECT 1 FROM ' . tbl('sessions') . ' WHERE user_id = ? AND token_hash <> UNHEX(?)
+                    AND expires_at > ? AND last_seen_at > ? LIMIT 1',
+                [$userId, (string)$current['token_hash_hex'], $now, $now - (int)cfg('session.idle_sec')]
+            )->fetchColumn();
+            if (!$other) {
+                session_create($userId);
+                $pdo->commit();
+                return true;
+            }
         }
         $now = time();
         $exists = q(
