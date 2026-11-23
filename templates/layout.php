@@ -1,7 +1,7 @@
 <?php
 // templates/layout.php
 /** @var array|null $view  výpis (index.php); u stránek z page() je $content */
-$req = $view['req'] ?? ['s' => (string)($section ?? 'events'), 'q' => '', 'p' => 1, 'd' => '', 'k' => 0, 'fav' => 0];
+$req = $view['req'] ?? ['s' => (string)($section ?? 'events'), 'q' => '', 'p' => 1, 'd' => '', 'k' => 0, 'fav' => kf_get('fav') === '1' ? 1 : 0];
 $favOn = !empty($req['fav']);
 $user = $user ?? auth_resolve();
 $menu = $menu ?? menu_items($user);
