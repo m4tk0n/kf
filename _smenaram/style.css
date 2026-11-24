@@ -519,3 +519,20 @@ body.filter-mode #monthly-view .shift-person3 {
     color: #ffffff !important;
     font-weight: bold;
 }
+
+
+/* Stránka Závody */
+#races-view {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.races-container {
+    padding: 6px 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
