@@ -2,26 +2,6 @@
 // src/storage.php
 declare(strict_types=1);
 
-/** Zapíše celý obsah streamu; fwrite() může zapsat méně bajtů, než bylo požadováno. */
-function write_stream_all($fh, string $content, string $fileLabel, bool $sync = false): void
-{
-    $length = strlen($content);
-    $offset = 0;
-    while ($offset < $length) {
-        $written = @fwrite($fh, substr($content, $offset));
-        if ($written === false || $written === 0) {
-            throw new RuntimeException('Zápis se nezdařil: ' . $fileLabel);
-        }
-        $offset += $written;
-    }
-    if (!@fflush($fh)) {
-        throw new RuntimeException('Data se nepodařilo dokončit na disku: ' . $fileLabel);
-    }
-    if ($sync && function_exists('fsync') && !@fsync($fh)) {
-        throw new RuntimeException('Data se nepodařilo synchronizovat: ' . $fileLabel);
-    }
-}
-
 function ensure_dir(string $dir): void
 {
     if (!is_dir($dir) && !@mkdir($dir, 0755, true) && !is_dir($dir)) {
@@ -107,10 +87,11 @@ function log_append(string $relFile, string $line): void
             $tail = (string)stream_get_contents($fh);
             ftruncate($fh, 0);
             rewind($fh);
-            write_stream_all($fh, $tail, basename($file));
+            fwrite($fh, $tail);
         }
         fseek($fh, 0, SEEK_END);
-        write_stream_all($fh, preg_replace('/[\\r\\n]+/', ' ', $line) . "\n", basename($file));
+        fwrite($fh, preg_replace('/[\\r\\n]+/', ' ', $line) . "\n");
+        fflush($fh);
         flock($fh, LOCK_UN);
     }
     fclose($fh);
@@ -121,29 +102,24 @@ function json_locked(string $relFile, callable $fn): mixed
 {
     $file = abs_path($relFile);
     ensure_dir(dirname($file));
-    $fh = @fopen($file, 'c+b');
+    $fh = fopen($file, 'c+b');
     if (!$fh) {
-        throw new RuntimeException('Soubor nelze otevřít pro zápis: ' . basename($file));
+        throw new RuntimeException('Soubor nelze otevřít: ' . basename($file));
     }
     try {
         if (!flock($fh, LOCK_EX)) {
             throw new RuntimeException('Soubor nelze zamknout: ' . basename($file));
         }
-        rewind($fh);
-        $raw = stream_get_contents($fh);
-        if ($raw === false) {
-            throw new RuntimeException('Soubor nelze přečíst: ' . basename($file));
-        }
+        $raw = (string)stream_get_contents($fh);
         $data = $raw !== '' ? json_decode($raw, true) : [];
         if (!is_array($data)) {
             $data = [];
         }
         $result = $fn($data);
-        $json = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR);
-        if (!ftruncate($fh, 0) || !rewind($fh)) {
-            throw new RuntimeException('JSON soubor nelze připravit k zápisu: ' . basename($file));
-        }
-        write_stream_all($fh, $json, basename($file), true);
+        ftruncate($fh, 0);
+        rewind($fh);
+        fwrite($fh, json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+        fflush($fh);
         flock($fh, LOCK_UN);
         return $result;
     } finally {
