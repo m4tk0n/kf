@@ -22,6 +22,8 @@ function toggleYearlyView() {
     const yearlyView = document.getElementById('yearly-view');
     const pencilBtn = document.getElementById('pencil-btn');
     const menuBtn = document.getElementById('menu-btn');
+    const racesView = document.getElementById('races-view');
+    const medalBtn = document.querySelector('.icons-group .icon-btn[title="Ocenění"]');
 
     if (isYearlyView) {
         turnOffEditMode();
@@ -30,6 +32,8 @@ function toggleYearlyView() {
         menuBtn?.classList.add('active');
 
         monthlyView?.classList.add('hidden');
+        racesView?.classList.add('hidden');
+        if (medalBtn) medalBtn.classList.remove('active');
         yearlyView?.classList.remove('hidden');
 
         displayYear = currentDate.getFullYear();
@@ -39,6 +43,8 @@ function toggleYearlyView() {
         menuBtn?.classList.remove('active');
 
         yearlyView?.classList.add('hidden');
+        racesView?.classList.add('hidden');
+        if (medalBtn) medalBtn.classList.remove('active');
         monthlyView?.classList.remove('hidden');
 
         renderCalendar();
