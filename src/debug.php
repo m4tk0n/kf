@@ -34,76 +34,26 @@ function kf_debug_request_id(): string
     return $id;
 }
 
-/**
- * Debug je dostupný adminovi, nebo hostovi s tajným DEBUG_KEY z .env.
- * Aktivuje se vždy výslovným parametrem ?debug=1.
- */
-function kf_debug_enabled(?array $user): bool
+/** DEBUG mohou používat hlavní účet (ID 2) a administrátoři. */
+function kf_debug_user_allowed(?array $user): bool
 {
-    $mode = (string)($_GET['debug'] ?? '');
-    $cookieName = 'KF_DEBUG';
+    return $user !== null
+        && ((int)($user['id'] ?? 0) === 2 || (int)($user['role'] ?? 0) >= role_value('admin'));
+}
 
-    if ($mode === '0') {
-        if (!headers_sent()) {
-            $path = (string)(parse_url(url(''), PHP_URL_PATH) ?: '/');
-            setcookie($cookieName, '', [
-                'expires' => time() - 3600,
-                'path' => $path,
-                'secure' => request_is_https(),
-                'httponly' => true,
-                'samesite' => 'Strict',
-            ]);
-        }
-        return false;
-    }
+/** Trvalé nastavení DEBUG je součástí JSON profilu konkrétního uživatele. */
+function kf_debug_user_active(?array $user): bool
+{
+    return kf_debug_user_allowed($user)
+        && !empty(user_profile_get((int)$user['id'])['debug_enabled']);
+}
 
-    $key = trim((string)env('DEBUG_KEY', ''));
-    $keyCookie = $key !== '' ? hash('sha256', $key) : '';
-    $appKey = (string)env('APP_KEY', '');
-    $adminCookie = $appKey !== '' ? hash_hmac('sha256', 'kf-independent-debug-admin', $appKey) : '';
-    $cookieValue = (string)($_COOKIE[$cookieName] ?? '');
-    $isAdmin = $user !== null && (int)($user['role'] ?? 0) >= role_value('admin');
-
-    $authorized = false;
-    $cookieToSet = '';
-
-    if ($mode === '1' && $isAdmin && $adminCookie !== '') {
-        $authorized = true;
-        $cookieToSet = $adminCookie;
-    } elseif ($mode === '1' && $key !== '') {
-        $provided = (string)($_GET['debug_key'] ?? '');
-        if ($provided !== '' && hash_equals($key, $provided)) {
-            $authorized = true;
-            $cookieToSet = $keyCookie;
-        }
-    }
-
-    if (!$authorized && $isAdmin && $adminCookie !== '' && $cookieValue !== '' && hash_equals($adminCookie, $cookieValue)) {
-        $authorized = true;
-    }
-    if (!$authorized && $keyCookie !== '' && $cookieValue !== '' && hash_equals($keyCookie, $cookieValue)) {
-        $authorized = true;
-    }
-
-    if (!$authorized) {
-        return false;
-    }
-
-    if ($cookieToSet !== '' && !headers_sent()) {
-        $path = (string)(parse_url(url(''), PHP_URL_PATH) ?: '/');
-        setcookie($cookieName, $cookieToSet, [
-            'expires' => time() + 1800,
-            'path' => $path,
-            'secure' => request_is_https(),
-            'httponly' => true,
-            'samesite' => 'Strict',
-        ]);
-    }
-
-    if (!headers_sent()) {
-        header('X-KF-Request-ID: ' . kf_debug_request_id());
-    }
-    return true;
+/** Skript plovoucího diagnostického panelu připojí jen při aktivním nastavení. */
+function kf_debug_script(?array $user): string
+{
+    return kf_debug_user_active($user)
+        ? '<script src="' . e(url('debug/debug.js')) . '" defer></script>'
+        : '';
 }
 
 /** Poslední diagnostické záznamy pro ověřeného správce/debug klienta. */
