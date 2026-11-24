@@ -146,7 +146,7 @@ return [
     'diagnostics.active' => 'Active',
     'diagnostics.yes' => 'Yes',
     'diagnostics.no' => 'No',
-    'diagnostics.activate' => 'Activate',
+    'diagnostics.show' => 'Show',
     'diagnostics.deactivate' => 'Deactivate',
 
     // pagination and calendar (catalog)
