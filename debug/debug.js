@@ -7,8 +7,6 @@
   var events = [];
   var panel, output, toggle, filterSelect;
   var activeFilter = 'all';
-  // Dočasně držíme panel otevřený; uživatelské zavírání platí do dalšího načtení stránky.
-  var forceOpen = true;
 
   try {
     saved = JSON.parse(sessionStorage.getItem(storageKey) || 'null');
@@ -114,7 +112,7 @@
 
     panel = document.createElement('section');
     panel.id = 'kf-debug';
-    panel.hidden = true;
+    panel.hidden = false;
     panel.innerHTML = '<header class="kf-debug-bar"><strong>DEBUG</strong><select data-filter aria-label="Filtr záznamů"><option value="all">Vše</option><option value="errors">Chyby</option><option value="network">Síť</option><option value="actions">Akce</option><option value="system">Systém</option></select><button type="button" data-copy>Kopírovat</button><button type="button" data-clear>Vymazat</button><button type="button" data-close>×</button></header><div class="kf-debug-output"></div>';
     document.body.appendChild(panel);
     output = panel.querySelector('.kf-debug-output');
@@ -127,15 +125,11 @@
     });
 
     if (saved) {
-      panel.hidden = forceOpen ? false : !saved.open;
-      toggle.hidden = forceOpen ? true : !!saved.open;
       ['left', 'top', 'right', 'bottom'].forEach(function (key) {
         if (saved[key]) panel.style[key] = saved[key];
       });
-    } else if (forceOpen) {
-      panel.hidden = false;
-      toggle.hidden = true;
     }
+    toggle.hidden = true;
 
     toggle.addEventListener('click', function () {
       panel.hidden = false;
