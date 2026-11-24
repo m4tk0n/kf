@@ -9,6 +9,9 @@ DirectoryIndex index.php index.html
 
 # pretty URL: vše, co není soubor ani složka, jde do index.php (auth/google/login, profile, admin/users ...)
 RewriteEngine On
+
+# /debug/ je zároveň adresář statických souborů; tuto adresu vždy předat routeru.
+RewriteRule ^debug/?$ index.php [L]
 RewriteRule ^(src|templates|lang|data|cron)(/|$) - [F,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
