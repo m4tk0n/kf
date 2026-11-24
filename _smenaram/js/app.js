@@ -187,8 +187,39 @@ function changeRacesYear(delta) {
     renderRacesPage();
 }
 
-function renderRacesPage() {
+async function renderRacesPage() {
+    const year = displayYear;
     const yearDisplay = document.getElementById('races-year-display');
-    if (yearDisplay) yearDisplay.textContent = displayYear;
-    // Seznam je připravený pro závody daného roku; zatím zůstává prázdný.
+    const container = document.getElementById('races-container');
+    if (yearDisplay) yearDisplay.textContent = year;
+    if (!container) return;
+
+    container.textContent = 'Načítání…';
+
+    try {
+        await loadShifts(`${year}-01-01`, `${year}-12-31`);
+
+        // Pokud uživatel během načítání přepnul rok, starší výsledek nezobrazíme.
+        if (year !== displayYear || document.getElementById('races-view')?.classList.contains('hidden')) return;
+
+        const raceDates = Object.entries(shiftsData)
+            .filter(([, shifts]) => String(shifts?.Osoba3 ?? shifts?.osoba3 ?? '').trim().toUpperCase() === 'Z')
+            .map(([date]) => date)
+            .filter(date => /^\\d{4}-\\d{2}-\\d{2}$/.test(date))
+            .sort();
+
+        container.replaceChildren();
+
+        raceDates.forEach(date => {
+            const [, month, day] = date.split('-');
+            const line = document.createElement('div');
+            line.className = 'race-date';
+            line.textContent = `${day}.${month}.`;
+            container.appendChild(line);
+        });
+    } catch (error) {
+        if (year === displayYear) {
+            container.textContent = 'Závody se nepodařilo načíst.';
+        }
+    }
 }
