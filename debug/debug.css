@@ -1,1 +1,60 @@
-/* Debug styles */
+/* Plovoucí diagnostické okno – styly jsou záměrně oddělené od hlavního vzhledu. */
+.kf-debug {
+  position: fixed;
+  z-index: 99999;
+  right: max(10px, env(safe-area-inset-right));
+  bottom: max(10px, env(safe-area-inset-bottom));
+  width: min(290px, calc(100vw - 20px));
+  max-height: min(45vh, 320px);
+  overflow: hidden;
+  color: #f4f4f5;
+  background: rgba(20, 24, 31, .96);
+  border: 1px solid #64748b;
+  border-radius: 9px;
+  box-shadow: 0 5px 24px rgba(0, 0, 0, .35);
+  font: 12px/1.45 system-ui, sans-serif;
+}
+.kf-debug-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 32px;
+  padding: 4px 8px 4px 11px;
+  background: #303b4b;
+  letter-spacing: .08em;
+}
+.kf-debug-toggle {
+  width: 26px;
+  height: 25px;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 1px solid #8290a3;
+  border-radius: 5px;
+  font: inherit;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+}
+.kf-debug-body {
+  display: grid;
+  gap: 5px;
+  padding: 8px 11px 10px;
+}
+.kf-debug-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.kf-debug-row span { color: #bac5d3; }
+.kf-debug-row b {
+  max-width: 65%;
+  overflow-wrap: anywhere;
+  text-align: right;
+  font-weight: 600;
+}
+.kf-debug.is-collapsed { width: 112px; }
+.kf-debug.is-collapsed .kf-debug-body { display: none; }
+@media (max-width: 420px) {
+  .kf-debug { right: 7px; bottom: max(7px, env(safe-area-inset-bottom)); }
+}
