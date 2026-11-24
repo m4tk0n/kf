@@ -98,7 +98,7 @@ function log_append(string $relFile, string $line): void
 }
 
 /** Úprava jednoho sdíleného JSON souboru pod zámkem (rate-limit, ...). Callback dostane pole odkazem. */
-function json_locked(string $relFile, callable $fn): mixed
+function json_locked(string $relFile, callable $fn, bool $pretty = false): mixed
 {
     $file = abs_path($relFile);
     ensure_dir(dirname($file));
@@ -118,7 +118,12 @@ function json_locked(string $relFile, callable $fn): mixed
         $result = $fn($data);
         ftruncate($fh, 0);
         rewind($fh);
-        fwrite($fh, json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+        $flags = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES;
+        if ($pretty) {
+            $flags |= JSON_PRETTY_PRINT;
+        }
+        $json = json_encode($data, $flags);
+        fwrite($fh, $json . ($pretty ? "\n" : ''));
         fflush($fh);
         flock($fh, LOCK_UN);
         return $result;
