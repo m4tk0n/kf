@@ -272,7 +272,6 @@ function route_admin_settings(): never
     }
     $inodeLimit = (int)cfg('storage.max_inodes');
     $files = count_files_limited(abs_path((string)cfg('paths.data')), $inodeLimit) + count_files_limited(abs_path((string)cfg('paths.img')), $inodeLimit);
-    $mail = json_read_file((string)cfg('storage.mail_queue_file'));
     $cron = json_read_file((string)cfg('cron.state_file'));
     page(t('menu.settings'), 'settings', [
         'db_mb' => round($dbBytes / 1048576, 2),
@@ -281,7 +280,6 @@ function route_admin_settings(): never
         'files_max' => $inodeLimit,
         'by_role' => $byRole,
         'pending' => pending_count(),
-        'mail_queue' => count((array)($mail['queue'] ?? [])),
         'cron_last' => (int)($cron['last_run'] ?? 0),
         'log' => tail_lines((string)cfg('storage.security_log_file'), 30),
     ]);

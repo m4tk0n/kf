@@ -116,7 +116,6 @@ return [
     'settings.db' => 'Database',
     'settings.files' => 'Files (inodes)',
     'settings.pending' => 'Submissions to review',
-    'settings.mail' => 'E-mail queue',
     'settings.cron' => 'Last cron run',
     'settings.never' => 'never',
     'settings.users' => 'Users by role',

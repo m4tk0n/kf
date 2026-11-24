@@ -56,11 +56,6 @@ function kf_cron_run(): void
     }
 }
 
-function kf_cron_task_mail_queue(): void
-{
-    mail_process_queue();
-}
-
 function kf_cron_task_session_cleanup(): void
 {
     session_cleanup();

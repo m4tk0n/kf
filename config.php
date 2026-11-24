@@ -55,7 +55,6 @@ return [
         'security_log_max_bytes' => 1048576, // 1 MB před rotací/ořezem (platí i pro error_log_file)
         'error_log_file' => 'data/error.log',
         'ratelimit_file' => 'data/ratelimit.json',
-        'mail_queue_file' => 'data/mail_queue.json',
         'users_dir' => 'data/users',
         'tmp_dir' => 'data/tmp',                 // dočasné obrázky z rozpracovaných formulářů (náhled)
         'tmp_ttl_sec' => 3600,                   // starší soubory v tmp_dir maže cron
@@ -106,13 +105,6 @@ return [
         'user_agent' => 'KF-Bot/1.0',
     ],
 
-    'mail' => [
-        'transport' => 'mail',  // mail | smtp (smtp zatím nepoužito, údaje by šly do .env)
-        'queue_batch' => 5,     // max. e-mailů odeslaných jedním během cronu (nad rámec limitu limits.emails_per_hour)
-        'max_attempts' => 3,    // po tolika neúspěšných pokusech se e-mail z fronty zahodí
-        'queue_max' => 200,     // maximální délka fronty (starší se zahazují)
-    ],
-
     'paging' => [
         'per_page_events' => 10,   // akce: počet záznamů ve výpisu od vybraného data dále
         'per_page_bands' => 24,
@@ -133,7 +125,6 @@ return [
             'genre' => 5,
         ],
         'submissions_per_day' => 20,
-        'emails_per_hour' => 30,
         'favorites_max' => 500, // max. oblíbených položek jednoho typu na uživatele
         'trusted_after' => 5, // počet schválených příspěvků (users.approved_count) pro povýšení user -> trusted
         'rate_limit_window_sec' => 3600,
@@ -278,7 +269,7 @@ return [
         'lock_file' => 'cron/cron.lock',
         'state_file' => 'cron/cron_state.json',
         'after_response' => true, // spouštět až po odeslání odpovědi (fastcgi_finish_request(), pokud existuje)
-        'tasks' => ['mail_queue', 'session_cleanup', 'tmp_cleanup', 'ratelimit_cleanup', 'ai_import'], // ai_import běží jen při ai_import.mode = internal
+        'tasks' => ['session_cleanup', 'tmp_cleanup', 'ratelimit_cleanup', 'ai_import'], // ai_import běží jen při ai_import.mode = internal
     ],
 
     'ai_import' => [
@@ -329,7 +320,6 @@ return [
         ],
         'wipe_files' => [
             'data/ratelimit.json',
-            'data/mail_queue.json',
             'cron/cron_state.json',
             'cron/cron.lock',
         ],

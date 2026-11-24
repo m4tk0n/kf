@@ -116,7 +116,6 @@ return [
     'settings.db' => 'Databáze',
     'settings.files' => 'Soubory (inody)',
     'settings.pending' => 'Návrhy ke schválení',
-    'settings.mail' => 'Fronta e-mailů',
     'settings.cron' => 'Poslední běh cronu',
     'settings.never' => 'nikdy',
     'settings.users' => 'Uživatelé podle rolí',
