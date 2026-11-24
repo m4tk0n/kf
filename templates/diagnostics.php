@@ -8,6 +8,6 @@ declare(strict_types=1);
   <p><?= e(t('diagnostics.active')) ?>: <?= e(t($active ? 'diagnostics.yes' : 'diagnostics.no')) ?></p>
   <form method="post" action="<?= e(url('diagnostics')) ?>">
     <?= csrf_field() ?>
-    <button type="submit" class="btn"><?= e(t('diagnostics.show')) ?></button>
+    <button type="submit" class="btn"><?= e(t($active ? 'diagnostics.off' : 'diagnostics.show')) ?></button>
   </form>
 </section>
