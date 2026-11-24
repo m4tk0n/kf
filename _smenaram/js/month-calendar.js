@@ -1,4 +1,5 @@
 // js/month-calendar.js
+const SMENARAM_TODAY_IMAGE_URL = new URL('../images/todayblue.png', document.currentScript.src).href;
 async function renderCalendar() {
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
@@ -69,7 +70,7 @@ async function renderCalendar() {
             dayCell.classList.add('is-today');
         }
 
-        const todayImgHtml = isToday ? '<img src="images/todayblue.png" class="today-circle-img" alt="Dnes">' : '';
+        const todayImgHtml = isToday ? `<img src="${SMENARAM_TODAY_IMAGE_URL}" class="today-circle-img" alt="Dnes">` : '';
 
         dayCell.innerHTML = `
             <div class="day-header">
