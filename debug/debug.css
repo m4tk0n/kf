@@ -7,7 +7,7 @@
   bottom: max(8px, env(safe-area-inset-bottom));
   width: auto;
   max-width: 1200px;
-  max-height: 36vh;
+  max-height: 33vh;
   min-height: 34px;
   display: flex;
   flex-direction: column;
@@ -79,7 +79,7 @@
 #kf-debug-panel.kf-debug-collapsed .kf-debug-tools,
 #kf-debug-panel.kf-debug-collapsed .kf-debug-content { display: none; }
 @media (max-width: 600px) {
-  #kf-debug-panel { max-height: 40vh; }
+  #kf-debug-panel { max-height: 33vh; }
   #kf-debug-panel .kf-debug-summary { display: none; }
   #kf-debug-panel .kf-debug-header { gap: 5px; }
   #kf-debug-panel .kf-debug-header button { padding: 3px 5px; }
