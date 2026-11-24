@@ -132,7 +132,7 @@ function route_debug_post(): never
     $profile['debug_enabled'] = post_str('enabled', 1) === '1';
     user_profile_put((int)$u['id'], $profile);
     security_log('debug_setting_changed', ['user_id' => (int)$u['id'], 'enabled' => $profile['debug_enabled']]);
-    redirect('debug');
+    redirect($profile['debug_enabled'] ? 'debug?open=1' : 'debug');
 }
 
 function route_profile(): never
