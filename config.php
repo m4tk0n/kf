@@ -9,7 +9,6 @@ return [
         'default_lang' => 'cs',
         'supported_langs' => ['cs', 'en'], // názvy sloupců name_<lang> v DB se skládají jen z ověřené hodnoty z tohoto pole
         'timezone' => 'Europe/Prague',
-        'debug' => false,
         'lang_cookie' => 'KF_LANG',          // explicitní volba jazyka návštěvníka (nepřihlášený)
         'lang_cookie_ttl_sec' => 31536000,
     ],
