@@ -14,15 +14,21 @@ async function renderCalendar() {
     // Výpočet počátečního dne (pondělí)
     let firstDayOfMonth = new Date(year, month, 1);
     let dayOfWeek = firstDayOfMonth.getDay();
-    let isoDay = dayOfWeek === 0 ? 7 : dayOfWeek; 
-    
+    let isoDay = dayOfWeek === 0 ? 7 : dayOfWeek;
+
     let startDate = new Date(firstDayOfMonth);
     startDate.setDate(startDate.getDate() - (isoDay - 1));
 
     let endDate = new Date(startDate);
     endDate.setDate(endDate.getDate() + 41);
 
-    await loadShifts(formatDate(startDate), formatDate(endDate));
+    try {
+        await loadShifts(formatDate(startDate), formatDate(endDate));
+    } catch (error) {
+        console.error('Kalendář nelze vykreslit bez aktuálních dat.', error);
+        calendarEl.textContent = 'Směny se nepodařilo načíst.';
+        return;
+    }
 
     let iteratorDate = new Date(startDate);
 
@@ -58,13 +64,11 @@ async function renderCalendar() {
             dayCell.classList.add('has-shift');
         }
 
-        // Kontrola dnešního data
         const isToday = (dateStr === todayStr);
         if (isToday) {
             dayCell.classList.add('is-today');
         }
 
-        // Vložení modrého kroužku pro dnešní den
         const todayImgHtml = isToday ? '<img src="images/todayblue.png" class="today-circle-img" alt="Dnes">' : '';
 
         dayCell.innerHTML = `
@@ -114,6 +118,8 @@ async function applyPresetToDay(dateStr) {
         }
     }
 
-    await saveDayShifts(dateStr, newOsoba1, newOsoba2, newOsoba3);
-    await renderCalendar();
+    const saved = await saveDayShifts(dateStr, newOsoba1, newOsoba2, newOsoba3);
+    if (saved) {
+        await renderCalendar();
+    }
 }
