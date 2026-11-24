@@ -51,6 +51,16 @@ function assetVersion($relativePath) {
     <div id="yearly-container" class="yearly-container"></div>
 </div>
 
+<!-- 3. STRÁNKA ZÁVODŮ -->
+<div id="races-view" class="hidden">
+    <div class="year-picker">
+        <span id="prev-races-year" class="nav-btn">&lt;</span>
+        <span id="races-year-display"></span>
+        <span id="next-races-year" class="nav-btn">&gt;</span>
+    </div>
+    <div id="races-container" class="races-container"></div>
+</div>
+
 <!-- Vyskakovací dialog pro výběr razítka -->
 <div id="preset-modal" class="modal-overlay hidden">
     <div class="modal-content">
