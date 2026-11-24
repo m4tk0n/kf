@@ -43,7 +43,7 @@ function kf_debug_enabled(?array $user): bool
     return (user_profile_get((int)$user['id'])['diagnostika'] ?? false) === true;
 }
 
-/** Vloží pouze prostředky diagnostiky; načítají se výhradně při jejím zapnutí. */
+/** Načte výhradně oddělené prostředky Developer Tools. */
 function kf_debug_assets(): void
 {
     $css = KF_ROOT . '/debug/debug.css';
@@ -57,20 +57,30 @@ function kf_debug_assets(): void
     }
 }
 
-/** Plovoucí panel diagnostiky. */
+/** Plnohodnotný klientský diagnostický panel; obsah se vypisuje bezpečně přes textContent. */
 function kf_debug_render(): void
 {
-    echo '<aside id="kf-debug" class="kf-debug" aria-label="Debug" aria-live="polite">'
-        . '<div class="kf-debug-head">'
-        . '<strong>DEBUG</strong>'
-        . '<button type="button" class="kf-debug-toggle" data-debug-toggle aria-expanded="true" aria-label="Sbalit diagnostiku">−</button>'
+    echo '<section id="kf-debug-panel" aria-label="K&F Developer Tools">'
+        . '<header class="kf-debug-header">'
+        . '<strong class="kf-debug-brand">K&amp;F DEVTOOLS</strong>'
+        . '<span class="kf-debug-summary" data-debug-summary>Inicializace…</span>'
+        . '<span class="kf-debug-spacer"></span>'
+        . '<button type="button" data-debug-pause aria-pressed="false">Pozastavit</button>'
+        . '<button type="button" data-debug-clear>Vymazat</button>'
+        . '<button type="button" data-debug-toggle aria-expanded="true">Sbalit</button>'
+        . '</header>'
+        . '<nav class="kf-debug-tabs" aria-label="Diagnostické panely">'
+        . '<button type="button" data-debug-tab="console" aria-selected="true">Console <span data-debug-count="console">0</span></button>'
+        . '<button type="button" data-debug-tab="network" aria-selected="false">Network <span data-debug-count="network">0</span></button>'
+        . '<button type="button" data-debug-tab="errors" aria-selected="false">Errors <span data-debug-count="errors">0</span></button>'
+        . '<button type="button" data-debug-tab="info" aria-selected="false">Info</button>'
+        . '</nav>'
+        . '<div class="kf-debug-tools"><input type="search" data-debug-filter placeholder="Filtrovat záznamy…" aria-label="Filtrovat diagnostické záznamy"></div>'
+        . '<div class="kf-debug-content">'
+        . '<div class="kf-debug-view" data-debug-view="console"></div>'
+        . '<div class="kf-debug-view" data-debug-view="network" hidden></div>'
+        . '<div class="kf-debug-view" data-debug-view="errors" hidden></div>'
+        . '<div class="kf-debug-view" data-debug-view="info" hidden></div>'
         . '</div>'
-        . '<div class="kf-debug-body">'
-        . '<div class="kf-debug-row"><span>Stav</span><b>Aktivní</b></div>'
-        . '<div class="kf-debug-row"><span>Obrazovka</span><b data-debug-screen>—</b></div>'
-        . '<div class="kf-debug-row"><span>Viewport</span><b data-debug-viewport>—</b></div>'
-        . '<div class="kf-debug-row"><span>Online</span><b data-debug-online>—</b></div>'
-        . '<div class="kf-debug-row"><span>Čas</span><b data-debug-time>—</b></div>'
-        . '</div>'
-        . '</aside>';
+        . '</section>';
 }
