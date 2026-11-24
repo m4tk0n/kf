@@ -101,39 +101,44 @@ function turnOffEditMode() {
 
 // Přepínání mezi Měsíčním a Ročním pohledem
 function toggleYearlyView() {
-    isYearlyView = !isYearlyView;
-
     const monthlyView = document.getElementById('monthly-view');
     const yearlyView = document.getElementById('yearly-view');
+    const racesView = document.getElementById('races-view');
     const checkBtn = document.getElementById('check-btn');
     const pencilBtn = document.getElementById('pencil-btn');
+    const menuBtn = document.getElementById('menu-btn');
+    const racesBtn = document.getElementById('races-btn');
 
-    if (isYearlyView) {
-        // Vypnutí úprav i filtru při vstupu do ročního přehledu
+    const opening = yearlyView?.classList.contains('hidden');
+
+    if (opening) {
+        isYearlyView = true;
+        displayYear = currentDate.getFullYear();
         turnOffEditMode();
-        
         isFilterMode = false;
         document.body.classList.remove('filter-mode');
-        if (checkBtn) checkBtn.classList.remove('active');
-
-        // Deaktivace ikon v liště
-        if (checkBtn) checkBtn.classList.add('disabled');
-        if (pencilBtn) pencilBtn.classList.add('disabled');
+        checkBtn?.classList.remove('active');
+        checkBtn?.classList.add('disabled');
+        pencilBtn?.classList.add('disabled');
 
         monthlyView?.classList.add('hidden');
+        racesView?.classList.add('hidden');
         yearlyView?.classList.remove('hidden');
-
+        menuBtn?.classList.add('active');
+        racesBtn?.classList.remove('active');
         renderYearlyOverview();
-    } else {
-        // Návrat do měsíčního kalendáře
-        if (checkBtn) checkBtn.classList.remove('disabled');
-        if (pencilBtn) pencilBtn.classList.remove('disabled');
-
-        yearlyView?.classList.add('hidden');
-        monthlyView?.classList.remove('hidden');
-
-        renderCalendar();
+        return;
     }
+
+    isYearlyView = false;
+    checkBtn?.classList.remove('disabled');
+    pencilBtn?.classList.remove('disabled');
+    yearlyView?.classList.add('hidden');
+    racesView?.classList.add('hidden');
+    monthlyView?.classList.remove('hidden');
+    menuBtn?.classList.remove('active');
+    racesBtn?.classList.remove('active');
+    renderCalendar();
 }
 
 function changeMonth(delta) {
@@ -153,38 +158,40 @@ function toggleRacesView() {
     const monthlyView = document.getElementById('monthly-view');
     const yearlyView = document.getElementById('yearly-view');
     const menuBtn = document.getElementById('menu-btn');
-    const medalBtn = document.getElementById('races-btn');
+    const racesBtn = document.getElementById('races-btn');
     const checkBtn = document.getElementById('check-btn');
     const pencilBtn = document.getElementById('pencil-btn');
 
     const opening = racesView?.classList.contains('hidden');
-    if (!opening) {
-        racesView?.classList.add('hidden');
-        yearlyView?.classList.add('hidden');
-        monthlyView?.classList.remove('hidden');
-        menuBtn?.classList.remove('active');
-        medalBtn?.classList.remove('active');
-        checkBtn?.classList.remove('disabled');
-        pencilBtn?.classList.remove('disabled');
+
+    if (opening) {
         isYearlyView = false;
-        renderCalendar();
+        displayYear = currentDate.getFullYear();
+        turnOffEditMode();
+        isFilterMode = false;
+        document.body.classList.remove('filter-mode');
+        checkBtn?.classList.remove('active');
+        checkBtn?.classList.add('disabled');
+        pencilBtn?.classList.add('disabled');
+
+        yearlyView?.classList.add('hidden');
+        monthlyView?.classList.add('hidden');
+        racesView?.classList.remove('hidden');
+        menuBtn?.classList.remove('active');
+        racesBtn?.classList.add('active');
+        renderRacesPage();
         return;
     }
 
     isYearlyView = false;
-    displayYear = currentDate.getFullYear();
-    turnOffEditMode();
-    isFilterMode = false;
-    document.body.classList.remove('filter-mode');
-    checkBtn?.classList.remove('active');
-    checkBtn?.classList.add('disabled');
-    pencilBtn?.classList.add('disabled');
+    checkBtn?.classList.remove('disabled');
+    pencilBtn?.classList.remove('disabled');
+    racesView?.classList.add('hidden');
     yearlyView?.classList.add('hidden');
-    monthlyView?.classList.add('hidden');
-    racesView?.classList.remove('hidden');
+    monthlyView?.classList.remove('hidden');
     menuBtn?.classList.remove('active');
-    medalBtn?.classList.add('active');
-    renderRacesPage();
+    racesBtn?.classList.remove('active');
+    renderCalendar();
 }
 
 function changeRacesYear(delta) {
