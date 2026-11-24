@@ -116,9 +116,9 @@ Chování:
 Toto pravidlo určuje pouze okamžik spuštění hledání. Samotné živé vyhledávání a našeptávání autocomplete jsou odlišné funkce; mohou sdílet minimální délku dotazu, ale jejich výsledky a účel se nezaměňují. Rozbalovací našeptávač se touto úpravou nepřidává a jeho případné budoucí použití se musí posoudit samostatně.
 
 Dotčené soubory:
-- `config.php` – společná hodnota `paging.autocomplete_min_chars`,
-- `templates/layout.php` – předání hodnoty minimální délky do vyhledávacího pole,
-- `assets/js/list.js` – řízení spouštění živého vyhledávání podle této hodnoty.
+- `config.php` – společná hodnota `paging.autocomplete_min_chars` a prodleva `paging.search_debounce_ms`,
+- `templates/layout.php` – předání obou hodnot do vyhledávacího pole,
+- `assets/js/list.js` – řízení spouštění živého vyhledávání podle těchto hodnot.
 
 ## 6. Přihlášení a ověření identity přes Google a Facebook
 
