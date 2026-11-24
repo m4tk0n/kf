@@ -264,7 +264,7 @@ return [
     ],
 
     'cron' => [
-        'enabled' => true,
+        'enabled' => false,
         'interval_sec' => 300, // minimální rozestup mezi běhy cronu (5 min)
         'lock_timeout_sec' => 120,
         'batch_limit' => 5,
