@@ -1,7 +1,7 @@
 <?php
 function assetVersion($relativePath) {
-    $relativePath = str_replace('\\\\', '/', (string)$relativePath);
-    if ($relativePath === '' || str_starts_with($relativePath, '/') || preg_match('~(^|/)\\.\\.(/|$)~', $relativePath)) {
+    $relativePath = str_replace('\\', '/', (string)$relativePath);
+    if ($relativePath === '' || str_starts_with($relativePath, '/') || preg_match('~(^|/)\.\.(/|$)~', $relativePath)) {
         return '0';
     }
     $filePath = __DIR__ . '/' . $relativePath;
