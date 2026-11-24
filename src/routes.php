@@ -109,6 +109,32 @@ function route_lang(): never
     redirect(post_str('next', 300));
 }
 
+/** Nastavení diagnostického panelu dostupné jen hlavnímu účtu a administrátorům. */
+function route_debug(): never
+{
+    $u = auth_resolve();
+    if (!kf_debug_user_allowed($u)) {
+        security_log('forbidden', ['action' => 'debug']);
+        abort(403, t('error.403'));
+    }
+    $enabled = kf_debug_user_active($u);
+    page('DEBUG', 'debug', ['debug_enabled' => $enabled]);
+}
+
+function route_debug_post(): never
+{
+    $u = auth_resolve();
+    if (!kf_debug_user_allowed($u)) {
+        security_log('forbidden', ['action' => 'debug']);
+        abort(403, t('error.403'));
+    }
+    $profile = user_profile_get((int)$u['id']);
+    $profile['debug_enabled'] = post_str('enabled', 1) === '1';
+    user_profile_put((int)$u['id'], $profile);
+    security_log('debug_setting_changed', ['user_id' => (int)$u['id'], 'enabled' => $profile['debug_enabled']]);
+    redirect('debug');
+}
+
 function route_profile(): never
 {
     $u = guard('edit_profile');
