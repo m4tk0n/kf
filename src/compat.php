@@ -145,7 +145,31 @@ if (!function_exists('user_profile_get')) {
     function user_profile_get(int $id): array
     {
         static $cache = [];
-        return $cache[$id] ??= json_read_file(user_profile_rel($id));
+        if (array_key_exists($id, $cache)) {
+            return $cache[$id];
+        }
+
+        $rel = user_profile_rel($id);
+        $file = abs_path($rel);
+
+        // Při prvním načtení převede i starší jednorádkový profil na čitelný JSON.
+        if (is_file($file)) {
+            $raw = (string)file_get_contents($file);
+            $decoded = json_decode($raw, true);
+            if (is_array($decoded)) {
+                $pretty = json_encode(
+                    $decoded,
+                    JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_THROW_ON_ERROR
+                ) . "\n";
+                if ($raw !== $pretty) {
+                    json_locked($rel, static function (array &$data): void {
+                        // Beze změny obsahu; json_locked pouze zapíše formátovaný JSON.
+                    }, true);
+                }
+            }
+        }
+
+        return $cache[$id] = json_read_file($rel);
     }
 }
 
