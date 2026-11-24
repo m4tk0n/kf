@@ -16,7 +16,8 @@ header('Content-Type: text/html; charset=utf-8');
 // Musí být před směrováním stránek, aby parametr fungoval i na /debug.
 if (isset($_GET['debug_log'])) {
     $debugUser = auth_resolve();
-    if (!kf_debug_user_active($debugUser)) {
+    // Diagnostiku lze stáhnout i po vypnutí přepínače, ale pouze oprávněným účtům.
+    if (!kf_debug_user_allowed($debugUser)) {
         http_response_code(403);
         header('Content-Type: application/json; charset=utf-8');
         header('Cache-Control: no-store');
