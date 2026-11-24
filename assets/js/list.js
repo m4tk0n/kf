@@ -98,7 +98,7 @@
     var query = (params.get('q') || '').trim();
     var currentUrlParams = new URLSearchParams(window.location.search);
     var currentQuery = (currentUrlParams.get('q') || '').trim();
-    var sectionChanged = (params.get('s') || '') !== (currentUrlParams.get('s') || '');
+    var sectionChanged = (params.get('s') || 'events') !== (currentUrlParams.get('s') || 'events');
 
     // Minimální délka je společná s nastavením autocomplete v config.php.
     // Pod limitem se nehledá; po zkrácení dřívějšího dotazu se vrátí celý seznam.
@@ -122,20 +122,30 @@
     var bar = document.querySelector('.bar');
     var searchInput = bar ? bar.querySelector('input[name="q"]') : null;
     var minSearchChars = searchInput ? Math.max(1, parseInt(searchInput.getAttribute('data-min-chars') || '2', 10) || 2) : 2;
+    var debounceMs = searchInput ? Math.max(0, parseInt(searchInput.getAttribute('data-debounce-ms') || '250', 10) || 0) : 250;
+    var searchTimer = null;
 
     // Každá změna textu vyhledá znovu a nahradí pouze obsah výpisu.
     // Input zůstává mimo #view, takže neztrácí fokus ani mobilní klávesnici.
     if (searchInput && bar) {
       searchInput.addEventListener('input', function () {
-        searchFromForm(bar, minSearchChars);
+        if (searchTimer !== null) window.clearTimeout(searchTimer);
+        searchTimer = window.setTimeout(function () {
+          searchTimer = null;
+          searchFromForm(bar, minSearchChars);
+        }, debounceMs);
       });
       bar.addEventListener('submit', function (ev) {
         ev.preventDefault();
+        if (searchTimer !== null) window.clearTimeout(searchTimer);
+        searchTimer = null;
         searchFromForm(bar, minSearchChars);
       });
       var sectionSelect = bar.querySelector('select[name="s"]');
       if (sectionSelect) {
         sectionSelect.addEventListener('change', function () {
+          if (searchTimer !== null) window.clearTimeout(searchTimer);
+          searchTimer = null;
           searchFromForm(bar, minSearchChars);
         });
       }

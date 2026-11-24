@@ -9,7 +9,7 @@ if (is_file(__DIR__ . '/cron/cron.php')) {
     require_once __DIR__ . '/cron/cron.php';
 }
 
-send_security_headers(false);
+send_security_headers(auth_resolve() !== null);
 header('Content-Type: text/html; charset=utf-8');
 
 /** Obslouží přihlášení, profil, filtry, oblíbené a administraci; ostatní cesty vrací do výpisu. */
@@ -56,10 +56,11 @@ function kf_dispatch(): void
         return;
     }
 
-    send_security_headers(auth_resolve() !== null);
     if ($post) {
-        if (ratelimit_hit('post', (int)cfg('limits.rate_limit_max_hits'))) {
-            security_log('post_rate_exceeded');
+        $rateLimitBucket = $path === 'fav' ? 'fav' : 'post';
+        $rateLimitMax = (int)cfg($path === 'fav' ? 'limits.favorites_rate_limit_max_hits' : 'limits.rate_limit_max_hits');
+        if (ratelimit_hit($rateLimitBucket, $rateLimitMax)) {
+            security_log($rateLimitBucket . '_rate_exceeded');
             abort(429, t('error.429'));
         }
         csrf_verify();

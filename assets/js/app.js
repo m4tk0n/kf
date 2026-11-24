@@ -2,7 +2,9 @@
 (function () {
   'use strict';
   var sel = document.querySelector('.bar select');
-  if (sel) sel.addEventListener('change', function () { sel.form.submit(); });
+  if (sel && !document.getElementById('view')) {
+    sel.addEventListener('change', function () { sel.form.submit(); });
+  }
 
   // potvrzení nebezpečných akcí (CSP zakazuje inline JS)
   document.addEventListener('click', function (ev) {

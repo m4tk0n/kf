@@ -114,6 +114,7 @@ return [
         'max_per_page' => 100,
         'autocomplete_min_chars' => 2,
         'autocomplete_limit' => 10,
+        'search_debounce_ms' => 250, // prodleva živého hledání po posledním stisku klávesy
     ],
 
     'limits' => [
@@ -128,7 +129,8 @@ return [
         'favorites_max' => 500, // max. oblíbených položek jednoho typu na uživatele
         'trusted_after' => 5, // počet schválených příspěvků (users.approved_count) pro povýšení user -> trusted
         'rate_limit_window_sec' => 3600,
-        'rate_limit_max_hits' => 120,   // max. POST požadavků na IP za rate_limit_window_sec
+        'rate_limit_max_hits' => 120,   // max. běžných POST požadavků na IP za rate_limit_window_sec
+        'favorites_rate_limit_max_hits' => 300, // samostatný limit kliknutí na oblíbené za stejné období
         'rate_limit_max_entries' => 5000, // strop záznamů v data/ratelimit.json
         'ai_endpoint_max_hits' => 60,   // max. požadavků na AI endpoint za rate_limit_window_sec
         'auth_fail_max_hits' => 20,     // neplatné session tokeny, neplatný state/CSRF a podobné pokusy na IP za rate_limit_window_sec
