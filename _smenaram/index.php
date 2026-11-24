@@ -19,21 +19,7 @@ function assetVersion($relativePath) {
 <div class="top-bar">
     <span class="app-title">SměnářAM</span>
     <div class="icons-group">
-        <span class="icon-btn" title="Ocenění" aria-label="Závody">
-            <svg viewBox="0 0 48 48" width="30" height="30" aria-hidden="true" focusable="false">
-                <path d="M18 12c-5 3-7 9-5 14l-5 9 9-2 5-7z" fill="#f2cf72"/>
-                <path d="M29 13c6 4 8 10 5 16l7 7-10-1-7-8z" fill="#f2cf72"/>
-                <path d="M19 12c-2-4 1-8 6-8 5 0 8 4 6 9l-5 8-8-2z" fill="#f4d58a"/>
-                <path d="M21 18c-3 1-5 4-5 8l-5 7 7 2 7-8 3-9z" fill="#e7b58e"/>
-                <path d="M27 19c4 1 6 4 6 8l5 7-7 2-7-8-2-8z" fill="#e7b58e"/>
-                <path d="M20 25l8 1 4 9-7 3-7-5z" fill="#df5c55"/>
-                <path d="M19 31l-7 8-7 1 1 3 10-1 9-8z" fill="#34495e"/>
-                <path d="M29 31l6 7 7 2-1 3-10-2-8-7z" fill="#34495e"/>
-                <path d="M17 11c-1-5 3-9 9-9 5 0 9 4 8 9-2-2-4-3-7-3-3 0-6 2-10 3z" fill="#e9c45f"/>
-                <path d="M18 9c2-4 6-5 10-4-3 2-4 4-5 7z" fill="#f5df9b"/>
-                <circle cx="28" cy="14" r="1" fill="#59463b"/>
-            </svg>
-        </span>
+        <span class="icon-btn" title="Závody" aria-label="Závody">🏃🏼‍♀️</span>
         <span id="pencil-btn" class="icon-btn" title="Režim úprav">🔒</span>
         <span id="check-btn" class="icon-btn" title="Zvýraznit volné dny">✅</span>
         <span id="menu-btn" class="icon-btn" title="Roční přehled">☰</span>
