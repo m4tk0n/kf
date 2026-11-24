@@ -59,7 +59,7 @@ function route_diagnostics_post(): never
         } else {
             $data['diagnostika'] = true;
         }
-    });
+    }, true);
     redirect('diagnostics');
 }
 
