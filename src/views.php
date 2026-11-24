@@ -61,9 +61,6 @@ function menu_items(?array $user): array
         ['label' => t('menu.profile'), 'href' => url('profile')],
         ['label' => t('menu.filters'), 'href' => url('filters')],
     ];
-    if (kf_debug_user_allowed($user)) {
-        $items[] = ['label' => 'DEBUG', 'href' => url('debug')];
-    }
     if ($role >= role_value('moderator')) {
         $items[] = ['label' => t('menu.review', ['n' => pending_count()]), 'href' => url('review')];
     }
@@ -105,7 +102,6 @@ function page(string $title, string $tpl, array $vars = [], int $status = 200): 
         'section' => (string)($vars['section'] ?? 'events'),
         'hasLightbox' => !empty($vars['d']['extra']['large']),
         'hasFavorites' => isset($vars['d']),
-        'headScripts' => $GLOBALS['headScripts'] ?? kf_debug_script($user),
     ]);
     exit;
 }
