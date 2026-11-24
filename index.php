@@ -12,6 +12,26 @@ if (is_file(__DIR__ . '/cron/cron.php')) {
 send_security_headers(false);
 header('Content-Type: text/html; charset=utf-8');
 
+// Samostatný JSON endpoint pro načtení serverového logu diagnostickým panelem.
+// Musí být před směrováním stránek, aby parametr fungoval i na /debug.
+if (isset($_GET['debug_log'])) {
+    $debugUser = auth_resolve();
+    if (!kf_debug_user_active($debugUser)) {
+        http_response_code(403);
+        header('Content-Type: application/json; charset=utf-8');
+        header('Cache-Control: no-store');
+        echo json_encode(['error' => 'forbidden'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: no-store');
+    echo json_encode(
+        ['entries' => kf_debug_log_tail()],
+        JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES
+    );
+    exit;
+}
+
 /** Obslouží přihlášení, profil, filtry, oblíbené a administraci; ostatní cesty vrací do výpisu. */
 function kf_dispatch(): void
 {
