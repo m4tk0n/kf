@@ -1,76 +1,99 @@
 <?php
-// api.php
+declare(strict_types=1);
+
 header('Content-Type: application/json; charset=utf-8');
 require_once __DIR__ . '/config.php';
+
+function apiResponse(array $data, int $status = 200): never
+{
+    http_response_code($status);
+    echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    exit;
+}
 
 try {
     $pdo = getDbConnection();
     $tableName = DB_PREFIX . 'smenaram';
-} catch (PDOException $e) {
-    echo json_encode(['status' => 'error', 'message' => 'Chyba připojení k databázi']);
-    exit;
-}
+    $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 
-$method = $_SERVER['REQUEST_METHOD'];
+    if ($method === 'POST') {
+        $input = json_decode(file_get_contents('php://input') ?: '', true);
 
-// 1. Uložení / Úprava / Smazání směn pro dané datum
-if ($method === 'POST') {
-    $input = json_decode(file_get_contents('php://input'), true);
+        if (!is_array($input) || empty($input['datum'])) {
+            apiResponse(['status' => 'error', 'message' => 'Chybí datum nebo data nejsou platný JSON.'], 400);
+        }
 
-    if (isset($input['datum'])) {
-        $datum  = $input['datum'];
-        $osoba1 = !empty($input['osoba1']) ? trim($input['osoba1']) : null;
-        $osoba2 = !empty($input['osoba2']) ? trim($input['osoba2']) : null;
-        $osoba3 = !empty($input['osoba3']) ? trim($input['osoba3']) : null;
+        $datum = (string)$input['datum'];
+        $date = DateTimeImmutable::createFromFormat('!Y-m-d', $datum);
+        if (!$date || $date->format('Y-m-d') !== $datum) {
+            apiResponse(['status' => 'error', 'message' => 'Neplatné datum.'], 400);
+        }
 
-        // Pokud jsou všechny směny prázdné, řádek z databáze smažeme
+        $normalizeShift = static function ($value): ?string {
+            if ($value === null) return null;
+            $value = trim((string)$value);
+            return $value === '' ? null : mb_substr($value, 0, 10);
+        };
+
+        $osoba1 = $normalizeShift($input['osoba1'] ?? null);
+        $osoba2 = $normalizeShift($input['osoba2'] ?? null);
+        $osoba3 = $normalizeShift($input['osoba3'] ?? null);
+
         if ($osoba1 === null && $osoba2 === null && $osoba3 === null) {
             $stmt = $pdo->prepare("DELETE FROM `{$tableName}` WHERE datum = :datum");
             $stmt->execute([':datum' => $datum]);
         } else {
-            // Jinak uložíme nebo aktualizujeme
-            $sql = "INSERT INTO `{$tableName}` (datum, osoba1, osoba2, osoba3) 
+            // VALUES() umožní bezpečně aktualizovat sloupce i při PDO::ATTR_EMULATE_PREPARES = false.
+            $sql = "INSERT INTO `{$tableName}` (datum, osoba1, osoba2, osoba3)
                     VALUES (:datum, :osoba1, :osoba2, :osoba3)
-                    ON DUPLICATE KEY UPDATE osoba1 = :osoba1, osoba2 = :osoba2, osoba3 = :osoba3";
-            
+                    ON DUPLICATE KEY UPDATE
+                        osoba1 = VALUES(osoba1),
+                        osoba2 = VALUES(osoba2),
+                        osoba3 = VALUES(osoba3)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
-                ':datum'  => $datum,
+                ':datum' => $datum,
                 ':osoba1' => $osoba1,
                 ':osoba2' => $osoba2,
-                ':osoba3' => $osoba3
+                ':osoba3' => $osoba3,
             ]);
         }
 
-        echo json_encode(['status' => 'success']);
-    } else {
-        echo json_encode(['status' => 'error', 'message' => 'Chybná data']);
+        apiResponse(['status' => 'success']);
     }
-    exit;
-}
 
-// 2. Načtení směn pro rozsah dnů
-if ($method === 'GET') {
-    $start = $_GET['start'] ?? null;
-    $end   = $_GET['end'] ?? null;
+    if ($method === 'GET') {
+        $start = $_GET['start'] ?? null;
+        $end = $_GET['end'] ?? null;
 
-    if ($start && $end) {
-        $stmt = $pdo->prepare("SELECT datum, osoba1, osoba2, osoba3 FROM `{$tableName}` WHERE datum BETWEEN :start AND :end");
+        if (!$start || !$end) {
+            apiResponse(['status' => 'error', 'message' => 'Chybí počáteční nebo koncové datum.'], 400);
+        }
+
+        $stmt = $pdo->prepare(
+            "SELECT datum, osoba1, osoba2, osoba3
+             FROM `{$tableName}`
+             WHERE datum BETWEEN :start AND :end"
+        );
         $stmt->execute([':start' => $start, ':end' => $end]);
-        $rows = $stmt->fetchAll();
 
-        // Převedení do formátu pro JavaScript
         $result = [];
-        foreach ($rows as $row) {
+        foreach ($stmt->fetchAll() as $row) {
             $result[$row['datum']] = [
                 'Osoba1' => $row['osoba1'],
                 'Osoba2' => $row['osoba2'],
-                'Osoba3' => $row['osoba3']
+                'Osoba3' => $row['osoba3'],
             ];
         }
 
-        echo json_encode($result);
-        exit;
+        apiResponse($result);
     }
+
+    apiResponse(['status' => 'error', 'message' => 'Nepodporovaná metoda.'], 405);
+} catch (Throwable $e) {
+    error_log('[SmenarAM API] ' . $e->getMessage());
+    apiResponse([
+        'status' => 'error',
+        'message' => 'Operaci se nepodařilo dokončit. Zkontroluj databázovou tabulku a její sloupce.',
+    ], 500);
 }
-?>
