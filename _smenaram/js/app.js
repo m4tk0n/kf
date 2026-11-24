@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pencilBtn = document.getElementById('pencil-btn');
     const checkBtn = document.getElementById('check-btn');
     const menuBtn = document.getElementById('menu-btn');
-    const medalBtn = document.querySelector('.icons-group .icon-btn[title="Ocenění"]');
+    const medalBtn = document.getElementById('races-btn');
     const prevMonthBtn = document.getElementById('prev-month');
     const nextMonthBtn = document.getElementById('next-month');
 
@@ -153,7 +153,7 @@ function toggleRacesView() {
     const monthlyView = document.getElementById('monthly-view');
     const yearlyView = document.getElementById('yearly-view');
     const menuBtn = document.getElementById('menu-btn');
-    const medalBtn = document.querySelector('.icons-group .icon-btn[title="Ocenění"]');
+    const medalBtn = document.getElementById('races-btn');
 
     const opening = racesView?.classList.contains('hidden');
     if (!opening) {
