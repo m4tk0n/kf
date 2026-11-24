@@ -41,11 +41,10 @@ function kf_debug_user_allowed(?array $user): bool
         && ((int)($user['id'] ?? 0) === 2 || (int)($user['role'] ?? 0) >= role_value('admin'));
 }
 
-/** Trvalé nastavení DEBUG je součástí JSON profilu konkrétního uživatele. */
+/** Dočasně je DEBUG automaticky aktivní pro všechny oprávněné uživatele. */
 function kf_debug_user_active(?array $user): bool
 {
-    return kf_debug_user_allowed($user)
-        && !empty(user_profile_get((int)$user['id'])['debug_enabled']);
+    return kf_debug_user_allowed($user);
 }
 
 /** Skript plovoucího diagnostického panelu připojí jen při aktivním nastavení. */
