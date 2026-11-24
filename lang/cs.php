@@ -146,7 +146,7 @@ return [
     'diagnostics.active' => 'Aktivní',
     'diagnostics.yes' => 'Ano',
     'diagnostics.no' => 'Ne',
-    'diagnostics.activate' => 'Aktivovat',
+    'diagnostics.show' => 'Zobrazit',
     'diagnostics.deactivate' => 'Deaktivovat',
 
     // stránkování a kalendář (katalog)
