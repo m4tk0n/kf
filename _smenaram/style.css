@@ -529,6 +529,16 @@ body.filter-mode #monthly-view .shift-person3 {
     color: #333333;
 }
 
+.races-group-title {
+    margin-top: 8px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.race-date {
+    font-weight: bold;
+}
+
 #races-view {
     flex: 1;
     min-height: 0;
