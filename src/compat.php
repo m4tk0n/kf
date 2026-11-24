@@ -98,11 +98,15 @@ if (!function_exists('json_read_file')) {
 }
 
 if (!function_exists('json_write_file')) {
-    function json_write_file(string $rel, array $data): void
+    function json_write_file(string $rel, array $data, bool $pretty = false): void
     {
         $f = abs_path($rel);
         ensure_dir(dirname($f));
-        file_put_contents($f, json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), LOCK_EX);
+        $flags = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES;
+        if ($pretty) {
+            $flags |= JSON_PRETTY_PRINT;
+        }
+        file_put_contents($f, json_encode($data, $flags) . ($pretty ? "\n" : ''), LOCK_EX);
     }
 }
 
@@ -144,7 +148,7 @@ if (!function_exists('user_profile_get')) {
 if (!function_exists('user_profile_put')) {
     function user_profile_put(int $id, array $data): void
     {
-        json_write_file(user_profile_rel($id), $data);
+        json_write_file(user_profile_rel($id), $data, true);
     }
 }
 
