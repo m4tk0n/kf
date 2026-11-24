@@ -1,0 +1,117 @@
+name: Import server changes to GitHub
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kf-server-to-github
+  cancel-in-progress: false
+
+jobs:
+  import:
+    name: Import eligible source files from the live server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Download current server files
+        env:
+          SERVER_VIEWER_URL: https://7x.wz.cz/_kf/ai/
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/kf-server-import
+
+          curl --fail --silent --show-error --location \
+            --retry 2 --max-time 60 \
+            "${SERVER_VIEWER_URL}?action=list" \
+            --output /tmp/kf-server-list.json
+
+          jq -e '.files | type == "array" and length > 0' /tmp/kf-server-list.json >/dev/null
+
+          while IFS= read -r path; do
+            [ -n "$path" ] || continue
+
+            # Never import secrets, Git metadata/workflows, runtime data,
+            # uploads, generated copies, caches or backup files.
+            case "$path" in
+              .env|.env.*|.git|.git/*|.github|.github/*| \
+              data|data/*|cache|cache/*|img|img/*|uploads|uploads/*| \
+              cron|cron/*|logs|logs/*|tmp|tmp/*|ai-backups|ai-backups/*| \
+              ai/copy|ai/copy/*|.ftp-deploy-sync-state.json)
+                echo "Skipped protected path: $path"
+                continue
+                ;;
+            esac
+
+            # Only known text/source formats are eligible for import.
+            case "$path" in
+              *.php|*.js|*.css|*.html|*.htm|*.json|*.md|*.txt|*.sql|*.xml|*.svg|*.yml|*.yaml|*.ini|*.htaccess|*.gitignore|*.example)
+                ;;
+              *)
+                continue
+                ;;
+            esac
+
+            # Reject unsafe paths before creating any local file.
+            case "/$path/" in
+              *"/../"*|*"//"*)
+                echo "Unsafe path returned by server; stopping: $path"
+                exit 1
+                ;;
+            esac
+
+            size="$(jq -r --arg p "$path" '.files[] | select(.path == $p) | .size' /tmp/kf-server-list.json | head -n 1)"
+            if [ -z "$size" ] || [ "$size" -gt 2097152 ]; then
+              echo "Skipped oversized or invalid file: $path"
+              continue
+            fi
+
+            mkdir -p "/tmp/kf-server-import/$(dirname "$path")"
+            curl --fail --silent --show-error --location \
+              --retry 2 --max-time 60 \
+              --get "${SERVER_VIEWER_URL}" \
+              --data-urlencode "action=read" \
+              --data-urlencode "file=$path" \
+              --output "/tmp/kf-server-import/$path"
+
+            if [ "$(wc -c < "/tmp/kf-server-import/$path")" -gt 2097152 ]; then
+              echo "File exceeded 2 MB while downloading: $path"
+              exit 1
+            fi
+          done < <(jq -r '.files[].path' /tmp/kf-server-list.json)
+
+      - name: Apply server files without deleting GitHub files
+        run: |
+          set -euo pipefail
+          imported=0
+
+          while IFS= read -r -d '' file; do
+            relative="${file#/tmp/kf-server-import/}"
+            mkdir -p "$(dirname "$relative")"
+            cp -- "$file" "$relative"
+            git add -- "$relative"
+            imported=$((imported + 1))
+          done < <(find /tmp/kf-server-import -type f -print0)
+
+          if [ "$imported" -eq 0 ]; then
+            echo "No eligible source files were downloaded; nothing to commit."
+            exit 0
+          fi
+
+          if git diff --cached --quiet; then
+            echo "Server source files are already identical to GitHub."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git status --short
+          git commit -m "Import source changes from live server"
+          git push origin HEAD:main
