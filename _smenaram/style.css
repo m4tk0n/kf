@@ -445,6 +445,13 @@ body.filter-mode #monthly-view .shift-person3 {
     font-size: 7px;
 }
 
+/* Person3: označení Z v řádku názvů dnů */
+.year-month-table .weekday-row th.shift-person3 {
+    background-color: #28a745;
+    color: #ffffff;
+    font-weight: bold;
+}
+
 /* 3. ŘÁDEK: Číslo dne v měsíci */
 .year-month-table .day-num-row td {
     /* background-color: #ffffff; */
