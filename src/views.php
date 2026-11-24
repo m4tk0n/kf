@@ -53,17 +53,18 @@ function menu_items(?array $user): array
         return [];
     }
     $role = (int)$user['role'];
+    $items = [];
     if ((int)$user['id'] === 2) {
         $items[] = ['label' => t('menu.diagnostics'), 'href' => url('diagnostics')];
     }
-    $items = [
+    $items = array_merge($items, [
         ['label' => t('menu.add_event'), 'href' => url('event/new')],
         ['label' => t('menu.add_band'), 'href' => url('band/new')],
         ['label' => t('menu.add_venue'), 'href' => url('venue/new')],
         ['label' => t('menu.my_pending'), 'href' => url('my')],
         ['label' => t('menu.profile'), 'href' => url('profile')],
         ['label' => t('menu.filters'), 'href' => url('filters')],
-    ];
+    ]);
     if ($role >= role_value('moderator')) {
         $items[] = ['label' => t('menu.review', ['n' => pending_count()]), 'href' => url('review')];
     }
