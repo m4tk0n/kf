@@ -1,6 +1,10 @@
 <?php
 function assetVersion($relativePath) {
-    $filePath = __DIR__ . '/' . ltrim($relativePath, '/');
+    $relativePath = str_replace('\\\\', '/', (string)$relativePath);
+    if ($relativePath === '' || str_starts_with($relativePath, '/') || preg_match('~(^|/)\\.\\.(/|$)~', $relativePath)) {
+        return '0';
+    }
+    $filePath = __DIR__ . '/' . $relativePath;
     return is_file($filePath) ? (string) filemtime($filePath) : '0';
 }
 ?>
@@ -11,7 +15,7 @@ function assetVersion($relativePath) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SmenarAM</title>
-    <link rel="stylesheet" href="style.css?v=<?= assetVersion('style.css') ?>">
+    <link rel="stylesheet" href="./style.css?v=<?= assetVersion('style.css') ?>">
 </head>
 <body>
 
@@ -78,10 +82,10 @@ function assetVersion($relativePath) {
 </div>
 
 <!-- Načtení skriptů -->
-<script src="js/utils.js?v=<?= assetVersion('js/utils.js') ?>"></script>
-<script src="js/api.js?v=<?= assetVersion('js/api.js') ?>"></script>
-<script src="js/month-calendar.js?v=<?= assetVersion('js/month-calendar.js') ?>"></script>
-<script src="js/year-calendar.js?v=<?= assetVersion('js/year-calendar.js') ?>"></script>
-<script src="js/app.js?v=<?= assetVersion('js/app.js') ?>"></script>
+<script src="./js/utils.js?v=<?= assetVersion('js/utils.js') ?>"></script>
+<script src="./js/api.js?v=<?= assetVersion('js/api.js') ?>"></script>
+<script src="./js/month-calendar.js?v=<?= assetVersion('js/month-calendar.js') ?>"></script>
+<script src="./js/year-calendar.js?v=<?= assetVersion('js/year-calendar.js') ?>"></script>
+<script src="./js/app.js?v=<?= assetVersion('js/app.js') ?>"></script>
 </body>
 </html>
