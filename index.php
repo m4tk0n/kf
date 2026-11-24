@@ -4,11 +4,8 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/bootstrap.php';
 
-// Jediný přepínač cronu: config.php -> cron.enabled.
-// Při false se cron vůbec nenačítá ani nespouští.
-if (cfg('cron.enabled') === true && is_file(__DIR__ . '/cron/cron.php')) {
-    require_once __DIR__ . '/cron/cron.php';
-}
+// Automatické načítání cronu je úplně vypnuté.
+// cron/cron.php se z běžného běhu aplikace nikdy nenačítá.
 
 send_security_headers(false);
 header('Content-Type: text/html; charset=utf-8');
