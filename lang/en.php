@@ -59,6 +59,7 @@ return [
     'menu.review' => 'To review ({n})',
     'menu.users' => 'Users',
     'menu.settings' => 'Settings',
+    'menu.diagnostics' => 'Diagnostics',
     'menu.logout' => 'Log out',
 
     // roles and states
@@ -124,6 +125,8 @@ return [
 
     // flash messages (?m=code)
     'flash.saved' => 'Saved.',
+    'flash.diagnostics_on' => 'Diagnostics activated.',
+    'flash.diagnostics_off' => 'Diagnostics deactivated.',
     'flash.invalid' => 'Invalid input.',
     'flash.denied' => 'This action is not allowed.',
     'flash.last_admin' => 'The last administrator cannot be changed or deleted.',
@@ -139,7 +142,14 @@ return [
     'flash.oauth_failed' => 'Sign-in failed, please try again.',
     'flash.account_inactive' => 'This account is not active.',
 
-    // stránkování a kalendář (katalog)
+    'diagnostics.title' => 'Diagnostics',
+    'diagnostics.active' => 'Active',
+    'diagnostics.yes' => 'Yes',
+    'diagnostics.no' => 'No',
+    'diagnostics.activate' => 'Activate',
+    'diagnostics.deactivate' => 'Deactivate',
+
+    // pagination and calendar (catalog)
     'pager.label' => 'Pagination',
     'pager.first' => 'First',
     'pager.prev' => 'Previous',
