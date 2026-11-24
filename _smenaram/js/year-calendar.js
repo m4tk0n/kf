@@ -101,11 +101,8 @@ async function renderYearlyOverview() {
                 let shiftClass = '';
                 let shiftText = '';
 
-                // Roční kalendář se vykresluje ve standardním režimu
-                if (shift3) {
-                    shiftClass = 'shift-person3';
-                    shiftText = shift3;
-                } else if (shift1 && shift2) {
+                // Person3 se zobrazuje v řádku názvů dnů místo zkratky dne.
+                if (shift1 && shift2) {
                     shiftClass = 'shift-both';
                     shiftText = '';
                 } else if (shift1) {
@@ -116,7 +113,9 @@ async function renderYearlyOverview() {
                     shiftText = shift2;
                 }
 
-                rowDayNames += `<th>${dayOfWeek}</th>`;
+                const weekdayClass = shift3 ? ' class="shift-person3"' : '';
+                const weekdayText = shift3 || dayOfWeek;
+                rowDayNames += `<th${weekdayClass}>${weekdayText}</th>`;
                 
                 // 3. ŘÁDEK: Přidání třídy is-today pro dnešní den
                 const todayClass = isToday ? ' class="is-today"' : '';
