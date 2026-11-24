@@ -522,6 +522,13 @@ body.filter-mode #monthly-view .shift-person3 {
 
 
 /* Stránka Závody */
+.races-page-title {
+    padding: 8px 10px 2px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+}
+
 #races-view {
     flex: 1;
     min-height: 0;
