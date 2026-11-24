@@ -23,7 +23,7 @@ function toggleYearlyView() {
     const pencilBtn = document.getElementById('pencil-btn');
     const menuBtn = document.getElementById('menu-btn');
     const racesView = document.getElementById('races-view');
-    const medalBtn = document.querySelector('.icons-group .icon-btn[title="Ocenění"]');
+    const medalBtn = document.getElementById('races-btn');
 
     if (isYearlyView) {
         turnOffEditMode();
