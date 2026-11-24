@@ -117,7 +117,8 @@ function route_debug(): never
         security_log('forbidden', ['action' => 'debug']);
         abort(403, t('error.403'));
     }
-    $enabled = kf_debug_user_active($u);
+    $profile = user_profile_get((int)$u['id']);
+    $enabled = !empty($profile['debug_enabled']);
     page('DEBUG', 'debug', ['debug_enabled' => $enabled]);
 }
 
