@@ -22,7 +22,11 @@
   padding: 4px 8px 4px 11px;
   background: #303b4b;
   letter-spacing: .08em;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
 }
+.kf-debug.is-dragging .kf-debug-head { cursor: grabbing; }
 .kf-debug-toggle {
   width: 26px;
   height: 25px;
