@@ -38,7 +38,7 @@
           if (seen.has(item)) return '[Circular]';
           seen.add(item);
         }
-        if (item instanceof Element) return '<' + item.tagName.toLowerCase() + (item.id ? '#' + item.id : '') + '>';
+        if (typeof Element !== 'undefined' && item instanceof Element) return '<' + item.tagName.toLowerCase() + (item.id ? '#' + item.id : '') + '>';
         return item;
       }, 2);
     } catch (_) {
@@ -153,8 +153,8 @@
   }
 
   const initialResources = () => {
-    if (!performance || !performance.getEntriesByType) return;
-    performance.getEntriesByType('resource').forEach(entry => {
+    if (!window.performance || !window.performance.getEntriesByType) return;
+    window.performance.getEntriesByType('resource').forEach(entry => {
       if (!entry.name || entry.name.indexOf(location.origin) !== 0) return;
       add('network', {
         time: 'start', method: 'GET', url: cleanUrl(entry.name),
@@ -176,6 +176,7 @@
     container.appendChild(row);
   };
   const matches = record => !filterText || (Object.values(record).join(' ').toLowerCase().includes(filterText));
+  const clearNode = container => { while (container.firstChild) container.removeChild(container.firstChild); };
   const empty = (container, message) => {
     const node = document.createElement('div');
     node.className = 'kf-debug-empty';
@@ -184,7 +185,7 @@
   };
 
   const renderList = (type, container) => {
-    container.replaceChildren();
+    clearNode(container);
     const list = records[type].filter(matches);
     if (!list.length) { empty(container, 'Žádné záznamy.'); return; }
     list.slice().reverse().forEach(item => {
@@ -196,7 +197,7 @@
   };
   const renderNetwork = () => {
     const container = views.network;
-    container.replaceChildren();
+    clearNode(container);
     const list = records.network.filter(matches);
     if (!list.length) { empty(container, 'Zatím nejsou zaznamenány žádné síťové požadavky.'); return; }
     list.slice().reverse().forEach(item => {
@@ -223,10 +224,10 @@
       ['Online', navigator.onLine ? 'Ano' : 'Ne'],
       ['Jazyk', navigator.language || '—'],
       ['Platforma', navigator.platform || '—'],
-      ['Paměť JS', performance && performance.memory ? Math.round(performance.memory.usedJSHeapSize / 1048576) + ' MB' : 'Nepodporováno'],
+      ['Paměť JS', window.performance && window.performance.memory ? Math.round(window.performance.memory.usedJSHeapSize / 1048576) + ' MB' : 'Nepodporováno'],
       ['Běží', Math.round((Date.now() - startedAt) / 1000) + ' s']
     ];
-    container.replaceChildren();
+    clearNode(container);
     const grid = document.createElement('div');
     grid.className = 'kf-debug-info-grid';
     data.forEach(([label, value]) => {
