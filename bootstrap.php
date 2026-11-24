@@ -13,6 +13,9 @@ foreach (['storage', 'security', 'lang', 'catalog', 'i18n', 'session', 'oauth', 
 }
 unset($kfSrc, $kfModule);
 
+// Diagnostika je samostatný modul; všechny její funkce a soubory jsou v /debug/.
+require_once KF_ROOT . '/debug/debug.php';
+
 mb_internal_encoding('UTF-8');
 date_default_timezone_set((string)cfg('app.timezone'));
 error_reporting(E_ALL);
