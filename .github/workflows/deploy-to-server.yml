@@ -80,7 +80,6 @@ jobs:
               "--exclude-glob cache --exclude-glob 'cache/**' "
               "--exclude-glob img --exclude-glob 'img/**' "
               "--exclude-glob uploads --exclude-glob 'uploads/**' "
-              "--exclude-glob cron --exclude-glob 'cron/**' "
               "--exclude-glob logs --exclude-glob 'logs/**' "
               "--exclude-glob tmp --exclude-glob 'tmp/**' "
               "--exclude-glob ai-backups --exclude-glob 'ai-backups/**' "
