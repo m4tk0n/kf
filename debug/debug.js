@@ -7,6 +7,7 @@
   var events = [];
   var panel, output, toggle, filterSelect;
   var activeFilter = 'all';
+  var forceOpen = new URLSearchParams(window.location.search).get('open') === '1';
 
   try {
     saved = JSON.parse(sessionStorage.getItem(storageKey) || 'null');
@@ -126,11 +127,14 @@
     });
 
     if (saved) {
-      panel.hidden = !saved.open;
-      toggle.hidden = !!saved.open;
+      panel.hidden = forceOpen ? false : !saved.open;
+      toggle.hidden = forceOpen ? true : !!saved.open;
       ['left', 'top', 'right', 'bottom'].forEach(function (key) {
         if (saved[key]) panel.style[key] = saved[key];
       });
+    } else if (forceOpen) {
+      panel.hidden = false;
+      toggle.hidden = true;
     }
 
     toggle.addEventListener('click', function () {
