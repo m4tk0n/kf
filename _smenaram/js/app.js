@@ -202,21 +202,40 @@ async function renderRacesPage() {
         // Pokud uživatel během načítání přepnul rok, starší výsledek nezobrazíme.
         if (year !== displayYear || document.getElementById('races-view')?.classList.contains('hidden')) return;
 
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const todayKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
         const raceDates = Object.entries(shiftsData)
             .filter(([, shifts]) => String(shifts?.Osoba3 ?? shifts?.osoba3 ?? '').trim().toUpperCase() === 'Z')
             .map(([date]) => date)
-            .filter(date => /^\d{4}-\d{2}-\d{2}$/.test(date))
+            .filter(date => /^\\d{4}-\\d{2}-\\d{2}$/.test(date))
             .sort();
+
+        const pastDates = raceDates.filter(date => date < todayKey);
+        const upcomingDates = raceDates.filter(date => date >= todayKey);
 
         container.replaceChildren();
 
-        raceDates.forEach(date => {
-            const [, month, day] = date.split('-');
-            const line = document.createElement('div');
-            line.className = 'race-date';
-            line.textContent = `${day}.${month}.`;
-            container.appendChild(line);
-        });
+        const addGroup = (title, dates) => {
+            if (dates.length === 0) return;
+
+            const heading = document.createElement('div');
+            heading.className = 'races-group-title';
+            heading.textContent = title;
+            container.appendChild(heading);
+
+            dates.forEach(date => {
+                const [, month, day] = date.split('-');
+                const line = document.createElement('div');
+                line.className = 'race-date';
+                line.textContent = `${day}.${month}.`;
+                container.appendChild(line);
+            });
+        };
+
+        addGroup('Následující', upcomingDates);
+        addGroup('Minulé', pastDates);
     } catch (error) {
         if (year === displayYear) {
             container.textContent = 'Závody se nepodařilo načíst.';
