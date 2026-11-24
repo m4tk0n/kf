@@ -32,14 +32,10 @@ function require_fresh(string $backPath): void
     exit;
 }
 
-function diagnostics_state(): bool
+function diagnostics_state(int $userId): bool
 {
-    $file = abs_path('data/diagnostics.json');
-    if (!is_file($file)) {
-        return false;
-    }
-    $data = json_decode((string)file_get_contents($file), true);
-    return is_array($data) && ($data['diagnostika'] ?? false) === true;
+    $profile = user_profile_get($userId);
+    return ($profile['diagnostika'] ?? false) === true;
 }
 
 function route_diagnostics(): never
@@ -48,7 +44,7 @@ function route_diagnostics(): never
     if ((int)$u['id'] !== 2) {
         abort(403, t('error.403'));
     }
-    page(t('diagnostics.title'), 'diagnostics', ['active' => diagnostics_state()]);
+    page(t('diagnostics.title'), 'diagnostics', ['active' => diagnostics_state((int)$u['id'])]);
 }
 
 function route_diagnostics_post(): never
@@ -57,7 +53,7 @@ function route_diagnostics_post(): never
     if ((int)$u['id'] !== 2) {
         abort(403, t('error.403'));
     }
-    json_locked('data/diagnostics.json', static function (array &$data): void {
+    json_locked(user_profile_rel((int)$u['id']), static function (array &$data): void {
         if (($data['diagnostika'] ?? false) === true) {
             unset($data['diagnostika']);
         } else {
