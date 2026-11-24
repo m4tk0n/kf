@@ -147,7 +147,7 @@ return [
     'diagnostics.yes' => 'Yes',
     'diagnostics.no' => 'No',
     'diagnostics.show' => 'Show',
-    'diagnostics.deactivate' => 'Deactivate',
+    'diagnostics.off' => 'Turn off',
 
     // pagination and calendar (catalog)
     'pager.label' => 'Pagination',
