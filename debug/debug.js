@@ -7,7 +7,8 @@
   var events = [];
   var panel, output, toggle, filterSelect;
   var activeFilter = 'all';
-  var forceOpen = new URLSearchParams(window.location.search).get('open') === '1';
+  // Dočasně držíme panel otevřený; uživatelské zavírání platí do dalšího načtení stránky.
+  var forceOpen = true;
 
   try {
     saved = JSON.parse(sessionStorage.getItem(storageKey) || 'null');
@@ -75,7 +76,6 @@
       empty.textContent = 'Pro tento filtr nejsou žádné záznamy.';
       output.appendChild(empty);
     }
-    // Po překreslení DOMu posuň výpis dolů, aby byl poslední záznam vždy viditelný.
     requestAnimationFrame(function () {
       output.scrollTop = output.scrollHeight;
       requestAnimationFrame(function () {
@@ -155,7 +155,6 @@
       render();
     });
 
-    // Přesouvání funguje myší i dotykem; hlavička je úchyt.
     var drag = null;
     panel.querySelector('.kf-debug-bar').addEventListener('pointerdown', function (event) {
       if (event.target.closest('button,select,input')) return;
@@ -220,8 +219,6 @@
       } catch (e) {
         url = '[URL se nepodařilo přečíst]';
       }
-
-      // Diagnostické logování nesmí nikdy zabránit zavolání původního fetch().
       try { add('FETCH', url); } catch (e) {}
       return originalFetch.apply(this, arguments).then(function (response) {
         try { add('HTTP ' + response.status, url, (Date.now() - started) + ' ms'); } catch (e) {}
