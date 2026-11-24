@@ -32,37 +32,6 @@ function require_fresh(string $backPath): void
     exit;
 }
 
-function diagnostics_state(int $userId): bool
-{
-    $profile = user_profile_get($userId);
-    return ($profile['diagnostika'] ?? false) === true;
-}
-
-function route_diagnostics(): never
-{
-    $u = require_login();
-    if ((int)$u['id'] !== 2) {
-        abort(403, t('error.403'));
-    }
-    page(t('diagnostics.title'), 'diagnostics', ['active' => diagnostics_state((int)$u['id'])]);
-}
-
-function route_diagnostics_post(): never
-{
-    $u = require_login();
-    if ((int)$u['id'] !== 2) {
-        abort(403, t('error.403'));
-    }
-    json_locked(user_profile_rel((int)$u['id']), static function (array &$data): void {
-        if (($data['diagnostika'] ?? false) === true) {
-            unset($data['diagnostika']);
-        } else {
-            $data['diagnostika'] = true;
-        }
-    }, true);
-    redirect('diagnostics');
-}
-
 function route_home(): never
 {
     page(t('nav.home'), 'home');
