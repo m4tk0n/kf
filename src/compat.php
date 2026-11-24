@@ -59,7 +59,7 @@ if (!function_exists('safe_next')) {
     function safe_next(string $n, string $default = ''): string
     {
         $n = ltrim(trim($n), '/');
-        if ($n === '' || strlen($n) > 300 || !preg_match('~^[A-Za-z0-9_\-./?=&%]+$~', $n)
+        if ($n === '' || strlen($n) > 300 || !preg_match('~^[A-Za-z0-9_\\-./?=&%]+$~', $n)
             || str_contains($n, '..') || str_contains($n, '//')) {
             return $default;
         }
@@ -92,7 +92,11 @@ if (!function_exists('json_read_file')) {
         if (!is_file($f)) {
             return [];
         }
-        $d = json_decode((string)file_get_contents($f), true);
+        $raw = @file_get_contents($f);
+        if ($raw === false || $raw === '') {
+            return [];
+        }
+        $d = json_decode($raw, true);
         return is_array($d) ? $d : [];
     }
 }
@@ -102,14 +106,35 @@ if (!function_exists('json_write_file')) {
     {
         $f = abs_path($rel);
         ensure_dir(dirname($f));
+
         $flags = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR;
         if ($pretty) {
             $flags |= JSON_PRETTY_PRINT;
         }
-        $json = json_encode($data, $flags) . ($pretty ? "\n" : '');
-        $written = file_put_contents($f, $json, LOCK_EX);
-        if ($written === false || $written !== strlen($json)) {
-            throw new RuntimeException('Nelze uložit JSON soubor: ' . $rel);
+        $json = json_encode($data, $flags) . ($pretty ? "\\n" : '');
+
+        // Zámek je na cílovém souboru; zápis probíhá až po jeho získání.
+        // Tím se nepřepíší souběžné změny profilu a nikdy se nehlásí úspěch po částečném zápisu.
+        $fh = @fopen($f, 'c+b');
+        if (!$fh) {
+            throw new RuntimeException('JSON soubor nelze otevřít pro zápis: ' . $rel);
+        }
+        try {
+            if (!flock($fh, LOCK_EX)) {
+                throw new RuntimeException('JSON soubor nelze zamknout: ' . $rel);
+            }
+            if (!ftruncate($fh, 0) || !rewind($fh)) {
+                throw new RuntimeException('JSON soubor nelze připravit k zápisu: ' . $rel);
+            }
+            write_stream_all($fh, $json, basename($f));
+            clearstatcache(true, $f);
+            $size = filesize($f);
+            if ($size === false || $size !== strlen($json)) {
+                throw new RuntimeException('Kontrola uloženého JSON nesouhlasí: ' . $rel);
+            }
+            flock($fh, LOCK_UN);
+        } finally {
+            fclose($fh);
         }
     }
 }
