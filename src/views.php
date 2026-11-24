@@ -61,7 +61,7 @@ function menu_items(?array $user): array
         ['label' => t('menu.profile'), 'href' => url('profile')],
         ['label' => t('menu.filters'), 'href' => url('filters')],
     ];
-    if ((int)$user['id'] === 2) {
+    if ((int)$user['id'] === 2 || $role >= role_value('admin')) {
         $items[] = ['label' => 'DEBUG', 'href' => url('') . '?debug=1'];
     }
     if ($role >= role_value('moderator')) {
