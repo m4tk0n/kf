@@ -59,6 +59,7 @@ return [
     'menu.review' => 'Ke schválení ({n})',
     'menu.users' => 'Uživatelé',
     'menu.settings' => 'Nastavení',
+    'menu.diagnostics' => 'Diagnostika',
     'menu.logout' => 'Odhlásit se',
 
     // role a stavy
@@ -124,6 +125,8 @@ return [
 
     // zprávy po akcích (?m=kód)
     'flash.saved' => 'Uloženo.',
+    'flash.diagnostics_on' => 'Diagnostika aktivována.',
+    'flash.diagnostics_off' => 'Diagnostika deaktivována.',
     'flash.invalid' => 'Neplatný vstup.',
     'flash.denied' => 'Tuto akci nelze provést.',
     'flash.last_admin' => 'Posledního administrátora nelze změnit ani smazat.',
@@ -138,6 +141,13 @@ return [
     'flash.account_deleted' => 'Účet byl smazán.',
     'flash.oauth_failed' => 'Přihlášení se nezdařilo, zkus to prosím znovu.',
     'flash.account_inactive' => 'Tento účet není aktivní.',
+
+    'diagnostics.title' => 'Diagnostika',
+    'diagnostics.active' => 'Aktivní',
+    'diagnostics.yes' => 'Ano',
+    'diagnostics.no' => 'Ne',
+    'diagnostics.activate' => 'Aktivovat',
+    'diagnostics.deactivate' => 'Deaktivovat',
 
     // stránkování a kalendář (katalog)
     'pager.label' => 'Stránkování',
