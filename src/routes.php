@@ -124,16 +124,80 @@ function route_debug(): never
 
 function route_debug_post(): never
 {
+    $requestId = kf_debug_request_id();
+    kf_debug_log('debug_post_handler_entered', [
+        'request_id' => $requestId,
+        'method' => (string)($_SERVER['REQUEST_METHOD'] ?? ''),
+        'path' => req_path(),
+        'content_type' => (string)($_SERVER['CONTENT_TYPE'] ?? ''),
+        'post_keys' => array_values(array_map('strval', array_keys($_POST))),
+        'enabled_value_valid' => isset($_POST['enabled']) && is_string($_POST['enabled'])
+            && in_array($_POST['enabled'], ['0', '1'], true),
+    ]);
+
     $u = auth_resolve();
     if (!kf_debug_user_allowed($u)) {
+        kf_debug_log('debug_post_denied', [
+            'request_id' => $requestId,
+            'authenticated' => $u !== null,
+            'user_id' => (int)($u['id'] ?? 0),
+            'role' => (int)($u['role'] ?? -1),
+        ]);
         security_log('forbidden', ['action' => 'debug']);
         abort(403, t('error.403'));
     }
-    $profile = user_profile_get((int)$u['id']);
-    $profile['debug_enabled'] = post_str('enabled', 1) === '1';
-    user_profile_put((int)$u['id'], $profile);
-    security_log('debug_setting_changed', ['user_id' => (int)$u['id'], 'enabled' => $profile['debug_enabled']]);
-    redirect($profile['debug_enabled'] ? 'debug?open=1' : 'debug');
+
+    $userId = (int)$u['id'];
+    $profilePath = user_profile_rel($userId);
+    $profileFile = abs_path($profilePath);
+    $profile = user_profile_get($userId);
+    $before = !empty($profile['debug_enabled']);
+    $rawEnabled = post_str('enabled', 1);
+    $after = $rawEnabled === '1';
+
+    kf_debug_log('debug_profile_write_started', [
+        'request_id' => $requestId,
+        'profile_path' => $profilePath,
+        'file_exists' => is_file($profileFile),
+        'file_writable' => is_file($profileFile) ? is_writable($profileFile) : is_writable(dirname($profileFile)),
+        'directory_exists' => is_dir(dirname($profileFile)),
+        'directory_writable' => is_writable(dirname($profileFile)),
+        'before' => $before,
+        'posted_enabled' => $rawEnabled,
+        'after' => $after,
+    ]);
+
+    $profile['debug_enabled'] = $after;
+    try {
+        user_profile_put($userId, $profile);
+        clearstatcache(true, $profileFile);
+        $savedProfile = json_read_file($profilePath);
+        $readBack = !empty($savedProfile['debug_enabled']);
+        kf_debug_log('debug_profile_write_finished', [
+            'request_id' => $requestId,
+            'write_call' => 'completed',
+            'file_exists' => is_file($profileFile),
+            'file_size' => is_file($profileFile) ? filesize($profileFile) : null,
+            'readback' => $readBack,
+            'readback_matches' => $readBack === $after,
+        ]);
+    } catch (Throwable $e) {
+        kf_debug_log('debug_profile_write_failed', [
+            'request_id' => $requestId,
+            'exception' => get_class($e),
+            'message' => $e->getMessage(),
+            'file' => basename($e->getFile()),
+            'line' => $e->getLine(),
+        ]);
+        throw $e;
+    }
+
+    security_log('debug_setting_changed', ['user_id' => $userId, 'enabled' => $after]);
+    kf_debug_log('debug_post_redirect', [
+        'request_id' => $requestId,
+        'redirect_to' => $after ? 'debug?open=1' : 'debug',
+    ]);
+    redirect($after ? 'debug?open=1' : 'debug');
 }
 
 function route_profile(): never
