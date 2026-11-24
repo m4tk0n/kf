@@ -31,7 +31,7 @@ define('DB_PORT', (string)($_ENV['DB_PORT'] ?? '3306'));
 define('DB_NAME', (string)($_ENV['DB_NAME'] ?? ''));
 define('DB_USER', (string)($_ENV['DB_USER'] ?? ''));
 define('DB_PASS', (string)($_ENV['DB_PASS'] ?? ''));
-define('DB_PREFIX', (string)($_ENV['DB_PREFIX'] ?? ''));
+define('DB_PREFIX', (string)($_ENV['TABLE_PREFIX'] ?? $_ENV['DB_PREFIX'] ?? ''));
 
 function getDbConnection(): PDO
 {
