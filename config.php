@@ -4,6 +4,9 @@
 declare(strict_types=1);
 
 return [
+    // Globální vypínač cronu: false = cron.php se vůbec nenačte ani nespustí.
+    'crons_enable' => false,
+
     'app' => [
         'name' => 'Koncerty & Kluby',
         'default_lang' => 'cs',
