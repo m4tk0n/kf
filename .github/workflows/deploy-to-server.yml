@@ -69,7 +69,7 @@ jobs:
               f"open -p {q(os.environ['FTP_PORT'])} {q(os.environ['FTP_SERVER'])}",
               f"user {q(os.environ['FTP_USERNAME'])} {q(os.environ['FTP_PASSWORD'])}",
               # Upload current files without mirroring deletions globally.
-              "mirror --reverse --verbose --parallel=2 "
+              "mirror --reverse --delete --verbose --parallel=2 "
               "--exclude-glob .git --exclude-glob '.git/**' "
               "--exclude-glob .github --exclude-glob '.github/**' "
               "--exclude-glob .env --exclude-glob '.env.*' "
@@ -83,11 +83,8 @@ jobs:
               "--exclude-glob ai-backups --exclude-glob 'ai-backups/**' "
               "--exclude-glob .ftp-deploy-sync-state.json "
               f". {q(remote)}",
-              # Remove only the retired diagnostic files/directories. All other
-              # server data, including .env and user data, remains untouched.
-              f"cd {q(remote)}",
-              "rm -f assets/css/debug.css assets/js/debug.js src/debug.php templates/debug.php docs/001_debug.md docs/004_debug.md",
-              "rm -f data/diagnostics.json",
+              # --delete above removes only individual remote files absent from
+              # the repository source. It does not run recursive directory deletion.
               "bye",
           ]
           with open("/tmp/kf-deploy.lftp", "w", encoding="utf-8") as f:
