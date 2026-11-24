@@ -158,8 +158,11 @@ function toggleRacesView() {
     const opening = racesView?.classList.contains('hidden');
     if (!opening) {
         racesView?.classList.add('hidden');
+        document.getElementById('yearly-view')?.classList.add('hidden');
         monthlyView?.classList.remove('hidden');
+        document.getElementById('menu-btn')?.classList.remove('active');
         if (medalBtn) medalBtn.classList.remove('active');
+        isYearlyView = false;
         renderCalendar();
         return;
     }
