@@ -32,7 +32,7 @@ try {
         $normalizeShift = static function ($value): ?string {
             if ($value === null) return null;
             $value = trim((string)$value);
-            return $value === '' ? null : mb_substr($value, 0, 10);
+            return $value === '' ? null : substr($value, 0, 10);
         };
 
         $osoba1 = $normalizeShift($input['osoba1'] ?? null);
@@ -43,19 +43,22 @@ try {
             $stmt = $pdo->prepare("DELETE FROM `{$tableName}` WHERE datum = :datum");
             $stmt->execute([':datum' => $datum]);
         } else {
-            // VALUES() umožní bezpečně aktualizovat sloupce i při PDO::ATTR_EMULATE_PREPARES = false.
+            // Každý placeholder je unikátní: funguje i s vypnutou emulací PDO prepared statements.
             $sql = "INSERT INTO `{$tableName}` (datum, osoba1, osoba2, osoba3)
                     VALUES (:datum, :osoba1, :osoba2, :osoba3)
                     ON DUPLICATE KEY UPDATE
-                        osoba1 = VALUES(osoba1),
-                        osoba2 = VALUES(osoba2),
-                        osoba3 = VALUES(osoba3)";
+                        osoba1 = :update_osoba1,
+                        osoba2 = :update_osoba2,
+                        osoba3 = :update_osoba3";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
                 ':datum' => $datum,
                 ':osoba1' => $osoba1,
                 ':osoba2' => $osoba2,
                 ':osoba3' => $osoba3,
+                ':update_osoba1' => $osoba1,
+                ':update_osoba2' => $osoba2,
+                ':update_osoba3' => $osoba3,
             ]);
         }
 
