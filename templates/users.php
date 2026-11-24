@@ -11,7 +11,7 @@ $states = [(int)cfg('enums.user_state.active'), (int)cfg('enums.user_state.suspe
   <table class="grid">
     <thead><tr>
       <th>ID</th><th><?= e(t('users.col.name')) ?></th><th><?= e(t('profile.provider')) ?></th><th><?= e(t('profile.role')) ?></th>
-      <th><?= e(t('users.col.state')) ?></th><th><?= e(t('users.col.approved')) ?></th><th><?= e(t('users.col.last_login')) ?></th><th>Debug</th><th></th>
+      <th><?= e(t('users.col.state')) ?></th><th><?= e(t('users.col.approved')) ?></th><th><?= e(t('users.col.last_login')) ?></th>
     </tr></thead>
     <tbody>
     <?php foreach ($rows as $r): ?>
@@ -43,8 +43,6 @@ $states = [(int)cfg('enums.user_state.active'), (int)cfg('enums.user_state.suspe
         <?php endif; ?>
         <td><?= (int)$r['approved_count'] ?></td>
         <td><?= $r['last_login_at'] ? e(date('Y-m-d H:i', (int)$r['last_login_at'])) : '–' ?></td>
-        <td><?= kf_debug_user_allowed($r) ? (kf_debug_user_active($r) ? 'Zapnuto' : 'Vypnuto') : '–' ?></td>
-        <td></td>
       </tr>
     <?php endforeach; ?>
     </tbody>
