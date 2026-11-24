@@ -61,6 +61,9 @@ function menu_items(?array $user): array
         ['label' => t('menu.profile'), 'href' => url('profile')],
         ['label' => t('menu.filters'), 'href' => url('filters')],
     ];
+    if ((int)$user['id'] === 2) {
+        $items[] = ['label' => 'DEBUG', 'href' => url('') . '?debug=1'];
+    }
     if ($role >= role_value('moderator')) {
         $items[] = ['label' => t('menu.review', ['n' => pending_count()]), 'href' => url('review')];
     }
