@@ -247,7 +247,20 @@ async function renderRacesPage() {
         };
 
         addGroup('Minulé', pastDates);
-        addGroup('Následující', upcomingDates);
+
+        if (year === today.getFullYear() && upcomingDates.length === 0) {
+            const heading = document.createElement('div');
+            heading.className = 'races-group-title';
+            heading.textContent = 'Následující';
+            container.appendChild(heading);
+
+            const message = document.createElement('div');
+            message.className = 'races-empty';
+            message.textContent = 'Do konce roku žádné plánované závody';
+            container.appendChild(message);
+        } else {
+            addGroup('Následující', upcomingDates);
+        }
     } catch (error) {
         if (year === displayYear) {
             container.textContent = 'Závody se nepodařilo načíst.';
