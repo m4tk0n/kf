@@ -1,14 +1,32 @@
-/* K&F Developer Tools – pouze diagnostický panel, oddělený od vzhledu aplikace. */
+/* debug/debug.css – K&F Developer Tools; oddělené od vzhledu aplikace. */
+
+/* ---- pomocné třídy na stránce aplikace ---- */
+html.kf-dbg-outline body *:not(#kf-debug-panel):not(#kf-debug-panel *):not(#kf-debug-vp) { outline: 1px solid rgba(244,63,94,.35); outline-offset: -1px; }
+.kf-dbg-flag { outline: 2px dashed #f43f5e !important; outline-offset: -2px; }
+.kf-dbg-tap { outline: 2px dotted #f59e0b !important; outline-offset: -2px; }
+.kf-dbg-flash { outline: 3px solid #22d3ee !important; outline-offset: 2px; }
+html.kf-dbg-space-bottom body { padding-bottom: var(--kfd-space, 0px); }
+html.kf-dbg-space-top body { padding-top: var(--kfd-space, 0px); }
+#kf-debug-vp {
+  position: fixed; z-index: 2147482999; top: 2px; right: 2px; padding: 1px 6px;
+  color: #fff; background: rgba(17,24,39,.82); border-radius: 10px; pointer-events: none;
+  font: 600 10px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+#kf-debug-vp[hidden] { display: none; }
+
+/* ---- panel ---- */
 #kf-debug-panel {
   position: fixed;
   z-index: 2147483000;
-  left: 8px;
-  right: 8px;
-  bottom: max(8px, env(safe-area-inset-bottom));
-  width: auto;
+  left: 6px;
+  right: 6px;
+  bottom: max(6px, env(safe-area-inset-bottom));
   max-width: 1200px;
-  max-height: 33vh;
-  min-height: 34px;
+  margin-inline: auto;
+  height: calc(var(--kfd-h, 38) * 1vh);
+  height: calc(var(--kfd-h, 38) * 1dvh);
+  max-height: 90vh;
+  min-height: 36px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -18,70 +36,129 @@
   border-top: 2px solid #f59e0b;
   border-radius: 8px 8px 0 0;
   box-shadow: 0 8px 32px rgba(0,0,0,.42);
-  font: 11px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font: var(--kfd-fs, 11px)/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   contain: layout style;
 }
 #kf-debug-panel * { box-sizing: border-box; }
-#kf-debug-panel .kf-debug-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 34px;
-  padding: 4px 7px;
-  background: #1f2937;
-  user-select: none;
-  touch-action: none;
-  cursor: grab;
+#kf-debug-panel.kf-debug-dock-top {
+  bottom: auto;
+  top: max(6px, env(safe-area-inset-top));
+  border-top: 1px solid #475569;
+  border-bottom: 2px solid #f59e0b;
+  border-radius: 0 0 8px 8px;
 }
-#kf-debug-panel.kf-debug-dragging .kf-debug-header { cursor: grabbing; }
+#kf-debug-panel.kf-debug-collapsed { height: auto; min-height: 0; }
+#kf-debug-panel.kf-debug-collapsed .kf-debug-tabs,
+#kf-debug-panel.kf-debug-collapsed .kf-debug-tools,
+#kf-debug-panel.kf-debug-collapsed .kf-debug-content,
+#kf-debug-panel.kf-debug-collapsed .kf-debug-grip { display: none; }
+
+#kf-debug-panel .kf-debug-grip { position: absolute; z-index: 2; left: 0; right: 0; top: 0; height: 10px; cursor: ns-resize; touch-action: none; }
+#kf-debug-panel.kf-debug-dock-top .kf-debug-grip { top: auto; bottom: 0; }
+#kf-debug-panel .kf-debug-grip::after { content: ""; position: absolute; left: 50%; top: 3px; width: 36px; height: 3px; margin-left: -18px; border-radius: 2px; background: #6b7280; }
+
+#kf-debug-panel .kf-debug-header { display: flex; align-items: center; gap: 6px; min-height: 34px; padding: 4px 7px; background: #1f2937; user-select: none; flex: none; }
 #kf-debug-panel .kf-debug-brand { color: #fbbf24; font-weight: 800; letter-spacing: .06em; white-space: nowrap; }
-#kf-debug-panel .kf-debug-summary { color: #9ca3af; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#kf-debug-panel.kf-debug-has-errors .kf-debug-brand { color: #f87171; }
+#kf-debug-panel .kf-debug-summary { color: #9ca3af; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
 #kf-debug-panel .kf-debug-spacer { flex: 1; }
+
 #kf-debug-panel button,
 #kf-debug-panel input,
 #kf-debug-panel select {
-  color: inherit;
-  background: #111827;
-  border: 1px solid #4b5563;
-  border-radius: 4px;
-  font: inherit;
+  color: inherit; background: #111827; border: 1px solid #4b5563; border-radius: 4px; font: inherit; margin: 0;
 }
-#kf-debug-panel button { min-height: 25px; padding: 3px 7px; cursor: pointer; }
-#kf-debug-panel button:hover,
-#kf-debug-panel button[aria-selected="true"] { background: #374151; border-color: #9ca3af; }
+#kf-debug-panel button { min-height: 26px; min-width: 28px; padding: 3px 7px; cursor: pointer; }
+#kf-debug-panel button:hover { background: #374151; border-color: #9ca3af; }
+#kf-debug-panel button[aria-selected="true"],
+#kf-debug-panel button[aria-pressed="true"] { background: #374151; border-color: #fbbf24; }
 #kf-debug-panel button:focus-visible,
-#kf-debug-panel input:focus-visible { outline: 2px solid #f59e0b; outline-offset: 1px; }
-#kf-debug-panel .kf-debug-tabs { display: flex; gap: 3px; padding: 5px 7px 0; border-bottom: 1px solid #374151; }
-#kf-debug-panel .kf-debug-tabs button { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
-#kf-debug-panel .kf-debug-tools { display: flex; align-items: center; gap: 5px; padding: 5px 7px; }
-#kf-debug-panel .kf-debug-tools input { min-width: 80px; width: min(260px, 45vw); padding: 5px 7px; }
-#kf-debug-panel .kf-debug-content { min-height: 0; overflow: auto; padding: 4px 7px 8px; overscroll-behavior: contain; }
+#kf-debug-panel input:focus-visible,
+#kf-debug-panel select:focus-visible { outline: 2px solid #f59e0b; outline-offset: 1px; }
+
+#kf-debug-panel .kf-debug-tabs { display: flex; gap: 3px; padding: 5px 7px 0; border-bottom: 1px solid #374151; overflow-x: auto; flex: none; scrollbar-width: none; }
+#kf-debug-panel .kf-debug-tabs::-webkit-scrollbar { display: none; }
+#kf-debug-panel .kf-debug-tabs button { flex: none; white-space: nowrap; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+#kf-debug-panel .kf-debug-badge { display: inline-block; min-width: 16px; padding: 0 4px; margin-left: 2px; text-align: center; border-radius: 8px; background: #374151; color: #d1d5db; font-size: .9em; }
+#kf-debug-panel .kf-debug-badge.kf-debug-badge-bad { background: #b91c1c; color: #fff; }
+#kf-debug-panel .kf-debug-badge.kf-debug-badge-warn { background: #b45309; color: #fff; }
+
+#kf-debug-panel .kf-debug-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; padding: 5px 7px; flex: none; }
+#kf-debug-panel .kf-debug-tools[hidden] { display: none; }
+#kf-debug-panel .kf-debug-tools input { min-width: 80px; width: min(220px, 40vw); padding: 4px 7px; }
+#kf-debug-panel .kf-debug-chips { display: inline-flex; flex-wrap: wrap; gap: 3px; }
+#kf-debug-panel .kf-debug-chips button { min-height: 22px; padding: 1px 6px; border-radius: 10px; opacity: .6; }
+#kf-debug-panel .kf-debug-chips button[aria-pressed="true"] { opacity: 1; }
+#kf-debug-panel .kf-debug-meta { color: #9ca3af; margin-left: auto; }
+
+#kf-debug-panel .kf-debug-content { min-height: 0; flex: 1; overflow: auto; padding: 2px 7px 8px; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
 #kf-debug-panel .kf-debug-view[hidden] { display: none !important; }
-#kf-debug-panel .kf-debug-entry { display: grid; grid-template-columns: 72px minmax(0,1fr); gap: 8px; padding: 3px 4px; border-bottom: 1px solid rgba(75,85,99,.35); overflow-wrap: anywhere; }
-#kf-debug-panel .kf-debug-time { color: #9ca3af; white-space: nowrap; }
-#kf-debug-panel .kf-debug-message { white-space: pre-wrap; overflow-wrap: anywhere; }
-#kf-debug-panel .kf-debug-log-warn { color: #fbbf24; }
-#kf-debug-panel .kf-debug-log-error,
-#kf-debug-panel .kf-debug-error,
-#kf-debug-panel .kf-debug-resource-error { color: #f87171; }
-#kf-debug-panel .kf-debug-log-info { color: #93c5fd; }
-#kf-debug-panel .kf-debug-network-row { display: grid; grid-template-columns: 58px 58px minmax(100px,1fr) 70px; gap: 8px; padding: 3px 4px; border-bottom: 1px solid rgba(75,85,99,.35); }
-#kf-debug-panel .kf-debug-network-row > span { overflow-wrap: anywhere; }
-#kf-debug-panel .kf-debug-status-error { color: #f87171; }
-#kf-debug-panel .kf-debug-status-ok { color: #86efac; }
 #kf-debug-panel .kf-debug-empty { padding: 12px 5px; color: #9ca3af; }
-#kf-debug-panel .kf-debug-info-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(170px,1fr)); gap: 5px 14px; }
-#kf-debug-panel .kf-debug-info-item { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; border-bottom: 1px solid #374151; }
-#kf-debug-panel .kf-debug-info-item span { color: #9ca3af; }
-#kf-debug-panel .kf-debug-info-item b { text-align: right; overflow-wrap: anywhere; font-weight: 500; }
-#kf-debug-panel.kf-debug-collapsed { max-height: 36px; min-height: 34px; }
-#kf-debug-panel.kf-debug-collapsed .kf-debug-tabs,
-#kf-debug-panel.kf-debug-collapsed .kf-debug-tools,
-#kf-debug-panel.kf-debug-collapsed .kf-debug-content { display: none; }
+#kf-debug-panel .kf-debug-old { opacity: .55; }
+
+/* ---- záznamy ---- */
+#kf-debug-panel .kf-debug-entry { display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 8px; padding: 3px 4px; border-bottom: 1px solid rgba(75,85,99,.35); overflow-wrap: anywhere; }
+#kf-debug-panel .kf-debug-entry.kf-debug-expandable { cursor: pointer; }
+#kf-debug-panel .kf-debug-time { color: #9ca3af; white-space: nowrap; }
+#kf-debug-panel .kf-debug-message { white-space: pre-wrap; overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+#kf-debug-panel .kf-debug-open .kf-debug-message { display: block; overflow: visible; }
+#kf-debug-panel .kf-debug-detail { grid-column: 1 / -1; margin: 3px 0 2px; padding: 5px 7px; background: #0b1220; border-radius: 4px; white-space: pre-wrap; overflow-wrap: anywhere; color: #cbd5e1; font: inherit; max-height: 40vh; overflow: auto; }
+#kf-debug-panel .kf-debug-tag { color: #fbbf24; font-weight: 700; }
+#kf-debug-panel .kf-debug-count { color: #fbbf24; font-style: normal; }
+#kf-debug-panel .kf-debug-log-warn { color: #fbbf24; }
+#kf-debug-panel .kf-debug-log-error, #kf-debug-panel .kf-debug-err { color: #f87171; }
+#kf-debug-panel .kf-debug-log-info { color: #93c5fd; }
+#kf-debug-panel .kf-debug-log-debug { color: #9ca3af; }
+#kf-debug-panel .kf-debug-ev-click .kf-debug-tag { color: #a5b4fc; }
+#kf-debug-panel .kf-debug-ev-nav .kf-debug-tag, #kf-debug-panel .kf-debug-ev-view .kf-debug-tag { color: #5eead4; }
+#kf-debug-panel .kf-debug-ev-warn .kf-debug-tag { color: #fbbf24; }
+
+/* ---- network ---- */
+#kf-debug-panel .kf-debug-network-row { display: grid; grid-template-columns: 46px 46px minmax(100px,1fr) 62px 62px; gap: 8px; padding: 3px 4px; border-bottom: 1px solid rgba(75,85,99,.35); cursor: pointer; }
+#kf-debug-panel .kf-debug-network-row > span { overflow-wrap: anywhere; }
+#kf-debug-panel .kf-debug-network-row.kf-debug-bad > span { color: #f87171; }
+#kf-debug-panel .kf-debug-network-row.kf-debug-slow .kf-debug-n-ms { color: #fbbf24; font-weight: 700; }
+#kf-debug-panel .kf-debug-network-row.kf-debug-pending { color: #93c5fd; }
+#kf-debug-panel .kf-debug-network-row .kf-debug-detail { grid-column: 1 / -1; cursor: text; }
+#kf-debug-panel .kf-debug-status-ok { color: #86efac; }
+#kf-debug-panel .kf-debug-status-error { color: #f87171; }
+#kf-debug-panel .kf-debug-copybtn { margin-top: 4px; }
+
+/* ---- info / kv ---- */
+#kf-debug-panel .kf-debug-section { margin: 8px 0 3px; color: #fbbf24; font-weight: 700; letter-spacing: .03em; display: flex; align-items: center; gap: 8px; }
+#kf-debug-panel .kf-debug-kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 16px; }
+#kf-debug-panel .kf-debug-kv-item { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; border-bottom: 1px solid #374151; }
+#kf-debug-panel .kf-debug-kv-item span { color: #9ca3af; flex: none; max-width: 45%; overflow-wrap: anywhere; }
+#kf-debug-panel .kf-debug-kv-item b { text-align: right; overflow-wrap: anywhere; font-weight: 500; min-width: 0; }
+#kf-debug-panel .kf-debug-kv-item b.ok { color: #86efac; }
+#kf-debug-panel .kf-debug-kv-item b.warn { color: #fbbf24; }
+#kf-debug-panel .kf-debug-kv-item b.bad { color: #f87171; }
+#kf-debug-panel .kf-debug-toolbar { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; padding: 5px 0; }
+
+/* ---- kontroly ---- */
+#kf-debug-panel .kf-debug-check-head { display: flex; gap: 8px; padding: 4px 2px; border-bottom: 1px solid #374151; font-weight: 700; }
+#kf-debug-panel .kf-debug-check-head.err { color: #f87171; }
+#kf-debug-panel .kf-debug-check-head.warn { color: #fbbf24; }
+#kf-debug-panel .kf-debug-check-head.info { color: #93c5fd; }
+#kf-debug-panel .kf-debug-check-hint { color: #9ca3af; padding: 2px 2px 2px 22px; }
+#kf-debug-panel .kf-debug-check-item { display: block; width: 100%; margin: 2px 0 0 18px; width: calc(100% - 18px); text-align: left; border-style: dashed; overflow-wrap: anywhere; }
+#kf-debug-panel .kf-debug-ok-line { color: #86efac; padding: 6px 2px; }
+
+/* ---- nastavení ---- */
+#kf-debug-panel .kf-debug-switch { display: flex; gap: 8px; align-items: flex-start; padding: 5px 0; border-bottom: 1px solid #374151; cursor: pointer; }
+#kf-debug-panel .kf-debug-switch input { flex: none; width: 18px; height: 18px; margin-top: 1px; accent-color: #f59e0b; }
+#kf-debug-panel .kf-debug-switch small { display: block; color: #9ca3af; }
+#kf-debug-panel .kf-debug-field { display: flex; gap: 8px; align-items: center; padding: 5px 0; border-bottom: 1px solid #374151; }
+#kf-debug-panel .kf-debug-field label { flex: 1; }
+#kf-debug-panel .kf-debug-field input[type="number"], #kf-debug-panel .kf-debug-field select { padding: 3px 6px; }
+#kf-debug-panel .kf-debug-field input[type="number"] { width: 90px; }
+#kf-debug-panel .kf-debug-field input[type="range"] { width: 140px; padding: 0; accent-color: #f59e0b; }
+
 @media (max-width: 600px) {
-  #kf-debug-panel { max-height: 33vh; }
   #kf-debug-panel .kf-debug-summary { display: none; }
-  #kf-debug-panel .kf-debug-header { gap: 5px; }
-  #kf-debug-panel .kf-debug-header button { padding: 3px 5px; }
-  #kf-debug-panel .kf-debug-network-row { grid-template-columns: 48px 42px minmax(80px,1fr) 52px; gap: 5px; }
+  #kf-debug-panel .kf-debug-brand { font-size: .9em; }
+  #kf-debug-panel .kf-debug-entry { grid-template-columns: 78px minmax(0,1fr); gap: 5px; }
+  #kf-debug-panel .kf-debug-network-row { grid-template-columns: 40px 38px minmax(80px,1fr) 52px; gap: 5px; }
+  #kf-debug-panel .kf-debug-network-row .kf-debug-n-size { display: none; }
+  #kf-debug-panel .kf-debug-kv { grid-template-columns: 1fr; }
 }
