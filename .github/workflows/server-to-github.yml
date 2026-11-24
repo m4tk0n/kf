@@ -21,71 +21,67 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Download current server files
+      - name: Install lftp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
+      - name: Download source files from FTP without changing the server
         env:
-          SERVER_VIEWER_URL: https://7x.wz.cz/_kf/ai/
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ secrets.FTP_PORT }}
+          FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
         run: |
           set -euo pipefail
+          : "${FTP_SERVER:?Missing GitHub Secret FTP_SERVER}"
+          : "${FTP_USERNAME:?Missing GitHub Secret FTP_USERNAME}"
+          : "${FTP_PASSWORD:?Missing GitHub Secret FTP_PASSWORD}"
+          : "${FTP_REMOTE_DIR:?Missing GitHub Secret FTP_REMOTE_DIR}"
+          export FTP_PORT="${FTP_PORT:-21}"
           mkdir -p /tmp/kf-server-import
 
-          curl --fail --silent --show-error --location \
-            --retry 2 --max-time 60 \
-            "${SERVER_VIEWER_URL}?action=list" \
-            --output /tmp/kf-server-list.json
+          python3 - <<'PY'
+          import os
 
-          jq -e '.files | type == "array" and length > 0' /tmp/kf-server-list.json >/dev/null
+          def q(value):
+              if "\\n" in value or "\\r" in value:
+                  raise SystemExit("FTP settings must not contain newlines")
+              return '"' + value.replace("\\\\", "\\\\\\\\").replace('"', '\\\\"') + '"'
 
-          while IFS= read -r path; do
-            [ -n "$path" ] || continue
+          remote = os.environ["FTP_REMOTE_DIR"].rstrip("/") + "/"
+          commands = [
+              "set cmd:fail-exit yes",
+              "set net:max-retries 2",
+              "set net:timeout 30",
+              "set ftp:passive-mode yes",
+              f"open -p {q(os.environ['FTP_PORT'])} {q(os.environ['FTP_SERVER'])}",
+              f"user {q(os.environ['FTP_USERNAME'])} {q(os.environ['FTP_PASSWORD'])}",
+              # Download only. No server-side write, rename or delete command.
+              "mirror --verbose --parallel=2 "
+              "--exclude-glob .git --exclude-glob '.git/**' "
+              "--exclude-glob .github --exclude-glob '.github/**' "
+              "--exclude-glob .env --exclude-glob '.env.*' "
+              "--exclude-glob data --exclude-glob 'data/**' "
+              "--exclude-glob cache --exclude-glob 'cache/**' "
+              "--exclude-glob img --exclude-glob 'img/**' "
+              "--exclude-glob uploads --exclude-glob 'uploads/**' "
+              "--exclude-glob cron --exclude-glob 'cron/**' "
+              "--exclude-glob logs --exclude-glob 'logs/**' "
+              "--exclude-glob tmp --exclude-glob 'tmp/**' "
+              "--exclude-glob ai-backups --exclude-glob 'ai-backups/**' "
+              "--exclude-glob 'ai/copy/**' "
+              "--exclude-glob .ftp-deploy-sync-state.json "
+              f"{q(remote)} {q('/tmp/kf-server-import')}",
+              "bye",
+          ]
+          with open("/tmp/kf-server-import.lftp", "w", encoding="utf-8") as f:
+              f.write("\\n".join(commands) + "\\n")
+          PY
 
-            # Never import secrets, Git metadata/workflows, runtime data,
-            # uploads, generated copies, caches or backup files.
-            case "$path" in
-              .env|.env.*|.git|.git/*|.github|.github/*| \
-              data|data/*|cache|cache/*|img|img/*|uploads|uploads/*| \
-              cron|cron/*|logs|logs/*|tmp|tmp/*|ai-backups|ai-backups/*| \
-              ai/copy|ai/copy/*|.ftp-deploy-sync-state.json)
-                echo "Skipped protected path: $path"
-                continue
-                ;;
-            esac
-
-            # Only known text/source formats are eligible for import.
-            case "$path" in
-              *.php|*.js|*.css|*.html|*.htm|*.json|*.md|*.txt|*.sql|*.xml|*.svg|*.yml|*.yaml|*.ini|*.htaccess|*.gitignore|*.example)
-                ;;
-              *)
-                continue
-                ;;
-            esac
-
-            # Reject unsafe paths before creating any local file.
-            case "/$path/" in
-              *"/../"*|*"//"*)
-                echo "Unsafe path returned by server; stopping: $path"
-                exit 1
-                ;;
-            esac
-
-            size="$(jq -r --arg p "$path" '.files[] | select(.path == $p) | .size' /tmp/kf-server-list.json | head -n 1)"
-            if [ -z "$size" ] || [ "$size" -gt 2097152 ]; then
-              echo "Skipped oversized or invalid file: $path"
-              continue
-            fi
-
-            mkdir -p "/tmp/kf-server-import/$(dirname "$path")"
-            curl --fail --silent --show-error --location \
-              --retry 2 --max-time 60 \
-              --get "${SERVER_VIEWER_URL}" \
-              --data-urlencode "action=read" \
-              --data-urlencode "file=$path" \
-              --output "/tmp/kf-server-import/$path"
-
-            if [ "$(wc -c < "/tmp/kf-server-import/$path")" -gt 2097152 ]; then
-              echo "File exceeded 2 MB while downloading: $path"
-              exit 1
-            fi
-          done < <(jq -r '.files[].path' /tmp/kf-server-list.json)
+          lftp -f /tmp/kf-server-import.lftp
+          rm -f /tmp/kf-server-import.lftp
 
       - name: Apply server files without deleting GitHub files
         run: |
@@ -94,6 +90,25 @@ jobs:
 
           while IFS= read -r -d '' file; do
             relative="${file#/tmp/kf-server-import/}"
+
+            # Defense in depth: only source/documentation text formats are imported.
+            case "$relative" in
+              .env|.env.*|.git|.git/*|.github|.github/*| \
+              data|data/*|cache|cache/*|img|img/*|uploads|uploads/*| \
+              cron|cron/*|logs|logs/*|tmp|tmp/*|ai-backups|ai-backups/*| \
+              ai/copy|ai/copy/*|.ftp-deploy-sync-state.json)
+                continue
+                ;;
+            esac
+
+            case "$relative" in
+              *.php|*.js|*.css|*.html|*.htm|*.json|*.md|*.txt|*.sql|*.xml|*.svg|*.yml|*.yaml|*.ini|*.htaccess|*.gitignore|*.example)
+                ;;
+              *)
+                continue
+                ;;
+            esac
+
             mkdir -p "$(dirname "$relative")"
             cp -- "$file" "$relative"
             git add -- "$relative"
