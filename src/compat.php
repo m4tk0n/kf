@@ -126,7 +126,7 @@ if (!function_exists('json_write_file')) {
             if (!ftruncate($fh, 0) || !rewind($fh)) {
                 throw new RuntimeException('JSON soubor nelze připravit k zápisu: ' . $rel);
             }
-            write_stream_all($fh, $json, basename($f));
+            write_stream_all($fh, $json, basename($f), true);
             clearstatcache(true, $f);
             $size = filesize($f);
             if ($size === false || $size !== strlen($json)) {
