@@ -21,35 +21,30 @@
 
 <!-- 1. MĚSÍČNÍ POHLED -->
 <div id="monthly-view">
-    <!-- Přepínač měsíců -->
     <div class="month-picker">
         <span id="prev-month" class="nav-btn">&lt;</span>
         <span id="month-display"></span>
         <span id="next-month" class="nav-btn">&gt;</span>
     </div>
 
-    <!-- Dny v týdnu -->
     <div class="weekdays">
         <div>Po</div><div>Út</div><div>St</div><div>Čt</div><div>Pá</div><div>So</div><div>Ne</div>
     </div>
 
-    <!-- Kalendářní mřížka -->
     <div id="calendar" class="calendar-grid"></div>
 </div>
 
-<!-- 2. ROČNÍ POHLED (Výchozí stav: skrytý) -->
+<!-- 2. ROČNÍ POHLED -->
 <div id="yearly-view" class="hidden">
     <div class="year-picker">
         <span id="prev-year" class="nav-btn">&lt;</span>
         <span id="year-display">2026</span>
         <span id="next-year" class="nav-btn">&gt;</span>
     </div>
-    <div id="yearly-container" class="yearly-container">
-        <!-- Zde JS vygeneruje 12 měsíců -->
-    </div>
+    <div id="yearly-container" class="yearly-container"></div>
 </div>
 
-     <!-- Vyskakovací dialog pro výběr razítka -->
+<!-- Vyskakovací dialog pro výběr razítka -->
 <div id="preset-modal" class="modal-overlay hidden">
     <div class="modal-content">
         <h3>Vyberte směnu</h3>
@@ -64,12 +59,11 @@
     </div>
 </div>
 
-
-    <!-- Načtení skriptů -->
-    <script src="js/utils.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/month-calendar.js"></script>
-    <script src="js/year-calendar.js?v=3"></script>
-    <script src="js/app.js"></script>
+<!-- Načtení skriptů -->
+<script src="js/utils.js?v=20261124-1"></script>
+<script src="js/api.js?v=20261124-1"></script>
+<script src="js/month-calendar.js?v=20261124-1"></script>
+<script src="js/year-calendar.js?v=3"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
