@@ -1,8 +1,11 @@
 // js/api.js
+// API zůstává uvnitř aplikace i po přesunutí nebo přejmenování její složky.
+const SMENARAM_API_URL = new URL('../api.php', document.currentScript.src).href;
+
 // Načtení směn pro definované období
 async function loadShifts(start, end) {
     try {
-        const response = await fetch(`api.php?start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}`, {
+        const response = await fetch(`${SMENARAM_API_URL}?start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}`, {
             cache: 'no-store'
         });
         const text = await response.text();
@@ -32,7 +35,7 @@ async function loadShifts(start, end) {
 // Uložení směn všech osob v jednom dotazu
 async function saveDayShifts(datum, osoba1, osoba2, osoba3) {
     try {
-        const response = await fetch('api.php', {
+        const response = await fetch(SMENARAM_API_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             cache: 'no-store',
