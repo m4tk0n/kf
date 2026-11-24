@@ -205,7 +205,7 @@ async function renderRacesPage() {
         const raceDates = Object.entries(shiftsData)
             .filter(([, shifts]) => String(shifts?.Osoba3 ?? shifts?.osoba3 ?? '').trim().toUpperCase() === 'Z')
             .map(([date]) => date)
-            .filter(date => /^\\d{4}-\\d{2}-\\d{2}$/.test(date))
+            .filter(date => /^\d{4}-\d{2}-\d{2}$/.test(date))
             .sort();
 
         container.replaceChildren();
