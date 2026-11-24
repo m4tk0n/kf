@@ -234,8 +234,8 @@ async function renderRacesPage() {
             });
         };
 
-        addGroup('Následující', upcomingDates);
         addGroup('Minulé', pastDates);
+        addGroup('Následující', upcomingDates);
     } catch (error) {
         if (year === displayYear) {
             container.textContent = 'Závody se nepodařilo načíst.';
