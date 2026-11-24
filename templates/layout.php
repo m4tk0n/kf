@@ -8,6 +8,8 @@ $menu = $menu ?? menu_items($user);
 $flash = $flash ?? flash_text();
 $isList = isset($view);
 $sessionReplaced = !empty(auth_store()['replaced']);
+require_once KF_ROOT . '/debug/debug.php';
+$debugEnabled = kf_debug_enabled($user);
 ?>
 <!doctype html>
 <html lang="<?= e(current_lang()) ?>">
@@ -17,6 +19,7 @@ $sessionReplaced = !empty(auth_store()['replaced']);
 <title><?= e(isset($title) && $title !== '' ? $title . ' – ' . (string)cfg('app.name') : (string)cfg('app.name')) ?></title>
 <link rel="stylesheet" href="<?= e(kf_asset('css/app.css')) ?>">
 <script src="<?= e(kf_asset('js/app.js')) ?>" defer></script>
+<?php if ($debugEnabled): kf_debug_assets(); endif; ?>
 <?php if ($isList): ?>
 <script src="<?= e(kf_asset('js/list.js')) ?>" defer></script>
 <script src="<?= e(kf_asset('js/calendar.js')) ?>" defer></script>
@@ -76,5 +79,6 @@ $sessionReplaced = !empty(auth_store()['replaced']);
 <?php endif; ?>
 <?php if ($isList): ?><div id="view" data-fav="<?= $favOn && $user !== null ? 1 : 0 ?>"><?php require __DIR__ . '/list.php'; ?></div><?php else: echo $content; endif; ?>
 </main>
+<?php if ($debugEnabled): kf_debug_render(); endif; ?>
 </body>
 </html>
