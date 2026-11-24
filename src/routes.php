@@ -58,7 +58,11 @@ function route_diagnostics_post(): never
         abort(403, t('error.403'));
     }
     json_locked('data/diagnostics.json', static function (array &$data): void {
-        $data['diagnostika'] = true;
+        if (($data['diagnostika'] ?? false) === true) {
+            unset($data['diagnostika']);
+        } else {
+            $data['diagnostika'] = true;
+        }
     });
     redirect('diagnostics');
 }
