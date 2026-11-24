@@ -102,11 +102,15 @@ if (!function_exists('json_write_file')) {
     {
         $f = abs_path($rel);
         ensure_dir(dirname($f));
-        $flags = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES;
+        $flags = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR;
         if ($pretty) {
             $flags |= JSON_PRETTY_PRINT;
         }
-        file_put_contents($f, json_encode($data, $flags) . ($pretty ? "\n" : ''), LOCK_EX);
+        $json = json_encode($data, $flags) . ($pretty ? "\n" : '');
+        $written = file_put_contents($f, $json, LOCK_EX);
+        if ($written === false || $written !== strlen($json)) {
+            throw new RuntimeException('Nelze uložit JSON soubor: ' . $rel);
+        }
     }
 }
 
