@@ -1,6 +1,6 @@
 <?php
 // Samostatná konfigurace aplikace SměnářAM.
-// Načítá pouze vlastní soubor _smenaram/.env.
+// Načítá pouze vlastní soubor .env z adresáře aplikace.
 declare(strict_types=1);
 
 $envFile = __DIR__ . '/.env';
@@ -39,7 +39,7 @@ function getDbConnection(): PDO
 
     if ($pdo === null) {
         if (DB_NAME === '' || DB_USER === '') {
-            throw new RuntimeException('V _smenaram/.env chybí DB_NAME nebo DB_USER.');
+            throw new RuntimeException('V souboru .env chybí DB_NAME nebo DB_USER.');
         }
 
         $dsn = 'mysql:host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_NAME . ';charset=utf8mb4';
