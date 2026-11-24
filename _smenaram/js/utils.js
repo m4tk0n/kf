@@ -10,7 +10,7 @@ let isFilterMode = false;
 let shiftsData = {};
 
 // Předvolba pro zápis
-let activePreset = { osoba1: undefined, osoba2: undefined, clear: false };
+let activePreset = { osoba1: undefined, osoba2: undefined, osoba3: undefined, clear: false };
 
 const monthNames = [
     "leden", "únor", "březen", "duben", "květen", "červen",
