@@ -54,9 +54,12 @@ function kf_debug_user_active(?array $user): bool
 /** Skript plovoucího diagnostického panelu připojí jen při aktivním nastavení. */
 function kf_debug_script(?array $user): string
 {
-    return kf_debug_user_active($user)
-        ? '<script src="' . e(url('debug/debug.js')) . '" defer></script>'
-        : '';
+    if (!kf_debug_user_active($user)) {
+        return '';
+    }
+
+    return '<link rel="stylesheet" href="' . e(asset('css/debug.css')) . '">'
+        . '<script src="' . e(asset('js/debug.js')) . '" defer></script>';
 }
 
 /** Poslední diagnostické záznamy pro ověřeného správce/debug klienta. */
