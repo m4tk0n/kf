@@ -196,7 +196,19 @@
 
   document.addEventListener('submit', function (event) {
     var form = event.target;
-    add('FORM', (form.method || 'GET').toUpperCase() + ' ' + cleanUrl(form.action || location.href));
+    var safeFields = [];
+    Array.prototype.forEach.call(form.elements || [], function (field) {
+      if (!field.name || field.disabled || /csrf|token|password|secret|key|email|name/i.test(field.name)) return;
+      if (field.name === 'enabled' || field.name === 'action') {
+        safeFields.push(field.name + '=' + String(field.value).slice(0, 20));
+      } else {
+        safeFields.push(field.name + ' [value hidden]');
+      }
+    });
+    add('FORM', (form.method || 'GET').toUpperCase() + ' ' + cleanUrl(form.action || location.href),
+      'form_id=' + (form.id || '—') + '\\n' +
+      'fields=' + (safeFields.join(', ') || 'none') + '\\n' +
+      'default_prevented=' + String(event.defaultPrevented));
   }, true);
 
   document.addEventListener('DOMContentLoaded', function () {
