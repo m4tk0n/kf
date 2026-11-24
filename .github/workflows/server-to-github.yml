@@ -46,9 +46,9 @@ jobs:
           import os
 
           def q(value):
-              if "\\n" in value or "\\r" in value:
+              if "\n" in value or "\r" in value:
                   raise SystemExit("FTP settings must not contain newlines")
-              return '"' + value.replace("\\\\", "\\\\\\\\").replace('"', '\\\\"') + '"'
+              return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
           remote = os.environ["FTP_REMOTE_DIR"].rstrip("/") + "/"
           commands = [
@@ -77,7 +77,7 @@ jobs:
               "bye",
           ]
           with open("/tmp/kf-server-import.lftp", "w", encoding="utf-8") as f:
-              f.write("\\n".join(commands) + "\\n")
+              f.write("\n".join(commands) + "\n")
           PY
 
           lftp -f /tmp/kf-server-import.lftp
