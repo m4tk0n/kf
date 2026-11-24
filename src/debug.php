@@ -54,7 +54,10 @@ function kf_debug_user_active(?array $user): bool
 /** Skript plovoucího diagnostického panelu připojí jen při aktivním nastavení. */
 function kf_debug_script(?array $user): string
 {
-    if (!kf_debug_user_active($user)) {
+    // Na stránce nastavení DEBUG ponecháme panel dostupný i po vypnutí,
+    // aby bylo možné zkopírovat záznam samotného vypínacího požadavku.
+    if (!kf_debug_user_allowed($user)
+        || (!kf_debug_user_active($user) && req_path() !== 'debug')) {
         return '';
     }
 
