@@ -147,7 +147,7 @@ return [
     'diagnostics.yes' => 'Ano',
     'diagnostics.no' => 'Ne',
     'diagnostics.show' => 'Zobrazit',
-    'diagnostics.deactivate' => 'Deaktivovat',
+    'diagnostics.off' => 'Vypnout',
 
     // stránkování a kalendář (katalog)
     'pager.label' => 'Stránkování',
