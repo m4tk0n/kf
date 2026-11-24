@@ -88,8 +88,6 @@ jobs:
               f"cd {q(remote)}",
               "rm -f assets/css/debug.css assets/js/debug.js src/debug.php templates/debug.php docs/001_debug.md docs/004_debug.md",
               "rm -f data/diagnostics.json",
-              "rm -f debug/README.md debug/debug.css debug/debug.js",
-              "rm -f -r debug",
               "bye",
           ]
           with open("/tmp/kf-deploy.lftp", "w", encoding="utf-8") as f:
