@@ -544,6 +544,10 @@ body.filter-mode #monthly-view .shift-person3 {
     font-weight: bold;
 }
 
+.races-empty {
+    font-weight: normal;
+}
+
 #races-view {
     flex: 1;
     min-height: 0;
