@@ -24,7 +24,6 @@ function kf_dispatch(): void
         'login' => 'route_login',
         'login/confirm' => 'route_login_confirm',
         'profile' => 'route_profile',
-        'debug' => 'route_debug',
         'filters' => 'route_filters',
         'admin/users' => 'route_admin_users',
         'admin/settings' => 'route_admin_settings',
@@ -34,7 +33,6 @@ function kf_dispatch(): void
         'login/confirm' => 'route_login_confirm_post',
         'lang' => 'route_lang',
         'profile' => 'route_profile_post',
-        'debug' => 'route_debug_post',
         'profile/delete' => 'route_profile_delete',
         'filters' => 'route_filters_post',
         'filters/toggle' => 'route_filters_toggle',
@@ -71,10 +69,6 @@ function kf_dispatch(): void
 }
 
 kf_dispatch();
-
-// Diagnostický panel se načítá pouze uživateli, který jej má ve svém profilu zapnutý.
-$GLOBALS['headScripts'] = kf_debug_script(auth_resolve());
-
 
 // JSON data pro měsíční kalendář v pageru akcí (respektuje hledání i oblíbené: fav=1).
 if (isset($_GET['cal'])) {
