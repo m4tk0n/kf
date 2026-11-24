@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/bootstrap.php';
 
-// cron jen registruje shutdown funkci (běží po odeslání odpovědi)
-if (is_file(__DIR__ . '/cron/cron.php')) {
+// Cron se načítá pouze při výslovném zapnutí v config.php.
+// Při enabled = false se cron.php vůbec nenačte ani nezaregistruje žádnou akci.
+if (cfg('cron.enabled', false) === true && is_file(__DIR__ . '/cron/cron.php')) {
     require_once __DIR__ . '/cron/cron.php';
 }
 
