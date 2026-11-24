@@ -8,7 +8,6 @@ $menu = $menu ?? menu_items($user);
 $flash = $flash ?? flash_text();
 $isList = isset($view);
 $sessionReplaced = !empty(auth_store()['replaced']);
-require_once KF_ROOT . '/debug/debug.php';
 $debugEnabled = kf_debug_enabled($user);
 ?>
 <!doctype html>
