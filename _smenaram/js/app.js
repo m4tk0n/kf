@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pencilBtn = document.getElementById('pencil-btn');
     const checkBtn = document.getElementById('check-btn');
     const menuBtn = document.getElementById('menu-btn');
+    const medalBtn = document.querySelector('.icons-group .icon-btn[title="Ocenění"]');
     const prevMonthBtn = document.getElementById('prev-month');
     const nextMonthBtn = document.getElementById('next-month');
 
@@ -66,8 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Hamburger menu (Roční přehled)
+    // 3. Ikona medaile (Závody)
+    medalBtn?.addEventListener('click', toggleRacesView);
+
+    // 4. Hamburger menu (Roční přehled)
     menuBtn?.addEventListener('click', toggleYearlyView);
+
+    document.getElementById('prev-races-year')?.addEventListener('click', () => changeRacesYear(-1));
+    document.getElementById('next-races-year')?.addEventListener('click', () => changeRacesYear(1));
 
     // 4. Navigace
     prevMonthBtn?.addEventListener('click', () => changeMonth(-1));
@@ -137,4 +144,48 @@ function changeMonth(delta) {
 function changeYear(delta) {
     displayYear += delta;
     renderYearlyOverview();
+}
+
+
+// Přepínání samostatné stránky Závody
+function toggleRacesView() {
+    const racesView = document.getElementById('races-view');
+    const monthlyView = document.getElementById('monthly-view');
+    const yearlyView = document.getElementById('yearly-view');
+    const menuBtn = document.getElementById('menu-btn');
+    const medalBtn = document.querySelector('.icons-group .icon-btn[title="Ocenění"]');
+
+    const opening = racesView?.classList.contains('hidden');
+    if (!opening) {
+        racesView?.classList.add('hidden');
+        monthlyView?.classList.remove('hidden');
+        if (medalBtn) medalBtn.classList.remove('active');
+        renderCalendar();
+        return;
+    }
+
+    isYearlyView = false;
+    displayYear = currentDate.getFullYear();
+    turnOffEditMode();
+    isFilterMode = false;
+    document.body.classList.remove('filter-mode');
+    document.getElementById('check-btn')?.classList.remove('active', 'disabled');
+    document.getElementById('pencil-btn')?.classList.remove('disabled');
+    yearlyView?.classList.add('hidden');
+    monthlyView?.classList.add('hidden');
+    racesView?.classList.remove('hidden');
+    menuBtn?.classList.remove('active');
+    if (medalBtn) medalBtn.classList.add('active');
+    renderRacesPage();
+}
+
+function changeRacesYear(delta) {
+    displayYear += delta;
+    renderRacesPage();
+}
+
+function renderRacesPage() {
+    const yearDisplay = document.getElementById('races-year-display');
+    if (yearDisplay) yearDisplay.textContent = displayYear;
+    // Seznam je připravený pro závody daného roku; zatím zůstává prázdný.
 }
