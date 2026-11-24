@@ -1,0 +1,73 @@
+/* /debug/debug.css */
+#kf-debug-toggle {
+  position: fixed;
+  z-index: 2147483647;
+  left: 10px;
+  bottom: 10px;
+  padding: 8px 12px;
+  border: 1px solid #888;
+  border-radius: 18px;
+  background: #171717;
+  color: #fff;
+  font: 700 12px/1.2 monospace;
+  box-shadow: 0 2px 10px #0008;
+  touch-action: none;
+}
+#kf-debug {
+  position: fixed;
+  z-index: 2147483647;
+  left: 10px;
+  bottom: 10px;
+  width: min(560px, calc(100vw - 20px));
+  max-height: min(33vh, 280px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #111;
+  color: #eee;
+  border: 1px solid #777;
+  border-radius: 7px;
+  font: 11px/1.35 monospace;
+  box-shadow: 0 2px 14px #000a;
+}
+#kf-debug[hidden], #kf-debug-toggle[hidden] { display: none; }
+#kf-debug .kf-debug-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 6px;
+  background: #292929;
+  cursor: move;
+  touch-action: none;
+  user-select: none;
+}
+#kf-debug .kf-debug-bar strong { margin-right: auto; }
+#kf-debug .kf-debug-bar span { color: #aaa; font-size: 10px; }
+#kf-debug button {
+  font: inherit;
+  color: #fff;
+  background: #444;
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+#kf-debug .kf-debug-output { overflow: auto; padding: 6px; }
+#kf-debug .kf-debug-output > div { padding: 5px 0; border-bottom: 1px solid #444; }
+#kf-debug pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 3px 0; color: #ddd; }
+
+#kf-debug .kf-debug-output > div.kf-debug-error,
+#kf-debug .kf-debug-output > div.kf-debug-error pre,
+#kf-debug .kf-debug-output > div.kf-debug-error b { color: #ff5b5b; }
+
+#kf-debug .kf-debug-bar select {
+  min-width: 78px;
+  max-width: 105px;
+  font: inherit;
+  color: #fff;
+  background: #444;
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+#kf-debug .kf-debug-empty { color: #aaa; padding: 8px 0; }

@@ -1,0 +1,15 @@
+# .htaccess
+Options -Indexes
+DirectoryIndex index.php index.html
+
+# tajné soubory
+<FilesMatch "^(\.env|env\.example|config\.php|bootstrap\.php)$">
+  Require all denied
+</FilesMatch>
+
+# pretty URL: vše, co není soubor ani složka, jde do index.php (auth/google/login, profile, admin/users ...)
+RewriteEngine On
+RewriteRule ^(src|templates|lang|data|cron)(/|$) - [F,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]

@@ -111,14 +111,13 @@ Chování:
 3. Při mazání znaků z aktivního dotazu se výsledky průběžně aktualizují. Jakmile dotaz klesne pod minimum, zobrazí se celý výpis bez textového filtru.
 4. Pokud uživatel změní typ katalogu, přepnutí se provede i tehdy, když je dotaz kratší než minimum. Krátký dotaz se při tom nepoužije jako filtr.
 5. Minimum se nesmí natvrdo duplikovat v JavaScriptu. Hodnota se předává z konfigurace aplikace, aby změna `autocomplete_min_chars` automaticky ovlivnila i živé vyhledávání.
-6. Po posledním stisku klávesy se požadavek odešle až po prodlevě `paging.search_debounce_ms` (aktuálně 250 ms). Změna katalogu a ruční odeslání formuláře se provedou okamžitě; čekající požadavek se před nimi zruší.
 
-Toto pravidlo určuje pouze okamžik spuštění hledání. Samotné živé vyhledávání a našeptávání autocomplete jsou odlišné funkce; mohou sdílet minimální délku dotazu, ale jejich výsledky a účel se nezaměňují. Rozbalovací našeptávač se touto úpravou nepřidává a jeho případné budoucí použití se musí posoudit samostatně.
+Toto pravidlo určuje pouze okamžik spuštění hledání. Samotné živé vyhledávání a našeptávání autocomplete jsou odlišné funkce; mohou sdílet minimální délku dotazu, ale jejich výsledky a účel se nezaměňují.
 
 Dotčené soubory:
-- `config.php` – společná hodnota `paging.autocomplete_min_chars` a prodleva `paging.search_debounce_ms`,
-- `templates/layout.php` – předání obou hodnot do vyhledávacího pole,
-- `assets/js/list.js` – řízení spouštění živého vyhledávání podle těchto hodnot.
+- `config.php` – společná hodnota `paging.autocomplete_min_chars`,
+- `templates/layout.php` – předání hodnoty minimální délky do vyhledávacího pole,
+- `assets/js/list.js` – řízení spouštění živého vyhledávání podle této hodnoty.
 
 ## 6. Přihlášení a ověření identity přes Google a Facebook
 
