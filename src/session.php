@@ -317,13 +317,37 @@ function csrf_verify(): void
             $valid = $valid || hash_equals($tok, $sent);
         }
     }
+    $isDebugPost = req_path() === 'debug';
     if (!$valid) {
+        if ($isDebugPost) {
+            kf_debug_log('debug_post_csrf_failed', [
+                'request_id' => kf_debug_request_id(),
+                'csrf_field_present' => is_string($sent) && $sent !== '',
+                'csrf_field_type' => gettype($sent),
+                'origin_present' => !empty($_SERVER['HTTP_ORIGIN']),
+                'referer_present' => !empty($_SERVER['HTTP_REFERER']),
+            ]);
+        }
         security_log('csrf_invalid');
         abort(403, 'Neplatný CSRF token');
     }
     if (cfg('security.csrf_origin_check') && !origin_ok()) {
+        if ($isDebugPost) {
+            kf_debug_log('debug_post_origin_failed', [
+                'request_id' => kf_debug_request_id(),
+                'origin_present' => !empty($_SERVER['HTTP_ORIGIN']),
+                'referer_present' => !empty($_SERVER['HTTP_REFERER']),
+                'origin_valid' => origin_ok(),
+            ]);
+        }
         security_log('csrf_origin_mismatch');
         abort(403, 'Neplatný původ požadavku');
+    }
+    if ($isDebugPost) {
+        kf_debug_log('debug_post_csrf_passed', [
+            'request_id' => kf_debug_request_id(),
+            'origin_check_enabled' => (bool)cfg('security.csrf_origin_check'),
+        ]);
     }
 }
 
