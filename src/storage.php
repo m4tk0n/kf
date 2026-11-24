@@ -3,22 +3,22 @@
 declare(strict_types=1);
 
 /** Zapíše celý obsah streamu; fwrite() může zapsat méně bajtů, než bylo požadováno. */
-function write_stream_all($fh, string $content, string $fileLabel): void
+function write_stream_all($fh, string $content, string $fileLabel, bool $sync = false): void
 {
     $length = strlen($content);
     $offset = 0;
     while ($offset < $length) {
         $written = @fwrite($fh, substr($content, $offset));
         if ($written === false || $written === 0) {
-            throw new RuntimeException('JSON zápis se nezdařil: ' . $fileLabel);
+            throw new RuntimeException('Zápis se nezdařil: ' . $fileLabel);
         }
         $offset += $written;
     }
     if (!@fflush($fh)) {
-        throw new RuntimeException('JSON se nepodařilo dokončit na disku: ' . $fileLabel);
+        throw new RuntimeException('Data se nepodařilo dokončit na disku: ' . $fileLabel);
     }
-    if (function_exists('fsync') && !@fsync($fh)) {
-        throw new RuntimeException('JSON se nepodařilo synchronizovat: ' . $fileLabel);
+    if ($sync && function_exists('fsync') && !@fsync($fh)) {
+        throw new RuntimeException('Data se nepodařilo synchronizovat: ' . $fileLabel);
     }
 }
 
@@ -143,7 +143,7 @@ function json_locked(string $relFile, callable $fn): mixed
         if (!ftruncate($fh, 0) || !rewind($fh)) {
             throw new RuntimeException('JSON soubor nelze připravit k zápisu: ' . basename($file));
         }
-        write_stream_all($fh, $json, basename($file));
+        write_stream_all($fh, $json, basename($file), true);
         flock($fh, LOCK_UN);
         return $result;
     } finally {
