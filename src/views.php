@@ -53,6 +53,9 @@ function menu_items(?array $user): array
         return [];
     }
     $role = (int)$user['role'];
+    if ((int)$user['id'] === 2) {
+        $items[] = ['label' => t('menu.diagnostics'), 'href' => url('diagnostics')];
+    }
     $items = [
         ['label' => t('menu.add_event'), 'href' => url('event/new')],
         ['label' => t('menu.add_band'), 'href' => url('band/new')],
