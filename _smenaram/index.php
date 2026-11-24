@@ -19,6 +19,7 @@ function assetVersion($relativePath) {
 <div class="top-bar">
     <span class="app-title">SměnářAM</span>
     <div class="icons-group">
+        <span class="icon-btn" title="Ocenění">🏅</span>
         <span id="pencil-btn" class="icon-btn" title="Režim úprav">🔒</span>
         <span id="check-btn" class="icon-btn" title="Zvýraznit volné dny">✅</span>
         <span id="menu-btn" class="icon-btn" title="Roční přehled">☰</span>
