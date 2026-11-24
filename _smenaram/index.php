@@ -53,6 +53,7 @@ function assetVersion($relativePath) {
 
 <!-- 3. STRÁNKA ZÁVODŮ -->
 <div id="races-view" class="hidden">
+    <div class="races-page-title">Závody</div>
     <div class="year-picker">
         <span id="prev-races-year" class="nav-btn">&lt;</span>
         <span id="races-year-display"></span>
