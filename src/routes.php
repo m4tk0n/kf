@@ -32,6 +32,37 @@ function require_fresh(string $backPath): void
     exit;
 }
 
+function diagnostics_state(): bool
+{
+    $file = abs_path('data/diagnostics.json');
+    if (!is_file($file)) {
+        return false;
+    }
+    $data = json_decode((string)file_get_contents($file), true);
+    return is_array($data) && ($data['diagnostika'] ?? false) === true;
+}
+
+function route_diagnostics(): never
+{
+    $u = require_login();
+    if ((int)$u['id'] !== 2) {
+        abort(403, t('error.403'));
+    }
+    page(t('diagnostics.title'), 'diagnostics', ['active' => diagnostics_state()]);
+}
+
+function route_diagnostics_post(): never
+{
+    $u = require_login();
+    if ((int)$u['id'] !== 2) {
+        abort(403, t('error.403'));
+    }
+    json_locked('data/diagnostics.json', static function (array &$data): void {
+        $data['diagnostika'] = true;
+    });
+    redirect('diagnostics');
+}
+
 function route_home(): never
 {
     page(t('nav.home'), 'home');
