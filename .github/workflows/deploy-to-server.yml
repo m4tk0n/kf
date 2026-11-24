@@ -1,0 +1,96 @@
+name: Deploy GitHub to server
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - ".github/**"
+      - "docs/**"
+      - "README.md"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kf-github-to-server
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Upload repository files to the live server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+
+      - name: Verify this is a complete website checkout
+        run: |
+          set -euo pipefail
+          if [ ! -f index.php ]; then
+            echo "Deployment stopped safely: index.php is missing from main."
+            echo "No FTP connection or server changes were made."
+            exit 1
+          fi
+
+      - name: Install lftp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
+      - name: Upload files without deleting anything on the server
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ secrets.FTP_PORT }}
+          FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
+        run: |
+          set -euo pipefail
+          : "${FTP_SERVER:?Missing GitHub Secret FTP_SERVER}"
+          : "${FTP_USERNAME:?Missing GitHub Secret FTP_USERNAME}"
+          : "${FTP_PASSWORD:?Missing GitHub Secret FTP_PASSWORD}"
+          : "${FTP_REMOTE_DIR:?Missing GitHub Secret FTP_REMOTE_DIR}"
+          export FTP_PORT="${FTP_PORT:-21}"
+
+          python3 - <<'PY'
+          import os
+
+          def q(value):
+              if "\n" in value or "\r" in value:
+                  raise SystemExit("FTP settings must not contain newlines")
+              return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+          remote = os.environ["FTP_REMOTE_DIR"].rstrip("/") + "/"
+          commands = [
+              "set cmd:fail-exit yes",
+              "set net:max-retries 2",
+              "set net:timeout 30",
+              "set ftp:passive-mode yes",
+              f"open -p {q(os.environ['FTP_PORT'])} {q(os.environ['FTP_SERVER'])}",
+              f"user {q(os.environ['FTP_USERNAME'])} {q(os.environ['FTP_PASSWORD'])}",
+              # Reverse mirror only uploads new/changed files. There is deliberately
+              # no delete option or remote cleanup command in this workflow.
+              "mirror --reverse --verbose --parallel=2 "
+              "--exclude-glob .git --exclude-glob '.git/**' "
+              "--exclude-glob .github --exclude-glob '.github/**' "
+              "--exclude-glob .env --exclude-glob '.env.*' "
+              "--exclude-glob docs --exclude-glob 'docs/**' "
+              "--exclude-glob data --exclude-glob 'data/**' "
+              "--exclude-glob cache --exclude-glob 'cache/**' "
+              "--exclude-glob img --exclude-glob 'img/**' "
+              "--exclude-glob uploads --exclude-glob 'uploads/**' "
+              "--exclude-glob cron --exclude-glob 'cron/**' "
+              "--exclude-glob logs --exclude-glob 'logs/**' "
+              "--exclude-glob tmp --exclude-glob 'tmp/**' "
+              "--exclude-glob ai-backups --exclude-glob 'ai-backups/**' "
+              "--exclude-glob .ftp-deploy-sync-state.json "
+              f". {q(remote)}",
+              "bye",
+          ]
+          with open("/tmp/kf-deploy.lftp", "w", encoding="utf-8") as f:
+              f.write("\n".join(commands) + "\n")
+          PY
+
+          lftp -f /tmp/kf-deploy.lftp
+          rm -f /tmp/kf-deploy.lftp
