@@ -70,7 +70,7 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
       </select>
       <input type="search" name="q" value="<?= e((string)$req['q']) ?>" maxlength="100" data-min-chars="<?= max(1, (int)cfg('paging.autocomplete_min_chars')) ?>" placeholder="<?= e(kf_t('search.placeholder')) ?>" aria-label="<?= e(kf_t('search.label')) ?>" autocomplete="off">
     </form>
-    <?php $quickParams = ['s' => (string)$req['s'], 'q' => (string)($_GET['q'] ?? $req['q']), 'p' => max(1, (int)($_GET['p'] ?? $req['p'])), 'd' => (string)($_GET['d'] ?? $req['d']), 'k' => max(0, (int)($_GET['k'] ?? $req['k']))]; if ($favOn && $user !== null) $quickParams['fav'] = 1; ?>
+    <?php $quickSection = (string)($_GET['s'] ?? $req['s'] ?? 'events'); if (!in_array($quickSection, ['events', 'bands', 'venues'], true)) $quickSection = 'events'; $quickParams = ['s' => $quickSection, 'q' => (string)($_GET['q'] ?? $req['q']), 'p' => max(1, (int)($_GET['p'] ?? $req['p'])), 'd' => (string)($_GET['d'] ?? $req['d']), 'k' => max(0, (int)($_GET['k'] ?? $req['k']))]; if ($favOn && $user !== null) $quickParams['fav'] = 1; ?>
     <a class="btn bar-filter-toggle" href="<?= e(url('quick-filters') . '?' . http_build_query($quickParams)) ?>"><?= e(kf_t('filters')) ?></a>
   </div>
 </div>
