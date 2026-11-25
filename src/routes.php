@@ -166,7 +166,7 @@ function route_filters_post(): never
 {
     $u = guard('edit_profile');
     filters_save((int)$u['id'], $_POST);
-    redirect('filters?m=filters_saved');
+    redirect('filters?m=filters_saved&clear_filter_session=1');
 }
 
 function admin_error_flash(string $code): string
