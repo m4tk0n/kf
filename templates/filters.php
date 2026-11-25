@@ -8,7 +8,6 @@ declare(strict_types=1);
   <p><?= e(t('filters.intro')) ?></p>
   <form method="post" action="<?= e(url('filters')) ?>" class="stack">
     <?= csrf_field() ?>
-    <label class="check"><input type="checkbox" name="enabled" value="1"<?= $filters['enabled'] ? ' checked' : '' ?>> <?= e(t('filters.enabled')) ?></label>
 
     <?php foreach (['events', 'bands', 'venues'] as $section): ?>
       <?php $sectionSets = $filters['sets'][$section] ?? []; ?>
@@ -24,7 +23,7 @@ declare(strict_types=1);
             <?php else: ?>
               <div class="checks">
                 <?php foreach ($rows as $row): ?>
-                  <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][countries][]" value="<?= (int)$row['id'] ?>"<?= in_array((int)$row['id'], $selected, true) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
+                  <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][countries][]" value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || !$selected || in_array((int)$row['id'], $selected, true)) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
                 <?php endforeach; ?>
               </div>
             <?php endif; ?>
