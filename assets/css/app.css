@@ -336,3 +336,23 @@ input[type="submit"].flash-success{
 .modal-close:hover{background:var(--surface-3);color:var(--text)}
 #filters-help-modal .modal{padding-top:24px}
 @media(max-width:380px){.page-title-row{margin-bottom:9px}.page-title-row h1{font-size:1.25rem}}
+
+/* Záložky a přehledný výběr v uživatelských filtrech */
+.filter-form{gap:10px}
+.filter-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#101722}
+.filter-tab{min-width:0;min-height:38px;padding:6px 4px;border:0;border-right:1px solid var(--line);border-radius:0;background:transparent;color:var(--muted);font:700 .82rem/1.2 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;cursor:pointer}
+.filter-tab:last-child{border-right:0}
+.filter-tab.active{background:var(--surface-3);color:#fff;box-shadow:inset 0 -3px 0 var(--accent)}
+.filter-tab:focus-visible{outline:2px solid #9fc8ff;outline-offset:-3px}
+.filter-panel[hidden]{display:none!important}
+.filter-group{margin:0 0 12px}
+.filter-group h2{margin:0 0 6px;padding-bottom:4px;border-bottom:1px solid rgba(139,163,192,.18);font-size:.94rem}
+.filter-country-group{margin:8px 0 0}
+.filter-country-group h3{margin:0 0 4px;color:var(--muted);font-size:.8rem;font-weight:700}
+.filter-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 10px;margin:0;max-height:none;overflow:visible}
+.filter-checks .filter-option{display:flex!important;align-items:flex-start;gap:6px;min-width:0;margin:0;color:var(--text)!important;font-size:.82rem;line-height:1.35}
+.filter-option input{flex:0 0 auto;margin:2px 0 0}
+.filter-option span{display:block;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:clip}
+.filter-option.filter-option-wide{grid-column:1/-1}
+.filter-option.filter-option-wide span{white-space:normal;overflow:visible;overflow-wrap:anywhere}
+@media(max-width:380px){.filter-tab{font-size:.75rem;min-height:36px}.filter-checks{column-gap:7px}.filter-checks .filter-option{font-size:.78rem}}
