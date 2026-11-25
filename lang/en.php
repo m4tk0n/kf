@@ -96,6 +96,7 @@ return [
 
     // filters
     'filters.intro' => 'Choose what you want to see in the lists. Only countries, cities and genres used by published records are offered.',
+    'filters.quick_title' => 'Quick filters',
     'filters.help.open' => 'Information about filters',
     'filters.help.title' => 'How to set filters',
     'filters.help.text' => 'Expand each section and select the countries, cities or genres you want to see in the lists. Select all shows every available item. Save your changes using the Save button.',
