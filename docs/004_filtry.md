@@ -103,12 +103,26 @@ Ostatní soubory obsahují pouze napojení: `bootstrap.php`, `src/catalog.php`, 
 
 Rychlé filtry jsou implementovány na stránce `templates/quick_filters.php` a v modulu `assets/js/quick-filters.js`. `window.kfSetSessionFilters(state)` zůstává společným rozhraním pro uložení dočasného stavu.
 
-## Platnost hodnot a stejné chování všech sekcí
+## Stát jako souhrnný checkbox
 
-- Země a města se nabízejí pouze tehdy, pokud jsou použity ve zveřejněných záznamech příslušné sekce: Akce (`events`), Kapely (`bands`) nebo Kluby a místa (`venues`). Žánry se nabízejí pouze tehdy, pokud je používá zveřejněná kapela.
-- Každá sekce má vlastní dostupné hodnoty a vlastní výběr. Načtení nebo změna filtrů jedné sekce nesmí spouštět filtrování ani měnit nastavení jiné sekce.
-- **Výběr země má přednost před výběrem měst.** Pokud je vybrána alespoň jedna země, zobrazí se všechny záznamy dané sekce z vybrané země nebo zemí. Současně zaškrtnutá města výsledek nijak neomezují.
-- Pokud není vybrána žádná země, ale je vybráno jedno nebo více měst, zobrazí se pouze záznamy z těchto měst.
-- Pokud není vybrána žádná země ani město a není aktivní volba **Vše**, nezobrazí se žádné záznamy v dané sekci. Prázdný výběr se posuzuje samostatně pro Akce, Kapely a Kluby a místa; výběr v jedné sekci nikdy nepovolí všechny záznamy v jiné sekci. Volba **Vše** zobrazí všechny záznamy ve všech sekcích.
-- Individuální checkboxy se při změně navzájem automaticky nevynulují. Checkbox **Vše** pouze odráží stav všech jednotlivých voleb; uživatel si vlastní výběr určuje přímo.
-- Výpis, počty, pager a kalendář akcí používají stejné podmínky filtrování dané sekce.
+Stát není samostatná filtrační hodnota. Slouží výhradně jako souhrnný checkbox pro hromadné ovládání všech měst daného státu.
+
+Pravidla jsou stejná v rychlých filtrech i v trvalém nastavení v uživatelském menu:
+
+1. Zaškrtnutí státu zaškrtne všechna dostupná města daného státu.
+2. Odškrtnutí státu odškrtne všechna jeho města.
+3. Pokud uživatel odškrtne kterékoliv jedno město, souhrnný checkbox státu se odškrtne. Ostatní města zůstanou beze změny.
+4. Pokud uživatel znovu zaškrtne poslední chybějící město, stát se automaticky zaškrtne.
+5. Stát je zaškrtnutý právě tehdy, když jsou zaškrtnuta všechna dostupná města daného státu.
+6. Do filtračního stavu, dočasného úložiště, JSON profilu ani serverových SQL podmínek se nikdy neposílá ID státu. Ukládají a filtrují se pouze ID konkrétních měst.
+7. Pokud není vybráno žádné město (a v sekci kapel ani žádný žánr) a není aktivní volba **Vše**, nezobrazí se v dané sekci žádné záznamy.
+
+Nabídka států pro souhrnné checkboxy se sestavuje z vazeb měst, které se vyskytují ve zveřejněných záznamech příslušné sekce. Samotný stát nemá vlastní filtrační dotaz ani prioritu nad výběrem měst.
+
+Konfigurace filters.sections proto obsahuje pouze skutečné filtrační hodnoty:
+- Akce: města.
+- Kapely: města a žánry.
+- Kluby a místa: města.
+
+Checkbox **Vybrat vše** nadále hromadně ovládá skutečné filtrační možnosti ve všech sekcích; souhrnné checkboxy států pouze odrážejí a hromadně mění výběr měst v příslušné skupině.
+
