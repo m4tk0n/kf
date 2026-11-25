@@ -32,6 +32,8 @@ function filters_get(int $uid): array
 
     $sets = [];
     foreach ((array)cfg('filters.sections') as $section => $fields) {
+        // Při výpisu ověřujeme pouze filtry právě zobrazované entity.
+        if ($kind !== '' && $section !== $kind) continue;
         foreach ($fields as $field) {
             $sets[$section][$field] = array_values(array_unique(array_filter(
                 array_map('intval', (array)($p['filters'][$section][$field] ?? [])),
@@ -49,7 +51,7 @@ function filters_get(int $uid): array
  *
  * @return array{show_all:bool,none:bool,sets:array<string,array<string,int[]>>}
  */
-function filters_effective(): array
+function filters_effective(string $kind = ''): array
 {
     $user = auth_resolve();
     $base = $user !== null
@@ -202,7 +204,7 @@ function filters_catalog_conditions(string $kind): array
 {
     if (!in_array($kind, ['events', 'bands', 'venues'], true)) throw new InvalidArgumentException('kind');
     $sql = ''; $params = [];
-    $uFilters = filters_effective();
+    $uFilters = filters_effective($kind);
     if (!$uFilters['show_all']) {
         $sets = $uFilters['sets'][$kind] ?? [];
         $countries = array_values(array_filter(array_map('intval', $sets['countries'] ?? []), static fn(int $id): bool => $id > 0));
