@@ -1,6 +1,10 @@
 /* assets/js/app.js */
 (function () {
   'use strict';
+  var sectionSelect = document.querySelector('.bar-search select');
+  if (sectionSelect && !document.getElementById('view')) {
+    sectionSelect.addEventListener('change', function () { sectionSelect.form.submit(); });
+  }
   // potvrzení nebezpečných akcí (CSP zakazuje inline JS)
   document.addEventListener('click', function (ev) {
     var t = ev.target.closest ? ev.target.closest('[data-confirm]') : null;
