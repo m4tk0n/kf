@@ -62,6 +62,9 @@ function user_login_or_register(string $provider, array $info): array
     }
     if ($state === (int)cfg('enums.user_state.active')) {
         $prof = user_profile_get($id);
+        if (!array_key_exists('show_filtr_all', $prof)) {
+            $prof['show_filtr_all'] = true;
+        }
         $prof['email'] = $info['email'];
         $prof['email_verified'] = !empty($info['email_verified']);
         $prof['avatar'] = $info['avatar'];
@@ -291,16 +294,9 @@ function filters_save(int $uid, array $input): void
             sort($ids);
 
             // Prázdný výběr znamená bez omezení (vše), stejně jako kompletní výběr.
-            if (count($ids) < count($allowedIds)) {
-                if ($ids) {
-                    $saved[$section][$field] = $ids;
-                } else {
-                    $saved[$section][$field] = [];
-                }
-                // Jen pole, ve kterém uživatel skutečně omezil nabídku, zapíná vlastní režim.
-                if ($ids || count($allowedIds) > 0) {
-                    $hasRestriction = true;
-                }
+            if ($ids && count($ids) < count($allowedIds)) {
+                $saved[$section][$field] = $ids;
+                $hasRestriction = true;
             } else {
                 $saved[$section][$field] = [];
             }
