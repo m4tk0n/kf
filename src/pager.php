@@ -30,11 +30,13 @@ function kf_add_months(DateTimeImmutable $d, int $n): DateTimeImmutable
 }
 
 /**
- * Najde nejbližší kalendářní den, ve kterém alespoň jedna filtrovaná akce probíhá.
- * U vícedenní akce se počítá každý den včetně začátku a konce.
+ * Najde nejbližší den, ve kterém začíná alespoň jedna filtrovaná akce.
  *
- * > / <  – striktně následující / předchozí aktivní den.
- * >= / <= – nejbližší aktivní den od/do zadaného data včetně (měsíční navigace).
+ * > / <  – striktně následující / předchozí datum začátku akce.
+ * >= / <= – nejbližší datum začátku od/do zadaného data včetně.
+ *
+ * Délka vícedenní akce neovlivňuje navigaci pageru. Její průběh zůstává
+ * dostupný ve výpisu zvoleného dne a v samostatném přehledu probíhajících akcí.
  */
 function kf_active_day_find(string $op, string $t, string $qa): ?string
 {
@@ -42,21 +44,17 @@ function kf_active_day_find(string $op, string $t, string $qa): ?string
     [$f, $p] = kf_events_filter($qa);
 
     if ($op === '>' || $op === '>=') {
-        $base = $op === '>' ? 'DATE_ADD(?, INTERVAL 1 DAY)' : '?';
-        $candidate = 'GREATEST(' . $base . ', a.date_from)';
-        $sql = 'SELECT MIN(' . $candidate . ') FROM ' . tbl('events') . ' a'
-            . ' WHERE a.date_to >= ' . $candidate . $f;
-        $params = array_merge([$t, $t], $p);
+        $cmp = $op === '>' ? '>' : '>=';
+        $sql = 'SELECT MIN(a.date_from) FROM ' . tbl('events') . ' a'
+            . ' WHERE a.date_from ' . $cmp . ' ?' . $f;
     } else {
-        $base = $op === '<' ? 'DATE_SUB(?, INTERVAL 1 DAY)' : '?';
-        $candidate = 'LEAST(' . $base . ', a.date_to)';
-        $sql = 'SELECT MAX(' . $candidate . ') FROM ' . tbl('events') . ' a'
-            . ' WHERE a.date_from <= ' . $candidate . $f;
-        $params = array_merge([$t, $t], $p);
+        $cmp = $op === '<' ? '<' : '<=';
+        $sql = 'SELECT MAX(a.date_from) FROM ' . tbl('events') . ' a'
+            . ' WHERE a.date_from ' . $cmp . ' ?' . $f;
     }
 
-    $v = q($sql, $params)->fetchColumn();
-    return is_string($v) && preg_match('/^\d{4}-\d{2}-\d{2}$/', $v) ? $v : null;
+    $v = q($sql, array_merge([$t], $p))->fetchColumn();
+    return is_string($v) && preg_match('/^\\d{4}-\\d{2}-\\d{2}$/', $v) ? $v : null;
 }
 
 function kf_day_count(string $op, string $t, string $qa): int
@@ -88,8 +86,7 @@ function kf_event_nav(array $req, string $d, int $k, int $n, string $qa): array
     $cur = new DateTimeImmutable($d);
     $url = static fn(string $dd): string => kf_url($req, ['d' => $dd, 'k' => 0, 'p' => 1]);
 
-    // Šipky přecházejí mezi aktivními dny: počítá se každý den trvání vícedenní akce.
-    // Pokračující festival proto udrží pager na každém dalším dni svého trvání.
+    // Šipky přecházejí pouze mezi daty začátků akcí. Dny uvnitř festivalu se neproklikávají.
     $prevDay = kf_active_day_find('<', $d, $qa);
     $nextDay = kf_active_day_find('>', $d, $qa);
 
