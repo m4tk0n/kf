@@ -52,7 +52,7 @@ declare(strict_types=1);
                   <summary><?= e($group['name']) ?></summary>
                   <div class="checks">
                     <?php foreach ($group['rows'] as $row): ?>
-                      <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][cities][]" value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || !$selected || in_array((int)$row['id'], $selected, true)) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
+                      <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][cities][]" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || !$selected || in_array((int)$row['id'], $selected, true)) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
                     <?php endforeach; ?>
                   </div>
                 </details>
@@ -70,7 +70,7 @@ declare(strict_types=1);
             <?php else: ?>
               <div class="checks">
                 <?php foreach ($rows as $row): ?>
-                  <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][genres][]" value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || !$selected || in_array((int)$row['id'], $selected, true)) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
+                  <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][genres][]" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || !$selected || in_array((int)$row['id'], $selected, true)) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
                 <?php endforeach; ?>
               </div>
             <?php endif; ?>
