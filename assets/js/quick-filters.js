@@ -58,6 +58,17 @@
 
   syncControls();
 
+  // Výběr státu současně zapne nebo vypne všechna jeho města.
+  form.querySelectorAll('[data-quick-option$=":countries"]').forEach(function (country) {
+    country.addEventListener('change', function () {
+      var cities = form.querySelectorAll(
+        '[data-quick-option$=":cities"][data-country-id="' + country.value + '"]'
+      );
+      cities.forEach(function (city) { city.checked = country.checked; });
+      syncAll();
+    });
+  });
+
   form.addEventListener('submit', function (event) {
     event.preventDefault();
     readAllSections();
