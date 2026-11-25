@@ -182,20 +182,8 @@ function route_quick_filters(): never
         ? filters_get((int)$user['id'])
         : ['show_all' => true, 'none' => false, 'sets' => []];
 
-    // Při prvním rychlém nastavení zachovat dosavadní zobrazení ostatních katalogů.
+    // Výchozí výběr se při show_all řídí příznakem; není nutné vypisovat všechna ID.
     $baseSets = (array)$filters['sets'];
-    if (!empty($filters['show_all'])) {
-        foreach ((array)cfg('filters.sections') as $kind => $fields) {
-            $countries = filters_options((string)$kind, 'countries');
-            $cities = filters_options((string)$kind, 'cities');
-            $genres = filters_options((string)$kind, 'genres');
-            $baseSets[$kind] = [
-                'countries' => array_map(static fn(array $r): int => (int)$r['id'], $countries),
-                'cities' => $countries ? [] : array_map(static fn(array $r): int => (int)$r['id'], $cities),
-                'genres' => (!$countries && !$cities) ? array_map(static fn(array $r): int => (int)$r['id'], $genres) : [],
-            ];
-        }
-    }
 
     $options = [];
     foreach ((array)cfg('filters.sections') as $kind => $fields) {
