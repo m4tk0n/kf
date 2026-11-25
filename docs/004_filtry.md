@@ -133,6 +133,12 @@ Checkbox **Vybrat vše** nadále hromadně ovládá skutečné filtrační možn
 
 Tato pravidla platí výhradně pro veřejnou stránku rychlých filtrů `/quick-filters`. Neprovádět podle nich změny trvalých filtrů v JSON profilu ani stránky uživatelského menu `/filters`, pokud to uživatel výslovně nezadá.
 
+### Společný vzhled stránky
+- Veřejná stránka `/quick-filters` a stránka uživatelského menu `/filters` musí mít shodný vizuální layout.
+- Každá změna vzhledu nebo rozložení jedné z těchto stránek se musí současně promítnout i do druhé stránky.
+- Společné prvky (obal stránky, nadpis a tlačítko Zpět, informační ikona/modal, volba Vybrat vše, záložky, skupiny filtrů a tlačítko Uložit) musí zůstat vizuálně sjednocené. Rozdílné může být pouze chování a obsah vyplývající z jejich odlišné funkce.
+- Při úpravě jedné stránky vždy zkontrolovat i druhou; nesmí vzniknout rozdíl v rozměrech, odsazení, pořadí ani stylu společných prvků.
+
 ### Rozložení
 V každé ze tří záložek (Akce, Kapely, Kluby a místa) jsou samostatné skupiny v tomto pořadí:
 
