@@ -168,11 +168,15 @@ function kf_list_filter(string $qa, string $kind): array
                 array_push($p, ...$countries);
             }
 
-            $cities = array_values(array_filter(array_map('intval', $sets['cities'] ?? []), static fn(int $id): bool => $id > 0));
-            if ($cities) {
-                $in = implode(',', array_fill(0, count($cities), '?'));
-                $sql .= ' AND a.city_id IN (' . $in . ')';
-                array_push($p, ...$cities);
+            // Pokud je vybraný alespoň jeden stát, zahrnuje automaticky všechna jeho města.
+            // Výběr konkrétních měst se proto uplatní pouze tehdy, když není vybraný žádný stát.
+            if (!$countries) {
+                $cities = array_values(array_filter(array_map('intval', $sets['cities'] ?? []), static fn(int $id): bool => $id > 0));
+                if ($cities) {
+                    $in = implode(',', array_fill(0, count($cities), '?'));
+                    $sql .= ' AND a.city_id IN (' . $in . ')';
+                    array_push($p, ...$cities);
+                }
             }
 
             if ($kind === 'bands') {
