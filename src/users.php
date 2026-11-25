@@ -204,8 +204,23 @@ function filters_get(int $uid): array
     $p = user_profile_get($uid);
     // Migrace starších profilů: bez vlastního výběru se zobrazují všechny záznamy.
     if (!array_key_exists('show_filtr_all', $p)) {
-        $p['show_filtr_all'] = true;
-        unset($p['filters'], $p['filters_enabled']);
+        // Převod případných starších uložených voleb bez ztráty uživatelského nastavení.
+        $legacyHasSelection = false;
+        if (!array_key_exists('filters_enabled', $p) || !empty($p['filters_enabled'])) {
+            foreach ((array)($p['filters'] ?? []) as $fields) {
+                foreach ((array)$fields as $ids) {
+                    if (is_array($ids) && $ids) {
+                        $legacyHasSelection = true;
+                        break 2;
+                    }
+                }
+            }
+        }
+        $p['show_filtr_all'] = !$legacyHasSelection;
+        unset($p['filters_enabled']);
+        if ($p['show_filtr_all']) {
+            unset($p['filters']);
+        }
         user_profile_put($uid, $p);
     }
 
