@@ -97,6 +97,10 @@ return [
     // filtry
     'filters.intro' => 'Vyber, co chceš ve výpisech zobrazovat. Nabídka obsahuje jen státy, města a žánry používané v publikovaných záznamech.',
     'filters.quick_title' => 'Rychlé filtry',
+    'filters.quick_help.open' => 'Informace o rychlých filtrech',
+    'filters.quick_help.title' => 'Jak fungují rychlé filtry',
+    'filters.quick_help.user' => 'Toto je pouze dočasné filtrování pro aktuální relaci. Změny se neukládají do tvého profilu a nijak nemění tam uložené filtry. Při dalším použití profilu zůstane jeho uložené nastavení beze změny.',
+    'filters.quick_help.guest' => 'Toto je pouze dočasné filtrování pro aktuální relaci. Výběr se neukládá do uživatelského profilu ani jako trvalé nastavení.',
     'filters.help.open' => 'Informace o filtrech',
     'filters.help.title' => 'Jak nastavit filtry',
     'filters.help.text' => 'Rozbal jednotlivé části a zaškrtni státy, města nebo žánry, které chceš ve výpisech zobrazovat. Volba Vybrat vše zobrazí všechny dostupné položky. Změny potvrď tlačítkem Uložit.',
