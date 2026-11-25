@@ -195,48 +195,103 @@ function pending_count(): int
 
 // ---------- uložené filtry (JSON profil) ----------
 
-/** @return array{enabled:bool,sets:array<string,int[]>} */
+/** @return array{enabled:bool,sets:array<string,array<string,int[]>>} */
 function filters_get(int $uid): array
 {
     $p = user_profile_get($uid);
     $sets = [];
-    foreach (array_keys((array)cfg('filters.types')) as $type) {
-        $sets[$type] = array_values(array_unique(array_map('intval', (array)($p['filters'][$type] ?? []))));
+    foreach ((array)cfg('filters.sections') as $section => $fields) {
+        foreach ($fields as $field) {
+            $sets[$section][$field] = array_values(array_unique(array_filter(
+                array_map('intval', (array)($p['filters'][$section][$field] ?? [])),
+                static fn(int $id): bool => $id > 0
+            )));
+        }
     }
     return ['enabled' => (bool)($p['filters_enabled'] ?? true), 'sets' => $sets];
 }
 
-/** @return array<int,array{id:int,name:string}> nabídka položek jednoho typu pro formulář filtrů */
-function filters_options(string $type): array
+/**
+ * Dostupné hodnoty se odvozují výhradně z publikovaných záznamů dané sekce.
+ * Země a města jsou přes vazbu city_id; žánry pouze z kapel, které je používají.
+ *
+ * @return array<int,array<string,int|string>>
+ */
+function filters_options(string $section, string $field): array
 {
-    $key = cfg('filters.types.' . $type);
-    if (!is_string($key)) {
+    $allowed = (array)cfg('filters.sections.' . $section, []);
+    if (!in_array($field, $allowed, true)) {
         return [];
     }
-    $col = $type === 'countries' ? country_col() : 'name';
-    $limit = (int)cfg('filters.list_limit');
-    return q('SELECT id, ' . $col . ' AS name FROM ' . tbl($key) . ' ORDER BY ' . $col . ' LIMIT ' . $limit)->fetchAll();
+
+    $table = tbl($section);
+    $countryName = 'co.`name_' . kf_lang() . '`';
+    if ($field === 'countries') {
+        return q(
+            'SELECT DISTINCT co.id, ' . $countryName . ' AS name'
+            . ' FROM ' . $table . ' a'
+            . ' JOIN ' . tbl('cities') . ' c ON c.id = a.city_id'
+            . ' JOIN ' . tbl('countries') . ' co ON co.id = c.country_id'
+            . ' ORDER BY name'
+        )->fetchAll();
+    }
+
+    if ($field === 'cities') {
+        return q(
+            'SELECT DISTINCT c.id, c.name, co.id AS country_id, ' . $countryName . ' AS country_name'
+            . ' FROM ' . $table . ' a'
+            . ' JOIN ' . tbl('cities') . ' c ON c.id = a.city_id'
+            . ' JOIN ' . tbl('countries') . ' co ON co.id = c.country_id'
+            . ' ORDER BY country_name, c.name'
+        )->fetchAll();
+    }
+
+    if ($section === 'bands' && $field === 'genres') {
+        return q(
+            'SELECT DISTINCT g.id, g.name'
+            . ' FROM ' . tbl('bands') . ' a'
+            . ' JOIN ' . tbl('genres') . ' g ON g.id = a.genre_id'
+            . ' ORDER BY g.name'
+        )->fetchAll();
+    }
+
+    return [];
 }
 
-/** Uloží vybrané filtry; ID se ověřují proti DB a omezují počtem. */
+/** Uloží pouze ID, která jsou stále dostupná v nabídce příslušné sekce a pole. */
 function filters_save(int $uid, array $input): void
 {
     $p = user_profile_get($uid);
-    $max = (int)cfg('filters.max_per_type');
+    $max = max(1, (int)cfg('filters.max_per_type'));
     $saved = [];
-    foreach ((array)cfg('filters.types') as $type => $key) {
-        $ids = array_slice(array_values(array_unique(array_filter(array_map('intval', (array)($input[$type] ?? [])), static fn(int $i): bool => $i > 0))), 0, $max);
-        if ($ids) {
-            $in = implode(',', array_fill(0, count($ids), '?'));
-            $ids = array_map('intval', q('SELECT id FROM ' . tbl((string)$key) . ' WHERE id IN (' . $in . ')', $ids)->fetchAll(PDO::FETCH_COLUMN));
+
+    foreach ((array)cfg('filters.sections') as $section => $fields) {
+        foreach ($fields as $field) {
+            $raw = $input['filters'][$section][$field] ?? [];
+            if (!is_array($raw)) $raw = [];
+            $ids = array_slice(array_values(array_unique(array_filter(
+                array_map('intval', $raw),
+                static fn(int $id): bool => $id > 0
+            ))), 0, $max);
+
+            if ($ids) {
+                $available = filters_options((string)$section, (string)$field);
+                $allowedIds = array_fill_keys(array_map(
+                    static fn(array $row): int => (int)$row['id'],
+                    $available
+                ), true);
+                $ids = array_values(array_filter($ids, static fn(int $id): bool => isset($allowedIds[$id])));
+            }
+            $saved[$section][$field] = $ids;
         }
-        $saved[$type] = $ids;
     }
+
     $p['filters'] = $saved;
     $p['filters_enabled'] = !empty($input['enabled']);
     user_profile_put($uid, $p);
 }
 
+/** Zapnutí/vypnutí uložených filtrů bez změny jejich hodnot. */
 function filters_toggle(int $uid): bool
 {
     $p = user_profile_get($uid);
