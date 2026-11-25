@@ -190,6 +190,7 @@ function route_quick_filters(): never
         foreach ($fields as $field) {
             $options[$kind][$field] = filters_options((string)$kind, (string)$field);
         }
+        $options[$kind]['countries'] = filters_quick_country_options((string)$kind);
     }
 
     $backParams = ['s' => $section];
