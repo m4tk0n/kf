@@ -41,7 +41,8 @@ abbr{text-decoration:none}
   font-size:1.45rem;font-weight:900;letter-spacing:.055em;
   color:var(--text);
 }
-.brand::first-letter{color:var(--accent)}
+.brand-letter{color:var(--muted)}
+.brand-amp{color:#cdb96f}
 .btn{
   min-height:32px;display:inline-flex;align-items:center;justify-content:center;
   padding:0 9px;border:1px solid rgba(255,121,93,.4);border-radius:8px;
