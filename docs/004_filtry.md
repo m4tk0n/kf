@@ -119,6 +119,8 @@ Pravidla jsou stejná v rychlých filtrech i v trvalém nastavení v uživatelsk
 
 Nabídka států pro souhrnné checkboxy se sestavuje z vazeb měst, které se vyskytují ve zveřejněných záznamech příslušné sekce. Samotný stát nemá vlastní filtrační dotaz ani prioritu nad výběrem měst.
 
+Starší uložené profily, které obsahují samostatná ID států, se při načtení automaticky převedou na seznam všech dostupných měst těchto států. Původní položka států se z profilu odstraní.
+
 Konfigurace filters.sections proto obsahuje pouze skutečné filtrační hodnoty:
 - Akce: města.
 - Kapely: města a žánry.
