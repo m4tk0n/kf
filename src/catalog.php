@@ -28,12 +28,6 @@ function kf_url(array $req, array $over = []): string
     return $p ? url('') . '?' . http_build_query($p) : url('');
 }
 
-function kf_asset(string $rel): string
-{
-    $path = (string)cfg('paths.assets') . '/' . $rel;
-    return url($path . '?v=' . (int)@filemtime(abs_path($path)));
-}
-
 function kf_ascii(string $s): string
 {
     return strtr(mb_strtolower($s), [

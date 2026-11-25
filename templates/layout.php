@@ -18,25 +18,25 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title><?= e(isset($title) && $title !== '' ? $title . ' – ' . (string)cfg('app.name') : (string)cfg('app.name')) ?></title>
-<link rel="stylesheet" href="<?= e(kf_asset('css/app.css')) ?>">
+<link rel="stylesheet" href="<?= e(asset('css/app.css')) ?>">
 <?php if ($debugEnabled): kf_debug_assets(); endif; ?>
-<script src="<?= e(kf_asset('js/filters.js')) ?>" defer></script>
-<script src="<?= e(kf_asset('js/app.js')) ?>" defer></script>
+<script src="<?= e(asset('js/filters.js')) ?>" defer></script>
+<script src="<?= e(asset('js/app.js')) ?>" defer></script>
 <?php if ($isList): ?>
-<script src="<?= e(kf_asset('js/list.js')) ?>" defer></script>
-<script src="<?= e(kf_asset('js/calendar.js')) ?>" defer></script>
+<script src="<?= e(asset('js/list.js')) ?>" defer></script>
+<script src="<?= e(asset('js/calendar.js')) ?>" defer></script>
 <?php endif; ?>
 <?php if ($user !== null && ($isList || !empty($hasFavorites))): ?>
-<script src="<?= e(kf_asset('js/favorites.js')) ?>" defer></script>
+<script src="<?= e(asset('js/favorites.js')) ?>" defer></script>
 <?php endif; ?>
 <?php if ($user !== null): ?>
-<script src="<?= e(kf_asset('js/menu.js')) ?>" defer></script>
+<script src="<?= e(asset('js/menu.js')) ?>" defer></script>
 <?php endif; ?>
 <?php if (!empty($hasQuickFilters)): ?>
-<script src="<?= e(kf_asset('js/quick-filters.js')) ?>" defer></script>
+<script src="<?= e(asset('js/quick-filters.js')) ?>" defer></script>
 <?php endif; ?>
 <?php if (!empty($hasLightbox)): ?>
-<script src="<?= e(kf_asset('js/lightbox.js')) ?>" defer></script>
+<script src="<?= e(asset('js/lightbox.js')) ?>" defer></script>
 <?php endif; ?>
 </head>
 <body data-home-url="<?= e(url('')) ?>" data-back-label="<?= e(t('common.back')) ?>" data-filter-identity="<?= e($filterIdentity) ?>"<?= $clearFilterSession ? ' data-clear-filter-session="1"' : '' ?><?= $flash && !$sessionReplaced ? ' data-flash-text="' . e($flash) . '"' : '' ?>>

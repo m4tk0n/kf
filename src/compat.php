@@ -20,20 +20,6 @@ if (!function_exists('base_url')) {
     }
 }
 
-if (!function_exists('url')) {
-    function url(string $path = ''): string
-    {
-        return base_url() . ltrim($path, '/');
-    }
-}
-
-if (!function_exists('e')) {
-    function e(?string $s): string
-    {
-        return htmlspecialchars((string)$s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-    }
-}
-
 if (!function_exists('random_hex')) {
     function random_hex(int $bytes): string
     {
