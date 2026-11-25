@@ -11,11 +11,11 @@ $sections = ['events', 'bands', 'venues'];
   <div class="page-title-row">
     <div class="page-title-main">
       <h1><?= e(t('filters.quick_title')) ?></h1>
-      <button type="button" class="info-button" aria-label="<?= e(t('filters.quick_help.open')) ?>" aria-haspopup="dialog" aria-controls="quick-filters-help-modal" data-filters-help-open>i</button>
+      <button type="button" class="info-button" aria-label="<?= e(t('filters.quick_help.open')) ?>" aria-haspopup="dialog" aria-controls="filters-help-modal" data-filters-help-open>i</button>
     </div>
     <a class="btn page-back" href="<?= e($back_url) ?>"><?= e(t('common.back')) ?></a>
   </div>
-  <div class="modal-backdrop" id="quick-filters-help-modal" role="presentation" hidden>
+  <div class="modal-backdrop" id="filters-help-modal" role="presentation" hidden>
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="quick-filters-help-title" aria-describedby="quick-filters-help-message">
       <button type="button" class="modal-close" aria-label="<?= e(t('common.close')) ?>" data-filters-help-close>&times;</button>
       <h2 id="quick-filters-help-title"><?= e(t('filters.quick_help.title')) ?></h2>
