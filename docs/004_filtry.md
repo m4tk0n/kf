@@ -96,6 +96,6 @@ Vzhled a ovládání rychlých filtrů přímo ve výpisu zatím nejsou implemen
 - Stejná pravidla platí pro všechny tři sekce. Každá z nich podporuje výběr zemí i konkrétních měst; kapely navíc podporují žánry.
 - **Výběr země má přednost před výběrem měst.** Pokud je vybrána alespoň jedna země, zobrazí se všechny záznamy dané sekce z vybrané země nebo zemí. Současně zaškrtnutá města výsledek nijak neomezují.
 - Pokud není vybrána žádná země, ale je vybráno jedno nebo více měst, zobrazí se pouze záznamy z těchto měst.
-- Pokud není vybrána žádná země ani město a není aktivní volba **Vše**, nezobrazí se žádné záznamy. Volba **Vše** samostatně zobrazí všechny záznamy.
+- Pokud není vybrána žádná země ani město a není aktivní volba **Vše**, nezobrazí se žádné záznamy v dané sekci. Prázdný výběr se posuzuje samostatně pro Akce, Kapely a Kluby a místa; výběr v jedné sekci nikdy nepovolí všechny záznamy v jiné sekci. Volba **Vše** zobrazí všechny záznamy ve všech sekcích.
 - Při prvním individuálním zásahu do voleb v režimu **Vše** se ostatní předvybrané možnosti odškrtnou. Tím vznikne čistý vlastní výběr a nedojde k tomu, že předvybraná země přebije záměrně vybrané město.
 - Výpis, počty, pager a kalendář akcí používají stejné podmínky filtrování dané sekce.
