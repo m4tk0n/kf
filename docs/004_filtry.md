@@ -1,6 +1,6 @@
 # Filtry ve výpisech
 
-**Stav: dohodnuto, zatím neimplementováno.**
+**Stav: implementováno v kódu, čeká na praktické ověření.**
 
 Tento dokument popisuje rozdíl mezi trvalým nastavením filtrů v uživatelském menu a dočasnými změnami filtrů přímo ve výpisech.
 
@@ -61,3 +61,25 @@ Dočasné nastavení přihlášeného uživatele musí být bezpečně oddělen�
 ## 7. Rozsah této specifikace
 
 Tento dokument určuje ukládání a životnost nastavení filtrů. Neurčuje vzhled ani rozložení ovládacích prvků `user_menu_filter` nebo rychlých filtrů ve výpisu. Jejich vzhled a ovládání se řeší samostatně.
+
+## 8. Technické provedení dočasných filtrů
+
+- Klíč v `sessionStorage` je oddělený podle identity: host a konkrétní ID přihlášeného účtu mají vlastní prostor.
+- Při změně identity (přihlášení, odhlášení nebo přepnutí účtu) se staré dočasné filtry odstraní.
+- JavaScript posílá stav dočasných filtrů serveru pouze jako parametr `kf_filters` u částečných požadavků na výpis a kalendář. Tento parametr je transportní kopie; server ho validuje proti aktuálně dostupným hodnotám a nikam ho trvale neukládá.
+- Po reloadu se uložený stav znovu načte a výpis se aktualizuje částečným požadavkem. Adresa stránky zůstává bez serializovaných filtrů.
+- Společná serverová funkce `filters_effective()` vybírá dočasný stav, pokud byl předán, jinak trvalý JSON profil přihlášeného uživatele nebo výchozí stav hosta.
+- `window.kfSetSessionFilters(state)` je programové rozhraní pro budoucí ovládací prvky rychlých filtrů. Přijímá objekt s `show_all`, `none` a `sets`; server přesto znovu ověřuje všechny ID.
+- Uložení filtrů v menu přidá pokyn ke smazání dočasného stavu aktuální identity. JSON profil zůstává jediným trvalým nastavením.
+- Dočasné filtry se uplatňují ve společném SQL filtru, a proto ovlivňují seznam, počty a pager; požadavky kalendáře předávají stejný stav.
+
+Dotčené soubory:
+- `src/users.php` – výběr a validace efektivních filtrů,
+- `src/catalog.php` – společné použití filtrů pro katalogy, pager a kalendář,
+- `assets/js/list.js` – načtení, uložení a předávání dočasného stavu,
+- `assets/js/calendar.js` – předání stavu kalendáři,
+- `assets/js/app.js` – oddělení identity a vymazání stavu po uložení menu,
+- `templates/layout.php` – předání identity stránky klientské části,
+- `src/routes.php` – vymazání dočasného stavu po uložení trvalých filtrů.
+
+Omezení: samotné ovládací prvky pro rychlou změnu filtrů ve výpisu zatím nejsou součástí této implementace; jejich vzhled a ovládání budou navazující práce. Prohlížeč může při obnovení zavřené karty obnovit i její `sessionStorage`; běžný reload ale data nemaže.
