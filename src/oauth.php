@@ -141,31 +141,22 @@ function oauth_pending_payload(): ?array
 /** HTTP požadavek na poskytovatele (pevné HTTPS adresy z configu). @return array{0:int,1:array} */
 function oauth_http(string $method, string $url, array $headers = [], ?array $form = null): array
 {
-    $ch = curl_init($url);
-    $opts = [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_TIMEOUT => (int)cfg('http.timeout_sec'),
-        CURLOPT_CONNECTTIMEOUT => (int)cfg('http.timeout_sec'),
-        CURLOPT_FOLLOWLOCATION => false,
-        CURLOPT_PROTOCOLS => CURLPROTO_HTTPS,
-        CURLOPT_USERAGENT => (string)cfg('http.user_agent'),
-        CURLOPT_HTTPHEADER => array_merge(['Accept: application/json'], $headers),
-    ];
-    if ($method === 'POST') {
-        $opts[CURLOPT_POST] = true;
-        $opts[CURLOPT_POSTFIELDS] = http_build_query((array)$form);
-    }
-    curl_setopt_array($ch, $opts);
-    $body = curl_exec($ch);
-    $status = (int)curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
-    if (!is_string($body)) {
+    try {
+        $response = http_request($url, [
+            'method' => $method,
+            'headers' => array_merge(['Accept: application/json'], $headers),
+            'body' => $form,
+            'max_bytes' => 65536,
+        ]);
+        $data = json_decode($response['body'], true);
+        return [$response['status'], is_array($data) ? $data : []];
+    } catch (Throwable $e) {
+        security_log('oauth_http_failed', ['error' => substr($e->getMessage(), 0, 120)]);
         return [0, []];
     }
-    $data = json_decode($body, true);
-    return [$status, is_array($data) ? $data : []];
 }
 
-/** Zahájení přihlášení: podepsaný state + cookie s nonce, PKCE verifierem a cílem návratu. */
+/** Zahájení přihlášení/** Zahájení přihlášení: podepsaný state + cookie s nonce, PKCE verifierem a cílem návratu. */
 function oauth_start(string $provider, string $next): never
 {
     $c = oauth_provider_cfg($provider);
