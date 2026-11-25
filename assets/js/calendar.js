@@ -136,6 +136,7 @@
         var month = current.getFullYear() + '-' + String(current.getMonth() + 1).padStart(2, '0');
         renderLoading(monthFmt.format(current));
         var url = urlTemplate.replace('__M__', encodeURIComponent(month));
+        if (window.kfFilterRequestUrl) url = window.kfFilterRequestUrl(url);
         fetch(url, { credentials: 'same-origin', headers: { 'Accept': 'application/json' } })
           .then(function (response) {
             if (!response.ok) throw new Error('HTTP ' + response.status);
