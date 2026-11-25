@@ -128,3 +128,38 @@ Konfigurace filters.sections proto obsahuje pouze skutečné filtrační hodnoty
 
 Checkbox **Vybrat vše** nadále hromadně ovládá skutečné filtrační možnosti ve všech sekcích; souhrnné checkboxy států pouze odrážejí a hromadně mění výběr měst v příslušné skupině.
 
+
+## 10. Závazná pravidla rychlých filtrů – Státy, města a žánry
+
+Tato pravidla platí výhradně pro veřejnou stránku rychlých filtrů `/quick-filters`. Neprovádět podle nich změny trvalých filtrů v JSON profilu ani stránky uživatelského menu `/filters`, pokud to uživatel výslovně nezadá.
+
+### Rozložení
+V každé ze tří záložek (Akce, Kapely, Kluby a místa) jsou samostatné skupiny v tomto pořadí:
+
+1. **Státy** – samostatné checkboxy jednotlivých států.
+2. **Města** – města seskupená podle státu. Název státu je pouze nadpis skupiny, bez checkboxu. Pod ním jsou checkboxy jednotlivých měst.
+3. **Žánry** – samostatné checkboxy žánrů, pokud je daná sekce používá.
+
+Zachovat dosavadní vzhled, CSS třídy, rozložení stránky, záložky a ovládací prvky. Měnit pouze nezbytnou logiku a markup potřebné pro uvedené chování. Nevytvářet nové vizuální rozložení ani neupravovat jiné části stránky.
+
+### Chování checkboxů států
+- Zaškrtnutí státu musí automaticky zaškrtnout všechna města, která pod něj ve skupině Města patří.
+- Odškrtnutí státu musí automaticky odškrtnout všechna jeho města.
+- Akce se týká pouze měst příslušného státu; města ostatních států zůstávají beze změny.
+- Checkboxy měst zůstávají samostatně ovladatelné.
+- Checkbox státu je skutečná samostatná filtrovací hodnota, nikoliv pouze vizuální souhrn měst. Jeho ID se ukládá jako `countries` a používá se ve filtru nezávisle na ID měst.
+- Při změně státu se odpovídajícím způsobem změní i zaškrtnutí jeho měst ještě před uložením formuláře.
+
+### Ukládání a filtrování
+- Státy, města a žánry se ukládají odděleně v dočasném stavu rychlých filtrů v `sessionStorage`.
+- ID státu patří pouze do skupiny `countries`, ID měst pouze do `cities` a ID žánrů pouze do `genres`. Nikdy je nezaměňovat.
+- Při výběru státu se současně vyberou všechna jeho města; při zrušení státu se současně zruší všechna jeho města.
+- Výběr se ukládá společně ze všech tří záložek. Reload a běžná navigace musí zachovat uložený dočasný výběr podle pravidel tohoto dokumentu.
+- Prázdný výběr znamená žádné výsledky v příslušné sekci; nesmí se automaticky změnit na „Vybrat vše“.
+
+### Omezení zásahu
+- Aktuální práce se týká pouze rychlých filtrů dostupných přihlášeným i nepřihlášeným návštěvníkům.
+- Neměnit JSON profily, trvalé filtry ani jejich ukládání.
+- Neměnit pager, kalendář, vyhledávání, navigaci, vzhled, jiné formuláře ani SQL části nesouvisející s rychlými filtry.
+- Před každou úpravou zkontrolovat tento dokument a existující implementaci. Požadavek uživatele na konkrétní změnu neopravňuje k vedlejším úpravám.
+- Pokud je nutný zásah do společného souboru používaného i jinou stránkou, změnu omezit podmínkou pouze pro `data-quick-filter-form`; stávající chování ostatních formulářů musí zůstat zachováno.
