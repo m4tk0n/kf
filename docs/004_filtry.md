@@ -15,12 +15,16 @@ Dočasné nastavení má při zobrazování výpisů přednost před trvalým na
 
 ## 2. Přihlášený uživatel
 
-1. Při začátku nové relace se načte trvalé nastavení z JSON profilu.
-2. Pokud uživatel změní filtry přímo ve výpisu, změna se uloží do `sessionStorage`.
-3. Od této chvíle se ve všech výpisech dané relace používá dočasné nastavení místo trvalého nastavení.
-4. Obnovení stránky ani běžná navigace dočasné nastavení nesmí smazat.
-5. Dočasné změny se nikdy automaticky nezapisují do JSON profilu.
-6. Pokud uživatel uloží nové nastavení v menu `user_menu_filter`, aktualizuje se JSON profil a dočasné přepsání v `sessionStorage` se odstraní. V aktuální relaci se následně používá právě uložené nastavení z menu.
+**Závazný postup pro přihlášeného uživatele:**
+
+1. Při načtení výpisu bez dočasných změn se použije trvalé nastavení z JSON profilu.
+2. Rychlé změny filtrů přímo ve výpisu se ukládají pouze do `sessionStorage`. Od té chvíle přepisují JSON nastavení pouze pro zobrazování výpisů v aktuální relaci.
+3. Při otevření `user_menu_filter` se formulář vždy načte výhradně z trvalého JSON profilu. Nesmí přebírat hodnoty z `sessionStorage`, z parametru `kf_filters` ani z jiného dočasného stavu rychlých filtrů.
+4. Uživatel může v `user_menu_filter` změnit hodnoty a výslovně je uložit. Teprve úspěšné uložení aktualizuje JSON profil.
+5. Až po úspěšném uložení se smaže dočasné nastavení rychlých filtrů aktuální identity ze `sessionStorage`.
+6. Při dalším zobrazení výpisu se použije nově uložené nastavení z JSON profilu.
+
+**Důležité:** Otevření `user_menu_filter`, jeho pouhé prohlížení, zrušení úprav ani neúspěšné uložení nesmí dočasné rychlé filtry smazat. Rychlé filtry nikdy samy o sobě nepřepisují JSON profil.
 
 ## 3. Nepřihlášený návštěvník
 
@@ -70,7 +74,9 @@ Tento dokument určuje ukládání a životnost nastavení filtrů. Neurčuje vz
 - Po reloadu se uložený stav znovu načte a výpis se aktualizuje částečným požadavkem. Adresa stránky zůstává bez serializovaných filtrů.
 - Společná serverová funkce `filters_effective()` vybírá dočasný stav, pokud byl předán, jinak trvalý JSON profil přihlášeného uživatele nebo výchozí stav hosta.
 - `window.kfSetSessionFilters(state)` je programové rozhraní pro budoucí ovládací prvky rychlých filtrů. Přijímá objekt s `show_all`, `none` a `sets`; server přesto znovu ověřuje všechny ID.
-- Uložení filtrů v menu přidá pokyn ke smazání dočasného stavu aktuální identity. JSON profil zůstává jediným trvalým nastavením.
+- Formulář `user_menu_filter` načítá výhradně trvalý JSON profil; dočasný stav ze `sessionStorage` se pro jeho předvyplnění nikdy nepoužije.
+- Dočasný stav aktuální identity se smaže až po potvrzeném úspěšném uložení změn v `user_menu_filter`. Při otevření, opuštění bez uložení nebo chybě ukládání zůstává zachován.
+- JSON profil zůstává jediným trvalým nastavením.
 - Dočasné filtry se uplatňují ve společném SQL filtru, a proto ovlivňují seznam, počty a pager; požadavky kalendáře předávají stejný stav.
 
 ## 9. Oddělení implementace
