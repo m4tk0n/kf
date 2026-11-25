@@ -155,6 +155,9 @@ function kf_list_filter(string $qa, string $kind): array
     if ($user !== null) {
         $uFilters = filters_get((int)$user['id']);
         if (!$uFilters['show_all']) {
+            if (!empty($uFilters['none'])) {
+                $sql .= ' AND 1=0';
+            }
             $sets = $uFilters['sets'][$kind] ?? [];
 
             // Stát se vztahuje k městu záznamu; subquery nevyžaduje další JOIN v pageru ani kalendáři.
