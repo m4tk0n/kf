@@ -169,14 +169,6 @@ function route_filters_post(): never
     redirect('filters?m=filters_saved');
 }
 
-/** Zapnutí/vypnutí uložených filtrů jedním kliknutím (tlačítko ve výpisech). */
-function route_filters_toggle(): never
-{
-    $u = guard('edit_profile');
-    filters_toggle((int)$u['id']);
-    redirect(post_str('next', 300));
-}
-
 function admin_error_flash(string $code): string
 {
     return $code === '' ? 'saved' : ['last_admin' => 'last_admin', 'denied' => 'denied', 'invalid' => 'invalid', 'not_found' => 'invalid'][$code] ?? 'denied';
