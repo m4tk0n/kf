@@ -57,25 +57,27 @@
     }
     if (all) all.addEventListener('change', function () {
       options.forEach(function (x) { x.checked = all.checked; });
-      syncCountries();
+      if (!form.hasAttribute('data-quick-filter-form')) syncCountries();
       all.indeterminate = false;
     });
-    form.querySelectorAll('[data-filter-country-option]').forEach(function (country) {
-      country.addEventListener('change', function () {
-        cityInputs(country.value).forEach(function (city) { city.checked = country.checked; });
-        syncAll();
+    if (!form.hasAttribute('data-quick-filter-form')) {
+      form.querySelectorAll('[data-filter-country-option]').forEach(function (country) {
+        country.addEventListener('change', function () {
+          cityInputs(country.value).forEach(function (city) { city.checked = country.checked; });
+          syncAll();
+        });
       });
-    });
+    }
     options.forEach(function (x) {
       x.addEventListener('change', function () {
-        if (x.hasAttribute('data-country-id')) {
+        if (!form.hasAttribute('data-quick-filter-form') && x.hasAttribute('data-country-id')) {
           var country = form.querySelector('[data-filter-country-option][value="' + x.getAttribute('data-country-id') + '"]');
           if (country) syncCountry(country);
         }
         syncAll();
       });
     });
-    syncCountries();
+    if (!form.hasAttribute('data-quick-filter-form')) syncCountries();
     syncAll();
     var tabs = Array.prototype.slice.call(form.querySelectorAll('[data-filter-tab]'));
     var panels = Array.prototype.slice.call(form.querySelectorAll('[data-filter-panel]'));
