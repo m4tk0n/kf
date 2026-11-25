@@ -236,10 +236,10 @@ abbr{text-decoration:none}
 .back a:hover{color:var(--text)}
 .detail-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
 .detail-head h1{margin:0;overflow-wrap:anywhere}
-.fav{flex:none;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:#64748a;font-size:1.4rem;line-height:1;cursor:pointer}
-.fav.on{color:var(--other);border-color:rgba(255,216,77,.5);background:rgba(255,216,77,.1)}
+.fav{flex:none;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:0;background:transparent;color:transparent;-webkit-text-stroke:1.5px var(--other);font-size:1.4rem;line-height:1;cursor:pointer}
+.fav.on{color:var(--other);-webkit-text-stroke:1.5px var(--other)}
 .fav[disabled]{opacity:.6;cursor:progress}
-.fav.off{cursor:not-allowed;opacity:.55}
+.fav.off{color:transparent;-webkit-text-stroke:1.5px #64748a;cursor:not-allowed;opacity:.55}
 .detail-img{display:block;margin:0 0 14px;cursor:zoom-in}
 .detail-img img{display:block;max-width:100%;max-height:420px;margin:0 auto;border-radius:12px;border:1px solid var(--line)}
 .detail-text{margin:14px 0 0;overflow-wrap:anywhere}
