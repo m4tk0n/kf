@@ -82,7 +82,25 @@ Jeden účet může mít současně pouze jednu aktivní session. Přihlášení
 
 Úplná pravidla a ověřovací scénář jsou v `docs/003_session.md`. Tento dokument je zde uveden jako přehledová položka; podrobná specifikace se neduplikuje.
 
-## 4. Pravidlo průběžné dokumentace
+## 4. Uživatelské menu – zavření kliknutím mimo
+
+**Stav: implementováno, čeká na praktické ověření.**
+
+U přihlášeného uživatele platí pro otevřené uživatelské menu tato pravidla:
+
+- Menu se zavře výběrem položky menu.
+- Menu se zavře také kliknutím kamkoliv mimo jeho oblast.
+- Kliknutí mimo menu slouží výhradně k zavření menu. Nesmí současně aktivovat odkaz, tlačítko, ovládací prvek ani jinou akci, která se nachází pod místem kliknutí.
+- Pokud chce uživatel po zavření menu aktivovat prvek na stránce, musí na něj kliknout znovu.
+- Kliknutí uvnitř menu nesmí být považováno za kliknutí mimo menu.
+
+Zavření při kliknutí mimo menu se zpracovává ve fázi zachytávání události (capture). Událost se zruší a zastaví její další šíření ještě před obsluhou cílového prvku. Tím se zabrání například nechtěnému přepnutí oblíbených, navigaci nebo odeslání formuláře jedním kliknutím, které mělo pouze zavřít menu.
+
+Dotčené soubory:
+- `templates/layout.php` – struktura uživatelského menu.
+- `assets/js/menu.js` – zavření menu a blokování akce pod místem kliknutí.
+
+## 5. Pravidlo průběžné dokumentace
 
 Každé chování, které společně projednáme a dohodneme, se zapíše do tohoto dokumentu nebo do již existující tematické specifikace, pokud pro danou oblast existuje.
 
