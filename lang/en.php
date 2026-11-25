@@ -7,6 +7,7 @@ return [
     'app.tagline' => 'Catalogue of concerts, festivals, clubs and bands.',
     'login' => 'Log in',
     'filters' => 'Filters',
+    'filters.select_all' => 'Select all',
     'empty' => 'Nothing found.',
     'nav.label' => 'Browse',
     'nav.home' => 'Home',
