@@ -132,12 +132,12 @@
       });
       searchForm.addEventListener('submit', function (ev) {
         ev.preventDefault();
-        searchFromForm(bar, minSearchChars);
+        searchFromForm(searchForm, minSearchChars);
       });
       var sectionSelect = searchForm.querySelector('select[name="s"]');
       if (sectionSelect) {
         sectionSelect.addEventListener('change', function () {
-          searchFromForm(bar, minSearchChars);
+          searchFromForm(searchForm, minSearchChars);
         });
       }
     }
