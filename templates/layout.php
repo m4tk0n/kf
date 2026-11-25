@@ -67,9 +67,7 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
       </select>
       <input type="search" name="q" value="<?= e((string)$req['q']) ?>" maxlength="100" data-min-chars="<?= max(1, (int)cfg('paging.autocomplete_min_chars')) ?>" placeholder="<?= e(kf_t('search.placeholder')) ?>" aria-label="<?= e(kf_t('search.label')) ?>" autocomplete="off">
     </form>
-    <?php if ($user !== null): ?>
-      <a class="btn bar-filter-toggle" href="<?= e(url('filters')) ?>"><?= e(kf_t('filters')) ?></a>
-    <?php endif; ?>
+    <a class="btn bar-filter-toggle" href="<?= e(url('filters')) ?>"><?= e(kf_t('filters')) ?></a>
   </div>
 </div>
 <main class="wrap main">
