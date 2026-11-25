@@ -92,7 +92,12 @@ return [
     'profile.delete.button' => 'Smazat účet',
 
     // filtry
-    'filters.intro' => 'Vyber, co chceš ve výpisech zobrazovat. Uložené filtry lze ve výpisech jedním kliknutím zapnout nebo vypnout.',
+    'filters.intro' => 'Vyber, co chceš ve výpisech zobrazovat. Nabídka obsahuje jen státy, města a žánry používané v publikovaných záznamech.',
+    'filters.section.events' => 'Akce',
+    'filters.section.bands' => 'Kapely',
+    'filters.section.venues' => 'Kluby a místa',
+    'filters.toggle_on' => 'Zapnout uložené filtry',
+    'filters.toggle_off' => 'Vypnout uložené filtry',
     'filters.enabled' => 'Filtry zapnuty',
     'filters.countries' => 'Státy',
     'filters.cities' => 'Města',
