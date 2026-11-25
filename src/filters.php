@@ -75,6 +75,9 @@ function filters_effective(string $kind = ''): array
     }
 
     $showAll = !empty($input['show_all']);
+    if ($showAll) {
+        return ['show_all' => true, 'none' => false, 'sets' => []];
+    }
     $sets = [];
     $hasSelection = false;
     foreach ((array)cfg('filters.sections') as $section => $fields) {
@@ -88,12 +91,7 @@ function filters_effective(string $kind = ''): array
                 static fn(int $id): bool => $id > 0
             )));
             $ids = array_slice($ids, 0, max(1, (int)cfg('filters.max_per_type')));
-            if ($ids) {
-                $available = filters_options((string)$section, (string)$field);
-                $allowed = array_fill_keys(array_map(static fn(array $row): int => (int)$row['id'], $available), true);
-                $ids = array_values(array_filter($ids, static fn(int $id): bool => isset($allowed[$id])));
-                sort($ids);
-            }
+            sort($ids);
             $sets[$section][$field] = $ids;
             if ($ids) $hasSelection = true;
         }
