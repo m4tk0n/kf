@@ -62,14 +62,17 @@ Návratová adresa se skládá pouze z povolených parametrů aplikace. Nesmí u
 
 ## 2. Pager a kalendář
 
-**Stav: dohodnuto; podrobná specifikace je v `docs/001_kalendar.md`.**
+**Stav: implementováno v kódu, čeká na praktické ověření po nasazení. Podrobná specifikace je v `docs/001_kalendar.md`.**
 
-Pager a kalendář používají dvě odlišná pravidla:
+Pager přechází mezi **aktivními dny**, nikoli pouze mezi dny začátků akcí a nikoli přes všechny kalendářní dny.
 
-- **Pager** přechází mezi dny, ve kterých začínají odpovídající akce.
-- **Kalendář** označuje každý den, do kterého zasahuje trvání akce, tedy u vícedenní akce všechny dny od začátku do konce včetně.
+- **Pager** zohledňuje celý interval akce `date_from–date_to`. Vícedenní festival proto vytvoří aktivní den pro každý den svého trvání včetně prvního a posledního.
+- **Výpis** pro zvolený den zachovává pokračující akce a zobrazuje také následující akce, které ještě neskončily.
+- **Kalendář** označuje každý den, do kterého zasahuje trvání akce.
 
-Tato pravidla se nesmí zaměňovat. Podrobná specifikace kalendáře, filtrování a pageru je vedena v `docs/001_kalendar.md`.
+Příklad: festival 14.–16. 2. 2028 a další akce 28. 2. 2028 vytvoří posloupnost pageru 14. 2. → 15. 2. → 16. 2. → 28. 2. Dny bez probíhající akce se přeskočí.
+
+Pager i výpis respektují stejné hledání, oblíbené a uživatelské filtry. Podrobná pravidla jsou v `docs/001_kalendar.md`.
 
 ## 3. Přihlášení na více zařízeních
 
