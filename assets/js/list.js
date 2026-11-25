@@ -54,13 +54,14 @@
       star.setAttribute('href', st.getAttribute('data-fav-href'));
     }
     var bar = document.querySelector('.bar');
-    var hid = bar ? bar.querySelector('input[name="fav"]') : null;
-    if (bar && on && !hid) {
+    var searchForm = bar ? bar.querySelector('form.bar-search') : null;
+    var hid = searchForm ? searchForm.querySelector('input[name="fav"]') : null;
+    if (searchForm && on && !hid) {
       hid = document.createElement('input');
       hid.type = 'hidden';
       hid.name = 'fav';
       hid.value = '1';
-      bar.insertBefore(hid, bar.firstChild);
+      searchForm.insertBefore(hid, searchForm.firstChild);
     }
     if (hid && !on) hid.remove();
     st.remove();
