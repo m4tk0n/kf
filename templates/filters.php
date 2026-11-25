@@ -3,7 +3,7 @@
 declare(strict_types=1);
 /** @var array $filters @var array<string,array<string,array>> $options */
 ?>
-<section class="card">
+<section class="card filters-card">
   <div class="page-title-row">
     <div class="page-title-main">
       <h1><?= e(t('menu.filters')) ?></h1>
