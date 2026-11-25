@@ -213,27 +213,19 @@ Kalendář, pager a výpis vycházejí ze stejného časového intervalu akce, a
 
 U vícedenní akce se proto její celé trvání zachovává ve výpisu a kalendáři, ale pager kvůli ní nevytváří navigační zastávku pro každý den.
 
-## 13. Přehled probíhajících akcí
+## 13. Informační panel probíhajících akcí
 
-Mezi horní pager a hlavní výpis akcí se vloží rozbalovací ovládací prvek s textem:
+Mezi horní pager a hlavní výpis akcí se vloží pouze informační panel s textem:
 
-`Probíhající akce (N)`
+`Probíhající akce dnes: N`
 
-Počet a seznam se počítají podle dnešního data v časové zóně aplikace, nikoliv podle data zvoleného v pageru.
-
-Akce je aktuální, pokud platí:
-
-`date_from <= dnes AND date_to >= dnes`
+Panel neobsahuje vysvětlující větu, není rozbalovací a nezobrazuje seznam akcí.
 
 Pravidla:
-- zahrnou se jednodenní akce konající se dnes,
-- zahrnou se vícedenní akce, jejichž interval zahrnuje dnešní den,
+- počet zahrnuje jednodenní i vícedenní akce, které probíhají dnes,
 - každý záznam se započítá pouze jednou bez ohledu na počet dnů jeho trvání,
-- seznam i počet respektují aktuální hledání, oblíbené a všechny aktivní uživatelské filtry,
-- změna data pageru nemění obsah ani počet aktuálních akcí,
-- rozbalení přehledu nemění datum pageru ani hlavní výpis,
-- při nulovém počtu se zobrazí neaktivní tlačítko `Probíhající akce (0)`,
-- při kladném počtu se seznam zobrazí po rozbalení tlačítka,
-- přehled se vykresluje pouze v sekci akcí, nikoliv v sekci kapel a klubů.
-
-Přehled je součástí stejné částečné odpovědi jako pager a hlavní výpis, takže se při živém hledání a změnách filtrů aktualizuje společně s nimi.
+- počet respektuje aktuální hledání, oblíbené a všechny aktivní uživatelské filtry,
+- počet se počítá podle dnešního data v časové zóně aplikace, nikoliv podle data zvoleného v pageru,
+- změna data pageru nemění počet,
+- panel se aktualizuje společně s pagerem a výpisem při živém hledání a změnách filtrů,
+- panel se vykresluje pouze v sekci akcí, nikoliv v sekci kapel a klubů.
