@@ -26,53 +26,37 @@ $sections = ['events', 'bands', 'venues'];
   ?>
   <section class="filter-panel" id="filter-panel-<?= e($kind) ?>" role="tabpanel"
            aria-labelledby="filter-tab-<?= e($kind) ?>" data-filter-panel="<?= e($kind) ?>"<?= $kind === $active_filter_section ? '' : ' hidden' ?>>
-    <?php if ($quick_filters): ?>
-      <?php if (!empty($sectionOptions['countries'])): ?>
-        <div class="filter-group">
-          <h2><?= e(t('filters.countries')) ?></h2>
-          <div class="checks filter-checks">
+    <?php if (!empty($sectionOptions['countries']) || (!$quick_filters && !empty($cityGroups))): ?>
+      <div class="filter-group">
+        <h2><?= e(t('filters.countries')) ?></h2>
+        <div class="checks filter-checks">
+          <?php if ($quick_filters): ?>
             <?php foreach ($sectionOptions['countries'] as $row): ?>
               <label class="check filter-option"><input type="checkbox" data-quick-option="<?= e($kind) ?>:countries" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['countries'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
             <?php endforeach; ?>
+          <?php else: ?>
+            <?php foreach ($cityGroups as $group): ?>
+              <label class="check filter-option"><input type="checkbox" data-filter-country-option data-country-id="<?= (int)$group['id'] ?>" value="<?= (int)$group['id'] ?>"<?= ($showAll || count(array_intersect(array_map(static fn(array $row): int => (int)$row['id'], $group['rows']), array_map('intval', $sectionSets['cities'] ?? []))) === count($group['rows'])) ? ' checked' : '' ?>><span><?= e($group['name']) ?></span></label>
+            <?php endforeach; ?>
+          <?php endif; ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <?php if (!empty($sectionOptions['cities'])): ?>
+      <div class="filter-group">
+        <h2><?= e(t('filters.cities')) ?></h2>
+        <?php foreach ($cityGroups as $group): ?>
+          <div class="filter-country-group">
+            <h3><?= e($group['name']) ?></h3>
+            <div class="checks filter-checks">
+              <?php foreach ($group['rows'] as $row): ?>
+                <label class="check filter-option"><input type="checkbox" <?php if ($quick_filters): ?>data-quick-option="<?= e($kind) ?>:cities"<?php else: ?>name="filters[<?= e($kind) ?>][cities][]"<?php endif; ?> data-country-id="<?= (int)$group['id'] ?>" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
+              <?php endforeach; ?>
+            </div>
           </div>
-        </div>
-      <?php endif; ?>
-      <?php if (!empty($sectionOptions['cities'])): ?>
-        <div class="filter-group">
-          <h2><?= e(t('filters.cities')) ?></h2>
-          <?php foreach ($cityGroups as $group): ?>
-            <div class="filter-country-group">
-              <h3><?= e($group['name']) ?></h3>
-              <div class="checks filter-checks">
-                <?php foreach ($group['rows'] as $row): ?>
-                  <label class="check filter-option"><input type="checkbox" data-quick-option="<?= e($kind) ?>:cities" data-country-id="<?= (int)$group['id'] ?>" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
-                <?php endforeach; ?>
-              </div>
-            </div>
-          <?php endforeach; ?>
-        </div>
-      <?php endif; ?>
-    <?php else: ?>
-      <?php if (!empty($sectionOptions['cities'])): ?>
-        <div class="filter-group">
-          <h2><?= e(t('filters.cities')) ?></h2>
-          <?php foreach ($cityGroups as $group): ?>
-            <div class="filter-country-group">
-              <h3>
-                <label class="check filter-option filter-country-option">
-                  <input type="checkbox" data-filter-country-option data-country-id="<?= (int)$group['id'] ?>" value="<?= (int)$group['id'] ?>"<?= ($showAll || count(array_intersect(array_map(static fn(array $row): int => (int)$row['id'], $group['rows']), array_map('intval', $sectionSets['cities'] ?? []))) === count($group['rows'])) ? ' checked' : '' ?>>
-                  <span><?= e($group['name']) ?></span>
-                </label>
-              </h3>
-              <div class="checks filter-checks">
-                <?php foreach ($group['rows'] as $row): ?>
-                  <label class="check filter-option"><input type="checkbox" name="filters[<?= e($kind) ?>][cities][]" data-country-id="<?= (int)$group['id'] ?>" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
-                <?php endforeach; ?>
-              </div>
-            </div>
-          <?php endforeach; ?>
-        </div>
-      <?php endif; ?>
+        <?php endforeach; ?>
+      </div>
     <?php endif; ?>
 
     <?php if (!empty($sectionOptions['genres'])): ?>
