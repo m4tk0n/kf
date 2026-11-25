@@ -284,7 +284,7 @@ function filters_effective(): array
 
     return [
         'show_all' => $showAll,
-        'none' => !$showAll && (!$hasSelection || !empty($input['none'])),
+        'none' => !$showAll && !$hasSelection,
         'sets' => $sets,
     ];
 }
