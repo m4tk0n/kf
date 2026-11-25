@@ -120,20 +120,21 @@
 
   if (view) {
     var bar = document.querySelector('.bar');
-    var searchInput = bar ? bar.querySelector('input[name="q"]') : null;
+    var searchForm = bar ? bar.querySelector('form.bar-search') : null;
+    var searchInput = searchForm ? searchForm.querySelector('input[name="q"]') : null;
     var minSearchChars = searchInput ? Math.max(1, parseInt(searchInput.getAttribute('data-min-chars') || '2', 10) || 2) : 2;
 
     // Každá změna textu vyhledá znovu a nahradí pouze obsah výpisu.
     // Input zůstává mimo #view, takže neztrácí fokus ani mobilní klávesnici.
     if (searchInput && bar) {
       searchInput.addEventListener('input', function () {
-        searchFromForm(bar, minSearchChars);
+        searchFromForm(searchForm, minSearchChars);
       });
-      bar.addEventListener('submit', function (ev) {
+      searchForm.addEventListener('submit', function (ev) {
         ev.preventDefault();
         searchFromForm(bar, minSearchChars);
       });
-      var sectionSelect = bar.querySelector('select[name="s"]');
+      var sectionSelect = searchForm.querySelector('select[name="s"]');
       if (sectionSelect) {
         sectionSelect.addEventListener('change', function () {
           searchFromForm(bar, minSearchChars);
