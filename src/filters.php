@@ -32,8 +32,6 @@ function filters_get(int $uid): array
 
     $sets = [];
     foreach ((array)cfg('filters.sections') as $section => $fields) {
-        // Při výpisu ověřujeme pouze filtry právě zobrazované entity.
-        if ($kind !== '' && $section !== $kind) continue;
         foreach ($fields as $field) {
             $sets[$section][$field] = array_values(array_unique(array_filter(
                 array_map('intval', (array)($p['filters'][$section][$field] ?? [])),
@@ -80,6 +78,8 @@ function filters_effective(string $kind = ''): array
     $sets = [];
     $hasSelection = false;
     foreach ((array)cfg('filters.sections') as $section => $fields) {
+        // Ověřují se pouze hodnoty entity, jejíž výpis se právě načítá.
+        if ($kind !== '' && $section !== $kind) continue;
         foreach ($fields as $field) {
             $rawIds = $input['sets'][$section][$field] ?? [];
             if (!is_array($rawIds)) $rawIds = [];
