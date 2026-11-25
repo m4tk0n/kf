@@ -23,15 +23,6 @@
     }
   } catch (e) {}
 
-  function cityInputs(countryId) {
-    return form.querySelectorAll('[data-quick-option$=":cities"][data-country-id="' + countryId + '"]');
-  }
-  function syncCountry(country) {
-    var cities = cityInputs(country.value);
-    var checked = cities.length > 0;
-    cities.forEach(function (city) { if (!city.checked) checked = false; });
-    country.checked = checked;
-  }
   function syncAll() {
     var all = form.querySelector('[data-filter-all]');
     if (!all) return;
@@ -46,10 +37,8 @@
       var ids = Array.isArray(current[parts[1]]) ? current[parts[1]].map(String) : [];
       input.checked = state.show_all || ids.indexOf(input.value) !== -1;
     });
-    form.querySelectorAll('[data-filter-country-option]').forEach(syncCountry);
     syncAll();
   }
-
 
   function readAllSections() {
     var sets = {};
