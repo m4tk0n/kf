@@ -33,7 +33,7 @@ $debugEnabled = kf_debug_enabled($user);
 <script src="<?= e(kf_asset('js/lightbox.js')) ?>" defer></script>
 <?php endif; ?>
 </head>
-<body>
+<body<?= $flash && !$sessionReplaced ? ' data-flash-text="' . e($flash) . '"' : '' ?>>
 <div class="head">
   <header class="wrap top">
     <a class="brand" href="<?= e(url('')) ?>">K&amp;F</a>
