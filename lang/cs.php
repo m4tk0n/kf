@@ -7,6 +7,7 @@ return [
     'app.tagline' => 'Katalog koncertů, festivalů, klubů a kapel.',
     'login' => 'Přihlásit se',
     'filters' => 'Filtry',
+    'filters.select_all' => 'Vybrat vše',
     'empty' => 'Nic tu není.',
     'nav.label' => 'Co zobrazit',
     'nav.home' => 'Úvod',
