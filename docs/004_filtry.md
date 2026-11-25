@@ -73,13 +73,13 @@ Tento dokument určuje ukládání a životnost nastavení filtrů. Neurčuje vz
 - Uložení filtrů v menu přidá pokyn ke smazání dočasného stavu aktuální identity. JSON profil zůstává jediným trvalým nastavením.
 - Dočasné filtry se uplatňují ve společném SQL filtru, a proto ovlivňují seznam, počty a pager; požadavky kalendáře předávají stejný stav.
 
-Dotčené soubory:
-- `src/users.php` – výběr a validace efektivních filtrů,
-- `src/catalog.php` – společné použití filtrů pro katalogy, pager a kalendář,
-- `assets/js/list.js` – načtení, uložení a předávání dočasného stavu,
-- `assets/js/calendar.js` – předání stavu kalendáři,
-- `assets/js/app.js` – oddělení identity a vymazání stavu po uložení menu,
-- `templates/layout.php` – předání identity stránky klientské části,
-- `src/routes.php` – vymazání dočasného stavu po uložení trvalých filtrů.
+## 9. Oddělení implementace
 
-Omezení: samotné ovládací prvky pro rychlou změnu filtrů ve výpisu zatím nejsou součástí této implementace; jejich vzhled a ovládání budou navazující práce. Prohlížeč může při obnovení zavřené karty obnovit i její `sessionStorage`; běžný reload ale data nemaže.
+Filtrační logika je soustředěna do samostatných modulů:
+
+- `src/filters.php` – načtení a uložení trvalých filtrů, validace dočasného stavu, nabídka dostupných hodnot a SQL podmínky filtrů.
+- `assets/js/filters.js` – `sessionStorage`, oddělení identity, přidání filtračního stavu do požadavků, obnova po reloadu a hromadné ovládání checkboxů trvalého nastavení.
+
+Ostatní soubory obsahují pouze napojení: `bootstrap.php`, `src/catalog.php`, `src/routes.php`, `assets/js/list.js`, `assets/js/calendar.js` a `templates/layout.php`.
+
+Vzhled a ovládání rychlých filtrů přímo ve výpisu zatím nejsou implementovány. `window.kfSetSessionFilters(state)` je připravené rozhraní pro jejich budoucí napojení.
