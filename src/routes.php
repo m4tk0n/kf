@@ -169,6 +169,54 @@ function route_filters_post(): never
     redirect('filters?m=filters_saved&clear_filter_session=1');
 }
 
+/** Rychlé filtry platné pouze pro aktuální relaci a právě vybranou sekci katalogu. */
+function route_quick_filters(): never
+{
+    $section = (string)($_GET['s'] ?? 'events');
+    if (!in_array($section, ['events', 'bands', 'venues'], true)) {
+        $section = 'events';
+    }
+
+    $user = auth_resolve();
+    $filters = $user !== null
+        ? filters_get((int)$user['id'])
+        : ['show_all' => true, 'none' => false, 'sets' => []];
+
+    // Při prvním rychlém nastavení zachovat dosavadní zobrazení ostatních katalogů.
+    $baseSets = (array)$filters['sets'];
+    if (!empty($filters['show_all'])) {
+        foreach ((array)cfg('filters.sections') as $kind => $fields) {
+            $countries = filters_options((string)$kind, 'countries');
+            $cities = filters_options((string)$kind, 'cities');
+            $genres = filters_options((string)$kind, 'genres');
+            $baseSets[$kind] = [
+                'countries' => array_map(static fn(array $r): int => (int)$r['id'], $countries),
+                'cities' => $countries ? [] : array_map(static fn(array $r): int => (int)$r['id'], $cities),
+                'genres' => (!$countries && !$cities) ? array_map(static fn(array $r): int => (int)$r['id'], $genres) : [],
+            ];
+        }
+    }
+
+    $options = [];
+    foreach ((array)cfg('filters.sections.' . $section, []) as $field) {
+        $options[$field] = filters_options($section, (string)$field);
+    }
+
+    $backParams = ['s' => $section];
+    foreach (['q', 'p', 'd', 'k', 'fav'] as $key) {
+        if (isset($_GET[$key]) && is_scalar($_GET[$key]) && (string)$_GET[$key] !== '') {
+            $backParams[$key] = (string)$_GET[$key];
+        }
+    }
+
+    page(t('filters.quick_title'), 'quick_filters', [
+        'section' => $section,
+        'options' => $options,
+        'base_state' => ['show_all' => (bool)$filters['show_all'], 'sets' => $baseSets],
+        'back_url' => url('') . '?' . http_build_query($backParams),
+    ]);
+}
+
 function admin_error_flash(string $code): string
 {
     return $code === '' ? 'saved' : ['last_admin' => 'last_admin', 'denied' => 'denied', 'invalid' => 'invalid', 'not_found' => 'invalid'][$code] ?? 'denied';
