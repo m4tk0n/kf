@@ -152,40 +152,38 @@ function kf_list_filter(string $qa, string $kind): array
     }
 
     $user = auth_resolve();
-    if ($user !== null) {
-        $uFilters = filters_get((int)$user['id']);
-        if (!$uFilters['show_all']) {
-            if (!empty($uFilters['none'])) {
-                $sql .= ' AND 1=0';
-            }
-            $sets = $uFilters['sets'][$kind] ?? [];
+    $uFilters = filters_effective();
+    if (!$uFilters['show_all']) {
+        if (!empty($uFilters['none'])) {
+            $sql .= ' AND 1=0';
+        }
+        $sets = $uFilters['sets'][$kind] ?? [];
 
-            // Stát se vztahuje k městu záznamu; subquery nevyžaduje další JOIN v pageru ani kalendáři.
-            $countries = array_values(array_filter(array_map('intval', $sets['countries'] ?? []), static fn(int $id): bool => $id > 0));
-            if ($countries) {
-                $in = implode(',', array_fill(0, count($countries), '?'));
-                $sql .= ' AND a.city_id IN (SELECT fc.id FROM ' . tbl('cities') . ' fc WHERE fc.country_id IN (' . $in . '))';
-                array_push($p, ...$countries);
-            }
+        // Stát se vztahuje k městu záznamu; subquery nevyžaduje další JOIN v pageru ani kalendáři.
+        $countries = array_values(array_filter(array_map('intval', $sets['countries'] ?? []), static fn(int $id): bool => $id > 0));
+        if ($countries) {
+            $in = implode(',', array_fill(0, count($countries), '?'));
+            $sql .= ' AND a.city_id IN (SELECT fc.id FROM ' . tbl('cities') . ' fc WHERE fc.country_id IN (' . $in . '))';
+            array_push($p, ...$countries);
+        }
 
-            // Pokud je vybraný alespoň jeden stát, zahrnuje automaticky všechna jeho města.
-            // Výběr konkrétních měst se proto uplatní pouze tehdy, když není vybraný žádný stát.
-            if (!$countries) {
-                $cities = array_values(array_filter(array_map('intval', $sets['cities'] ?? []), static fn(int $id): bool => $id > 0));
-                if ($cities) {
-                    $in = implode(',', array_fill(0, count($cities), '?'));
-                    $sql .= ' AND a.city_id IN (' . $in . ')';
-                    array_push($p, ...$cities);
-                }
+        // Pokud je vybraný alespoň jeden stát, zahrnuje automaticky všechna jeho města.
+        // Výběr konkrétních měst se proto uplatní pouze tehdy, když není vybraný žádný stát.
+        if (!$countries) {
+            $cities = array_values(array_filter(array_map('intval', $sets['cities'] ?? []), static fn(int $id): bool => $id > 0));
+            if ($cities) {
+                $in = implode(',', array_fill(0, count($cities), '?'));
+                $sql .= ' AND a.city_id IN (' . $in . ')';
+                array_push($p, ...$cities);
             }
+        }
 
-            if ($kind === 'bands') {
-                $genres = array_values(array_filter(array_map('intval', $sets['genres'] ?? []), static fn(int $id): bool => $id > 0));
-                if ($genres) {
-                    $in = implode(',', array_fill(0, count($genres), '?'));
-                    $sql .= ' AND a.genre_id IN (' . $in . ')';
-                    array_push($p, ...$genres);
-                }
+        if ($kind === 'bands') {
+            $genres = array_values(array_filter(array_map('intval', $sets['genres'] ?? []), static fn(int $id): bool => $id > 0));
+            if ($genres) {
+                $in = implode(',', array_fill(0, count($genres), '?'));
+                $sql .= ' AND a.genre_id IN (' . $in . ')';
+                array_push($p, ...$genres);
             }
         }
     }
