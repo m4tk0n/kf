@@ -237,6 +237,59 @@ function filters_get(int $uid): array
 }
 
 /**
+ * Vrátí filtry platné pro aktuální požadavek.
+ * Dočasný JSON z kf_filters je pouze transportní kopie sessionStorage pro AJAX;
+ * nikdy se z něj nic nezapisuje do profilu. ID se znovu ověřují proti aktuálním možnostem.
+ *
+ * @return array{show_all:bool,none:bool,sets:array<string,array<string,int[]>>}
+ */
+function filters_effective(): array
+{
+    $user = auth_resolve();
+    $base = $user !== null
+        ? filters_get((int)$user['id'])
+        : ['show_all' => true, 'none' => false, 'sets' => []];
+
+    $raw = $_GET['kf_filters'] ?? null;
+    if (!is_string($raw) || $raw === '' || strlen($raw) > 12000) {
+        return $base;
+    }
+    $input = json_decode($raw, true);
+    if (!is_array($input) || (int)($input['v'] ?? 0) !== 1 || !is_array($input['sets'] ?? null)) {
+        return $base;
+    }
+
+    $showAll = !empty($input['show_all']);
+    $sets = [];
+    $hasSelection = false;
+    foreach ((array)cfg('filters.sections') as $section => $fields) {
+        foreach ($fields as $field) {
+            $rawIds = $input['sets'][$section][$field] ?? [];
+            if (!is_array($rawIds)) $rawIds = [];
+            $ids = array_values(array_unique(array_filter(
+                array_map(static fn($v): int => is_scalar($v) ? (int)$v : 0, $rawIds),
+                static fn(int $id): bool => $id > 0
+            )));
+            $ids = array_slice($ids, 0, max(1, (int)cfg('filters.max_per_type')));
+            if ($ids) {
+                $available = filters_options((string)$section, (string)$field);
+                $allowed = array_fill_keys(array_map(static fn(array $row): int => (int)$row['id'], $available), true);
+                $ids = array_values(array_filter($ids, static fn(int $id): bool => isset($allowed[$id])));
+                sort($ids);
+            }
+            $sets[$section][$field] = $ids;
+            if ($ids) $hasSelection = true;
+        }
+    }
+
+    return [
+        'show_all' => $showAll,
+        'none' => !$showAll && (!$hasSelection || !empty($input['none'])),
+        'sets' => $sets,
+    ];
+}
+
+/**
  * Dostupné hodnoty se odvozují výhradně z publikovaných záznamů dané sekce.
  * Země a města jsou přes vazbu city_id; žánry pouze z kapel, které je používají.
  *
