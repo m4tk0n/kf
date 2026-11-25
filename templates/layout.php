@@ -9,6 +9,8 @@ $flash = $flash ?? flash_text();
 $isList = isset($view);
 $sessionReplaced = !empty(auth_store()['replaced']);
 $debugEnabled = kf_debug_enabled($user);
+$filterIdentity = $user !== null ? 'user:' . (int)$user['id'] : 'guest';
+$clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
 ?>
 <!doctype html>
 <html lang="<?= e(current_lang()) ?>">
@@ -33,7 +35,7 @@ $debugEnabled = kf_debug_enabled($user);
 <script src="<?= e(kf_asset('js/lightbox.js')) ?>" defer></script>
 <?php endif; ?>
 </head>
-<body<?= $flash && !$sessionReplaced ? ' data-flash-text="' . e($flash) . '"' : '' ?>>
+<body data-filter-identity="<?= e($filterIdentity) ?>"<?= $clearFilterSession ? ' data-clear-filter-session="1"' : '' ?><?= $flash && !$sessionReplaced ? ' data-flash-text="' . e($flash) . '"' : '' ?>>
 <div class="head">
   <header class="wrap top">
     <a class="brand" href="<?= e(url('')) ?>">K&amp;F</a>
