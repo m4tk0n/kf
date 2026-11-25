@@ -6,8 +6,12 @@ declare(strict_types=1);
 <section class="card">
   <h1><?= e(t('menu.filters')) ?></h1>
   <p><?= e(t('filters.intro')) ?></p>
-  <form method="post" action="<?= e(url('filters')) ?>" class="stack">
+  <form method="post" action="<?= e(url('filters')) ?>" class="stack" data-filter-form>
     <?= csrf_field() ?>
+    <label class="check filter-select-all">
+      <input type="checkbox" data-filter-all<?= $filters['show_all'] ? ' checked' : '' ?>>
+      <strong><?= e(t('filters.select_all')) ?></strong>
+    </label>
 
     <?php foreach (['events', 'bands', 'venues'] as $section): ?>
       <?php $sectionSets = $filters['sets'][$section] ?? []; ?>
@@ -23,7 +27,7 @@ declare(strict_types=1);
             <?php else: ?>
               <div class="checks">
                 <?php foreach ($rows as $row): ?>
-                  <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][countries][]" value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || !$selected || in_array((int)$row['id'], $selected, true)) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
+                  <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][countries][]" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || !$selected || in_array((int)$row['id'], $selected, true)) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
                 <?php endforeach; ?>
               </div>
             <?php endif; ?>
@@ -66,7 +70,7 @@ declare(strict_types=1);
             <?php else: ?>
               <div class="checks">
                 <?php foreach ($rows as $row): ?>
-                  <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][genres][]" value="<?= (int)$row['id'] ?>"<?= in_array((int)$row['id'], $selected, true) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
+                  <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][genres][]" value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || !$selected || in_array((int)$row['id'], $selected, true)) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
                 <?php endforeach; ?>
               </div>
             <?php endif; ?>
