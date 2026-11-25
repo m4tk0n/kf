@@ -56,6 +56,15 @@ function filters_effective(): array
         ? filters_get((int)$user['id'])
         : ['show_all' => true, 'none' => false, 'sets' => []];
 
+    // Dočasný stav se smí použít jen při načítání obsahu výpisu nebo kalendáře.
+    // Běžné načtení stránky vždy vychází z JSON profilu; zejména stránka user_menu_filter
+    // nesmí být ovlivněna ručně přidaným parametrem ani transportní kopií sessionStorage.
+    $isPartialList = isset($_GET['partial']) && (string)$_GET['partial'] === '1';
+    $isCalendar = isset($_GET['cal']) && is_string($_GET['cal']);
+    if (!$isPartialList && !$isCalendar) {
+        return $base;
+    }
+
     $raw = $_GET['kf_filters'] ?? null;
     if (!is_string($raw) || $raw === '' || strlen($raw) > 12000) {
         return $base;
