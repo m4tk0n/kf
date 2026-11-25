@@ -37,7 +37,19 @@
   if (form) {
     var all = form.querySelector('[data-filter-all]');
     var options = Array.prototype.slice.call(form.querySelectorAll('[data-filter-option]'));
-    function sync() {
+    function cityInputs(countryId) {
+      return form.querySelectorAll('[data-filter-option][data-country-id="' + countryId + '"]');
+    }
+    function syncCountry(country) {
+      var cities = cityInputs(country.value);
+      var checked = cities.length > 0;
+      cities.forEach(function (city) { if (!city.checked) checked = false; });
+      country.checked = checked;
+    }
+    function syncCountries() {
+      form.querySelectorAll('[data-filter-country-option]').forEach(syncCountry);
+    }
+    function syncAll() {
       if (!all) return;
       var n = options.filter(function (x) { return x.checked; }).length;
       all.checked = options.length > 0 && n === options.length;
@@ -45,10 +57,26 @@
     }
     if (all) all.addEventListener('change', function () {
       options.forEach(function (x) { x.checked = all.checked; });
+      syncCountries();
       all.indeterminate = false;
     });
-    options.forEach(function (x) { x.addEventListener('change', sync); });
-    sync();
+    form.querySelectorAll('[data-filter-country-option]').forEach(function (country) {
+      country.addEventListener('change', function () {
+        cityInputs(country.value).forEach(function (city) { city.checked = country.checked; });
+        syncAll();
+      });
+    });
+    options.forEach(function (x) {
+      x.addEventListener('change', function () {
+        if (x.hasAttribute('data-country-id')) {
+          var country = form.querySelector('[data-filter-country-option][value="' + x.getAttribute('data-country-id') + '"]');
+          if (country) syncCountry(country);
+        }
+        syncAll();
+      });
+    });
+    syncCountries();
+    syncAll();
     var tabs = Array.prototype.slice.call(form.querySelectorAll('[data-filter-tab]'));
     var panels = Array.prototype.slice.call(form.querySelectorAll('[data-filter-panel]'));
     function activate(name, focus) {
