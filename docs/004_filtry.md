@@ -70,10 +70,10 @@ Tento dokument určuje ukládání a životnost nastavení filtrů. Neurčuje vz
 
 - Klíč v `sessionStorage` je oddělený podle identity: host a konkrétní ID přihlášeného účtu mají vlastní prostor.
 - Při změně identity (přihlášení, odhlášení nebo přepnutí účtu) se staré dočasné filtry odstraní.
-- JavaScript posílá stav dočasných filtrů serveru pouze jako parametr `kf_filters` u částečných požadavků na výpis a kalendář. Tento parametr je transportní kopie; server ho validuje proti aktuálně dostupným hodnotám a nikam ho trvale neukládá.
+- JavaScript posílá stav dočasných filtrů serveru pouze jako parametr `kf_filters` u částečných požadavků na výpis a kalendář. Tento parametr je transportní kopie; server přijímá pouze kladná číselná ID pro právě zobrazovanou entitu, používá je jako SQL parametry a nikam je trvale neukládá. Neprovádí kvůli tomu další dotazy na nabídku filtrů.
 - Po reloadu se uložený stav znovu načte a výpis se aktualizuje částečným požadavkem. Adresa stránky zůstává bez serializovaných filtrů.
 - Serverová funkce `filters_effective($kind)` vybírá dočasný stav, pokud byl předán, jinak trvalý JSON profil přihlášeného uživatele nebo výchozí stav hosta. Při načítání výpisu ověřuje dostupné hodnoty pouze pro právě zobrazovanou entitu.
-- `window.kfSetSessionFilters(state)` je programové rozhraní pro budoucí ovládací prvky rychlých filtrů. Přijímá objekt s `show_all`, `none` a `sets`; server přesto znovu ověřuje všechny ID.
+- `window.kfSetSessionFilters(state)` je programové rozhraní pro budoucí ovládací prvky rychlých filtrů. Přijímá objekt s `show_all`, `none` a `sets`; server přijímá pouze kladná číselná ID a používá je jako SQL parametry.
 - Formulář `user_menu_filter` načítá výhradně trvalý JSON profil; dočasný stav ze `sessionStorage` se pro jeho předvyplnění nikdy nepoužije.
 - Dočasný stav aktuální identity se smaže až po potvrzeném úspěšném uložení změn v `user_menu_filter`. Při otevření, opuštění bez uložení nebo chybě ukládání zůstává zachován.
 - JSON profil zůstává jediným trvalým nastavením.
