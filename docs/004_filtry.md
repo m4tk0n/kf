@@ -62,9 +62,16 @@ Dočasné nastavení přihlášeného uživatele musí být bezpečně oddělen�
 - Dočasné nastavení musí být jednotné pro všechny relevantní výpisy a jejich součásti (výsledky, stránkování a kalendář). Nesmí se stát, že seznam používá jiné filtry než pager nebo kalendář.
 - Při nedostupném `sessionStorage` musí výpis zůstat funkční; použije se trvalé nastavení nebo výchozí nastavení hosta.
 
-## 7. Rozsah této specifikace
+## 7. Rychlé filtry
 
-Tento dokument určuje ukládání a životnost nastavení filtrů. Neurčuje vzhled ani rozložení ovládacích prvků `user_menu_filter` nebo rychlých filtrů ve výpisu. Jejich vzhled a ovládání se řeší samostatně.
+- Tlačítko **Filtry** vedle vyhledávání je dostupné přihlášeným i nepřihlášeným návštěvníkům a vede na veřejnou stránku `/quick-filters`.
+- Stránka používá anglický název route `quick-filters`, ale texty UI jsou lokalizované.
+- Z parametru `s` načte pouze jednu aktuální sekci: `events`, `bands` nebo `venues`. Zobrazuje jen možnosti používané v publikovaných záznamech této sekce.
+- Uživatel mění pouze dočasný výběr této sekce. Ostatní sekce převezmou dosavadní dočasné nastavení, nebo při prvním použití aktuální trvalé nastavení uživatele / výchozí zobrazení hosta.
+- Tlačítko Uložit předá celý stav do `window.kfSetSessionFilters()` a uloží jej do `sessionStorage`. Nikdy neodesílá POST a nikdy nezapisuje do JSON profilu.
+- Po uložení se návštěvník vrátí na původní výpis včetně sekce, hledání a pozice pageru. Stávající `assets/js/filters.js` následně obnoví výpis s dočasným stavem.
+- Prázdný výběr v aktuální sekci znamená nezobrazit v této sekci žádné záznamy; neovlivní jiné sekce.
+- Trvalá stránka `filters` (uživatelské menu) zůstává oddělená a vyžaduje přihlášení.
 
 ## 8. Technické provedení dočasných filtrů
 
@@ -91,7 +98,7 @@ Filtrační logika je soustředěna do samostatných modulů:
 
 Ostatní soubory obsahují pouze napojení: `bootstrap.php`, `src/catalog.php`, `src/routes.php`, `assets/js/list.js`, `assets/js/calendar.js` a `templates/layout.php`.
 
-Vzhled a ovládání rychlých filtrů přímo ve výpisu zatím nejsou implementovány. `window.kfSetSessionFilters(state)` je připravené rozhraní pro jejich budoucí napojení.
+Rychlé filtry jsou implementovány na stránce `templates/quick_filters.php` a v modulu `assets/js/quick-filters.js`. `window.kfSetSessionFilters(state)` zůstává společným rozhraním pro uložení dočasného stavu.
 
 ## Platnost hodnot a stejné chování všech sekcí
 
