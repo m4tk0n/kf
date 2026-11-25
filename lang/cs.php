@@ -28,6 +28,8 @@ return [
 
     // společné
     'common.save' => 'Uložit',
+    'common.back' => 'Zpět',
+    'common.close' => 'Zavřít',
     'common.prev' => 'Předchozí',
     'common.next' => 'Další',
     'common.page' => 'Strana {n} z {m}',
@@ -94,6 +96,9 @@ return [
 
     // filtry
     'filters.intro' => 'Vyber, co chceš ve výpisech zobrazovat. Nabídka obsahuje jen státy, města a žánry používané v publikovaných záznamech.',
+    'filters.help.open' => 'Informace o filtrech',
+    'filters.help.title' => 'Jak nastavit filtry',
+    'filters.help.text' => 'Rozbal jednotlivé části a zaškrtni státy, města nebo žánry, které chceš ve výpisech zobrazovat. Volba Vybrat vše zobrazí všechny dostupné položky. Změny potvrď tlačítkem Uložit.',
     'filters.section.events' => 'Akce',
     'filters.section.bands' => 'Kapely',
     'filters.section.venues' => 'Kluby a místa',
