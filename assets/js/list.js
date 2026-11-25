@@ -152,7 +152,7 @@
         return;
       }
 
-      var a = ev.target.closest ? ev.target.closest('[data-favtop], #view a.pg') : null;
+      var a = ev.target.closest ? ev.target.closest('[data-favtop]') : null;
       if (!a) return;
       ev.preventDefault();
       loadView(a.getAttribute('href'), true);

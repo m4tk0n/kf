@@ -19,11 +19,13 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title><?= e(isset($title) && $title !== '' ? $title . ' – ' . (string)cfg('app.name') : (string)cfg('app.name')) ?></title>
 <link rel="stylesheet" href="<?= e(asset('css/app.css')) ?>">
+<?php if ($isList): ?><link rel="stylesheet" href="<?= e(asset('css/pager.css')) ?>"><?php endif; ?>
 <?php if ($debugEnabled): kf_debug_assets(); endif; ?>
 <script src="<?= e(asset('js/filters.js')) ?>" defer></script>
 <script src="<?= e(asset('js/app.js')) ?>" defer></script>
 <?php if ($isList): ?>
 <script src="<?= e(asset('js/list.js')) ?>" defer></script>
+<script src="<?= e(asset('js/pager.js')) ?>" defer></script>
 <script src="<?= e(asset('js/calendar.js')) ?>" defer></script>
 <?php endif; ?>
 <?php if ($user !== null && ($isList || !empty($hasFavorites))): ?>
