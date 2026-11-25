@@ -44,7 +44,7 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
 <body data-home-url="<?= e(url('')) ?>" data-back-label="<?= e(t('common.back')) ?>" data-filter-identity="<?= e($filterIdentity) ?>"<?= $clearFilterSession ? ' data-clear-filter-session="1"' : '' ?><?= $flash && !$sessionReplaced ? ' data-flash-text="' . e($flash) . '"' : '' ?>>
 <div class="head">
   <header class="wrap top">
-    <a class="brand" href="<?= e(url('')) ?>"><span class="brand-letter">K</span><span class="brand-amp">&amp;</span><span class="brand-letter">F</span></a>
+    <a class="brand" href="<?= e(url('')) ?>"><span class="brand-letter">F</span><span class="brand-amp">&amp;</span><span class="brand-letter">K</span></a>
     <?php if ($user === null): ?>
       <a class="btn" href="<?= e(url('login')) ?>"><?= e(t('login')) ?></a>
     <?php else: ?>
