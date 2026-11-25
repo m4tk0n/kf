@@ -72,7 +72,7 @@ Tento dokument určuje ukládání a životnost nastavení filtrů. Neurčuje vz
 - Při změně identity (přihlášení, odhlášení nebo přepnutí účtu) se staré dočasné filtry odstraní.
 - JavaScript posílá stav dočasných filtrů serveru pouze jako parametr `kf_filters` u částečných požadavků na výpis a kalendář. Tento parametr je transportní kopie; server ho validuje proti aktuálně dostupným hodnotám a nikam ho trvale neukládá.
 - Po reloadu se uložený stav znovu načte a výpis se aktualizuje částečným požadavkem. Adresa stránky zůstává bez serializovaných filtrů.
-- Společná serverová funkce `filters_effective()` vybírá dočasný stav, pokud byl předán, jinak trvalý JSON profil přihlášeného uživatele nebo výchozí stav hosta.
+- Serverová funkce `filters_effective($kind)` vybírá dočasný stav, pokud byl předán, jinak trvalý JSON profil přihlášeného uživatele nebo výchozí stav hosta. Při načítání výpisu ověřuje dostupné hodnoty pouze pro právě zobrazovanou entitu.
 - `window.kfSetSessionFilters(state)` je programové rozhraní pro budoucí ovládací prvky rychlých filtrů. Přijímá objekt s `show_all`, `none` a `sets`; server přesto znovu ověřuje všechny ID.
 - Formulář `user_menu_filter` načítá výhradně trvalý JSON profil; dočasný stav ze `sessionStorage` se pro jeho předvyplnění nikdy nepoužije.
 - Dočasný stav aktuální identity se smaže až po potvrzeném úspěšném uložení změn v `user_menu_filter`. Při otevření, opuštění bez uložení nebo chybě ukládání zůstává zachován.
@@ -93,9 +93,9 @@ Vzhled a ovládání rychlých filtrů přímo ve výpisu zatím nejsou implemen
 ## Platnost hodnot a stejné chování všech sekcí
 
 - Země a města se nabízejí pouze tehdy, pokud jsou použity ve zveřejněných záznamech příslušné sekce: Akce (`events`), Kapely (`bands`) nebo Kluby a místa (`venues`). Žánry se nabízejí pouze tehdy, pokud je používá zveřejněná kapela.
-- Stejná pravidla platí pro všechny tři sekce. Každá z nich podporuje výběr zemí i konkrétních měst; kapely navíc podporují žánry.
+- Každá sekce má vlastní dostupné hodnoty a vlastní výběr. Načtení nebo změna filtrů jedné sekce nesmí spouštět filtrování ani měnit nastavení jiné sekce.
 - **Výběr země má přednost před výběrem měst.** Pokud je vybrána alespoň jedna země, zobrazí se všechny záznamy dané sekce z vybrané země nebo zemí. Současně zaškrtnutá města výsledek nijak neomezují.
 - Pokud není vybrána žádná země, ale je vybráno jedno nebo více měst, zobrazí se pouze záznamy z těchto měst.
 - Pokud není vybrána žádná země ani město a není aktivní volba **Vše**, nezobrazí se žádné záznamy v dané sekci. Prázdný výběr se posuzuje samostatně pro Akce, Kapely a Kluby a místa; výběr v jedné sekci nikdy nepovolí všechny záznamy v jiné sekci. Volba **Vše** zobrazí všechny záznamy ve všech sekcích.
-- Při první individuální změně v režimu **Vše** se ostatní předvybrané možnosti odškrtnou a právě změněná položka zůstane jako jediná vybraná. Tím vznikne čistý vlastní výběr a nedojde k tomu, že předvybraná země přebije záměrně vybrané město.
+- Individuální checkboxy se při změně navzájem automaticky nevynulují. Checkbox **Vše** pouze odráží stav všech jednotlivých voleb; uživatel si vlastní výběr určuje přímo.
 - Výpis, počty, pager a kalendář akcí používají stejné podmínky filtrování dané sekce.
