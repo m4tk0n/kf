@@ -198,8 +198,10 @@ function route_quick_filters(): never
     }
 
     $options = [];
-    foreach ((array)cfg('filters.sections.' . $section, []) as $field) {
-        $options[$field] = filters_options($section, (string)$field);
+    foreach ((array)cfg('filters.sections') as $kind => $fields) {
+        foreach ($fields as $field) {
+            $options[$kind][$field] = filters_options((string)$kind, (string)$field);
+        }
     }
 
     $backParams = ['s' => $section];
