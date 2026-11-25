@@ -57,6 +57,19 @@ function filters_effective(string $kind = ''): array
             $sets[$section][$field] = $ids;
             if ($ids) $hasSelection = true;
         }
+        // Státy jsou samostatná rychlá filtrovací hodnota; nabídka vychází z publikovaných měst.
+        $availableCountries = array_values(array_unique(array_map(
+            static fn(array $row): int => (int)$row['country_id'],
+            filters_options((string)$section, 'cities')
+        )));
+        $rawCountries = $input['sets'][$section]['countries'] ?? [];
+        if (!is_array($rawCountries)) $rawCountries = [];
+        $countries = array_values(array_unique(array_filter(
+            array_map(static fn($v): int => is_scalar($v) ? (int)$v : 0, $rawCountries),
+            static fn(int $id): bool => $id > 0 && in_array($id, $availableCountries, true)
+        )));
+        $sets[$section]['countries'] = array_slice($countries, 0, max(1, (int)cfg('filters.max_per_type')));
+        if ($sets[$section]['countries']) $hasSelection = true;
     }
 
     return [
