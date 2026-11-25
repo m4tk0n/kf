@@ -159,7 +159,12 @@ function route_filters(): never
             $options[$section][$field] = filters_options((string)$section, (string)$field);
         }
     }
-    page(t('menu.filters'), 'filters', ['filters' => $f, 'options' => $options]);
+    page(t('menu.filters'), 'filter_page', [
+        'filter_mode' => 'profile',
+        'section' => 'events',
+        'filters' => $f,
+        'options' => $options,
+    ]);
 }
 
 function route_filters_post(): never
@@ -200,7 +205,8 @@ function route_quick_filters(): never
         }
     }
 
-    page(t('filters.quick_title'), 'quick_filters', [
+    page(t('filters.quick_title'), 'filter_page', [
+        'filter_mode' => 'quick',
         'section' => $section,
         'options' => $options,
         'base_state' => ['show_all' => (bool)$filters['show_all'], 'sets' => $baseSets],
