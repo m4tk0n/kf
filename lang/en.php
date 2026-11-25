@@ -20,6 +20,7 @@ return [
     'type.1' => 'Concert',
     'type.2' => 'Festival',
     'type.3' => 'Other',
+    'events.current' => 'Ongoing events ({n})',
 
     // home
     'home.welcome' => 'Welcome, {name}.',
