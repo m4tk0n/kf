@@ -176,9 +176,9 @@ return [
     // Uživatelské filtry podle sekcí; ukládají se do JSON profilu.
     'filters' => [
         'sections' => [
-            'events' => ['countries', 'cities'],
-            'bands' => ['genres', 'countries', 'cities'],
-            'venues' => ['countries', 'cities'],
+            'events' => ['cities'],
+            'bands' => ['genres', 'cities'],
+            'venues' => ['cities'],
         ],
         'max_per_type' => 100,
         'list_limit' => 500,
