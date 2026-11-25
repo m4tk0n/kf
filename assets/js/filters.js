@@ -46,7 +46,8 @@
     options.forEach(function (x) {
       x.addEventListener('change', function () {
         if (all && all.checked) {
-          options.forEach(function (other) { if (other !== x) other.checked = false; });
+          options.forEach(function (other) { other.checked = false; });
+          x.checked = true;
           all.checked = false;
         }
       });
