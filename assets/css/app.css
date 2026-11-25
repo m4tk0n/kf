@@ -323,3 +323,16 @@ input[type="submit"].flash-success{
   background:rgba(83,217,154,.2)!important;
   color:#9be8c4!important;
 }
+
+/* Hlavička stránky filtrů a informační modal */
+.page-title-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 10px}
+.page-title-main{display:flex;align-items:center;gap:9px;min-width:0}
+.page-title-row h1{margin:0}
+.info-button{width:23px;height:23px;flex:0 0 23px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:50%;background:#2688e8;color:#fff;font:800 15px/1 system-ui,sans-serif;cursor:pointer}
+.info-button:focus-visible,.modal-close:focus-visible{outline:2px solid #9fc8ff;outline-offset:3px}
+.modal-backdrop[hidden]{display:none!important}
+.modal{position:relative}
+.modal-close{position:absolute;top:8px;right:10px;width:32px;height:32px;border:0;border-radius:8px;background:transparent;color:var(--muted);font:400 25px/1 system-ui,sans-serif;cursor:pointer}
+.modal-close:hover{background:var(--surface-3);color:var(--text)}
+#filters-help-modal .modal{padding-top:24px}
+@media(max-width:380px){.page-title-row{margin-bottom:9px}.page-title-row h1{font-size:1.25rem}}
