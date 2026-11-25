@@ -89,3 +89,10 @@ Filtrační logika je soustředěna do samostatných modulů:
 Ostatní soubory obsahují pouze napojení: `bootstrap.php`, `src/catalog.php`, `src/routes.php`, `assets/js/list.js`, `assets/js/calendar.js` a `templates/layout.php`.
 
 Vzhled a ovládání rychlých filtrů přímo ve výpisu zatím nejsou implementovány. `window.kfSetSessionFilters(state)` je připravené rozhraní pro jejich budoucí napojení.
+
+## Platnost hodnot a stejné chování všech sekcí
+
+- Země a města se nabízejí pouze tehdy, pokud jsou použity ve zveřejněných záznamech příslušné sekce: Akce (`events`), Kapely (`bands`) nebo Kluby a místa (`venues`). Žánry se nabízejí pouze tehdy, pokud je používá zveřejněná kapela.
+- Stejná pravidla platí pro všechny tři sekce. Každá z nich podporuje výběr zemí i konkrétních měst; kapely navíc podporují žánry.
+- Výběr konkrétních měst má přednost před výběrem zemí. Při vybraných městech se zobrazí pouze záznamy z těchto měst. Pokud není vybráno žádné město, uplatní se výběr zemí.
+- Výpis, počty, pager a kalendář akcí používají stejné podmínky filtrování dané sekce.
