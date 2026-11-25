@@ -154,10 +154,12 @@ function route_filters(): never
     $u = guard('edit_profile');
     $f = filters_get((int)$u['id']);
     $options = [];
-    foreach (array_keys((array)cfg('filters.types')) as $type) {
-        $options[$type] = filters_options((string)$type);
+    foreach ((array)cfg('filters.sections') as $section => $fields) {
+        foreach ($fields as $field) {
+            $options[$section][$field] = filters_options((string)$section, (string)$field);
+        }
     }
-    page(t('menu.filters'), 'filters', ['filters' => $f, 'options' => $options, 'limit' => (int)cfg('filters.list_limit')]);
+    page(t('menu.filters'), 'filters', ['filters' => $f, 'options' => $options]);
 }
 
 function route_filters_post(): never
