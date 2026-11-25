@@ -4,8 +4,22 @@ declare(strict_types=1);
 /** @var array $filters @var array<string,array<string,array>> $options */
 ?>
 <section class="card">
-  <h1><?= e(t('menu.filters')) ?></h1>
-  <p><?= e(t('filters.intro')) ?></p>
+  <div class="page-title-row">
+    <div class="page-title-main">
+      <h1><?= e(t('menu.filters')) ?></h1>
+      <button type="button" class="info-button" aria-label="<?= e(t('filters.help.open')) ?>" aria-haspopup="dialog" aria-controls="filters-help-modal" data-filters-help-open>i</button>
+    </div>
+    <a class="btn" href="<?= e(url('')) ?>"><?= e(t('common.back')) ?></a>
+  </div>
+  <div class="modal-backdrop" id="filters-help-modal" role="presentation" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="filters-help-title" aria-describedby="filters-help-message">
+      <button type="button" class="modal-close" aria-label="<?= e(t('common.close')) ?>" data-filters-help-close>&times;</button>
+      <h2 id="filters-help-title"><?= e(t('filters.help.title')) ?></h2>
+      <p id="filters-help-message"><?= e(t('filters.intro')) ?></p>
+      <p><?= e(t('filters.help.text')) ?></p>
+      <button type="button" class="btn" data-filters-help-close><?= e(t('common.close')) ?></button>
+    </section>
+  </div>
   <form method="post" action="<?= e(url('filters')) ?>" class="stack" data-filter-form>
     <?= csrf_field() ?>
     <label class="check filter-select-all">
