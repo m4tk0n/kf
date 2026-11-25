@@ -102,10 +102,8 @@
         if (text.scrollWidth > text.clientWidth + 1) label.classList.add('filter-option-wide');
       });
     }
-    if (!form.hasAttribute('data-quick-filter-form')) {
-      fitOptions();
-      if (window.ResizeObserver) { var observer = new ResizeObserver(fitOptions); observer.observe(form); }
-      window.addEventListener('resize', fitOptions);
-    }
+    fitOptions();
+    if (window.ResizeObserver) { var observer = new ResizeObserver(fitOptions); observer.observe(form); }
+    window.addEventListener('resize', fitOptions);
   }
 })();
