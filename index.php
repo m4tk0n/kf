@@ -27,6 +27,7 @@ function kf_dispatch(): void
         'diagnostics' => 'route_diagnostics',
         'diagnostics/log' => 'route_diagnostics_log',
         'filters' => 'route_filters',
+        'quick-filters' => 'route_quick_filters',
         'admin/users' => 'route_admin_users',
         'admin/settings' => 'route_admin_settings',
     ];
