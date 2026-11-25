@@ -92,7 +92,12 @@ return [
     'profile.delete.button' => 'Delete account',
 
     // filters
-    'filters.intro' => 'Choose what you want to see in the lists. Saved filters can be switched on or off with one click.',
+    'filters.intro' => 'Choose what you want to see in the lists. Only countries, cities and genres used by published records are offered.',
+    'filters.section.events' => 'Events',
+    'filters.section.bands' => 'Bands',
+    'filters.section.venues' => 'Clubs and venues',
+    'filters.toggle_on' => 'Turn on saved filters',
+    'filters.toggle_off' => 'Turn off saved filters',
     'filters.enabled' => 'Filters enabled',
     'filters.countries' => 'Countries',
     'filters.cities' => 'Cities',
