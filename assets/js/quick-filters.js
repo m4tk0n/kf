@@ -5,10 +5,7 @@
   if (!form || typeof window.kfSetSessionFilters !== 'function') return;
 
   var storageKey = 'kf:list-filters:' + (document.body.getAttribute('data-filter-identity') || 'guest');
-  var all = form.querySelector('[data-quick-all]');
   var options = Array.prototype.slice.call(form.querySelectorAll('[data-quick-option]'));
-  var tabs = Array.prototype.slice.call(form.querySelectorAll('[data-quick-tab]'));
-  var panels = Array.prototype.slice.call(form.querySelectorAll('[data-quick-panel]'));
   var base;
 
   try {
@@ -27,13 +24,6 @@
     }
   } catch (e) {}
 
-  function syncAll() {
-    if (!all) return;
-    var checked = options.filter(function (input) { return input.checked; }).length;
-    all.checked = options.length > 0 && checked === options.length;
-    all.indeterminate = checked > 0 && checked < options.length;
-  }
-
   function syncControls() {
     options.forEach(function (input) {
       var parts = input.getAttribute('data-quick-option').split(':');
@@ -41,20 +31,7 @@
       var ids = Array.isArray(current[parts[1]]) ? current[parts[1]].map(String) : [];
       input.checked = state.show_all || ids.indexOf(input.value) !== -1;
     });
-    syncAll();
-  }
-
-  function activate(name, focus) {
-    tabs.forEach(function (tab) {
-      var active = tab.getAttribute('data-quick-tab') === name;
-      tab.classList.toggle('active', active);
-      tab.setAttribute('aria-selected', active ? 'true' : 'false');
-      tab.tabIndex = active ? 0 : -1;
-      if (active && focus) tab.focus();
-    });
-    panels.forEach(function (panel) {
-      panel.hidden = panel.getAttribute('data-quick-panel') !== name;
-    });
+    if (options.length) options[0].dispatchEvent(new Event('change', { bubbles: true }));
   }
 
   function readAllSections() {
@@ -73,28 +50,7 @@
     state.v = 1;
   }
 
-  if (all) {
-    all.addEventListener('change', function () {
-      options.forEach(function (input) { input.checked = all.checked; });
-      all.indeterminate = false;
-    });
-  }
-  options.forEach(function (input) { input.addEventListener('change', syncAll); });
-  tabs.forEach(function (tab, index) {
-    tab.addEventListener('click', function () {
-      activate(tab.getAttribute('data-quick-tab'), false);
-    });
-    tab.addEventListener('keydown', function (event) {
-      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Home' && event.key !== 'End') return;
-      event.preventDefault();
-      var next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 :
-        (index + (event.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length;
-      activate(tabs[next].getAttribute('data-quick-tab'), true);
-    });
-  });
-
   syncControls();
-  activate(form.getAttribute('data-section') || 'events', false);
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
