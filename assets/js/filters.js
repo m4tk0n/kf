@@ -37,9 +37,20 @@
   if (form) {
     var all = form.querySelector('[data-filter-all]');
     var options = Array.prototype.slice.call(form.querySelectorAll('[data-filter-option]'));
-    function sync() { if (!all) return; var n = options.filter(function (x) { return x.checked; }).length; all.checked = options.length > 0 && n === options.length; all.indeterminate = n > 0 && n < options.length; }
-    if (all) all.addEventListener('change', function () { options.forEach(function (x) { x.checked = all.checked; }); all.indeterminate = false; });
-    options.forEach(function (x) { x.addEventListener('change', sync); }); sync();
+    // „Vše“ je samostatný režim, nikoli souhrnný checkbox všech jednotlivých voleb.
+    // Při první individuální změně ve výchozím režimu Vše vyčistíme ostatní volby,
+    // aby například odškrtnutí města nebylo přebito stále zaškrtnutou zemí.
+    if (all) all.addEventListener('change', function () {
+      options.forEach(function (x) { x.checked = all.checked; });
+    });
+    options.forEach(function (x) {
+      x.addEventListener('change', function () {
+        if (all && all.checked) {
+          options.forEach(function (other) { if (other !== x) other.checked = false; });
+          all.checked = false;
+        }
+      });
+    });
     var tabs = Array.prototype.slice.call(form.querySelectorAll('[data-filter-tab]'));
     var panels = Array.prototype.slice.call(form.querySelectorAll('[data-filter-panel]'));
     function activate(name, focus) {
