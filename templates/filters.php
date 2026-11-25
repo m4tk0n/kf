@@ -13,7 +13,7 @@ $active_filter_section = 'events';
       <h1><?= e(t('menu.filters')) ?></h1>
       <button type="button" class="info-button" aria-label="<?= e(t('filters.help.open')) ?>" aria-haspopup="dialog" aria-controls="filters-help-modal" data-filters-help-open>i</button>
     </div>
-    <a class="btn" href="<?= e(url('')) ?>"><?= e(t('common.back')) ?></a>
+    <a class="btn page-back" href="<?= e(url('')) ?>"><?= e(t('common.back')) ?></a>
   </div>
   <div class="modal-backdrop" id="filters-help-modal" role="presentation" hidden>
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="filters-help-title" aria-describedby="filters-help-message">
