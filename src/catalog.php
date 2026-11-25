@@ -197,19 +197,17 @@ function kf_load(array $req): array
         // Aktuální akce jsou nezávislé na datu pageru: zobrazí se i při prohlížení vzdálené budoucnosti.
         // Stejné hledání, oblíbené a uživatelské filtry jako v hlavním výpisu.
         $today = date('Y-m-d');
-        $currentRows = q(
-            'SELECT ' . $cols . $from . $where . ' AND a.date_from <= ? AND a.date_to >= ?'
-            . ' ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id',
+        $currentCount = (int)q(
+            'SELECT COUNT(*) FROM ' . tbl('events') . ' a' . $where . ' AND a.date_from <= ? AND a.date_to >= ?',
             array_merge($params, [$today, $today])
-        )->fetchAll(PDO::FETCH_ASSOC);
+        )->fetchColumn();
 
         $total = (int)q('SELECT COUNT(*) FROM ' . tbl('events') . ' a' . $where, $params)->fetchColumn();
         return [
             'req' => $req,
             'rows' => $rows,
             'count' => $total,
-            'current_rows' => $currentRows,
-            'current_count' => count($currentRows),
+            'current_count' => $currentCount,
             'nav' => kf_event_nav($req, $d, $k, $n, $qa),
         ];
     } elseif ($s === 'bands') {
