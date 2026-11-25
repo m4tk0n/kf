@@ -40,5 +40,31 @@
     function sync() { if (!all) return; var n = options.filter(function (x) { return x.checked; }).length; all.checked = options.length > 0 && n === options.length; all.indeterminate = n > 0 && n < options.length; }
     if (all) all.addEventListener('change', function () { options.forEach(function (x) { x.checked = all.checked; }); all.indeterminate = false; });
     options.forEach(function (x) { x.addEventListener('change', sync); }); sync();
+    var tabs = Array.prototype.slice.call(form.querySelectorAll('[data-filter-tab]'));
+    var panels = Array.prototype.slice.call(form.querySelectorAll('[data-filter-panel]'));
+    function activate(name, focus) {
+      tabs.forEach(function (tab) { var active = tab.getAttribute('data-filter-tab') === name; tab.classList.toggle('active', active); tab.setAttribute('aria-selected', active ? 'true' : 'false'); tab.tabIndex = active ? 0 : -1; if (active && focus) tab.focus(); });
+      panels.forEach(function (panel) { panel.hidden = panel.getAttribute('data-filter-panel') !== name; });
+    }
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener('click', function () { activate(tab.getAttribute('data-filter-tab'), false); });
+      tab.addEventListener('keydown', function (event) {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' && event.key !== 'Home' && event.key !== 'End') return;
+        event.preventDefault();
+        var next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length;
+        activate(tabs[next].getAttribute('data-filter-tab'), true);
+      });
+    });
+    function fitOptions() {
+      form.querySelectorAll('.filter-option').forEach(function (label) {
+        var text = label.querySelector('span');
+        if (!text) return;
+        label.classList.remove('filter-option-wide');
+        if (text.scrollWidth > text.clientWidth + 1) label.classList.add('filter-option-wide');
+      });
+    }
+    fitOptions();
+    if (window.ResizeObserver) { var observer = new ResizeObserver(fitOptions); observer.observe(form); }
+    window.addEventListener('resize', fitOptions);
   }
 })();
