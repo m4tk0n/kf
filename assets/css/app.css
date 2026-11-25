@@ -356,3 +356,8 @@ input[type="submit"].flash-success{
 .filter-option.filter-option-wide{grid-column:1/-1}
 .filter-option.filter-option-wide span{white-space:normal;overflow:visible;overflow-wrap:anywhere}
 @media(max-width:380px){.filter-tab{font-size:.75rem;min-height:36px}.filter-checks{column-gap:7px}.filter-checks .filter-option{font-size:.78rem}}
+
+/* Jednotná hlavička samostatných stránek */
+.page-title-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 10px}
+.page-title-row h1{margin:0;min-width:0}
+.page-back{flex:none}
