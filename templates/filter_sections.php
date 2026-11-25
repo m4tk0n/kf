@@ -26,33 +26,39 @@ $sections = ['events', 'bands', 'venues'];
   ?>
   <section class="filter-panel" id="filter-panel-<?= e($kind) ?>" role="tabpanel"
            aria-labelledby="filter-tab-<?= e($kind) ?>" data-filter-panel="<?= e($kind) ?>"<?= $kind === $active_filter_section ? '' : ' hidden' ?>>
-    <?php foreach (['countries' => 'countries', 'cities' => 'cities', 'genres' => 'genres'] as $field => $label): ?>
-      <?php if (!empty($sectionOptions[$field])): ?>
-        <div class="filter-group">
-          <h2><?= e(t('filters.' . $label)) ?></h2>
-          <?php if ($field === 'cities'): ?>
-            <?php foreach ($cityGroups as $group): ?>
-              <div class="filter-country-group">
-                <h3><?= e($group['name']) ?></h3>
-                <div class="checks filter-checks">
-                  <?php foreach ($group['rows'] as $row): ?>
-                    <label class="check filter-option"><input type="checkbox" <?php if ($quick_filters): ?>data-quick-option="<?= e($kind) ?>:cities" data-country-id="<?= (int)$group['id'] ?>"<?php else: ?>name="filters[<?= e($kind) ?>][cities][]"<?php endif; ?> data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
-                  <?php endforeach; ?>
-                </div>
-              </div>
-            <?php endforeach; ?>
-          <?php else: ?>
+    <?php if (!empty($sectionOptions['cities'])): ?>
+      <div class="filter-group">
+        <h2><?= e(t('filters.cities')) ?></h2>
+        <?php foreach ($cityGroups as $group): ?>
+          <div class="filter-country-group">
+            <h3>
+              <label class="check filter-option filter-country-option">
+                <input type="checkbox" data-filter-country-option data-country-id="<?= (int)$group['id'] ?>" value="<?= (int)$group['id'] ?>"<?= ($showAll || count(array_intersect(array_map(static fn(array $row): int => (int)$row['id'], $group['rows']), array_map('intval', $sectionSets['cities'] ?? []))) === count($group['rows'])) ? ' checked' : '' ?>>
+                <span><?= e($group['name']) ?></span>
+              </label>
+            </h3>
             <div class="checks filter-checks">
-              <?php foreach ($sectionOptions[$field] as $row): ?>
-                <label class="check filter-option"><input type="checkbox" <?php if ($quick_filters): ?>data-quick-option="<?= e($kind) ?>:<?= e($field) ?>"<?php if ($field === 'countries'): ?>data-quick-country-option<?php endif; ?><?php else: ?>name="filters[<?= e($kind) ?>][<?= e($field) ?>][]"<?php endif; ?> data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets[$field] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
+              <?php foreach ($group['rows'] as $row): ?>
+                <label class="check filter-option"><input type="checkbox" <?php if ($quick_filters): ?>data-quick-option="<?= e($kind) ?>:cities" data-country-id="<?= (int)$group['id'] ?>"<?php else: ?>name="filters[<?= e($kind) ?>][cities][]"<?php endif; ?> data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
               <?php endforeach; ?>
             </div>
-          <?php endif; ?>
-        </div>
-      <?php endif; ?>
-    <?php endforeach; ?>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
 
-    <?php if (empty($sectionOptions['countries']) && empty($sectionOptions['cities']) && empty($sectionOptions['genres'])): ?>
+    <?php if (!empty($sectionOptions['genres'])): ?>
+      <div class="filter-group">
+        <h2><?= e(t('filters.genres')) ?></h2>
+        <div class="checks filter-checks">
+          <?php foreach ($sectionOptions['genres'] as $row): ?>
+            <label class="check filter-option"><input type="checkbox" <?php if ($quick_filters): ?>data-quick-option="<?= e($kind) ?>:genres"<?php else: ?>name="filters[<?= e($kind) ?>][genres][]"<?php endif; ?> data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['genres'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <?php if (empty($sectionOptions['cities']) && empty($sectionOptions['genres'])): ?>
       <p class="muted"><?= e(t('filters.empty')) ?></p>
     <?php endif; ?>
   </section>
