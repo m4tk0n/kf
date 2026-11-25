@@ -20,7 +20,7 @@ declare(strict_types=1);
       <button type="button" class="btn" data-filters-help-close><?= e(t('common.close')) ?></button>
     </section>
   </div>
-  <form method="post" action="<?= e(url('filters')) ?>" class="stack" data-filter-form>
+  <form method="post" action="<?= e(url('filters')) ?>" class="stack filter-form" data-filter-form>
     <?= csrf_field() ?>
     <label class="check filter-select-all">
       <input type="hidden" name="show_filtr_all" value="0">
@@ -28,70 +28,63 @@ declare(strict_types=1);
       <strong><?= e(t('filters.select_all')) ?></strong>
     </label>
 
-    <?php foreach (['events', 'bands', 'venues'] as $section): ?>
-      <?php $sectionSets = $filters['sets'][$section] ?? []; ?>
-      <details class="fgroup"<?= array_sum(array_map('count', $sectionSets)) ? ' open' : '' ?>>
-        <summary><?= e(t('filters.section.' . $section)) ?></summary>
+    <div class="filter-tabs" role="tablist" aria-label="<?= e(t('menu.filters')) ?>">
+      <?php foreach (['events', 'bands', 'venues'] as $i => $section): ?>
+        <button type="button" class="filter-tab<?= $i === 0 ? ' active' : '' ?>" role="tab" id="filter-tab-<?= e($section) ?>" aria-controls="filter-panel-<?= e($section) ?>" aria-selected="<?= $i === 0 ? 'true' : 'false' ?>" tabindex="<?= $i === 0 ? '0' : '-1' ?>" data-filter-tab="<?= e($section) ?>"><?= e(t('filters.section.' . $section)) ?></button>
+      <?php endforeach; ?>
+    </div>
 
-        <?php if (isset($options[$section]['countries'])): ?>
-          <?php $rows = $options[$section]['countries']; $selected = $sectionSets['countries'] ?? []; ?>
-          <details class="fgroup fgroup-nested">
-            <summary><?= e(t('filters.countries')) ?> <span class="muted">(<?= $filters['show_all'] ? count($rows) : count($selected) ?>)</span></summary>
-            <?php if (!$rows): ?>
-              <p class="muted"><?= e(t('filters.empty')) ?></p>
-            <?php else: ?>
-              <div class="checks">
-                <?php foreach ($rows as $row): ?>
-                  <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][countries][]" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || in_array((int)$row['id'], $selected, true)) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
-                <?php endforeach; ?>
-              </div>
-            <?php endif; ?>
-          </details>
-        <?php endif; ?>
-
-        <?php if (isset($options[$section]['cities'])): ?>
-          <?php
-          $rows = $options[$section]['cities'];
-          $selected = $sectionSets['cities'] ?? [];
-          $groups = [];
-          foreach ($rows as $row) $groups[(int)$row['country_id']] ??= ['name' => (string)$row['country_name'], 'rows' => []];
-          foreach ($rows as $row) $groups[(int)$row['country_id']]['rows'][] = $row;
-          ?>
-          <details class="fgroup fgroup-nested">
-            <summary><?= e(t('filters.cities')) ?> <span class="muted">(<?= $filters['show_all'] ? count($rows) : count($selected) ?>)</span></summary>
-            <?php if (!$groups): ?>
-              <p class="muted"><?= e(t('filters.empty')) ?></p>
-            <?php else: ?>
-              <?php foreach ($groups as $group): ?>
-                <details class="fgroup fgroup-country">
-                  <summary><?= e($group['name']) ?></summary>
-                  <div class="checks">
-                    <?php foreach ($group['rows'] as $row): ?>
-                      <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][cities][]" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || in_array((int)$row['id'], $selected, true)) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
-                    <?php endforeach; ?>
-                  </div>
-                </details>
+    <?php foreach (['events', 'bands', 'venues'] as $i => $section): ?>
+      <?php
+      $sectionSets = $filters['sets'][$section] ?? [];
+      $countries = $options[$section]['countries'] ?? [];
+      $cities = $options[$section]['cities'] ?? [];
+      $genres = $options[$section]['genres'] ?? [];
+      $cityGroups = [];
+      foreach ($cities as $row) $cityGroups[(int)$row['country_id']] ??= ['name' => (string)$row['country_name'], 'rows' => []];
+      foreach ($cities as $row) $cityGroups[(int)$row['country_id']]['rows'][] = $row;
+      ?>
+      <section class="filter-panel" id="filter-panel-<?= e($section) ?>" role="tabpanel" aria-labelledby="filter-tab-<?= e($section) ?>" data-filter-panel="<?= e($section) ?>"<?= $i === 0 ? '' : ' hidden' ?>>
+        <?php if ($countries): ?>
+          <div class="filter-group">
+            <h2><?= e(t('filters.countries')) ?></h2>
+            <div class="checks filter-checks">
+              <?php foreach ($countries as $row): ?>
+                <label class="check filter-option"><input type="checkbox" name="filters[<?= e($section) ?>][countries][]" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || in_array((int)$row['id'], $sectionSets['countries'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
               <?php endforeach; ?>
-            <?php endif; ?>
-          </details>
+            </div>
+          </div>
         <?php endif; ?>
 
-        <?php if (isset($options[$section]['genres'])): ?>
-          <?php $rows = $options[$section]['genres']; $selected = $sectionSets['genres'] ?? []; ?>
-          <details class="fgroup fgroup-nested">
-            <summary><?= e(t('filters.genres')) ?> <span class="muted">(<?= $filters['show_all'] ? count($rows) : count($selected) ?>)</span></summary>
-            <?php if (!$rows): ?>
-              <p class="muted"><?= e(t('filters.empty')) ?></p>
-            <?php else: ?>
-              <div class="checks">
-                <?php foreach ($rows as $row): ?>
-                  <label class="check"><input type="checkbox" name="filters[<?= e($section) ?>][genres][]" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || in_array((int)$row['id'], $selected, true)) ? ' checked' : '' ?>> <?= e((string)$row['name']) ?></label>
-                <?php endforeach; ?>
+        <?php if ($cities): ?>
+          <div class="filter-group">
+            <h2><?= e(t('filters.cities')) ?></h2>
+            <?php foreach ($cityGroups as $group): ?>
+              <div class="filter-country-group">
+                <h3><?= e($group['name']) ?></h3>
+                <div class="checks filter-checks">
+                  <?php foreach ($group['rows'] as $row): ?>
+                    <label class="check filter-option"><input type="checkbox" name="filters[<?= e($section) ?>][cities][]" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
+                  <?php endforeach; ?>
+                </div>
               </div>
-            <?php endif; ?>
-          </details>
+            <?php endforeach; ?>
+          </div>
         <?php endif; ?>
-      </details>
+
+        <?php if ($genres): ?>
+          <div class="filter-group">
+            <h2><?= e(t('filters.genres')) ?></h2>
+            <div class="checks filter-checks">
+              <?php foreach ($genres as $row): ?>
+                <label class="check filter-option"><input type="checkbox" name="filters[<?= e($section) ?>][genres][]" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($filters['show_all'] || in_array((int)$row['id'], $sectionSets['genres'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        <?php endif; ?>
+
+        <?php if (!$countries && !$cities && !$genres): ?><p class="muted"><?= e(t('filters.empty')) ?></p><?php endif; ?>
+      </section>
     <?php endforeach; ?>
 
     <button type="submit" class="btn"><?= e(t('common.save')) ?></button>
