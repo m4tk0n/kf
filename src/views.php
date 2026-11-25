@@ -106,7 +106,7 @@ function page(string $title, string $tpl, array $vars = [], int $status = 200): 
         'section' => (string)($vars['section'] ?? 'events'),
         'hasLightbox' => !empty($vars['d']['extra']['large']),
         'hasFavorites' => isset($vars['d']),
-        'hasQuickFilters' => $tpl === 'quick_filters',
+        'hasQuickFilters' => ($vars['filter_mode'] ?? '') === 'quick',
     ]);
     exit;
 }
