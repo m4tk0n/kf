@@ -56,7 +56,7 @@ function kf_active_day_find(string $op, string $t, string $qa): ?string
     }
 
     $v = q($sql, $params)->fetchColumn();
-    return is_string($v) && preg_match('/^\\d{4}-\\d{2}-\\d{2}$/', $v) ? $v : null;
+    return is_string($v) && preg_match('/^\d{4}-\d{2}-\d{2}$/', $v) ? $v : null;
 }
 
 function kf_day_count(string $op, string $t, string $qa): int
