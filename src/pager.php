@@ -77,8 +77,17 @@ function kf_default_day(string $qa): string
 {
     $today = date('Y-m-d');
     [$f, $p] = kf_events_filter($qa);
-    $v = q('SELECT MIN(a.date_from) FROM ' . tbl('events') . ' a WHERE a.date_to >= ?' . $f, array_merge([$today], $p))->fetchColumn();
-    return is_string($v) && $v !== '' ? $v : (kf_active_day_find('<=', $today, $qa) ?? $today);
+
+    // Výchozí datum určuje začátek akce, nikoli konec právě probíhající akce.
+    // Tím se pager nevrátí na začátek festivalu, který začal v minulosti.
+    $v = q(
+        'SELECT MIN(a.date_from) FROM ' . tbl('events') . ' a WHERE a.date_from >= ?' . $f,
+        array_merge([$today], $p)
+    )->fetchColumn();
+
+    return is_string($v) && $v !== ''
+        ? $v
+        : (kf_active_day_find('<=', $today, $qa) ?? $today);
 }
 
 function kf_event_nav(array $req, string $d, int $k, int $n, string $qa): array
