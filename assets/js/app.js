@@ -5,6 +5,24 @@
   if (sectionSelect && !document.getElementById('view')) {
     sectionSelect.addEventListener('change', function () { sectionSelect.form.submit(); });
   }
+  // Dočasné filtry jsou oddělené podle identity; po přihlášení/odhlášení
+  // se nesmí přenést nastavení hosta ani jiného účtu.
+  var filterIdentityKey = 'kf:filter-identity';
+  var currentFilterIdentity = document.body.getAttribute('data-filter-identity') || 'guest';
+  try {
+    var previousFilterIdentity = sessionStorage.getItem(filterIdentityKey);
+    if (previousFilterIdentity && previousFilterIdentity !== currentFilterIdentity) {
+      for (var fi = sessionStorage.length - 1; fi >= 0; fi--) {
+        var fk = sessionStorage.key(fi);
+        if (fk && fk.indexOf('kf:list-filters:') === 0) sessionStorage.removeItem(fk);
+      }
+    }
+    sessionStorage.setItem(filterIdentityKey, currentFilterIdentity);
+    if (document.body.getAttribute('data-clear-filter-session') === '1') {
+      sessionStorage.removeItem('kf:list-filters:' + currentFilterIdentity);
+    }
+  } catch (e) {}
+
   // Hromadné zaškrtnutí / odškrtnutí všech možností ve správě filtrů.
   var filterForm = document.querySelector('[data-filter-form]');
   if (filterForm) {
