@@ -190,7 +190,7 @@ function kf_load(array $req): array
 
         $rows = q(
             'SELECT ' . $cols . $from . $where . ' AND a.date_to >= ?'
-            . ' ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id LIMIT ' . $n,
+            . ' ORDER BY a.date_from, CASE a.type WHEN 1 THEN 0 WHEN 2 THEN 1 ELSE 2 END, a.time_start IS NULL, a.time_start, a.id LIMIT ' . $n,
             array_merge($params, [$d])
         )->fetchAll(PDO::FETCH_ASSOC);
 
