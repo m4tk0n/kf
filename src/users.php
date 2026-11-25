@@ -195,10 +195,17 @@ function pending_count(): int
 
 // ---------- uložené filtry (JSON profil) ----------
 
-/** @return array{enabled:bool,sets:array<string,array<string,int[]>>} */
+/** @return array{show_all:bool,sets:array<string,array<string,int[]>>} */
 function filters_get(int $uid): array
 {
     $p = user_profile_get($uid);
+    // Migrace starších profilů: bez vlastního výběru se zobrazují všechny záznamy.
+    if (!array_key_exists('show_filtr_all', $p)) {
+        $p['show_filtr_all'] = true;
+        unset($p['filters'], $p['filters_enabled']);
+        user_profile_put($uid, $p);
+    }
+
     $sets = [];
     foreach ((array)cfg('filters.sections') as $section => $fields) {
         foreach ($fields as $field) {
@@ -208,7 +215,7 @@ function filters_get(int $uid): array
             )));
         }
     }
-    return ['enabled' => (bool)($p['filters_enabled'] ?? true), 'sets' => $sets];
+    return ['show_all' => (bool)$p['show_filtr_all'], 'sets' => $sets];
 }
 
 /**
@@ -258,44 +265,55 @@ function filters_options(string $section, string $field): array
     return [];
 }
 
-/** Uloží pouze ID, která jsou stále dostupná v nabídce příslušné sekce a pole. */
+/** Uloží vlastní výběr. Pokud jsou vybrány všechny dostupné možnosti, uloží se jen show_filtr_all=true. */
 function filters_save(int $uid, array $input): void
 {
     $p = user_profile_get($uid);
     $max = max(1, (int)cfg('filters.max_per_type'));
     $saved = [];
+    $hasRestriction = false;
 
     foreach ((array)cfg('filters.sections') as $section => $fields) {
         foreach ($fields as $field) {
+            $available = filters_options((string)$section, (string)$field);
+            $allowedIds = array_fill_keys(array_map(
+                static fn(array $row): int => (int)$row['id'],
+                $available
+            ), true);
+
             $raw = $input['filters'][$section][$field] ?? [];
             if (!is_array($raw)) $raw = [];
             $ids = array_slice(array_values(array_unique(array_filter(
                 array_map(static fn($value): int => is_scalar($value) ? (int)$value : 0, $raw),
                 static fn(int $id): bool => $id > 0
             ))), 0, $max);
+            $ids = array_values(array_filter($ids, static fn(int $id): bool => isset($allowedIds[$id])));
+            sort($ids);
 
-            if ($ids) {
-                $available = filters_options((string)$section, (string)$field);
-                $allowedIds = array_fill_keys(array_map(
-                    static fn(array $row): int => (int)$row['id'],
-                    $available
-                ), true);
-                $ids = array_values(array_filter($ids, static fn(int $id): bool => isset($allowedIds[$id])));
+            // Prázdný výběr znamená bez omezení (vše), stejně jako kompletní výběr.
+            if (count($ids) < count($allowedIds)) {
+                if ($ids) {
+                    $saved[$section][$field] = $ids;
+                } else {
+                    $saved[$section][$field] = [];
+                }
+                // Jen pole, ve kterém uživatel skutečně omezil nabídku, zapíná vlastní režim.
+                if ($ids || count($allowedIds) > 0) {
+                    $hasRestriction = true;
+                }
+            } else {
+                $saved[$section][$field] = [];
             }
-            $saved[$section][$field] = $ids;
         }
     }
 
-    $p['filters'] = $saved;
-    $p['filters_enabled'] = !empty($input['enabled']);
+    if ($hasRestriction) {
+        $p['show_filtr_all'] = false;
+        $p['filters'] = $saved;
+    } else {
+        $p['show_filtr_all'] = true;
+        unset($p['filters']);
+    }
+    unset($p['filters_enabled']);
     user_profile_put($uid, $p);
-}
-
-/** Zapnutí/vypnutí uložených filtrů bez změny jejich hodnot. */
-function filters_toggle(int $uid): bool
-{
-    $p = user_profile_get($uid);
-    $p['filters_enabled'] = !(bool)($p['filters_enabled'] ?? true);
-    user_profile_put($uid, $p);
-    return $p['filters_enabled'];
 }
