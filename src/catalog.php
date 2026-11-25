@@ -122,12 +122,12 @@ function kf_pager(array $nav): string
     };
     $l = $nav['links'];
     $t = $nav['titles'] ?? [];
-    foreach (['first', 'prev', 'next', 'last'] as $k) $t[$k] ??= kf_t('pager.' . $k);
+    foreach (['first', 'prev', 'next', 'last'] as $k) $t[$k] ??= t('pager.' . $k);
     $cal = $nav['cal'] ?? null; // u akcí je datum tlačítko otevírající kalendář
     $cur = $cal
         ? '<button type="button" class="pager-cur" data-cal data-date="' . e($cal['date']) . '" data-cal-url="' . e($cal['cal_url']) . '" data-day-url="' . e($cal['day_url']) . '">' . e($nav['label']) . '</button>'
         : '<span class="pager-cur">' . e($nav['label']) . '</span>';
-    return '<nav class="pager" aria-label="' . e(kf_t('pager.label')) . '">'
+    return '<nav class="pager" aria-label="' . e(t('pager.label')) . '">'
         . $btn($l['first'], '&lt;&lt;', $t['first']) . $btn($l['prev'], '&lt;', $t['prev'])
         . $cur
         . $btn($l['next'], '&gt;', $t['next']) . $btn($l['last'], '&gt;&gt;', $t['last'])
@@ -232,7 +232,7 @@ function kf_event_nav(array $req, string $d, int $k, int $n, string $qa): array
             'next' => $nextDay !== null ? $url($nextDay) : null,
             'last' => $monthForward !== null ? $url($monthForward) : null,
         ],
-        'titles' => ['first' => kf_t('pager.prev_month'), 'last' => kf_t('pager.next_month')],
+        'titles' => ['first' => t('pager.prev_month'), 'last' => t('pager.next_month')],
         'cal' => [
             'date' => $d,
             'cal_url' => url('') . '?' . http_build_query(array_filter(['cal' => '__M__', 'q' => $req['q'], 'fav' => $req['fav'] ? '1' : ''], static fn($v): bool => $v !== '')),
@@ -296,7 +296,7 @@ function kf_paged(string $cols, string $from, string $where, array $params, stri
 function kf_load(array $req): array
 {
     $per = static fn(string $kind): int => max(1, min((int)cfg('paging.per_page_' . $kind), (int)cfg('paging.max_per_page')));
-    $country = 'co.`name_' . kf_lang() . '`'; // jazyk je ověřený proti app.supported_langs
+    $country = 'co.`name_' . current_lang() . '`'; // jazyk je ověřený proti app.supported_langs
     $geo = ' JOIN ' . tbl('cities') . ' c ON c.id = a.city_id JOIN ' . tbl('countries') . ' co ON co.id = c.country_id';
     $s = $req['s'];
     $qa = kf_ascii($req['q']);

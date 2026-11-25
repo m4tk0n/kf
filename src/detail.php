@@ -66,7 +66,7 @@ function kf_detail_load(string $kind, int $id): ?array
     if (!isset(KF_DETAIL_KINDS[$kind])) {
         return null;
     }
-    $col = 'co.`name_' . kf_lang() . '`'; // jazyk je ověřený proti app.supported_langs
+    $col = 'co.`name_' . current_lang() . '`'; // jazyk je ověřený proti app.supported_langs
     $geo = ' JOIN ' . tbl('cities') . ' c ON c.id = a.city_id JOIN ' . tbl('countries') . ' co ON co.id = c.country_id';
     $today = date('Y-m-d');
     $lim = max(1, min((int)cfg('paging.detail_events'), (int)cfg('paging.max_per_page')));

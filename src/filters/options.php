@@ -18,7 +18,7 @@ function filters_options(string $section, string $field): array
     }
 
     $table = tbl($section);
-    $countryName = 'co.`name_' . kf_lang() . '`';
+    $countryName = 'co.`name_' . current_lang() . '`';
     if ($field === 'countries') {
         return q(
             'SELECT DISTINCT co.id, ' . $countryName . ' AS name'

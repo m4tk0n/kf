@@ -53,34 +53,6 @@ function e(?string $s): string
     return htmlspecialchars((string)$s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 
-function db(): PDO
-{
-    static $pdo = null;
-    if ($pdo === null) {
-        $dsn = 'mysql:host=' . env('DB_HOST', 'localhost') . ';port=' . env('DB_PORT', '3306')
-            . ';dbname=' . env('DB_NAME', '') . ';charset=' . cfg('db.charset');
-        $pdo = new PDO($dsn, (string)env('DB_USER', ''), (string)env('DB_PASS', ''), [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES => (bool)cfg('db.emulate_prepares'),
-            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES ' . cfg('db.charset') . ' COLLATE ' . cfg('db.collation'),
-        ]);
-    }
-    return $pdo;
-}
-
-function q(string $sql, array $params = []): PDOStatement
-{
-    $st = db()->prepare($sql);
-    $st->execute($params);
-    return $st;
-}
-
-function tbl(string $key): string
-{
-    return '`' . cfg('db.prefix') . cfg('db.tables.' . $key) . '`';
-}
-
 function send_security_headers(bool $noStore = false): void
 {
     foreach ((array)cfg('security.headers') as $name => $value) header($name . ': ' . $value);

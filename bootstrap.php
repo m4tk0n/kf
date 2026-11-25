@@ -8,7 +8,7 @@ require_once KF_ROOT . '/src/core.php';
 
 $kfSrc = KF_ROOT . '/' . cfg('paths.src');
 // compat.php je poslední: doplňuje jen funkce, které ještě neexistují
-foreach (['storage', 'security', 'lang', 'catalog', 'i18n', 'session', 'oauth', 'users', 'filters/profile', 'filters/options', 'filters/session', 'filters/catalog', 'views', 'detail', 'routes', 'compat'] as $kfModule) {
+foreach (['db', 'storage', 'security', 'i18n', 'catalog', 'session', 'oauth', 'users', 'filters/profile', 'filters/options', 'filters/session', 'filters/catalog', 'views', 'detail', 'routes', 'compat'] as $kfModule) {
     require_once $kfSrc . '/' . $kfModule . '.php';
 }
 unset($kfSrc, $kfModule);

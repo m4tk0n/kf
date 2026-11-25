@@ -44,7 +44,7 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
   <header class="wrap top">
     <a class="brand" href="<?= e(url('')) ?>">K&amp;F</a>
     <?php if ($user === null): ?>
-      <a class="btn" href="<?= e(url('login')) ?>"><?= e(kf_t('login')) ?></a>
+      <a class="btn" href="<?= e(url('login')) ?>"><?= e(t('login')) ?></a>
     <?php else: ?>
       <div class="top-right">
       <a data-favtop data-label-on="<?= e(t('fav.toggle_on')) ?>" data-label-off="<?= e(t('fav.toggle_off')) ?>" class="fav favtop<?= $favOn ? ' on' : '' ?>" href="<?= e(kf_url($req, ['fav' => $favOn ? 0 : 1, 'p' => 1, 'k' => 0])) ?>" aria-pressed="<?= $favOn ? 'true' : 'false' ?>" aria-label="<?= e(t($favOn ? 'fav.toggle_on' : 'fav.toggle_off')) ?>" title="<?= e(t($favOn ? 'fav.toggle_on' : 'fav.toggle_off')) ?>">★</a>
@@ -63,15 +63,15 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
   <div class="wrap bar">
     <form class="bar-search" method="get" action="<?= e(url('')) ?>">
       <?php if ($favOn && $user !== null): ?><input type="hidden" name="fav" value="1"><?php endif; ?>
-      <select name="s" aria-label="<?= e(kf_t('nav.label')) ?>">
+      <select name="s" aria-label="<?= e(t('nav.label')) ?>">
         <?php foreach (['events', 'bands', 'venues'] as $v): ?>
-          <option value="<?= e($v) ?>"<?= $req['s'] === $v ? ' selected' : '' ?>><?= e(kf_t('nav.' . $v)) ?></option>
+          <option value="<?= e($v) ?>"<?= $req['s'] === $v ? ' selected' : '' ?>><?= e(t('nav.' . $v)) ?></option>
         <?php endforeach; ?>
       </select>
-      <input type="search" name="q" value="<?= e((string)$req['q']) ?>" maxlength="100" data-min-chars="<?= max(1, (int)cfg('paging.autocomplete_min_chars')) ?>" placeholder="<?= e(kf_t('search.placeholder')) ?>" aria-label="<?= e(kf_t('search.label')) ?>" autocomplete="off">
+      <input type="search" name="q" value="<?= e((string)$req['q']) ?>" maxlength="100" data-min-chars="<?= max(1, (int)cfg('paging.autocomplete_min_chars')) ?>" placeholder="<?= e(t('search.placeholder')) ?>" aria-label="<?= e(t('search.label')) ?>" autocomplete="off">
     </form>
     <?php $quickSection = (string)($_GET['s'] ?? $req['s'] ?? 'events'); if (!in_array($quickSection, ['events', 'bands', 'venues'], true)) $quickSection = 'events'; $quickParams = ['s' => $quickSection, 'q' => (string)($_GET['q'] ?? $req['q']), 'p' => max(1, (int)($_GET['p'] ?? $req['p'])), 'd' => (string)($_GET['d'] ?? $req['d']), 'k' => max(0, (int)($_GET['k'] ?? $req['k']))]; if ($favOn && $user !== null) $quickParams['fav'] = 1; ?>
-    <a class="btn bar-filter-toggle" href="<?= e(url('quick-filters') . '?' . http_build_query($quickParams)) ?>"><?= e(kf_t('filters')) ?></a>
+    <a class="btn bar-filter-toggle" href="<?= e(url('quick-filters') . '?' . http_build_query($quickParams)) ?>"><?= e(t('filters')) ?></a>
   </div>
 </div>
 <main class="wrap main">
