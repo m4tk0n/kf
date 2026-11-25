@@ -126,7 +126,7 @@ jobs:
           for path in uploads:
               remote_dir = posixpath.join(remote_root, posixpath.dirname(path))
               remote_dir = remote_dir.rstrip("/")
-              commands.append(f"mkdir -p {q(remote_dir)}")
+              commands.append(f"mkdir -p {q(remote_dir)} || true")
               commands.append(f"put -O {q(remote_dir)} {q(path)}")
 
           # Remote deletion is performed only for paths explicitly deleted in this Git commit.
