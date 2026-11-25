@@ -38,7 +38,6 @@ function kf_dispatch(): void
         'diagnostics' => 'route_diagnostics_post',
         'profile/delete' => 'route_profile_delete',
         'filters' => 'route_filters_post',
-        'filters/toggle' => 'route_filters_toggle',
         'fav' => 'route_fav',
         'admin/users' => 'route_admin_users_post',
     ];
