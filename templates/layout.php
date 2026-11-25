@@ -70,7 +70,6 @@ $debugEnabled = kf_debug_enabled($user);
   </div>
 </div>
 <main class="wrap main">
-<?php if ($flash && !$sessionReplaced): ?><p class="flash"><?= e($flash) ?></p><?php endif; ?>
 <?php if ($sessionReplaced): ?>
 <div class="modal-backdrop" id="session-replaced-modal" role="presentation">
   <section class="modal" role="alertdialog" aria-modal="true" aria-labelledby="session-replaced-title" aria-describedby="session-replaced-message">
