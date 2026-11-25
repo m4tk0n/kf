@@ -177,7 +177,7 @@ return [
     'filters' => [
         'sections' => [
             'events' => ['countries', 'cities'],
-            'bands' => ['genres', 'countries'],
+            'bands' => ['genres', 'countries', 'cities'],
             'venues' => ['countries', 'cities'],
         ],
         'max_per_type' => 100,
