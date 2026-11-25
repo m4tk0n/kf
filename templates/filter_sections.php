@@ -20,7 +20,7 @@ $sections = ['events', 'bands', 'venues'];
   $cityGroups = [];
   foreach (($sectionOptions['cities'] ?? []) as $row) {
       $countryId = (int)$row['country_id'];
-      $cityGroups[$countryId] ??= ['name' => (string)$row['country_name'], 'rows' => []];
+      $cityGroups[$countryId] ??= ['id' => $countryId, 'name' => (string)$row['country_name'], 'rows' => []];
       $cityGroups[$countryId]['rows'][] = $row;
   }
   ?>
@@ -36,7 +36,7 @@ $sections = ['events', 'bands', 'venues'];
                 <h3><?= e($group['name']) ?></h3>
                 <div class="checks filter-checks">
                   <?php foreach ($group['rows'] as $row): ?>
-                    <label class="check filter-option"><input type="checkbox" <?php if ($quick_filters): ?>data-quick-option="<?= e($kind) ?>:cities" data-country-id="<?= $countryId ?>"<?php else: ?>name="filters[<?= e($kind) ?>][cities][]"<?php endif; ?> data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
+                    <label class="check filter-option"><input type="checkbox" <?php if ($quick_filters): ?>data-quick-option="<?= e($kind) ?>:cities" data-country-id="<?= (int)$group['id'] ?>"<?php else: ?>name="filters[<?= e($kind) ?>][cities][]"<?php endif; ?> data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
                   <?php endforeach; ?>
                 </div>
               </div>
