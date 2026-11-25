@@ -71,6 +71,7 @@ Dočasné nastavení přihlášeného uživatele musí být bezpečně oddělen�
 - Tlačítko Uložit předá celý stav do `window.kfSetSessionFilters()` a uloží jej do `sessionStorage`. Nikdy neodesílá POST a nikdy nezapisuje do JSON profilu.
 - Po uložení se návštěvník vrátí na původní výpis včetně sekce, hledání a pozice pageru. Stávající `assets/js/filters.js` následně obnoví výpis s dočasným stavem.
 - Prázdný výběr v aktuální sekci znamená nezobrazit v této sekci žádné záznamy; neovlivní jiné sekce.
+- Checkbox **Vybrat vše** na stránce `quick-filters` se vztahuje pouze na právě otevřenou sekci, nikoli na všechny tři katalogy.
 - Trvalá stránka `filters` (uživatelské menu) zůstává oddělená a vyžaduje přihlášení.
 
 ## 8. Technické provedení dočasných filtrů
