@@ -147,6 +147,7 @@ function oauth_http(string $method, string $url, array $headers = [], ?array $fo
             'headers' => array_merge(['Accept: application/json'], $headers),
             'body' => $form,
             'max_bytes' => 65536,
+            'max_redirects' => 0,
         ]);
         $data = json_decode($response['body'], true);
         return [$response['status'], is_array($data) ? $data : []];

@@ -83,7 +83,7 @@ function http_request(string $url, array $o = []): array
     $maxBytes = (int)($o['max_bytes'] ?? cfg('http.max_bytes'));
     $timeout = (int)($o['timeout'] ?? cfg('http.timeout_sec'));
     $body = $o['body'] ?? null;
-    $maxRedirects = (int)cfg('http.max_redirects');
+    $maxRedirects = max(0, (int)($o['max_redirects'] ?? cfg('http.max_redirects')));
 
     for ($hop = 0; $hop <= $maxRedirects; $hop++) {
         $p = parse_url($url);
