@@ -169,3 +169,12 @@ Dotčené soubory:
 - `assets/js/app.js` – zapamatování spouštěcího prvku a dočasná změna jeho textu,
 - `assets/css/app.css` – zelený potvrzovací vzhled tlačítka.
 
+## 8. Trvalé a dočasné filtry
+
+**Stav: dohodnuto, zatím neimplementováno.**
+
+Přihlášený uživatel má trvalé výchozí nastavení filtrů uložené v JSON profilu. Rychlé změny provedené přímo ve výpisu se ukládají pouze do `sessionStorage` a platí pro aktuální relaci; nepřepisují JSON. Reload stránky ani běžná navigace tyto změny nesmí zrušit. Uložení nového nastavení v menu aktualizuje JSON a smaže dočasné přepsání relace.
+
+Nepřihlášený návštěvník může filtry ve výpisu měnit také; jeho nastavení se ukládá pouze do `sessionStorage` a po nové relaci se vrátí na výchozí hodnoty. Trvalé ukládání do `localStorage` se nepoužívá.
+
+Podrobná specifikace včetně pravidel pro oddělení účtů, navigaci, reload a návaznost seznamu, pageru a kalendáře: [docs/004_filtry.md](004_filtry.md).
