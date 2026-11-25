@@ -32,6 +32,9 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
 <?php if ($user !== null): ?>
 <script src="<?= e(kf_asset('js/menu.js')) ?>" defer></script>
 <?php endif; ?>
+<?php if (!empty($hasQuickFilters)): ?>
+<script src="<?= e(kf_asset('js/quick-filters.js')) ?>" defer></script>
+<?php endif; ?>
 <?php if (!empty($hasLightbox)): ?>
 <script src="<?= e(kf_asset('js/lightbox.js')) ?>" defer></script>
 <?php endif; ?>
@@ -67,7 +70,8 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
       </select>
       <input type="search" name="q" value="<?= e((string)$req['q']) ?>" maxlength="100" data-min-chars="<?= max(1, (int)cfg('paging.autocomplete_min_chars')) ?>" placeholder="<?= e(kf_t('search.placeholder')) ?>" aria-label="<?= e(kf_t('search.label')) ?>" autocomplete="off">
     </form>
-    <a class="btn bar-filter-toggle" href="<?= e(url('filters')) ?>"><?= e(kf_t('filters')) ?></a>
+    <?php $quickParams = ['s' => (string)$req['s'], 'q' => (string)$req['q'], 'p' => (int)$req['p'], 'd' => (string)$req['d'], 'k' => (int)$req['k']]; if ($favOn && $user !== null) $quickParams['fav'] = 1; ?>
+    <a class="btn bar-filter-toggle" href="<?= e(url('quick-filters') . '?' . http_build_query($quickParams)) ?>"><?= e(kf_t('filters')) ?></a>
   </div>
 </div>
 <main class="wrap main">
