@@ -272,7 +272,6 @@ function filters_options(string $section, string $field): array
 function filters_save(int $uid, array $input): void
 {
     $p = user_profile_get($uid);
-    $max = max(1, (int)cfg('filters.max_per_type'));
     $saved = [];
     $hasRestriction = false;
 
@@ -286,10 +285,10 @@ function filters_save(int $uid, array $input): void
 
             $raw = $input['filters'][$section][$field] ?? [];
             if (!is_array($raw)) $raw = [];
-            $ids = array_slice(array_values(array_unique(array_filter(
+            $ids = array_values(array_unique(array_filter(
                 array_map(static fn($value): int => is_scalar($value) ? (int)$value : 0, $raw),
                 static fn(int $id): bool => $id > 0
-            ))));
+            )));
             $ids = array_values(array_filter($ids, static fn(int $id): bool => isset($allowedIds[$id])));
             sort($ids);
 
