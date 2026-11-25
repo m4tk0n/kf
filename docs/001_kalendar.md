@@ -132,47 +132,44 @@ Příklad:
 - uživatel vybere 27. 11.,
 - akce se musí zobrazit.
 
-## 9. Pager po aktivních dnech
+## 9. Pager podle začátků akcí
 
-Pager přechází mezi kalendářními dny, ve kterých alespoň jedna odpovídající akce skutečně probíhá. Nejde pouze o dny začátků akcí a nejde ani o všechny kalendářní dny bez rozdílu.
+Pager přechází pouze mezi kalendářními daty, ve kterých začíná alespoň jedna filtrovaná akce. Neprochází jednotlivé dny trvání vícedenní akce.
 
-Pro každý záznam platí aktivní interval včetně obou krajních dnů:
+Podmínka pro zařazení data do navigace:
 
-`date_from <= vybraný_den AND date_to >= vybraný_den`
+`date_from = datum začátku akce`
 
 Důsledky:
-- jednodenní akce je aktivní pouze v den svého konání,
-- vícedenní akce je aktivní každý den od začátku do konce včetně,
-- pokračující festival proto udrží pager na každém dalším dni svého trvání,
-- dny bez probíhající ani nově začínající odpovídající akce se přeskočí.
+- jednodenní akce vytvoří jeden navigační bod,
+- vícedenní festival vytvoří jeden navigační bod na první den svého konání,
+- dny mezi začátkem a koncem festivalu se při klikání na šipky přeskočí, pokud v nich nezačíná jiná akce,
+- pokud během festivalu začíná další akce, pager se na její datum zastaví,
+- kalendář i ruční výběr data nadále umožňují zobrazit libovolný den festivalu.
 
 Směry:
-- `<` – předchozí aktivní den,
-- `>` – následující aktivní den,
-- `<<` – nejbližší aktivní den v předchozím měsíci,
-- `>>` – nejbližší aktivní den v následujícím měsíci.
+- `<` – předchozí datum začátku akce,
+- `>` – následující datum začátku akce,
+- `<<` – nejbližší datum začátku akce v předchozím měsíci,
+- `>>` – nejbližší datum začátku akce v následujícím měsíci.
 
-Pager musí respektovat stejné hledání, oblíbené a uživatelské filtry jako výpis akcí.
+Pager musí respektovat stejné hledání, oblíbené a uživatelské filtry jako výpis akcí. Vícedenní akce se v pageru počítá pouze podle svého `date_from`, nikoliv podle všech dnů svého trvání.
 
 ### Příklad vícedenního festivalu
 
-Pokud festival trvá 14.–16. 2. 2028 a další samostatná akce se koná 28. 2. 2028, přechod pageru je:
+Pokud festival trvá 16.–28. 2. 2028 a během jeho trvání nezačíná žádná další akce, navigace je:
 
 | Pager | Co se zobrazí |
 |---|---|
-| 14. 2. 2028 | Festival a všechny další akce od tohoto dne |
-| 15. 2. 2028 | Pokračující festival a následující akce |
-| 16. 2. 2028 | Poslední den festivalu a následující akce |
-| 28. 2. 2028 | Akce konající se 28. 2. a případné další |
+| 16. 2. 2028 | Festival a další akce od tohoto data |
+| 1. 3. 2028 | Další akce začínající 1. 3. 2028 |
 
-Výpis pro vybraný den obsahuje všechny odpovídající akce, které v tento den nebo později ještě probíhají; proto se budoucí akce zobrazují i před svým začátkem. Po skončení festivalu už se ve výpisu nezobrazí.
+Pokud například 20. 2. začíná samostatný koncert, pager se zastaví také na 20. 2. Festival se přitom zobrazí i v tomto dni, protože stále probíhá.
 
 Při změně data se:
 - nastaví nové datum,
 - resetuje stránkování na první stránku,
 - resetuje případný offset akcí.
-
-Pager nesmí přecházet přes jednotlivé záznamy. Přechází po jednotlivých aktivních dnech, přičemž vícedenní akce vytváří souvislou řadu aktivních dnů.
 
 ## 10. Technické požadavky
 
@@ -209,7 +206,33 @@ Každá změna musí být ověřena také na příkladu vícedenní akce přesah
 Kalendář, pager a výpis vycházejí ze stejného časového intervalu akce, ale mají odlišný účel:
 
 - Kalendář označuje každý den trvání akce tečkou podle jejího typu.
-- Pager přechází mezi aktivními dny, tedy dny, kdy alespoň jedna filtrovaná akce probíhá.
-- Výpis pro zvolený den zobrazuje odpovídající akce, které v tento den nebo později ještě probíhají.
+- Pager přechází pouze mezi daty začátků filtrovaných akcí.
+- Výpis pro zvolené datum nadále zahrnuje také vícedenní akce, které v tento den ještě probíhají, i když začaly dříve.
+- Samostatný přehled „Probíhající akce“ zobrazuje akce, které zahrnují dnešní datum, nezávisle na datu právě nastaveném v pageru.
 
-U vícedenní akce se proto musí shodovat její rozsah v kalendáři a v navigaci pageru. Pager nesmí přeskočit prostřední den festivalu jen proto, že v něm nezačíná nový záznam.
+U vícedenní akce se proto její celé trvání zachovává ve výpisu a kalendáři, ale pager kvůli ní nevytváří navigační zastávku pro každý den.
+
+## 13. Přehled probíhajících akcí
+
+Mezi horní pager a hlavní výpis akcí se vloží rozbalovací ovládací prvek s textem:
+
+`Probíhající akce (N)`
+
+Počet a seznam se počítají podle dnešního data v časové zóně aplikace, nikoliv podle data zvoleného v pageru.
+
+Akce je aktuální, pokud platí:
+
+`date_from <= dnes AND date_to >= dnes`
+
+Pravidla:
+- zahrnou se jednodenní akce konající se dnes,
+- zahrnou se vícedenní akce, jejichž interval zahrnuje dnešní den,
+- každý záznam se započítá pouze jednou bez ohledu na počet dnů jeho trvání,
+- seznam i počet respektují aktuální hledání, oblíbené a všechny aktivní uživatelské filtry,
+- změna data pageru nemění obsah ani počet aktuálních akcí,
+- rozbalení přehledu nemění datum pageru ani hlavní výpis,
+- při nulovém počtu se zobrazí neaktivní tlačítko `Probíhající akce (0)`,
+- při kladném počtu se seznam zobrazí po rozbalení tlačítka,
+- přehled se vykresluje pouze v sekci akcí, nikoliv v sekci kapel a klubů.
+
+Přehled je součástí stejné částečné odpovědi jako pager a hlavní výpis, takže se při živém hledání a změnách filtrů aktualizuje společně s nimi.
