@@ -144,3 +144,28 @@ Konfigurace:
 - Tlačítka se zobrazují pouze pro poskytovatele, který je povolený v config.php a má vyplněné potřebné klíče v .env.
 
 Podrobná specifikace a testovací scénáře: docs/005_prihlaseni.md.
+
+## 7. Potvrzení úspěšné akce přímo na tlačítku
+
+**Stav: implementováno, čeká na ověření po nasazení.**
+
+Po úspěšném odeslání formuláře nebo provedení akce se běžná informační zpráva (flash), například „Filtry uloženy“, nesmí vykreslit jako samostatný zelený prvek v obsahu stránky ani se kvůli ní nesmí do DOM vkládat nový informační `div` nebo jiný banner.
+
+Místo toho se potvrzení zobrazí přímo na ovládacím prvku, který akci vyvolal:
+
+1. Při kliknutí na tlačítko nebo odeslání formuláře se zapamatuje ovládací prvek, který akci spustil.
+2. Pokud akce po úspěšném zpracování přesměruje nebo znovu načte stránku, identifikace ovládacího prvku se dočasně zachová přes `sessionStorage`.
+3. Po návratu na stránku se na odpovídajícím tlačítku zobrazí přesný text úspěšné zprávy, který by se jinak zobrazil ve flash banneru.
+4. Tlačítko se na dobu 3 sekund vizuálně zvýrazní zeleným stavem.
+5. Po 3 sekundách se obnoví původní text i původní vzhled tlačítka.
+6. Samostatný zelený flash banner se nevykreslí.
+
+Platí to obecně pro běžná potvrzení úspěšných akcí, nejen pro ukládání filtrů. Text potvrzení se nepřepisuje pevně v JavaScriptu; používá se skutečná zpráva vytvořená konkrétní akcí.
+
+Pokud nelze původní ovládací prvek bezpečně určit, nesmí se potvrzení zobrazit na nesouvisejícím tlačítku. Chybové zprávy a zvláštní bezpečnostní/modální upozornění nejsou tímto pravidlem nahrazena.
+
+Dotčené soubory:
+- `templates/layout.php` – předání textu flash zprávy klientské části bez vykreslení banneru,
+- `assets/js/app.js` – zapamatování spouštěcího prvku a dočasná změna jeho textu,
+- `assets/css/app.css` – zelený potvrzovací vzhled tlačítka.
+
