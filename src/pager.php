@@ -78,10 +78,19 @@ function kf_default_day(string $qa): string
     $today = date('Y-m-d');
     [$f, $p] = kf_events_filter($qa);
 
-    // Výchozí datum určuje začátek akce, nikoli konec právě probíhající akce.
-    // Tím se pager nevrátí na začátek festivalu, který začal v minulosti.
+    // Pokud dnes probíhá alespoň jedna filtrovaná akce, výchozím dnem je dnes.
+    $hasCurrent = q(
+        'SELECT 1 FROM ' . tbl('events') . ' a WHERE a.date_from <= ? AND a.date_to >= ?' . $f . ' LIMIT 1',
+        array_merge([$today, $today], $p)
+    )->fetchColumn();
+
+    if ($hasCurrent !== false) {
+        return $today;
+    }
+
+    // Jinak vyber nejbližší budoucí datum začátku filtrované akce.
     $v = q(
-        'SELECT MIN(a.date_from) FROM ' . tbl('events') . ' a WHERE a.date_from >= ?' . $f,
+        'SELECT MIN(a.date_from) FROM ' . tbl('events') . ' a WHERE a.date_from > ?' . $f,
         array_merge([$today], $p)
     )->fetchColumn();
 
