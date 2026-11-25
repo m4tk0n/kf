@@ -17,11 +17,13 @@ concurrency:
 
 jobs:
   deploy:
-    name: Upload repository files to the live server
+    name: Deploy only changed files to the live server
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
+      - name: Checkout main with history
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Verify this is a complete website checkout
         run: |
@@ -37,13 +39,15 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y lftp
 
-      - name: Upload website and remove retired diagnostic files
+      - name: Deploy only added, modified and deleted files
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_PORT: ${{ secrets.FTP_PORT }}
           FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
           : "${FTP_SERVER:?Missing GitHub Secret FTP_SERVER}"
@@ -54,13 +58,62 @@ jobs:
 
           python3 - <<'PY'
           import os
+          import posixpath
+          import subprocess
+
+          excluded = (
+              ".git", ".github", ".env", "docs", "data", "cache",
+              "img", "uploads", "logs", "tmp", "ai-backups",
+              ".ftp-deploy-sync-state.json",
+          )
+
+          def is_excluded(path):
+              return any(path == item or path.startswith(item + "/") for item in excluded)
 
           def q(value):
               if "\n" in value or "\r" in value:
-                  raise SystemExit("FTP settings must not contain newlines")
+                  raise SystemExit("FTP paths and settings must not contain newlines")
               return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
-          remote = os.environ["FTP_REMOTE_DIR"].rstrip("/") + "/"
+          before = os.environ["BEFORE_SHA"]
+          after = os.environ["AFTER_SHA"]
+          if not before or set(before) == {"0"}:
+              raise SystemExit("Cannot safely determine changed files: missing previous commit SHA")
+
+          raw = subprocess.check_output([
+              "git", "diff", "--name-status", "-z", "--find-renames",
+              before, after,
+          ])
+          fields = raw.decode("utf-8", errors="surrogateescape").split("\0")
+          remote_root = os.environ["FTP_REMOTE_DIR"].rstrip("/")
+          uploads = []
+          deletions = []
+          i = 0
+
+          while i < len(fields) and fields[i]:
+              status = fields[i]
+              i += 1
+              if status.startswith(("R", "C")):
+                  old_path, new_path = fields[i], fields[i + 1]
+                  i += 2
+                  if status.startswith("R") and not is_excluded(old_path):
+                      deletions.append(old_path)
+                  if not is_excluded(new_path):
+                      uploads.append(new_path)
+              else:
+                  path = fields[i]
+                  i += 1
+                  if is_excluded(path):
+                      continue
+                  if status == "D":
+                      deletions.append(path)
+                  else:
+                      uploads.append(path)
+
+          # Keep ordering deterministic and avoid duplicate FTP operations.
+          uploads = sorted(set(uploads))
+          deletions = sorted(set(deletions))
+
           commands = [
               "set cmd:fail-exit yes",
               "set net:max-retries 2",
@@ -68,28 +121,32 @@ jobs:
               "set ftp:passive-mode yes",
               f"open -p {q(os.environ['FTP_PORT'])} {q(os.environ['FTP_SERVER'])}",
               f"user {q(os.environ['FTP_USERNAME'])} {q(os.environ['FTP_PASSWORD'])}",
-              # Upload current files without mirroring deletions globally.
-              "mirror --reverse --delete --verbose --parallel=2 "
-              "--exclude-glob .git --exclude-glob '.git/**' "
-              "--exclude-glob .github --exclude-glob '.github/**' "
-              "--exclude-glob .env --exclude-glob '.env.*' "
-              "--exclude-glob docs --exclude-glob 'docs/**' "
-              "--exclude-glob data --exclude-glob 'data/**' "
-              "--exclude-glob cache --exclude-glob 'cache/**' "
-              "--exclude-glob img --exclude-glob 'img/**' "
-              "--exclude-glob uploads --exclude-glob 'uploads/**' "
-              "--exclude-glob logs --exclude-glob 'logs/**' "
-              "--exclude-glob tmp --exclude-glob 'tmp/**' "
-              "--exclude-glob ai-backups --exclude-glob 'ai-backups/**' "
-              "--exclude-glob .ftp-deploy-sync-state.json "
-              f". {q(remote)}",
-              # --delete above removes only individual remote files absent from
-              # the repository source. It does not run recursive directory deletion.
-              "bye",
           ]
+
+          for path in uploads:
+              remote_dir = posixpath.join(remote_root, posixpath.dirname(path))
+              remote_dir = remote_dir.rstrip("/")
+              commands.append(f"mkdir -p {q(remote_dir)}")
+              commands.append(f"put -O {q(remote_dir)} {q(path)}")
+
+          # Remote deletion is performed only for paths explicitly deleted in this Git commit.
+          for path in deletions:
+              remote_path = posixpath.join(remote_root, path)
+              commands.append(f"rm -f {q(remote_path)}")
+
+          commands.append("bye")
           with open("/tmp/kf-deploy.lftp", "w", encoding="utf-8") as f:
               f.write("\n".join(commands) + "\n")
+
+          print(f"Files to upload: {len(uploads)}")
+          print(f"Files to delete on server: {len(deletions)}")
+          if not uploads and not deletions:
+              print("No deployable file changes in this commit.")
           PY
 
-          lftp -f /tmp/kf-deploy.lftp
+          if grep -qE '^(put|rm -f) ' /tmp/kf-deploy.lftp; then
+            lftp -f /tmp/kf-deploy.lftp
+          else
+            echo "No website files changed; FTP was not contacted."
+          fi
           rm -f /tmp/kf-deploy.lftp
