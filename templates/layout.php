@@ -36,7 +36,7 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
 <script src="<?= e(kf_asset('js/lightbox.js')) ?>" defer></script>
 <?php endif; ?>
 </head>
-<body data-filter-identity="<?= e($filterIdentity) ?>"<?= $clearFilterSession ? ' data-clear-filter-session="1"' : '' ?><?= $flash && !$sessionReplaced ? ' data-flash-text="' . e($flash) . '"' : '' ?>>
+<body data-home-url="<?= e(url('')) ?>" data-back-label="<?= e(t('common.back')) ?>" data-filter-identity="<?= e($filterIdentity) ?>"<?= $clearFilterSession ? ' data-clear-filter-session="1"' : '' ?><?= $flash && !$sessionReplaced ? ' data-flash-text="' . e($flash) . '"' : '' ?>>
 <div class="head">
   <header class="wrap top">
     <a class="brand" href="<?= e(url('')) ?>">K&amp;F</a>
