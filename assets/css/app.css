@@ -313,3 +313,13 @@ abbr{text-decoration:none}
 .list>li.has-fav .item{padding-right:52px}
 .rowfav{position:absolute;right:9px;top:50%;transform:translateY(-50%);width:34px;height:34px;font-size:1.15rem}
 
+
+
+/* Krátké potvrzení akce přímo na tlačítku */
+.btn.flash-success,
+button.flash-success,
+input[type="submit"].flash-success{
+  border-color:rgba(83,217,154,.65)!important;
+  background:rgba(83,217,154,.2)!important;
+  color:#9be8c4!important;
+}
