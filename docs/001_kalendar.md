@@ -155,6 +155,13 @@ Směry:
 
 Pager musí respektovat stejné hledání, oblíbené a uživatelské filtry jako výpis akcí. Vícedenní akce se v pageru počítá pouze podle svého `date_from`, nikoliv podle všech dnů svého trvání.
 
+### Výchozí datum pageru
+
+Při prvním načtení výpisu bez ručně zvoleného data:
+- pokud dnes probíhá alespoň jedna filtrovaná akce (její interval zahrnuje dnešní datum), pager se nastaví na dnešek,
+- pokud dnes žádná filtrovaná akce neprobíhá, pager se nastaví na nejbližší budoucí datum začátku filtrované akce,
+- výběr respektuje hledání, oblíbené a uživatelské filtry.
+
 ### Příklad vícedenního festivalu
 
 Pokud festival trvá 16.–28. 2. 2028 a během jeho trvání nezačíná žádná další akce, navigace je:
