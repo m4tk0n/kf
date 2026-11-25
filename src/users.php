@@ -233,7 +233,7 @@ function filters_get(int $uid): array
             )));
         }
     }
-    return ['show_all' => (bool)$p['show_filtr_all'], 'sets' => $sets];
+    return ['show_all' => (bool)$p['show_filtr_all'], 'none' => !empty($p['filters_none']), 'sets' => $sets];
 }
 
 /**
@@ -287,8 +287,9 @@ function filters_options(string $section, string $field): array
 function filters_save(int $uid, array $input): void
 {
     $p = user_profile_get($uid);
+    $showAll = !empty($input['show_filtr_all']);
     $saved = [];
-    $hasRestriction = false;
+    $hasSelection = false;
 
     foreach ((array)cfg('filters.sections') as $section => $fields) {
         foreach ($fields as $field) {
@@ -307,22 +308,21 @@ function filters_save(int $uid, array $input): void
             $ids = array_values(array_filter($ids, static fn(int $id): bool => isset($allowedIds[$id])));
             sort($ids);
 
-            // Prázdný výběr znamená bez omezení (vše), stejně jako kompletní výběr.
-            if ($ids && count($ids) < count($allowedIds)) {
-                $saved[$section][$field] = $ids;
-                $hasRestriction = true;
-            } else {
-                $saved[$section][$field] = [];
+            $saved[$section][$field] = $ids;
+            if ($ids) {
+                $hasSelection = true;
             }
         }
     }
 
-    if ($hasRestriction) {
-        $p['show_filtr_all'] = false;
-        $p['filters'] = $saved;
+    // Stav checkboxu se ukládá přesně podle odeslané hodnoty.
+    // Prázdný vlastní výběr je samostatný stav (nezobrazovat žádné záznamy).
+    $p['show_filtr_all'] = $showAll;
+    if ($showAll) {
+        unset($p['filters'], $p['filters_none']);
     } else {
-        $p['show_filtr_all'] = true;
-        unset($p['filters']);
+        $p['filters'] = $saved;
+        $p['filters_none'] = !$hasSelection;
     }
     unset($p['filters_enabled']);
     user_profile_put($uid, $p);
