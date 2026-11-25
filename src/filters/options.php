@@ -41,3 +41,17 @@ function filters_options(string $section, string $field): array
 
     return [];
 }
+
+/** Státy použité v publikovaných záznamech dané sekce; samostatná rychlá filtrovací skupina. */
+function filters_quick_country_options(string $section): array
+{
+    if (!in_array($section, ['events', 'bands', 'venues'], true)) return [];
+    $countryName = 'co.`name_' . current_lang() . '`';
+    return q(
+        'SELECT DISTINCT co.id, ' . $countryName . ' AS name'
+        . ' FROM ' . tbl($section) . ' a'
+        . ' JOIN ' . tbl('cities') . ' c ON c.id = a.city_id'
+        . ' JOIN ' . tbl('countries') . ' co ON co.id = c.country_id'
+        . ' ORDER BY name'
+    )->fetchAll();
+}
