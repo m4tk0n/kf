@@ -186,14 +186,32 @@ function kf_load(array $req): array
             . $country . ' AS country, v.name AS venue';
         $n = $per('events');
         $d = $req['d'] !== '' ? $req['d'] : kf_default_day($qa);
-        $k = 0; // pager akcí přechází po dnech, ne po blocích záznamů
+        $k = 0; // pager akcí přechází po datech začátků akcí
+
         $rows = q(
             'SELECT ' . $cols . $from . $where . ' AND a.date_to >= ?'
             . ' ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id LIMIT ' . $n,
-            array_merge([$d], $params)
+            array_merge($params, [$d])
         )->fetchAll(PDO::FETCH_ASSOC);
+
+        // Aktuální akce jsou nezávislé na datu pageru: zobrazí se i při prohlížení vzdálené budoucnosti.
+        // Stejné hledání, oblíbené a uživatelské filtry jako v hlavním výpisu.
+        $today = date('Y-m-d');
+        $currentRows = q(
+            'SELECT ' . $cols . $from . $where . ' AND a.date_from <= ? AND a.date_to >= ?'
+            . ' ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id',
+            array_merge($params, [$today, $today])
+        )->fetchAll(PDO::FETCH_ASSOC);
+
         $total = (int)q('SELECT COUNT(*) FROM ' . tbl('events') . ' a' . $where, $params)->fetchColumn();
-        return ['req' => $req, 'rows' => $rows, 'count' => $total, 'nav' => kf_event_nav($req, $d, $k, $n, $qa)];
+        return [
+            'req' => $req,
+            'rows' => $rows,
+            'count' => $total,
+            'current_rows' => $currentRows,
+            'current_count' => count($currentRows),
+            'nav' => kf_event_nav($req, $d, $k, $n, $qa),
+        ];
     } elseif ($s === 'bands') {
         $from = ' FROM ' . tbl('bands') . ' a' . $geo . ' LEFT JOIN ' . tbl('genres') . ' g ON g.id = a.genre_id';
         $cols = 'a.id, a.name, a.logo, c.name AS city, co.iso2, ' . $country . ' AS country, g.name AS genre';
