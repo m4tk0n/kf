@@ -140,7 +140,7 @@ function kf_add_months(DateTimeImmutable $d, int $n): DateTimeImmutable
     return $first->setDate((int)$first->format('Y'), (int)$first->format('n'), min((int)$d->format('j'), (int)$first->format('t')));
 }
 
-// společný filtr výpisů, pageru i kalendáře: hledání + oblíbené (alias hlavní tabulky = a)
+// Společný filtr výpisů, pageru i kalendáře: hledání, oblíbené a uživatelské preference.
 function kf_list_filter(string $qa, string $kind): array
 {
     if (!in_array($kind, ['events', 'bands', 'venues'], true)) throw new InvalidArgumentException('kind');
@@ -148,12 +148,45 @@ function kf_list_filter(string $qa, string $kind): array
     $p = [];
     if ($qa !== '') {
         $sql .= ' AND LOWER(a.name_ascii) LIKE ?';
-        $p[] = '%' . addcslashes($qa, '%_\\') . '%';
+        $p[] = '%' . addcslashes($qa, '%_\\\\') . '%';
     }
-    $u = kf_get('fav') === '1' ? auth_resolve() : null; // host parametr fav ignoruje
-    if ($u !== null) {
+
+    $user = auth_resolve();
+    if ($user !== null) {
+        $uFilters = filters_get((int)$user['id']);
+        if ($uFilters['enabled']) {
+            $sets = $uFilters['sets'][$kind] ?? [];
+
+            // Stát se vztahuje k městu záznamu; subquery nevyžaduje další JOIN v pageru ani kalendáři.
+            $countries = array_values(array_filter(array_map('intval', $sets['countries'] ?? []), static fn(int $id): bool => $id > 0));
+            if ($countries) {
+                $in = implode(',', array_fill(0, count($countries), '?'));
+                $sql .= ' AND a.city_id IN (SELECT fc.id FROM ' . tbl('cities') . ' fc WHERE fc.country_id IN (' . $in . '))';
+                array_push($p, ...$countries);
+            }
+
+            $cities = array_values(array_filter(array_map('intval', $sets['cities'] ?? []), static fn(int $id): bool => $id > 0));
+            if ($cities) {
+                $in = implode(',', array_fill(0, count($cities), '?'));
+                $sql .= ' AND a.city_id IN (' . $in . ')';
+                array_push($p, ...$cities);
+            }
+
+            if ($kind === 'bands') {
+                $genres = array_values(array_filter(array_map('intval', $sets['genres'] ?? []), static fn(int $id): bool => $id > 0));
+                if ($genres) {
+                    $in = implode(',', array_fill(0, count($genres), '?'));
+                    $sql .= ' AND a.genre_id IN (' . $in . ')';
+                    array_push($p, ...$genres);
+                }
+            }
+        }
+    }
+
+    // Host parametr fav ignoruje; oblíbené jsou dostupné jen přihlášenému uživateli.
+    if (kf_get('fav') === '1' && $user !== null) {
         $sql .= ' AND EXISTS (SELECT 1 FROM ' . tbl('fav_' . $kind) . ' f WHERE f.id = a.id AND f.user_id = ?)';
-        $p[] = (int)$u['id'];
+        $p[] = (int)$user['id'];
     }
     return [$sql, $p];
 }
