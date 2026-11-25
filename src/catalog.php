@@ -156,6 +156,7 @@ function kf_list_filter(string $qa, string $kind): array
     array_push($p, ...$filterParams);
 
     // Host parametr fav ignoruje; oblíbené jsou dostupné jen přihlášenému uživateli.
+    $user = auth_resolve();
     if (kf_get('fav') === '1' && $user !== null) {
         $sql .= ' AND EXISTS (SELECT 1 FROM ' . tbl('fav_' . $kind) . ' f WHERE f.id = a.id AND f.user_id = ?)';
         $p[] = (int)$user['id'];
