@@ -82,23 +82,43 @@ Jeden účet může mít současně pouze jednu aktivní session. Přihlášení
 
 Úplná pravidla a ověřovací scénář jsou v `docs/003_session.md`. Tento dokument je zde uveden jako přehledová položka; podrobná specifikace se neduplikuje.
 
-## 4. Uživatelské menu – zavření kliknutím mimo
+## 4. Uživatelské menu přihlášeného uživatele
 
 **Stav: implementováno, čeká na praktické ověření.**
 
-U přihlášeného uživatele platí pro otevřené uživatelské menu tato pravidla:
+Tato pravidla platí vždy, když má přihlášený uživatel otevřené uživatelské menu.
 
-- Menu se zavře výběrem položky menu.
-- Menu se zavře také kliknutím kamkoliv mimo jeho oblast.
-- Kliknutí mimo menu slouží výhradně k zavření menu. Nesmí současně aktivovat odkaz, tlačítko, ovládací prvek ani jinou akci, která se nachází pod místem kliknutí.
-- Pokud chce uživatel po zavření menu aktivovat prvek na stránce, musí na něj kliknout znovu.
-- Kliknutí uvnitř menu nesmí být považováno za kliknutí mimo menu.
+### Zavření menu
 
-Zavření při kliknutí mimo menu se zpracovává ve fázi zachytávání události (capture). Událost se zruší a zastaví její další šíření ještě před obsluhou cílového prvku. Tím se zabrání například nechtěnému přepnutí oblíbených, navigaci nebo odeslání formuláře jedním kliknutím, které mělo pouze zavřít menu.
+Menu se zavře pouze jedním z těchto způsobů:
+1. Uživatel vybere položku přímo v uživatelském menu.
+2. Uživatel klikne kamkoliv mimo uživatelské menu.
+
+Kliknutí uvnitř menu se nepovažuje za kliknutí mimo menu. Výběr položky menu provede její běžnou akci a menu se zavře.
+
+### Kliknutí mimo menu – výhradně zavření
+
+Kliknutí mimo otevřené menu má jediný účel: zavřít menu. Toto kliknutí nesmí vyvolat žádnou další reakci aplikace.
+
+To platí pro **jakýkoliv prvek a jakoukoliv oblast stránky mimo menu**, nejen pro prvky bezprostředně pod menu. Zejména se nesmí:
+
+- otevřít odkaz ani změnit stránka nebo URL,
+- aktivovat tlačítko, formulář nebo jiné ovládání,
+- změnit oblíbené položky, filtry, datum, výběr katalogu ani jiný stav,
+- spustit žádný obslužný kód kliknutí ani jiná akce navázaná na cílový prvek,
+- provést výchozí akce prohlížeče vyvolaná tímto kliknutím.
+
+Kliknutí se musí zachytit a zrušit dříve, než je doručeno cílovému prvku nebo jeho nadřazeným prvkům. Nesmí se tedy stát, že jedno kliknutí současně zavře menu a aktivuje cokoliv na stránce.
+
+Pokud chce uživatel po zavření menu použít prvek na stránce, musí na něj provést **nové, samostatné kliknutí**.
+
+### Implementační pravidlo
+
+Obsluha kliknutí mimo menu musí běžet ve fázi zachytávání události (capture). Při otevřeném menu a cíli mimo menu musí zrušit výchozí akci a zastavit další šíření události; teprve poté menu zavře. Kliknutí uvnitř menu se tímto blokováním nesmí ovlivnit.
 
 Dotčené soubory:
 - `templates/layout.php` – struktura uživatelského menu.
-- `assets/js/menu.js` – zavření menu a blokování akce pod místem kliknutí.
+- `assets/js/menu.js` – zavření menu a úplné zablokování kliknutí mimo menu pro ostatní prvky stránky.
 
 ## 5. Pravidlo průběžné dokumentace
 
