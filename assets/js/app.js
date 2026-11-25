@@ -1,6 +1,35 @@
 /* assets/js/app.js */
 (function () {
   'use strict';
+  // Jednotné tlačítko Zpět na každé samostatné stránce s nadpisem.
+  // Pokud předchozí stránka patří do stejného webu, vrátíme se v historii;
+  // při přímém otevření stránky nabídneme návrat na hlavní výpis.
+  var main = document.querySelector('main.main');
+  var heading = main && main.querySelector('h1');
+  if (heading && !main.querySelector('.page-title-row > .btn, .back')) {
+    var row = document.createElement('div');
+    row.className = 'page-title-row';
+    var parent = heading.parentNode;
+    parent.insertBefore(row, heading);
+    row.appendChild(heading);
+    var back = document.createElement('a');
+    back.className = 'btn page-back';
+    back.href = document.body.getAttribute('data-home-url') || '/';
+    back.textContent = document.body.getAttribute('data-back-label') || 'Zpět';
+    back.addEventListener('click', function (ev) {
+      var ref = document.referrer;
+      if (ref) {
+        try {
+          if (new URL(ref).origin === window.location.origin) {
+            ev.preventDefault();
+            window.history.back();
+          }
+        } catch (e) {}
+      }
+    });
+    row.appendChild(back);
+  }
+
   var sectionSelect = document.querySelector('.bar-search select');
   if (sectionSelect && !document.getElementById('view')) {
     sectionSelect.addEventListener('change', function () { sectionSelect.form.submit(); });
