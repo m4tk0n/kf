@@ -312,3 +312,13 @@ input[type="submit"].flash-success{
 .page-title-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 10px}
 .page-title-row h1{margin:0;min-width:0}
 .page-back{flex:none}
+
+
+/* Rozbalovací přehled akcí, které probíhají dnes (nezávisle na datu pageru) */
+.current-events{margin:0 0 12px}
+.current-events-summary{width:100%;justify-content:space-between;list-style:none;cursor:pointer}
+.current-events-summary::-webkit-details-marker{display:none}
+.current-events-summary::after{content:"▾";margin-left:10px;color:var(--muted);font-size:.9rem}
+.current-events[open]>.current-events-summary::after{content:"▴"}
+.current-events-list{margin-top:9px}
+.current-events-toggle{width:100%;margin:0 0 12px}
