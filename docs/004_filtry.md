@@ -143,6 +143,7 @@ V každé ze tří záložek (Akce, Kapely, Kluby a místa) jsou samostatné sku
 Zachovat dosavadní vzhled, CSS třídy, rozložení stránky, záložky a ovládací prvky. Měnit pouze nezbytnou logiku a markup potřebné pro uvedené chování. Nevytvářet nové vizuální rozložení ani neupravovat jiné části stránky.
 
 ### Chování checkboxů států
+- Checkbox státu je aktivní (zaškrtnutý) právě tehdy, když jsou zaškrtnuta všechna dostupná města daného státu. Pokud není zaškrtnuto byť jen jedno město, checkbox státu musí být neaktivní (odškrtnutý).
 - Zaškrtnutí státu musí automaticky zaškrtnout všechna města, která pod něj ve skupině Města patří.
 - Odškrtnutí státu musí automaticky odškrtnout všechna jeho města.
 - Akce se týká pouze měst příslušného státu; města ostatních států zůstávají beze změny.
