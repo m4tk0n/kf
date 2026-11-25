@@ -79,4 +79,37 @@
     if (closeModal) closeModal.focus();
   }
 
+  // Informační okno na stránce filtrů.
+  var filtersModal = document.getElementById('filters-help-modal');
+  if (filtersModal) {
+    var filtersOpen = document.querySelector('[data-filters-help-open]');
+    var filtersClose = filtersModal.querySelectorAll('[data-filters-help-close]');
+    var previousFocus = null;
+    function openFiltersHelp() {
+      previousFocus = document.activeElement;
+      filtersModal.hidden = false;
+      var close = filtersModal.querySelector('[data-filters-help-close]');
+      if (close) close.focus();
+      document.addEventListener('keydown', onFiltersHelpKeydown);
+    }
+    function closeFiltersHelp() {
+      filtersModal.hidden = true;
+      document.removeEventListener('keydown', onFiltersHelpKeydown);
+      if (previousFocus && previousFocus.focus) previousFocus.focus();
+    }
+    function onFiltersHelpKeydown(ev) {
+      if (ev.key === 'Escape') {
+        ev.preventDefault();
+        closeFiltersHelp();
+      }
+    }
+    if (filtersOpen) filtersOpen.addEventListener('click', openFiltersHelp);
+    for (var fi = 0; fi < filtersClose.length; fi++) {
+      filtersClose[fi].addEventListener('click', closeFiltersHelp);
+    }
+    filtersModal.addEventListener('click', function (ev) {
+      if (ev.target === filtersModal) closeFiltersHelp();
+    });
+  }
+
 })();
