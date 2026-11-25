@@ -36,7 +36,7 @@ $sections = ['events', 'bands', 'venues'];
                 <h3><?= e($group['name']) ?></h3>
                 <div class="checks filter-checks">
                   <?php foreach ($group['rows'] as $row): ?>
-                    <label class="check filter-option"><input type="checkbox" <?php if ($quick_filters): ?>data-quick-option="<?= e($kind) ?>:cities"<?php else: ?>name="filters[<?= e($kind) ?>][cities][]"<?php endif; ?> data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
+                    <label class="check filter-option"><input type="checkbox" <?php if ($quick_filters): ?>data-quick-option="<?= e($kind) ?>:cities" data-country-id="<?= $countryId ?>"<?php else: ?>name="filters[<?= e($kind) ?>][cities][]"<?php endif; ?> data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
                   <?php endforeach; ?>
                 </div>
               </div>
@@ -44,7 +44,7 @@ $sections = ['events', 'bands', 'venues'];
           <?php else: ?>
             <div class="checks filter-checks">
               <?php foreach ($sectionOptions[$field] as $row): ?>
-                <label class="check filter-option"><input type="checkbox" <?php if ($quick_filters): ?>data-quick-option="<?= e($kind) ?>:<?= e($field) ?>"<?php else: ?>name="filters[<?= e($kind) ?>][<?= e($field) ?>][]"<?php endif; ?> data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets[$field] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
+                <label class="check filter-option"><input type="checkbox" <?php if ($quick_filters): ?>data-quick-option="<?= e($kind) ?>:<?= e($field) ?>"<?php if ($field === 'countries'): ?>data-quick-country-option<?php endif; ?><?php else: ?>name="filters[<?= e($kind) ?>][<?= e($field) ?>][]"<?php endif; ?> data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets[$field] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
               <?php endforeach; ?>
             </div>
           <?php endif; ?>
