@@ -30,13 +30,38 @@ function filters_get(int $uid): array
     }
 
     $sets = [];
+    $profileChanged = false;
     foreach ((array)cfg('filters.sections') as $section => $fields) {
         foreach ($fields as $field) {
-            $sets[$section][$field] = array_values(array_unique(array_filter(
+            $ids = array_values(array_unique(array_filter(
                 array_map('intval', (array)($p['filters'][$section][$field] ?? [])),
                 static fn(int $id): bool => $id > 0
             )));
+
+            // Migrace starého samostatného výběru států na konkrétní města.
+            // Dříve uložený stát znamenal všechna města státu; nově je pouze souhrnným checkboxem.
+            if ($field === 'cities') {
+                $legacyCountries = array_values(array_unique(array_filter(
+                    array_map('intval', (array)($p['filters'][$section]['countries'] ?? [])),
+                    static fn(int $id): bool => $id > 0
+                )));
+                if ($legacyCountries) {
+                    foreach (filters_options((string)$section, 'cities') as $city) {
+                        if (in_array((int)$city['country_id'], $legacyCountries, true)) {
+                            $ids[] = (int)$city['id'];
+                        }
+                    }
+                    $ids = array_values(array_unique($ids));
+                    sort($ids);
+                    unset($p['filters'][$section]['countries']);
+                    $profileChanged = true;
+                }
+            }
+            $sets[$section][$field] = $ids;
         }
+    }
+    if ($profileChanged) {
+        user_profile_put($uid, $p);
     }
     return ['show_all' => (bool)$p['show_filtr_all'], 'none' => !empty($p['filters_none']), 'sets' => $sets];
 }
