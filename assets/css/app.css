@@ -230,6 +230,7 @@ abbr{text-decoration:none}
 .modal .btn{min-height:36px;min-width:96px}
 
 
+/* Neaktivní oblíbené hvězdy: pouze obrys, bez výplně. */
 /* Detail akce / kapely / klubu, hvězdička oblíbených, lightbox */
 .back{margin:0 0 10px;font-size:.85rem}
 .back a{color:var(--muted)}
