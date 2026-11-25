@@ -46,24 +46,10 @@
       var ids = Array.isArray(current[parts[1]]) ? current[parts[1]].map(String) : [];
       input.checked = state.show_all || ids.indexOf(input.value) !== -1;
     });
-    form.querySelectorAll('[data-quick-country-option]').forEach(syncCountry);
+    form.querySelectorAll('[data-filter-country-option]').forEach(syncCountry);
     syncAll();
   }
 
-  form.querySelectorAll('[data-quick-country-option]').forEach(function (country) {
-    country.addEventListener('change', function () {
-      cityInputs(country.value).forEach(function (city) { city.checked = country.checked; });
-      syncAll();
-    });
-  });
-  options.forEach(function (input) {
-    if (!input.getAttribute('data-quick-option').endsWith(':cities')) return;
-    input.addEventListener('change', function () {
-      var country = form.querySelector('[data-quick-country-option][value="' + input.getAttribute('data-country-id') + '"]');
-      if (country) syncCountry(country);
-      syncAll();
-    });
-  });
 
   function readAllSections() {
     var sets = {};
@@ -82,12 +68,6 @@
   }
 
   syncControls();
-  var all = form.querySelector('[data-filter-all]');
-  if (all) all.addEventListener('change', function () {
-    options.forEach(function (input) { input.checked = all.checked; });
-    form.querySelectorAll('[data-quick-country-option]').forEach(syncCountry);
-    all.indeterminate = false;
-  });
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
