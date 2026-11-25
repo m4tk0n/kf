@@ -51,21 +51,23 @@ abbr{text-decoration:none}
 }
 .btn:active{transform:translateY(1px)}
 .bar{display:flex;align-items:center;gap:9px;padding-bottom:13px}
-.bar input,.bar select{
+.bar-search{display:flex;align-items:center;gap:9px;flex:1;min-width:0}
+.bar-filter-toggle{flex:none;margin:0}
+.bar-search input,.bar-search select{
   height:32px;min-width:0;border:1px solid var(--line);border-radius:8px;
   background:var(--surface);color:var(--text);
   font:inherit;padding:0 13px;outline:none;
 }
-.bar select{
+.bar-search select{
   flex:0 1 34%;max-width:38%;
   appearance:none;
   padding-right:28px;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='m2 4 4 4 4-4' fill='none' stroke='%239aa9bc' stroke-width='1.5'/%3E%3C/svg%3E");
   background-repeat:no-repeat;background-position:right 10px center;
 }
-.bar input{flex:1}
-.bar input::placeholder{color:#74849a;opacity:1}
-.bar input:focus,.bar select:focus{border-color:#638ab8;box-shadow:0 0 0 3px rgba(98,170,255,.13)}
+.bar-search input{flex:1}
+.bar-search input::placeholder{color:#74849a;opacity:1}
+.bar-search input:focus,.bar-search select:focus{border-color:#638ab8;box-shadow:0 0 0 3px rgba(98,170,255,.13)}
 .btn[disabled]{opacity:.48;cursor:default}
 .main{padding-top:13px;padding-bottom:28px}
 .pager{
@@ -161,8 +163,8 @@ abbr{text-decoration:none}
   .wrap{padding-left:11px;padding-right:11px}
   .top{height:54px}
   .bar{gap:7px;padding-bottom:10px}
-  .bar input,.bar select{height:30px;padding-left:10px;font-size:.8rem}
-  .bar select{flex-basis:31%;padding-right:23px;background-position:right 7px center}
+  .bar-search input,.bar-search select{height:30px;padding-left:10px;font-size:.8rem}
+  .bar-search select{flex-basis:31%;padding-right:23px;background-position:right 7px center}
   .btn{min-height:30px;padding:0 8px;font-size:.8rem}
   .main{padding-top:10px}
   .pager{gap:6px;margin-bottom:11px}
@@ -222,7 +224,10 @@ abbr{text-decoration:none}
 .chip{display:inline-block;padding:2px 9px;border:1px solid var(--line);border-radius:99px;font-size:.78rem}
 .fgroup{border:1px solid var(--line);border-radius:10px;padding:8px 12px}
 .fgroup summary{cursor:pointer;font-weight:650}
+.fgroup-nested{margin-top:8px;background:rgba(8,13,21,.18)}
+.fgroup-country{margin:7px 0 0 8px;padding:7px 10px;background:rgba(8,13,21,.2)}
 .checks{display:grid;gap:4px;margin-top:8px;max-height:260px;overflow:auto}
+.fgroup-country .checks{max-height:220px}
 .log{max-height:300px;overflow:auto;padding:10px;border-radius:8px;background:#0b0f16;font-size:.75rem;white-space:pre-wrap;overflow-wrap:anywhere}
 
 
