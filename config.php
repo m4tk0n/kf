@@ -173,17 +173,15 @@ return [
         'display_name_max' => 80,
     ],
 
-    // Uložené filtry uživatele (JSON profil): typ => klíč tabulky v db.tables
+    // Uživatelské filtry podle sekcí; ukládají se do JSON profilu.
     'filters' => [
-        'types' => [
-            'countries' => 'countries',
-            'cities' => 'cities',
-            'venues' => 'venues',
-            'genres' => 'genres',
-            'bands' => 'bands',
+        'sections' => [
+            'events' => ['countries', 'cities'],
+            'bands' => ['genres', 'countries'],
+            'venues' => ['countries', 'cities'],
         ],
-        'max_per_type' => 100, // maximum vybraných položek jednoho typu
-        'list_limit' => 500,   // maximum položek nabízených ve formuláři jednoho typu
+        'max_per_type' => 100,
+        'list_limit' => 500,
     ],
 
     // Přihlášení: vlastní session v tabulce sessions (PHP session_start() se nepoužívá)
