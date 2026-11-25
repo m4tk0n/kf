@@ -66,6 +66,7 @@ Dočasné nastavení přihlášeného uživatele musí být bezpečně oddělen�
 
 - Tlačítko **Filtry** vedle vyhledávání je dostupné přihlášeným i nepřihlášeným návštěvníkům a vede na veřejnou stránku `/quick-filters`.
 - Stránka používá anglický název route `quick-filters`, ale texty UI jsou lokalizované.
+- Vedle nadpisu je informační ikona s vysvětlením dočasného charakteru filtrů. Přihlášenému uživateli výslovně sděluje, že změny neovlivňují ani nepřepisují filtry uložené v jeho profilu; host dostane informaci, že výběr není trvalý.
 - Při otevření z výpisu (`/?s=events`, `/?s=bands` nebo `/?s=venues`) se parametr `s` zachová v odkazu na rychlé filtry i v návratovém odkazu. Podle něj se automaticky aktivuje odpovídající záložka: Akce, Kapely nebo Kluby a místa. Výchozí sekcí je `events` pouze tehdy, když parametr `s` chybí nebo je neplatný. Stránka zobrazuje tři záložky vedle sebe (Akce, Kapely, Kluby a místa) a všechny tři sekce lze upravit bez opuštění stránky.
 - Každá záložka zobrazuje pouze možnosti používané v publikovaných záznamech své sekce. Přepínání záložek nemění ani neukládá výběr.
 - Výchozí hodnoty všech tří sekcí se načtou z aktuálního dočasného stavu, případně při prvním použití z trvalého nastavení uživatele / výchozího zobrazení hosta.
