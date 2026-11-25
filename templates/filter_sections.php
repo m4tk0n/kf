@@ -45,7 +45,7 @@ $sections = ['events', 'bands', 'venues'];
               <h3><?= e($group['name']) ?></h3>
               <div class="checks filter-checks">
                 <?php foreach ($group['rows'] as $row): ?>
-                  <label class="check filter-option"><input type="checkbox" data-quick-option="<?= e($kind) ?>:cities" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
+                  <label class="check filter-option"><input type="checkbox" data-quick-option="<?= e($kind) ?>:cities" data-country-id="<?= (int)$group['id'] ?>" data-filter-option value="<?= (int)$row['id'] ?>"<?= ($showAll || in_array((int)$row['id'], $sectionSets['cities'] ?? [], true)) ? ' checked' : '' ?>><span><?= e((string)$row['name']) ?></span></label>
                 <?php endforeach; ?>
               </div>
             </div>
