@@ -9,6 +9,7 @@ $flash = $flash ?? flash_text();
 $isList = isset($view);
 $sessionReplaced = !empty(auth_store()['replaced']);
 $debugEnabled = kf_debug_enabled($user);
+$filtersEnabled = $user !== null ? filters_get((int)$user['id'])['enabled'] : false;
 ?>
 <!doctype html>
 <html lang="<?= e(current_lang()) ?>">
@@ -54,16 +55,24 @@ $debugEnabled = kf_debug_enabled($user);
       </div>
     <?php endif; ?>
   </header>
-  <form class="wrap bar" method="get" action="<?= e(url('')) ?>">
-    <?php if ($favOn && $user !== null): ?><input type="hidden" name="fav" value="1"><?php endif; ?>
-    <select name="s" aria-label="<?= e(kf_t('nav.label')) ?>">
-      <?php foreach (['events', 'bands', 'venues'] as $v): ?>
-        <option value="<?= e($v) ?>"<?= $req['s'] === $v ? ' selected' : '' ?>><?= e(kf_t('nav.' . $v)) ?></option>
-      <?php endforeach; ?>
-    </select>
-    <input type="search" name="q" value="<?= e((string)$req['q']) ?>" maxlength="100" data-min-chars="<?= max(1, (int)cfg('paging.autocomplete_min_chars')) ?>" placeholder="<?= e(kf_t('search.placeholder')) ?>" aria-label="<?= e(kf_t('search.label')) ?>" autocomplete="off">
-    <button class="btn" type="button" disabled><?= e(kf_t('filters')) ?></button>
-  </form>
+  <div class="wrap bar">
+    <form class="bar-search" method="get" action="<?= e(url('')) ?>">
+      <?php if ($favOn && $user !== null): ?><input type="hidden" name="fav" value="1"><?php endif; ?>
+      <select name="s" aria-label="<?= e(kf_t('nav.label')) ?>">
+        <?php foreach (['events', 'bands', 'venues'] as $v): ?>
+          <option value="<?= e($v) ?>"<?= $req['s'] === $v ? ' selected' : '' ?>><?= e(kf_t('nav.' . $v)) ?></option>
+        <?php endforeach; ?>
+      </select>
+      <input type="search" name="q" value="<?= e((string)$req['q']) ?>" maxlength="100" data-min-chars="<?= max(1, (int)cfg('paging.autocomplete_min_chars')) ?>" placeholder="<?= e(kf_t('search.placeholder')) ?>" aria-label="<?= e(kf_t('search.label')) ?>" autocomplete="off">
+    </form>
+    <?php if ($user !== null): ?>
+      <form class="bar-filter-toggle" method="post" action="<?= e(url('filters/toggle')) ?>">
+        <?= csrf_field() ?>
+        <input type="hidden" name="next" value="<?= e('?' . http_build_query($req)) ?>">
+        <button class="btn<?= $filtersEnabled ? ' filter-on' : ' ghost' ?>" type="submit" aria-pressed="<?= $filtersEnabled ? 'true' : 'false' ?>" aria-label="<?= e(t($filtersEnabled ? 'filters.toggle_off' : 'filters.toggle_on')) ?>"><?= e(kf_t('filters')) ?></button>
+      </form>
+    <?php endif; ?>
+  </div>
 </div>
 <main class="wrap main">
 <?php if ($flash && !$sessionReplaced): ?><p class="flash"><?= e($flash) ?></p><?php endif; ?>
