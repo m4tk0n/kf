@@ -20,7 +20,7 @@ return [
     'type.1' => 'Koncert',
     'type.2' => 'Festival',
     'type.3' => 'Ostatní',
-    'events.current' => 'Probíhající akce ({n})',
+    'events.current' => 'Probíhající akce dnes: {n}',
 
     // domovská stránka
     'home.welcome' => 'Vítej, {name}.',
