@@ -7,30 +7,8 @@ $kind = ['events' => 'event', 'bands' => 'band', 'venues' => 'venue'][$s];
 ?>
 <?= kf_pager($view['nav']) ?>
 <?php if ($s === 'events'): ?>
-  <?php $currentRows = $view['current_rows'] ?? []; $currentCount = (int)($view['current_count'] ?? 0); ?>
-  <?php if ($currentCount === 0): ?>
-    <button type="button" class="btn current-events-toggle" disabled><?= e(t('events.current', ['n' => 0])) ?></button>
-  <?php else: ?>
-    <details class="current-events">
-      <summary class="btn current-events-summary"><?= e(t('events.current', ['n' => $currentCount])) ?></summary>
-      <ul class="list list-events current-events-list">
-        <?php foreach ($currentRows as $r):
-            $id = (int)$r['id'];
-            $place = e($r['city']) . ' <abbr title="' . e($r['country']) . '">(' . e($r['iso2']) . ')</abbr>';
-        ?>
-          <li><a class="item item-event item-type-<?= (int)$r['type'] ?>" href="<?= e(kf_detail_url('event', $id)) ?>">
-            <span class="date"><?= e(kf_date_range($r['date_from'], $r['date_to'])) ?></span>
-            <span class="body">
-              <strong class="name"><?= e($r['name']) ?></strong>
-              <span class="meta"><?= $r['venue'] !== null ? '<span class="meta-venue">' . e($r['venue']) . '</span> <span class="meta-sep">·</span> ' : '' ?><?= $place ?></span>
-              <span class="tags"><span class="tag t<?= (int)$r['type'] ?>"><?= e(t('type.' . (int)$r['type'])) ?></span><?= $r['time_start'] !== null ? ' <span class="time">' . e(substr($r['time_start'], 0, 5)) . '</span>' : '' ?></span>
-            </span>
-            <?php if ((int)$r['flyer'] === 1): ?><img class="thumb" src="<?= e(kf_img('events', $id, 's')) ?>" alt="" loading="lazy"><?php endif; ?>
-          </a></li>
-        <?php endforeach; ?>
-      </ul>
-    </details>
-  <?php endif; ?>
+  <?php $currentCount = (int)($view['current_count'] ?? 0); ?>
+  <p class="current-events-info"><?= e(t('events.current', ['n' => $currentCount])) ?></p>
 <?php endif; ?>
 <?php if (!$rows): ?>
   <?php
