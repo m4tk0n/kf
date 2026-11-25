@@ -6,7 +6,7 @@ declare(strict_types=1);
 
 /**
  * Dostupné hodnoty se odvozují výhradně z publikovaných záznamů dané sekce.
- * Města jsou dostupná přes vazbu city_id; stát je odvozen pouze jako jejich souhrnná skupina.
+ * Města jsou dostupná přes vazbu city_id; státy mají samostatnou nabídku pro rychlé filtry.
  * Žánry jsou dostupné pouze z kapel, které je používají.
  *
  * @return array<int,array<string,int|string>>
