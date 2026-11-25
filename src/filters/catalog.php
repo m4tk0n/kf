@@ -16,7 +16,7 @@ function filters_catalog_conditions(string $kind): array
         $countries = array_values(array_filter(array_map('intval', $sets['countries'] ?? []), static fn(int $id): bool => $id > 0));
         $cities = array_values(array_filter(array_map('intval', $sets['cities'] ?? []), static fn(int $id): bool => $id > 0));
         $genres = $kind === 'bands' ? array_values(array_filter(array_map('intval', $sets['genres'] ?? []), static fn(int $id): bool => $id > 0)) : [];
-        // Bez vybraného města nebo žánru se nezobrazí žádné záznamy.
+        // Bez vybraného státu, města nebo žánru se nezobrazí žádné záznamy.
         if (!$countries && !$cities && !$genres) {
             $sql .= ' AND 1=0';
         } else {
