@@ -9,7 +9,6 @@ $flash = $flash ?? flash_text();
 $isList = isset($view);
 $sessionReplaced = !empty(auth_store()['replaced']);
 $debugEnabled = kf_debug_enabled($user);
-$filtersEnabled = $user !== null ? filters_get((int)$user['id'])['enabled'] : false;
 ?>
 <!doctype html>
 <html lang="<?= e(current_lang()) ?>">
@@ -66,11 +65,7 @@ $filtersEnabled = $user !== null ? filters_get((int)$user['id'])['enabled'] : fa
       <input type="search" name="q" value="<?= e((string)$req['q']) ?>" maxlength="100" data-min-chars="<?= max(1, (int)cfg('paging.autocomplete_min_chars')) ?>" placeholder="<?= e(kf_t('search.placeholder')) ?>" aria-label="<?= e(kf_t('search.label')) ?>" autocomplete="off">
     </form>
     <?php if ($user !== null): ?>
-      <form class="bar-filter-toggle" method="post" action="<?= e(url('filters/toggle')) ?>">
-        <?= csrf_field() ?>
-        <input type="hidden" name="next" value="<?= e('?' . http_build_query($req)) ?>">
-        <button class="btn<?= $filtersEnabled ? ' filter-on' : ' ghost' ?>" type="submit" aria-pressed="<?= $filtersEnabled ? 'true' : 'false' ?>" aria-label="<?= e(t($filtersEnabled ? 'filters.toggle_off' : 'filters.toggle_on')) ?>"><?= e(kf_t('filters')) ?></button>
-      </form>
+      <a class="btn bar-filter-toggle" href="<?= e(url('filters')) ?>"><?= e(kf_t('filters')) ?></a>
     <?php endif; ?>
   </div>
 </div>
