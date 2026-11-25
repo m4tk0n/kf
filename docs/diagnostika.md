@@ -106,7 +106,7 @@ Report je text určený k vložení do diagnostického chatu. Obsahuje chyby, ne
 - HttpOnly cookie `KF_SESSID` JavaScript nemůže číst.
 - Běžné záznamy zůstávají v paměti stránky a případně v `sessionStorage`; neposílají se automaticky na server.
 - Jediný síťový požadavek diagnostiky na její serverovou část je načtení logů pro záložku Server z `GET /diagnostics/log`. Tento endpoint znovu ověřuje účet ID 2.
-- **Pozor na obsah reportu:** diagnostika může zaznamenat texty z Console, URL, atributy `data-*) a při zapnutí ukládání těl také obsah textových odpovědí. Redakce známých názvů tajných polí není univerzální anonymizace. Před sdílením reportu je proto vhodné zkontrolovat, zda neobsahuje osobní nebo citlivé údaje.
+- **Pozor na obsah reportu:** diagnostika může zaznamenat texty z Console, URL, atributy `data-*` a při zapnutí ukládání těl také obsah textových odpovědí. Redakce známých názvů tajných polí není univerzální anonymizace. Před sdílením reportu je proto vhodné zkontrolovat, zda neobsahuje osobní nebo citlivé údaje.
 
 ## Integrace záložky Server
 
