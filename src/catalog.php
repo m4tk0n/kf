@@ -151,42 +151,9 @@ function kf_list_filter(string $qa, string $kind): array
         $p[] = '%' . addcslashes($qa, '%_\\\\') . '%';
     }
 
-    $user = auth_resolve();
-    $uFilters = filters_effective();
-    if (!$uFilters['show_all']) {
-        if (!empty($uFilters['none'])) {
-            $sql .= ' AND 1=0';
-        }
-        $sets = $uFilters['sets'][$kind] ?? [];
-
-        // Stát se vztahuje k městu záznamu; subquery nevyžaduje další JOIN v pageru ani kalendáři.
-        $countries = array_values(array_filter(array_map('intval', $sets['countries'] ?? []), static fn(int $id): bool => $id > 0));
-        if ($countries) {
-            $in = implode(',', array_fill(0, count($countries), '?'));
-            $sql .= ' AND a.city_id IN (SELECT fc.id FROM ' . tbl('cities') . ' fc WHERE fc.country_id IN (' . $in . '))';
-            array_push($p, ...$countries);
-        }
-
-        // Pokud je vybraný alespoň jeden stát, zahrnuje automaticky všechna jeho města.
-        // Výběr konkrétních měst se proto uplatní pouze tehdy, když není vybraný žádný stát.
-        if (!$countries) {
-            $cities = array_values(array_filter(array_map('intval', $sets['cities'] ?? []), static fn(int $id): bool => $id > 0));
-            if ($cities) {
-                $in = implode(',', array_fill(0, count($cities), '?'));
-                $sql .= ' AND a.city_id IN (' . $in . ')';
-                array_push($p, ...$cities);
-            }
-        }
-
-        if ($kind === 'bands') {
-            $genres = array_values(array_filter(array_map('intval', $sets['genres'] ?? []), static fn(int $id): bool => $id > 0));
-            if ($genres) {
-                $in = implode(',', array_fill(0, count($genres), '?'));
-                $sql .= ' AND a.genre_id IN (' . $in . ')';
-                array_push($p, ...$genres);
-            }
-        }
-    }
+    [$filterSql, $filterParams] = filters_catalog_conditions($kind);
+    $sql .= $filterSql;
+    array_push($p, ...$filterParams);
 
     // Host parametr fav ignoruje; oblíbené jsou dostupné jen přihlášenému uživateli.
     if (kf_get('fav') === '1' && $user !== null) {
