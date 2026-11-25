@@ -58,16 +58,36 @@
 
   syncControls();
 
+  // Stát je zaškrtnutý právě tehdy, když jsou zaškrtnuta všechna jeho města.
+  function syncCountryStates() {
+    form.querySelectorAll('[data-quick-option$=":countries"]').forEach(function (country) {
+      var kind = country.getAttribute('data-quick-option').split(':')[0];
+      var cities = Array.prototype.slice.call(form.querySelectorAll('[data-quick-option="' + kind + ':cities"]'))
+        .filter(function (city) { return city.getAttribute('data-country-id') === country.value; });
+      if (cities.length) country.checked = cities.every(function (city) { return city.checked; });
+    });
+  }
+
   // Výběr státu současně zapne nebo vypne všechna jeho města.
   form.querySelectorAll('[data-quick-option$=":countries"]').forEach(function (country) {
     country.addEventListener('change', function () {
-      var cities = form.querySelectorAll(
-        '[data-quick-option$=":cities"][data-country-id="' + country.value + '"]'
-      );
+      var kind = country.getAttribute('data-quick-option').split(':')[0];
+      var cities = form.querySelectorAll('[data-quick-option="' + kind + ':cities"][data-country-id="' + country.value + '"]');
       cities.forEach(function (city) { city.checked = country.checked; });
+      syncCountryStates();
       syncAll();
     });
   });
+
+  // Ruční změna města okamžitě přepočítá souhrnný checkbox státu.
+  form.querySelectorAll('[data-quick-option$=":cities"]').forEach(function (city) {
+    city.addEventListener('change', function () {
+      syncCountryStates();
+      syncAll();
+    });
+  });
+
+  syncCountryStates();
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
