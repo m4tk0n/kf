@@ -289,7 +289,7 @@ function filters_save(int $uid, array $input): void
             $ids = array_slice(array_values(array_unique(array_filter(
                 array_map(static fn($value): int => is_scalar($value) ? (int)$value : 0, $raw),
                 static fn(int $id): bool => $id > 0
-            ))), 0, $max);
+            ))));
             $ids = array_values(array_filter($ids, static fn(int $id): bool => isset($allowedIds[$id])));
             sort($ids);
 
