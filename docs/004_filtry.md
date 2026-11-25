@@ -83,7 +83,10 @@ Tento dokument určuje ukládání a životnost nastavení filtrů. Neurčuje vz
 
 Filtrační logika je soustředěna do samostatných modulů:
 
-- `src/filters.php` – načtení a uložení trvalých filtrů, validace dočasného stavu, nabídka dostupných hodnot a SQL podmínky filtrů.
+- `src/filters/profile.php` – načtení a uložení trvalých filtrů v JSON profilu.
+- `src/filters/session.php` – výběr dočasných filtrů pro aktuální požadavek; nikdy neupravuje profil.
+- `src/filters/options.php` – nabídka dostupných hodnot z publikovaných záznamů dané entity.
+- `src/filters/catalog.php` – SQL podmínky pouze pro právě načítaný katalog.
 - `assets/js/filters.js` – `sessionStorage`, oddělení identity, přidání filtračního stavu do požadavků, obnova po reloadu a hromadné ovládání checkboxů trvalého nastavení.
 
 Ostatní soubory obsahují pouze napojení: `bootstrap.php`, `src/catalog.php`, `src/routes.php`, `assets/js/list.js`, `assets/js/calendar.js` a `templates/layout.php`.
