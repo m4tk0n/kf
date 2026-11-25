@@ -4,6 +4,39 @@
   var view = document.getElementById('view');
   var viewSeq = 0;
   var positionKey = 'kf:list-return-position';
+  var filterIdentity = document.body.getAttribute('data-filter-identity') || 'guest';
+  var filterStorageKey = 'kf:list-filters:' + filterIdentity;
+
+  function readSessionFilters() {
+    try {
+      var raw = sessionStorage.getItem(filterStorageKey);
+      if (!raw) return '';
+      var parsed = JSON.parse(raw);
+      return parsed && parsed.v === 1 && parsed.sets && typeof parsed.sets === 'object' ? raw : '';
+    } catch (e) { return ''; }
+  }
+
+  function addFilterState(href) {
+    var raw = readSessionFilters();
+    if (!raw) return href;
+    var u = new URL(href, window.location.href);
+    u.searchParams.set('kf_filters', raw);
+    return u.toString();
+  }
+
+  window.kfFilterRequestUrl = addFilterState;
+  window.kfSetSessionFilters = function (filters) {
+    if (!filters || typeof filters !== 'object' || !filters.sets) return false;
+    var state = { v: 1, show_all: !!filters.show_all, none: !!filters.none, sets: filters.sets };
+    try { sessionStorage.setItem(filterStorageKey, JSON.stringify(state)); }
+    catch (e) { return false; }
+    var u = new URL(window.location.href);
+    u.searchParams.delete('p');
+    u.searchParams.delete('d');
+    u.searchParams.delete('k');
+    loadView(u.toString(), false, true);
+    return true;
+  };
 
   function saveListPosition(item) {
     if (!item) return;
@@ -71,7 +104,8 @@
     if (!view) { window.location.href = href; return; }
     var seq = ++viewSeq;
     view.classList.add('loading');
-    var u = href + (href.indexOf('?') > -1 ? '&' : '?') + 'partial=1';
+    var u = addFilterState(href);
+    u += (u.indexOf('?') > -1 ? '&' : '?') + 'partial=1';
     fetch(u, { credentials: 'same-origin', headers: { 'Accept': 'text/html' } })
       .then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -159,6 +193,7 @@
     });
 
     window.addEventListener('load', restoreListPosition, { once: true });
+    if (readSessionFilters()) loadView(window.location.href, false, false);
     window.addEventListener('pageshow', function (ev) {
       if (ev.persisted) {
         try { sessionStorage.removeItem(positionKey); } catch (e) {}
