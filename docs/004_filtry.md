@@ -66,12 +66,13 @@ Dočasné nastavení přihlášeného uživatele musí být bezpečně oddělen�
 
 - Tlačítko **Filtry** vedle vyhledávání je dostupné přihlášeným i nepřihlášeným návštěvníkům a vede na veřejnou stránku `/quick-filters`.
 - Stránka používá anglický název route `quick-filters`, ale texty UI jsou lokalizované.
-- Z parametru `s` načte pouze jednu aktuální sekci: `events`, `bands` nebo `venues`. Zobrazuje jen možnosti používané v publikovaných záznamech této sekce.
-- Uživatel mění pouze dočasný výběr této sekce. Ostatní sekce převezmou dosavadní dočasné nastavení, nebo při prvním použití aktuální trvalé nastavení uživatele / výchozí zobrazení hosta.
-- Tlačítko Uložit předá celý stav do `window.kfSetSessionFilters()` a uloží jej do `sessionStorage`. Nikdy neodesílá POST a nikdy nezapisuje do JSON profilu.
+- Z parametru `s` se určí výchozí aktivní záložka: `events`, `bands` nebo `venues`. Stránka zobrazuje tři záložky vedle sebe (Akce, Kapely, Kluby a místa) a všechny tři sekce lze upravit bez opuštění stránky.
+- Každá záložka zobrazuje pouze možnosti používané v publikovaných záznamech své sekce. Přepínání záložek nemění ani neukládá výběr.
+- Výchozí hodnoty všech tří sekcí se načtou z aktuálního dočasného stavu, případně při prvním použití z trvalého nastavení uživatele / výchozího zobrazení hosta.
+- Horní volba **Vybrat vše** ovládá všechny možnosti ve všech třech sekcích. Tlačítko Uložit přečte výběr ze všech tří sekcí, předá celý stav do `window.kfSetSessionFilters()` a uloží jej do `sessionStorage`. Nikdy neodesílá POST a nikdy nezapisuje do JSON profilu.
 - Po uložení se návštěvník vrátí na původní výpis včetně sekce, hledání a pozice pageru. Stávající `assets/js/filters.js` následně obnoví výpis s dočasným stavem.
 - Prázdný výběr v aktuální sekci znamená nezobrazit v této sekci žádné záznamy; neovlivní jiné sekce.
-- Checkbox **Vybrat vše** na stránce `quick-filters` se vztahuje pouze na právě otevřenou sekci, nikoli na všechny tři katalogy.
+- Checkbox **Vybrat vše** na stránce `quick-filters` se vztahuje na všechny tři katalogy.
 - Trvalá stránka `filters` (uživatelské menu) zůstává oddělená a vyžaduje přihlášení.
 
 ## 8. Technické provedení dočasných filtrů
