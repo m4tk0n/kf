@@ -4,33 +4,43 @@
   var menu = document.querySelector('.umenu');
   if (!menu) return;
 
-  function blockOutsideInteraction(ev) {
-    if (!menu.open || menu.contains(ev.target)) return;
+  // Click vznikající po zavření menu musí být stále zablokovaný.
+  var blockFollowingClick = false;
 
-    // Zablokovat interakci už při stisku/začátku dotyku.
-    // Samotné click je příliš pozdě například pro nativní select.
+  function stopEvent(ev) {
     ev.preventDefault();
     ev.stopPropagation();
     if (typeof ev.stopImmediatePropagation === 'function') {
       ev.stopImmediatePropagation();
     }
+  }
 
+  function blockOutsidePointer(ev) {
+    if (menu.contains(ev.target)) {
+      // Nový samostatný stisk po zavření menu může normálně pokračovat.
+      if (!menu.open) blockFollowingClick = false;
+      return;
+    }
+
+    if (!menu.open) return;
+
+    stopEvent(ev);
+    blockFollowingClick = true;
     menu.open = false;
   }
 
-  // Pointerdown zachytí myš, dotyk i pero ještě před výchozí akcí prvku.
-  document.addEventListener('pointerdown', blockOutsideInteraction, true);
+  function blockOutsideClick(ev) {
+    if (menu.contains(ev.target)) return;
 
-  // Záložní události pro prostředí bez Pointer Events.
-  if (!('onpointerdown' in window)) {
-    document.addEventListener('mousedown', blockOutsideInteraction, true);
-    document.addEventListener('touchstart', blockOutsideInteraction, {
-      capture: true,
-      passive: false
-    });
+    if (menu.open || blockFollowingClick) {
+      stopEvent(ev);
+      blockFollowingClick = false;
+    }
   }
 
-  // Záloha pro syntetické/klávesnicí vyvolané kliknutí a prostředí,
-  // ve kterých nedošlo k pointerdown.
-  document.addEventListener('click', blockOutsideInteraction, true);
+  // Zachytit začátek interakce dříve, než ji převezme cílový prvek.
+  document.addEventListener('pointerdown', blockOutsidePointer, true);
+
+  // Záloha pro syntetické a klávesnicí vyvolané kliknutí.
+  document.addEventListener('click', blockOutsideClick, true);
 })();
