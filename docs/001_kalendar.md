@@ -162,6 +162,10 @@ Při prvním načtení výpisu bez ručně zvoleného data:
 - pokud dnes žádná filtrovaná akce neprobíhá, pager se nastaví na nejbližší budoucí datum začátku filtrované akce,
 - výběr respektuje hledání, oblíbené a uživatelské filtry.
 
+### Pořadí akcí ve výpisu
+
+Pokud ve stejný den začíná koncert i festival, zobrazí se nejprve koncerty a až za nimi festivaly. Řazení se uplatní pouze v rámci stejného data začátku; ostatní řazení podle času začátku a ID záznamu zůstává zachováno.
+
 ### Příklad vícedenního festivalu
 
 Pokud festival trvá 16.–28. 2. 2028 a během jeho trvání nezačíná žádná další akce, navigace je:
