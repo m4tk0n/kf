@@ -15,8 +15,8 @@ function filters_catalog_conditions(string $kind): array
         // Stát je pouze souhrnný checkbox; do filtru vstupují konkrétní města.
         $cities = array_values(array_filter(array_map('intval', $sets['cities'] ?? []), static fn(int $id): bool => $id > 0));
         $genres = $kind === 'bands' ? array_values(array_filter(array_map('intval', $sets['genres'] ?? []), static fn(int $id): bool => $id > 0)) : [];
-        // Stát zahrnuje všechna svá města kromě výslovně odebraných; samostatná města se přidávají přes OR.
-        if (!$countries && !$cities && !$genres) {
+        // Bez vybraného města nebo žánru se nezobrazí žádné záznamy.
+        if (!$cities && !$genres) {
             $sql .= ' AND 1=0';
         } else {
             if ($cities) {
