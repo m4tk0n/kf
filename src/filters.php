@@ -209,17 +209,16 @@ function filters_catalog_conditions(string $kind): array
         $countries = array_values(array_filter(array_map('intval', $sets['countries'] ?? []), static fn(int $id): bool => $id > 0));
         $cities = array_values(array_filter(array_map('intval', $sets['cities'] ?? []), static fn(int $id): bool => $id > 0));
 
-        // Konkrétní výběr měst má vždy přednost před výběrem zemí.
-        // Jinak by zaškrtnutá země (např. z dřívějšího stavu formuláře)
-        // způsobila, že se výběr konkrétního města vůbec neuplatní.
-        if ($cities) {
-            $in = implode(',', array_fill(0, count($cities), '?'));
-            $sql .= ' AND a.city_id IN (' . $in . ')';
-            array_push($params, ...$cities);
-        } elseif ($countries) {
+        // Země má přednost před městy. Pokud je vybrána země,
+        // města se ignorují a zobrazí se všechny záznamy z vybraných zemí.
+        if ($countries) {
             $in = implode(',', array_fill(0, count($countries), '?'));
             $sql .= ' AND a.city_id IN (SELECT fc.id FROM ' . tbl('cities') . ' fc WHERE fc.country_id IN (' . $in . '))';
             array_push($params, ...$countries);
+        } elseif ($cities) {
+            $in = implode(',', array_fill(0, count($cities), '?'));
+            $sql .= ' AND a.city_id IN (' . $in . ')';
+            array_push($params, ...$cities);
         }
         if ($kind === 'bands') {
             $genres = array_values(array_filter(array_map('intval', $sets['genres'] ?? []), static fn(int $id): bool => $id > 0));
