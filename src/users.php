@@ -270,7 +270,7 @@ function filters_save(int $uid, array $input): void
             $raw = $input['filters'][$section][$field] ?? [];
             if (!is_array($raw)) $raw = [];
             $ids = array_slice(array_values(array_unique(array_filter(
-                array_map('intval', $raw),
+                array_map(static fn($value): int => is_scalar($value) ? (int)$value : 0, $raw),
                 static fn(int $id): bool => $id > 0
             ))), 0, $max);
 
