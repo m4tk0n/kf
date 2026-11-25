@@ -101,13 +101,16 @@ Filtrační logika je soustředěna do samostatných modulů:
 
 Ostatní soubory obsahují pouze napojení: `bootstrap.php`, `src/catalog.php`, `src/routes.php`, `assets/js/list.js`, `assets/js/calendar.js` a `templates/layout.php`.
 
-Rychlé filtry jsou implementovány na stránce `templates/quick_filters.php` a v modulu `assets/js/quick-filters.js`. `window.kfSetSessionFilters(state)` zůstává společným rozhraním pro uložení dočasného stavu.
+Obě URL používají jedinou šablonu `templates/filter_page.php` a společné vykreslení `templates/filter_sections.php`. Režim stránky určuje pouze proměnná `filter_mode`:
+- `profile` pro `/filters`: načtení a uložení trvalého JSON profilu, serverový POST a CSRF.
+- `quick` pro `/quick-filters`: načtení výchozího JSON profilu nebo hostovského stavu, dočasné uložení přes `sessionStorage` v `assets/js/quick-filters.js`.
+Společné ovládání formuláře, záložek, volby Vybrat vše a přizpůsobení šířky položek zajišťuje `assets/js/filters.js`. Režim quick navíc načítá modul `quick-filters.js` pro session storage a specifickou logiku samostatných checkboxů států. `window.kfSetSessionFilters(state)` zůstává rozhraním pro uložení dočasného stavu. Vzhled ani markup se nesmí udržovat ve dvou samostatných šablonách.
 
-## Stát jako souhrnný checkbox
+## Stát jako souhrnný checkbox v trvalých filtrech
 
-Stát není samostatná filtrační hodnota. Slouží výhradně jako souhrnný checkbox pro hromadné ovládání všech měst daného státu.
+V trvalém nastavení v uživatelském menu není stát samostatná filtrační hodnota. Slouží výhradně jako souhrnný checkbox pro hromadné ovládání všech měst daného státu.
 
-Pravidla jsou stejná v rychlých filtrech i v trvalém nastavení v uživatelském menu:
+Následující pravidla platí pouze pro trvalé filtry `/filters`. Rychlé filtry mají samostatnou hodnotu státu podle části 10:
 
 1. Zaškrtnutí státu zaškrtne všechna dostupná města daného státu.
 2. Odškrtnutí státu odškrtne všechna jeho města.
