@@ -336,3 +336,6 @@ input[type="submit"].flash-success{
 .modal-close:hover{background:var(--surface-3);color:var(--text)}
 #filters-help-modal .modal{padding-top:24px}
 @media(max-width:380px){.page-title-row{margin-bottom:9px}.page-title-row h1{font-size:1.25rem}}
+
+/* Užší vnitřní odsazení stránky filtrů */
+.filters-card{padding:9px}
