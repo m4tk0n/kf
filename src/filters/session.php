@@ -59,22 +59,9 @@ function filters_effective(string $kind = ''): array
         }
     }
 
-    $cityExclusions = [];
-    foreach ((array)cfg('filters.sections') as $section => $fields) {
-        if ($kind !== '' && $section !== $kind) continue;
-        $rawExcluded = $input['city_exclusions'][$section] ?? [];
-        if (!is_array($rawExcluded)) $rawExcluded = [];
-        $ids = array_values(array_unique(array_filter(
-            array_map(static fn($v): int => is_scalar($v) ? (int)$v : 0, $rawExcluded),
-            static fn(int $id): bool => $id > 0
-        )));
-        $cityExclusions[$section] = array_slice($ids, 0, max(1, (int)cfg('filters.max_per_type')));
-    }
-
     return [
         'show_all' => $showAll,
         'none' => !$showAll && !$hasSelection,
         'sets' => $sets,
-        'city_exclusions' => $cityExclusions,
     ];
 }
