@@ -204,24 +204,24 @@ function filters_catalog_conditions(string $kind): array
     $sql = ''; $params = [];
     $uFilters = filters_effective();
     if (!$uFilters['show_all']) {
-        if (!empty($uFilters['none'])) $sql .= ' AND 1=0';
         $sets = $uFilters['sets'][$kind] ?? [];
         $countries = array_values(array_filter(array_map('intval', $sets['countries'] ?? []), static fn(int $id): bool => $id > 0));
         $cities = array_values(array_filter(array_map('intval', $sets['cities'] ?? []), static fn(int $id): bool => $id > 0));
-
-        // Země má přednost před městy. Pokud je vybrána země,
-        // města se ignorují a zobrazí se všechny záznamy z vybraných zemí.
-        if ($countries) {
-            $in = implode(',', array_fill(0, count($countries), '?'));
-            $sql .= ' AND a.city_id IN (SELECT fc.id FROM ' . tbl('cities') . ' fc WHERE fc.country_id IN (' . $in . '))';
-            array_push($params, ...$countries);
-        } elseif ($cities) {
-            $in = implode(',', array_fill(0, count($cities), '?'));
-            $sql .= ' AND a.city_id IN (' . $in . ')';
-            array_push($params, ...$cities);
-        }
-        if ($kind === 'bands') {
-            $genres = array_values(array_filter(array_map('intval', $sets['genres'] ?? []), static fn(int $id): bool => $id > 0));
+        $genres = $kind === 'bands' ? array_values(array_filter(array_map('intval', $sets['genres'] ?? []), static fn(int $id): bool => $id > 0)) : [];
+        // Každá sekce má vlastní výběr. Bez vybrané hodnoty se nezobrazí nic.
+        if (!$countries && !$cities && !$genres) {
+            $sql .= ' AND 1=0';
+        } else {
+            // Země má přednost před městy.
+            if ($countries) {
+                $in = implode(',', array_fill(0, count($countries), '?'));
+                $sql .= ' AND a.city_id IN (SELECT fc.id FROM ' . tbl('cities') . ' fc WHERE fc.country_id IN (' . $in . '))';
+                array_push($params, ...$countries);
+            } elseif ($cities) {
+                $in = implode(',', array_fill(0, count($cities), '?'));
+                $sql .= ' AND a.city_id IN (' . $in . ')';
+                array_push($params, ...$cities);
+            }
             if ($genres) {
                 $in = implode(',', array_fill(0, count($genres), '?'));
                 $sql .= ' AND a.genre_id IN (' . $in . ')';
