@@ -197,7 +197,8 @@ Při opravách je nutné zachovat:
 - označování všech dnů vícedenních akcí,
 - zachování aktivních filtrů,
 - výběr data bez zbytečného obnovení stránky,
-- navigaci pageru mezi dny s akcemi.
+- navigaci pageru pouze mezi daty začátků filtrovaných akcí,
+- samostatný přehled aktuálně probíhajících akcí podle dnešního data a aktivních filtrů.
 
 Každá změna musí být ověřena také na příkladu vícedenní akce přesahující do dalšího dne nebo měsíce.
 
