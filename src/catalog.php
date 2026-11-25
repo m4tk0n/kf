@@ -340,7 +340,7 @@ function kf_load(array $req): array
         $rows = q(
             'SELECT ' . $cols . $from . $where . ' AND a.date_to >= ?'
             . ' ORDER BY a.date_from, a.time_start IS NULL, a.time_start, a.id LIMIT ' . $n,
-            array_merge($params, [$d])
+            array_merge([$d], $params)
         )->fetchAll(PDO::FETCH_ASSOC);
         $total = (int)q('SELECT COUNT(*) FROM ' . tbl('events') . ' a' . $where, $params)->fetchColumn();
         return ['req' => $req, 'rows' => $rows, 'count' => $total, 'nav' => kf_event_nav($req, $d, $k, $n, $qa)];
