@@ -131,13 +131,14 @@ Checkbox **Vybrat vše** nadále hromadně ovládá skutečné filtrační možn
 
 ## 10. Závazná pravidla rychlých filtrů – Státy, města a žánry
 
-Tato pravidla platí výhradně pro veřejnou stránku rychlých filtrů `/quick-filters`. Neprovádět podle nich změny trvalých filtrů v JSON profilu ani stránky uživatelského menu `/filters`, pokud to uživatel výslovně nezadá.
+Tato část stanovuje vzhledové rozložení společné pro `/quick-filters` a `/filters`. Struktura skupin musí být na obou stránkách stejná. Pravidla ukládání a filtrovací logiky rychlých filtrů níže platí pouze pro `/quick-filters`; trvalé ukládání v JSON profilu zůstává beze změny.
 
 ### Společný vzhled stránky
 - Veřejná stránka `/quick-filters` a stránka uživatelského menu `/filters` musí mít shodný vizuální layout.
 - Každá změna vzhledu nebo rozložení jedné z těchto stránek se musí současně promítnout i do druhé stránky.
 - Společné prvky (obal stránky, nadpis a tlačítko Zpět, informační ikona/modal, volba Vybrat vše, záložky, skupiny filtrů a tlačítko Uložit) musí zůstat vizuálně sjednocené. Rozdílné může být pouze chování a obsah vyplývající z jejich odlišné funkce.
 - Při úpravě jedné stránky vždy zkontrolovat i druhou; nesmí vzniknout rozdíl v rozměrech, odsazení, pořadí ani stylu společných prvků.
+- Správným vzorem rozložení je `/quick-filters`: nejprve samostatná skupina **Státy**, potom skupina **Města** se státy jako nadpisy skupin a následně **Žánry**. Stránka `/filters` musí toto rozložení přesně kopírovat. Lišit se smí pouze technické chování checkboxů a ukládání podle typu filtru.
 
 ### Rozložení
 V každé ze tří záložek (Akce, Kapely, Kluby a místa) jsou samostatné skupiny v tomto pořadí:
@@ -154,7 +155,7 @@ Zachovat dosavadní vzhled, CSS třídy, rozložení stránky, záložky a ovlá
 - Odškrtnutí státu musí automaticky odškrtnout všechna jeho města.
 - Akce se týká pouze měst příslušného státu; města ostatních států zůstávají beze změny.
 - Checkboxy měst zůstávají samostatně ovladatelné.
-- Checkbox státu je skutečná samostatná filtrovací hodnota, nikoliv pouze vizuální souhrn měst. Jeho ID se ukládá jako `countries` a používá se ve filtru nezávisle na ID měst.
+- Pouze na `/quick-filters` je checkbox státu samostatná filtrovací hodnota a jeho ID se ukládá jako `countries`, nezávisle na ID měst. Na `/filters` zůstává checkbox státu souhrnným ovládáním měst; jeho ID se do JSON profilu neukládá.
 - Při změně státu se odpovídajícím způsobem změní i zaškrtnutí jeho měst ještě před uložením formuláře.
 
 ### Ukládání a filtrování
