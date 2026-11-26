@@ -57,7 +57,8 @@ function debug_test_profiles_create(): array
 function debug_test_profiles_admin(): bool
 {
     $real = auth_real_resolve();
-    return $real !== null && (int)$real['id'] === 2;
+    return $real !== null && (int)$real['id'] === 2
+        && (int)$real['user_state'] === (int)cfg('enums.user_state.active');
 }
 
 function debug_test_profiles_ids(): array
