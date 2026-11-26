@@ -44,3 +44,12 @@ Zachovat záznamy mezi stránkami · ukládat těla odpovědí · zobrazit asset
 ## Soukromí
 
 Parametry `_csrf`, `token`, `code`, `state`, `key`, `password`, `secret` se v URL i tělech požadavků nahrazují `***`. Hesla z formulářů se nezaznamenávají. HttpOnly cookies (`KF_SESSID`) JavaScript nevidí. Záznamy žijí v paměti stránky a v `sessionStorage` karty. Nic se neposílá na server kromě čtení logů v záložce Server.
+
+## Testovací profily
+
+- Definice pěti testovacích profilů je v `debug/test_profiles.sql`.
+- Vytvoření se nespouští při běžné instalaci ani automaticky ze složky seedů.
+- V instalátoru je samostatné tlačítko **Vytvořit testovací profily**.
+- Akce ověřuje, že v databázi existuje hlavní účet s ID 2, a potom profily vytvoří nebo aktualizuje bez duplicit.
+- Testovací identity používají interního poskytovatele `provider = 3`; nejsou dostupné přes Google ani Facebook OAuth.
+- Profil „User blokovaný“ je uložen se stavem pozastaveného účtu. Zpřístupnění jeho testovací simulace a přesné omezení akcí je samostatná část přepínání profilů.
