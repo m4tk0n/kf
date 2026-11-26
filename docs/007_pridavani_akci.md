@@ -241,3 +241,8 @@ Ve formuláři `/event/new` je našeptávač názvů již zveřejněných akcí:
 - endpoint `event/name-suggest` je dostupný pouze přihlášeným uživatelům s oprávněním `submit` a odpovídá JSON bez ukládání do cache.
 
 Toto je pouze první krok našeptávání. Města, kluby a kapely budou řešeny samostatně.
+
+
+## Našeptávač názvů akcí
+
+Našeptávač hledá pouze zveřejněné akce podle začátku `name_ascii`. Porovnání je nezávislé na velikosti písmen, takže dotaz `fest` najde i záznamy začínající `Festival`. Výsledky jsou unikátní názvy; výběr pouze doplní název do formuláře a neslučuje jednotlivé akce.
