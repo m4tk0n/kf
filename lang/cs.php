@@ -64,6 +64,9 @@ return [
     'menu.users' => 'Uživatelé',
     'menu.settings' => 'Nastavení',
     'menu.diagnostics' => 'Diagnostika',
+    'menu.db' => 'DB',
+    'db.title' => 'Databáze',
+    'db.installer' => 'Instalátor databáze',
     'menu.logout' => 'Odhlásit se',
 
     // role a stavy
