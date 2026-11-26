@@ -338,6 +338,20 @@ if ($action === 'unlock') {
         inst_key_form('Neplatný původ požadavku.');
     }
     $token = inst_token_make(time() + (int)cfg('install.token_ttl_sec'));
+} elseif ($action === 'create_test_profiles') {
+    $sentToken = (string)($_POST['token'] ?? '');
+    if (!inst_token_ok($sentToken)) {
+        ratelimit_hit('install', $maxTries, true);
+        security_log('install_token_invalid');
+        http_response_code(403);
+        inst_key_form('Platnost odemknutí vypršela, zadej klíč znovu.');
+    }
+    if (cfg('security.csrf_origin_check') && !origin_ok()) {
+        security_log('install_origin_mismatch');
+        http_response_code(403);
+        inst_key_form('Neplatný původ požadavku.');
+    }
+    $token = inst_token_make(time() + (int)cfg('install.token_ttl_sec'));
 } elseif ($action === 'admin_view' && $instSuperAdmin) {
     $token = inst_token_make(time() + (int)cfg('install.token_ttl_sec'));
 } else {
@@ -380,6 +394,21 @@ if ($action === 'install') {
     inst_page('Instalace – výsledek', $body);
 }
 
+if ($action === 'create_test_profiles') {
+    try {
+        $res = debug_test_profiles_create();
+        $message = '<p>' . e($res['message']) . ' (' . (int)$res['count'] . '/5)</p>';
+        $state = 'ok';
+    } catch (Throwable $e) {
+        $message = '<p class="warnbox">' . e(substr($e->getMessage(), 0, 300)) . '</p>';
+        $state = 'err';
+    }
+    $body = '<div class="card"><h2>Testovací profily</h2>' . $message
+        . '<p>' . inst_badge($state) . '</p></div>'
+        . '<div class="card"><a class="btn" href="' . e(url('install/')) . '">Zpět na instalátor</a></div>';
+    inst_page('Testovací profily – výsledek', $body);
+}
+
 // ---------- přehled (po odemknutí) ----------
 
 $checks = '';
@@ -413,5 +442,9 @@ $body = '<div class="card"><h2>Prostředí</h2><table>' . $checks . '</table></d
     . '<div class="card"><form method="post"><input type="hidden" name="action" value="install"><input type="hidden" name="token" value="' . e($token) . '">'
     . '<label><input type="checkbox" name="wipe_optional" value="1" checked> Smazat i logy (<code>' . e($optional) . '</code>)</label>'
     . ($blocking || $issues ? '<p class="warnbox">Nejdřív oprav chyby výše.</p>' : '<button type="submit" class="danger">Nainstalovat (smaže data aplikace)</button>')
-    . '</form></div>';
+    . '</form></div>'
+    . '<div class="card"><h2>Testovací profily</h2>'
+    . '<p>Profily se nevytvářejí při instalaci. Vytvoří se až po samostatném kliknutí a pouze pokud už v databázi existuje hlavní účet ID 2.</p>'
+    . '<form method="post"><input type="hidden" name="action" value="create_test_profiles"><input type="hidden" name="token" value="' . e($token) . '">'
+    . '<button type="submit">Vytvořit testovací profily</button></form></div>';
 inst_page('Instalace – ' . (string)cfg('app.name'), $body);
