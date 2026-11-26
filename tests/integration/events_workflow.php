@@ -80,7 +80,7 @@ function session_token_for(int $userId): string
     return $token;
 }
 
-function run_route(string $action, string $token, ?int $id = null): void
+function run_route(string $action, string $token, ?int $id = null): string
 {
     $script = KF_ROOT . '/tests/integration/route.php';
     $cmd = escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg($script) . ' ' . escapeshellarg($action) . ' ' . escapeshellarg($token);
@@ -133,6 +133,10 @@ check(kf_event_validate($userValues) === [], 'validates complete event form data
 $imageName = create_draft_with_image($users['user'], $userValues);
 $draftImage = kf_draft_image_path($users['user'], $imageName);
 check($draftImage !== null && is_file($draftImage), 'draft preview image is available');
+$formHtml = run_route('event_form', $userToken);
+check(str_contains($formHtml, 'KF test event approval') && str_contains($formHtml, 'event/draft-image'), 'new-event form route renders saved values and protected image preview');
+$previewHtml = run_route('event_preview', $userToken);
+check(str_contains($previewHtml, 'KF test event approval') && str_contains($previewHtml, 'Test klub'), 'event preview route renders the event detail before submission');
 
 run_route('event_submit', $userToken);
 $pending = q('SELECT id FROM ' . tbl('pending') . ' WHERE created_by = ? AND title = ?', [$users['user'], 'KF test event approval'])->fetchColumn();
