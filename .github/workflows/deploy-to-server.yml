@@ -144,7 +144,7 @@ jobs:
               print("No deployable file changes in this commit.")
           PY
 
-          if grep -qE '^(put|rm -f) ' /tmp/kf-deploy.lftp; then
+          if grep -qE '^(put|rm -f|rm -r -f) ' /tmp/kf-deploy.lftp; then
             lftp -f /tmp/kf-deploy.lftp
           else
             echo "No website files changed; FTP was not contacted."
