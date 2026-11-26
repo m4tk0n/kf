@@ -1,0 +1,73 @@
+﻿source: PRIDAVANI Akce, klubu, kapely
+Pouze AI, prihlaseny user, povoleny user
+- data z config.php
+
+## Pridavani akce:
+01000. formular https://7x.wz.cz/_kf/event/new 
+01100. nazev
+- input (naseptavac)
+- uzivatel zapisuje nazev akce. 
+ Pod inputem se po napr 4 znacich zacnou zobrazovat schvalene nazvy akci v db.  
+ Kazdym pridanym znakem se seznam bude menit.
+ Je to pomucka, aby uzivatel nezadaval jiz pridanou akci
+
+01110. mesto
+01111. 
+- input (naseptavac)
+- od 2 znaků se budou zobrazovat mesta z db pod inputem, ktera jsou jiz v db, a uzivatel teda vi presne co ma psat
+- ({country}){city}
+-  (CZ) Brno
+01120. klub/misto
+- input (naseptavac)
+- od 2 znaku se bude zobrazovat seznam jiz schvalenych klubu
+- {nazev_klubu} . ({country}){city} . {adresa}
+- AZ Klub . (CZ) Brno . Podlouhlá 345
+01130. typ festival / koncert / ostatni 
+01141. datum od
+01142. datum do
+01150. pridani kapely
+- input (naseptavac) 
+- nazev_kapely . country . city . genre
+01155. cas zacatku ucinkujici kapely
+- input (hh:mm)
+- napise hh, automaticky se doplni ':' a pokracuje v zadavani minut
+01160. web
+01170. popis akce
+
+01180. img ze souboru/url
+ [nahled]
+
+** uzivatel muze zadavat prvne nazev klubu a pokud vybere z naseptavace misto ktere je jiz v db, tak uz se predvyplni zaroven i mesto
+*** pokud klub neni v db, tak je potreba udelat nejaky mezikrok pro pridani(pending) klubu
+***  
+
+*** je dulezite, aby administrace napred schvalovala kluby a mista (country, city, adresa).
+Pokud neni napred schvaleny klub, tak nemuze byt schvalena ani akce, kdyz nema umisteni
+
+** Pri mezikroku pridavani klubu je hlavne aby byly vyplneny
+- nazev, country, city, adresa
+
+***pokud neni kapela v db, tak bude mezikrok pridani nove kapely
+- nazev, country, city, genre
+
+## Pridavani klubu:
+img
+nazev
+country
+city
+adresa
+www url
+GPS
+ 
+## Pridavani kapely
+img
+nazev
+country
+city
+www url
+genre
+** genre input naseptavac z db, pripadne muze vytvorit novy do pending
+
+*** nejdulezitejsi je pak uedlat to, ze muze byt treba snura koncertu pod stejnym nazvem, ale pokazde jine mesto/datum, takze 2 rozdilne akce, ale patri pod jednu šnůru
+- v pokazde muze byt jiny host, ruzne casy kapel 
+- u pridavani nazvu akce teda muze byt nazev stejny, ale v naseptavaci by to melo ukazat šňůru
