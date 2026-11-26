@@ -33,9 +33,12 @@ Datum akce z detailu nesmí při návratu přepsat datum původního výpisu. Na
 **Stav: implementováno, čeká na praktické ověření**
 
 Při otevření detailu kliknutím na položku výpisu se do `sessionStorage` dočasně uloží:
+- čistá URL původního výpisu včetně hledání, data, stránky a aktivních parametrů,
 - ID otevřené položky,
 - její svislá poloha vůči hornímu okraji obrazovky,
 - aktuální pozice stránky.
+
+Návratová URL se nikdy nepřidává do adresy detailu. Detail má veřejnou kanonickou URL bez `?return=...` a bez dalších návratových parametrů. Návratové informace jsou pouze v úložišti aktuální relace prohlížeče.
 
 Po návratu z detailu se záznam znovu vyhledá ve výpisu a stránka se posune tak, aby byl zobrazen na stejné pozici jako před otevřením detailu. Nejde pouze o návrat na začátek výpisu ani o prosté obnovení první položky.
 
@@ -46,7 +49,9 @@ Pokud prohlížeč úložiště neposkytne nebo se cílový záznam ve výpisu n
 Dotčené soubory:
 - `templates/list.php` – označení položek výpisu jejich ID,
 - `assets/js/list.js` – uložení a obnovení polohy,
-- `src/catalog.php` a `src/detail.php` – zachování návratového kontextu detailu (stávající řešení).
+- `src/catalog.php` – generování čistých kanonických URL detailů bez návratových parametrů,
+- `assets/js/app.js` – návrat na bezpečnou URL původního výpisu,
+- `templates/detail.php` – označení odkazu Zpět pro obnovení původního výpisu.
 
 ### Navigace mezi souvisejícími detaily
 
@@ -58,7 +63,7 @@ Pokud uživatel otevře detail přímo a neexistuje původní výpis, použije s
 
 ### Bezpečnost návratové adresy
 
-Návratová adresa se skládá pouze z povolených parametrů aplikace. Nesmí umožnit přesměrování na cizí web ani přenášet libovolnou URL.
+Návratová adresa je uložena pouze v `sessionStorage`. Při návratu se ověřuje, že její origin odpovídá aktuálnímu webu; cizí adresa se nikdy neotevře. Pokud úložiště není dostupné nebo návratový záznam chybí, použije se bezpečný fallback odkazu Zpět.
 
 ## 2. Pager a kalendář
 
