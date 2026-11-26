@@ -153,6 +153,12 @@ function kf_draft_clear(int $uid): void
 
 // ---------- hodnoty akce: čištění, validace ----------
 
+/** Sjednotí typografické pomlčky v názvu na běžný spojovník. */
+function kf_event_name_normalize(string $name): string
+{
+    return strtr($name, ['–' => '-', '—' => '-', '‑' => '-', '−' => '-']);
+}
+
 /** Z libovolného pole (POST, draft, pending JSON) vytvoří kanonickou, otypovanou a oříznutou podobu. */
 function kf_event_clean(array $r): array
 {
@@ -176,7 +182,7 @@ function kf_event_clean(array $r): array
         $bands[] = ['id' => $id, 'time' => is_string($b['time'] ?? null) ? mb_substr(trim($b['time']), 0, 5) : ''];
     }
     return [
-        'name' => $s('name', 160), 'type' => $i('type'),
+        'name' => mb_substr(trim(kf_event_name_normalize(is_string($r['name'] ?? null) ? $r['name'] : '')), 0, 160), 'type' => $i('type'),
         'date_from' => $s('date_from', 10), 'date_to' => $s('date_to', 10), 'time_start' => $s('time_start', 5),
         'city_id' => $i('city_id'), 'venue_id' => $i('venue_id'),
         'description' => $s('description', 5000), 'www' => $s('www', 300),
@@ -322,6 +328,7 @@ function kf_event_limit_error(int $uid): ?string
 /** Publikuje akci: events + event_bands + JSON + obrázek (_l kopie, _s vygenerovaný). Vrací ID. */
 function kf_event_publish(array $v, ?string $srcL, ?int $createdBy): int
 {
+    $v['name'] = kf_event_name_normalize((string)($v['name'] ?? ''));
     $pdo = db();
     $now = time();
     $time = $v['time_start'] !== '' ? $v['time_start'] . ':00' : null;
@@ -372,6 +379,7 @@ function kf_event_publish(array $v, ?string $srcL, ?int $createdBy): int
 /** Návrh do fronty pending: řádek v DB, JSON s hodnotami v data/pending/<bucket>/<id>.json, obrázek <id>_l.webp vedle. */
 function kf_event_pending_create(array $v, ?string $srcL, int $uid): int
 {
+    $v['name'] = kf_event_name_normalize((string)($v['name'] ?? ''));
     $pdo = db();
     $id = 0;
     $img = '';
