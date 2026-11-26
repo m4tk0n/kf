@@ -5,7 +5,6 @@ on:
     branches:
       - main
     paths-ignore:
-      - "docs/**"
       - "README.md"
 
 permissions:
@@ -62,7 +61,7 @@ jobs:
           import subprocess
 
           excluded = (
-              ".git", ".github", ".env", "docs", "data", "cache",
+              ".git", ".github", ".env", "data", "cache",
               "img", "uploads", "logs", "tmp", "ai-backups",
               ".ftp-deploy-sync-state.json",
           )
