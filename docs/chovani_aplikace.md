@@ -119,7 +119,8 @@ Interakce uvnitř menu zůstávají funkční.
 
 Dotčené soubory:
 - `templates/layout.php` – společná struktura hlavičky a uživatelského menu na stránkách aplikace.
-- `assets/js/menu.js` – zachycení a zablokování kliknutí mimo otevřené menu.
+- `assets/js/menu.js` – zobrazení a obsluha překryvné vrstvy, která zachytí veškeré kliknutí mimo menu.
+- `assets/css/app.css` – umístění překryvné vrstvy pod menu a nad celou stránku.
 
 ## 5. Pravidlo průběžné dokumentace
 
