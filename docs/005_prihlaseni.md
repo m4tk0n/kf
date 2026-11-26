@@ -71,3 +71,4 @@ Callback adresy musí být stejné v `.env` a v nastavení OAuth aplikace u posk
 - `templates/login.php` – dynamická tlačítka dostupných poskytovatelů.
 
 **Stav implementace:** OAuth kód je zapracovaný. Praktické přihlášení je nutné ověřit s reálnými OAuth aplikacemi Google a Meta; bez vyplněných tajných údajů v produkčním `.env` nelze přihlášení aktivovat.
+.
