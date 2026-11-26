@@ -286,6 +286,10 @@ return [
         ],
     ],
 
+    'review' => [
+        'lock_ttl_sec' => 900,
+    ],
+
     'plural' => [
         'cs' => [
             'one' => 1,
