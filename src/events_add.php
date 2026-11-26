@@ -565,11 +565,11 @@ function route_venue_name_suggest(): never
     }
 
     $rows = q(
-        'SELECT v.id, v.name, v.address, c.id AS city_id, c.name AS city, co.iso2 AS country FROM ' . tbl('venues') . ' v
-         JOIN ' . tbl('cities') . ' c ON c.id = v.city_id
-         JOIN ' . tbl('countries') . ' co ON co.id = c.country_id
+        "SELECT v.id, v.name, v.address, c.id AS city_id, c.name AS city, co.iso2 AS country FROM " . tbl('venues') . " v
+         JOIN " . tbl('cities') . " c ON c.id = v.city_id
+         JOIN " . tbl('countries') . " co ON co.id = c.country_id
          WHERE LOWER(REPLACE(REPLACE(REPLACE(v.name, '–', '-'), '—', '-'), '‑', '-')) COLLATE utf8mb4_unicode_ci LIKE ?
-         ORDER BY v.name COLLATE utf8mb4_unicode_ci, v.name LIMIT ' . $limit,
+         ORDER BY v.name COLLATE utf8mb4_unicode_ci, v.name LIMIT " . $limit,
         [addcslashes($search, '%_\\\\') . '%']
     )->fetchAll();
 
@@ -604,7 +604,7 @@ function route_event_name_suggest(): never
     }
 
     $rows = q(
-        'SELECT MIN(name) AS name FROM ' . tbl('events') . " WHERE LOWER(REPLACE(REPLACE(REPLACE(name, '–', '-'), '—', '-'), '‑', '-')) COLLATE utf8mb4_unicode_ci LIKE ? GROUP BY LOWER(name) COLLATE utf8mb4_unicode_ci ORDER BY MIN(name) LIMIT " . $limit,
+        "SELECT MIN(name) AS name FROM " . tbl('events') . " WHERE LOWER(REPLACE(REPLACE(REPLACE(name, '–', '-'), '—', '-'), '‑', '-')) COLLATE utf8mb4_unicode_ci LIKE ? GROUP BY LOWER(name) COLLATE utf8mb4_unicode_ci ORDER BY MIN(name) LIMIT " . $limit,
         [addcslashes($search, '%_\\\\') . '%']
     )->fetchAll();
     echo json_encode(
