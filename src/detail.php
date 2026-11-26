@@ -222,6 +222,10 @@ function route_fav(): never
         security_log('forbidden', ['action' => 'fav']);
         kf_json(['ok' => false, 'error' => 'login'], 403);
     }
+    if (!can('favorite')) {
+        security_log('forbidden', ['action' => 'fav_restricted']);
+        kf_json(['ok' => false, 'error' => 'restricted'], 403);
+    }
     $kind = post_str('kind', 10);
     $id = (int)post_str('id', 10);
     $op = post_str('op', 10);
