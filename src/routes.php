@@ -72,7 +72,7 @@ function route_login_confirm_post(): never
         redirect('login?m=oauth_failed');
     }
     $user = user_get((int)$pending['u']);
-    if ($user === null || (int)$user['user_state'] !== (int)cfg('enums.user_state.active')) {
+    if ($user === null || (int)$user['user_state'] === (int)cfg('enums.user_state.deleted')) {
         redirect('login?m=account_inactive');
     }
     session_login_replace((int)$pending['u']);
