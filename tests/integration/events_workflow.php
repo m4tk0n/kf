@@ -169,6 +169,13 @@ q('UPDATE ' . tbl('events') . ' SET name_ascii = ? WHERE id = ?', ['Festival –
 $punctuationSuggest = run_route('event_name_suggest', $userToken, null, 'festival -');
 $punctuationData = json_decode($punctuationSuggest, true);
 check(is_array($punctuationData) && in_array('Festival - test event approval', $punctuationData['items'] ?? [], true), 'event-name autocomplete matches a hyphen query against an en dash in the stored name');
+$venueSuggest = run_route('venue_name_suggest', $userToken, null, 'Tes');
+$venueSuggestData = json_decode($venueSuggest, true);
+$venueSuggestion = array_values(array_filter($venueSuggestData['items'] ?? [], static fn(array $item): bool => (int)($item['id'] ?? 0) === $venueId));
+check(count($venueSuggestion) === 1 && ($venueSuggestion[0]['name'] ?? '') === 'Test klub', 'venue autocomplete returns a matching published venue with its city reference');
+$shortVenueSuggest = run_route('venue_name_suggest', $userToken, null, 'Te');
+$shortVenueData = json_decode($shortVenueSuggest, true);
+check(is_array($shortVenueData) && ($shortVenueData['items'] ?? []) === [], 'venue autocomplete waits for the configured three-character minimum');
 $shortSuggest = run_route('event_name_suggest', $userToken, null, 'K');
 $shortData = json_decode($shortSuggest, true);
 check(is_array($shortData) && ($shortData['items'] ?? []) === [], 'event-name autocomplete returns no results below the configured minimum length');
