@@ -232,4 +232,62 @@ $roleTwoCanPublish = (int)q('SELECT role FROM ' . tbl('users') . ' WHERE id = ?'
 check($roleTwoCanPublish === (int)cfg('enums.role.trusted'), 'test confirms role 2 is trusted in the database');
 check(can('view') && (int)cfg('enums.role.user') === 1, 'role enumeration and guest view baseline are consistent');
 
+// Ověření přepínání testovacích identit bez změny skutečné session administrátora.
+q('UPDATE ' . tbl('users') . ' SET role = ? WHERE id = ?', [(int)cfg('enums.role.admin'), $users['user']]);
+$createdProfiles = debug_test_profiles_create();
+$profileRows = debug_test_profiles_rows();
+$profileIds = [];
+foreach ($profileRows as $profileRow) {
+    $profileIds[(string)$profileRow['provider_uid']] = (int)$profileRow['id'];
+}
+check(!empty($createdProfiles['ok']) && count($profileIds) === 5, 'creates all five debug-only test profiles');
+
+$debugAdminToken = session_token_for($users['user']);
+$_COOKIE[(string)cfg('session.name')] = $debugAdminToken;
+$resetAuthCache = static function (): void {
+    $state = &auth_store();
+    $state['resolved'] = false;
+    $state['user'] = null;
+    $state['inactive'] = false;
+    $state['replaced'] = false;
+};
+$setSimulatedProfile = static function (int $profileId) use ($debugAdminToken, $resetAuthCache): void {
+    $expires = time() + 3600;
+    $sessionHash = hash('sha256', $debugAdminToken);
+    $payload = $profileId . '.' . $expires . '.' . $sessionHash;
+    $signature = hash_hmac('sha256', 'debug-profile|' . $payload, (string)env('APP_KEY', ''));
+    $_COOKIE['KF_DEBUG_PROFILE'] = $payload . '.' . $signature;
+    $resetAuthCache();
+};
+$resetAuthCache();
+$realAdmin = auth_real_resolve();
+check($realAdmin !== null && (int)$realAdmin['id'] === 2 && (int)$realAdmin['role'] === (int)cfg('enums.role.admin'), 'real admin session is recognized before simulation');
+$expectedCsrf = hash_hmac('sha256', 'csrf|' . hash('sha256', $debugAdminToken), (string)env('APP_KEY', ''));
+check(csrf_candidates()[0] === $expectedCsrf && auth_is_fresh(), 'CSRF and fresh-login checks stay bound to the real admin session');
+
+$setSimulatedProfile($profileIds['kf_test_user']);
+$simUser = auth_resolve();
+check($simUser !== null && (int)$simUser['id'] === $profileIds['kf_test_user']
+    && can('submit') && !can('review') && !can('manage_users'), 'User simulation applies role 1 permissions');
+check((int)auth_real_resolve()['id'] === 2, 'simulation keeps the real admin session intact');
+
+$setSimulatedProfile($profileIds['kf_test_blocked']);
+$simBlocked = auth_resolve();
+check($simBlocked !== null && (int)$simBlocked['user_state'] === (int)cfg('enums.user_state.suspended')
+    && can('view') && !can('submit') && !can('favorite') && menu_items($simBlocked) === [], 'blocked profile stays signed in with view-only access');
+
+$setSimulatedProfile($profileIds['kf_test_trusted']);
+check(can('publish_direct') && !can('review'), 'trusted simulation applies role 2 permissions');
+$setSimulatedProfile($profileIds['kf_test_moderator']);
+check(can('review') && !can('manage_users'), 'moderator simulation applies role 3 permissions');
+$setSimulatedProfile($profileIds['kf_test_admin']);
+check(can('manage_users') && !can('change_role', user_get(2))
+    && !can('change_state', user_get(2)) && !can('delete_user', user_get(2)), 'admin simulation cannot alter the real administrator account');
+
+unset($_COOKIE['KF_DEBUG_PROFILE']);
+$resetAuthCache();
+$restoredAdmin = auth_resolve();
+check($restoredAdmin !== null && (int)$restoredAdmin['id'] === 2
+    && (int)auth_real_resolve()['id'] === 2, 'stopping simulation restores the real administrator identity');
+
 echo "\nAll K&F event workflow integration tests passed.\n";
