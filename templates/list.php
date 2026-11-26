@@ -6,6 +6,9 @@ $rows = $view['rows'];
 $kind = ['events' => 'event', 'bands' => 'band', 'venues' => 'venue'][$s];
 ?>
 <?= kf_pager($view['nav']) ?>
+<?php if ($s !== 'events' && !empty($view['nearest_event_date'])): ?>
+  <p class="current-events-info"><?= e(t('catalog.nearest_event', ['date' => (new DateTimeImmutable($view['nearest_event_date']))->format('d.m.Y')])) ?></p>
+<?php endif; ?>
 <?php if ($s === 'events'): ?>
   <?php $currentCount = (int)($view['current_count'] ?? 0); ?>
   <p class="current-events-info"><?= e(t('events.current', ['n' => $currentCount])) ?></p>
