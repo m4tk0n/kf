@@ -214,3 +214,4 @@ Dotčené soubory:
 Přihlášený uživatel má trvalé výchozí nastavení filtrů uložené v JSON profilu. Dočasné změny se ukládají pouze do `sessionStorage`; reload ani běžná navigace je nemaže. Uložení nového nastavení v menu aktualizuje JSON a smaže dočasné přepsání relace. Host může filtry měnit také, ale jeho nastavení zůstává pouze v `sessionStorage`. Trvalé ukládání do `localStorage` se nepoužívá. Server ověřuje dočasně předané hodnoty a uplatňuje je společně pro seznam, pager a kalendář.
 
 Podrobná specifikace včetně pravidel pro oddělení účtů, navigaci, reload a návaznost seznamu, pageru a kalendáře: [docs/004_filtry.md](004_filtry.md).
+.
