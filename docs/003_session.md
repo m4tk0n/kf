@@ -40,3 +40,4 @@ Jeden uživatelský účet může mít současně aktivní pouze jednu přihlá�
 4. Zařízení B může pokračovat jako přihlášené.
 5. Při dalším požadavku zařízení A server zjistí neplatný token a zobrazí uvedené modální okno.
 6. Zařízení A již nemá přístup k žádné funkci vyžadující přihlášení.
+.
