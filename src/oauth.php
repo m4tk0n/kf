@@ -283,7 +283,7 @@ function oauth_callback(string $provider): never
         'email_verified' => $emailVerified,
         'avatar' => $avatar,
     ]);
-    if ($res['state'] !== (int)cfg('enums.user_state.active')) {
+    if ($res['state'] === (int)cfg('enums.user_state.deleted')) {
         security_log('oauth_login_inactive', ['user_id' => $res['id'], 'state' => $res['state']]);
         redirect('login?m=account_inactive');
     }
