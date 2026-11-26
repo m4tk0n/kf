@@ -52,7 +52,7 @@ jobs:
 
       - name: Create isolated test environment
         run: |
-          cat > .env <<'EOF'
+          cat > .env <<EOF
           APP_ENV=test
           APP_KEY=${APP_KEY}
           BASE_URL=${BASE_URL}
