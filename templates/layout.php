@@ -52,7 +52,9 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
       <span class="notification-icon" role="img" aria-label="Upozornění" title="Upozornění">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg>
       </span>
+      <?php if ((int)$user['user_state'] === (int)cfg('enums.user_state.active')): ?>
       <a data-favtop data-label-on="<?= e(t('fav.toggle_on')) ?>" data-label-off="<?= e(t('fav.toggle_off')) ?>" class="fav favtop<?= $favOn ? ' on' : '' ?>" href="<?= e(kf_url($req, ['fav' => $favOn ? 0 : 1, 'p' => 1, 'k' => 0])) ?>" aria-pressed="<?= $favOn ? 'true' : 'false' ?>" aria-label="<?= e(t($favOn ? 'fav.toggle_on' : 'fav.toggle_off')) ?>" title="<?= e(t($favOn ? 'fav.toggle_on' : 'fav.toggle_off')) ?>"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3.5 2.65 5.37 5.93.86-4.29 4.18 1.01 5.9L12 17.03l-5.3 2.78 1.01-5.9-4.29-4.18 5.93-.86L12 3.5Z"></path></svg></a>
+      <?php endif; ?>
       <details class="umenu">
         <summary aria-label="<?= e((string)$user['display_name']) ?>"><?= avatar_html($user) ?></summary>
         <nav class="umenu-list">
