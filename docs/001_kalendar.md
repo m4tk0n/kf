@@ -241,3 +241,16 @@ Pravidla:
 - panel se aktualizuje společně s pagerem a výpisem při živém hledání a změnách filtrů,
 - panel se vykresluje pouze v sekci akcí, nikoliv v sekci kapel a klubů.
 .
+
+
+## 14. Přechod mezi měsíci bez probliknutí
+
+Při přechodu na předchozí nebo následující měsíc zůstává struktura modálního okna stabilní:
+- název cílového měsíce se ihned zobrazí uprostřed hlavičky,
+- uprostřed kalendářové plochy se zobrazí text „Načítám…“,
+- mřížka zůstává prostorově zachována a během načítání se pouze skryje, nikoliv odstraní z rozvržení,
+- po načtení se aktualizují dny a jejich tečky bez opětovného sestavení celého modálního okna,
+- souběžné požadavky se ignorují, pokud už uživatel mezitím přešel na jiný měsíc,
+- při chybě načítání zůstane okno stabilní a zobrazí chybovou zprávu uprostřed.
+
+Přechod nesmí způsobit změnu výšky okna, poskočení obsahu ani krátké zobrazení prázdné plochy.
