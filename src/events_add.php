@@ -563,8 +563,8 @@ function route_event_name_suggest(): never
     }
 
     $rows = q(
-        'SELECT MIN(name) AS name FROM ' . tbl('events') . ' WHERE name_ascii LIKE ? GROUP BY name_ascii ORDER BY name_ascii LIMIT ' . $limit,
-        [$ascii . '%']
+        'SELECT MIN(name) AS name FROM ' . tbl('events') . ' WHERE LOWER(name_ascii) LIKE ? GROUP BY LOWER(name_ascii) ORDER BY LOWER(name_ascii) LIMIT ' . $limit,
+        [strtolower($ascii) . '%']
     )->fetchAll();
     echo json_encode(
         ['items' => array_values(array_map(static fn(array $row): string => (string)$row['name'], $rows))],
