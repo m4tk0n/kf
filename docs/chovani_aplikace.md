@@ -227,10 +227,16 @@ Podrobný popis formuláře, draftu, náhledu, obrázků, odeslání, fronty `/m
 
 ## URL detailů a názvy entit
 
-**Stav: implementováno v kódu, čeká na ověření po nasazení.**
+**Globální pravidlo pro všechny detaily: akce, kapely i kluby.**
 
-V tabulkách `events`, `bands` a `venues` se ukládá pouze zobrazovaný název ve sloupci `name`. Sloupce `slug` a `name_ascii` se nepoužívají. Detailní URL mají tvar `/events/{id}/{slug}`, `/bands/{id}/{slug}` a `/venues/{id}/{slug}`. U akce se slug skládá z názvu a `date_from`; u kapely a klubu pouze z názvu.
+V tabulkách `events`, `bands` a `venues` se ukládá pouze zobrazovaný název ve sloupci `name`. Sloupce `slug` a `name_ascii` se nepoužívají.
 
-Číselné ID je jediný identifikátor záznamu. Slug se generuje při sestavení odkazu a v databázi se neukládá. URL pouze s ID je platná a přesměruje na kanonickou URL. Nesprávný či zastaralý slug se přesměruje na aktuální URL podle ID. Změna názvu nebo data nezpůsobí ztrátu funkčnosti starého odkazu.
+Kanonické URL mají tyto tvary:
 
-Vyhledávání a našeptávače pracují přímo s `name` a používají kolaci bez rozlišování diakritiky. Pomocný ASCII název není v těchto třech tabulkách potřeba.
+- Akce: `/events/123/metalovy-koncert-2026-06-14` — slug z názvu a data začátku.
+- Kapela: `/bands/45/metalova-kapela` — slug z názvu.
+- Klub: `/venues/12/klub-pod-lampou` — slug z názvu.
+
+Číselné ID je jediný identifikátor záznamu. Slug se generuje při sestavení odkazu a v databázi se neukládá. URL pouze s ID je platná a přesměruje na aktuální kanonickou URL. Nesprávný či zastaralý slug se přesměruje na aktuální URL podle ID. Změna názvu nebo data proto nezneplatní původní odkaz.
+
+Vyhledávání a našeptávače pracují přímo s `name` a používají kolaci bez rozlišování velikosti písmen a diakritiky. Pomocný ASCII název není v těchto třech tabulkách potřeba.
