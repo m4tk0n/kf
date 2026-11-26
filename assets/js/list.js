@@ -69,7 +69,6 @@
   function loadView(href, push, replace) {
     if (!view) { window.location.href = href; return; }
     var seq = ++viewSeq;
-    view.classList.add('loading');
     var u = window.KFFilters ? window.KFFilters.decorateUrl(href) : href;
     u += (u.indexOf('?') > -1 ? '&' : '?') + 'partial=1';
     fetch(u, { credentials: 'same-origin', headers: { 'Accept': 'text/html' } })
@@ -81,13 +80,11 @@
         if (seq !== viewSeq) return;
         view.innerHTML = html;
         applyViewState();
-        view.classList.remove('loading');
         if (push) history.pushState(null, '', href);
         else if (replace) history.replaceState(null, '', href);
       })
       .catch(function () {
         if (seq === viewSeq) {
-          view.classList.remove('loading');
           // Při chybě živého hledání zůstane stránka i klávesnice zachována.
         }
       });
