@@ -70,7 +70,12 @@
           option.type = 'button';
           option.className = 'autocomplete-option';
           option.setAttribute('role', 'option');
-          option.textContent = isVenue && item.city ? value + ' (' + item.city + ')' : value;
+          if (isVenue && item && typeof item === 'object') {
+            var details = [item.country, item.city, item.address].filter(function (part) { return typeof part === 'string' && part.trim() !== ''; });
+            option.textContent = details.length ? value + ' · ' + details.join(' · ') : value;
+          } else {
+            option.textContent = value;
+          }
           option.addEventListener('click', function () {
             nameInput.value = value;
             if (isVenue && venueId) {
