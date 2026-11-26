@@ -22,7 +22,7 @@
 .pager-cur[data-cal]:hover{color:var(--text)}
 .calendar-backdrop{z-index:1100}
 .calendar-modal{max-width:390px;padding:14px}
-.calendar-head{display:grid;grid-template-columns:34px 1fr 34px;align-items:center;gap:8px;margin-bottom:12px}
+.calendar-head{display:grid;grid-template-columns:34px 1fr 34px;align-items:center;gap:8px;margin-bottom:20px}
 .calendar-head h2{margin:0;text-align:center;text-transform:capitalize;font-size:1rem;font-weight:750}
 .calendar-nav{width:34px;height:34px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);font-size:1.35rem;line-height:1;cursor:pointer}
 .calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
@@ -44,11 +44,12 @@
   .calendar-modal{padding:11px}
   .calendar-grid{gap:3px}
   .calendar-day{min-height:39px;font-size:.8rem;border-radius:7px}
-  .calendar-head{margin-bottom:9px}
+  .calendar-body{min-height:287px}
+  .calendar-head{margin-bottom:20px}
 }
 
 
 
 /* Stabilní rozměry kalendáře při načítání dalšího měsíce. */
-.calendar-body{position:relative;min-height:331px}
+.calendar-body{position:relative;min-height:311px}
 .calendar-placeholder{pointer-events:none}
