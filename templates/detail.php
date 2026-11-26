@@ -29,7 +29,7 @@ $evList = static function (array $rows): string {
 <article class="card detail detail-<?= e($kind) ?>">
   <div class="detail-head">
     <h1><?= e($name) ?></h1>
-    <?php if ($user !== null): ?>
+    <?php if ($user !== null && (int)($user['user_state'] ?? 0) === (int)cfg('enums.user_state.active')): ?>
       <button type="button" class="fav<?= $d['fav'] ? ' on' : '' ?>" data-fav
         data-url="<?= e(url('fav')) ?>" data-csrf-field="<?= e((string)cfg('security.csrf_field')) ?>" data-csrf="<?= e(csrf_token()) ?>"
         data-kind="<?= e($kind) ?>" data-id="<?= $id ?>" aria-pressed="<?= $d['fav'] ? 'true' : 'false' ?>"
