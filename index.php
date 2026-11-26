@@ -32,6 +32,7 @@ function kf_dispatch(): void
         'admin/settings' => 'route_admin_settings',
         'event/new' => 'route_event_new',
         'event/name-suggest' => 'route_event_name_suggest',
+        'venue/name-suggest' => 'route_venue_name_suggest',
         'event/preview' => 'route_event_preview',
         'event/draft-image' => 'route_event_draft_image',
         'pending/image' => 'route_pending_image',
