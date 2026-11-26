@@ -253,3 +253,8 @@ Našeptávač zachovává interpunkci v názvu (např. `-`, `&`, čárky a dalš
 ### Normalizace názvu při ukládání
 
 Typografické pomlčky (`–`, `—`, `‑`, `−`) se převádějí na běžný spojovník (`-`) už při čištění vstupu, tedy před uložením draftu. Stejná ochrana je i přímo ve funkcích, které ukládají návrh do `pending` a publikovanou akci do `events`. V databázi `events.name` a `pending.title` se proto ukládá běžný spojovník; odpovídající `name_ascii` se vytváří z normalizovaného názvu. Integrační test ověřuje také hodnotu uloženou v pending JSON.
+
+
+### Společná normalizace textových vstupů
+
+Normalizace není specifická pro názvy akcí. Pomocná funkce `kf_text_normalize()` v `src/core.php` převádí typografické pomlčky (`–`, `—`, `‑`, `−`) na běžný spojovník (`-`). `assets/js/app.js` ji odpovídajícím způsobem provádí při každé změně textového pole, včetně vložení ze schránky. Databázová funkce `q()` v `src/db.php` normalizuje všechny textové parametry před provedením dotazu, takže pravidlo platí centrálně pro zápisy do všech tabulek i pro porovnávací dotazy. Ostatní znaky a interpunkce se nemění. Integrační test ověřuje centrální normalizaci při zápisu obecného textu do databáze.
