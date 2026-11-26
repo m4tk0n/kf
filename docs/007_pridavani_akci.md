@@ -246,3 +246,5 @@ Toto je pouze první krok našeptávání. Města, kluby a kapely budou řešeny
 ## Našeptávač názvů akcí
 
 Našeptávač hledá pouze zveřejněné akce podle začátku `name_ascii`. Porovnání je nezávislé na velikosti písmen, takže dotaz `fest` najde i záznamy začínající `Festival`. Výsledky jsou unikátní názvy; výběr pouze doplní název do formuláře a neslučuje jednotlivé akce.
+
+Našeptávač zachovává interpunkci v názvu (např. `-`, `&`, čárky a další znaky). Typografické varianty pomlček (`–`, `—`, `‑`, `−`) se při hledání sjednotí s běžným spojovníkem `-`, aby šlo název pohodlně zadat i běžnou klávesnicí.
