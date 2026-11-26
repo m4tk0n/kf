@@ -146,9 +146,9 @@ $imageName = create_draft_with_image($users['user'], $userValues);
 $draftImage = kf_draft_image_path($users['user'], $imageName);
 check($draftImage !== null && is_file($draftImage), 'draft preview image is available');
 $formHtml = run_route('event_form', $userToken);
-check(str_contains($formHtml, 'Festival test event approval') && str_contains($formHtml, 'event/draft-image'), 'new-event form route renders saved values and protected image preview');
+check(str_contains($formHtml, 'Festival - test event approval') && str_contains($formHtml, 'event/draft-image'), 'new-event form route renders saved values and protected image preview');
 $previewHtml = run_route('event_preview', $userToken);
-check(str_contains($previewHtml, 'Festival test event approval') && str_contains($previewHtml, 'Test klub'), 'event preview route renders the event detail before submission');
+check(str_contains($previewHtml, 'Festival - test event approval') && str_contains($previewHtml, 'Test klub'), 'event preview route renders the event detail before submission');
 
 run_route('event_submit', $userToken);
 $pending = q('SELECT id, title FROM ' . tbl('pending') . ' WHERE created_by = ? AND date_from = ?', [$users['user'], $eventDate])->fetch();
