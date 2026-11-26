@@ -21,6 +21,7 @@ Následující texty jsou návrhy typů zpráv, nikoli zatím schválené podmí
 
 - **Nový koncert oblíbené kapely:** „{oblibena kapela} má nový koncert“
 - **Nová akce oblíbeného klubu:** „{oblibeny klub} má novou akci“
+- **Další ročník nebo pokračování oblíbené akce:** pokud má uživatel v oblíbených například „{Nazev} fest vol. X“ a v katalogu se objeví nová související akce „{Nazev} fest vol. X2“, upozornit uživatele, že vyšel další ročník nebo pokračování této akce. Konkrétní způsob rozpoznávání souvisejících ročníků/částí zatím není určen.
 - **Nový údaj v katalogu:** informační zpráva označená ikonou [info], například „Nový stát“, „Nový žánr“ nebo „Nové město“.
 
 U posledního typu zatím není určeno, zda se má upozornění vytvářet při každém přidání údaje, až po jeho schválení, nebo pouze za jiných podmínek.
