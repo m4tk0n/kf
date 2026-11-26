@@ -23,7 +23,7 @@ function debug_test_profiles_create(): array
     }
 
     $prefix = (string)cfg('db.prefix');
-    if ($prefix === '' || !preg_match('/^[A-Za-z0-9_]+$/', $prefix)) {
+    if (!preg_match('/^[A-Za-z0-9_]*$/', $prefix)) {
         throw new RuntimeException('Neplatný prefix databázových tabulek.');
     }
     $sql = str_replace('{prefix}', $prefix, $sql);
