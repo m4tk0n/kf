@@ -52,3 +52,8 @@ Skript při spuštění maže a znovu vytváří tabulky v databázi `kf_test`. 
 
 
 Adresář `tests/` je při FTP nasazení výslovně vyloučen. Deploy workflow zároveň odstraní případnou dřívější kopii `tests/` ze serveru, aby testovací spouštěcí skripty nebyly veřejnou součástí webu.
+
+
+## Co pipeline záměrně netestuje
+
+Pro stabilní opakovatelnost se testovací obrázek generuje přes GD přímo v testu. Pipeline tedy ověřuje WebP zpracování, náhledovou cestu, kopírování, finální varianty a úklid souborů, ale **neověřuje stažení obrázku z externí URL**. Stejně tak nejde o automatizaci skutečného prohlížeče: klientské JavaScriptové chování a klikání v UI je potřeba ověřit ručně v prohlížeči. Serverové GET/POST handlery, vykreslení formuláře a náhledu, CSRF/Origin kontrola a databázové změny se ověřují automaticky.
