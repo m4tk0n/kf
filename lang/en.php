@@ -64,6 +64,9 @@ return [
     'menu.users' => 'Users',
     'menu.settings' => 'Settings',
     'menu.diagnostics' => 'Diagnostics',
+    'menu.db' => 'DB',
+    'db.title' => 'Database',
+    'db.installer' => 'Database installer',
     'menu.logout' => 'Log out',
 
     // roles and states
