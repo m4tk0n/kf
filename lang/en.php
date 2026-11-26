@@ -21,6 +21,7 @@ return [
     'type.2' => 'Festival',
     'type.3' => 'Other',
     'events.current' => 'Ongoing events today: {n}',
+    'catalog.nearest_event' => 'Next event: {date}',
 
     // home
     'home.welcome' => 'Welcome, {name}.',
