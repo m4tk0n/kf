@@ -229,10 +229,29 @@ function kf_load(array $req): array
         $from = ' FROM ' . tbl('bands') . ' a' . $geo . ' LEFT JOIN ' . tbl('genres') . ' g ON g.id = a.genre_id';
         $cols = 'a.id, a.name, a.logo, c.name AS city, co.iso2, ' . $country . ' AS country, g.name AS genre';
         $r = kf_paged($cols, $from, $where, $params, 'a.name, a.id', [], $req, $per('bands'));
+
+        // Nejbližší probíhající nebo budoucí akce kapel odpovídajících aktuálním filtrům.
+        $today = date('Y-m-d');
+        $nearestFrom = ' FROM ' . tbl('events') . ' e JOIN ' . tbl('event_bands') . ' eb ON eb.event_id = e.id'
+            . ' JOIN ' . tbl('bands') . ' a ON a.id = eb.band_id' . $geo
+            . ' LEFT JOIN ' . tbl('genres') . ' g ON g.id = a.genre_id';
+        $nearestEventDate = q(
+            'SELECT MIN(CASE WHEN e.date_from < ? THEN ? ELSE e.date_from END)' . $nearestFrom . $where . ' AND e.date_to >= ?',
+            array_merge([$today, $today], $params, [$today])
+        )->fetchColumn();
     } else {
         $from = ' FROM ' . tbl('venues') . ' a' . $geo;
         $cols = 'a.id, a.name, a.img, c.name AS city, co.iso2, ' . $country . ' AS country';
         $r = kf_paged($cols, $from, $where, $params, 'a.name, a.id', [], $req, $per('venues'));
+
+        // Nejbližší probíhající nebo budoucí akce klubů odpovídajících aktuálním filtrům.
+        $today = date('Y-m-d');
+        $nearestFrom = ' FROM ' . tbl('events') . ' e JOIN ' . tbl('venues') . ' a ON a.id = e.venue_id' . $geo;
+        $nearestEventDate = q(
+            'SELECT MIN(CASE WHEN e.date_from < ? THEN ? ELSE e.date_from END)' . $nearestFrom . $where . ' AND e.date_to >= ?',
+            array_merge([$today, $today], $params, [$today])
+        )->fetchColumn();
     }
+    $r['nearest_event_date'] = is_string($nearestEventDate ?? null) ? $nearestEventDate : null;
     return ['req' => $req] + $r;
 }
