@@ -553,7 +553,8 @@ function route_event_name_suggest(): never
     $min = max(1, (int)cfg('paging.autocomplete_min_chars', 2));
     $limit = max(1, min(30, (int)cfg('paging.autocomplete_limit', 10)));
     $ascii = kf_ascii(mb_substr($term, 0, 100));
-    $ascii = trim((string)preg_replace('/[%_\\\\]/', '', $ascii));
+    // Různé typografické pomlčky bereme jako běžný spojovník; ostatní interpunkci zachováváme.
+    $ascii = strtr($ascii, ['–' => '-', '—' => '-', '‑' => '-', '−' => '-']);
 
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-Control: no-store');
@@ -563,8 +564,8 @@ function route_event_name_suggest(): never
     }
 
     $rows = q(
-        'SELECT MIN(name) AS name FROM ' . tbl('events') . ' WHERE LOWER(name_ascii) LIKE ? GROUP BY LOWER(name_ascii) ORDER BY LOWER(name_ascii) LIMIT ' . $limit,
-        [strtolower($ascii) . '%']
+        'SELECT MIN(name) AS name FROM ' . tbl('events') . ' WHERE LOCATE(?, LOWER(REPLACE(REPLACE(REPLACE(name_ascii, ?, ?), ?, ?), ?, ?))) = 1 GROUP BY LOWER(REPLACE(REPLACE(REPLACE(name_ascii, ?, ?), ?, ?), ?, ?)) ORDER BY LOWER(REPLACE(REPLACE(REPLACE(name_ascii, ?, ?), ?, ?), ?, ?)) LIMIT ' . $limit,
+        [strtolower($ascii), '–', '-', '—', '-', '‑', '-', '–', '-', '—', '-', '‑', '-', '–', '-', '—', '-', '‑', '-']
     )->fetchAll();
     echo json_encode(
         ['items' => array_values(array_map(static fn(array $row): string => (string)$row['name'], $rows))],
