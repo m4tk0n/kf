@@ -123,16 +123,15 @@
         }(key));
         if (key === isoDate(new Date())) day.classList.add('today');
         var types = data.days && data.days[key] ? data.days[key] : [];
-        if (types.length) {
-          var dots = document.createElement('span');
-          dots.className = 'calendar-dots';
-          types.forEach(function (type) {
-            var dot = document.createElement('i');
-            dot.className = 'calendar-dot type-' + Number(type);
-            dots.appendChild(dot);
-          });
-          day.appendChild(dots);
-        }
+        // Vždy rezervovat stejný prostor pro tečky, i když daný den žádné akce nemá.
+        var dots = document.createElement('span');
+        dots.className = 'calendar-dots';
+        types.forEach(function (type) {
+          var dot = document.createElement('i');
+          dot.className = 'calendar-dot type-' + Number(type);
+          dots.appendChild(dot);
+        });
+        day.appendChild(dots);
         oldCell.replaceWith(day);
         dayCells[i] = day;
       });
