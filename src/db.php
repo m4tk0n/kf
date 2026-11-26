@@ -45,6 +45,13 @@ function tbl(string $key): string
 /** Prepared statement: vrací provedený PDOStatement. */
 function q(string $sql, array $params = []): PDOStatement
 {
+    // Jednotná normalizace všech textových hodnot před databázovým dotazem i zápisem.
+    foreach ($params as &$value) {
+        if (is_string($value)) {
+            $value = kf_text_normalize($value);
+        }
+    }
+    unset($value);
     $st = db()->prepare($sql);
     $st->execute($params);
     return $st;
