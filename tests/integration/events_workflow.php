@@ -160,6 +160,10 @@ check(is_array($suggestData) && in_array('Festival test event approval', $sugges
 $lowerSuggest = run_route('event_name_suggest', $userToken, null, 'fest');
 $lowerData = json_decode($lowerSuggest, true);
 check(is_array($lowerData) && in_array('Festival test event approval', $lowerData['items'] ?? [], true), 'event-name autocomplete matches uppercase stored names from a lowercase query');
+q('UPDATE ' . tbl('events') . ' SET name_ascii = ? WHERE id = ?', ['Festival – test event approval', $publishedId]);
+$punctuationSuggest = run_route('event_name_suggest', $userToken, null, 'festival -');
+$punctuationData = json_decode($punctuationSuggest, true);
+check(is_array($punctuationData) && in_array('Festival test event approval', $punctuationData['items'] ?? [], true), 'event-name autocomplete matches a hyphen query against an en dash in the stored name');
 $shortSuggest = run_route('event_name_suggest', $userToken, null, 'K');
 $shortData = json_decode($shortSuggest, true);
 check(is_array($shortData) && ($shortData['items'] ?? []) === [], 'event-name autocomplete returns no results below the configured minimum length');
