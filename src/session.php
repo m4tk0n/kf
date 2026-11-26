@@ -11,8 +11,8 @@ function &auth_store(): array
 
 function auth_cached_uid(): ?int
 {
-    $st = &auth_store();
-    return $st['user'] !== null ? (int)$st['user']['id'] : null;
+    $u = auth_resolve();
+    return $u !== null ? (int)$u['id'] : null;
 }
 
 function session_cookie_path(): string
@@ -58,7 +58,7 @@ function session_delete_hash_hex(string $hex): void
  * Přihlášený uživatel aktuálního požadavku, nebo null. Role i user_state se vždy načítají z DB
  * (JOIN přes sessions); v cookie je jen náhodný token, v DB jeho SHA-256.
  */
-function auth_resolve(): ?array
+function auth_real_resolve(): ?array
 {
     $st = &auth_store();
     if ($st['resolved']) {
@@ -104,7 +104,7 @@ function auth_resolve(): ?array
         session_clear_cookie();
         return null;
     }
-    if ((int)$row['user_state'] !== (int)cfg('enums.user_state.active') || (int)$row['provider'] === (int)cfg('enums.oauth_provider.system')) {
+    if ((int)$row['user_state'] === (int)cfg('enums.user_state.deleted') || (int)$row['provider'] === (int)cfg('enums.oauth_provider.system')) {
         session_delete_hash_hex($hashHex);
         security_log('inactive_user_session', ['user_id' => (int)$row['id'], 'state' => (int)$row['user_state']]);
         session_clear_cookie();
@@ -126,6 +126,19 @@ function auth_resolve(): ?array
         'session_created_at' => (int)$row['s_created'],
     ];
     return $st['user'];
+}
+
+/** Efektivní identita požadavku. Při testování zůstává autentizovaná session vždy skutečným účtem ID 2. */
+function auth_resolve(): ?array
+{
+    $real = auth_real_resolve();
+    if ($real === null) {
+        return null;
+    }
+    if (function_exists('debug_test_profiles_effective_user')) {
+        return debug_test_profiles_effective_user($real) ?? $real;
+    }
+    return $real;
 }
 
 /** Vytvoří novou session s novým tokenem (volat po každém přihlášení) a nastaví cookie. */
@@ -219,7 +232,7 @@ function session_login_replace(int $userId): void
 
 function session_destroy_current(): void
 {
-    $u = auth_resolve();
+    $u = auth_real_resolve();
     if ($u !== null) {
         session_delete_hash_hex($u['token_hash_hex']);
     }
@@ -247,7 +260,7 @@ function session_cleanup(): int
 /** Přihlášení do 'fresh_sec' pro citlivé akce. */
 function auth_is_fresh(): bool
 {
-    $u = auth_resolve();
+    $u = auth_real_resolve();
     return $u !== null && time() - $u['session_created_at'] <= (int)cfg('session.fresh_sec');
 }
 
@@ -285,7 +298,7 @@ function require_fresh_login(): array
 function csrf_candidates(): array
 {
     $key = (string)env('APP_KEY', '');
-    $u = auth_resolve();
+    $u = auth_real_resolve();
     if ($u !== null) {
         return [hash_hmac('sha256', 'csrf|' . $u['token_hash_hex'], $key)];
     }
@@ -353,9 +366,16 @@ function can(string $action, ?array $rec = null): bool
     $uid = $u !== null ? (int)$u['id'] : 0;
     $ai = (int)cfg('users.ai_user_id');
 
+    // Pozastavený/blokovaný účet zůstává přihlášený, ale smí pouze prohlížet veřejný obsah.
+    if ($u !== null && (int)($u['user_state'] ?? 0) !== (int)cfg('enums.user_state.active') && $action !== 'view') {
+        return false;
+    }
+
     switch ($action) {
         case 'view':
             return true;
+        case 'favorite':
+            return $u !== null && $role >= role_value('user');
         case 'submit':
             return $role >= role_value('user');
         case 'publish_direct':
