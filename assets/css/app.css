@@ -257,8 +257,9 @@ abbr{text-decoration:none}
 .top-right{display:flex;align-items:center;gap:10px}
 .notification-icon{width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);pointer-events:none}
 .notification-icon svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.fav.favtop{width:36px;height:36px;font-size:1.2rem;text-decoration:none;-webkit-text-fill-color:transparent!important;-webkit-text-stroke:1.3px #d2bd72;text-shadow:none}
-.fav.favtop.on{color:#d2bd72;-webkit-text-fill-color:#d2bd72!important;-webkit-text-stroke:1.3px #d2bd72}
+.fav.favtop{width:36px;height:36px;color:#d2bd72;text-decoration:none;-webkit-text-fill-color:initial!important;-webkit-text-stroke:0;text-shadow:none}
+.fav.favtop svg{display:block;width:20px;height:20px;fill:none;stroke:#d2bd72;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.fav.favtop.on svg{fill:#d2bd72}
 
 /* Hvězdička v řádku výpisu a stav načítání */
 .list>li{position:relative}
