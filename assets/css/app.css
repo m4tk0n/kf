@@ -322,14 +322,12 @@ input[type="submit"].flash-success{
 
 
 /* Neprůhledná jen z hlediska událostí: zachytí kliknutí mimo otevřené menu. */
-.head .umenu-outside-blocker{
+.head.umenu-blocking{z-index:7}
+.umenu-outside-blocker{
   position:fixed;
   inset:0;
   z-index:6;
   background:transparent;
-  touch-action: manipulation;
+  touch-action:manipulation;
 }
-.head .umenu{
-  position:relative;
-  z-index:7;
-}
+.head .umenu{position:relative;z-index:7}
