@@ -58,6 +58,7 @@ function debug_test_profiles_admin(): bool
 {
     $real = auth_real_resolve();
     return $real !== null && (int)$real['id'] === 2
+        && (int)$real['role'] === (int)cfg('enums.role.admin')
         && (int)$real['user_state'] === (int)cfg('enums.user_state.active');
 }
 
@@ -95,8 +96,13 @@ function debug_test_profiles_cookie_clear(): void
 /** Nastaví krátkodobý podepsaný výběr testovací identity. */
 function debug_test_profiles_cookie_set(int $userId): void
 {
+    $real = auth_real_resolve();
+    if ($real === null || (int)$real['id'] !== 2 || (int)$real['role'] !== (int)cfg('enums.role.admin')) {
+        throw new RuntimeException('Simulaci může nastavit pouze skutečný administrátor ID 2.');
+    }
     $expires = time() + 28800;
-    $payload = $userId . '.' . $expires;
+    $sessionHash = (string)$real['token_hash_hex'];
+    $payload = $userId . '.' . $expires . '.' . $sessionHash;
     $signature = hash_hmac('sha256', 'debug-profile|' . $payload, (string)env('APP_KEY', ''));
     setcookie('KF_DEBUG_PROFILE', $payload . '.' . $signature, [
         'expires' => $expires,
@@ -115,15 +121,18 @@ function debug_test_profiles_selected_id(): int
     }
     $raw = (string)($_COOKIE['KF_DEBUG_PROFILE'] ?? '');
     $parts = explode('.', $raw);
-    if (count($parts) !== 3 || !ctype_digit($parts[0]) || !ctype_digit($parts[1])) {
+    if (count($parts) !== 4 || !ctype_digit($parts[0]) || !ctype_digit($parts[1])
+        || !preg_match('/^[a-f0-9]{64}$/', $parts[2])) {
         return 0;
     }
-    [$idRaw, $expRaw, $signature] = $parts;
+    [$idRaw, $expRaw, $sessionHash, $signature] = $parts;
+    $real = auth_real_resolve();
     $id = (int)$idRaw;
     $expires = (int)$expRaw;
-    $payload = $idRaw . '.' . $expRaw;
+    $payload = $idRaw . '.' . $expRaw . '.' . $sessionHash;
     $expected = hash_hmac('sha256', 'debug-profile|' . $payload, (string)env('APP_KEY', ''));
-    if ($id < 1 || $expires < time() || $expires > time() + 28800
+    if ($real === null || !hash_equals((string)$real['token_hash_hex'], $sessionHash)
+        || $id < 1 || $expires < time() || $expires > time() + 28800
         || !hash_equals($expected, $signature)) {
         debug_test_profiles_cookie_clear();
         return 0;
