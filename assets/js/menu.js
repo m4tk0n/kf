@@ -3,56 +3,34 @@
 
   var menu = document.querySelector('.umenu');
   var head = document.querySelector('.head');
+
   if (!menu || !head) return;
 
-  var blocker = null;
+  var blocker;
 
-  function removeBlocker() {
-    if (blocker && blocker.parentNode) blocker.parentNode.removeChild(blocker);
+  function closeMenu() {
+    menu.open = false;
+    if (blocker) blocker.remove();
     blocker = null;
     head.classList.remove('umenu-blocking');
   }
 
-  function closeMenu() {
-    menu.open = false;
-    removeBlocker();
-  }
-
-  function addBlocker() {
-    if (blocker || !menu.open) return;
+  function openMenu() {
+    if (!menu.open || blocker) return;
 
     blocker = document.createElement('div');
     blocker.className = 'umenu-outside-blocker';
     blocker.setAttribute('aria-hidden', 'true');
+    blocker.addEventListener('click', closeMenu);
 
-    // Vrstva fyzicky překryje stránku. Událost proto vůbec nedorazí
-    // k prvku pod místem kliknutí (ani nevyvolá jeho :active stav).
-    blocker.addEventListener('pointerdown', function (ev) {
-      ev.preventDefault();
-      ev.stopPropagation();
-      if (typeof ev.stopImmediatePropagation === 'function') {
-        ev.stopImmediatePropagation();
-      }
-    });
-
-    blocker.addEventListener('click', function (ev) {
-      ev.preventDefault();
-      ev.stopPropagation();
-      if (typeof ev.stopImmediatePropagation === 'function') {
-        ev.stopImmediatePropagation();
-      }
-      closeMenu();
-    });
-
-    document.body.appendChild(blocker);
+    head.appendChild(blocker);
     head.classList.add('umenu-blocking');
   }
 
   menu.addEventListener('toggle', function () {
-    if (menu.open) addBlocker();
-    else removeBlocker();
+    if (menu.open) openMenu();
+    else closeMenu();
   });
 
-  // Pro případ, že by menu bylo otevřené už při inicializaci skriptu.
-  if (menu.open) addBlocker();
+  if (menu.open) openMenu();
 })();
