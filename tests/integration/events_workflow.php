@@ -9,6 +9,11 @@ declare(strict_types=1);
 $_SERVER['HTTP_USER_AGENT'] = 'KF automated integration test';
 require dirname(__DIR__, 2) . '/bootstrap.php';
 
+// V integračním běhu zobrazit fatální chyby z izolovaných route procesů.
+ini_set('display_errors', '1');
+ini_set('log_errors', '0');
+error_reporting(E_ALL);
+
 function check(bool $ok, string $message): void
 {
     if (!$ok) {
