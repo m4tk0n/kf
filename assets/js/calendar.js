@@ -86,11 +86,6 @@
     }
     body.appendChild(grid);
 
-    var loading = document.createElement('p');
-    loading.className = 'calendar-loading';
-    loading.textContent = 'Načítám…';
-    loading.setAttribute('role', 'status');
-    body.appendChild(loading);
     dialog.appendChild(body);
 
     var footer = document.createElement('div');
@@ -106,10 +101,8 @@
     });
     dialog.appendChild(footer);
 
-    function setLoading(isLoading, message) {
-      dialog.classList.toggle('is-loading', isLoading);
+    function setLoading(isLoading) {
       dialog.setAttribute('aria-busy', isLoading ? 'true' : 'false');
-      loading.textContent = message || 'Načítám…';
     }
 
     function renderCalendar(data) {
@@ -150,7 +143,7 @@
       var thisRequest = ++requestId;
       var month = current.getFullYear() + '-' + String(current.getMonth() + 1).padStart(2, '0');
       title.textContent = monthFmt.format(current);
-      setLoading(true, 'Načítám…');
+      setLoading(true);
       var url = urlTemplate.replace('__M__', encodeURIComponent(month));
       if (window.KFFilters) url = window.KFFilters.decorateUrl(url);
       fetch(url, { credentials: 'same-origin', headers: { 'Accept': 'application/json' } })
@@ -164,7 +157,7 @@
         })
         .catch(function () {
           if (thisRequest !== requestId || !activeModal) return;
-          setLoading(true, 'Kalendář se nepodařilo načíst.');
+          setLoading(false);
         });
     }
     function moveMonth(delta) {
