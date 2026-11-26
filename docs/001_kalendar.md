@@ -240,3 +240,4 @@ Pravidla:
 - změna data pageru nemění počet,
 - panel se aktualizuje společně s pagerem a výpisem při živém hledání a změnách filtrů,
 - panel se vykresluje pouze v sekci akcí, nikoliv v sekci kapel a klubů.
+.
