@@ -2,51 +2,55 @@
   'use strict';
 
   var menu = document.querySelector('.umenu');
-  if (!menu) return;
+  var head = document.querySelector('.head');
+  if (!menu || !head) return;
 
-  // Zabrání tomu, aby click navazující na zavření menu aktivoval prvek pod ním.
-  var blockFollowingClick = false;
+  var blocker = null;
 
-  function stopEvent(ev) {
-    ev.preventDefault();
-    ev.stopPropagation();
-    if (typeof ev.stopImmediatePropagation === 'function') {
-      ev.stopImmediatePropagation();
-    }
+  function removeBlocker() {
+    if (blocker && blocker.parentNode) blocker.parentNode.removeChild(blocker);
+    blocker = null;
   }
 
-  function blockOutsidePointer(ev) {
-    if (menu.contains(ev.target)) {
-      if (!menu.open) blockFollowingClick = false;
-      return;
-    }
-
-    if (!menu.open) return;
-
-    stopEvent(ev);
-    blockFollowingClick = true;
+  function closeMenu() {
     menu.open = false;
+    removeBlocker();
   }
 
-  function blockOutsideClick(ev) {
-    if (menu.contains(ev.target)) return;
+  function addBlocker() {
+    if (blocker || !menu.open) return;
 
-    if (menu.open) {
-      stopEvent(ev);
-      menu.open = false;
-      blockFollowingClick = false;
-      return;
-    }
+    blocker = document.createElement('div');
+    blocker.className = 'umenu-outside-blocker';
+    blocker.setAttribute('aria-hidden', 'true');
 
-    if (blockFollowingClick) {
-      stopEvent(ev);
-      blockFollowingClick = false;
-    }
+    // Vrstva fyzicky překryje stránku. Událost proto vůbec nedorazí
+    // k prvku pod místem kliknutí (ani nevyvolá jeho :active stav).
+    blocker.addEventListener('pointerdown', function (ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      if (typeof ev.stopImmediatePropagation === 'function') {
+        ev.stopImmediatePropagation();
+      }
+    });
+
+    blocker.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      if (typeof ev.stopImmediatePropagation === 'function') {
+        ev.stopImmediatePropagation();
+      }
+      closeMenu();
+    });
+
+    head.appendChild(blocker);
   }
 
-  // Zachytit kliknutí/tap mimo menu před cílovým prvkem a jeho obsluhou.
-  document.addEventListener('pointerdown', blockOutsidePointer, true);
+  menu.addEventListener('toggle', function () {
+    if (menu.open) addBlocker();
+    else removeBlocker();
+  });
 
-  // Záložní ochrana pro kliknutí vyvolané klávesnicí nebo skriptem.
-  document.addEventListener('click', blockOutsideClick, true);
+  // Pro případ, že by menu bylo otevřené už při inicializaci skriptu.
+  if (menu.open) addBlocker();
 })();
