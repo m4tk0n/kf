@@ -59,3 +59,9 @@ function send_security_headers(bool $noStore = false): void
     header('Content-Security-Policy: ' . cfg('security.csp'));
     if ($noStore) header('Cache-Control: no-store');
 }
+
+/** Sjednotí typografické pomlčky ve všech textových hodnotách aplikace. */
+function kf_text_normalize(string $value): string
+{
+    return strtr($value, ['–' => '-', '—' => '-', '‑' => '-', '−' => '-']);
+}
