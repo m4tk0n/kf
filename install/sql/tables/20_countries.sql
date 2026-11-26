@@ -6,6 +6,7 @@ CREATE TABLE `{prefix}countries` (
   `iso3` CHAR(3) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
   `name_cs` VARCHAR(80) NOT NULL,
   `name_en` VARCHAR(80) NOT NULL,
+  `phone_prefix` VARCHAR(12) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uq_iso2` (`iso2`),
   UNIQUE KEY `uq_iso3` (`iso3`)
