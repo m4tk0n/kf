@@ -354,7 +354,7 @@ function kf_event_publish(array $v, ?string $srcL, ?int $createdBy): int
         }
         json_write_file(json_bucket_rel('events', $id), [
             'description' => $v['description'], 'www' => kf_safe_url($v['www']) ?? '', 'flyer_l' => $srcL !== null,
-        ]);
+        ], true);
         if ($srcL !== null) {
             $base = abs_path((string)cfg('img.subdirs.events')) . '/' . intdiv($id, (int)cfg('img.folder_divisor')) . '/' . $id;
             kf_img_install($srcL, $base);
@@ -390,7 +390,7 @@ function kf_event_pending_create(array $v, ?string $srcL, int $uid): int
         );
         $id = (int)$pdo->lastInsertId();
         $rel = json_bucket_rel('pending', $id);
-        json_write_file($rel, ['kind' => 'event', 'values' => $v, 'flyer' => $srcL !== null]);
+        json_write_file($rel, ['kind' => 'event', 'values' => $v, 'flyer' => $srcL !== null], true);
         if ($srcL !== null) {
             $img = abs_path(dirname($rel)) . '/' . $id . '_l.webp';
             if (!copy($srcL, $img)) {
@@ -415,7 +415,7 @@ function kf_event_pending_create(array $v, ?string $srcL, int $uid): int
 
 // ---------- stránky ----------
 
-function kf_event_form_page(array $v, array $errors, string $image, int $status = 200): never
+function kf_event_form_page(array $v, array $errors, string $image, int $status = 200, array $options = []): never
 {
     $cities = q(
         'SELECT c.id, c.name, co.`' . country_col() . '` AS country FROM ' . tbl('cities') . ' c JOIN ' . tbl('countries') . ' co ON co.id = c.country_id ORDER BY country, c.name'
@@ -428,7 +428,12 @@ function kf_event_form_page(array $v, array $errors, string $image, int $status 
     $bands = q('SELECT id, name FROM ' . tbl('bands') . ' ORDER BY name')->fetchAll();
     page(t('event.new.title'), 'event_form', [
         'old' => $v, 'errors' => $errors, 'cities' => $cities, 'bands' => $bands,
-        'imgUrl' => $image !== '' ? url('event/draft-image') . '?v=' . time() : '',
+        'imgUrl' => (string)($options['imgUrl'] ?? ($image !== '' ? url('event/draft-image') . '?v=' . time() : '')),
+        'formAction' => (string)($options['formAction'] ?? url('event/new')),
+        'pageTitle' => (string)($options['pageTitle'] ?? t('event.new.title')),
+        'submitLabel' => (string)($options['submitLabel'] ?? t('event.btn.preview')),
+        'backUrl' => (string)($options['backUrl'] ?? ''),
+        'formId' => (string)($options['formId'] ?? ''),
         'maxBands' => max(1, (int)cfg('limits.event_bands_max', 10)),
     ], $status);
 }
