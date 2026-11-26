@@ -2,6 +2,25 @@
 (function () {
   'use strict';
 
+  // Návrat z detailu používá původní výpis uložený při otevření položky.
+  // Tím zůstává veřejná URL detailu čistá a přechody mezi souvisejícími detaily
+  // nepřepíší původní návratový cíl.
+  var detailReturnKey = 'kf:detail-return-url';
+  document.addEventListener('click', function (ev) {
+    if (ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+    var back = ev.target.closest ? ev.target.closest('a[data-detail-back]') : null;
+    if (!back) return;
+    try {
+      var savedUrl = sessionStorage.getItem(detailReturnKey);
+      if (!savedUrl) return;
+      var target = new URL(savedUrl, window.location.href);
+      if (target.origin !== window.location.origin) return;
+      ev.preventDefault();
+      sessionStorage.removeItem(detailReturnKey);
+      window.location.assign(target.href);
+    } catch (e) {}
+  });
+
   // Jednotná normalizace pomlček při každém psaní i vložení do textových polí.
   function normalizeTextInput(el) {
     if (!el || !('value' in el) || typeof el.value !== 'string') return;
