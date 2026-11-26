@@ -145,7 +145,11 @@ function route_profile_delete(): never
     }
     security_log('account_deleted', ['user_id' => $u['id']]);
     user_delete((int)$u['id']);
-    session_clear_cookie();
+    if (!empty($u['is_impersonating'])) {
+        debug_test_profiles_cookie_clear();
+    } else {
+        session_clear_cookie();
+    }
     redirect('?m=account_deleted');
 }
 
