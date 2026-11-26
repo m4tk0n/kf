@@ -323,3 +323,15 @@ function route_admin_settings(): never
         'log' => tail_lines((string)cfg('storage.security_log_file'), 30),
     ]);
 }
+
+
+/** Databázové nástroje jsou dostupné výhradně nejvyššímu administrátorovi (user ID 2). */
+function route_db(): never
+{
+    $u = require_login();
+    if ((int)$u['id'] !== 2) {
+        security_log('forbidden', ['action' => 'db']);
+        abort(403, 'Přístup odepřen');
+    }
+    page(t('menu.db'), 'db');
+}
