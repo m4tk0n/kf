@@ -52,4 +52,9 @@ Parametry `_csrf`, `token`, `code`, `state`, `key`, `password`, `secret` se v UR
 - V instalátoru je samostatné tlačítko **Vytvořit testovací profily**.
 - Akce ověřuje, že v databázi existuje hlavní účet s ID 2, a potom profily vytvoří nebo aktualizuje bez duplicit.
 - Testovací identity používají interního poskytovatele `provider = 3`; nejsou dostupné přes Google ani Facebook OAuth.
-- Profil „User blokovaný“ je uložen se stavem pozastaveného účtu. Zpřístupnění jeho testovací simulace a přesné omezení akcí je samostatná část přepínání profilů.
+- Profil „User blokovaný“ používá stav 2. Může se přihlásit, ale aplikace mu dovolí pouze prohlížení; nemůže přidávat, upravovat, schvalovat ani měnit oblíbené položky.
+- Přepínač je na `/debug/users` a je dostupný jen při skutečném přihlášení aktivního administrátora ID 2.
+- Přepnutí používá krátkodobou podepsanou HttpOnly cookie `KF_DEBUG_PROFILE`; nevytváří ani nemění databázovou session testovacího účtu. Skutečná session administrátora zůstává zachována.
+- Efektivní identita ovlivňuje UI, serverová oprávnění i autora nových záznamů. CSRF a kontrola čerstvého přihlášení zůstávají navázané na skutečnou session administrátora.
+- Odkaz **Profily** je také v hlavičce Developer Tools. Přepnutí zpět na „Skutečný administrátor“ nebo ukončení simulace odstraní výběrovou cookie.
+- Simulovaný administrátor nesmí změnit ani odstranit skutečný účet ID 2. Ostatní oprávnění odpovídají právě zvolenému profilu.
