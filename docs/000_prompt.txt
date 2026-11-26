@@ -194,3 +194,4 @@ zde se vypisuji vsechny stranky (profil, bastaveni, administrace, atd)
 
  5. strankovani stejne jako bod 3
 
+.
