@@ -62,7 +62,7 @@ q('INSERT INTO ' . tbl('cities') . ' (country_id, name, name_ascii) VALUES (?, ?
 $cityId = (int)$pdo->lastInsertId();
 q('INSERT INTO ' . tbl('genres') . ' (name, name_ascii) VALUES (?, ?)', ['Punk rock', 'punk-rock']);
 $genreId = (int)$pdo->lastInsertId();
-q('INSERT INTO ' . tbl('venues') . ' (slug, name, name_ascii, city_id, created_at) VALUES (?, ?, ?, ?, ?)', ['test-klub', 'Test klub', 'Test klub', $cityId, $now]);
+q('INSERT INTO ' . tbl('venues') . ' (slug, name, name_ascii, city_id, address, created_at) VALUES (?, ?, ?, ?, ?, ?)', ['test-klub', 'Test klub', 'Test klub', $cityId, 'Kounicova 12', $now]);
 $venueId = (int)$pdo->lastInsertId();
 q('INSERT INTO ' . tbl('bands') . ' (slug, name, name_ascii, city_id, genre_id, created_at) VALUES (?, ?, ?, ?, ?, ?)', ['test-kapela', 'Test kapela', 'Test kapela', $cityId, $genreId, $now]);
 $bandId = (int)$pdo->lastInsertId();
@@ -172,7 +172,7 @@ check(is_array($punctuationData) && in_array('Festival - test event approval', $
 $venueSuggest = run_route('venue_name_suggest', $userToken, null, 'Tes');
 $venueSuggestData = json_decode($venueSuggest, true);
 $venueSuggestion = array_values(array_filter($venueSuggestData['items'] ?? [], static fn(array $item): bool => (int)($item['id'] ?? 0) === $venueId));
-check(count($venueSuggestion) === 1 && ($venueSuggestion[0]['name'] ?? '') === 'Test klub', 'venue autocomplete returns a matching published venue with its city reference');
+check(count($venueSuggestion) === 1 && ($venueSuggestion[0]['name'] ?? '') === 'Test klub' && ($venueSuggestion[0]['address'] ?? '') === 'Kounicova 12' && ($venueSuggestion[0]['country'] ?? '') === 'CZ', 'venue autocomplete returns published venue name, country, city and address');
 $shortVenueSuggest = run_route('venue_name_suggest', $userToken, null, 'Te');
 $shortVenueData = json_decode($shortVenueSuggest, true);
 check(is_array($shortVenueData) && ($shortVenueData['items'] ?? []) === [], 'venue autocomplete waits for the configured three-character minimum');
