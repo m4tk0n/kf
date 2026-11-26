@@ -415,10 +415,14 @@ function kf_event_form_page(array $v, array $errors, string $image, int $status 
     $cities = q(
         'SELECT c.id, c.name, co.`' . country_col() . '` AS country FROM ' . tbl('cities') . ' c JOIN ' . tbl('countries') . ' co ON co.id = c.country_id ORDER BY country, c.name'
     )->fetchAll();
-    $venues = q('SELECT v.id, v.name, c.name AS city FROM ' . tbl('venues') . ' v JOIN ' . tbl('cities') . ' c ON c.id = v.city_id ORDER BY v.name')->fetchAll();
+    $venueName = '';
+    if ((int)($v['venue_id'] ?? 0) > 0) {
+        $venueName = (string)(q('SELECT name FROM ' . tbl('venues') . ' WHERE id = ?', [(int)$v['venue_id']])->fetchColumn() ?: '');
+    }
+    $v['venue_name'] = $venueName;
     $bands = q('SELECT id, name FROM ' . tbl('bands') . ' ORDER BY name')->fetchAll();
     page(t('event.new.title'), 'event_form', [
-        'old' => $v, 'errors' => $errors, 'cities' => $cities, 'venues' => $venues, 'bands' => $bands,
+        'old' => $v, 'errors' => $errors, 'cities' => $cities, 'bands' => $bands,
         'imgUrl' => $image !== '' ? url('event/draft-image') . '?v=' . time() : '',
         'maxBands' => max(1, (int)cfg('limits.event_bands_max', 10)),
     ], $status);
