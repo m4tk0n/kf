@@ -400,7 +400,8 @@ function can(string $action, ?array $rec = null): bool
                 return false;
             }
             $tid = (int)($rec['id'] ?? 0);
-            if ($tid <= 0 || $tid === $ai || $tid === $uid) {
+            if ($tid <= 0 || $tid === $ai || $tid === $uid
+                || (!empty($u['is_impersonating']) && $tid === (int)($u['real_user_id'] ?? 0))) {
                 return false;
             }
             return true;
