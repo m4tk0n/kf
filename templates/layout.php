@@ -43,6 +43,9 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
 </head>
 <body data-home-url="<?= e(url('')) ?>" data-back-label="<?= e(t('common.back')) ?>" data-filter-identity="<?= e($filterIdentity) ?>"<?= $clearFilterSession ? ' data-clear-filter-session="1"' : '' ?><?= $flash && !$sessionReplaced ? ' data-flash-text="' . e($flash) . '"' : '' ?>>
 <div class="head">
+  <?php if (!empty($user['is_impersonating'])): ?>
+  <div class="wrap simulation-banner"><span>Testovací profil: <strong><?= e((string)$user['display_name']) ?></strong></span><a href="<?= e(url('debug/users')) ?>">Přepnout profil</a></div>
+  <?php endif; ?>
   <header class="wrap top">
     <a class="brand" href="<?= e(url('')) ?>"><span class="brand-letter">F</span><span class="brand-amp">&amp;</span><span class="brand-letter">K</span></a>
     <?php if ($user === null): ?>
