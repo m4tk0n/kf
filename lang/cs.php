@@ -21,6 +21,7 @@ return [
     'type.2' => 'Festival',
     'type.3' => 'Ostatní',
     'events.current' => 'Probíhající akce dnes: {n}',
+    'catalog.nearest_event' => 'Nejbližší akce: {date}',
 
     // domovská stránka
     'home.welcome' => 'Vítej, {name}.',
