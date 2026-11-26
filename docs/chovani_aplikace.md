@@ -84,41 +84,42 @@ Jeden účet může mít současně pouze jednu aktivní session. Přihlášení
 
 ## 4. Uživatelské menu přihlášeného uživatele
 
-**Stav: upraveno v kódu, čeká na praktické ověření po nasazení.**
+**Stav: implementováno v kódu, čeká na praktické ověření po nasazení.**
 
 Tato pravidla platí na všech stránkách K&F vždy, když má přihlášený uživatel otevřené uživatelské menu.
 
 ### Zavření menu
 
-Menu se zavře pouze:
-1. výběrem položky přímo v uživatelském menu,
-2. zahájením kliknutí nebo dotyku kdekoliv mimo oblast uživatelského menu.
+Menu má přesně dva způsoby zavření:
 
-Kliknutí uvnitř menu se nepovažuje za kliknutí mimo menu. Výběr položky uvnitř menu provede její běžnou akci a menu se zavře.
+1. **Výběr položky v uživatelském menu.** Vybraná položka provede svou běžnou akci a menu se zavře.
+2. **Kliknutí mimo uživatelské menu.** Kliknutí slouží pouze k zavření menu.
 
-### Kliknutí mimo menu – nesmí reagovat vůbec nic jiného
+### 2.1 Kliknutí mimo menu nesmí nijak interagovat s žádným prvkem stránky
 
-**Jediným výsledkem interakce mimo otevřené menu smí být zavření menu.** Pravidlo platí pro celou stránku a všechny její prvky, bez výjimky. Nezáleží na tom, zda uživatel klikne na jazykový `select`, odkaz, tlačítko, formulář, hvězdičku, filtr, pager, obsah stránky, prázdné místo nebo jiný ovládací prvek.
+Pokud je menu otevřené a uživatel klikne kamkoliv mimo něj, jediným výsledkem je zavření menu.
 
-Při této interakci:
-- nesmí se otevřít nativní ani vlastní výběrové menu (například výběr jazyka),
-- nesmí se aktivovat ani změnit žádný prvek pod místem kliknutí,
-- nesmí se provést navigace, odeslat formulář ani změnit URL,
-- nesmí se změnit žádný stav aplikace ani ovládacího prvku,
-- nesmí se spustit žádná obsluha události ani výchozí akce prohlížeče,
-- nesmí se vyvolat žádná jiná reakce stránky.
+Toto kliknutí nesmí žádným způsobem interagovat s prvkem, na který uživatel klikl, ani s jinou částí stránky. Nesmí například:
+- aktivovat odkaz, tlačítko ani jiný ovládací prvek,
+- otevřít výběr nebo nabídku ovládacího prvku,
+- změnit hodnotu nebo stav prvku či aplikace,
+- odeslat formulář,
+- změnit URL nebo provést navigaci,
+- spustit obsluhu události ani výchozí akci prohlížeče.
 
-Uživatel musí pro použití prvku po zavření menu provést nové, samostatné kliknutí nebo dotyk. Jedna interakce nikdy nesmí současně zavřít menu a aktivovat jiný prvek.
+Pravidlo platí pro každý prvek a každé místo mimo menu na všech stránkách aplikace, bez výjimek. Kliknutí mimo menu se nesmí „propadnout“ k prvku pod místem kliknutí.
 
-### Požadavek na implementaci
+Chce-li uživatel po zavření menu použít jiný prvek stránky, musí na něj kliknout znovu, samostatnou novou interakcí.
 
-Blokování se musí provést už při začátku interakce (`pointerdown`), nikoli až při události `click`. Událost `click` je pozdě například pro nativní HTML `select`, který může otevřít nabídku už při stisku. Proto se interakce mimo menu zachytí ve fázi capture, zruší se její výchozí akce a zastaví další šíření ještě před tím, než ji obdrží cílový prvek. Událost `click` zůstává jako záložní ochrana; pro prostředí bez Pointer Events se použijí odpovídající záložní události.
+### Implementační požadavek
 
-Blokování se aktivuje pouze tehdy, když je menu otevřené a cíl události leží mimo něj. Interakce uvnitř menu musí zůstat funkční.
+Kliknutí mimo otevřené menu se zachytí ve fázi capture už při `pointerdown`, ještě před doručením události cílovému prvku. Zruší se výchozí akce a zastaví šíření události. Následný `click` se rovněž zablokuje, aby se po zavření menu neaktivoval prvek pod ním. Záložní zpracování `click` pokrývá i kliknutí vyvolaná klávesnicí nebo skriptem.
+
+Interakce uvnitř menu zůstávají funkční.
 
 Dotčené soubory:
 - `templates/layout.php` – společná struktura hlavičky a uživatelského menu na stránkách aplikace.
-- `assets/js/menu.js` – globální zachycení a zablokování interakce mimo otevřené menu.
+- `assets/js/menu.js` – zachycení a zablokování kliknutí mimo otevřené menu.
 
 ## 5. Pravidlo průběžné dokumentace
 
