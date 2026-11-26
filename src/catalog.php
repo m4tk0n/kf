@@ -54,9 +54,24 @@ function kf_img(string $kind, int $id, string $size): string
     return url((string)cfg('img.subdirs.' . $kind) . '/' . $bucket . '/' . $id . '_' . $size . '.' . (string)cfg('img.format'));
 }
 
-function kf_detail_url(string $kind, int $id): string
+function kf_detail_slug(string $kind, array $row): string
 {
-    $params = [$kind => $id];
+    $name = kf_ascii((string)($row['name'] ?? ''));
+    $slug = trim((string)preg_replace('~[^a-z0-9]+~', '-', $name), '-');
+    $slug = $slug !== '' ? $slug : $kind;
+    if ($kind === 'event') {
+        $date = (string)($row['date_from'] ?? '');
+        if (preg_match('/^\\d{4}-\\d{2}-\\d{2}$/', $date)) $slug = substr($slug, 0, 85) . '-' . $date;
+    }
+    return substr($slug, 0, 100);
+}
+
+function kf_detail_url(string $kind, int $id, array $row): string
+{
+    $section = ['event' => 'events', 'band' => 'bands', 'venue' => 'venues'][$kind] ?? '';
+    if ($section === '' || $id < 1) return url('');
+    $base = url($section . '/' . $id . '/' . kf_detail_slug($kind, $row));
+    $params = [];
 
     // Při prvním otevření detailu uložit aktuální stav výpisu.
     // Při přechodu na související záznam zachovat původní návratový stav.
@@ -69,7 +84,7 @@ function kf_detail_url(string $kind, int $id): string
     if (kf_get('fav') === '1' && auth_resolve() !== null) {
         $params['fav'] = '1';
     }
-    return url('') . '?' . http_build_query($params);
+    return $params ? $base . '?' . http_build_query($params) : $base;
 }
 
 /** Bezpečně obnoví pouze povolené parametry výpisu z návratového stavu detailu. */
@@ -114,8 +129,8 @@ function kf_list_filter(string $qa, string $kind): array
     $sql = '';
     $p = [];
     if ($qa !== '') {
-        $sql .= ' AND LOWER(a.name_ascii) LIKE ?';
-        $p[] = '%' . addcslashes($qa, '%_\\\\') . '%';
+        $sql .= ' AND a.name COLLATE utf8mb4_unicode_ci LIKE ?';
+        $p[] = '%' . addcslashes(kf_text_normalize($qa), '%_\\\\') . '%';
     }
 
     [$filterSql, $filterParams] = filters_catalog_conditions($kind);
@@ -176,7 +191,7 @@ function kf_load(array $req): array
     $country = 'co.`name_' . current_lang() . '`'; // jazyk je ověřený proti app.supported_langs
     $geo = ' JOIN ' . tbl('cities') . ' c ON c.id = a.city_id JOIN ' . tbl('countries') . ' co ON co.id = c.country_id';
     $s = $req['s'];
-    $qa = kf_ascii($req['q']);
+    $qa = kf_text_normalize($req['q']);
     [$f, $params] = kf_list_filter($qa, $s);
     $where = ' WHERE 1=1' . $f;
 

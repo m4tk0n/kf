@@ -132,6 +132,11 @@ function kf_detail_page(string $kind, int $id): never
     if (auth_resolve() !== null) {
         header('Cache-Control: no-store'); // hvězdička vychází ze stavu v DB
     }
+    $expectedSlug = kf_detail_slug($kind, $d['row']);
+    if (kf_get('slug') !== $expectedSlug) {
+        header('Location: ' . kf_detail_url($kind, $id, $d['row']), true, 301);
+        exit;
+    }
     page((string)$d['row']['name'], 'detail', ['d' => $d, 'section' => KF_DETAIL_KINDS[$kind]]);
 }
 

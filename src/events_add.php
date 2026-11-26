@@ -296,8 +296,8 @@ function kf_event_view_data(array $v): array
 
 function kf_event_duplicate(array $v, bool $inclPending): bool
 {
-    $a = kf_ascii($v['name']);
-    if (q('SELECT 1 FROM ' . tbl('events') . ' WHERE name_ascii = ? AND date_from = ? LIMIT 1', [$a, $v['date_from']])->fetchColumn()) {
+    $a = kf_text_normalize($v['name']);
+    if (q('SELECT 1 FROM ' . tbl('events') . ' WHERE name COLLATE utf8mb4_unicode_ci = ? AND date_from = ? LIMIT 1', [$a, $v['date_from']])->fetchColumn()) {
         return true;
     }
     return $inclPending && (bool)q(
@@ -326,17 +326,14 @@ function kf_event_publish(array $v, ?string $srcL, ?int $createdBy): int
     $pdo = db();
     $now = time();
     $time = $v['time_start'] !== '' ? $v['time_start'] . ':00' : null;
-    $nameAscii = kf_ascii($v['name']);
-    $slug = trim((string)preg_replace('~[^a-z0-9]+~', '-', $nameAscii), '-');
-    $slug = substr($slug !== '' ? $slug : 'akce', 0, 60) . '-' . str_replace('-', '', $v['date_from']) . '-' . random_hex(3);
     $id = 0;
     $base = '';
     $pdo->beginTransaction();
     try {
         q(
-            'INSERT INTO ' . tbl('events') . ' (slug, name, name_ascii, type, date_from, date_to, time_start, city_id, venue_id, flyer, created_by, created_at)
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-            [$slug, $v['name'], $nameAscii, $v['type'], $v['date_from'], $v['date_to'], $time, $v['city_id'],
+            'INSERT INTO ' . tbl('events') . ' (name, type, date_from, date_to, time_start, city_id, venue_id, flyer, created_by, created_at)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+            [$v['name'], $v['type'], $v['date_from'], $v['date_to'], $time, $v['city_id'],
                 $v['venue_id'] > 0 ? $v['venue_id'] : null, $srcL !== null ? 1 : 0, $createdBy, $now]
         );
         $id = (int)$pdo->lastInsertId();
@@ -558,12 +555,11 @@ function route_venue_name_suggest(): never
     $term = is_string($_GET['q'] ?? null) ? trim($_GET['q']) : '';
     $min = max(1, (int)cfg('paging.autocomplete_venue_min_chars', 3));
     $limit = max(1, min(30, (int)cfg('paging.autocomplete_limit', 10)));
-    $ascii = kf_ascii(mb_substr($term, 0, 100));
-    $ascii = strtr($ascii, ['–' => '-', '—' => '-', '‑' => '-', '−' => '-']);
+    $search = kf_text_normalize(mb_substr($term, 0, 100));
 
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-Control: no-store');
-    if (mb_strlen($ascii) < $min) {
+    if (mb_strlen($search) < $min) {
         echo json_encode(['items' => []], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         exit;
     }
@@ -572,9 +568,9 @@ function route_venue_name_suggest(): never
         'SELECT v.id, v.name, v.address, c.id AS city_id, c.name AS city, co.iso2 AS country FROM ' . tbl('venues') . ' v
          JOIN ' . tbl('cities') . ' c ON c.id = v.city_id
          JOIN ' . tbl('countries') . ' co ON co.id = c.country_id
-         WHERE LOCATE(?, LOWER(REPLACE(REPLACE(REPLACE(v.name_ascii, ?, ?), ?, ?), ?, ?))) = 1
-         ORDER BY LOWER(v.name_ascii), v.name LIMIT ' . $limit,
-        [strtolower($ascii), '–', '-', '—', '-', '‑', '-']
+         WHERE LOWER(REPLACE(REPLACE(REPLACE(v.name, '–', '-'), '—', '-'), '‑', '-')) COLLATE utf8mb4_unicode_ci LIKE ?
+         ORDER BY v.name COLLATE utf8mb4_unicode_ci, v.name LIMIT ' . $limit,
+        [addcslashes($search, '%_\\\\') . '%']
     )->fetchAll();
 
     echo json_encode([
@@ -597,20 +593,19 @@ function route_event_name_suggest(): never
     $term = is_string($_GET['q'] ?? null) ? trim($_GET['q']) : '';
     $min = max(1, (int)cfg('paging.autocomplete_min_chars', 2));
     $limit = max(1, min(30, (int)cfg('paging.autocomplete_limit', 10)));
-    $ascii = kf_ascii(mb_substr($term, 0, 100));
-    // Různé typografické pomlčky bereme jako běžný spojovník; ostatní interpunkci zachováváme.
-    $ascii = strtr($ascii, ['–' => '-', '—' => '-', '‑' => '-', '−' => '-']);
+    // Kolace MySQL porovnává název bez rozlišování velikosti písmen a diakritiky.
+    $search = kf_text_normalize(mb_substr($term, 0, 100));
 
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-Control: no-store');
-    if (mb_strlen($ascii) < $min) {
+    if (mb_strlen($search) < $min) {
         echo json_encode(['items' => []], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         exit;
     }
 
     $rows = q(
-        'SELECT MIN(name) AS name FROM ' . tbl('events') . ' WHERE LOCATE(?, LOWER(REPLACE(REPLACE(REPLACE(name_ascii, ?, ?), ?, ?), ?, ?))) = 1 GROUP BY LOWER(REPLACE(REPLACE(REPLACE(name_ascii, ?, ?), ?, ?), ?, ?)) ORDER BY LOWER(REPLACE(REPLACE(REPLACE(name_ascii, ?, ?), ?, ?), ?, ?)) LIMIT ' . $limit,
-        [strtolower($ascii), '–', '-', '—', '-', '‑', '-', '–', '-', '—', '-', '‑', '-', '–', '-', '—', '-', '‑', '-']
+        'SELECT MIN(name) AS name FROM ' . tbl('events') . " WHERE LOWER(REPLACE(REPLACE(REPLACE(name, '–', '-'), '—', '-'), '‑', '-')) COLLATE utf8mb4_unicode_ci LIKE ? GROUP BY LOWER(name) COLLATE utf8mb4_unicode_ci ORDER BY MIN(name) LIMIT " . $limit,
+        [addcslashes($search, '%_\\\\') . '%']
     )->fetchAll();
     echo json_encode(
         ['items' => array_values(array_map(static fn(array $row): string => (string)$row['name'], $rows))],

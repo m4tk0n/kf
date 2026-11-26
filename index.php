@@ -95,7 +95,7 @@ if (isset($_GET['cal'])) {
         echo json_encode(['error' => 'invalid_month']);
         exit;
     }
-    $qa = kf_ascii(mb_substr(trim(is_string($_GET['q'] ?? null) ? $_GET['q'] : ''), 0, 100));
+    $qa = kf_text_normalize(mb_substr(trim(is_string($_GET['q'] ?? null) ? $_GET['q'] : ''), 0, 100));
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-Control: no-store');
     echo json_encode(

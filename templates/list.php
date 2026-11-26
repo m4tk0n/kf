@@ -24,7 +24,7 @@ $kind = ['events' => 'event', 'bands' => 'band', 'venues' => 'venue'][$s];
     $id = (int)$r['id'];
     $place = e($r['city']) . ' <abbr title="' . e($r['country']) . '">(' . e($r['iso2']) . ')</abbr>';
 ?>
-  <li><a data-list-item="<?= $id ?>" class="item<?= $s === 'events' ? ' item-event item-type-' . (int)$r['type'] : ' item-' . e($kind) ?>" href="<?= e(kf_detail_url($kind, $id)) ?>">
+  <li><a data-list-item="<?= $id ?>" class="item<?= $s === 'events' ? ' item-event item-type-' . (int)$r['type'] : ' item-' . e($kind) ?>" href="<?= e(kf_detail_url($kind, $id, $r)) ?>">
   <?php if ($s === 'events'): ?>
     <span class="date"><?= e(kf_date_range($r['date_from'], $r['date_to'])) ?></span>
     <span class="body">

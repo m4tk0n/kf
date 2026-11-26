@@ -20,6 +20,14 @@ RewriteEngine On
 
 # /debug/ je zároveň adresář statických souborů; tuto adresu vždy předat routeru.
 RewriteRule ^debug/?$ index.php [L]
+
+# Detail: ID je identifikátor, slug pouze čitelný doplněk.
+RewriteRule ^events/([0-9]+)/([a-z0-9-]+)/?$ index.php?event=$1&slug=$2 [QSA,L,NC]
+RewriteRule ^events/([0-9]+)/?$ index.php?event=$1 [QSA,L,NC]
+RewriteRule ^bands/([0-9]+)/([a-z0-9-]+)/?$ index.php?band=$1&slug=$2 [QSA,L,NC]
+RewriteRule ^bands/([0-9]+)/?$ index.php?band=$1 [QSA,L,NC]
+RewriteRule ^venues/([0-9]+)/([a-z0-9-]+)/?$ index.php?venue=$1&slug=$2 [QSA,L,NC]
+RewriteRule ^venues/([0-9]+)/?$ index.php?venue=$1 [QSA,L,NC]
 RewriteRule ^(src|templates|lang|data|cron)(/|$) - [F,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

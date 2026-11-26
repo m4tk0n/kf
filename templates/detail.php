@@ -19,7 +19,7 @@ $evList = static function (array $rows): string {
     foreach ($rows as $ev) {
         $a = (string)$ev['date_from'];
         $b = (string)$ev['date_to'];
-        $out .= '<li><a href="' . e(kf_detail_url('event', (int)$ev['id'])) . '"><time datetime="' . e($a) . '">'
+        $out .= '<li><a href="' . e(kf_detail_url('event', (int)$ev['id'], $ev)) . '"><time datetime="' . e($a) . '">'
             . e($a . ($b !== $a ? '–' . $b : '')) . '</time><span>' . e((string)$ev['name']) . '</span></a></li>';
     }
     return $out . '</ul>';
@@ -57,7 +57,7 @@ $evList = static function (array $rows): string {
         }
         echo $row(t('detail.place'), $place);
         if ($r['venue_id'] !== null && $r['venue'] !== null) {
-            echo $row(t('detail.venue'), '<a href="' . e(kf_detail_url('venue', (int)$r['venue_id'])) . '">' . e((string)$r['venue']) . '</a>');
+            echo $row(t('detail.venue'), '<a href="' . e(kf_detail_url('venue', (int)$r['venue_id'], ['name' => (string)$r['venue']])) . '">' . e((string)$r['venue']) . '</a>');
         }
     } elseif ($kind === 'band') {
         if ($r['genre'] !== null) {
@@ -104,7 +104,7 @@ $evList = static function (array $rows): string {
     <?php else: ?>
       <ul class="evlist">
         <?php foreach ($d['bands'] as $b): ?>
-          <li><a href="<?= e(kf_detail_url('band', (int)$b['id'])) ?>">
+          <li><a href="<?= e(kf_detail_url('band', (int)$b['id'], $b)) ?>">
             <span class="play"><?= $b['time_play'] !== null ? e(substr((string)$b['time_play'], 0, 5)) : '' ?></span>
             <span><?= e((string)$b['name']) ?></span>
           </a></li>
