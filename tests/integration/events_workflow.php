@@ -62,7 +62,7 @@ q('INSERT INTO ' . tbl('cities') . ' (country_id, name, name_ascii) VALUES (?, ?
 $cityId = (int)$pdo->lastInsertId();
 q('INSERT INTO ' . tbl('genres') . ' (name, name_ascii) VALUES (?, ?)', ['Punk rock', 'punk-rock']);
 $genreId = (int)$pdo->lastInsertId();
-q('INSERT INTO ' . tbl('venues') . ' (slug, name, name_ascii, city_id, address, created_at) VALUES (?, ?, ?, ?, ?, ?)', ['test-klub', 'Test klub', 'Test klub', $cityId, 'Kounicova 12', $now]);
+q('INSERT INTO ' . tbl('venues') . ' (slug, name, name_ascii, country_id, city_id, address, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)', ['test-klub', 'Test klub', 'Test klub', $countryId, $cityId, 'Kounicova 12', $now]);
 $venueId = (int)$pdo->lastInsertId();
 q('INSERT INTO ' . tbl('bands') . ' (slug, name, name_ascii, city_id, genre_id, created_at) VALUES (?, ?, ?, ?, ?, ?)', ['test-kapela', 'Test kapela', 'Test kapela', $cityId, $genreId, $now]);
 $bandId = (int)$pdo->lastInsertId();
