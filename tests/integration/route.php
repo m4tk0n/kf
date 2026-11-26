@@ -17,7 +17,7 @@ $postActions = ['event_submit', 'review_approve', 'review_reject', 'my_delete'];
 $isPost = in_array($action, $postActions, true);
 $_SERVER['REQUEST_METHOD'] = $isPost ? 'POST' : 'GET';
 
-if ($action === 'event_name_suggest') {
+if ($action === 'event_name_suggest' || $action === 'venue_name_suggest') {
     $_GET['q'] = (string)($argv[3] ?? '');
 }
 
@@ -42,6 +42,8 @@ switch ($action) {
         route_event_new();
     case 'event_name_suggest':
         route_event_name_suggest();
+    case 'venue_name_suggest':
+        route_venue_name_suggest();
     case 'event_preview':
         route_event_preview();
     case 'event_submit':
