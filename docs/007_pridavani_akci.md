@@ -273,13 +273,3 @@ Výběr klubu/místa v /event/new je textové pole s našeptávačem:
 - endpoint venue/name-suggest je dostupný přihlášeným uživatelům s oprávněním submit a vrací JSON bez cache,
 - minimální délka 3 znaků je nastavena samostatně v paging.autocomplete_venue_min_chars; našeptávač názvu akce zůstává beze změny.
 
-
-## URL detailů a názvy v databázi
-
-Tabulky `events`, `bands` a `venues` ukládají pouze zobrazovaný název ve sloupci `name`. Sloupce `slug` a `name_ascii` v těchto třech tabulkách nejsou.
-
-Detailní URL se skládá z číselného ID a automaticky vytvořeného čitelného slugu: akce `/events/123/metalovy-koncert-2026-06-14`, kapela `/bands/45/metalova-kapela`, klub `/venues/12/klub-pod-lampou`. U akce se slug skládá z názvu a data začátku.
-
-Slug se vytváří při generování odkazu, neukládá se a není identifikátorem záznamu. Záznam se vždy načítá podle číselného ID. Funguje také URL obsahující pouze ID; aplikace ji přesměruje na aktuální kanonickou URL. Nesprávný nebo zastaralý slug se rovněž přesměruje na aktuální URL podle ID. Změna názvu nebo data proto nezneplatní původní odkaz.
-
-Vyhledávání a našeptávače porovnávají přímo sloupec `name` pomocí kolace MySQL bez rozlišování velikosti písmen a diakritiky. Pomocný `name_ascii` se pro akce, kapely ani kluby neukládá.
