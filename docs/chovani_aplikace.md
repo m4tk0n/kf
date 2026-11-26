@@ -223,3 +223,14 @@ Podrobná specifikace včetně pravidel pro oddělení účtů, navigaci, reload
 Podrobný popis formuláře, draftu, náhledu, obrázků, odeslání, fronty `/my`, schvalování `/review`, úklidu souborů a testovacích scénářů je v [docs/007_pridavani_akci.md](007_pridavani_akci.md).
 
 **Pozor na nevyřešený rozpor role 2:** konfigurace definuje `role=2` jako `trusted` a aktuální kód jí přiznává přímé zveřejnění. Uživatel však při testu uvedl, že účet označený jako role 2 vytvořil návrh v pending. Tento rozdíl je zaznamenán v samostatném dokumentu a musí se ověřit na živém serveru; nesmí se považovat za potvrzené pravidlo.
+
+
+## URL detailů a názvy entit
+
+**Stav: implementováno v kódu, čeká na ověření po nasazení.**
+
+V tabulkách `events`, `bands` a `venues` se ukládá pouze zobrazovaný název ve sloupci `name`. Sloupce `slug` a `name_ascii` se nepoužívají. Detailní URL mají tvar `/events/{id}/{slug}`, `/bands/{id}/{slug}` a `/venues/{id}/{slug}`. U akce se slug skládá z názvu a `date_from`; u kapely a klubu pouze z názvu.
+
+Číselné ID je jediný identifikátor záznamu. Slug se generuje při sestavení odkazu a v databázi se neukládá. URL pouze s ID je platná a přesměruje na kanonickou URL. Nesprávný či zastaralý slug se přesměruje na aktuální URL podle ID. Změna názvu nebo data nezpůsobí ztrátu funkčnosti starého odkazu.
+
+Vyhledávání a našeptávače pracují přímo s `name` a používají kolaci bez rozlišování diakritiky. Pomocný ASCII název není v těchto třech tabulkách potřeba.

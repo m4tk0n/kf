@@ -235,7 +235,7 @@ Při dalších úpravách se nejprve kontroluje tento dokument. Pokud se změní
 Ve formuláři `/event/new` je našeptávač názvů již zveřejněných akcí:
 - požadavek se posílá průběžně při psaní s krátkým zpožděním,
 - minimální délka dotazu a počet výsledků se přebírají z `paging.autocomplete_min_chars` a `paging.autocomplete_limit` v `config.php`,
-- hledá se podle normalizovaného začátku názvu v `events.name_ascii`,
+- hledá se podle normalizovaného začátku názvu v `events.name`,
 - výsledky jsou jedinečné názvy zveřejněných akcí; čekající návrhy se nezobrazují,
 - kliknutí na výsledek pouze doplní název do pole. Nevytváří vazbu na existující akci ani neslučuje koncerty se stejným názvem,
 - endpoint `event/name-suggest` je dostupný pouze přihlášeným uživatelům s oprávněním `submit` a odpovídá JSON bez ukládání do cache.
@@ -245,14 +245,14 @@ Toto je pouze první krok našeptávání. Města, kluby a kapely budou řešeny
 
 ## Našeptávač názvů akcí
 
-Našeptávač hledá pouze zveřejněné akce podle začátku `name_ascii`. Porovnání je nezávislé na velikosti písmen, takže dotaz `fest` najde i záznamy začínající `Festival`. Výsledky jsou unikátní názvy; výběr pouze doplní název do formuláře a neslučuje jednotlivé akce.
+Našeptávač hledá zveřejněné akce podle začátku `events.name` s kolací MySQL bez rozlišování velikosti písmen a diakritiky. Výsledky jsou unikátní názvy; výběr pouze doplní název do formuláře a neslučuje jednotlivé akce.
 
 Našeptávač zachovává interpunkci v názvu (např. `-`, `&`, čárky a další znaky). Typografické varianty pomlček (`–`, `—`, `‑`, `−`) se při hledání sjednotí s běžným spojovníkem `-`, aby šlo název pohodlně zadat i běžnou klávesnicí.
 
 
 ### Normalizace názvu při ukládání
 
-Typografické pomlčky (`–`, `—`, `‑`, `−`) se převádějí na běžný spojovník (`-`) už při čištění vstupu, tedy před uložením draftu. Stejná ochrana je i přímo ve funkcích, které ukládají návrh do `pending` a publikovanou akci do `events`. V databázi `events.name` a `pending.title` se proto ukládá běžný spojovník; odpovídající `name_ascii` se vytváří z normalizovaného názvu. Integrační test ověřuje také hodnotu uloženou v pending JSON.
+Typografické pomlčky (`–`, `—`, `‑`, `−`) se převádějí na běžný spojovník (`-`) už při čištění vstupu, tedy před uložením draftu. Stejná ochrana je i přímo ve funkcích, které ukládají návrh do `pending` a publikovanou akci do `events`. V databázi `events.name` a `pending.title` se proto ukládá běžný spojovník. `pending.name_ascii` zůstává pouze interním údajem fronty návrhů; tabulka `events` žádnou ASCII kopii názvu neukládá. Integrační test ověřuje také hodnotu uloženou v pending JSON.
 
 
 ### Společná normalizace textových vstupů
@@ -272,3 +272,14 @@ Výběr klubu/místa v /event/new je textové pole s našeptávačem:
 - při další změně textu se vybrané ID zruší; ručně napsaný název proto nevytvoří falešnou vazbu na existující klub,
 - endpoint venue/name-suggest je dostupný přihlášeným uživatelům s oprávněním submit a vrací JSON bez cache,
 - minimální délka 3 znaků je nastavena samostatně v paging.autocomplete_venue_min_chars; našeptávač názvu akce zůstává beze změny.
+
+
+## URL detailů a názvy v databázi
+
+Tabulky `events`, `bands` a `venues` ukládají pouze zobrazovaný název ve sloupci `name`. Sloupce `slug` a `name_ascii` v těchto třech tabulkách nejsou.
+
+Detailní URL se skládá z číselného ID a automaticky vytvořeného čitelného slugu: akce `/events/123/metalovy-koncert-2026-06-14`, kapela `/bands/45/metalova-kapela`, klub `/venues/12/klub-pod-lampou`. U akce se slug skládá z názvu a data začátku.
+
+Slug se vytváří při generování odkazu, neukládá se a není identifikátorem záznamu. Záznam se vždy načítá podle číselného ID. Funguje také URL obsahující pouze ID; aplikace ji přesměruje na aktuální kanonickou URL. Nesprávný nebo zastaralý slug se rovněž přesměruje na aktuální URL podle ID. Změna názvu nebo data proto nezneplatní původní odkaz.
+
+Vyhledávání a našeptávače porovnávají přímo sloupec `name` pomocí kolace MySQL bez rozlišování velikosti písmen a diakritiky. Pomocný `name_ascii` se pro akce, kapely ani kluby neukládá.

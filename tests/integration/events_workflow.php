@@ -62,9 +62,9 @@ q('INSERT INTO ' . tbl('cities') . ' (country_id, name, name_ascii) VALUES (?, ?
 $cityId = (int)$pdo->lastInsertId();
 q('INSERT INTO ' . tbl('genres') . ' (name, name_ascii) VALUES (?, ?)', ['Punk rock', 'punk-rock']);
 $genreId = (int)$pdo->lastInsertId();
-q('INSERT INTO ' . tbl('venues') . ' (slug, name, name_ascii, city_id, address, created_at) VALUES (?, ?, ?, ?, ?, ?)', ['test-klub', 'Test klub', 'Test klub', $cityId, 'Kounicova 12', $now]);
+q('INSERT INTO ' . tbl('venues') . ' (name, city_id, address, created_at) VALUES (?, ?, ?, ?)', ['Test klub', $cityId, 'Kounicova 12', $now]);
 $venueId = (int)$pdo->lastInsertId();
-q('INSERT INTO ' . tbl('bands') . ' (slug, name, name_ascii, city_id, genre_id, created_at) VALUES (?, ?, ?, ?, ?, ?)', ['test-kapela', 'Test kapela', 'Test kapela', $cityId, $genreId, $now]);
+q('INSERT INTO ' . tbl('bands') . ' (name, city_id, genre_id, created_at) VALUES (?, ?, ?, ?)', ['Test kapela', $cityId, $genreId, $now]);
 $bandId = (int)$pdo->lastInsertId();
 check($cityId > 0 && $venueId > 0 && $bandId > 0, 'creates city, venue and band fixtures');
 q('INSERT INTO ' . tbl('cities') . ' (country_id, name, name_ascii) VALUES (?, ?, ?)', [$countryId, 'Test – město', 'Test – mesto']);
@@ -165,7 +165,7 @@ check(is_array($suggestData) && in_array('Festival - test event approval', $sugg
 $lowerSuggest = run_route('event_name_suggest', $userToken, null, 'fest');
 $lowerData = json_decode($lowerSuggest, true);
 check(is_array($lowerData) && in_array('Festival - test event approval', $lowerData['items'] ?? [], true), 'event-name autocomplete matches uppercase stored names from a lowercase query');
-q('UPDATE ' . tbl('events') . ' SET name_ascii = ? WHERE id = ?', ['Festival – test event approval', $publishedId]);
+q('UPDATE ' . tbl('events') . ' SET name = ? WHERE id = ?', ['Festival – test event approval', $publishedId]);
 $punctuationSuggest = run_route('event_name_suggest', $userToken, null, 'festival -');
 $punctuationData = json_decode($punctuationSuggest, true);
 check(is_array($punctuationData) && in_array('Festival - test event approval', $punctuationData['items'] ?? [], true), 'event-name autocomplete matches a hyphen query against an en dash in the stored name');

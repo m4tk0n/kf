@@ -2,9 +2,7 @@
 DROP TABLE IF EXISTS `{prefix}events`;
 CREATE TABLE `{prefix}events` (
   `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `slug` VARCHAR(100) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
   `name` VARCHAR(160) NOT NULL,
-  `name_ascii` VARCHAR(160) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `type` TINYINT UNSIGNED NOT NULL DEFAULT 1,
   `date_from` DATE NOT NULL,
   `date_to` DATE NOT NULL,
@@ -15,12 +13,11 @@ CREATE TABLE `{prefix}events` (
   `created_by` MEDIUMINT UNSIGNED NULL DEFAULT NULL,
   `created_at` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `uq_slug` (`slug`),
   KEY `idx_dates` (`date_from`, `date_to`),
   KEY `idx_date_to` (`date_to`),
   KEY `idx_city` (`city_id`),
   KEY `idx_venue` (`venue_id`, `date_from`),
-  KEY `idx_name_ascii` (`name_ascii`),
+  KEY `idx_name` (`name`),
   KEY `idx_created_by` (`created_by`),
   CONSTRAINT `{prefix}fk_events_city` FOREIGN KEY (`city_id`) REFERENCES `{prefix}cities` (`id`),
   CONSTRAINT `{prefix}fk_events_venue` FOREIGN KEY (`venue_id`) REFERENCES `{prefix}venues` (`id`) ON DELETE SET NULL,
