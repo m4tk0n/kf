@@ -25,6 +25,7 @@ function kf_dispatch(): void
         'login/confirm' => 'route_login_confirm',
         'profile' => 'route_profile',
         'diagnostics' => 'route_diagnostics',
+        'db' => 'route_db',
         'diagnostics/log' => 'route_diagnostics_log',
         'filters' => 'route_filters',
         'quick-filters' => 'route_quick_filters',
