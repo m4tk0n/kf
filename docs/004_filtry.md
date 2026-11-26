@@ -174,3 +174,4 @@ Zachovat dosavadní vzhled, CSS třídy, rozložení stránky, záložky a ovlá
 - Neměnit pager, kalendář, vyhledávání, navigaci, vzhled, jiné formuláře ani SQL části nesouvisející s rychlými filtry.
 - Před každou úpravou zkontrolovat tento dokument a existující implementaci. Požadavek uživatele na konkrétní změnu neopravňuje k vedlejším úpravám.
 - Pokud je nutný zásah do společného souboru používaného i jinou stránkou, změnu omezit podmínkou pouze pro `data-quick-filter-form`; stávající chování ostatních formulářů musí zůstat zachováno.
+.
