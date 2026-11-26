@@ -68,6 +68,7 @@ return [
 
     'img' => [
         'format' => 'webp',
+        'max_pixels' => 25000000,
         'folder_divisor' => 1000,
         'max_bytes' => 3145728, // 3 MB
         'allowed_mime' => [
@@ -125,6 +126,7 @@ return [
         ],
         'submissions_per_day' => 20,
         'favorites_max' => 500, // max. oblíbených položek jednoho typu na uživatele
+        'event_bands_max' => 10,
         'trusted_after' => 5, // počet schválených příspěvků (users.approved_count) pro povýšení user -> trusted
         'rate_limit_window_sec' => 3600,
         'rate_limit_max_hits' => 120,   // max. POST požadavků na IP za rate_limit_window_sec
