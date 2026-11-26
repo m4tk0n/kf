@@ -67,6 +67,9 @@ $venueId = (int)$pdo->lastInsertId();
 q('INSERT INTO ' . tbl('bands') . ' (slug, name, name_ascii, city_id, genre_id, created_at) VALUES (?, ?, ?, ?, ?, ?)', ['test-kapela', 'Test kapela', 'Test kapela', $cityId, $genreId, $now]);
 $bandId = (int)$pdo->lastInsertId();
 check($cityId > 0 && $venueId > 0 && $bandId > 0, 'creates city, venue and band fixtures');
+q('INSERT INTO ' . tbl('cities') . ' (country_id, name, name_ascii) VALUES (?, ?, ?)', [$countryId, 'Test – město', 'Test – mesto']);
+$normalizedCity = q('SELECT name, name_ascii FROM ' . tbl('cities') . ' WHERE country_id = ? AND name = ?', [$countryId, 'Test - město'])->fetch();
+check(($normalizedCity['name'] ?? '') === 'Test - město' && ($normalizedCity['name_ascii'] ?? '') === 'Test - mesto', 'database helper normalizes typographic dashes in every text parameter before insert');
 
 function session_token_for(int $userId): string
 {
@@ -132,7 +135,7 @@ function create_draft_with_image(int $userId, array $values): string
 $eventDate = date('Y-m-d', strtotime('+30 days'));
 $userToken = session_token_for($users['user']);
 $userValues = event_values('Festival – test event approval', $eventDate, $cityId, $venueId, $bandId);
-check($userValues['name'] === 'Festival - test event approval', 'event-name input normalizes typographic dashes before draft creation');
+check($userValues['name'] === 'Festival - test event approval', 'shared text normalizer converts typographic dashes in event input');
 check(kf_event_validate($userValues) === [], 'validates complete event form data');
 $imageName = create_draft_with_image($users['user'], $userValues);
 $draftImage = kf_draft_image_path($users['user'], $imageName);
