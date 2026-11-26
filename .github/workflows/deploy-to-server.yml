@@ -61,7 +61,7 @@ jobs:
           import subprocess
 
           excluded = (
-              ".git", ".github", ".env", "data", "cache",
+              ".git", ".github", ".env", "tests", "data", "cache",
               "img", "uploads", "logs", "tmp", "ai-backups",
               ".ftp-deploy-sync-state.json",
           )
@@ -120,6 +120,7 @@ jobs:
               "set ftp:passive-mode yes",
               f"open -p {q(os.environ['FTP_PORT'])} {q(os.environ['FTP_SERVER'])}",
               f"user {q(os.environ['FTP_USERNAME'])} {q(os.environ['FTP_PASSWORD'])}",
+              f"rm -r -f {q(posixpath.join(remote_root, 'tests'))}",
           ]
 
           for path in uploads:
