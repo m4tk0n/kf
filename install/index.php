@@ -288,7 +288,7 @@ function inst_key_form(string $error = ''): never
 // ---------- řízení ----------
 
 $installKey = (string)env('INSTALL_KEY', '');
-if ($installKey === '') {
+if ($installKey === '' && !$instSuperAdmin) {
     http_response_code(403);
     inst_page('Instalátor je vypnutý', '<div class="card"><p>V <code>.env</code> je prázdný <code>INSTALL_KEY</code>. Pro spuštění instalátoru ho vyplň.</p></div>');
 }
@@ -297,7 +297,12 @@ $maxTries = (int)cfg('limits.install_key_max_hits');
 $action = is_post() ? (string)($_POST['action'] ?? '') : '';
 
 if ($action === '') {
-    inst_key_form();
+    if ($instSuperAdmin) {
+        $token = inst_token_make(time() + (int)cfg('install.token_ttl_sec'));
+        $action = 'admin_view';
+    } else {
+        inst_key_form();
+    }
 }
 if (ratelimit_hit('install', $maxTries, false)) {
     security_log('install_rate_limit');
@@ -328,6 +333,8 @@ if ($action === 'unlock') {
         http_response_code(403);
         inst_key_form('Neplatný původ požadavku.');
     }
+    $token = inst_token_make(time() + (int)cfg('install.token_ttl_sec'));
+} elseif ($action === 'admin_view' && $instSuperAdmin) {
     $token = inst_token_make(time() + (int)cfg('install.token_ttl_sec'));
 } else {
     security_log('install_bad_action');
