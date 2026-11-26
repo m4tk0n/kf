@@ -37,7 +37,7 @@ foreach ($schemaFiles as $file) {
 check(count($schemaFiles) >= 10, 'creates the real application schema from install/sql/tables');
 
 $now = time();
-$insertUser = q(
+$insertUser = $pdo->prepare(
     'INSERT INTO ' . tbl('users') . ' (provider, provider_uid, display_name, role, user_state, approved_count, created_at, last_login_at)
      VALUES (?, ?, ?, ?, ?, 0, ?, ?)'
 );
