@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 require_once dirname(__DIR__) . '/bootstrap.php';
 
+// Ověření přihlášeného správce pro bezpečný vstup do instalátoru.
+$instUser = auth_resolve();
+$instSuperAdmin = $instUser !== null && (int)($instUser['id'] ?? 0) === 2;
+
 header('Content-Type: text/html; charset=utf-8');
 header('Cache-Control: no-store');
 header('X-Robots-Tag: noindex, nofollow');
