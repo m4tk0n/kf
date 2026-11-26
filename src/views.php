@@ -49,7 +49,7 @@ function flash_text(): ?string
 /** Položky uživatelského menu vybrané jen podle role z DB (host nedostane nic). */
 function menu_items(?array $user): array
 {
-    if ($user === null) {
+    if ($user === null || (int)($user['user_state'] ?? 0) !== (int)cfg('enums.user_state.active')) {
         return [];
     }
     $role = (int)$user['role'];
