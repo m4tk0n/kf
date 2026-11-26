@@ -569,8 +569,9 @@ function route_venue_name_suggest(): never
     }
 
     $rows = q(
-        'SELECT v.id, v.name, c.id AS city_id, c.name AS city FROM ' . tbl('venues') . ' v
+        'SELECT v.id, v.name, v.address, c.id AS city_id, c.name AS city, co.iso2 AS country FROM ' . tbl('venues') . ' v
          JOIN ' . tbl('cities') . ' c ON c.id = v.city_id
+         JOIN ' . tbl('countries') . ' co ON co.id = c.country_id
          WHERE LOCATE(?, LOWER(REPLACE(REPLACE(REPLACE(v.name_ascii, ?, ?), ?, ?), ?, ?))) = 1
          ORDER BY LOWER(v.name_ascii), v.name LIMIT ' . $limit,
         [strtolower($ascii), '–', '-', '—', '-', '‑', '-']
@@ -582,6 +583,8 @@ function route_venue_name_suggest(): never
             'name' => (string)$row['name'],
             'city_id' => (int)$row['city_id'],
             'city' => (string)$row['city'],
+            'country' => (string)$row['country'],
+            'address' => (string)($row['address'] ?? ''),
         ], $rows),
     ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     exit;
