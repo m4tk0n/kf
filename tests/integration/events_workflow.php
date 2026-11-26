@@ -91,6 +91,7 @@ function run_route(string $action, string $token, ?int $id = null): string
     if ($status !== 0) {
         throw new RuntimeException("Route {$action} failed (exit {$status}):\n" . implode("\n", $output));
     }
+    return implode("\n", $output);
 }
 
 function event_values(string $name, string $date, int $cityId, int $venueId, int $bandId): array
