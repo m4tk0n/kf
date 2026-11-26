@@ -113,20 +113,9 @@ Dotčené soubory:
 - `assets/css/app.css` – vrstvení překryvu pod menu a nad ostatními prvky stránky.
 
 
-## 5. Ikony v hlavičce přihlášeného uživatele
+## Upozornění
 
-**Stav: implementováno v kódu, čeká na praktické ověření po nasazení.**
-
-V hlavičce přihlášeného uživatele jsou ikony v pořadí zleva doprava: zvonek upozornění, globální hvězdička oblíbených a avatar.
-
-- Zvonek se zatím pouze zobrazuje jako neaktivní dekorativní ikona.
-- Nepřidává se počítadlo, nabídka upozornění, databáze ani logika jejich vytváření či čtení.
-- Hvězdička používá kompromisní vzhled mezi hvězdou z návrhu hlavičky a hvězdičkou používanou v detailech. Má jemnější, ale zřetelnější žlutý obrys; aktivní stav má žlutou výplň.
-
-Dotčené soubory:
-- `templates/layout.php` – pořadí ikon a statická ikona zvonku.
-- `assets/css/app.css` – vzhled zvonku a kompromisní vzhled hvězdičky.
-- `docs/002_oblibene.md` – pravidla globální hvězdičky a ikon v hlavičce.
+U přihlášeného uživatele se v hlavičce zobrazuje ikona upozornění před hvězdičkou oblíbených a avatarem. Podrobná samostatná specifikace je v `docs/006_upozorneni.md`.
 
 ## 5. Pravidlo průběžné dokumentace
 
