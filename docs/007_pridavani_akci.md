@@ -265,8 +265,9 @@ Normalizace není specifická pro názvy akcí. Pomocná funkce `kf_text_normali
 Výběr klubu/místa v /event/new je textové pole s našeptávačem:
 - hledání začíná po zadání 3 znaků; limit výsledků používá společné paging.autocomplete_limit,
 - výsledky obsahují pouze již zveřejněné kluby/místa z tabulky venues,
-- u názvu se zobrazuje kód země, město a adresa, aby šly rozlišit kluby se stejným názvem i ve stejném městě,
-- adresa je uložena v nepovinném sloupci `venues.address` (VARCHAR 255); instalační SQL vytváří sloupec rovnou, bez dodatečné migrace,
+- u názvu se zobrazuje kód země (odvozený přes `cities.country_id`), město a adresa, aby šly rozlišit kluby se stejným názvem i ve stejném městě,
+- tabulka `venues` obsahuje původní sloupce a navíc pouze nepovinný `address` (VARCHAR 255); instalační SQL jej vytváří rovnou, bez dodatečné migrace,
+- doplňující údaje klubu (web, popis, telefon, e-mail, GPS a odkazy na mapy) patří do JSON souboru `data/venues/<bucket>/<id>.json`, nikoli do SQL tabulky; detail již načítá popis, web, e-mail, telefon, adresu a GPS z tohoto JSON.
 - kliknutí uloží interní ID klubu do skrytého pole venue_id a doplní město do výběru města,
 - při další změně textu se vybrané ID zruší; ručně napsaný název proto nevytvoří falešnou vazbu na existující klub,
 - endpoint venue/name-suggest je dostupný přihlášeným uživatelům s oprávněním submit a vrací JSON bez cache,
