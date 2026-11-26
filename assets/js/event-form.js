@@ -35,26 +35,26 @@
   var suggestions = document.querySelector('[data-event-name-suggestions]');
   if (nameInput && suggestions) {
     var suggestTimer = 0;
-    var activeRequest = null;
+    var requestNumber = 0;
     var minSuggestChars = parseInt(nameInput.getAttribute('data-suggest-min') || '2', 10);
     function closeSuggestions() {
       suggestions.hidden = true;
-      suggestions.replaceChildren();
+      while (suggestions.firstChild) suggestions.removeChild(suggestions.firstChild);
     }
     function loadSuggestions() {
       var term = nameInput.value.trim();
+      var currentRequest = ++requestNumber;
       if (term.length < minSuggestChars) { closeSuggestions(); return; }
-      if (activeRequest) activeRequest.abort();
-      activeRequest = new AbortController();
       fetch(nameInput.getAttribute('data-suggest-url') + '?q=' + encodeURIComponent(term), {
         credentials: 'same-origin',
         headers: { 'Accept': 'application/json' },
-        signal: activeRequest.signal
+        cache: 'no-store'
       }).then(function (response) {
-        if (!response.ok) throw new Error('Suggestion request failed');
+        if (!response.ok) throw new Error('Suggestion request failed: ' + response.status);
         return response.json();
       }).then(function (data) {
-        suggestions.replaceChildren();
+        if (currentRequest !== requestNumber || term !== nameInput.value.trim()) return;
+        while (suggestions.firstChild) suggestions.removeChild(suggestions.firstChild);
         (Array.isArray(data.items) ? data.items : []).forEach(function (value) {
           var option = document.createElement('button');
           option.type = 'button';
@@ -69,8 +69,8 @@
           suggestions.appendChild(option);
         });
         suggestions.hidden = suggestions.childElementCount === 0;
-      }).catch(function (error) {
-        if (error.name !== 'AbortError') closeSuggestions();
+      }).catch(function () {
+        if (currentRequest === requestNumber) closeSuggestions();
       });
     }
     nameInput.addEventListener('input', function () {
@@ -81,7 +81,7 @@
       if (event.key === 'Escape') closeSuggestions();
     });
     document.addEventListener('click', function (event) {
-      if (!event.target.closest('.event-name-field')) closeSuggestions();
+      if (!event.target.closest || !event.target.closest('.event-name-field')) closeSuggestions();
     });
   }
 
