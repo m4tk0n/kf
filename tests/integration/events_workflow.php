@@ -6,8 +6,8 @@ declare(strict_types=1);
  * Destructive schema setup is permitted only for APP_ENV=test + DB_NAME=kf_test.
  */
 
-define('KF_ROOT', dirname(__DIR__, 2));
-require KF_ROOT . '/bootstrap.php';
+$_SERVER['HTTP_USER_AGENT'] = 'KF automated integration test';
+require dirname(__DIR__, 2) . '/bootstrap.php';
 
 function check(bool $ok, string $message): void
 {
