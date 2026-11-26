@@ -62,18 +62,6 @@ Použijí se přesně **tři samostatné tabulky**, jedna pro každý typ entity
 - V detailu každé podporované entity se zobrazuje aktivní ovládací hvězdička.
 - Stav hvězdičky v detailu vždy odpovídá skutečnému stavu v databázi.
 
-## Ikony v hlavičce
-
-U přihlášeného uživatele jsou ikony v pořadí zleva doprava:
-
-1. Zvonek upozornění.
-2. Globální hvězdička oblíbených.
-3. Avatar uživatele.
-
-Zvonek se zatím pouze zobrazuje. Nemá počítadlo, nabídku, interakci ani napojenou logiku upozornění.
-
-Globální hvězdička používá kompromisní vzhled mezi samostatnou hvězdou v návrhu hlavičky a hvězdičkou v detailech: zachovává jednoduchý znak hvězdy, ale má o něco výraznější žlutý obrys. Aktivní stav má žlutou výplň.
-
 ## Hvězdička v detailu entity
 
 - Neoblíbená položka: šedá hvězdička.
