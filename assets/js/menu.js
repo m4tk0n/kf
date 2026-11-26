@@ -4,7 +4,7 @@
   var menu = document.querySelector('.umenu');
   if (!menu) return;
 
-  // Click vznikající po zavření menu musí být stále zablokovaný.
+  // Zabrání tomu, aby click navazující na zavření menu aktivoval prvek pod ním.
   var blockFollowingClick = false;
 
   function stopEvent(ev) {
@@ -17,7 +17,6 @@
 
   function blockOutsidePointer(ev) {
     if (menu.contains(ev.target)) {
-      // Nový samostatný stisk po zavření menu může normálně pokračovat.
       if (!menu.open) blockFollowingClick = false;
       return;
     }
@@ -32,15 +31,22 @@
   function blockOutsideClick(ev) {
     if (menu.contains(ev.target)) return;
 
-    if (menu.open || blockFollowingClick) {
+    if (menu.open) {
+      stopEvent(ev);
+      menu.open = false;
+      blockFollowingClick = false;
+      return;
+    }
+
+    if (blockFollowingClick) {
       stopEvent(ev);
       blockFollowingClick = false;
     }
   }
 
-  // Zachytit začátek interakce dříve, než ji převezme cílový prvek.
+  // Zachytit kliknutí/tap mimo menu před cílovým prvkem a jeho obsluhou.
   document.addEventListener('pointerdown', blockOutsidePointer, true);
 
-  // Záloha pro syntetické a klávesnicí vyvolané kliknutí.
+  // Záložní ochrana pro kliknutí vyvolané klávesnicí nebo skriptem.
   document.addEventListener('click', blockOutsideClick, true);
 })();
