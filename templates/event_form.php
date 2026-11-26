@@ -21,9 +21,9 @@ foreach ($cities as $c) {
     <label class="event-name-field"><?= e(t('event.f.name')) ?>
       <input type="text" name="name" value="<?= e((string)$old['name']) ?>" maxlength="160" required
         autocomplete="off" aria-autocomplete="list" aria-controls="event-name-suggestions"
-        data-event-name-input data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
+        data-event-name-input data-autocomplete-input data-autocomplete-suggestions-target="event-name-suggestions" data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
         data-suggest-url="<?= e(url('event/name-suggest')) ?>">
-      <div class="autocomplete-list" id="event-name-suggestions" data-event-name-suggestions role="listbox" hidden></div>
+      <div class="autocomplete-list" id="event-name-suggestions" data-event-name-suggestions data-autocomplete-suggestions role="listbox" hidden></div>
     </label>
     <label><?= e(t('event.f.type')) ?>
       <select name="type">
@@ -41,13 +41,15 @@ foreach ($cities as $c) {
     <label><?= e(t('event.f.time')) ?>
       <input type="time" name="time_start" value="<?= e((string)$old['time_start']) ?>">
     </label>
-    <label><?= e(t('event.f.venue')) ?>
-      <select name="venue_id">
-        <option value="0"><?= e(t('event.f.venue_none')) ?></option>
-        <?php foreach ($venues as $vn): ?>
-          <option value="<?= (int)$vn['id'] ?>"<?= (int)$old['venue_id'] === (int)$vn['id'] ? ' selected' : '' ?>><?= e((string)$vn['name'] . ' (' . (string)$vn['city'] . ')') ?></option>
-        <?php endforeach; ?>
-      </select>
+    <label class="event-name-field"><?= e(t('event.f.venue')) ?>
+      <input type="hidden" name="venue_id" value="<?= (int)$old['venue_id'] ?>" data-venue-id>
+      <input type="text" value="<?= e((string)($old['venue_name'] ?? '')) ?>" maxlength="160"
+        autocomplete="off" aria-autocomplete="list" aria-controls="venue-name-suggestions"
+        placeholder="<?= e(t('event.f.venue_none')) ?>"
+        data-autocomplete-input data-venue-autocomplete
+        data-venue-id-target="venue_id" data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_venue_min_chars', 3)) ?>"
+        data-suggest-url="<?= e(url('venue/name-suggest')) ?>">
+      <div class="autocomplete-list" id="venue-name-suggestions" data-autocomplete-suggestions role="listbox" hidden></div>
     </label>
     <label><?= e(t('event.f.city')) ?>
       <select name="city_id">
