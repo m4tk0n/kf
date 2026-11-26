@@ -130,3 +130,4 @@ Bez této routy by panel fungoval, ale záložka Server by nemohla načíst logy
 - `src/views.php` – položka Diagnostika v menu účtu ID 2
 - `lang/cs.php` – texty stránky Diagnostika
 - `debug/README.md` – podrobný technický popis záložek a ovládání
+.
