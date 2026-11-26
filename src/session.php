@@ -237,6 +237,9 @@ function session_destroy_current(): void
         session_delete_hash_hex($u['token_hash_hex']);
     }
     session_clear_cookie();
+    if (function_exists('debug_test_profiles_cookie_clear')) {
+        debug_test_profiles_cookie_clear();
+    }
     $st = &auth_store();
     $st['user'] = null;
 }
