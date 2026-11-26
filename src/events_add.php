@@ -426,7 +426,7 @@ function kf_event_form_page(array $v, array $errors, string $image, int $status 
     }
     $v['venue_name'] = $venueName;
     $bands = q('SELECT id, name FROM ' . tbl('bands') . ' ORDER BY name')->fetchAll();
-    page(t('event.new.title'), 'event_form', [
+    page((string)($options['pageTitle'] ?? t('event.new.title')), 'event_form', [
         'old' => $v, 'errors' => $errors, 'cities' => $cities, 'bands' => $bands,
         'imgUrl' => (string)($options['imgUrl'] ?? ($image !== '' ? url('event/draft-image') . '?v=' . time() : '')),
         'formAction' => (string)($options['formAction'] ?? url('event/new')),
