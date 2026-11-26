@@ -17,6 +17,10 @@ $postActions = ['event_submit', 'review_approve', 'review_reject', 'my_delete'];
 $isPost = in_array($action, $postActions, true);
 $_SERVER['REQUEST_METHOD'] = $isPost ? 'POST' : 'GET';
 
+if ($action === 'event_name_suggest') {
+    $_GET['q'] = (string)($argv[3] ?? '');
+}
+
 if ($isPost) {
     $_SERVER['HTTP_ORIGIN'] = 'http://127.0.0.1';
     if ($action === 'review_approve' || $action === 'review_reject') {
@@ -36,6 +40,8 @@ if ($isPost) {
 switch ($action) {
     case 'event_form':
         route_event_new();
+    case 'event_name_suggest':
+        route_event_name_suggest();
     case 'event_preview':
         route_event_preview();
     case 'event_submit':

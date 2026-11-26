@@ -228,3 +228,16 @@ Hlavní routy:
 - POST: `event/new`, `event/submit`, `event/cancel`, `my/delete`, `review`.
 
 Při dalších úpravách se nejprve kontroluje tento dokument. Pokud se změní pravidla rolí nebo způsob schvalování, musí se aktualizovat také tabulka rolí, stav testů a upozornění na případné rozpory.
+
+
+## 10. Našeptávač názvu akce
+
+Ve formuláři `/event/new` je našeptávač názvů již zveřejněných akcí:
+- požadavek se posílá průběžně při psaní s krátkým zpožděním,
+- minimální délka dotazu a počet výsledků se přebírají z `paging.autocomplete_min_chars` a `paging.autocomplete_limit` v `config.php`,
+- hledá se podle normalizovaného začátku názvu v `events.name_ascii`,
+- výsledky jsou jedinečné názvy zveřejněných akcí; čekající návrhy se nezobrazují,
+- kliknutí na výsledek pouze doplní název do pole. Nevytváří vazbu na existující akci ani neslučuje koncerty se stejným názvem,
+- endpoint `event/name-suggest` je dostupný pouze přihlášeným uživatelům s oprávněním `submit` a odpovídá JSON bez ukládání do cache.
+
+Toto je pouze první krok našeptávání. Města, kluby a kapely budou řešeny samostatně.

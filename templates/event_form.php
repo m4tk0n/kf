@@ -18,8 +18,12 @@ foreach ($cities as $c) {
   <?php endif; ?>
   <form method="post" action="<?= e(url('event/new')) ?>" enctype="multipart/form-data" class="stack">
     <?= csrf_field() ?>
-    <label><?= e(t('event.f.name')) ?>
-      <input type="text" name="name" value="<?= e((string)$old['name']) ?>" maxlength="160" required>
+    <label class="event-name-field"><?= e(t('event.f.name')) ?>
+      <input type="text" name="name" value="<?= e((string)$old['name']) ?>" maxlength="160" required
+        autocomplete="off" aria-autocomplete="list" aria-controls="event-name-suggestions"
+        data-event-name-input data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
+        data-suggest-url="<?= e(url('event/name-suggest')) ?>">
+      <div class="autocomplete-list" id="event-name-suggestions" data-event-name-suggestions role="listbox" hidden></div>
     </label>
     <label><?= e(t('event.f.type')) ?>
       <select name="type">

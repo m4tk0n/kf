@@ -543,3 +543,32 @@ function route_event_cancel(): never
     kf_draft_clear((int)$u['id']);
     redirect('event/new?m=event_cancelled');
 }
+
+
+/** JSON našeptávač názvů již zveřejněných akcí. */
+function route_event_name_suggest(): never
+{
+    guard('submit');
+    $term = is_string($_GET['q'] ?? null) ? trim($_GET['q']) : '';
+    $min = max(1, (int)cfg('paging.autocomplete_min_chars', 2));
+    $limit = max(1, min(30, (int)cfg('paging.autocomplete_limit', 10)));
+    $ascii = kf_ascii(mb_substr($term, 0, 100));
+    $ascii = trim((string)preg_replace('/[%_\\\\]/', '', $ascii));
+
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: no-store');
+    if (mb_strlen($ascii) < $min) {
+        echo json_encode(['items' => []], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        exit;
+    }
+
+    $rows = q(
+        'SELECT MIN(name) AS name FROM ' . tbl('events') . ' WHERE name_ascii LIKE ? GROUP BY name_ascii ORDER BY name_ascii LIMIT ' . $limit,
+        [$ascii . '%']
+    )->fetchAll();
+    echo json_encode(
+        ['items' => array_values(array_map(static fn(array $row): string => (string)$row['name'], $rows))],
+        JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES
+    );
+    exit;
+}

@@ -347,3 +347,18 @@ input[type="submit"].flash-success{
 .band-row select{flex:1;min-width:0}
 .band-row input[type=time]{flex:0 0 96px}
 .play-row{display:flex;gap:10px}
+
+
+/* Našeptávač názvu akce */
+.event-name-field{position:relative}
+.autocomplete-list{
+  position:absolute;top:100%;left:0;right:0;z-index:20;
+  max-height:220px;overflow:auto;margin-top:3px;padding:4px;
+  border:1px solid var(--line);border-radius:9px;
+  background:var(--surface-2);box-shadow:0 10px 24px rgba(0,0,0,.35)
+}
+.autocomplete-option{
+  display:block;width:100%;padding:8px 10px;border:0;border-radius:6px;
+  background:transparent;color:var(--text);font:inherit;text-align:left;cursor:pointer
+}
+.autocomplete-option:hover,.autocomplete-option:focus{background:var(--surface-3);outline:none}

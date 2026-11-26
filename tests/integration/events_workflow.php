@@ -80,12 +80,14 @@ function session_token_for(int $userId): string
     return $token;
 }
 
-function run_route(string $action, string $token, ?int $id = null): string
+function run_route(string $action, string $token, ?int $id = null, ?string $argument = null): string
 {
     $script = KF_ROOT . '/tests/integration/route.php';
     $cmd = escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg($script) . ' ' . escapeshellarg($action) . ' ' . escapeshellarg($token);
     if ($id !== null) {
         $cmd .= ' ' . escapeshellarg((string)$id);
+    } elseif ($argument !== null) {
+        $cmd .= ' ' . escapeshellarg($argument);
     }
     exec($cmd . ' 2>&1', $output, $status);
     if ($status !== 0) {
@@ -152,6 +154,12 @@ $reviewToken = session_token_for($users['admin']);
 run_route('review_approve', $reviewToken, $pendingId);
 $publishedId = (int)q('SELECT id FROM ' . tbl('events') . ' WHERE name = ?', ['KF test event approval'])->fetchColumn();
 check($publishedId > 0, 'admin approval publishes the event into events');
+$suggestJson = run_route('event_name_suggest', $userToken, null, 'KF test event');
+$suggestData = json_decode($suggestJson, true);
+check(is_array($suggestData) && in_array('KF test event approval', $suggestData['items'] ?? [], true), 'event-name autocomplete returns a matching published event');
+$shortSuggest = run_route('event_name_suggest', $userToken, null, 'K');
+$shortData = json_decode($shortSuggest, true);
+check(is_array($shortData) && ($shortData['items'] ?? []) === [], 'event-name autocomplete returns no results below the configured minimum length');
 check((int)q('SELECT COUNT(*) FROM ' . tbl('event_bands') . ' WHERE event_id = ? AND band_id = ?', [$publishedId, $bandId])->fetchColumn() === 1, 'approval persists event-to-band relation and performance time');
 $eventJson = json_read_file(json_bucket_rel('events', $publishedId));
 check(($eventJson['description'] ?? '') === 'Automatický integrační test K&F.', 'approval writes event JSON details');

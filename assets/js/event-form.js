@@ -30,6 +30,61 @@
     }
   });
 
+  // Našeptávač názvů zveřejněných akcí (výběr pouze doplní text; neváže akce k sobě).
+  var nameInput = document.querySelector('[data-event-name-input]');
+  var suggestions = document.querySelector('[data-event-name-suggestions]');
+  if (nameInput && suggestions) {
+    var suggestTimer = 0;
+    var activeRequest = null;
+    var minSuggestChars = parseInt(nameInput.getAttribute('data-suggest-min') || '2', 10);
+    function closeSuggestions() {
+      suggestions.hidden = true;
+      suggestions.replaceChildren();
+    }
+    function loadSuggestions() {
+      var term = nameInput.value.trim();
+      if (term.length < minSuggestChars) { closeSuggestions(); return; }
+      if (activeRequest) activeRequest.abort();
+      activeRequest = new AbortController();
+      fetch(nameInput.getAttribute('data-suggest-url') + '?q=' + encodeURIComponent(term), {
+        credentials: 'same-origin',
+        headers: { 'Accept': 'application/json' },
+        signal: activeRequest.signal
+      }).then(function (response) {
+        if (!response.ok) throw new Error('Suggestion request failed');
+        return response.json();
+      }).then(function (data) {
+        suggestions.replaceChildren();
+        (Array.isArray(data.items) ? data.items : []).forEach(function (value) {
+          var option = document.createElement('button');
+          option.type = 'button';
+          option.className = 'autocomplete-option';
+          option.setAttribute('role', 'option');
+          option.textContent = value;
+          option.addEventListener('click', function () {
+            nameInput.value = value;
+            closeSuggestions();
+            nameInput.focus();
+          });
+          suggestions.appendChild(option);
+        });
+        suggestions.hidden = suggestions.childElementCount === 0;
+      }).catch(function (error) {
+        if (error.name !== 'AbortError') closeSuggestions();
+      });
+    }
+    nameInput.addEventListener('input', function () {
+      window.clearTimeout(suggestTimer);
+      suggestTimer = window.setTimeout(loadSuggestions, 180);
+    });
+    nameInput.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeSuggestions();
+    });
+    document.addEventListener('click', function (event) {
+      if (!event.target.closest('.event-name-field')) closeSuggestions();
+    });
+  }
+
   // Řádky kapel: zobrazí se vyplněné + jeden prázdný, tlačítko "+" přidá další.
   var rows = Array.prototype.slice.call(document.querySelectorAll('[data-band-row]'));
   var more = document.querySelector('[data-band-more]');
