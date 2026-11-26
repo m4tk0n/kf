@@ -13,6 +13,8 @@
       scrollY: window.scrollY
     };
     try {
+      // Čistá adresa výpisu a pozice položky zůstávají pouze v sessionStorage.
+      sessionStorage.setItem('kf:detail-return-url', window.location.href);
       sessionStorage.setItem(positionKey, JSON.stringify(state));
     } catch (e) {
       // Pokud úložiště není dostupné, návrat funguje bez obnovy pozice.
