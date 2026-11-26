@@ -1,6 +1,27 @@
 /* assets/js/app.js */
 (function () {
   'use strict';
+
+  // Jednotná normalizace pomlček při každém psaní i vložení do textových polí.
+  function normalizeTextInput(el) {
+    if (!el || !('value' in el) || typeof el.value !== 'string') return;
+    var normalized = el.value.replace(/[–—‑−]/g, '-');
+    if (normalized === el.value) return;
+    var start = null;
+    var end = null;
+    try { start = el.selectionStart; end = el.selectionEnd; } catch (e) {}
+    el.value = normalized;
+    if (start !== null && end !== null && typeof el.setSelectionRange === 'function') {
+      try { el.setSelectionRange(start, end); } catch (e) {}
+    }
+  }
+  document.addEventListener('input', function (ev) {
+    var el = ev.target;
+    if (!el || !el.matches) return;
+    if (el.matches('textarea, input:not([type]), input[type="text"], input[type="search"], input[type="url"], input[type="tel"], input[type="email"]')) {
+      normalizeTextInput(el);
+    }
+  }, true);
   // Jednotné tlačítko Zpět na každé samostatné stránce s nadpisem.
   // Pokud předchozí stránka patří do stejného webu, vrátíme se v historii;
   // při přímém otevření stránky nabídneme návrat na hlavní výpis.
