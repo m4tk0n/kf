@@ -14,7 +14,7 @@
   --other:#ffd84d;
   --radius:16px;
 }
-*{box-sizing:border-box}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{-webkit-text-size-adjust:100%;scrollbar-gutter:stable}
 body{
   margin:0;
@@ -50,7 +50,6 @@ abbr{text-decoration:none}
   font:650 .82rem/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   white-space:nowrap;cursor:pointer;
 }
-.btn:active{transform:translateY(1px)}
 .bar{display:flex;align-items:center;gap:9px;padding-bottom:13px}
 .bar-search{display:flex;align-items:center;gap:9px;flex:1;min-width:0}
 .bar-filter-toggle{flex:none;margin:0}
@@ -81,10 +80,8 @@ abbr{text-decoration:none}
   border-radius:var(--radius);
   background:linear-gradient(125deg,rgba(29,42,59,.96),rgba(20,29,42,.98));
   box-shadow:0 5px 18px rgba(0,0,0,.13);
-  transition:transform .15s,border-color .15s,background .15s;
 }
 .item:hover{border-color:rgba(139,163,192,.38);background:var(--surface-2)}
-.item:active{transform:scale(.992)}
 .item-event{border-left:4px solid var(--event-color,var(--other));padding-left:12px}
 .item-type-1{--event-color:var(--concert)}
 .item-type-2{--event-color:var(--festival)}
@@ -262,7 +259,6 @@ abbr{text-decoration:none}
 .fav.favtop.on{color:#cdb96f;-webkit-text-fill-color:#cdb96f!important;-webkit-text-stroke:1px #cdb96f}
 
 /* Hvězdička v řádku výpisu a stav načítání */
-#view.loading{opacity:.55;transition:opacity .15s}
 .list>li{position:relative}
 .list>li.has-fav .item{padding-right:52px}
 .rowfav{position:absolute;right:9px;top:50%;transform:translateY(-50%);width:34px;height:34px;font-size:1.15rem}
