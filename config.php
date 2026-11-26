@@ -113,6 +113,7 @@ return [
         'detail_events' => 30,     // max. akcí v seznamech minulých / budoucích akcí v detailu klubu a kapely
         'max_per_page' => 100,
         'autocomplete_min_chars' => 2,
+        'autocomplete_venue_min_chars' => 3,
         'autocomplete_limit' => 10,
     ],
 
