@@ -608,17 +608,22 @@ function route_event_name_suggest(): never
     $limit = max(1, min(30, (int)cfg('paging.autocomplete_limit', 10)));
     // Kolace MySQL porovnává název bez rozlišování velikosti písmen a diakritiky.
     $search = kf_text_normalize(mb_substr($term, 0, 100));
+    $tokens = preg_split('/[\\s\\-–—‑]+/u', $search, -1, PREG_SPLIT_NO_EMPTY) ?: [];
+    $pattern = '';
+    foreach ($tokens as $token) {
+        $pattern .= addcslashes($token, '%_\\\\') . '%';
+    }
 
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-Control: no-store');
-    if (mb_strlen($search) < $min) {
+    if (mb_strlen($search) < $min || $pattern === '') {
         echo json_encode(['items' => []], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         exit;
     }
 
     $rows = q(
         "SELECT MIN(name) AS name FROM " . tbl('events') . " WHERE LOWER(REPLACE(REPLACE(REPLACE(name, '–', '-'), '—', '-'), '‑', '-')) COLLATE utf8mb4_unicode_ci LIKE ? GROUP BY LOWER(name) COLLATE utf8mb4_unicode_ci ORDER BY MIN(name) LIMIT " . $limit,
-        [addcslashes($search, '%_\\\\') . '%']
+        [$pattern]
     )->fetchAll();
     echo json_encode(
         ['items' => array_values(array_map(static fn(array $row): string => (string)$row['name'], $rows))],
