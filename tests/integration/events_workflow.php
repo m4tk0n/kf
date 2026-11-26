@@ -131,18 +131,18 @@ function create_draft_with_image(int $userId, array $values): string
 
 $eventDate = date('Y-m-d', strtotime('+30 days'));
 $userToken = session_token_for($users['user']);
-$userValues = event_values('KF test event approval', $eventDate, $cityId, $venueId, $bandId);
+$userValues = event_values('Festival test event approval', $eventDate, $cityId, $venueId, $bandId);
 check(kf_event_validate($userValues) === [], 'validates complete event form data');
 $imageName = create_draft_with_image($users['user'], $userValues);
 $draftImage = kf_draft_image_path($users['user'], $imageName);
 check($draftImage !== null && is_file($draftImage), 'draft preview image is available');
 $formHtml = run_route('event_form', $userToken);
-check(str_contains($formHtml, 'KF test event approval') && str_contains($formHtml, 'event/draft-image'), 'new-event form route renders saved values and protected image preview');
+check(str_contains($formHtml, 'Festival test event approval') && str_contains($formHtml, 'event/draft-image'), 'new-event form route renders saved values and protected image preview');
 $previewHtml = run_route('event_preview', $userToken);
-check(str_contains($previewHtml, 'KF test event approval') && str_contains($previewHtml, 'Test klub'), 'event preview route renders the event detail before submission');
+check(str_contains($previewHtml, 'Festival test event approval') && str_contains($previewHtml, 'Test klub'), 'event preview route renders the event detail before submission');
 
 run_route('event_submit', $userToken);
-$pending = q('SELECT id FROM ' . tbl('pending') . ' WHERE created_by = ? AND title = ?', [$users['user'], 'KF test event approval'])->fetchColumn();
+$pending = q('SELECT id FROM ' . tbl('pending') . ' WHERE created_by = ? AND title = ?', [$users['user'], 'Festival test event approval'])->fetchColumn();
 check($pending !== false, 'ordinary role 1 submission creates a pending record');
 $pendingId = (int)$pending;
 $pendingData = kf_pending_get($pendingId);
@@ -152,11 +152,14 @@ check(kf_draft_get($users['user']) === null && !is_file((string)$draftImage), 's
 
 $reviewToken = session_token_for($users['admin']);
 run_route('review_approve', $reviewToken, $pendingId);
-$publishedId = (int)q('SELECT id FROM ' . tbl('events') . ' WHERE name = ?', ['KF test event approval'])->fetchColumn();
+$publishedId = (int)q('SELECT id FROM ' . tbl('events') . ' WHERE name = ?', ['Festival test event approval'])->fetchColumn();
 check($publishedId > 0, 'admin approval publishes the event into events');
-$suggestJson = run_route('event_name_suggest', $userToken, null, 'KF test event');
+$suggestJson = run_route('event_name_suggest', $userToken, null, 'festival test');
 $suggestData = json_decode($suggestJson, true);
-check(is_array($suggestData) && in_array('KF test event approval', $suggestData['items'] ?? [], true), 'event-name autocomplete returns a matching published event');
+check(is_array($suggestData) && in_array('Festival test event approval', $suggestData['items'] ?? [], true), 'event-name autocomplete returns a matching published event');
+$lowerSuggest = run_route('event_name_suggest', $userToken, null, 'fest');
+$lowerData = json_decode($lowerSuggest, true);
+check(is_array($lowerData) && in_array('Festival test event approval', $lowerData['items'] ?? [], true), 'event-name autocomplete matches uppercase stored names from a lowercase query');
 $shortSuggest = run_route('event_name_suggest', $userToken, null, 'K');
 $shortData = json_decode($shortSuggest, true);
 check(is_array($shortData) && ($shortData['items'] ?? []) === [], 'event-name autocomplete returns no results below the configured minimum length');
