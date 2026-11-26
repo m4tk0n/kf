@@ -25,7 +25,7 @@ $evList = static function (array $rows): string {
     return $out . '</ul>';
 };
 ?>
-<p class="back"><a href="<?= e((string)$d['back']) ?>">← <?= e(t('detail.back')) ?></a></p>
+<p class="back"><a data-detail-back href="<?= e((string)$d['back']) ?>">← <?= e(t('detail.back')) ?></a></p>
 <article class="card detail detail-<?= e($kind) ?>">
   <div class="detail-head">
     <h1><?= e($name) ?></h1>
