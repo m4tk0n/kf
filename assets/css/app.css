@@ -362,3 +362,8 @@ input[type="submit"].flash-success{
   background:transparent;color:var(--text);font:inherit;text-align:left;cursor:pointer
 }
 .autocomplete-option:hover,.autocomplete-option:focus{background:var(--surface-3);outline:none}
+
+
+/* Viditelný stav aktivní simulace testovací identity. */
+.simulation-banner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:5px 12px;font-size:.82rem;background:#fff3cd;color:#594500;border-bottom:1px solid #e8d58a}
+.simulation-banner a{color:inherit;font-weight:600;text-decoration:underline}
