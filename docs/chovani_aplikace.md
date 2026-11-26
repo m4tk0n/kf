@@ -95,32 +95,23 @@ Menu má přesně dva způsoby zavření:
 1. **Výběr položky v uživatelském menu.** Vybraná položka provede svou běžnou akci a menu se zavře.
 2. **Kliknutí mimo uživatelské menu.** Kliknutí slouží pouze k zavření menu.
 
-### 2.1 Kliknutí mimo menu nesmí nijak interagovat s žádným prvkem stránky
+### Kliknutí mimo menu
 
-Pokud je menu otevřené a uživatel klikne kamkoliv mimo něj, jediným výsledkem je zavření menu.
-
-Toto kliknutí nesmí žádným způsobem interagovat s prvkem, na který uživatel klikl, ani s jinou částí stránky. Nesmí například:
-- aktivovat odkaz, tlačítko ani jiný ovládací prvek,
-- otevřít výběr nebo nabídku ovládacího prvku,
-- změnit hodnotu nebo stav prvku či aplikace,
-- odeslat formulář,
-- změnit URL nebo provést navigaci,
-- spustit obsluhu události ani výchozí akci prohlížeče.
-
-Pravidlo platí pro každý prvek a každé místo mimo menu na všech stránkách aplikace, bez výjimek. Kliknutí mimo menu se nesmí „propadnout“ k prvku pod místem kliknutí.
+Pokud je menu otevřené a uživatel klikne kamkoliv mimo něj, jediným výsledkem je zavření menu. Kliknutí nesmí aktivovat ani vizuálně stisknout žádný prvek pod místem kliknutí, změnit jeho hodnotu, spustit jeho obsluhu, odeslat formulář ani vyvolat navigaci.
 
 Chce-li uživatel po zavření menu použít jiný prvek stránky, musí na něj kliknout znovu, samostatnou novou interakcí.
 
-### Implementační požadavek
+### Implementace
 
-Kliknutí mimo otevřené menu se zachytí ve fázi capture už při `pointerdown`, ještě před doručením události cílovému prvku. Zruší se výchozí akce a zastaví šíření události. Následný `click` se rovněž zablokuje, aby se po zavření menu neaktivoval prvek pod ním. Záložní zpracování `click` pokrývá i kliknutí vyvolaná klávesnicí nebo skriptem.
+Při otevření menu se do hlavičky vloží jediná průhledná překryvná vrstva. Ta pokrývá celou obrazovku, ale samotné uživatelské menu zůstává nad ní. Ostatní prvky hlavičky i obsah stránky jsou pod vrstvou, takže kliknutí nemůže dosáhnout na žádný z nich. Kliknutí na vrstvu menu zavře a vrstvu odstraní.
 
-Interakce uvnitř menu zůstávají funkční.
+Vrstva se vytvoří pouze po otevření menu a odstraní se při jeho zavření. Nepřidávají se globální zachytávače událostí ani další podmínky na jednotlivé prvky.
 
 Dotčené soubory:
-- `templates/layout.php` – společná struktura hlavičky a uživatelského menu na stránkách aplikace.
-- `assets/js/menu.js` – zobrazení a obsluha překryvné vrstvy, která zachytí veškeré kliknutí mimo menu.
-- `assets/css/app.css` – umístění překryvné vrstvy pod menu a nad celou stránku.
+- `templates/layout.php` – společná hlavička a uživatelské menu.
+- `assets/js/menu.js` – vytvoření a odstranění jediné překryvné vrstvy.
+- `assets/css/app.css` – vrstvení překryvu pod menu a nad ostatními prvky stránky.
+
 
 ## 5. Pravidlo průběžné dokumentace
 
