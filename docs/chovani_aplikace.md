@@ -215,3 +215,11 @@ Přihlášený uživatel má trvalé výchozí nastavení filtrů uložené v JS
 
 Podrobná specifikace včetně pravidel pro oddělení účtů, navigaci, reload a návaznost seznamu, pageru a kalendáře: [docs/004_filtry.md](004_filtry.md).
 .
+
+## Přidávání akcí a schvalování
+
+**Stav: implementováno; základní průchod formulářem, vložením do pending a schválením byl uživatelem prakticky ověřen.**
+
+Podrobný popis formuláře, draftu, náhledu, obrázků, odeslání, fronty `/my`, schvalování `/review`, úklidu souborů a testovacích scénářů je v [docs/007_pridavani_akci.md](007_pridavani_akci.md).
+
+**Pozor na nevyřešený rozpor role 2:** konfigurace definuje `role=2` jako `trusted` a aktuální kód jí přiznává přímé zveřejnění. Uživatel však při testu uvedl, že účet označený jako role 2 vytvořil návrh v pending. Tento rozdíl je zaznamenán v samostatném dokumentu a musí se ověřit na živém serveru; nesmí se považovat za potvrzené pravidlo.
