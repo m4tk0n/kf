@@ -3,21 +3,28 @@
 declare(strict_types=1);
 /** @var array $old @var string[] $errors @var array $cities @var array $venues @var array $bands @var string $imgUrl @var int $maxBands */
 $types = array_values((array)cfg('enums.event_type'));
+$formAction = (string)($formAction ?? url('event/new'));
+$pageTitle = (string)($pageTitle ?? t('event.new.title'));
+$submitLabel = (string)($submitLabel ?? t('event.btn.preview'));
+$backUrl = (string)($backUrl ?? '');
+$formId = (string)($formId ?? '');
 $byCountry = [];
 foreach ($cities as $c) {
     $byCountry[(string)$c['country']][] = $c;
 }
 ?>
 <section class="card narrow">
-  <h1><?= e(t('event.new.title')) ?></h1>
+  <?php if ($backUrl !== ''): ?><p class="back"><a href="<?= e($backUrl) ?>">← <?= e(t('common.back')) ?></a></p><?php endif; ?>
+  <h1><?= e($pageTitle) ?></h1>
   <?php if ($errors): ?>
     <ul class="warn">
       <?php foreach (array_unique($errors) as $code): ?><li><?= e(t('event.err.' . $code)) ?></li><?php endforeach; ?>
     </ul>
     <?php if ($imgUrl === '' && (string)$old['image_url'] === ''): ?><p class="muted"><?= e(t('event.err.reselect')) ?></p><?php endif; ?>
   <?php endif; ?>
-  <form method="post" action="<?= e(url('event/new')) ?>" enctype="multipart/form-data" class="stack">
+  <form method="post" action="<?= e($formAction) ?>" enctype="multipart/form-data" class="stack"<?= $formId !== '' ? ' id="' . e($formId) . '"' : '' ?>>
     <?= csrf_field() ?>
+    <?php if (str_contains($formAction, 'review/edit')): ?><input type="hidden" name="id" value="<?= (int)($_GET['id'] ?? 0) ?>"><?php endif; ?>
     <label class="event-name-field"><?= e(t('event.f.name')) ?>
       <input type="text" name="name" value="<?= e((string)$old['name']) ?>" maxlength="160" required
         autocomplete="off" aria-autocomplete="list" aria-controls="event-name-suggestions"
@@ -96,7 +103,7 @@ foreach ($cities as $c) {
       <label class="check"><input type="checkbox" name="remove_image" value="1"> <?= e(t('event.f.image_remove')) ?></label>
     <?php endif; ?>
     <img class="event-preview" data-event-preview alt="" src="<?= e($imgUrl) ?>"<?= $imgUrl === '' ? ' hidden' : '' ?>>
-    <button type="submit" class="btn"><?= e(t('event.btn.preview')) ?></button>
+    <button type="submit" class="btn"><?= e($submitLabel) ?></button>
   </form>
 </section>
 <script src="<?= e(asset('js/event-form.js')) ?>" defer></script>
