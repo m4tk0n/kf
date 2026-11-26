@@ -30,6 +30,12 @@ function kf_dispatch(): void
         'quick-filters' => 'route_quick_filters',
         'admin/users' => 'route_admin_users',
         'admin/settings' => 'route_admin_settings',
+        'event/new' => 'route_event_new',
+        'event/preview' => 'route_event_preview',
+        'event/draft-image' => 'route_event_draft_image',
+        'pending/image' => 'route_pending_image',
+        'my' => 'route_my',
+        'review' => 'route_review',
     ];
     $posts = [
         'logout' => 'route_logout',
@@ -41,6 +47,11 @@ function kf_dispatch(): void
         'filters' => 'route_filters_post',
         'fav' => 'route_fav',
         'admin/users' => 'route_admin_users_post',
+        'event/new' => 'route_event_new_post',
+        'event/submit' => 'route_event_submit',
+        'event/cancel' => 'route_event_cancel',
+        'my/delete' => 'route_my_delete',
+        'review' => 'route_review_post',
     ];
 
     $handler = null;
