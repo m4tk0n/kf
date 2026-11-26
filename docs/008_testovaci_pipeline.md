@@ -13,9 +13,10 @@ Databázové tabulky se vytvářejí z aktuálních SQL souborů v `install/sql/
 1. Vytvoří se izolovaní uživatelé s rolemi 1, 2, 3 a 4 a testovací město, klub a kapela.
 2. Pro roli 1 se vytvoří přihlášená session.
 3. Připraví se kompletní data akce, draft a skutečný WebP obrázek.
-4. Skutečné GET routy `route_event_new()` a `route_event_preview()` vykreslí formulář s uloženými hodnotami, chráněným náhledem obrázku a detail akce před odesláním.\n5. Testovací POST požadavky ověřují také CSRF token a kontrolu Origin; skutečná routa `route_event_submit()` odešle návrh do `pending`.
-5. Ověří se DB záznam, JSON návrhu, obrázek, vyčištění draftu a dočasného obrázku.
-6. Skutečná routa `route_review_post()` schválí návrh pod rolí 4.
+4. Skutečné GET routy `route_event_new()` a `route_event_preview()` vykreslí formulář s uloženými hodnotami, chráněným náhledem obrázku a detail akce před odesláním.
+5. Testovací POST požadavky ověřují také CSRF token a kontrolu Origin; skutečná routa `route_event_submit()` odešle návrh do `pending`.
+6. Ověří se DB záznam, JSON návrhu, obrázek, vyčištění draftu a dočasného obrázku.
+7. Skutečná routa `route_review_post()` schválí návrh pod rolí 4.
 8. Ověří se publikovaný záznam v `events`, vazba v `event_bands`, JSON detailu, obě WebP varianty, odstranění pending souborů a zvýšení `approved_count`.
 9. Samostatně se skutečnou routou otestuje přímé zveřejnění role 2 podle aktuálního oprávnění `publish_direct`.
 10. Otestuje se zamítnutí návrhu a smazání vlastního čekajícího návrhu přes `/my`.
@@ -48,4 +49,6 @@ php tests/integration/events_workflow.php
 ```
 
 Skript při spuštění maže a znovu vytváří tabulky v databázi `kf_test`. Nikdy jej nespouštěj proti produkční databázi.
-\n\nAdresář `tests/` je při FTP nasazení výslovně vyloučen. Deploy workflow zároveň odstraní případnou dřívější kopii `tests/` ze serveru, aby testovací spouštěcí skripty nebyly veřejnou součástí webu.\n
+
+
+Adresář `tests/` je při FTP nasazení výslovně vyloučen. Deploy workflow zároveň odstraní případnou dřívější kopii `tests/` ze serveru, aby testovací spouštěcí skripty nebyly veřejnou součástí webu.
