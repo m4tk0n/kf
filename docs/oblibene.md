@@ -95,3 +95,4 @@ Globální hvězdička v horní navigaci zapíná nebo vypíná filtrování akt
 - Session ani cookie nesmí být jediným úložištěm oblíbených položek.
 - Stav hvězdiček v detailech i globální filtrování vychází ze stejných databázových tabulek.
 - Přidávání, odebírání a filtrování musí fungovat konzistentně pro všechny tři typy entit.
+.
