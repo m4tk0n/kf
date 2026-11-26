@@ -57,3 +57,4 @@ Do schválení těchto bodů zůstává v platnosti pouze aktuální neaktivní 
 
 - `templates/layout.php` – zobrazení statické ikony zvonku v hlavičce.
 - `assets/css/app.css` – vzhled ikony.
+.
