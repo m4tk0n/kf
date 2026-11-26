@@ -152,7 +152,8 @@ check(str_contains($previewHtml, 'Festival - test event approval') && str_contai
 
 $submitOutput = run_route('event_submit', $userToken);
 $pending = q('SELECT id, title FROM ' . tbl('pending') . ' WHERE created_by = ? AND date_from = ?', [$users['user'], $eventDate])->fetch();
-if ($pending === false) {
+if ($pending === false || ($pending['title'] ?? '') !== 'Festival - test event approval') {
+    echo "DEBUG pending row: " . var_export($pending, true) . "\n";
     echo "DEBUG event_submit output: " . substr($submitOutput, 0, 1200) . "\n";
     foreach (['data/error.log', 'data/security.log'] as $debugLog) {
         if (is_file(KF_ROOT . '/' . $debugLog)) {
