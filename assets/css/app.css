@@ -319,3 +319,17 @@ input[type="submit"].flash-success{
 
 /* Informativní počet akcí probíhajících dnes; bez rozbalování a seznamu */
 .current-events-info{margin:0 0 12px;padding:8px 11px;border:1px solid rgba(139,163,192,.17);border-radius:9px;background:rgba(21,28,40,.65);color:var(--muted);font-size:.86rem;font-weight:650}
+
+
+/* Neprůhledná jen z hlediska událostí: zachytí kliknutí mimo otevřené menu. */
+.head .umenu-outside-blocker{
+  position:fixed;
+  inset:0;
+  z-index:6;
+  background:transparent;
+  touch-action: manipulation;
+}
+.head .umenu{
+  position:relative;
+  z-index:7;
+}
