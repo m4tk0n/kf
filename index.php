@@ -40,6 +40,7 @@ function kf_dispatch(): void
         'pending/image' => 'route_pending_image',
         'my' => 'route_my',
         'review' => 'route_review',
+        'review/edit' => 'route_review_edit',
     ];
     $posts = [
         'logout' => 'route_logout',
@@ -57,6 +58,7 @@ function kf_dispatch(): void
         'event/cancel' => 'route_event_cancel',
         'my/delete' => 'route_my_delete',
         'review' => 'route_review_post',
+        'review/edit' => 'route_review_edit_post',
     ];
 
     $handler = null;
