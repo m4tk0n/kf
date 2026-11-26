@@ -2,6 +2,8 @@
 // debug/debug.php
 declare(strict_types=1);
 
+require_once KF_ROOT . '/debug/test_profiles.php';
+
 function diagnostics_state(int $userId): bool
 {
     $profile = user_profile_get($userId);
