@@ -30,13 +30,20 @@
     }
   });
 
-  // Našeptávač názvů zveřejněných akcí (výběr pouze doplní text; neváže akce k sobě).
-  var nameInput = document.querySelector('[data-event-name-input]');
-  var suggestions = document.querySelector('[data-event-name-suggestions]');
-  if (nameInput && suggestions) {
+  // Společné ovládání našeptávačů ve formuláři (název akce a klub/místo).
+  Array.prototype.forEach.call(document.querySelectorAll('[data-autocomplete-input]'), function (nameInput) {
+    var suggestionsId = nameInput.getAttribute('data-autocomplete-suggestions-target');
+    var suggestions = suggestionsId
+      ? document.getElementById(suggestionsId)
+      : nameInput.parentNode.querySelector('[data-autocomplete-suggestions]');
+    if (!suggestions) return;
+
     var suggestTimer = 0;
     var requestNumber = 0;
     var minSuggestChars = parseInt(nameInput.getAttribute('data-suggest-min') || '2', 10);
+    var venueId = nameInput.parentNode.querySelector('[data-venue-id]');
+    var citySelect = document.querySelector('select[name="city_id"]');
+
     function closeSuggestions() {
       suggestions.hidden = true;
       while (suggestions.firstChild) suggestions.removeChild(suggestions.firstChild);
@@ -55,14 +62,21 @@
       }).then(function (data) {
         if (currentRequest !== requestNumber || term !== nameInput.value.trim()) return;
         while (suggestions.firstChild) suggestions.removeChild(suggestions.firstChild);
-        (Array.isArray(data.items) ? data.items : []).forEach(function (value) {
+        (Array.isArray(data.items) ? data.items : []).forEach(function (item) {
+          var isVenue = nameInput.hasAttribute('data-venue-autocomplete');
+          var value = isVenue && item && typeof item === 'object' ? item.name : item;
+          if (typeof value !== 'string' || value === '') return;
           var option = document.createElement('button');
           option.type = 'button';
           option.className = 'autocomplete-option';
           option.setAttribute('role', 'option');
-          option.textContent = value;
+          option.textContent = isVenue && item.city ? value + ' (' + item.city + ')' : value;
           option.addEventListener('click', function () {
             nameInput.value = value;
+            if (isVenue && venueId) {
+              venueId.value = String(item.id || 0);
+              if (citySelect && item.city_id) citySelect.value = String(item.city_id);
+            }
             closeSuggestions();
             nameInput.focus();
           });
@@ -74,6 +88,7 @@
       });
     }
     nameInput.addEventListener('input', function () {
+      if (venueId) venueId.value = '0';
       window.clearTimeout(suggestTimer);
       suggestTimer = window.setTimeout(loadSuggestions, 180);
     });
@@ -83,7 +98,7 @@
     document.addEventListener('click', function (event) {
       if (!event.target.closest || !event.target.closest('.event-name-field')) closeSuggestions();
     });
-  }
+  });
 
   // Řádky kapel: zobrazí se vyplněné + jeden prázdný, tlačítko "+" přidá další.
   var rows = Array.prototype.slice.call(document.querySelectorAll('[data-band-row]'));
