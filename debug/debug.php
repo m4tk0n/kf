@@ -13,27 +13,28 @@ function diagnostics_state(int $userId): bool
 /** Diagnostiku smí používat jen hlavní účet (ID 2). */
 function diagnostics_allowed(?array $u): bool
 {
-    return $u !== null && (int)($u['id'] ?? 0) === 2;
+    $real = auth_real_resolve();
+    return $real !== null && (int)($real['id'] ?? 0) === 2;
 }
 
 function route_diagnostics(): never
 {
-    $u = require_login();
-    if (!diagnostics_allowed($u)) {
+    require_login();
+    if (!diagnostics_allowed(null)) {
         security_log('forbidden', ['action' => 'diagnostics']);
         abort(403, t('error.403'));
     }
-    page(t('diagnostics.title'), 'diagnostics', ['active' => diagnostics_state((int)$u['id'])]);
+    page(t('diagnostics.title'), 'diagnostics', ['active' => diagnostics_state(2)]);
 }
 
 function route_diagnostics_post(): never
 {
-    $u = require_login();
-    if (!diagnostics_allowed($u)) {
+    require_login();
+    if (!diagnostics_allowed(null)) {
         security_log('forbidden', ['action' => 'diagnostics']);
         abort(403, t('error.403'));
     }
-    json_locked(user_profile_rel((int)$u['id']), static function (array &$data): void {
+    json_locked(user_profile_rel(2), static function (array &$data): void {
         if (($data['diagnostika'] ?? false) === true) {
             unset($data['diagnostika']);
         } else {
@@ -73,7 +74,7 @@ function kf_debug_enabled(?array $user): bool
         return false;
     }
 
-    return (user_profile_get((int)$user['id'])['diagnostika'] ?? false) === true;
+    return (user_profile_get(2)['diagnostika'] ?? false) === true;
 }
 
 /** Načte výhradně oddělené prostředky Developer Tools. JS bez defer: zachytí i chyby a požadavky ostatních skriptů. */
@@ -102,6 +103,7 @@ function kf_debug_render(): void
         'mem-limit' => (string)ini_get('memory_limit'),
         'files' => (string)count(get_included_files()),
         'user-id' => (string)(int)($u['id'] ?? 0),
+        'real-user-id' => (string)(int)(auth_real_resolve()['id'] ?? 0),
         'user-role' => (string)(int)($u['role'] ?? 0),
         'lang' => current_lang(),
         'env' => (string)env('APP_ENV', ''),
@@ -131,6 +133,7 @@ function kf_debug_render(): void
     echo '<section id="kf-debug-panel" aria-label="K&amp;F Developer Tools"' . $data . '>'
         . '<header class="kf-debug-header">'
         . '<strong class="kf-debug-brand">K&amp;F DEVTOOLS</strong>'
+        . '<a href="' . e(url('debug/users')) . '" class="kf-debug-profile-link">Profily</a>'
         . '<span class="kf-debug-summary" data-debug-summary>Inicializace…</span>'
         . '<span class="kf-debug-spacer"></span>'
         . '<button type="button" data-debug-pause aria-pressed="false" title="Pozastavit zaznamenávání" aria-label="Pozastavit zaznamenávání">❚❚</button>'
