@@ -172,6 +172,7 @@ function kf_event_pending_update(int $id, array $v, ?GdImage $newImage, bool $re
             $hasImage = $oldImage !== null;
             if ($newImage !== null) { kf_img_write($newImage, $base, ['l']); $hasImage = true; }
             elseif ($removeImage) { @unlink($base . '_l.webp'); $hasImage = false; }
+            unset($v['image_url']);
             $data['kind'] = 'event';
             $data['values'] = $v;
             $data['flyer'] = $hasImage;
