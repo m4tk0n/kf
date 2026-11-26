@@ -22,7 +22,7 @@ function require_fresh(string $backPath): void
     if (auth_is_fresh()) {
         return;
     }
-    $u = auth_resolve();
+    $u = auth_real_resolve();
     $prov = $u !== null ? oauth_provider_name((int)$u['provider']) : null;
     if ($prov === null) {
         abort(403, t('error.403'));
@@ -328,8 +328,9 @@ function route_admin_settings(): never
 /** Databázové nástroje jsou dostupné výhradně nejvyššímu administrátorovi (user ID 2). */
 function route_db(): never
 {
-    $u = require_login();
-    if ((int)$u['id'] !== 2) {
+    require_login();
+    $u = auth_real_resolve();
+    if ($u === null || (int)$u['id'] !== 2) {
         security_log('forbidden', ['action' => 'db']);
         abort(403, 'Přístup odepřen');
     }
