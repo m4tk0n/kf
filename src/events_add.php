@@ -564,10 +564,15 @@ function route_venue_name_suggest(): never
     $min = max(1, (int)cfg('paging.autocomplete_venue_min_chars', 3));
     $limit = max(1, min(30, (int)cfg('paging.autocomplete_limit', 10)));
     $search = kf_text_normalize(mb_substr($term, 0, 100));
+    $tokens = preg_split('/[\\s\\-–—‑]+/u', $search, -1, PREG_SPLIT_NO_EMPTY) ?: [];
+    $pattern = '';
+    foreach ($tokens as $token) {
+        $pattern .= addcslashes($token, '%_\\\\') . '%';
+    }
 
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-Control: no-store');
-    if (mb_strlen($search) < $min) {
+    if (mb_strlen($search) < $min || $pattern === '') {
         echo json_encode(['items' => []], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         exit;
     }
@@ -578,7 +583,7 @@ function route_venue_name_suggest(): never
          JOIN " . tbl('countries') . " co ON co.id = c.country_id
          WHERE LOWER(REPLACE(REPLACE(REPLACE(v.name, '–', '-'), '—', '-'), '‑', '-')) COLLATE utf8mb4_unicode_ci LIKE ?
          ORDER BY v.name COLLATE utf8mb4_unicode_ci, v.name LIMIT " . $limit,
-        [addcslashes($search, '%_\\\\') . '%']
+        [$pattern]
     )->fetchAll();
 
     echo json_encode([
