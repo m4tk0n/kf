@@ -258,3 +258,15 @@ Typografické pomlčky (`–`, `—`, `‑`, `−`) se převádějí na běžný
 ### Společná normalizace textových vstupů
 
 Normalizace není specifická pro názvy akcí. Pomocná funkce `kf_text_normalize()` v `src/core.php` převádí typografické pomlčky (`–`, `—`, `‑`, `−`) na běžný spojovník (`-`). `assets/js/app.js` ji odpovídajícím způsobem provádí při každé změně textového pole, včetně vložení ze schránky. Databázová funkce `q()` v `src/db.php` normalizuje všechny textové parametry před provedením dotazu, takže pravidlo platí centrálně pro zápisy do všech tabulek i pro porovnávací dotazy. Ostatní znaky a interpunkce se nemění. Integrační test ověřuje centrální normalizaci při zápisu obecného textu do databáze.
+
+
+### Našeptávač klubu/místa ve formuláři akce
+
+Výběr klubu/místa v /event/new je textové pole s našeptávačem:
+- hledání začíná po zadání 3 znaků; limit výsledků používá společné paging.autocomplete_limit,
+- výsledky obsahují pouze již zveřejněné kluby/místa z tabulky venues,
+- u názvu se zobrazuje také město, aby šly rozlišit kluby se stejným názvem,
+- kliknutí uloží interní ID klubu do skrytého pole venue_id a doplní město do výběru města,
+- při další změně textu se vybrané ID zruší; ručně napsaný název proto nevytvoří falešnou vazbu na existující klub,
+- endpoint venue/name-suggest je dostupný přihlášeným uživatelům s oprávněním submit a vrací JSON bez cache,
+- minimální délka 3 znaků je nastavena samostatně v paging.autocomplete_venue_min_chars; našeptávač názvu akce zůstává beze změny.
