@@ -153,6 +153,14 @@ function kf_draft_clear(int $uid): void
 
 // ---------- hodnoty akce: čištění, validace ----------
 
+/** Kanonizuje název akce; je idempotentní a zachovává běžnou interpunkci včetně spojovníků. */
+function kf_event_name_normalize(string $name): string
+{
+    $name = kf_text_normalize($name);
+    $name = preg_replace('/\\s+/u', ' ', trim($name)) ?? trim($name);
+    return mb_substr($name, 0, 160);
+}
+
 /** Z libovolného pole (POST, draft, pending JSON) vytvoří kanonickou, otypovanou a oříznutou podobu. */
 function kf_event_clean(array $r): array
 {
@@ -176,7 +184,7 @@ function kf_event_clean(array $r): array
         $bands[] = ['id' => $id, 'time' => is_string($b['time'] ?? null) ? mb_substr(trim($b['time']), 0, 5) : ''];
     }
     return [
-        'name' => mb_substr(trim(kf_text_normalize(is_string($r['name'] ?? null) ? $r['name'] : '')), 0, 160), 'type' => $i('type'),
+        'name' => kf_event_name_normalize(is_string($r['name'] ?? null) ? $r['name'] : ''), 'type' => $i('type'),
         'date_from' => $s('date_from', 10), 'date_to' => $s('date_to', 10), 'time_start' => $s('time_start', 5),
         'city_id' => $i('city_id'), 'venue_id' => $i('venue_id'),
         'description' => $s('description', 5000), 'www' => $s('www', 300),
