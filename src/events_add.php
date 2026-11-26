@@ -547,6 +547,42 @@ function route_event_cancel(): never
 }
 
 
+/** JSON našeptávač již zveřejněných klubů a míst pro formulář akce. */
+function route_venue_name_suggest(): never
+{
+    guard('submit');
+    $term = is_string($_GET['q'] ?? null) ? trim($_GET['q']) : '';
+    $min = max(1, (int)cfg('paging.autocomplete_venue_min_chars', 3));
+    $limit = max(1, min(30, (int)cfg('paging.autocomplete_limit', 10)));
+    $ascii = kf_ascii(mb_substr($term, 0, 100));
+    $ascii = strtr($ascii, ['–' => '-', '—' => '-', '‑' => '-', '−' => '-']);
+
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: no-store');
+    if (mb_strlen($ascii) < $min) {
+        echo json_encode(['items' => []], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        exit;
+    }
+
+    $rows = q(
+        'SELECT v.id, v.name, c.id AS city_id, c.name AS city FROM ' . tbl('venues') . ' v
+         JOIN ' . tbl('cities') . ' c ON c.id = v.city_id
+         WHERE LOCATE(?, LOWER(REPLACE(REPLACE(REPLACE(v.name_ascii, ?, ?), ?, ?), ?, ?))) = 1
+         ORDER BY LOWER(v.name_ascii), v.name LIMIT ' . $limit,
+        [strtolower($ascii), '–', '-', '—', '-', '‑', '-']
+    )->fetchAll();
+
+    echo json_encode([
+        'items' => array_map(static fn(array $row): array => [
+            'id' => (int)$row['id'],
+            'name' => (string)$row['name'],
+            'city_id' => (int)$row['city_id'],
+            'city' => (string)$row['city'],
+        ], $rows),
+    ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    exit;
+}
+
 /** JSON našeptávač názvů již zveřejněných akcí. */
 function route_event_name_suggest(): never
 {
