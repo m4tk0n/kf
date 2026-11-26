@@ -15,7 +15,7 @@ Limity hostingu a hybridní architektura DB + JSON (kritické):
   - databáze max 200 MB,
   - počet souborů (inodes) max 100 000,
   - prostor na disku 15 GB,
-- V databázi se ukládají pouze nejnutnější data potřebná pro výpisy, filtrování, vyhledávání, řazení a vazby (ID, slug, název, datum/čas, cizí klíče na město/klub/žánr/kapelu, role, stavy).
+- V databázi se ukládají pouze nejnutnější data potřebná pro výpisy, filtrování, vyhledávání, řazení a vazby (ID, název, datum/čas, cizí klíče na město/klub/žánr/kapelu, role, stavy). Čitelné slugy detailů se generují až při sestavení URL a v databázi se neukládají.
 - Pro kalendář a akce se používá vždy jedna společná tabulka (nikdy samostatná tabulka pro každý letopočet), se správným indexem na datum pro rychlé přecházení mezi roky/obdobími i vícedenní akce.
 - Veškeré detailní texty a doplňková metadata se ukládají do JSON souborů v `data/` rozdělených do `bucketů` (číslo podsložky vypočtené celočíselným dělením `id` děličem z konfigurace, např. `floor(id / cfg('img.folder_divisor'))`, např. `data/events/0/15.json`, `data/bands/0/42.json`, `data/venues/0/8.json`):
   - V JSONu detailu jsou uloženy: dlouhý popis, www, kontakty (e-mail, telefon), přesná adresa a GPS souřadnice klubu, a příznak velkého obrázku pro detail (`flyer_l` / `logo_l` / `img_l`).
@@ -32,7 +32,7 @@ Limity hostingu a hybridní architektura DB + JSON (kritické):
   - `countries`: `id TINYINT UNSIGNED`, `iso2 CHAR(2)` (ASCII, unikátní), `iso3 CHAR(3)` (ASCII, unikátní), `name_cs`, `name_en`. Součástí je `install/sql/seed/20_countries.sql` s kompletním ISO 3166-1 (cs + en). Název sloupce se skládá jako `name_` + jazyk ověřený proti `cfg('app.supported_langs')`, nikdy ze surového vstupu.
   - `cities`: `id SMALLINT UNSIGNED`, `country_id` (FK na `countries.id`), `name`, `name_ascii`.
   - `events`, `bands` a `venues` nemají sloupec státu, mají pouze `city_id` (FK na `cities.id`); stát ve výpisech a ve filtrech se získává JOINem `cities` -> `countries`.
-  - `name_ascii` (název bez diakritiky, malými písmeny) u `events`, `bands`, `venues`, `cities` a `genres` s indexem pro prefixové vyhledávání (`LIKE 'abc%'`) v našeptávači.
+  - `name_ascii` (název bez diakritiky, malými písmeny) se ponechává pouze u referenčních tabulek `cities` a `genres`; tabulky `events`, `bands` a `venues` ukládají pouze `name`. Vyhledávání v těchto třech tabulkách používá přímo `name` s kolací bez rozlišování diakritiky.
   - Vazební tabulka `event_bands` (`event_id`, `band_id`, pořadí, `TIME NULL` = čas vystoupení) pro seznam kapel u akce.
   - `users`: `id`, `provider` (0 = systémový účet, 1 = Google, 2 = Facebook; `cfg('enums.oauth_provider')`) + `provider_uid` (unikátní dvojice, podle ní se uživatel pozná; nikdy podle e-mailu), `display_name`, `role`, `user_state`, `approved_count` (počítadlo schválených příspěvků pro povýšení na `trusted`), `created_at`, `last_login_at`. E-mail, avatar, jazyk a uložené filtry jsou v JSON profilu v `data/users/`. Řádek s `id = cfg('users.ai_user_id')` (1) je systémový účet AI (`provider = 0`), který zakládá instalátor: nelze se na něj přihlásit (nevzniká pro něj session), nelze ho smazat, suspendovat ani mu změnit roli a nikdy se nepovyšuje na `trusted`.
   - `sessions`: `token_hash BINARY(32)` (primární klíč, SHA-256 náhodného tokenu z cookie), `user_id` (FK na `users`, `ON DELETE CASCADE`), `ua_hash`, `created_at`, `last_seen_at`, `expires_at` (unixové časy, `INT UNSIGNED`), indexy na `user_id` a `expires_at`.
