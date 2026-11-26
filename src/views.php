@@ -55,6 +55,7 @@ function menu_items(?array $user): array
     $role = (int)$user['role'];
     $items = [];
     if ((int)$user['id'] === 2) {
+        $items[] = ['label' => t('menu.db'), 'href' => url('db')];
         $items[] = ['label' => t('menu.diagnostics'), 'href' => url('diagnostics')];
     }
     $items = array_merge($items, [
