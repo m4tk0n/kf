@@ -131,7 +131,8 @@ function create_draft_with_image(int $userId, array $values): string
 
 $eventDate = date('Y-m-d', strtotime('+30 days'));
 $userToken = session_token_for($users['user']);
-$userValues = event_values('Festival test event approval', $eventDate, $cityId, $venueId, $bandId);
+$userValues = event_values('Festival – test event approval', $eventDate, $cityId, $venueId, $bandId);
+check($userValues['name'] === 'Festival - test event approval', 'event-name input normalizes typographic dashes before draft creation');
 check(kf_event_validate($userValues) === [], 'validates complete event form data');
 $imageName = create_draft_with_image($users['user'], $userValues);
 $draftImage = kf_draft_image_path($users['user'], $imageName);
@@ -142,28 +143,29 @@ $previewHtml = run_route('event_preview', $userToken);
 check(str_contains($previewHtml, 'Festival test event approval') && str_contains($previewHtml, 'Test klub'), 'event preview route renders the event detail before submission');
 
 run_route('event_submit', $userToken);
-$pending = q('SELECT id FROM ' . tbl('pending') . ' WHERE created_by = ? AND title = ?', [$users['user'], 'Festival test event approval'])->fetchColumn();
-check($pending !== false, 'ordinary role 1 submission creates a pending record');
-$pendingId = (int)$pending;
+$pending = q('SELECT id, title FROM ' . tbl('pending') . ' WHERE created_by = ? AND date_from = ?', [$users['user'], $eventDate])->fetch();
+check($pending !== false && $pending['title'] === 'Festival - test event approval', 'pending database title stores a normal hyphen');
+$pendingId = (int)$pending['id'];
 $pendingData = kf_pending_get($pendingId);
+check(($pendingData['data']['values']['name'] ?? '') === 'Festival - test event approval', 'pending JSON stores a normal hyphen');
 check(($pendingData['data']['kind'] ?? '') === 'event', 'pending JSON contains the event payload');
 check(is_file(kf_pending_image_path($pendingId) ?? ''), 'pending image is copied beside pending JSON');
 check(kf_draft_get($users['user']) === null && !is_file((string)$draftImage), 'successful submission clears draft and temporary image');
 
 $reviewToken = session_token_for($users['admin']);
 run_route('review_approve', $reviewToken, $pendingId);
-$publishedId = (int)q('SELECT id FROM ' . tbl('events') . ' WHERE name = ?', ['Festival test event approval'])->fetchColumn();
+$publishedId = (int)q('SELECT id FROM ' . tbl('events') . ' WHERE name = ?', ['Festival - test event approval'])->fetchColumn();
 check($publishedId > 0, 'admin approval publishes the event into events');
 $suggestJson = run_route('event_name_suggest', $userToken, null, 'festival test');
 $suggestData = json_decode($suggestJson, true);
-check(is_array($suggestData) && in_array('Festival test event approval', $suggestData['items'] ?? [], true), 'event-name autocomplete returns a matching published event');
+check(is_array($suggestData) && in_array('Festival - test event approval', $suggestData['items'] ?? [], true), 'event-name autocomplete returns a matching published event');
 $lowerSuggest = run_route('event_name_suggest', $userToken, null, 'fest');
 $lowerData = json_decode($lowerSuggest, true);
-check(is_array($lowerData) && in_array('Festival test event approval', $lowerData['items'] ?? [], true), 'event-name autocomplete matches uppercase stored names from a lowercase query');
+check(is_array($lowerData) && in_array('Festival - test event approval', $lowerData['items'] ?? [], true), 'event-name autocomplete matches uppercase stored names from a lowercase query');
 q('UPDATE ' . tbl('events') . ' SET name_ascii = ? WHERE id = ?', ['Festival – test event approval', $publishedId]);
 $punctuationSuggest = run_route('event_name_suggest', $userToken, null, 'festival -');
 $punctuationData = json_decode($punctuationSuggest, true);
-check(is_array($punctuationData) && in_array('Festival test event approval', $punctuationData['items'] ?? [], true), 'event-name autocomplete matches a hyphen query against an en dash in the stored name');
+check(is_array($punctuationData) && in_array('Festival - test event approval', $punctuationData['items'] ?? [], true), 'event-name autocomplete matches a hyphen query against an en dash in the stored name');
 $shortSuggest = run_route('event_name_suggest', $userToken, null, 'K');
 $shortData = json_decode($shortSuggest, true);
 check(is_array($shortData) && ($shortData['items'] ?? []) === [], 'event-name autocomplete returns no results below the configured minimum length');
