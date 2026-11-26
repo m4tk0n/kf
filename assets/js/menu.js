@@ -10,6 +10,7 @@
   function removeBlocker() {
     if (blocker && blocker.parentNode) blocker.parentNode.removeChild(blocker);
     blocker = null;
+    head.classList.remove('umenu-blocking');
   }
 
   function closeMenu() {
@@ -43,7 +44,8 @@
       closeMenu();
     });
 
-    head.appendChild(blocker);
+    document.body.appendChild(blocker);
+    head.classList.add('umenu-blocking');
   }
 
   menu.addEventListener('toggle', function () {
