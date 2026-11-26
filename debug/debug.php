@@ -15,6 +15,7 @@ function diagnostics_allowed(?array $u): bool
 {
     $real = auth_real_resolve();
     return $real !== null && (int)($real['id'] ?? 0) === 2
+        && (int)($real['role'] ?? 0) === (int)cfg('enums.role.admin')
         && (int)($real['user_state'] ?? 0) === (int)cfg('enums.user_state.active');
 }
 
