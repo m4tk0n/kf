@@ -281,7 +281,7 @@ return [
     'review.takeover_confirm' => 'Take over the lock from the other moderator?',
     'flash.review_locked' => 'Another moderator is currently reviewing this submission.',
     'flash.review_unlocked' => 'Lock released.',
-    'flash.pending_locked' => 'A moderator is currently reviewing this submission. Please try again later.'
+    'flash.pending_locked' => 'A moderator is currently reviewing this submission. Please try again later.',
     'review.title' => 'Pending review',
     'review.empty' => 'The queue is empty.',
     'review.open' => 'Open',
