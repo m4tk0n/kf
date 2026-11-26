@@ -183,31 +183,62 @@ function route_debug_test_profiles(): never
 
     $rows = debug_test_profiles_rows();
     $selected = debug_test_profiles_selected_id();
-    $labels = [
-        1 => 'User',
-        2 => 'Důvěryhodný',
-        3 => 'Moderátor',
-        4 => 'Administrátor',
+    $english = current_lang() === 'en';
+    $ui = $english ? [
+        'title' => 'Test profiles',
+        'admin' => 'Real administrator (ID 2)',
+        'blocked' => ' – blocked',
+        'missing' => 'Test profiles have not been created. Create them first in the installer.',
+        'invalid' => 'The selected profile is not available.',
+        'description' => 'The real administrator login remains active. The application will use the selected identity and its permissions.',
+        'current' => 'Active identity:',
+        'empty' => 'Test profiles have not been created. Use the separate button in the installer to create them.',
+        'select' => 'Switch identity',
+        'switch' => 'Switch user',
+        'stop' => 'Stop simulation and return to administrator',
+        'back' => 'Back to K&amp;F',
+        'diagnostics' => 'Diagnostics',
+    ] : [
+        'title' => 'Testovací profily',
+        'admin' => 'Skutečný administrátor (ID 2)',
+        'blocked' => ' – blokovaný',
+        'missing' => 'Testovací profily nejsou vytvořené. Nejdříve je vytvoř v instalátoru.',
+        'invalid' => 'Vybraný profil není dostupný.',
+        'description' => 'Skutečné přihlášení administrátora zůstává zachováno. Aplikace bude používat vybranou identitu a její oprávnění.',
+        'current' => 'Aktivní identita:',
+        'empty' => 'Testovací profily nejsou vytvořené. Spusť jejich vytvoření samostatným tlačítkem v instalátoru.',
+        'select' => 'Přepnout identitu',
+        'switch' => 'Přepnout uživatele',
+        'stop' => 'Ukončit simulaci a vrátit administrátora',
+        'back' => 'Zpět do K&amp;F',
+        'diagnostics' => 'Diagnostika',
     ];
-    $options = '<option value="0">Skutečný administrátor (ID 2)</option>';
+    $profileNames = $english ? [
+        'kf_test_user' => 'User',
+        'kf_test_blocked' => 'Blocked user',
+        'kf_test_trusted' => 'Trusted',
+        'kf_test_moderator' => 'Moderator',
+        'kf_test_admin' => 'Administrator',
+    ] : [];
+    $options = '<option value="0">' . e($ui['admin']) . '</option>';
     foreach ($rows as $row) {
         $id = (int)$row['id'];
-        $state = (int)$row['user_state'] === (int)cfg('enums.user_state.suspended') ? ' – blokovaný' : '';
+        $name = $profileNames[(string)$row['provider_uid']] ?? (string)$row['display_name'];
+        $state = (int)$row['user_state'] === (int)cfg('enums.user_state.suspended') ? $ui['blocked'] : '';
         $options .= '<option value="' . $id . '"' . ($selected === $id ? ' selected' : '') . '>'
-            . e((string)$row['display_name'] . ' – ' . ($labels[(int)$row['role']] ?? 'Uživatel') . $state)
-            . '</option>';
+            . e($name . $state) . '</option>';
     }
 
     $message = '';
     if ((string)($_GET['m'] ?? '') === 'missing') {
-        $message = '<p class="warn">Testovací profily nejsou vytvořené. Nejdříve je vytvoř v instalátoru.</p>';
+        $message = '<p class="warn">' . e($ui['missing']) . '</p>';
     } elseif ((string)($_GET['m'] ?? '') === 'invalid') {
-        $message = '<p class="warn">Vybraný profil není dostupný.</p>';
+        $message = '<p class="warn">' . e($ui['invalid']) . '</p>';
     }
-    $current = 'Skutečný administrátor (ID 2)';
+    $current = $ui['admin'];
     foreach ($rows as $row) {
         if ((int)$row['id'] === $selected) {
-            $current = (string)$row['display_name'];
+            $current = $profileNames[(string)$row['provider_uid']] ?? (string)$row['display_name'];
             break;
         }
     }
@@ -215,31 +246,31 @@ function route_debug_test_profiles(): never
     header('Content-Type: text/html; charset=utf-8');
     echo '<!doctype html><html lang="' . e(current_lang()) . '"><head><meta charset="utf-8">'
         . '<meta name="viewport" content="width=device-width,initial-scale=1">'
-        . '<meta name="robots" content="noindex,nofollow"><title>Testovací profily – K&amp;F</title>'
+        . '<meta name="robots" content="noindex,nofollow"><title>' . e($ui['title']) . ' – K&amp;F</title>'
         . '<style>body{margin:0;padding:16px;background:#f4f5f7;color:#20242b;font:16px/1.5 system-ui,sans-serif}'
         . 'main{max-width:560px;margin:8vh auto;background:#fff;border:1px solid #ddd;border-radius:12px;padding:20px}'
         . 'h1{font-size:1.35rem;margin:0 0 8px}p{margin:8px 0 16px}.muted{color:#626b78;font-size:.92rem}'
         . 'select,button{width:100%;min-height:44px;padding:9px 12px;border:1px solid #b9c0ca;border-radius:8px;font:inherit}'
         . 'button{margin-top:10px;background:#185abd;color:#fff;border:0;font-weight:600;cursor:pointer}'
         . '.stop{background:#555}.warn{color:#a33}.links{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;font-size:.92rem}'
-        . 'a{color:#185abd}</style></head><body><main><h1>Testovací profily</h1>'
-        . '<p class="muted">Skutečné přihlášení administrátora zůstává zachováno. Aplikace bude používat vybranou identitu a její oprávnění.</p>'
-        . '<p>Aktivní identita: <strong>' . e($current) . '</strong></p>' . $message;
+        . 'a{color:#185abd}</style></head><body><main><h1>' . e($ui['title']) . '</h1>'
+        . '<p class="muted">' . e($ui['description']) . '</p>'
+        . '<p>' . e($ui['current']) . ' <strong>' . e($current) . '</strong></p>' . $message;
     if (!$rows) {
-        echo '<p class="warn">Testovací profily nejsou vytvořené. Spusť jejich vytvoření samostatným tlačítkem v instalátoru.</p>';
+        echo '<p class="warn">' . e($ui['empty']) . '</p>';
     } else {
         echo '<form method="post" action="' . e(url('debug/users')) . '">'
             . csrf_field() . '<input type="hidden" name="action" value="switch">'
-            . '<label for="profile">Přepnout identitu</label><select id="profile" name="profile_id">' . $options . '</select>'
-            . '<button type="submit">Přepnout uživatele</button></form>';
+            . '<label for="profile">' . e($ui['select']) . '</label><select id="profile" name="profile_id">' . $options . '</select>'
+            . '<button type="submit">' . e($ui['switch']) . '</button></form>';
     }
     if ($selected > 0) {
         echo '<form method="post" action="' . e(url('debug/users')) . '">'
             . csrf_field() . '<input type="hidden" name="action" value="stop">'
-            . '<button class="stop" type="submit">Ukončit simulaci a vrátit administrátora</button></form>';
+            . '<button class="stop" type="submit">' . e($ui['stop']) . '</button></form>';
     }
-    echo '<nav class="links"><a href="' . e(url('')) . '">Zpět do K&amp;F</a>'
-        . '<a href="' . e(url('diagnostics')) . '">Diagnostika</a></nav></main></body></html>';
+    echo '<nav class="links"><a href="' . e(url('')) . '">' . $ui['back'] . '</a>'
+        . '<a href="' . e(url('diagnostics')) . '">' . e($ui['diagnostics']) . '</a></nav></main></body></html>';
     exit;
 }
 
