@@ -71,20 +71,8 @@ function kf_detail_url(string $kind, int $id, array $row): string
     $section = ['event' => 'events', 'band' => 'bands', 'venue' => 'venues'][$kind] ?? '';
     if ($section === '' || $id < 1) return url('');
     $base = url($section . '/' . $id . '/' . kf_detail_slug($kind, $row));
-    $params = [];
-
-    // Při prvním otevření detailu uložit aktuální stav výpisu.
-    // Při přechodu na související záznam zachovat původní návratový stav.
-    $return = kf_get('return');
-    if ($return === '') {
-        $return = http_build_query(kf_request());
-    }
-    $params['return'] = $return;
-
-    if (kf_get('fav') === '1' && auth_resolve() !== null) {
-        $params['fav'] = '1';
-    }
-    return $params ? $base . '?' . http_build_query($params) : $base;
+    // Návratový kontext se ukládá v sessionStorage prohlížeče, nikoli do veřejné URL.
+    return $base;
 }
 
 /** Bezpečně obnoví pouze povolené parametry výpisu z návratového stavu detailu. */
