@@ -90,6 +90,7 @@ Uživatelské role a přihlášení:
   - `4` (`admin`): vše jako moderátor + správa uživatelských účtů (role, `user_state`), správa nastavení a systémových přehledů.
 
 Hlavička, avatar a uživatelské menu:
+- U přihlášeného uživatele se před hvězdičkou oblíbených a avatarem zobrazuje ikona upozornění; podrobnosti jsou v `docs/006_upozorneni.md`.
 - Nepřihlášený uživatel vidí tlačítko „Přihlásit se“.
 - Přihlášený uživatel vidí místo tlačítka kulatý avatar (fotka z Google/Facebook účtu, nebo při její absenci/chybě barevné kolečko s prvním písmenem zobrazovaného jména).
 - Avatar funguje zároveň jako rozbalovací menu vykreslené na serveru čistě podle role přihlášeného uživatele:
