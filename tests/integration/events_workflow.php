@@ -150,8 +150,16 @@ check(str_contains($formHtml, 'Festival - test event approval') && str_contains(
 $previewHtml = run_route('event_preview', $userToken);
 check(str_contains($previewHtml, 'Festival - test event approval') && str_contains($previewHtml, 'Test klub'), 'event preview route renders the event detail before submission');
 
-run_route('event_submit', $userToken);
+$submitOutput = run_route('event_submit', $userToken);
 $pending = q('SELECT id, title FROM ' . tbl('pending') . ' WHERE created_by = ? AND date_from = ?', [$users['user'], $eventDate])->fetch();
+if ($pending === false) {
+    echo "DEBUG event_submit output: " . substr($submitOutput, 0, 1200) . "\n";
+    foreach (['data/error.log', 'data/security.log'] as $debugLog) {
+        if (is_file(KF_ROOT . '/' . $debugLog)) {
+            echo "DEBUG {$debugLog}: " . substr((string)file_get_contents(KF_ROOT . '/' . $debugLog), -3000) . "\n";
+        }
+    }
+}
 check($pending !== false && $pending['title'] === 'Festival - test event approval', 'pending database title stores a normal hyphen');
 $pendingId = (int)$pending['id'];
 $pendingData = kf_pending_get($pendingId);
