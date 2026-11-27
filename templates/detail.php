@@ -25,10 +25,8 @@ $evList = static function (array $rows): string {
     return $out . '</ul>';
 };
 ?>
-<p class="back"><a data-detail-back href="<?= e((string)$d['back']) ?>">← <?= e(t('detail.back')) ?></a></p>
 <article class="card detail detail-<?= e($kind) ?>">
-  <div class="detail-head">
-    <h1><?= e($name) ?></h1>
+  <div class="detail-toolbar">
     <?php if ($user !== null && (int)($user['user_state'] ?? 0) === (int)cfg('enums.user_state.active')): ?>
       <button type="button" class="fav<?= $d['fav'] ? ' on' : '' ?>" data-fav
         data-url="<?= e(url('fav')) ?>" data-csrf-field="<?= e((string)cfg('security.csrf_field')) ?>" data-csrf="<?= e(csrf_token()) ?>"
@@ -39,11 +37,14 @@ $evList = static function (array $rows): string {
     <?php else: ?>
       <span class="fav off" role="img" aria-disabled="true" aria-label="<?= e(t('detail.fav_login')) ?>" title="<?= e(t('detail.fav_login')) ?>">★</span>
     <?php endif; ?>
+    <a class="btn ghost page-back" data-detail-back href="<?= e((string)$d['back']) ?>">← <?= e(t('detail.back')) ?></a>
   </div>
 
   <?php if ($x['large']): $img = kf_img((string)$d['bucket'], $id, 'l'); ?>
     <a class="detail-img" href="<?= e($img) ?>" data-lightbox><img src="<?= e($img) ?>" alt="<?= e($name) ?>"></a>
   <?php endif; ?>
+
+  <h1 class="detail-title"><?= e($name) ?></h1>
 
   <dl class="kv">
     <?php
