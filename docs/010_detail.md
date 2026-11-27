@@ -27,3 +27,10 @@ Na detailu akce se pod jejím názvem v hlavičce samostatně nevypisují názvy
 Tlačítko Zpět je v detailu umístěno vedle hvězdičky v horním řádku. Automaticky vkládané tlačítko Zpět vedle názvu se na detailu nezobrazuje. Ostatní stránky si zachovávají automatické tlačítko návratu.
 
 - Hvězdička je bez rámečku i pozadí. Klikací plocha má rozměr 32 × 32 px; samotné SVG má rozměr 20 × 20 px. Levý horní roh SVG přesně lícuje s levým horním vnějším rohem detailové karty. Ovládací plocha je posunuta o 5 px nahoru a 5 px doleva, takže hvězdička je proti předchozí pozici o 5 px níže a 5 px vpravo.
+
+## Cena akce
+
+- V detailu akce se vždy zobrazuje řádek Cena bezprostředně pod řádkem Web.
+- Cena se čte z klíče `price` v JSON datech akce (`data/events/...`).
+- Pokud cena není vyplněná, zobrazuje se `-`.
+- Detail kapely ani klubu/místa řádek Cena nezobrazuje.
