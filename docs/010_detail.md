@@ -4,7 +4,7 @@ Společná hlavička detailních stránek akcí, kapel a klubů/míst.
 
 ## Rozložení
 
-1. Horní řádek: pouze hvězdička oblíbených vlevo. Tlačítko Zpět se v detailu nezobrazuje.
+1. Horní řádek: hvězdička oblíbených vlevo a tlačítko Zpět vpravo.
 2. Obrázek entity, pokud je dostupný.
 3. Název aktuální entity:
    - detail akce: název akce,
@@ -24,6 +24,6 @@ Na detailu akce se pod jejím názvem v hlavičce samostatně nevypisují názvy
 
 ## Globální pravidlo tlačítek Zpět
 
-Tlačítko Zpět se v detailu nezobrazuje. Ostatní tlačítka návratu v projektu si zachovávají jednotný vzhled, text „← Zpět“ a vlastní funkční cíl.
+Tlačítko Zpět je v detailu umístěno vedle hvězdičky v horním řádku. Automaticky vkládané tlačítko Zpět vedle názvu se na detailu nezobrazuje. Ostatní stránky si zachovávají automatické tlačítko návratu.
 
 - Hvězdička je bez rámečku i pozadí. Klikací plocha má rozměr 32 × 32 px; samotné SVG má rozměr 20 × 20 px. Levý horní roh SVG přesně lícuje s levým horním vnějším rohem detailové karty. Ovládací plocha je posunuta o 5 px nahoru a 5 px doleva, takže hvězdička je proti předchozí pozici o 5 px níže a 5 px vpravo.
