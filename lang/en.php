@@ -194,6 +194,7 @@ return [
     'detail.genre' => 'Genre',
     'detail.address' => 'Address',
     'detail.www' => 'Website',
+    'detail.price' => 'Price',
     'detail.email' => 'E-mail',
     'detail.phone' => 'Phone',
     'detail.map' => 'Map',
