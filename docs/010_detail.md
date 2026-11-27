@@ -27,4 +27,4 @@ Na detailu akce se pod jejím názvem v hlavičce samostatně nevypisují názvy
 
 Tlačítko v detailu je vzorem pro všechna tlačítka návratu v projektu: jednotný vzhled, barva a text „← Zpět“. Každé tlačítko si zachovává vlastní funkční cíl návratu. Výjimka platí pouze na výslovný pokyn uživatele.
 
-- Tlačítko „← Zpět“ je v horním řádku zarovnané k horní hraně detailové karty. Horní a pravý odstup od hrany karty tak odpovídají vnitřnímu odsazení karty; výška hvězdičky už neposouvá tlačítko níže.
+- Hvězdička i tlačítko „← Zpět“ jsou v horním řádku zarovnané k horní hraně detailové karty. Jejich horní odstup od hrany karty odpovídá vnitřnímu odsazení karty; výška ovládacích prvků už neposouvá jeden z nich níže.
