@@ -112,6 +112,10 @@ Při otevření menu se do hlavičky vloží jediná průhledná překryvná vrs
 
 Vrstva se vytvoří pouze po otevření menu a odstraní se při jeho zavření. Nepřidávají se globální zachytávače událostí ani další podmínky na jednotlivé prvky.
 
+### Navigace a návrat přes historii prohlížeče
+
+Při opuštění stránky se otevřené menu zavře a odstraní se překryvná vrstva. Stejné zavření se provede při obnovení stránky, včetně návratu z mezipaměti historie prohlížeče (BFCache). Po návratu tlačítkem Zpět proto uživatelské menu nezůstane otevřené.
+
 Dotčené soubory:
 - `templates/layout.php` – společná hlavička a uživatelské menu.
 - `assets/js/menu.js` – vytvoření a odstranění jediné překryvné vrstvy.
