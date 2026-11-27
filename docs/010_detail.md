@@ -4,7 +4,7 @@ Společná hlavička detailních stránek akcí, kapel a klubů/míst.
 
 ## Rozložení
 
-1. Horní řádek: hvězdička oblíbených vlevo, tlačítko Zpět vpravo.
+1. Horní řádek: hvězdička oblíbených vlevo, samostatná šipka zpět vpravo, bez textu.
 2. Obrázek entity, pokud je dostupný.
 3. Název aktuální entity:
    - detail akce: název akce,
@@ -19,5 +19,5 @@ Na detailu akce se pod jejím názvem v hlavičce samostatně nevypisují názvy
 - Všechny typy detailu používají společnou šablonu `templates/detail.php`.
 - Horní řádek používá `detail-toolbar`, název `detail-title`.
 - Hvězdička zachovává stávající chování a stav z databáze; nepřihlášeným se zobrazuje pouze neaktivní šedá hvězdička.
-- Tlačítko Zpět zachovává původní cílovou URL i atribut `data-detail-back`.
+- Ovládání návratu zobrazuje pouze šipku `←`, bez textu; přístupný název a tooltip zůstávají. Zachovává původní cílovou URL i atribut `data-detail-back`.
 - Obrázek zůstává volitelný. Název se zobrazuje vždy.
