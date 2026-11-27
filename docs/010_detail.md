@@ -27,4 +27,4 @@ Na detailu akce se pod jejím názvem v hlavičce samostatně nevypisují názvy
 
 Tlačítko v detailu je vzorem pro všechna tlačítka návratu v projektu: jednotný vzhled, barva a text „← Zpět“. Každé tlačítko si zachovává vlastní funkční cíl návratu. Výjimka platí pouze na výslovný pokyn uživatele.
 
-- Hvězdička i tlačítko „← Zpět“ jsou v horním řádku zarovnané k horní hraně detailové karty. Jejich horní odstup od hrany karty odpovídá vnitřnímu odsazení karty. Hvězdička je zarovnaná k horní hraně stejně jako tlačítko Zpět: její SVG začíná u horní hrany klikací plochy a je posunuté o 3 px nahoru kvůli vnitřnímu volnému prostoru ve viewBoxu.
+- Hvězdička i tlačítko „← Zpět“ jsou v horním řádku zarovnané k horní hraně detailové karty. Jejich horní odstup od hrany karty odpovídá vnitřnímu odsazení karty. Klikací plocha hvězdičky má přesně 20 × 20 px, tedy rozměr SVG; nemá zvětšenou plochu 40 × 40 px. SVG je posunuté o 3 px nahoru kvůli vnitřnímu volnému prostoru ve viewBoxu.
