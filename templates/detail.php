@@ -37,7 +37,7 @@ $evList = static function (array $rows): string {
     <?php else: ?>
       <span class="fav off" role="img" aria-disabled="true" aria-label="<?= e(t('detail.fav_login')) ?>" title="<?= e(t('detail.fav_login')) ?>"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3.5 2.65 5.37 5.93.86-4.29 4.18 1.01 5.9L12 17.03l-5.3 2.78 1.01-5.9-4.29-4.18 5.93-.86L12 3.5Z"></path></svg></span>
     <?php endif; ?>
-    <a class="btn ghost page-back" data-detail-back href="<?= e((string)$d['back']) ?>">← <?= e(t('detail.back')) ?></a>
+    
   </div>
 
   <?php if ($x['large']): $img = kf_img((string)$d['bucket'], $id, 'l'); ?>
