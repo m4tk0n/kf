@@ -299,3 +299,9 @@ INSERT IGNORE INTO `{prefix}genres` (`name`, `name_ascii`) VALUES
 ('Lullaby', 'lullaby'),
 ('Meditation', 'meditation'),
 ('Podcast', 'podcast');
+
+-- Žánry doložené u CZ/SK punkových kapel.
+INSERT IGNORE INTO `{prefix}genres` (`name`, `name_ascii`) VALUES
+('Punk', 'punk'),
+('Industrial punk', 'industrial-punk'),
+('Folk punk', 'folk-punk');

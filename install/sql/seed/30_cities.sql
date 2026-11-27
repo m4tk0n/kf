@@ -172,3 +172,47 @@ INSERT IGNORE INTO `{prefix}cities` (`country_id`, `name`, `name_ascii`) VALUES
 (@country_sk, 'Zemianske Kostoľany', 'Zemianske Kostolany'),
 (@country_sk, 'Malé Leváre', 'Male Levare'),
 (@country_sk, 'Štrbské Pleso', 'Strbske Pleso');
+
+-- Města doplněná pro ověřený CZ/SK punkový seed.
+INSERT INTO `{prefix}cities` (`country_id`, `name`, `name_ascii`)
+SELECT @country_cz, 'Příbram', 'Pribram' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Příbram')
+UNION ALL
+SELECT @country_cz, 'Zábřeh na Moravě', 'Zabreh na Morave' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Zábřeh na Moravě')
+UNION ALL
+SELECT @country_cz, 'Ústí nad Labem', 'Usti nad Labem' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Ústí nad Labem')
+UNION ALL
+SELECT @country_sk, 'Moldava nad Bodvou', 'Moldava nad Bodvou' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_sk AND `name` = 'Moldava nad Bodvou')
+UNION ALL
+SELECT @country_cz, 'Police nad Metují', 'Police nad Metuji' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Police nad Metují')
+UNION ALL
+SELECT @country_cz, 'Jindřichův Hradec', 'Jindrichuv Hradec' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Jindřichův Hradec')
+UNION ALL
+SELECT @country_cz, 'Kladno', 'Kladno' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Kladno')
+UNION ALL
+SELECT @country_cz, 'Velké Meziříčí', 'Velke Mezirici' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Velké Meziříčí')
+UNION ALL
+SELECT @country_cz, 'Benešov', 'Benesov' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Benešov')
+UNION ALL
+SELECT @country_cz, 'Odolena Voda', 'Odolena Voda' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Odolena Voda')
+UNION ALL
+SELECT @country_cz, 'Kardašova Řečice', 'Kardasova Recice' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Kardašova Řečice')
+UNION ALL
+SELECT @country_cz, 'Roudnice nad Labem', 'Roudnice nad Labem' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Roudnice nad Labem')
+UNION ALL
+SELECT @country_cz, 'Vsetín', 'Vsetin' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Vsetín')
+UNION ALL
+SELECT @country_cz, 'Horní Jiřetín', 'Horni Jiretin' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Horní Jiřetín')
+UNION ALL
+SELECT @country_cz, 'Svitavy', 'Svitavy' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Svitavy')
+UNION ALL
+SELECT @country_cz, 'Uherské Hradiště', 'Uherske Hradiste' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Uherské Hradiště')
+UNION ALL
+SELECT @country_cz, 'Kroměříž', 'Kromeriz' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Kroměříž')
+UNION ALL
+SELECT @country_cz, 'Litomyšl', 'Litomysl' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Litomyšl')
+UNION ALL
+SELECT @country_cz, 'Mariánské Lázně', 'Marianske Lazne' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Mariánské Lázně')
+UNION ALL
+SELECT @country_sk, 'Dubnica nad Váhom', 'Dubnica nad Vahom' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_sk AND `name` = 'Dubnica nad Váhom')
+UNION ALL
+SELECT @country_cz, 'Mladá Boleslav', 'Mlada Boleslav' WHERE NOT EXISTS (SELECT 1 FROM `{prefix}cities` WHERE `country_id` = @country_cz AND `name` = 'Mladá Boleslav');

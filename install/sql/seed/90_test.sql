@@ -33,16 +33,11 @@ INSERT IGNORE INTO `{prefix}bands` (`name`, `city_id`, `genre_id`, `created_at`)
 ('Konec hry', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Brno' LIMIT 1), (SELECT id FROM `{prefix}genres` WHERE name_ascii = 'pop-punk' LIMIT 1), UNIX_TIMESTAMP()),
 ('Ztracené frekvence', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Kosice' LIMIT 1), (SELECT id FROM `{prefix}genres` WHERE name_ascii = 'post-hardcore' LIMIT 1), UNIX_TIMESTAMP());
 
+-- Skutečné venues jsou vloženy v 50_venues.sql; zde zůstávají pouze testovací místa.
 INSERT IGNORE INTO `{prefix}venues` (`name`, `city_id`, `address`, `created_at`) VALUES
 ('Klub Pod lampou', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Plzen' LIMIT 1), 'Husova 30', UNIX_TIMESTAMP()),
-('Kabinet MÚZ', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Brno' LIMIT 1), 'Sukova 4', UNIX_TIMESTAMP()),
-('Rock Café', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Praha' LIMIT 1), 'Národní 20', UNIX_TIMESTAMP()),
-('Barrák Music Club', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Ostrava' LIMIT 1), 'Fifejdy 1', UNIX_TIMESTAMP()),
 ('15 minut music club', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Olomouc' LIMIT 1), 'Komenského 31', UNIX_TIMESTAMP()),
 ('AC Klub', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Hradec Kralove' LIMIT 1), 'Zámostí 684', UNIX_TIMESTAMP()),
-('Pink Whale', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Bratislava' LIMIT 1), 'Nábrežie armádneho generála Ludvíka Svobodu', UNIX_TIMESTAMP()),
-('Collosseum Club', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Kosice' LIMIT 1), 'Dominikánske námestie 35', UNIX_TIMESTAMP()),
-('Klub Lúč', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Trencin' LIMIT 1), 'Mierové námestie 17', UNIX_TIMESTAMP()),
 ('Music a Cafe', (SELECT id FROM `{prefix}cities` WHERE name_ascii = 'Nitra' LIMIT 1), 'Štefánikova trieda 4', UNIX_TIMESTAMP());
 
 INSERT IGNORE INTO `{prefix}events` (`name`, `type`, `date_from`, `date_to`, `time_start`, `city_id`, `venue_id`, `created_at`) VALUES
