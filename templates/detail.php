@@ -74,6 +74,9 @@ $evList = static function (array $rows): string {
     if ($x['www'] !== null) {
         echo $row(t('detail.www'), '<a href="' . e($x['www']) . '" target="_blank" rel="noopener nofollow ugc">' . e((string)preg_replace('~^https?://~i', '', $x['www'])) . '</a>');
     }
+    if ($kind === 'event') {
+        echo $row(t('detail.price'), e($x['price'] !== '' ? $x['price'] : '-'));
+    }
     if ($x['email'] !== '') {
         echo $row(t('detail.email'), '<a href="mailto:' . e($x['email']) . '">' . e($x['email']) . '</a>');
     }
