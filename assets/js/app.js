@@ -46,7 +46,7 @@
   // při přímém otevření stránky nabídneme návrat na hlavní výpis.
   var main = document.querySelector('main.main');
   var heading = main && main.querySelector('h1');
-  if (heading && !main.querySelector('.page-title-row > .btn, .back')) {
+  if (heading && !main.querySelector('.detail') && !main.querySelector('.page-title-row > .btn, .back')) {
     var row = document.createElement('div');
     row.className = 'page-title-row';
     var parent = heading.parentNode;
