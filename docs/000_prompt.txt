@@ -199,3 +199,13 @@ zde se vypisuji vsechny stranky (profil, bastaveni, administrace, atd)
 ## Globální pravidlo URL detailů
 
 Všechny detailní stránky používají číselné ID jako jediný identifikátor a čitelný slug pouze jako doplněk URL. Příklady: `/events/123/metalovy-koncert-2026-06-14`, `/bands/45/metalova-kapela`, `/venues/12/klub-pod-lampou`. U akcí se slug skládá z názvu a data začátku; u kapel a klubů z názvu. Slug se negeneruje ani neukládá do databáze. URL pouze s ID i URL se starým slugem musí fungovat a přesměrovat na aktuální kanonickou URL podle ID. Toto pravidlo platí globálně, ne pouze pro přidávání akcí.
+
+
+## Globální vzhled tlačítek Zpět
+
+Všechna tlačítka pro návrat na předchozí stránku nebo výpis musí mít v celém projektu jednotný vzhled podle tlačítka v hlavičce detailu:
+- text přesně „← Zpět“ (šipka vlevo, text vpravo),
+- stejnou barvu, typografii, velikost, odsazení a další vizuální provedení jako tlačítko v detailu,
+- zachovat konkrétní funkci a cílovou adresu návratu dané stránky.
+
+Odlišný vzhled nebo text použít pouze tehdy, pokud to uživatel výslovně zadá.
