@@ -194,6 +194,7 @@ return [
     'detail.genre' => 'Žánr',
     'detail.address' => 'Adresa',
     'detail.www' => 'Web',
+    'detail.price' => 'Cena',
     'detail.email' => 'E-mail',
     'detail.phone' => 'Telefon',
     'detail.map' => 'Mapa',
