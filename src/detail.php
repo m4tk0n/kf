@@ -51,6 +51,7 @@ function kf_detail_extra(string $kind, int $id): array
         ? [(float)$lat, (float)$lng] : null;
     return [
         'desc' => kf_jtext($j, 'description', 5000),
+        'price' => $kind === 'event' ? kf_jtext($j, 'price', 100) : '',
         'www' => kf_safe_url(kf_jtext($j, 'www', 300)),
         'email' => filter_var($email, FILTER_VALIDATE_EMAIL) ? $email : '',
         'phone' => trim((string)preg_replace('/[^0-9+() \-]/', '', kf_jtext($j, 'phone', 30))),
