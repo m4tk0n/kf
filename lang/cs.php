@@ -185,7 +185,7 @@ return [
     'count.bands' => ['one' => '{n} kapela', 'few' => '{n} kapely', 'other' => '{n} kapel'],
     'count.venues' => ['one' => '{n} klub', 'few' => '{n} kluby', 'other' => '{n} klubů'],
     // detail akce / kapely / klubu, oblíbené
-    'detail.back' => 'Zpět na výpis',
+    'detail.back' => 'Zpět',
     'detail.type' => 'Typ',
     'detail.date' => 'Datum',
     'detail.time' => 'Začátek',
