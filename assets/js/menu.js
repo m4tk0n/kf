@@ -33,4 +33,9 @@
   });
 
   if (menu.open) openMenu();
+
+  // Stránka může být při návratu z historie obnovena z BFCache.
+  // Zavřeme menu před uložením i po případném obnovení stránky.
+  window.addEventListener('pagehide', closeMenu);
+  window.addEventListener('pageshow', closeMenu);
 })();
