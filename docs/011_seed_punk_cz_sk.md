@@ -54,6 +54,7 @@ Již existující žánry Celtic punk, Hardcore punk, Punk rock a Ska punk se zn
 ## Záměrně nezařazená místa
 
 - **Brněnecfest** – zdroje se rozcházejí v přesné lokalitě areálu; oficiální navigační bod není samotné místo konání.
+- **Bývalé vlakové nádraží, Horní Jiřetín** – v seedu je uveden název místa z festivalových archivů; poštovní adresa Černická 25/20 je ověřena přes budovu Hotelu Nádraží a adresní registr.
 - **Urban Spot, Banská Bystrica** – rozporné údaje o čísle adresy.
 - **Bunkr, Liberec** – rozporné adresy Tržní náměstí 1385/8 a 876/11.
 - **Živák, Rakovník** – nepodařilo se nezávisle potvrdit úplnou adresu.

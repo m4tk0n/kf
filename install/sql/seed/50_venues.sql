@@ -43,7 +43,7 @@ FROM (
   UNION ALL
   SELECT 'Zkušebna Art Club' AS name, 'Frýdek-Místek' AS city, 'CZ' AS country, 'Heydukova 85' AS address
   UNION ALL
-  SELECT 'Areál Hotelu Nádraží' AS name, 'Horní Jiřetín' AS city, 'CZ' AS country, 'Černická 25/20' AS address
+  SELECT 'Bývalé vlakové nádraží' AS name, 'Horní Jiřetín' AS city, 'CZ' AS country, 'Černická 25/20' AS address
   UNION ALL
   SELECT 'Letní kino Chrudim' AS name, 'Chrudim' AS city, 'CZ' AS country, 'Lázeňská' AS address
   UNION ALL
@@ -63,7 +63,7 @@ FROM (
   UNION ALL
   SELECT 'Klub Lúč' AS name, 'Trenčín' AS city, 'SK' AS country, 'Mierové námestie 17' AS address
   UNION ALL
-  SELECT 'Pink Whale' AS name, 'Bratislava' AS city, 'SK' AS country, 'Nábrežie arm. gen. Ludvíka Svobodu, rkm 1868' AS address
+  SELECT 'Pink Whale' AS name, 'Bratislava' AS city, 'SK' AS country, 'Nábrežie arm. gen. Ludvíka Svobodu, 1868 rkm' AS address
   UNION ALL
   SELECT 'Collosseum Club' AS name, 'Košice' AS city, 'SK' AS country, 'Vrátna 639/70' AS address
   UNION ALL
