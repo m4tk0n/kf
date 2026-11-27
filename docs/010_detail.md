@@ -21,3 +21,8 @@ Na detailu akce se pod jejím názvem v hlavičce samostatně nevypisují názvy
 - Hvězdička zachovává stávající chování a stav z databáze; nepřihlášeným se zobrazuje pouze neaktivní šedá hvězdička.
 - Ovládání návratu zobrazuje šipku `←` a lokalizovaný text „Zpět“. Zachovává původní cílovou URL i atribut `data-detail-back`.
 - Obrázek zůstává volitelný. Název se zobrazuje vždy.
+
+
+## Globální pravidlo tlačítek Zpět
+
+Tlačítko v detailu je vzorem pro všechna tlačítka návratu v projektu: jednotný vzhled, barva a text „← Zpět“. Každé tlačítko si zachovává vlastní funkční cíl návratu. Výjimka platí pouze na výslovný pokyn uživatele.
