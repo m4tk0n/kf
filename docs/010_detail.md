@@ -18,7 +18,7 @@ Na detailu akce se pod jejím názvem v hlavičce samostatně nevypisují názvy
 
 - Všechny typy detailu používají společnou šablonu `templates/detail.php`.
 - Horní řádek používá `detail-toolbar`, název `detail-title`.
-- Hvězdička zachovává stávající chování a stav z databáze; nepřihlášeným se zobrazuje pouze neaktivní šedá hvězdička.
+- Hvězdička používá stejné SVG a stejné rozměry/čáru jako globální hvězdička vedle avataru. Aktivní stav je žlutě vyplněný, neaktivní žlutý obrys; nepřihlášeným se zobrazuje neaktivní šedá hvězdička. Chování a stav z databáze zůstávají beze změny.
 - Ovládání návratu zobrazuje šipku `←` a lokalizovaný text „Zpět“. Zachovává původní cílovou URL i atribut `data-detail-back`.
 - Obrázek zůstává volitelný. Název se zobrazuje vždy.
 
