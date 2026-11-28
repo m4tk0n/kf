@@ -42,7 +42,11 @@
     var requestNumber = 0;
     var minSuggestChars = parseInt(nameInput.getAttribute('data-suggest-min') || '2', 10);
     var venueId = nameInput.parentNode.querySelector('[data-venue-id]');
-    var citySelect = document.querySelector('select[name="city_id"]');
+    var cityInput = document.querySelector('[data-venue-city-input]');
+    var cityId = document.querySelector('[data-venue-city-id]');
+    var countryInput = document.querySelector('[data-venue-country-input]');
+    var countryId = document.querySelector('[data-venue-country-id]');
+    var countryIso2 = document.querySelector('[data-venue-country-iso2]');
 
     function closeSuggestions() {
       suggestions.hidden = true;
@@ -80,7 +84,11 @@
             nameInput.value = value;
             if (isVenue && venueId) {
               venueId.value = String(item.id || 0);
-              if (citySelect && item.city_id) citySelect.value = String(item.city_id);
+              if (cityInput && item.city) cityInput.value = String(item.city);
+              if (cityId && item.city_id) cityId.value = String(item.city_id);
+              if (countryInput && item.country_name) countryInput.value = String(item.country_name);
+              if (countryId && item.country_id) countryId.value = String(item.country_id);
+              if (countryIso2) countryIso2.textContent = item.country || '';
             }
             closeSuggestions();
             nameInput.focus();
@@ -104,6 +112,44 @@
       if (!event.target.closest || !event.target.closest('.event-name-field')) closeSuggestions();
     });
   });
+
+
+  // Město a stát: stejné našeptávání jako ve formuláři klubu, včetně vlastních pending měst.
+  function cityCountrySuggest(input, hidden, list, endpoint, extraParams, choose, label) {
+    if (!input || !hidden || !list) return;
+    var timer = 0, request = 0;
+    function close() { list.hidden=true;list.replaceChildren(); }
+    input.addEventListener('input',function(){
+      hidden.value='0';
+      if(input===countryInput&&countryIso2)countryIso2.textContent='';
+      window.clearTimeout(timer);
+      timer=window.setTimeout(function(){
+        var term=input.value.trim(), current=++request;
+        if(term.length<parseInt(input.getAttribute('data-suggest-min')||'2',10)){close();return;}
+        var query='?q='+encodeURIComponent(term);
+        Object.keys(extraParams||{}).forEach(function(k){if(extraParams[k])query+='&'+encodeURIComponent(k)+'='+encodeURIComponent(extraParams[k]);});
+        fetch(input.getAttribute('data-suggest-url')+query,{credentials:'same-origin',headers:{'Accept':'application/json'},cache:'no-store'})
+          .then(function(r){if(!r.ok)throw new Error('Suggestion request failed');return r.json();})
+          .then(function(data){
+            if(current!==request||term!==input.value.trim())return;
+            list.replaceChildren();
+            (Array.isArray(data.items)?data.items:[]).forEach(function(item){
+              var b=document.createElement('button');b.type='button';b.className='autocomplete-option';b.setAttribute('role','option');b.textContent=label(item);
+              b.addEventListener('click',function(){choose(item);close();input.focus();});list.appendChild(b);
+            });
+            list.hidden=list.childElementCount===0;
+          }).catch(close);
+      },180);
+    });
+    input.addEventListener('keydown',function(ev){if(ev.key==='Escape')close();});
+  }
+  cityCountrySuggest(cityInput,cityId,document.querySelector('[data-venue-city-suggestions]'),null,
+    {country_id:function(){return countryId?countryId.value:'';}},
+    function(item){cityInput.value=item.name;cityId.value=String(item.id||0);if(countryInput)countryInput.value=item.country;if(countryId)countryId.value=String(item.country_id);if(countryIso2)countryIso2.textContent=item.iso2||'';},
+    function(item){return item.name+' · '+item.country;});
+  cityCountrySuggest(countryInput,countryId,document.querySelector('[data-venue-country-suggestions]'),null,{},
+    function(item){countryInput.value=item.name;countryId.value=String(item.id);if(countryIso2)countryIso2.textContent=item.iso2||'';},
+    function(item){return item.name;});
 
   // Řádky kapel: zobrazí se vyplněné + jeden prázdný, tlačítko "+" přidá další.
   var rows = Array.prototype.slice.call(document.querySelectorAll('[data-band-row]'));
