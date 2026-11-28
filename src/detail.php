@@ -44,7 +44,7 @@ function kf_detail_extra(string $kind, int $id): array
 {
     $j = json_read_file(json_bucket_rel(KF_DETAIL_KINDS[$kind], $id));
     $email = kf_jtext($j, 'email', 120);
-    $flag = ['event' => 'flyer_l', 'band' => 'logo_l', 'venue' => 'img_l'][$kind];
+    $flag = ['event' => 'flyer_l', 'band' => 'image_l', 'venue' => 'img_l'][$kind];
     $lat = $j['lat'] ?? null;
     $lng = $j['lng'] ?? null;
     $geo = is_numeric($lat) && is_numeric($lng) && abs((float)$lat) <= 90 && abs((float)$lng) <= 180
@@ -59,7 +59,9 @@ function kf_detail_extra(string $kind, int $id): array
         'geo' => $kind === 'venue' ? $geo : null,
         'google_maps' => $kind === 'venue' ? (kf_safe_url(kf_jtext($j, 'google_maps', 500)) ?? '') : '',
         'mapy_maps' => $kind === 'venue' ? (kf_safe_url(kf_jtext($j, 'mapy_maps', 500)) ?? '') : '',
-        'large' => !empty($j[$flag]),
+        'large' => $kind === 'band' ? (!empty($j['image_l']) || !empty($j['logo_l'])) : !empty($j[$flag]),
+        'facebook' => $kind === 'band' ? (kf_safe_url(kf_jtext($j, 'facebook', 300)) ?? '') : '',
+        'bandzone' => $kind === 'band' ? (kf_safe_url(kf_jtext($j, 'bandzone', 300)) ?? '') : '',
     ];
 }
 
