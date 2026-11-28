@@ -7370,6 +7370,138 @@
       "source_ids": [
         "SRC-0123"
       ]
+    },
+    {
+      "id": "CLM-0478",
+      "entity_type": "event",
+      "entity_id": 64,
+      "field": "date",
+      "value": "2024-07-20",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0479",
+      "entity_type": "event",
+      "entity_id": 64,
+      "field": "city_country",
+      "value": "Vlčtejn, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0480",
+      "entity_type": "event",
+      "entity_id": 64,
+      "field": "venue_id",
+      "value": null,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0481",
+      "entity_type": "event",
+      "entity_id": 64,
+      "field": "lineup",
+      "value": "SPS; The Fialky",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0482",
+      "entity_type": "event",
+      "entity_id": 65,
+      "field": "date",
+      "value": "2024-06-22",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0483",
+      "entity_type": "event",
+      "entity_id": 65,
+      "field": "city_country",
+      "value": "Brněnec, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0484",
+      "entity_type": "event",
+      "entity_id": 65,
+      "field": "venue_id",
+      "value": null,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0485",
+      "entity_type": "event",
+      "entity_id": 65,
+      "field": "lineup",
+      "value": "SPS; The Fialky; Vision Days; Houba; E!E; Punk Floid; Totální nasazení; Znouzectnost",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0486",
+      "entity_type": "event",
+      "entity_id": 66,
+      "field": "date",
+      "value": "2024-05-25",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0487",
+      "entity_type": "event",
+      "entity_id": 66,
+      "field": "city_country",
+      "value": "Mostiště u Velkého Meziříčí, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0488",
+      "entity_type": "event",
+      "entity_id": 66,
+      "field": "venue_id",
+      "value": null,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0489",
+      "entity_type": "event",
+      "entity_id": 66,
+      "field": "lineup",
+      "value": "SPS; Houba; The Fialky; Nežfaleš; Vision Days",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
     }
   ]
 }
