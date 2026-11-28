@@ -188,6 +188,9 @@ function kf_event_clean(array $r): array
         'date_from' => $s('date_from', 10), 'date_to' => $s('date_to', 10), 'time_start' => $s('time_start', 5),
         'city_id' => $i('city_id'), 'city_name' => $s('city_name', 120), 'country_id' => $i('country_id'), 'venue_id' => $i('venue_id'),
         'description' => $s('description', 5000), 'www' => $s('www', 300),
+        'admission_type' => in_array(($r['admission_type'] ?? ''), ['text', 'amount'], true) ? (string)$r['admission_type'] : '',
+        'admission_value' => $s('admission_value', 100),
+        'admission_currency' => strtoupper($s('admission_currency', 3)),
         'bands' => $bands,
     ];
 }
@@ -233,6 +236,16 @@ function kf_event_validate(array &$v): array
     if ($v['www'] !== '' && !kf_form_valid_url($v['www'])) {
         $err[] = 'www';
     }
+    if ($v['admission_type'] === 'text' && $v['admission_value'] === '') {
+        $err[] = 'admission';
+    } elseif ($v['admission_type'] === 'amount') {
+        $v['admission_value'] = str_replace(',', '.', $v['admission_value']);
+        if (!preg_match('/^\d{1,9}(?:\.\d{1,2})?$/', $v['admission_value'])
+            || !preg_match('/^[A-Z]{3}$/', $v['admission_currency'])
+            || !q('SELECT 1 FROM ' . tbl('countries') . ' WHERE currency_code = ? LIMIT 1', [$v['admission_currency']])->fetchColumn()) {
+            $err[] = 'admission';
+        }
+    }
     if ($v['bands']) {
         $ids = array_column($v['bands'], 'id');
         $in = implode(',', array_fill(0, count($ids), '?'));
@@ -265,7 +278,9 @@ function kf_event_input(): array
         'name' => $_POST['name'] ?? '', 'type' => $_POST['type'] ?? 0,
         'date_from' => $_POST['date_from'] ?? '', 'date_to' => $_POST['date_to'] ?? '', 'time_start' => $_POST['time_start'] ?? '',
         'city_id' => $_POST['city_id'] ?? 0, 'city_name' => $_POST['city_name'] ?? '', 'country_id' => $_POST['country_id'] ?? 0, 'venue_id' => $_POST['venue_id'] ?? 0,
-        'description' => $_POST['description'] ?? '', 'www' => $_POST['www'] ?? '', 'bands' => $bands,
+        'description' => $_POST['description'] ?? '', 'www' => $_POST['www'] ?? '',
+        'admission_type' => $_POST['admission_type'] ?? '', 'admission_value' => $_POST['admission_value'] ?? '',
+        'admission_currency' => $_POST['admission_currency'] ?? '', 'bands' => $bands,
     ]);
     $err = kf_event_validate($v);
     $v['image_url'] = post_str('image_url', 300);
@@ -279,6 +294,18 @@ function kf_event_defaults(): array
     $v['date_from'] = date('Y-m-d');
     $v['image_url'] = '';
     return $v;
+}
+
+/** Převod vstupného z formuláře do stabilní podoby ukládané v JSON akce. */
+function kf_event_admission_json(array $v): ?array
+{
+    if (($v['admission_type'] ?? '') === 'text' && ($v['admission_value'] ?? '') !== '') {
+        return ['type' => 'text', 'value' => (string)$v['admission_value']];
+    }
+    if (($v['admission_type'] ?? '') === 'amount' && is_numeric($v['admission_value'] ?? null)) {
+        return ['type' => 'amount', 'value' => (float)$v['admission_value'], 'currency' => (string)$v['admission_currency']];
+    }
+    return null;
 }
 
 /** Názvy města, státu, klubu a kapel pro zobrazení (náhled, schvalování). */
@@ -355,7 +382,8 @@ function kf_event_publish(array $v, ?string $srcL, ?int $createdBy): int
             );
         }
         json_write_file(json_bucket_rel('events', $id), [
-            'description' => $v['description'], 'www' => kf_safe_url($v['www']) ?? '', 'flyer_l' => $srcL !== null,
+            'description' => $v['description'], 'www' => kf_safe_url($v['www']) ?? '',
+        'admission' => kf_event_admission_json($v), 'flyer_l' => $srcL !== null,
         ], true);
         if ($srcL !== null) {
             $base = abs_path((string)cfg('img.subdirs.events')) . '/' . intdiv($id, (int)cfg('img.folder_divisor')) . '/' . $id;
@@ -428,11 +456,18 @@ function kf_event_form_page(array $v, array $errors, string $image, int $status 
     }
     $v['venue_name'] = $venueName;
     if((int)$v['city_id']>0){$cityRow=q('SELECT name,country_id FROM '.tbl('cities').' WHERE id=?',[(int)$v['city_id']])->fetch();if($cityRow){$v['city_name']=(string)$cityRow['name'];$v['country_id']=(int)$cityRow['country_id'];}}
-    $countryRow=$v['country_id']>0?q('SELECT `'.country_col().'` AS country,iso2 FROM '.tbl('countries').' WHERE id=?',[$v['country_id']])->fetch():false;
+    $countryRow=$v['country_id']>0?q('SELECT `'.country_col().'` AS country,iso2,currency_code FROM '.tbl('countries').' WHERE id=?',[$v['country_id']])->fetch():false;
     $v['country_name']=(string)($countryRow['country']??'');$v['country_iso2']=(string)($countryRow['iso2']??'');
+    $v['country_currency']=(string)($countryRow['currency_code']??'');
+    if (($v['admission_type'] ?? '') === 'amount' && $v['admission_currency'] === '' && $v['country_currency'] !== '') {
+        $v['admission_currency'] = $v['country_currency'];
+    }
+    $countryCurrencies = q('SELECT id,currency_code FROM ' . tbl('countries'))->fetchAll();
+    $currencies = q('SELECT DISTINCT currency_code FROM ' . tbl('countries') . ' WHERE currency_code IS NOT NULL AND currency_code <> "" ORDER BY currency_code')->fetchAll();
     $bands = q('SELECT id, name FROM ' . tbl('bands') . ' ORDER BY name')->fetchAll();
     page((string)($options['pageTitle'] ?? t('event.new.title')), 'event_form', [
         'old' => $v, 'errors' => $errors, 'cities' => $cities, 'bands' => $bands,
+        'countryCurrencies' => $countryCurrencies, 'currencies' => $currencies,
         'imgUrl' => (string)($options['imgUrl'] ?? ($image !== '' ? url('event/draft-image') . '?v=' . time() : '')),
         'formAction' => (string)($options['formAction'] ?? url('event/new')),
         'pageTitle' => (string)($options['pageTitle'] ?? t('event.new.title')),
