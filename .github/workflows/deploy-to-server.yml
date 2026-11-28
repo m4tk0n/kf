@@ -109,11 +109,9 @@ jobs:
                   else:
                       uploads.append(path)
 
-          # If the deployment workflow itself changes, resync tracked data files too.
-          # This ensures previously excluded data is uploaded when the exclusion is removed.
-          if ".github/workflows/deploy-to-server.yml" in uploads:
-              tracked_data = subprocess.check_output(["git", "ls-files", "data/"]).decode().splitlines()
-              uploads.extend(path for path in tracked_data if not is_excluded(path))
+          # Keep the seed JSON data synchronized on every deployment.
+          tracked_data = subprocess.check_output(["git", "ls-files", "data/"]).decode().splitlines()
+          uploads.extend(path for path in tracked_data if not is_excluded(path))
 
           # Keep ordering deterministic and avoid duplicate FTP operations.
           uploads = sorted(set(uploads))
