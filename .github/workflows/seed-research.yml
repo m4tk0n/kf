@@ -1,6 +1,11 @@
 name: K&F seed research crawler
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "Install/seed_priprava/automation/**"
+      - ".github/workflows/seed-research.yml"
   workflow_dispatch:
     inputs:
       start_year:
