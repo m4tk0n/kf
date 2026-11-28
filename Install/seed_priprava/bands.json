@@ -184,6 +184,18 @@
         "https://www.hudebniknihovna.cz/covers-for-lovers.html"
       ],
       "note": "Identita, český původ, pražské působení a žánrové zařazení ověřeny; koncertní historie čeká."
+    },
+    {
+      "id": 15,
+      "name": "zakázanÝovoce",
+      "genre": "punk rock",
+      "country": "CZ",
+      "city": "Říčany",
+      "url": "https://www.zakazanyovoce.cz/",
+      "sources": [
+        "https://www.zakazanyovoce.cz/"
+      ],
+      "note": "Český punkrockový původ v Říčanech a vznik v roce 2005 ověřeny na oficiálním webu; koncertní historie čeká."
     }
   ]
 }
