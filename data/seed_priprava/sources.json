@@ -451,5 +451,31 @@
       "cities",
       "tour_names"
     ]
+  },
+  {
+    "id": "src-houba-official-archive",
+    "name": "HOUBA – oficiální archiv koncertů",
+    "url": "https://www.houba.info/koncerty/",
+    "publisher": "HOUBA",
+    "source_type": "official_band_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "tour_names"
+    ]
+  },
+  {
+    "id": "src-punkfloid-official-archive",
+    "name": "PUNK FLOID – oficiální archiv koncertů",
+    "url": "https://www.punkfloid.com/koncerty",
+    "publisher": "PUNK FLOID",
+    "source_type": "official_band_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "tour_names"
+    ]
   }
 ]

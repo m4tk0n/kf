@@ -195,7 +195,8 @@
     "country_code": "CZ",
     "genres": [],
     "sources": [
-      "src-podparou-lineup-2025"
+      "src-podparou-lineup-2025",
+      "src-punkfloid-official-archive"
     ],
     "verification": "country_confirmed_by_official_program_label"
   },
@@ -205,7 +206,8 @@
     "country_code": "CZ",
     "genres": [],
     "sources": [
-      "src-podparou-lineup-2025"
+      "src-podparou-lineup-2025",
+      "src-houba-official-archive"
     ],
     "verification": "country_confirmed_by_official_program_label"
   },

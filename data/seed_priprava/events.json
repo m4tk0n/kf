@@ -2264,10 +2264,19 @@
     "country_code": "SK",
     "venue_id": "smer-klub-77-zilina",
     "lineup_completeness": "not_transcribed_from_archive",
-    "performances": [],
+    "performances": [
+      {
+        "date": "2026-02-28",
+        "name": "PUNK FLOID",
+        "country_code": "SK",
+        "band_id": "punk-floid"
+      }
+    ],
     "source_ids": [
-      "src-punkaci-darkzin-archive"
-    ]
+      "src-punkaci-darkzin-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Smer"
   },
   {
     "id": "punkaci-detom-2026",
@@ -2987,12 +2996,20 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-06-19",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Koncert Houba"
   },
   {
     "id": "sps-2025-06-14-horepnik",
@@ -4214,12 +4231,20 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-05-25",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Glády Vpřed Fest 24"
   },
   {
     "id": "sps-2024-05-24-pasohlavky",
@@ -5589,11 +5614,19 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2023-11-18",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Volant Fest"
   },
   {
     "id": "sps-2023-11-11-ceske-budejovice",
@@ -6277,12 +6310,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2023-06-29",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba"
   },
   {
     "id": "sps-2023-06-24-tabor",
@@ -8286,11 +8327,19 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2021-07-23",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Bez Šance Fest"
   },
   {
     "id": "sps-2021-07-17-tremosnice",
@@ -8468,12 +8517,20 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2021-06-24",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Za koule punk fest 2021"
   },
   {
     "id": "sps-2021-05-15-lesnice-u-zabrehu",
@@ -8651,12 +8708,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2020-08-21",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Rock na Valníku 2020"
   },
   {
     "id": "sps-2020-08-13-vyskov",
@@ -8762,11 +8827,19 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2020-07-11",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Altros Rock Fest"
   },
   {
     "id": "sps-2020-07-11-podebrady",
@@ -8916,11 +8989,19 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-08-28",
+        "name": "PUNK FLOID",
+        "country_code": "SK",
+        "band_id": "punk-floid"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punkáči deťom 2026"
   },
   {
     "id": "fialky-2026-08-16-trutnov",
@@ -9385,7 +9466,7 @@
   {
     "id": "fialky-2026-02-21-svitavy",
     "name": "Zimní Brněnec",
-    "event_type": "concert",
+    "event_type": "festival",
     "start_date": "2026-02-21",
     "end_date": "2026-02-21",
     "city": "Svitavy",
@@ -9398,11 +9479,19 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-02-21",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Zimní Brněnec Fest"
   },
   {
     "id": "fialky-2026-02-14-plzen",
@@ -9565,11 +9654,19 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-01-23",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Svět sám pro sebe 2026 / Houba 31 let"
   },
   {
     "id": "fialky-2025-12-20-hradec-kralove",
@@ -9662,7 +9759,7 @@
   {
     "id": "fialky-2025-11-15-pardubice",
     "name": "Vykřičníky Tour 2025",
-    "event_type": "concert",
+    "event_type": "festival",
     "start_date": "2025-11-15",
     "end_date": "2025-11-15",
     "city": "Pardubice",
@@ -9675,11 +9772,19 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-11-15",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Krásný Volant Fest 2025"
   },
   {
     "id": "fialky-2025-11-14-decin",
@@ -10642,11 +10747,19 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-06-20",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Zakoule Punk Fest 2024"
   },
   {
     "id": "fialky-2024-06-12-praha",
@@ -10673,7 +10786,7 @@
   {
     "id": "fialky-2024-06-08-brno",
     "name": "Rock In Brünn",
-    "event_type": "concert",
+    "event_type": "festival",
     "start_date": "2024-06-08",
     "end_date": "2024-06-08",
     "city": "Brno",
@@ -10686,11 +10799,19 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-06-08",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Rock in Brünn"
   },
   {
     "id": "fialky-2024-06-08-neveklov",
@@ -11278,11 +11399,26 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-01-19",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2024-01-19",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-houba-official-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Svět sám pro sebe 2024"
   },
   {
     "id": "fialky-2023-01-13-valasske-mezirici",
@@ -11717,11 +11853,19 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2023-06-02",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba"
   },
   {
     "id": "fialky-2023-06-03-ostrov-u-macochy",
@@ -12607,11 +12751,19 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2021-09-03",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Baronka"
   },
   {
     "id": "fialky-2021-08-21-slany",
@@ -13039,11 +13191,19 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2020-09-04",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "ŠŇŮRA 2020"
   },
   {
     "id": "fialky-2020-08-28-strakonice",
@@ -13545,11 +13705,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2026-08-22",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Rock na Valníku"
   },
   {
     "id": "nezfales-2026-08-08-sobeslav",
@@ -13677,11 +13845,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Brněnec Fest"
   },
   {
     "id": "nezfales-2026-07-04-holysov",
@@ -13743,11 +13919,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2026-06-18",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Zakoule Punk Fest"
   },
   {
     "id": "nezfales-2026-06-13-mnichovo-hradiste",
@@ -14799,11 +14983,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2023-04-15",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba + Nežfaleš"
   },
   {
     "id": "nezfales-2023-04-14-plzen",
@@ -14821,11 +15013,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2023-04-14",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba + Nežfaleš"
   },
   {
     "id": "nezfales-2023-03-25-martin",
@@ -14843,11 +15043,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2023-03-25",
+        "name": "HOUBA",
+        "country_code": "SK",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba + Nežfaleš"
   },
   {
     "id": "nezfales-2023-03-24-opava",
@@ -14865,11 +15073,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2023-03-24",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba + Nežfaleš"
   },
   {
     "id": "nezfales-2023-03-11-ceske-budejovice",
@@ -14887,11 +15103,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2023-03-11",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba + Nežfaleš"
   },
   {
     "id": "nezfales-2023-03-10-teplice",
@@ -14909,11 +15133,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2023-03-10",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba + Nežfaleš"
   },
   {
     "id": "nezfales-2023-02-25-decin",
@@ -14953,11 +15185,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2023-02-18",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba + Nežfaleš"
   },
   {
     "id": "nezfales-2023-02-17-radomysl-u-strakonic",
@@ -14975,11 +15215,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2023-02-17",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba + Nežfaleš"
   },
   {
     "id": "nezfales-2022-11-12-olomouc",
@@ -15151,11 +15399,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-08-19",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Rock na Valníku 2022"
   },
   {
     "id": "nezfales-2022-07-30-trutnov",
@@ -15195,11 +15451,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-07-23",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Čwachták festival"
   },
   {
     "id": "nezfales-2022-07-16-podebrady",
@@ -15657,11 +15921,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2020-08-14",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Pod Parou Fest 2020"
   },
   {
     "id": "nezfales-2020-07-18-novy-bydzov",
@@ -15723,11 +15995,26 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2020-06-27",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2020-06-27",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-houba-official-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Oleško"
   },
   {
     "id": "nezfales-2020-05-28-brno",
@@ -15816,5 +16103,2945 @@
     "source_ids": [
       "src-nezfales-official-archive"
     ]
+  },
+  {
+    "id": "houba-2026-01-24-usti-nad-labem",
+    "name": "Afterpárty Svět sám pro sebe 2026",
+    "event_type": "concert",
+    "start_date": "2026-01-24",
+    "end_date": "2026-01-24",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-01-24",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Afterpárty Svět sám pro sebe 2026"
+  },
+  {
+    "id": "houba-2026-02-20-harrachov",
+    "name": "Harrachov",
+    "event_type": "concert",
+    "start_date": "2026-02-20",
+    "end_date": "2026-02-20",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-02-20",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Harrachov"
+  },
+  {
+    "id": "houba-2026-03-13-praha",
+    "name": "Vagon",
+    "event_type": "concert",
+    "start_date": "2026-03-13",
+    "end_date": "2026-03-13",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-03-13",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Vagon"
+  },
+  {
+    "id": "houba-2026-03-14-jihlava",
+    "name": "festival",
+    "event_type": "festival",
+    "start_date": "2026-03-14",
+    "end_date": "2026-03-14",
+    "city": "Jihlava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-03-14",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2026-03-14",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "D Club"
+  },
+  {
+    "id": "houba-2026-03-20-klatovy",
+    "name": "KC Falcon",
+    "event_type": "concert",
+    "start_date": "2026-03-20",
+    "end_date": "2026-03-20",
+    "city": "Klatovy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-03-20",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "KC Falcon"
+  },
+  {
+    "id": "houba-2026-03-21-brno",
+    "name": "První patro",
+    "event_type": "concert",
+    "start_date": "2026-03-21",
+    "end_date": "2026-03-21",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-03-21",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "První patro"
+  },
+  {
+    "id": "houba-2026-04-10-ceske-budejovice",
+    "name": "MC Fabrika",
+    "event_type": "concert",
+    "start_date": "2026-04-10",
+    "end_date": "2026-04-10",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-04-10",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "MC Fabrika"
+  },
+  {
+    "id": "houba-2026-04-11-ostrava",
+    "name": "Barrák",
+    "event_type": "concert",
+    "start_date": "2026-04-11",
+    "end_date": "2026-04-11",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-04-11",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Barrák"
+  },
+  {
+    "id": "houba-2026-04-17-odolena-voda",
+    "name": "KD",
+    "event_type": "concert",
+    "start_date": "2026-04-17",
+    "end_date": "2026-04-17",
+    "city": "Odolena Voda",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-04-17",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "houba-2026-04-18-nova-role-u-karlovych-varu",
+    "name": "KD",
+    "event_type": "concert",
+    "start_date": "2026-04-18",
+    "end_date": "2026-04-18",
+    "city": "Nová Role u Karlových Varů",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-04-18",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "houba-2026-04-24-uherske-hradiste",
+    "name": "Mír",
+    "event_type": "concert",
+    "start_date": "2026-04-24",
+    "end_date": "2026-04-24",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-04-24",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Mír"
+  },
+  {
+    "id": "houba-2026-04-25-praha",
+    "name": "Číro fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-04-25",
+    "end_date": "2026-04-25",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-04-25",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2026-04-25",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Číro fest 2026"
+  },
+  {
+    "id": "houba-2025-01-17-usti-nad-labem",
+    "name": "Svět sám pro sebe",
+    "event_type": "concert",
+    "start_date": "2025-01-17",
+    "end_date": "2025-01-17",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-01-17",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Svět sám pro sebe"
+  },
+  {
+    "id": "houba-2025-01-18-usti-nad-labem",
+    "name": "Svět sám pro sebe afterpárty",
+    "event_type": "concert",
+    "start_date": "2025-01-18",
+    "end_date": "2025-01-18",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-01-18",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Svět sám pro sebe afterpárty"
+  },
+  {
+    "id": "houba-2025-06-07-strasice-u-rokycan",
+    "name": "Koupák fest 2025",
+    "event_type": "festival",
+    "start_date": "2025-06-07",
+    "end_date": "2025-06-07",
+    "city": "Strašice u Rokycan",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-06-07",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Koupák fest 2025"
+  },
+  {
+    "id": "houba-2025-06-14-ceska-kamenice",
+    "name": "VoBrko fest 2025",
+    "event_type": "festival",
+    "start_date": "2025-06-14",
+    "end_date": "2025-06-14",
+    "city": "Česká Kamenice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-06-14",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "VoBrko fest 2025"
+  },
+  {
+    "id": "houba-2025-06-14-olesko",
+    "name": "Oleško Open Air",
+    "event_type": "festival",
+    "start_date": "2025-06-14",
+    "end_date": "2025-06-14",
+    "city": "Oleško",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-06-14",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Oleško Open Air"
+  },
+  {
+    "id": "houba-2025-06-21-opava",
+    "name": "Slunovrat 2025",
+    "event_type": "festival",
+    "start_date": "2025-06-21",
+    "end_date": "2025-06-21",
+    "city": "Opava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-06-21",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Slunovrat 2025"
+  },
+  {
+    "id": "houba-2025-07-18-milevsko",
+    "name": "Fest a půl 2025",
+    "event_type": "festival",
+    "start_date": "2025-07-18",
+    "end_date": "2025-07-18",
+    "city": "Milevsko",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-07-18",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Fest a půl 2025"
+  },
+  {
+    "id": "houba-2025-07-19-vyskov",
+    "name": "Fest Pod Parou 2025",
+    "event_type": "festival",
+    "start_date": "2025-07-19",
+    "end_date": "2025-07-19",
+    "city": "Vyškov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-07-19",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Fest Pod Parou 2025"
+  },
+  {
+    "id": "houba-2025-08-16-horni-jiretin",
+    "name": "Punkrock for Jiřetín 2025",
+    "event_type": "festival",
+    "start_date": "2025-08-16",
+    "end_date": "2025-08-16",
+    "city": "Horní Jiřetín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-08-16",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Punkrock for Jiřetín 2025"
+  },
+  {
+    "id": "houba-2025-08-16-bystrice-nad-uhlavou",
+    "name": "Koncert Houba",
+    "event_type": "concert",
+    "start_date": "2025-08-16",
+    "end_date": "2025-08-16",
+    "city": "Bystřice nad Úhlavou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-08-16",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Koncert Houba"
+  },
+  {
+    "id": "houba-2025-08-30-opatovce-u-trencina",
+    "name": "Punkáči deťom 2025",
+    "event_type": "festival",
+    "start_date": "2025-08-30",
+    "end_date": "2025-08-30",
+    "city": "Opatovce u Trenčína",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-08-30",
+        "name": "HOUBA",
+        "country_code": "SK",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Punkáči deťom 2025"
+  },
+  {
+    "id": "houba-2024-01-20-usti-nad-labem",
+    "name": "Afterpárty Svět sám pro sebe 2024",
+    "event_type": "concert",
+    "start_date": "2024-01-20",
+    "end_date": "2024-01-20",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-01-20",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Afterpárty Svět sám pro sebe 2024"
+  },
+  {
+    "id": "houba-2024-02-23-praha",
+    "name": "Houba/Volant Tour",
+    "event_type": "concert",
+    "start_date": "2024-02-23",
+    "end_date": "2024-02-23",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-02-23",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba/Volant Tour"
+  },
+  {
+    "id": "houba-2024-02-24-ledec-nad-sazavou",
+    "name": "Phoenix",
+    "event_type": "concert",
+    "start_date": "2024-02-24",
+    "end_date": "2024-02-24",
+    "city": "Ledeč nad Sázavou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-02-24",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Phoenix"
+  },
+  {
+    "id": "houba-2024-03-08-uherske-hradiste",
+    "name": "Houba/Punk Floid Tour",
+    "event_type": "concert",
+    "start_date": "2024-03-08",
+    "end_date": "2024-03-08",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-03-08",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2024-03-08",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Houba/Punk Floid Tour"
+  },
+  {
+    "id": "houba-2024-03-09-opava",
+    "name": "Houba/Volant Tour",
+    "event_type": "concert",
+    "start_date": "2024-03-09",
+    "end_date": "2024-03-09",
+    "city": "Opava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-03-09",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba/Volant Tour"
+  },
+  {
+    "id": "houba-2024-03-15-litomerice",
+    "name": "Baronka + V.T.Marvin",
+    "event_type": "concert",
+    "start_date": "2024-03-15",
+    "end_date": "2024-03-15",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-03-15",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Baronka + V.T.Marvin"
+  },
+  {
+    "id": "houba-2024-03-16-ceske-budejovice",
+    "name": "Houba/Volant Tour",
+    "event_type": "concert",
+    "start_date": "2024-03-16",
+    "end_date": "2024-03-16",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-03-16",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba/Volant Tour"
+  },
+  {
+    "id": "houba-2024-03-30-police-nad-metuji",
+    "name": "10 let Bez šance, Houba/Volant",
+    "event_type": "concert",
+    "start_date": "2024-03-30",
+    "end_date": "2024-03-30",
+    "city": "Police nad Metují",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-03-30",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "10 let Bez šance, Houba/Volant"
+  },
+  {
+    "id": "houba-2024-04-19-decin",
+    "name": "Houba/Volant Tour",
+    "event_type": "concert",
+    "start_date": "2024-04-19",
+    "end_date": "2024-04-19",
+    "city": "Děčín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-04-19",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba/Volant Tour"
+  },
+  {
+    "id": "houba-2024-04-20-praha",
+    "name": "Číro fest 24",
+    "event_type": "festival",
+    "start_date": "2024-04-20",
+    "end_date": "2024-04-20",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-04-20",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2024-04-20",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Číro fest 24"
+  },
+  {
+    "id": "houba-2024-04-20-kralupy-nad-vltavou",
+    "name": "Kréta",
+    "event_type": "concert",
+    "start_date": "2024-04-20",
+    "end_date": "2024-04-20",
+    "city": "Kralupy nad Vltavou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-04-20",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Kréta"
+  },
+  {
+    "id": "houba-2023-05-05-praha",
+    "name": "Cross",
+    "event_type": "concert",
+    "start_date": "2023-05-05",
+    "end_date": "2023-05-05",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-05-05",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Cross"
+  },
+  {
+    "id": "houba-2023-05-06-liberec",
+    "name": "Houba",
+    "event_type": "concert",
+    "start_date": "2023-05-06",
+    "end_date": "2023-05-06",
+    "city": "Liberec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-05-06",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba"
+  },
+  {
+    "id": "houba-2023-06-09-usti-nad-labem",
+    "name": "Houba",
+    "event_type": "concert",
+    "start_date": "2023-06-09",
+    "end_date": "2023-06-09",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-06-09",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba"
+  },
+  {
+    "id": "houba-2023-06-10-strasice-u-rokycan",
+    "name": "Houba",
+    "event_type": "concert",
+    "start_date": "2023-06-10",
+    "end_date": "2023-06-10",
+    "city": "Strašice u Rokycan",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-06-10",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba"
+  },
+  {
+    "id": "houba-2023-06-25-tabor",
+    "name": "Mighty Sound Festival 2023",
+    "event_type": "festival",
+    "start_date": "2023-06-25",
+    "end_date": "2023-06-25",
+    "city": "Tábor",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-06-25",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Mighty Sound Festival 2023"
+  },
+  {
+    "id": "houba-2022-03-25-klatovy",
+    "name": "Nahrávání ExAvik Klatovy",
+    "event_type": "concert",
+    "start_date": "2022-03-25",
+    "end_date": "2022-03-25",
+    "city": "Klatovy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-03-25",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Nahrávání ExAvik Klatovy"
+  },
+  {
+    "id": "houba-2022-04-15-liberec",
+    "name": "Bunkr",
+    "event_type": "concert",
+    "start_date": "2022-04-15",
+    "end_date": "2022-04-15",
+    "city": "Liberec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-04-15",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Bunkr"
+  },
+  {
+    "id": "houba-2022-04-16-havlickuv-brod",
+    "name": "U Cecka",
+    "event_type": "concert",
+    "start_date": "2022-04-16",
+    "end_date": "2022-04-16",
+    "city": "Havlíčkův Brod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-04-16",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "U Cecka"
+  },
+  {
+    "id": "houba-2022-04-23-praha",
+    "name": "Číro fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-04-23",
+    "end_date": "2022-04-23",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-04-23",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Číro fest 2022"
+  },
+  {
+    "id": "houba-2022-06-23-praha",
+    "name": "Za koule punk fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-06-23",
+    "end_date": "2022-06-23",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-06-23",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2022-06-23",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Za koule punk fest 2022"
+  },
+  {
+    "id": "houba-2022-06-24-kremze",
+    "name": "Cihelna Vystupovat Fest",
+    "event_type": "festival",
+    "start_date": "2022-06-24",
+    "end_date": "2022-06-24",
+    "city": "Křemže",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-06-24",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Cihelna Vystupovat Fest"
+  },
+  {
+    "id": "houba-2022-07-22-police-nad-metuji",
+    "name": "Bez šance festival",
+    "event_type": "festival",
+    "start_date": "2022-07-22",
+    "end_date": "2022-07-22",
+    "city": "Police nad Metují",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-07-22",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Bez šance festival"
+  },
+  {
+    "id": "houba-2022-07-23-dobra-voda-u-pacova",
+    "name": "Vodafest",
+    "event_type": "festival",
+    "start_date": "2022-07-23",
+    "end_date": "2022-07-23",
+    "city": "Dobrá Voda u Pacova",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-07-23",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Vodafest"
+  },
+  {
+    "id": "houba-2022-08-20-volyne",
+    "name": "Summer Punk Párty",
+    "event_type": "festival",
+    "start_date": "2022-08-20",
+    "end_date": "2022-08-20",
+    "city": "Volyně",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-08-20",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Summer Punk Párty"
+  },
+  {
+    "id": "houba-2022-08-26-pobiedna",
+    "name": "Ekofest",
+    "event_type": "festival",
+    "start_date": "2022-08-26",
+    "end_date": "2022-08-26",
+    "city": "Pobiedna",
+    "country_code": "PL",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-08-26",
+        "name": "HOUBA",
+        "country_code": "PL",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Ekofest"
+  },
+  {
+    "id": "houba-2022-09-23-brno",
+    "name": "Houba",
+    "event_type": "concert",
+    "start_date": "2022-09-23",
+    "end_date": "2022-09-23",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-09-23",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba"
+  },
+  {
+    "id": "houba-2022-09-24-frydek-mistek",
+    "name": "Houba",
+    "event_type": "concert",
+    "start_date": "2022-09-24",
+    "end_date": "2022-09-24",
+    "city": "Frýdek-Místek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-09-24",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba"
+  },
+  {
+    "id": "houba-2022-10-15-trutnov",
+    "name": "Bojiště",
+    "event_type": "festival",
+    "start_date": "2022-10-15",
+    "end_date": "2022-10-15",
+    "city": "Trutnov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-10-15",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2022-10-15",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive",
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Bojiště"
+  },
+  {
+    "id": "houba-2021-06-12-police-nad-metuji",
+    "name": "Křest CD Bez Šance",
+    "event_type": "concert",
+    "start_date": "2021-06-12",
+    "end_date": "2021-06-12",
+    "city": "Police nad Metují",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-06-12",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Křest CD Bez Šance"
+  },
+  {
+    "id": "houba-2021-06-19-kolin",
+    "name": "Garáže U Cihelny",
+    "event_type": "concert",
+    "start_date": "2021-06-19",
+    "end_date": "2021-06-19",
+    "city": "Kolín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-06-19",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Garáže U Cihelny"
+  },
+  {
+    "id": "houba-2021-06-19-louny",
+    "name": "Křikloun Fest",
+    "event_type": "festival",
+    "start_date": "2021-06-19",
+    "end_date": "2021-06-19",
+    "city": "Louny",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-06-19",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Křikloun Fest"
+  },
+  {
+    "id": "houba-2021-06-25-usti-nad-labem",
+    "name": "Exil",
+    "event_type": "concert",
+    "start_date": "2021-06-25",
+    "end_date": "2021-06-25",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-06-25",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Exil"
+  },
+  {
+    "id": "houba-2021-07-23-olesko",
+    "name": "Oleško Open Air 2021",
+    "event_type": "festival",
+    "start_date": "2021-07-23",
+    "end_date": "2021-07-23",
+    "city": "Oleško",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-07-23",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Oleško Open Air 2021"
+  },
+  {
+    "id": "houba-2021-07-31-kdyne",
+    "name": "Rýzmberk festival",
+    "event_type": "festival",
+    "start_date": "2021-07-31",
+    "end_date": "2021-07-31",
+    "city": "Kdyně",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-07-31",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Rýzmberk festival"
+  },
+  {
+    "id": "houba-2021-07-31-vodnany",
+    "name": "Festa de la pohoda",
+    "event_type": "festival",
+    "start_date": "2021-07-31",
+    "end_date": "2021-07-31",
+    "city": "Vodňany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-07-31",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Festa de la pohoda"
+  },
+  {
+    "id": "houba-2021-08-06-praha",
+    "name": "Freedom forever fest",
+    "event_type": "festival",
+    "start_date": "2021-08-06",
+    "end_date": "2021-08-06",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-08-06",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Freedom forever fest"
+  },
+  {
+    "id": "houba-2021-08-07-chrudim",
+    "name": "letní kino",
+    "event_type": "concert",
+    "start_date": "2021-08-07",
+    "end_date": "2021-08-07",
+    "city": "Chrudim",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-08-07",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "letní kino"
+  },
+  {
+    "id": "houba-2021-08-07-dobra-voda-u-pacova",
+    "name": "Vodafest",
+    "event_type": "festival",
+    "start_date": "2021-08-07",
+    "end_date": "2021-08-07",
+    "city": "Dobrá Voda u Pacova",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-08-07",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Vodafest"
+  },
+  {
+    "id": "houba-2021-08-14-libochovice",
+    "name": "Jáma Fest",
+    "event_type": "festival",
+    "start_date": "2021-08-14",
+    "end_date": "2021-08-14",
+    "city": "Libochovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-08-14",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Jáma Fest"
+  },
+  {
+    "id": "houba-2021-08-28-mlekojedy",
+    "name": "Skate akce",
+    "event_type": "concert",
+    "start_date": "2021-08-28",
+    "end_date": "2021-08-28",
+    "city": "Mlékojedy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-08-28",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Skate akce"
+  },
+  {
+    "id": "houba-2021-09-18-praha",
+    "name": "Riot Over River 2021",
+    "event_type": "festival",
+    "start_date": "2021-09-18",
+    "end_date": "2021-09-18",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-09-18",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Riot Over River 2021"
+  },
+  {
+    "id": "houba-2020-01-17-brno",
+    "name": "Houba v Brně",
+    "event_type": "concert",
+    "start_date": "2020-01-17",
+    "end_date": "2020-01-17",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-01-17",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba v Brně"
+  },
+  {
+    "id": "houba-2020-01-18-kosice",
+    "name": "Houba v Košicích",
+    "event_type": "concert",
+    "start_date": "2020-01-18",
+    "end_date": "2020-01-18",
+    "city": "Košice",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-01-18",
+        "name": "HOUBA",
+        "country_code": "SK",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba v Košicích"
+  },
+  {
+    "id": "houba-2020-06-13-strasice-u-rokycan",
+    "name": "Koupák vítá léto 2020",
+    "event_type": "festival",
+    "start_date": "2020-06-13",
+    "end_date": "2020-06-13",
+    "city": "Strašice u Rokycan",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-06-13",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Koupák vítá léto 2020"
+  },
+  {
+    "id": "houba-2020-08-07-hradec-kralove",
+    "name": "Houba v Hradci Králové",
+    "event_type": "concert",
+    "start_date": "2020-08-07",
+    "end_date": "2020-08-07",
+    "city": "Hradec Králové",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-08-07",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Houba v Hradci Králové"
+  },
+  {
+    "id": "houba-2020-08-08-petrovice-u-sedlcan",
+    "name": "Parkfest",
+    "event_type": "festival",
+    "start_date": "2020-08-08",
+    "end_date": "2020-08-08",
+    "city": "Petrovice u Sedlčan",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-08-08",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Parkfest"
+  },
+  {
+    "id": "houba-2020-08-14-ricany-u-prahy",
+    "name": "Starák fest 2020",
+    "event_type": "festival",
+    "start_date": "2020-08-14",
+    "end_date": "2020-08-14",
+    "city": "Říčany u Prahy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-08-14",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Starák fest 2020"
+  },
+  {
+    "id": "houba-2020-08-15-volyne",
+    "name": "Summer Punk Párty",
+    "event_type": "festival",
+    "start_date": "2020-08-15",
+    "end_date": "2020-08-15",
+    "city": "Volyně",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-08-15",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "Summer Punk Párty"
+  },
+  {
+    "id": "houba-2020-10-09-usti-nad-labem",
+    "name": "25 let kapely Houba – ŠŇŮRA 2020",
+    "event_type": "concert",
+    "start_date": "2020-10-09",
+    "end_date": "2020-10-09",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-10-09",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "25 let kapely Houba – ŠŇŮRA 2020"
+  },
+  {
+    "id": "houba-2020-10-10-jindrichuv-hradec",
+    "name": "ŠŇŮRA 2020",
+    "event_type": "concert",
+    "start_date": "2020-10-10",
+    "end_date": "2020-10-10",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-10-10",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-houba-official-archive"
+    ],
+    "venue_name": "ŠŇŮRA 2020"
+  },
+  {
+    "id": "punk-floid-2026-11-27-praha",
+    "name": "Vagon",
+    "event_type": "concert",
+    "start_date": "2026-11-27",
+    "end_date": "2026-11-27",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-11-27",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Vagon"
+  },
+  {
+    "id": "punk-floid-2026-11-14-pardubice",
+    "name": "Krásný Volant Fest",
+    "event_type": "festival",
+    "start_date": "2026-11-14",
+    "end_date": "2026-11-14",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-11-14",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Krásný Volant Fest"
+  },
+  {
+    "id": "punk-floid-2026-11-07-lesnice",
+    "name": "Kulturák",
+    "event_type": "concert",
+    "start_date": "2026-11-07",
+    "end_date": "2026-11-07",
+    "city": "Lesnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-11-07",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Kulturák"
+  },
+  {
+    "id": "punk-floid-2026-10-24-jindrichuv-hradec",
+    "name": "KD Jituna",
+    "event_type": "concert",
+    "start_date": "2026-10-24",
+    "end_date": "2026-10-24",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-10-24",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "KD Jituna"
+  },
+  {
+    "id": "punk-floid-2026-10-17-bridla",
+    "name": "Břidla Free Fest",
+    "event_type": "festival",
+    "start_date": "2026-10-17",
+    "end_date": "2026-10-17",
+    "city": "Břidla",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-10-17",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Břidla Free Fest"
+  },
+  {
+    "id": "punk-floid-2026-10-09-litomerice",
+    "name": "Baronka",
+    "event_type": "concert",
+    "start_date": "2026-10-09",
+    "end_date": "2026-10-09",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-10-09",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Baronka"
+  },
+  {
+    "id": "punk-floid-2026-10-03-brno",
+    "name": "Melodka",
+    "event_type": "concert",
+    "start_date": "2026-10-03",
+    "end_date": "2026-10-03",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-10-03",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Melodka"
+  },
+  {
+    "id": "punk-floid-2026-09-05-dolany",
+    "name": "Punk Floid",
+    "event_type": "concert",
+    "start_date": "2026-09-05",
+    "end_date": "2026-09-05",
+    "city": "Dolany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-09-05",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punk Floid"
+  },
+  {
+    "id": "punk-floid-2026-08-22-holesov",
+    "name": "Mayday fest",
+    "event_type": "festival",
+    "start_date": "2026-08-22",
+    "end_date": "2026-08-22",
+    "city": "Holešov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-08-22",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Mayday fest"
+  },
+  {
+    "id": "punk-floid-2026-08-01-chvalkov",
+    "name": "Kravín Fest",
+    "event_type": "festival",
+    "start_date": "2026-08-01",
+    "end_date": "2026-08-01",
+    "city": "Chválkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-08-01",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Kravín Fest"
+  },
+  {
+    "id": "punk-floid-2026-08-01-trebiz",
+    "name": "Let's Go Fest",
+    "event_type": "festival",
+    "start_date": "2026-08-01",
+    "end_date": "2026-08-01",
+    "city": "Třebíz",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-08-01",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Let's Go Fest"
+  },
+  {
+    "id": "punk-floid-2026-07-11-soprec",
+    "name": "Čmoud Fest",
+    "event_type": "festival",
+    "start_date": "2026-07-11",
+    "end_date": "2026-07-11",
+    "city": "Sopřeč",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-07-11",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Čmoud Fest"
+  },
+  {
+    "id": "punk-floid-2026-06-26-tabor",
+    "name": "Mighty Sounds",
+    "event_type": "festival",
+    "start_date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "city": "Tábor",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-06-26",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Mighty Sounds"
+  },
+  {
+    "id": "punk-floid-2026-06-20-olomouc",
+    "name": "Zatrest fest",
+    "event_type": "festival",
+    "start_date": "2026-06-20",
+    "end_date": "2026-06-20",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-06-20",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Zatrest fest"
+  },
+  {
+    "id": "punk-floid-2026-06-20-benesov",
+    "name": "Punkrock for Ferdinand",
+    "event_type": "festival",
+    "start_date": "2026-06-20",
+    "end_date": "2026-06-20",
+    "city": "Benešov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-06-20",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punkrock for Ferdinand"
+  },
+  {
+    "id": "punk-floid-2026-06-13-ujezd-u-prelouce",
+    "name": "Punkplugged",
+    "event_type": "festival",
+    "start_date": "2026-06-13",
+    "end_date": "2026-06-13",
+    "city": "Újezd u Přelouče",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-06-13",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punkplugged"
+  },
+  {
+    "id": "punk-floid-2026-04-18-liberec",
+    "name": "Bunkr",
+    "event_type": "concert",
+    "start_date": "2026-04-18",
+    "end_date": "2026-04-18",
+    "city": "Liberec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-04-18",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Bunkr"
+  },
+  {
+    "id": "punk-floid-2026-04-10-kunstat",
+    "name": "KD",
+    "event_type": "concert",
+    "start_date": "2026-04-10",
+    "end_date": "2026-04-10",
+    "city": "Kunštát",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-04-10",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "punk-floid-2026-03-19-praha",
+    "name": "Futurum",
+    "event_type": "concert",
+    "start_date": "2026-03-19",
+    "end_date": "2026-03-19",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-03-19",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Futurum"
+  },
+  {
+    "id": "punk-floid-2026-02-27-brno",
+    "name": "První patro",
+    "event_type": "concert",
+    "start_date": "2026-02-27",
+    "end_date": "2026-02-27",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-02-27",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "První patro"
+  },
+  {
+    "id": "punk-floid-2026-02-07-nikolcice",
+    "name": "Punk Floid",
+    "event_type": "concert",
+    "start_date": "2026-02-07",
+    "end_date": "2026-02-07",
+    "city": "Nikolčice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-02-07",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punk Floid"
+  },
+  {
+    "id": "punk-floid-2026-01-22-praha",
+    "name": "Lucerna Music Bar",
+    "event_type": "concert",
+    "start_date": "2026-01-22",
+    "end_date": "2026-01-22",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-01-22",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Lucerna Music Bar"
+  },
+  {
+    "id": "punk-floid-2025-11-07-zabreh",
+    "name": "Klub Ve Zdi",
+    "event_type": "concert",
+    "start_date": "2025-11-07",
+    "end_date": "2025-11-07",
+    "city": "Zábřeh",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-11-07",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Klub Ve Zdi"
+  },
+  {
+    "id": "punk-floid-2025-11-01-vrchlabi",
+    "name": "KD Střelnice – křest CD Driáku",
+    "event_type": "concert",
+    "start_date": "2025-11-01",
+    "end_date": "2025-11-01",
+    "city": "Vrchlabí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-11-01",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "KD Střelnice – křest CD Driáku"
+  },
+  {
+    "id": "punk-floid-2025-10-18-trencin",
+    "name": "Klub Lúč",
+    "event_type": "concert",
+    "start_date": "2025-10-18",
+    "end_date": "2025-10-18",
+    "city": "Trenčín",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-10-18",
+        "name": "PUNK FLOID",
+        "country_code": "SK",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Klub Lúč"
+  },
+  {
+    "id": "punk-floid-2025-10-11-praha",
+    "name": "35 let Totální nasazení",
+    "event_type": "concert",
+    "start_date": "2025-10-11",
+    "end_date": "2025-10-11",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-10-11",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "35 let Totální nasazení"
+  },
+  {
+    "id": "punk-floid-2025-10-04-ceske-budejovice",
+    "name": "MC Fabrika",
+    "event_type": "concert",
+    "start_date": "2025-10-04",
+    "end_date": "2025-10-04",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-10-04",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "MC Fabrika"
+  },
+  {
+    "id": "punk-floid-2025-09-27-ostrava",
+    "name": "Barrák Music Club",
+    "event_type": "concert",
+    "start_date": "2025-09-27",
+    "end_date": "2025-09-27",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-09-27",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Barrák Music Club"
+  },
+  {
+    "id": "punk-floid-2025-01-11-brno",
+    "name": "Unleaded Coffee",
+    "event_type": "concert",
+    "start_date": "2025-01-11",
+    "end_date": "2025-01-11",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-01-11",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Unleaded Coffee"
+  },
+  {
+    "id": "punk-floid-2024-12-07-zdarna",
+    "name": "Punk Floid",
+    "event_type": "concert",
+    "start_date": "2024-12-07",
+    "end_date": "2024-12-07",
+    "city": "Žďárná",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-12-07",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punk Floid"
+  },
+  {
+    "id": "punk-floid-2024-11-16-pardubice",
+    "name": "Punk Floid",
+    "event_type": "concert",
+    "start_date": "2024-11-16",
+    "end_date": "2024-11-16",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-11-16",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punk Floid"
+  },
+  {
+    "id": "punk-floid-2024-11-09-lesnice",
+    "name": "Punk Floid",
+    "event_type": "concert",
+    "start_date": "2024-11-09",
+    "end_date": "2024-11-09",
+    "city": "Lesnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-11-09",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punk Floid"
+  },
+  {
+    "id": "punk-floid-2024-10-26-mladosovice",
+    "name": "Punk Floid",
+    "event_type": "concert",
+    "start_date": "2024-10-26",
+    "end_date": "2024-10-26",
+    "city": "Mladošovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-10-26",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punk Floid"
+  },
+  {
+    "id": "punk-floid-2024-08-30-trencin",
+    "name": "Punkáči deťom 2024",
+    "event_type": "festival",
+    "start_date": "2024-08-30",
+    "end_date": "2024-08-30",
+    "city": "Trenčín",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-08-30",
+        "name": "PUNK FLOID",
+        "country_code": "SK",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punkáči deťom 2024"
+  },
+  {
+    "id": "punk-floid-2024-08-17-slany",
+    "name": "Rock na Valníku",
+    "event_type": "festival",
+    "start_date": "2024-08-17",
+    "end_date": "2024-08-17",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-08-17",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Rock na Valníku"
+  },
+  {
+    "id": "punk-floid-2024-08-10-chrudim",
+    "name": "Punk Floid",
+    "event_type": "concert",
+    "start_date": "2024-08-10",
+    "end_date": "2024-08-10",
+    "city": "Chrudim",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-08-10",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punk Floid"
+  },
+  {
+    "id": "punk-floid-2024-05-10-kladno",
+    "name": "Auto Dafé",
+    "event_type": "concert",
+    "start_date": "2024-05-10",
+    "end_date": "2024-05-10",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-05-10",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Auto Dafé"
+  },
+  {
+    "id": "punk-floid-2024-04-13-frydek-mistek",
+    "name": "Art",
+    "event_type": "concert",
+    "start_date": "2024-04-13",
+    "end_date": "2024-04-13",
+    "city": "Frýdek-Místek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-04-13",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Art"
+  },
+  {
+    "id": "punk-floid-2024-04-06-velke-losiny",
+    "name": "Punk Floid",
+    "event_type": "concert",
+    "start_date": "2024-04-06",
+    "end_date": "2024-04-06",
+    "city": "Velké Losiny",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-04-06",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punk Floid"
+  },
+  {
+    "id": "punk-floid-2024-01-20-brno",
+    "name": "NoFet Cup",
+    "event_type": "concert",
+    "start_date": "2024-01-20",
+    "end_date": "2024-01-20",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-01-20",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "NoFet Cup"
+  },
+  {
+    "id": "punk-floid-2023-12-01-kladno",
+    "name": "Black Road Café",
+    "event_type": "concert",
+    "start_date": "2023-12-01",
+    "end_date": "2023-12-01",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-12-01",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Black Road Café"
+  },
+  {
+    "id": "punk-floid-2023-11-24-praha",
+    "name": "Rock Café",
+    "event_type": "concert",
+    "start_date": "2023-11-24",
+    "end_date": "2023-11-24",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-11-24",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Rock Café"
+  },
+  {
+    "id": "punk-floid-2023-11-04-zabreh",
+    "name": "Punk Floid",
+    "event_type": "concert",
+    "start_date": "2023-11-04",
+    "end_date": "2023-11-04",
+    "city": "Zábřeh",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-11-04",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Punk Floid"
+  },
+  {
+    "id": "punk-floid-2023-10-28-jindrichuv-hradec",
+    "name": "kulturák",
+    "event_type": "concert",
+    "start_date": "2023-10-28",
+    "end_date": "2023-10-28",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-10-28",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "kulturák"
+  },
+  {
+    "id": "punk-floid-2022-10-27-brno",
+    "name": "Melodka",
+    "event_type": "concert",
+    "start_date": "2022-10-27",
+    "end_date": "2022-10-27",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-10-27",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Melodka"
+  },
+  {
+    "id": "punk-floid-2022-07-29-vyskov",
+    "name": "Pod Parou Fest",
+    "event_type": "festival",
+    "start_date": "2022-07-29",
+    "end_date": "2022-07-29",
+    "city": "Vyškov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-07-29",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Pod Parou Fest"
+  },
+  {
+    "id": "punk-floid-2022-06-25-brnenec",
+    "name": "Brněnec Fest",
+    "event_type": "festival",
+    "start_date": "2022-06-25",
+    "end_date": "2022-06-25",
+    "city": "Brněnec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-06-25",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Brněnec Fest"
+  },
+  {
+    "id": "punk-floid-2022-05-14-nove-mesto-nad-vahom",
+    "name": "Happy Punk",
+    "event_type": "concert",
+    "start_date": "2022-05-14",
+    "end_date": "2022-05-14",
+    "city": "Nové Mesto nad Váhom",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-05-14",
+        "name": "PUNK FLOID",
+        "country_code": "SK",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Happy Punk"
+  },
+  {
+    "id": "punk-floid-2022-04-02-jindrichuv-hradec",
+    "name": "Lucky Pery",
+    "event_type": "concert",
+    "start_date": "2022-04-02",
+    "end_date": "2022-04-02",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-04-02",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Lucky Pery"
+  },
+  {
+    "id": "punk-floid-2022-03-22-zabreh",
+    "name": "Koncert pro Ukrajinu",
+    "event_type": "concert",
+    "start_date": "2022-03-22",
+    "end_date": "2022-03-22",
+    "city": "Zábřeh",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-03-22",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Koncert pro Ukrajinu"
+  },
+  {
+    "id": "punk-floid-2021-08-20-slany",
+    "name": "Rock na Valníku",
+    "event_type": "festival",
+    "start_date": "2021-08-20",
+    "end_date": "2021-08-20",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-08-20",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Rock na Valníku"
+  },
+  {
+    "id": "punk-floid-2020-06-25-praha",
+    "name": "Za koule Punk Fest",
+    "event_type": "festival",
+    "start_date": "2020-06-25",
+    "end_date": "2020-06-25",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-06-25",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      }
+    ],
+    "source_ids": [
+      "src-punkfloid-official-archive"
+    ],
+    "venue_name": "Za koule Punk Fest"
   }
 ]

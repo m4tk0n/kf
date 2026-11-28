@@ -412,5 +412,60 @@
       "src-fialky-official-concert-archive"
     ],
     "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "nezfales-houba-tour-autumn-2024",
+    "name": "NEŽFALEŠ + HOUBA podzim 2024",
+    "start_date": "2024-10-04",
+    "end_date": "2024-12-06",
+    "band_ids": [
+      "nezfales",
+      "houba"
+    ],
+    "event_ids": [
+      "nezfales-2024-12-06-litomerice",
+      "nezfales-2024-11-22-plzen",
+      "nezfales-2024-11-08-litomysl",
+      "nezfales-2024-10-19-bohuslavice",
+      "nezfales-2024-10-18-praha",
+      "nezfales-2024-10-05-klatovy",
+      "nezfales-2024-10-04-racice"
+    ],
+    "country_codes": [
+      "CZ"
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "verification": "official_band_archive"
+  },
+  {
+    "id": "nezfales-houba-tour-autumn-2026",
+    "name": "NEŽFALEŠ + HOUBA podzim 2026",
+    "start_date": "2026-09-04",
+    "end_date": "2026-11-07",
+    "band_ids": [
+      "nezfales",
+      "houba"
+    ],
+    "event_ids": [
+      "nezfales-2026-11-07-praha",
+      "nezfales-2026-11-06-znojmo",
+      "nezfales-2026-10-24-zilina",
+      "nezfales-2026-10-23-kosice",
+      "nezfales-2026-10-03-liberec",
+      "nezfales-2026-10-02-kladno",
+      "nezfales-2026-09-04-litomerice"
+    ],
+    "country_codes": [
+      "CZ",
+      "SK"
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive",
+      "src-houba-official-archive"
+    ],
+    "verification": "official_band_archive"
   }
 ]
