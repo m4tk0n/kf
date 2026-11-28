@@ -288,6 +288,21 @@ return [
         ],
     ],
 
+    // Historický výzkum koncertů: chráněný PHP worker volaný z GitHub Actions.
+    'seed_research' => [
+        'enabled' => true,
+        'key_env' => 'AI_WRITE_KEY', // existující tajný klíč v .env; žádný nový model/API klíč
+        'max_queries_per_request' => 12,
+        'query_timeout_sec' => 12,
+        'query_delay_ms' => 600,
+        'search_endpoint' => 'https://www.bing.com/search',
+        'queue_file' => 'Install/seed_priprava/band_queue.json',
+        'state_file' => 'Install/seed_priprava/automation_state.json',
+        'results_file' => 'Install/seed_priprava/candidates/search_results.jsonl',
+        'query_log_file' => 'Install/seed_priprava/candidates/search_queries.jsonl',
+        'lock_file' => 'cron/seed_research.lock',
+    ],
+
     'review' => [
         'lock_ttl_sec' => 900,
     ],
