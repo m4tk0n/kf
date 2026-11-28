@@ -1,0 +1,14 @@
+# Kapely zjištěné v koncertní historii The Trousers – rok 2011
+# Formát: název | město původu | stát původu | žánr | zdroje | poznámka
+
+The Trousers | Budapešť | Maďarsko | garage rock / hard rock / rock'n'roll | 2011-S01; 2011-S02 | Stejná kanonická maďarská kapela jako v ostatních ročnících.
+Dead Pope's Company | neuvedeno | Česko | garage-glam; indie rock | 2011-S02; 2010-S03 | Stejná kapela jako na koncertu v Budapešti roku 2010; český původ a žánrové zařazení doloženo zdrojem 2010-S03.
+Carbovaris | neuvedeno | neuvedeno | neuvedeno | 2011-S01 | Účast na koncertu doložena; identitu, původ a žánr ověřit.
+Lo-fi Stereo | neuvedeno | neuvedeno | neuvedeno | 2011-S01 | Účast na koncertu doložena; identitu, původ a žánr ověřit.
+Superego | neuvedeno | neuvedeno | neuvedeno | 2011-S01 | Účast na koncertu doložena; identitu, původ a žánr ověřit.
+Moog | neuvedeno | neuvedeno | neuvedeno | 2011-S01 | Název může označovat více kapel; identitu ověřit před sloučením s jinými záznamy.
+Pills | neuvedeno | neuvedeno | neuvedeno | 2011-S01 | Účast na koncertu doložena; identitu, původ a žánr ověřit.
+Zombie Girlfriend | neuvedeno | neuvedeno | neuvedeno | 2011-S01 | Účast na koncertu doložena; identitu, původ a žánr ověřit.
+Hol Van Ilyenkor a Rendőrség | neuvedeno | neuvedeno | neuvedeno | 2011-S01 | Účast na koncertu doložena; přesný název a identitu ověřit.
+Calico Island | neuvedeno | neuvedeno | neuvedeno | 2011-S01 | Účast na koncertu doložena; identitu, původ a žánr ověřit.
+Hammer of Gods | neuvedeno | neuvedeno | neuvedeno | 2011-S01 | Název může označovat více interpretů; identitu ověřit před sloučením.
