@@ -1,0 +1,44 @@
+# Kapely zjištěné v akcích roku 2025
+# Formát: název | město původu | stát původu | žánr | zdroje | poznámka
+# Tento soubor se doplňuje po samostatném ověření identity, koncertní historie, původu a žánru.
+# Zatím jsou zde uvedeny pouze identity účinkujících doložené line-upy; neověřený původ a žánr zůstávají prázdné.
+
+BANDA | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+JUST WÄR | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+CENSORSHIT | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+FAST FOOD ORCHESTRA | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+DOWNSET | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+ONE WAY SYSTEM | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+MOSCOW DEATH BRIGADE | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+SLIME | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+ČERTŮF PUNK | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+HLAVNÍ JISTIČ | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+TAKHLE VOLE | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+ROZTRHLEJ DEDÁČ | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+BARBAR PUNK | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 a Brněnecfestu 2026 doložena v ročníkových datech; identitu a další koncertní historii ověřit.
+ZATREST | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 a Brněnecfestu 2025 doložena; identitu a další koncertní historii ověřit.
+HANNIBAL LECTER | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+I.R.A. | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+HÉTKÖZNAPI CSALÓDÁSOK | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+THE DROWNS | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+TOTÁLNÍ NASAZENÍ | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 a Brněnecfestu 2025/2026 doložena; identitu a další koncertní historii ověřit.
+CONFLICT | neuvedeno | Spojené království | neuvedeno | 2025-S03 | Program výslovně označuje tuto kapelu jako UK; odlišná slovenská kapela KONFLIKT je samostatná identita.
+COCKNEY REJECTS | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+THE BABOON SHOW | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+STO ZVÍŘAT | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+APPLE JUICE | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+SESSION | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+GLEJT | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+HAZYDECAY | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+ZÁVIŠ | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+ILEGALITY | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+PUNK FLOID | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 a Brněnecfestu 2025/2026 doložena; identitu a další koncertní historii ověřit.
+HOUBA | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 a Pilsen Punk Open Air 2026 doložena; identitu a další koncertní historii ověřit.
+ULICZNY OPRYSZEK | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+N.V.Ú. | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 a Ptení 2026 doložena; identitu a další koncertní historii ověřit.
+KONFLIKT | neuvedeno | Slovensko | punk rock | 2025-S03; 2026-S16; 2027-S23 | Samostatná slovenská punk-rocková kapela, nezaměňovat s britskou kapelou Conflict.
+TOTAL CHAOS | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 a Brněnecfestu 2025 doložena; identitu a další koncertní historii ověřit.
+999 | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+E!E | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 a více akcích 2026 doložena; identitu a další koncertní historii ověřit.
+DESTRUCTIVE | neuvedeno | neuvedeno | neuvedeno | 2025-S03 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
+DEGRADACE | neuvedeno | neuvedeno | neuvedeno | 2025-S03; 2025-S04 | Účast na FPP 2025 doložena; identitu a další koncertní historii ověřit.
