@@ -1027,5 +1027,61 @@
     "status": "pending",
     "discovered_from": "Install/seed_priprava/2023/events.txt",
     "seed_year": 2023
+  },
+  {
+    "name": "Lowland Cowboys",
+    "key": "lowlandcowboys",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2014/events.txt",
+    "seed_year": 2014
+  },
+  {
+    "name": "[zalan]",
+    "key": "zalan",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2014/events.txt",
+    "seed_year": 2014
+  },
+  {
+    "name": "The Signature",
+    "key": "thesignature",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2014/events.txt",
+    "seed_year": 2014
+  },
+  {
+    "name": "Psycho Mutants",
+    "key": "psychomutants",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2014/events.txt",
+    "seed_year": 2014
+  },
+  {
+    "name": "Alba Hyseni Projekt",
+    "key": "albahyseniprojekt",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2014/events.txt",
+    "seed_year": 2014
+  },
+  {
+    "name": "Tankcsapda",
+    "key": "tankcsapda",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2014/events.txt",
+    "seed_year": 2014
+  },
+  {
+    "name": "Junkie Jack Flash",
+    "key": "junkiejackflash",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2014/events.txt",
+    "seed_year": 2014
+  },
+  {
+    "name": "Volume Under Kontroll",
+    "key": "volumeunderkontroll",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2014/events.txt",
+    "seed_year": 2014
   }
 ]
