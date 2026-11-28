@@ -1,0 +1,56 @@
+name: K&F historical concert research
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_tasks:
+        description: "Maximum research tasks in this run"
+        required: false
+        default: "4"
+      max_seconds:
+        description: "Maximum run time in seconds (hard cap 3300)"
+        required: false
+        default: "3300"
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kf-seed-research
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 58
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Run resumable research worker
+        env:
+          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-6.2-astra
+          MAX_TASKS: \${{ inputs.max_tasks || '4' }}
+          MAX_SECONDS: \${{ inputs.max_seconds || '3300' }}
+        run: |
+          set -euo pipefail
+          python3 scripts/seed_research.py
+
+      - name: Commit research candidates and checkpoint
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Install/seed_priprava/candidates Install/seed_priprava/automation_state.json Install/seed_priprava/band_queue.jsonl
+          if git diff --cached --quiet; then
+            echo "No new research candidates."
+            exit 0
+          fi
+          git commit -m "Update automated concert research candidates"
+          git push origin HEAD:main
