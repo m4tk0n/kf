@@ -381,13 +381,16 @@
   },
   {
     "id": "marno",
-    "name": "MARNO",
+    "name": "MÄRNO",
     "country_code": "CZ",
     "genres": [],
     "sources": [
       "src-punkgen-archive-2026"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "aliases": [
+      "MARNO"
+    ]
   },
   {
     "id": "interpunkce",

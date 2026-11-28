@@ -467,7 +467,7 @@
         "date": "2025-08-29",
         "name": "BERMUDSKEJ KVÁDR",
         "country_code": "CZ",
-        "band_id": "bermud skej-kvadr",
+        "band_id": "bermudskej-kvadr",
         "origin_status": "labelled_in_official_program"
       },
       {
@@ -995,7 +995,7 @@
         "date": "2026-04-02",
         "name": "MÄRNO",
         "country_code": "CZ",
-        "band_id": null
+        "band_id": "marno"
       },
       {
         "date": "2026-04-02",
@@ -1035,7 +1035,7 @@
         "date": "2026-04-04",
         "name": "MÄRNO",
         "country_code": "CZ",
-        "band_id": null
+        "band_id": "marno"
       },
       {
         "date": "2026-04-04",
