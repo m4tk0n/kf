@@ -9,7 +9,7 @@ Pracovní data se ukládají do JSON souborů. Akce jsou rozdělené podle kalen
 ## Hlavní postup
 
 1. Vezmi kapelu z `bands.json` v poli `aktual`.
-2. Procházej její doloženou koncertní historii postupně od roku 2026 zpět do roku 2000.
+2. Procházej její doloženou koncertní historii v libovolném pořadí. Nemusíš dokončit jeden kalendářní rok, než přejdeš k jiné nalezené akci nebo roku; koncerty zapisuj průběžně podle toho, na které narazíš.
 3. Akci ukládej do souboru `event_YYYY.json` podle roku jejího konání. Pokud už je v příslušném souboru v poli `aktual`, `ok` nebo `next`, znovu ji nezakládej.
 4. Novou akci přidej do `next` příslušného ročního souboru. Po ověření ji přesuň do `ok`.
 5. U každého místa konání ověř, zda už existuje v `venues.json`. Pokud ne, přidej nové místo do `venues.json/next`.
@@ -27,7 +27,7 @@ Pracovní data se ukládají do JSON souborů. Akce jsou rozdělené podle kalen
 - `research_progress.txt` — checkpoint průzkumu a informace, kde pokračovat.
 - `evidence.json` — registr zdrojů a jednotlivých tvrzení, která zdroje potvrzují.
 - `research_log.txt` — stručný chronologický protokol dokončených dávek a dalších kroků.
-- `band_archive_index.json` — kontrolní seznam zdrojových archivů a ročních počtů položek pro aktuálně zpracovávanou kapelu; slouží ke kontrole, že nebyl přeskočen celý rok nebo část archivu.
+- `band_archive_index.json` — kontrolní seznam zdrojových archivů a ročních počtů položek pro aktuálně zpracovávanou kapelu; slouží ke kontrole, že nebyl přeskočen celý rok nebo část archivu, nikoli k určení pořadí práce.
 
 Každý soubor s kapelami, místy i akcemi používá pole `aktual`, `ok` a `next`:
 
@@ -97,6 +97,7 @@ Turné je samostatný nadřazený záznam se společným názvem. Každá zastá
 - Před zahájením zápisu jedné kapely zjisti všechny dostupné primární a sekundární archivy a zapiš je do `band_archive_index.json`.
 - Každý rok zpracuj celý, ne pouze několik prvních nalezených akcí. Počet položek v kontrolních archivech porovnej s počtem posouzených položek; rozdíly vysvětli (duplicitní záznam, soukromá akce, zrušení, ne koncert apod.).
 - Pokud existují dva nezávislé archivy, použij je ke křížové kontrole. Rozdílné počty nejsou automaticky chybou; každou odlišnost je nutné vysvětlit.
+- Roky lze zpracovávat v libovolném pořadí a průběžně se mezi nimi vracet. Není nutné dokončit jeden rok před zápisem akcí z jiného roku.
 - Dokud nejsou zkontrolovány všechny roky 2026–2000 a vyřešeny rozdíly v dostupných archivech, kapela zůstává v `bands.json/aktual`.
 - Průběžný stav každého roku zapisuj do `band_archive_index.json` a `research_progress.txt`.
 
