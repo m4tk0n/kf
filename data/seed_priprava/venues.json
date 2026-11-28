@@ -26,5 +26,125 @@
       "src-punkaci-history"
     ],
     "verification": "venue_name_and_location_confirmed_exact_street_address_not_confirmed"
+  },
+  {
+    "id": "hajovna-zilina",
+    "name": "Hájovňa",
+    "city": "Žilina",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "basta-bardejov",
+    "name": "Bašta",
+    "city": "Bardejov",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "pod-chlistovskou-skalou-havlickuv-brod",
+    "name": "Pod Chlístovskou skálou",
+    "city": "Havlíčkův Brod",
+    "country_code": "CZ",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "zarazicka-hospoda-veseli-nad-moravou",
+    "name": "Zarazická Hospoda",
+    "city": "Veselí nad Moravou",
+    "country_code": "CZ",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "gogo-znojmo",
+    "name": "Gogo",
+    "city": "Znojmo",
+    "country_code": "CZ",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "collosseum-kosice",
+    "name": "Collosseum",
+    "city": "Košice",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "sibiř-brno",
+    "name": "Sibiř",
+    "city": "Brno",
+    "country_code": "CZ",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "kubik-trnava",
+    "name": "Kubík",
+    "city": "Trnava",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "klub-mir-uherske-hradiste",
+    "name": "Mír",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "zal ar-bratislava",
+    "name": "Žalár",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
   }
 ]

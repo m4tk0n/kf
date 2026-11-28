@@ -665,5 +665,411 @@
       "src-punkaci-home-2025",
       "src-punkaci-history"
     ]
+  },
+  {
+    "id": "punkgen-2020-zilina-hajovna-01-03",
+    "name": "Punk koncert – Hájovňa",
+    "event_type": "concert",
+    "start_date": "2020-01-03",
+    "end_date": "2020-01-03",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "hajovna-zilina",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2020-01-03",
+        "name": "RANA",
+        "country_code": "SK",
+        "band_id": "rana"
+      },
+      {
+        "date": "2020-01-03",
+        "name": "DISTAX",
+        "country_code": "SK",
+        "band_id": "distax"
+      },
+      {
+        "date": "2020-01-03",
+        "name": "JEŽIŠOVI PIVO NELEJ",
+        "country_code": "SK",
+        "band_id": "jezisovi-pivo-nelej"
+      },
+      {
+        "date": "2020-01-03",
+        "name": "DISKOTERROR SS",
+        "country_code": "SK",
+        "band_id": "diskoterror-ss"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2020"
+    ]
+  },
+  {
+    "id": "punkgen-2021-basta-bardejov-06-10",
+    "name": "Multižánrový festival v Baště",
+    "event_type": "festival",
+    "start_date": "2021-06-10",
+    "end_date": "2021-06-12",
+    "city": "Bardejov",
+    "country_code": "SK",
+    "venue_id": "basta-bardejov",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2021-06-11",
+        "name": "OTRAS",
+        "country_code": "SK",
+        "band_id": null
+      },
+      {
+        "date": "2021-06-11",
+        "name": "AHOJ",
+        "country_code": "SK",
+        "band_id": null
+      },
+      {
+        "date": "2021-06-11",
+        "name": "CAMELEON",
+        "country_code": "SK",
+        "band_id": null
+      },
+      {
+        "date": "2021-06-11",
+        "name": "NAZI TAMPONS",
+        "country_code": "SK",
+        "band_id": null
+      },
+      {
+        "date": "2021-06-11",
+        "name": "TVOI POSTOI",
+        "country_code": "SK",
+        "band_id": null
+      },
+      {
+        "date": "2021-06-11",
+        "name": "CTIB",
+        "country_code": "CZ",
+        "band_id": "ctib"
+      },
+      {
+        "date": "2021-06-11",
+        "name": "DÁŠA FON FĽAŠA",
+        "country_code": "SK",
+        "band_id": "dasa-fon-flasa"
+      },
+      {
+        "date": "2021-06-11",
+        "name": "MANON MEURT",
+        "country_code": "CZ",
+        "band_id": "manon-meurt"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2021"
+    ]
+  },
+  {
+    "id": "punkgen-2022-havlickuv-brod-07-01",
+    "name": "Punkový festival pod Chlístovskou skálou",
+    "event_type": "festival",
+    "start_date": "2022-07-01",
+    "end_date": "2022-07-02",
+    "city": "Havlíčkův Brod",
+    "country_code": "CZ",
+    "venue_id": "pod-chlistovskou-skalou-havlickuv-brod",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2022-07-01",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      },
+      {
+        "date": "2022-07-01",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "e-e"
+      },
+      {
+        "date": "2022-07-01",
+        "name": "NAČO NÁZOV",
+        "country_code": "SK",
+        "band_id": "naco-nazov"
+      },
+      {
+        "date": "2022-07-01",
+        "name": "ILEGALITY",
+        "country_code": "SK",
+        "band_id": "ilegality"
+      },
+      {
+        "date": "2022-07-01",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      },
+      {
+        "date": "2022-07-01",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      },
+      {
+        "date": "2022-07-01",
+        "name": "DO ŘADY!",
+        "country_code": "CZ",
+        "band_id": "do-rady"
+      },
+      {
+        "date": "2022-07-01",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2022"
+    ]
+  },
+  {
+    "id": "punkgen-2024-veseli-02-02",
+    "name": "ROZPOR / MARNO / DISTAX",
+    "event_type": "concert",
+    "start_date": "2024-02-02",
+    "end_date": "2024-02-02",
+    "city": "Veselí nad Moravou",
+    "country_code": "CZ",
+    "venue_id": "zarazicka-hospoda-veseli-nad-moravou",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2024-02-02",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      },
+      {
+        "date": "2024-02-02",
+        "name": "MARNO",
+        "country_code": "CZ",
+        "band_id": "marno"
+      },
+      {
+        "date": "2024-02-02",
+        "name": "DISTAX",
+        "country_code": "SK",
+        "band_id": "distax"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2024"
+    ]
+  },
+  {
+    "id": "punkgen-2024-znojmo-02-03",
+    "name": "ROZPOR / MARNO / DISTAX",
+    "event_type": "concert",
+    "start_date": "2024-02-03",
+    "end_date": "2024-02-03",
+    "city": "Znojmo",
+    "country_code": "CZ",
+    "venue_id": "gogo-znojmo",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2024-02-03",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      },
+      {
+        "date": "2024-02-03",
+        "name": "MARNO",
+        "country_code": "CZ",
+        "band_id": "marno"
+      },
+      {
+        "date": "2024-02-03",
+        "name": "DISTAX",
+        "country_code": "SK",
+        "band_id": "distax"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2024"
+    ]
+  },
+  {
+    "id": "punkgen-2025-kosice-03-14",
+    "name": "INTERPUNKCE / INCRIMINATE / LICKSPIT / DIKTÄT",
+    "event_type": "concert",
+    "start_date": "2025-03-14",
+    "end_date": "2025-03-14",
+    "city": "Košice",
+    "country_code": "SK",
+    "venue_id": "collosseum-kosice",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2025-03-14",
+        "name": "INTERPUNKCE",
+        "country_code": "CZ",
+        "band_id": "interpunkce"
+      },
+      {
+        "date": "2025-03-14",
+        "name": "INCRIMINATE",
+        "country_code": "SK",
+        "band_id": "incriminate"
+      },
+      {
+        "date": "2025-03-14",
+        "name": "LICKSPIT",
+        "country_code": "CZ",
+        "band_id": "lickspit"
+      },
+      {
+        "date": "2025-03-14",
+        "name": "DIKTÄT",
+        "country_code": "SK",
+        "band_id": "diktat"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2025"
+    ]
+  },
+  {
+    "id": "punkgen-2026-trnava-01-23",
+    "name": "50M ZNAK / BUCHTY/NOUZE / FAVORITE OBSESSION / GOOFY GINZ",
+    "event_type": "concert",
+    "start_date": "2026-01-23",
+    "end_date": "2026-01-23",
+    "city": "Trnava",
+    "country_code": "SK",
+    "venue_id": "kubik-trnava",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-01-23",
+        "name": "50M ZNAK",
+        "country_code": "CZ",
+        "band_id": null
+      },
+      {
+        "date": "2026-01-23",
+        "name": "BUCHTY/NOUZE",
+        "country_code": "CZ",
+        "band_id": "buchty-nouze"
+      },
+      {
+        "date": "2026-01-23",
+        "name": "FAVORITE OBSESSION",
+        "country_code": "CZ",
+        "band_id": "favorite-obsession"
+      },
+      {
+        "date": "2026-01-23",
+        "name": "GOOFY GINZ",
+        "country_code": "CZ",
+        "band_id": "goofy-ginz"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-uherske-hradiste-04-02",
+    "name": "ANCST / MÄRNO / DNO / NO GOD RHETORIC",
+    "event_type": "concert",
+    "start_date": "2026-04-02",
+    "end_date": "2026-04-02",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": "klub-mir-uherske-hradiste",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-04-02",
+        "name": "MÄRNO",
+        "country_code": "CZ",
+        "band_id": null
+      },
+      {
+        "date": "2026-04-02",
+        "name": "DNO",
+        "country_code": "CZ",
+        "band_id": null
+      },
+      {
+        "date": "2026-04-02",
+        "name": "NO GOD RHETORIC",
+        "country_code": "CZ",
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-bratislava-04-04",
+    "name": "ANCST / MÄRNO / WARGAME",
+    "event_type": "concert",
+    "start_date": "2026-04-04",
+    "end_date": "2026-04-04",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": "zal ar-bratislava",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-04-04",
+        "name": "MÄRNO",
+        "country_code": "CZ",
+        "band_id": null
+      },
+      {
+        "date": "2026-04-04",
+        "name": "WARGAME",
+        "country_code": "SK",
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-brno-04-18",
+    "name": "MY O VLKOCH / INTERPUNKCE / KOMPLEX VINY / ROZRUCH / KURARE",
+    "event_type": "concert",
+    "start_date": "2026-04-18",
+    "end_date": "2026-04-18",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": "sibiř-brno",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-04-18",
+        "name": "MY O VLKOCH",
+        "country_code": "SK",
+        "band_id": "my-o-vlkoch"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "INTERPUNKCE",
+        "country_code": "CZ",
+        "band_id": "interpunkce"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
   }
 ]

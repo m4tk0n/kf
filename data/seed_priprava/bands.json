@@ -248,5 +248,285 @@
       "src-podparou-lineup-2025"
     ],
     "verification": "country_confirmed_by_official_program_label"
+  },
+  {
+    "id": "rana",
+    "name": "RANA",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "distax",
+    "name": "DISTAX",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "jezisovi-pivo-nelej",
+    "name": "JEŽIŠOVI PIVO NELEJ",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "diskoterror-ss",
+    "name": "DISKOTERROR SS",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "ctib",
+    "name": "CTIB",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "dasa-fon-flasa",
+    "name": "DÁŠA FON FĽAŠA",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "manon-meurt",
+    "name": "MANON MEURT",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "sps",
+    "name": "SPS",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "e-e",
+    "name": "E!E",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "naco-nazov",
+    "name": "NAČO NÁZOV",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "zemeluc",
+    "name": "ZEMĚŽLUČ",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "do-rady",
+    "name": "DO ŘADY!",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "rozpor",
+    "name": "ROZPOR",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "marno",
+    "name": "MARNO",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "interpunkce",
+    "name": "INTERPUNKCE",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "lickspit",
+    "name": "LICKSPIT",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "incriminate",
+    "name": "INCRIMINATE",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "diktat",
+    "name": "DIKTÄT",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "my-o-vlkoch",
+    "name": "MY O VLKOCH",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "godot-youth",
+    "name": "GODOT YOUTH",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "pipesh",
+    "name": "PIPESH",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "plesen",
+    "name": "PLESEŇ",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "buchty-nouze",
+    "name": "BUCHTY/NOUZE",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "favorite-obsession",
+    "name": "FAVORITE OBSESSION",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "goofy-ginz",
+    "name": "GOOFY GINZ",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "barren",
+    "name": "BARREN",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "zabloudil-a",
+    "name": "ZABLOUDIL/A",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "jadran",
+    "name": "JADRAN",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
   }
 ]

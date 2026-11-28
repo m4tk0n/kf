@@ -77,5 +77,131 @@
       "event_archive",
       "venue_coordinates"
     ]
+  },
+  {
+    "id": "src-punkgen-archive-2020",
+    "name": "PUNKGEN – koncerty 2020",
+    "url": "https://www.punkgen.sk/koncerty.php?year=2020",
+    "publisher": "PUNKGEN",
+    "source_type": "community_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "venue_names_and_cities",
+      "lineups",
+      "country_labels_when_present"
+    ],
+    "limitations": [
+      "Komunitní archiv; údaje o zrušených akcích a změnách je nutné ověřovat.",
+      "U záznamů bez explicitního označení původu kapely se country_code nedoplňuje odhadem."
+    ]
+  },
+  {
+    "id": "src-punkgen-archive-2021",
+    "name": "PUNKGEN – koncerty 2021",
+    "url": "https://www.punkgen.sk/koncerty.php?year=2021",
+    "publisher": "PUNKGEN",
+    "source_type": "community_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "venue_names_and_cities",
+      "lineups",
+      "country_labels_when_present"
+    ],
+    "limitations": [
+      "Komunitní archiv; údaje o zrušených akcích a změnách je nutné ověřovat.",
+      "U záznamů bez explicitního označení původu kapely se country_code nedoplňuje odhadem."
+    ]
+  },
+  {
+    "id": "src-punkgen-archive-2022",
+    "name": "PUNKGEN – koncerty 2022",
+    "url": "https://www.punkgen.sk/koncerty.php?year=2022",
+    "publisher": "PUNKGEN",
+    "source_type": "community_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "venue_names_and_cities",
+      "lineups",
+      "country_labels_when_present"
+    ],
+    "limitations": [
+      "Komunitní archiv; údaje o zrušených akcích a změnách je nutné ověřovat.",
+      "U záznamů bez explicitního označení původu kapely se country_code nedoplňuje odhadem."
+    ]
+  },
+  {
+    "id": "src-punkgen-archive-2023",
+    "name": "PUNKGEN – koncerty 2023",
+    "url": "https://www.punkgen.sk/koncerty.php?year=2023",
+    "publisher": "PUNKGEN",
+    "source_type": "community_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "venue_names_and_cities",
+      "lineups",
+      "country_labels_when_present"
+    ],
+    "limitations": [
+      "Komunitní archiv; údaje o zrušených akcích a změnách je nutné ověřovat.",
+      "U záznamů bez explicitního označení původu kapely se country_code nedoplňuje odhadem."
+    ]
+  },
+  {
+    "id": "src-punkgen-archive-2024",
+    "name": "PUNKGEN – koncerty 2024",
+    "url": "https://www.punkgen.sk/koncerty.php?year=2024",
+    "publisher": "PUNKGEN",
+    "source_type": "community_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "venue_names_and_cities",
+      "lineups",
+      "country_labels_when_present"
+    ],
+    "limitations": [
+      "Komunitní archiv; údaje o zrušených akcích a změnách je nutné ověřovat.",
+      "U záznamů bez explicitního označení původu kapely se country_code nedoplňuje odhadem."
+    ]
+  },
+  {
+    "id": "src-punkgen-archive-2025",
+    "name": "PUNKGEN – koncerty 2025",
+    "url": "https://www.punkgen.sk/koncerty.php?year=2025",
+    "publisher": "PUNKGEN",
+    "source_type": "community_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "venue_names_and_cities",
+      "lineups",
+      "country_labels_when_present"
+    ],
+    "limitations": [
+      "Komunitní archiv; údaje o zrušených akcích a změnách je nutné ověřovat.",
+      "U záznamů bez explicitního označení původu kapely se country_code nedoplňuje odhadem."
+    ]
+  },
+  {
+    "id": "src-punkgen-archive-2026",
+    "name": "PUNKGEN – koncerty 2026",
+    "url": "https://www.punkgen.sk/koncerty.php?year=2026",
+    "publisher": "PUNKGEN",
+    "source_type": "community_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "venue_names_and_cities",
+      "lineups",
+      "country_labels_when_present"
+    ],
+    "limitations": [
+      "Komunitní archiv; údaje o zrušených akcích a změnách je nutné ověřovat.",
+      "U záznamů bez explicitního označení původu kapely se country_code nedoplňuje odhadem."
+    ]
   }
 ]
