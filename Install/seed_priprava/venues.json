@@ -81,6 +81,80 @@
         "https://dilemmaincinema.cz/",
         "https://thefialky.cz/odehrane-koncerty/"
       ]
+    },
+    {
+      "id": 7,
+      "name": "MeetFactory",
+      "city": "Praha",
+      "country": "CZ",
+      "address": "Ke Sklárně 3213/15, 150 00 Praha 5",
+      "url": "https://meetfactory.cz/",
+      "sources": [
+        "https://meetfactory.cz/cs/program/detail/punkrock-on-the-road-totalni-nasazeni-the-fialky-nezfales",
+        "https://www.meetfactory.cz/cs/kontakty"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Masters of Rock Café",
+      "city": "Zlín",
+      "country": "CZ",
+      "address": "Tyršovo nábřeží 5497, 760 01 Zlín",
+      "url": "https://www.mastersofrockcafe.cz/",
+      "sources": [
+        "https://www.mastersofrockcafe.cz/cs/koncerty/2026-punkrock-on-the-road-tour-2026",
+        "https://www.mastersofrockcafe.cz/cs/kontakt/"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "První Patro",
+      "city": "Brno",
+      "country": "CZ",
+      "address": "Dominikánská 342/19, 602 00 Brno",
+      "url": "https://patrobrno.cz/",
+      "sources": [
+        "https://patrobrno.cz/events/punkrock-on-the-road-tour-2026/",
+        "https://patrobrno.cz/kontakt/",
+        "https://patrobrno.cz/vop/"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "ABC klub",
+      "city": "Pardubice",
+      "country": "CZ",
+      "address": "Štolbova 2665, 530 02 Pardubice",
+      "url": "https://www.abcklub.cz/",
+      "sources": [
+        "https://bandzone.cz/koncert/557852-pardubice-abc-klub-punkrock-on-the-road-tour-2026",
+        "https://www.abcklub.cz/"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Dům kultury Liberec",
+      "city": "Liberec",
+      "country": "CZ",
+      "address": "náměstí Soukenné 613/3, 460 01 Liberec",
+      "url": "https://www.dkliberec.cz/",
+      "sources": [
+        "https://bandzone.cz/koncert/557853-liberec-dk-liberec-punkrock-on-the-road-tour-2026",
+        "https://www.dkliberec.cz/kontakty/"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Lidový dům Stará Role",
+      "city": "Karlovy Vary",
+      "country": "CZ",
+      "address": "Školní 358/7, 360 17 Karlovy Vary",
+      "url": "https://www.ldkv.cz/",
+      "sources": [
+        "https://bandzone.cz/koncert/557854-karlovy-vary-lidovy-dum-stara-role-punkrock-on-the-road-tour-2026",
+        "https://www.ldkv.cz/kontakty",
+        "https://www.ldkv.cz/udalost/totalni-nasazeni-the-fialky-nezfales-punkrock-on-the-road-tour-2026"
+      ]
     }
   ],
   "next": []
