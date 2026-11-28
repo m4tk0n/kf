@@ -66,6 +66,51 @@
       "source_type": "official_band_biography",
       "retrieved_on": "2026-11-28",
       "supports": "Oficialni pribeh kapely; uvadi vznik kapely v roce 2000, prazske prostredi a punkrockovy kontext."
+    },
+    {
+      "id": "SRC-0007",
+      "url": "https://thefialky.cz/author/kecup/",
+      "publisher": "The Fialky",
+      "title": "PUNKROCK ON THE ROAD – JARO TOUR 2026",
+      "source_type": "official_band_tour_announcement",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální oznámení jarního turné, jeho názvu a jedenácti zastávek včetně Bratislavy 14. 3. 2026."
+    },
+    {
+      "id": "SRC-0008",
+      "url": "https://totaci.cz/tn-english-info",
+      "publisher": "Totální nasazení",
+      "title": "Totální nasazení – English info",
+      "source_type": "official_band_biography",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální profil potvrzuje punkrockový žánr, český původ a město Slaný."
+    },
+    {
+      "id": "SRC-0009",
+      "url": "https://www.nezfales.cz/",
+      "publisher": "Nežfaleš",
+      "title": "Nežfaleš – oficiální web",
+      "source_type": "official_band_biography",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web označuje Nežfaleš za pražskou punkrockovou kapelu."
+    },
+    {
+      "id": "SRC-0010",
+      "url": "https://majestic.sk/kontakt/",
+      "publisher": "Majestic Music Club",
+      "title": "Kontakt",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální název Majestic Music Club a adresa Karpatská 2, Bratislava 811 05, Slovensko."
+    },
+    {
+      "id": "SRC-0011",
+      "url": "https://punkacidetom.sk/koncerty/",
+      "publisher": "Punkáči deťom",
+      "title": "Koncerty",
+      "source_type": "official_organizer",
+      "retrieved_on": "2026-11-28",
+      "supports": "Pořadatel uvádí 14. 3. 2026 akci Punk on the Road v MMC Bratislava a účinkující The Fialky, Totální Nasazení a Nežfaleš."
     }
   ],
   "claims": [
@@ -278,6 +323,205 @@
       "status": "verified",
       "source_ids": [
         "SRC-0006"
+      ]
+    },
+    {
+      "id": "CLM-0019",
+      "entity_type": "band",
+      "entity_id": 3,
+      "field": "identity",
+      "value": "Totální nasazení",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0008"
+      ]
+    },
+    {
+      "id": "CLM-0020",
+      "entity_type": "band",
+      "entity_id": 3,
+      "field": "genre",
+      "value": "punk rock",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0008"
+      ]
+    },
+    {
+      "id": "CLM-0021",
+      "entity_type": "band",
+      "entity_id": 3,
+      "field": "city_country",
+      "value": "Slaný, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0008"
+      ]
+    },
+    {
+      "id": "CLM-0022",
+      "entity_type": "band",
+      "entity_id": 4,
+      "field": "identity",
+      "value": "Nežfaleš",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0009"
+      ]
+    },
+    {
+      "id": "CLM-0023",
+      "entity_type": "band",
+      "entity_id": 4,
+      "field": "genre",
+      "value": "punk rock",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0009"
+      ]
+    },
+    {
+      "id": "CLM-0024",
+      "entity_type": "band",
+      "entity_id": 4,
+      "field": "city_country",
+      "value": "Praha, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0009"
+      ]
+    },
+    {
+      "id": "CLM-0025",
+      "entity_type": "venue",
+      "entity_id": 2,
+      "field": "name",
+      "value": "Majestic Music Club",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0010"
+      ]
+    },
+    {
+      "id": "CLM-0026",
+      "entity_type": "venue",
+      "entity_id": 2,
+      "field": "address",
+      "value": "Karpatská 2, 811 05 Bratislava",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0010"
+      ]
+    },
+    {
+      "id": "CLM-0027",
+      "entity_type": "venue",
+      "entity_id": 2,
+      "field": "city_country",
+      "value": "Bratislava, SK",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0010"
+      ]
+    },
+    {
+      "id": "CLM-0028",
+      "entity_type": "event",
+      "entity_id": 2,
+      "field": "name",
+      "value": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0007",
+        "SRC-0011"
+      ]
+    },
+    {
+      "id": "CLM-0029",
+      "entity_type": "event",
+      "entity_id": 2,
+      "field": "date",
+      "value": "2026-03-14",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0007",
+        "SRC-0011"
+      ]
+    },
+    {
+      "id": "CLM-0030",
+      "entity_type": "event",
+      "entity_id": 2,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0006"
+      ],
+      "note": "Oficiální archiv odehraných koncertů a shrnutí jarního turné potvrzují uskutečnění."
+    },
+    {
+      "id": "CLM-0031",
+      "entity_type": "event",
+      "entity_id": 2,
+      "field": "venue_id",
+      "value": 2,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0010",
+        "SRC-0011"
+      ]
+    },
+    {
+      "id": "CLM-0032",
+      "entity_type": "event",
+      "entity_id": 2,
+      "field": "lineup.band_id=1",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0006",
+        "SRC-0011"
+      ]
+    },
+    {
+      "id": "CLM-0033",
+      "entity_type": "event",
+      "entity_id": 2,
+      "field": "lineup.band_id=3",
+      "value": "Totální nasazení",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0011"
+      ]
+    },
+    {
+      "id": "CLM-0034",
+      "entity_type": "event",
+      "entity_id": 2,
+      "field": "lineup.band_id=4",
+      "value": "Nežfaleš",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0011"
+      ]
+    },
+    {
+      "id": "CLM-0035",
+      "entity_type": "event",
+      "entity_id": 2,
+      "field": "tour_id",
+      "value": "TOUR-003",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0007"
       ]
     }
   ]
