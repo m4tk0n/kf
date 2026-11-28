@@ -795,6 +795,150 @@
       "source_type": "official_festival_report",
       "retrieved_on": "2026-11-28",
       "supports": "Pořadatel potvrzuje, že Benátská! 2026 proběhla a skončila 26. 7. 2026."
+    },
+    {
+      "id": "SRC-0088",
+      "url": "https://rockforpeople.cz/kontakty/",
+      "publisher": "Rock for People",
+      "title": "Kontakty a adresa festivalu",
+      "source_type": "official_festival_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web potvrzuje festivalový areál Park 360 v Hradci Králové a jeho GPS."
+    },
+    {
+      "id": "SRC-0089",
+      "url": "https://www.ireport.cz/clanky/recenze/rock-for-people-den-1-legendy-agnostic-front-the-exploited-a-duo-house-of-protection-ktere-vsechny-strcilo-do-kapsy",
+      "publisher": "iREPORT",
+      "title": "Rock for People – den 1",
+      "source_type": "post_event_report",
+      "retrieved_on": "2026-11-28",
+      "supports": "Report z prvního dne potvrzuje, že festival proběhl 11. 6. 2026; oficiální archiv The Fialky uvádí jejich vystoupení v tento den."
+    },
+    {
+      "id": "SRC-0090",
+      "url": "https://visit.chomutov.cz/kalendar/hrebejkarna-punkfest-2026/",
+      "publisher": "Visit Chomutov",
+      "title": "Hřebejkárna – Punkfest 2026",
+      "source_type": "official_city_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Městský kalendář potvrzuje proběhlou akci 12. 6. 2026 od 17:00 a kapely Totální nasazení, The Fialky a Dukla Vozovna."
+    },
+    {
+      "id": "SRC-0091",
+      "url": "https://vikendo.cz/events/hrebejkarna-2026-totalni-nasazeni-the-fialky-nezfales-dukla-vozovna-peshata",
+      "publisher": "Vikendo / ForFun Agency",
+      "title": "HŘEBEJKÁRNA 2026",
+      "source_type": "event_schedule",
+      "retrieved_on": "2026-11-28",
+      "supports": "Konkrétní rozpis uvádí Peshatu, Nežfaleš, Totální nasazení, The Fialky 21:15 a Duklu Vozovnu."
+    },
+    {
+      "id": "SRC-0092",
+      "url": "https://www.hrebikarna.cz/cs/kontakt?format=html",
+      "publisher": "Hřebíkárna",
+      "title": "Kontakt",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální adresa Bezručova 5877, 430 03 Chomutov."
+    },
+    {
+      "id": "SRC-0093",
+      "url": "https://www.motakfest.cz/informace",
+      "publisher": "Moták Fest",
+      "title": "Informace a kontakt",
+      "source_type": "official_festival_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web pořadatele potvrzuje areál sportovního areálu v Třeběticích a GPS 49°2'54.411″N 15°30'59.627″E."
+    },
+    {
+      "id": "SRC-0094",
+      "url": "https://kdykam.com/cs/event/477/",
+      "publisher": "KdyKAM",
+      "title": "Motákfest 2026",
+      "source_type": "event_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Záznam označený proběhlo uvádí festival 12.–13. 6. 2026, areál Třebětice a The Fialky v line-upu."
+    },
+    {
+      "id": "SRC-0095",
+      "url": "https://www.modravopice.cz/kontakt/",
+      "publisher": "Modrá Vopice",
+      "title": "Kontakt",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální adresa klubu na rohu ulic Spojovací a K Žižkovu, Praha 9 – Vysočany, včetně GPS."
+    },
+    {
+      "id": "SRC-0096",
+      "url": "https://www.punkfloid.com/praha-zakoule-punk-fest",
+      "publisher": "Punk Floid",
+      "title": "Praha – Zakoule Punk Fest",
+      "source_type": "official_band_archive",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální přehled Punk Floid potvrzuje účast 18. 6. 2026 v Modré Vopici a rozpis Kohout plaší smrt, Bez Šance, Nežfaleš, Punk Floid, The Fialky, E!E, Houba a Proti Směru."
+    },
+    {
+      "id": "SRC-0097",
+      "url": "https://www.nezfales.cz/odehrane-koncerty/",
+      "publisher": "Nežfaleš",
+      "title": "Odehrané koncerty",
+      "source_type": "official_band_archive",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální archiv Nežfaleš potvrzuje vystoupení 18. 6. 2026 v Praze, Modré Vopici, na Zakoule punkfestu."
+    },
+    {
+      "id": "SRC-0098",
+      "url": "https://www.drienok.sk/assets/documents/PrevadzkovyPoriadokPenzion.pdf",
+      "publisher": "ŠRZ Drienok",
+      "title": "Prevádzkový poriadok",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální dokument uvádí adresu ŠRZ Drienok, Na Drienok 460/10, 038 21 Mošovce."
+    },
+    {
+      "id": "SRC-0099",
+      "url": "https://happeningnext.com/event/motozraz-drienok-2026-eid3a0d72i8tj",
+      "publisher": "Motozraz Drienok",
+      "title": "Motozraz Drienok 2026",
+      "source_type": "event_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Záznam uvádí 11. ročník Motozrazu Drienok 19.–21. 6. 2026 v areálu ŠRZ Drienok."
+    },
+    {
+      "id": "SRC-0100",
+      "url": "https://www.youtube.com/watch?v=y7E54o14BI8",
+      "publisher": "Domec Oravec",
+      "title": "Motozraz Drienok 2026 – report",
+      "source_type": "post_event_video",
+      "retrieved_on": "2026-11-28",
+      "supports": "Video zveřejněné 21. 6. 2026 potvrzuje, že motozraz v Mošovcích proběhl."
+    },
+    {
+      "id": "SRC-0101",
+      "url": "https://www.mightysounds.cz/faq",
+      "publisher": "Mighty Sounds",
+      "title": "Časté dotazy – termín a místo",
+      "source_type": "official_festival_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web potvrzuje třídenní festival a areál letiště Aeroklubu Tábor."
+    },
+    {
+      "id": "SRC-0102",
+      "url": "https://www.ireport.cz/clanky/recenze/rock-for-people-den-1-legendy-agnostic-front-the-exploited-a-duo-house-of-protection-ktere-vsechny-strcilo-do-kapsy",
+      "publisher": "iREPORT",
+      "title": "Mighty Sounds 2026 – páteční report",
+      "source_type": "post_event_report",
+      "retrieved_on": "2026-11-28",
+      "supports": "Report z 27. 6. potvrzuje skutečná vystoupení Punk Floid a The Fialky v prvním dni festivalu."
+    },
+    {
+      "id": "SRC-0103",
+      "url": "https://www.setlist.fm/setlist/the-fialky/2026/letist-apv-dvr-tabor-czechia-b75cdb2.html",
+      "publisher": "setlist.fm",
+      "title": "The Fialky at Mighty Sounds 2026",
+      "source_type": "setlist_archive",
+      "retrieved_on": "2026-11-28",
+      "supports": "Záznam koncertu The Fialky 26. 6. 2026 na Letišti Čápův Dvůr v Táboře; uvádí plánovaný čas 17:10."
     }
   ],
   "claims": [
@@ -4915,6 +5059,662 @@
         "SRC-0085",
         "SRC-0086",
         "SRC-0087"
+      ]
+    },
+    {
+      "id": "CLM-0304",
+      "entity_type": "event",
+      "entity_id": 39,
+      "field": "name",
+      "value": "Rock for People 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0088",
+        "SRC-0089"
+      ]
+    },
+    {
+      "id": "CLM-0305",
+      "entity_type": "event",
+      "entity_id": 39,
+      "field": "date",
+      "value": "2026-06-10–2026-06-13",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0088",
+        "SRC-0089"
+      ]
+    },
+    {
+      "id": "CLM-0306",
+      "entity_type": "event",
+      "entity_id": 39,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0088",
+        "SRC-0089"
+      ]
+    },
+    {
+      "id": "CLM-0307",
+      "entity_type": "event",
+      "entity_id": 39,
+      "field": "venue_id",
+      "value": 31,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0088",
+        "SRC-0089"
+      ]
+    },
+    {
+      "id": "CLM-0308",
+      "entity_type": "event",
+      "entity_id": 39,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0088",
+        "SRC-0089"
+      ]
+    },
+    {
+      "id": "CLM-0309",
+      "entity_type": "venue",
+      "entity_id": 31,
+      "field": "name",
+      "value": "Park 360",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0088",
+        "SRC-0089"
+      ]
+    },
+    {
+      "id": "CLM-0310",
+      "entity_type": "venue",
+      "entity_id": 31,
+      "field": "address",
+      "value": "Park 360, Hradec Králové, Česko (GPS 50°14’49.6″N 15°50’09.6″E)",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0088",
+        "SRC-0089"
+      ]
+    },
+    {
+      "id": "CLM-0311",
+      "entity_type": "venue",
+      "entity_id": 31,
+      "field": "city_country",
+      "value": "Hradec Králové, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0088",
+        "SRC-0089"
+      ]
+    },
+    {
+      "id": "CLM-0312",
+      "entity_type": "event",
+      "entity_id": 40,
+      "field": "name",
+      "value": "Hřebejkárna 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0090",
+        "SRC-0091",
+        "SRC-0092"
+      ]
+    },
+    {
+      "id": "CLM-0313",
+      "entity_type": "event",
+      "entity_id": 40,
+      "field": "date",
+      "value": "2026-06-12–2026-06-12",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0090",
+        "SRC-0091",
+        "SRC-0092"
+      ]
+    },
+    {
+      "id": "CLM-0314",
+      "entity_type": "event",
+      "entity_id": 40,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0090",
+        "SRC-0091",
+        "SRC-0092"
+      ]
+    },
+    {
+      "id": "CLM-0315",
+      "entity_type": "event",
+      "entity_id": 40,
+      "field": "venue_id",
+      "value": 32,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0090",
+        "SRC-0091",
+        "SRC-0092"
+      ]
+    },
+    {
+      "id": "CLM-0316",
+      "entity_type": "event",
+      "entity_id": 40,
+      "field": "lineup",
+      "value": "The Fialky; Totální nasazení; Nežfaleš",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0090",
+        "SRC-0091",
+        "SRC-0092"
+      ]
+    },
+    {
+      "id": "CLM-0317",
+      "entity_type": "venue",
+      "entity_id": 32,
+      "field": "name",
+      "value": "Hřebíkárna",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0090",
+        "SRC-0091",
+        "SRC-0092"
+      ]
+    },
+    {
+      "id": "CLM-0318",
+      "entity_type": "venue",
+      "entity_id": 32,
+      "field": "address",
+      "value": "Bezručova 5877, 430 03 Chomutov",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0090",
+        "SRC-0091",
+        "SRC-0092"
+      ]
+    },
+    {
+      "id": "CLM-0319",
+      "entity_type": "venue",
+      "entity_id": 32,
+      "field": "city_country",
+      "value": "Chomutov, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0090",
+        "SRC-0091",
+        "SRC-0092"
+      ]
+    },
+    {
+      "id": "CLM-0320",
+      "entity_type": "event",
+      "entity_id": 41,
+      "field": "name",
+      "value": "Moták Fest",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0093",
+        "SRC-0094"
+      ]
+    },
+    {
+      "id": "CLM-0321",
+      "entity_type": "event",
+      "entity_id": 41,
+      "field": "date",
+      "value": "2026-06-12–2026-06-13",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0093",
+        "SRC-0094"
+      ]
+    },
+    {
+      "id": "CLM-0322",
+      "entity_type": "event",
+      "entity_id": 41,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0093",
+        "SRC-0094"
+      ]
+    },
+    {
+      "id": "CLM-0323",
+      "entity_type": "event",
+      "entity_id": 41,
+      "field": "venue_id",
+      "value": 33,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0093",
+        "SRC-0094"
+      ]
+    },
+    {
+      "id": "CLM-0324",
+      "entity_type": "event",
+      "entity_id": 41,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0093",
+        "SRC-0094"
+      ]
+    },
+    {
+      "id": "CLM-0325",
+      "entity_type": "venue",
+      "entity_id": 33,
+      "field": "name",
+      "value": "Sportovní areál Třebětice",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0093",
+        "SRC-0094"
+      ]
+    },
+    {
+      "id": "CLM-0326",
+      "entity_type": "venue",
+      "entity_id": 33,
+      "field": "address",
+      "value": "Sportovní areál, Třebětice u Dačic, Česko (GPS 49°2'54.411″N 15°30'59.627″E)",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0093",
+        "SRC-0094"
+      ]
+    },
+    {
+      "id": "CLM-0327",
+      "entity_type": "venue",
+      "entity_id": 33,
+      "field": "city_country",
+      "value": "Třebětice, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0093",
+        "SRC-0094"
+      ]
+    },
+    {
+      "id": "CLM-0328",
+      "entity_type": "event",
+      "entity_id": 42,
+      "field": "name",
+      "value": "Zakoule Punk Fest 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0095",
+        "SRC-0096",
+        "SRC-0097"
+      ]
+    },
+    {
+      "id": "CLM-0329",
+      "entity_type": "event",
+      "entity_id": 42,
+      "field": "date",
+      "value": "2026-06-18–2026-06-18",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0095",
+        "SRC-0096",
+        "SRC-0097"
+      ]
+    },
+    {
+      "id": "CLM-0330",
+      "entity_type": "event",
+      "entity_id": 42,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0095",
+        "SRC-0096",
+        "SRC-0097"
+      ]
+    },
+    {
+      "id": "CLM-0331",
+      "entity_type": "event",
+      "entity_id": 42,
+      "field": "venue_id",
+      "value": 34,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0095",
+        "SRC-0096",
+        "SRC-0097"
+      ]
+    },
+    {
+      "id": "CLM-0332",
+      "entity_type": "event",
+      "entity_id": 42,
+      "field": "lineup",
+      "value": "The Fialky; Nežfaleš; Punk Floid",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0095",
+        "SRC-0096",
+        "SRC-0097"
+      ]
+    },
+    {
+      "id": "CLM-0333",
+      "entity_type": "venue",
+      "entity_id": 34,
+      "field": "name",
+      "value": "Modrá Vopice",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0095",
+        "SRC-0096",
+        "SRC-0097"
+      ]
+    },
+    {
+      "id": "CLM-0334",
+      "entity_type": "venue",
+      "entity_id": 34,
+      "field": "address",
+      "value": "Roh ulic Spojovací a K Žižkovu, Praha 9 – Vysočany, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0095",
+        "SRC-0096",
+        "SRC-0097"
+      ]
+    },
+    {
+      "id": "CLM-0335",
+      "entity_type": "venue",
+      "entity_id": 34,
+      "field": "city_country",
+      "value": "Praha, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0095",
+        "SRC-0096",
+        "SRC-0097"
+      ]
+    },
+    {
+      "id": "CLM-0336",
+      "entity_type": "event",
+      "entity_id": 43,
+      "field": "name",
+      "value": "Motozraz Drienok 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0098",
+        "SRC-0099",
+        "SRC-0100"
+      ]
+    },
+    {
+      "id": "CLM-0337",
+      "entity_type": "event",
+      "entity_id": 43,
+      "field": "date",
+      "value": "2026-06-19–2026-06-21",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0098",
+        "SRC-0099",
+        "SRC-0100"
+      ]
+    },
+    {
+      "id": "CLM-0338",
+      "entity_type": "event",
+      "entity_id": 43,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0098",
+        "SRC-0099",
+        "SRC-0100"
+      ]
+    },
+    {
+      "id": "CLM-0339",
+      "entity_type": "event",
+      "entity_id": 43,
+      "field": "venue_id",
+      "value": 35,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0098",
+        "SRC-0099",
+        "SRC-0100"
+      ]
+    },
+    {
+      "id": "CLM-0340",
+      "entity_type": "event",
+      "entity_id": 43,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0098",
+        "SRC-0099",
+        "SRC-0100"
+      ]
+    },
+    {
+      "id": "CLM-0341",
+      "entity_type": "venue",
+      "entity_id": 35,
+      "field": "name",
+      "value": "ŠRZ Drienok",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0098",
+        "SRC-0099",
+        "SRC-0100"
+      ]
+    },
+    {
+      "id": "CLM-0342",
+      "entity_type": "venue",
+      "entity_id": 35,
+      "field": "address",
+      "value": "Na Drienok 460/10, 038 21 Mošovce, Slovensko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0098",
+        "SRC-0099",
+        "SRC-0100"
+      ]
+    },
+    {
+      "id": "CLM-0343",
+      "entity_type": "venue",
+      "entity_id": 35,
+      "field": "city_country",
+      "value": "Mošovce, SK",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0098",
+        "SRC-0099",
+        "SRC-0100"
+      ]
+    },
+    {
+      "id": "CLM-0344",
+      "entity_type": "event",
+      "entity_id": 44,
+      "field": "name",
+      "value": "Mighty Sounds vol. 20",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0101",
+        "SRC-0102",
+        "SRC-0103"
+      ]
+    },
+    {
+      "id": "CLM-0345",
+      "entity_type": "event",
+      "entity_id": 44,
+      "field": "date",
+      "value": "2026-06-26–2026-06-28",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0101",
+        "SRC-0102",
+        "SRC-0103"
+      ]
+    },
+    {
+      "id": "CLM-0346",
+      "entity_type": "event",
+      "entity_id": 44,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0101",
+        "SRC-0102",
+        "SRC-0103"
+      ]
+    },
+    {
+      "id": "CLM-0347",
+      "entity_type": "event",
+      "entity_id": 44,
+      "field": "venue_id",
+      "value": 36,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0101",
+        "SRC-0102",
+        "SRC-0103"
+      ]
+    },
+    {
+      "id": "CLM-0348",
+      "entity_type": "event",
+      "entity_id": 44,
+      "field": "lineup",
+      "value": "The Fialky; Punk Floid",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0101",
+        "SRC-0102",
+        "SRC-0103"
+      ]
+    },
+    {
+      "id": "CLM-0349",
+      "entity_type": "venue",
+      "entity_id": 36,
+      "field": "name",
+      "value": "Letiště Čápův Dvůr",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0101",
+        "SRC-0102",
+        "SRC-0103"
+      ]
+    },
+    {
+      "id": "CLM-0350",
+      "entity_type": "venue",
+      "entity_id": 36,
+      "field": "address",
+      "value": "Měšice 477, 391 56 Tábor, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0101",
+        "SRC-0102",
+        "SRC-0103"
+      ]
+    },
+    {
+      "id": "CLM-0351",
+      "entity_type": "venue",
+      "entity_id": 36,
+      "field": "city_country",
+      "value": "Tábor, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0101",
+        "SRC-0102",
+        "SRC-0103"
       ]
     }
   ]
