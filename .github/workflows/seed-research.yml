@@ -28,9 +28,15 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: curl, mbstring, xml
+          coverage: none
+
       - name: Validate PHP worker syntax
-        run: |
-          php -l seed-worker.php
+        run: php -l seed-worker.php
 
       - name: Run bounded research batch on the live server
         env:
