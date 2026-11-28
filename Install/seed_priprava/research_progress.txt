@@ -5,7 +5,8 @@
 # - next: nově objevené kapely čekající na zpracování
 # - ok: dokončené CZ/SK kapely a ověřené zahraniční kapely
 #
-# Nové akce se přidávají do events.json/next.
+# Akce se ukládají do event_YYYY.json podle roku konání.
+# Každý ročníkový soubor má vlastní aktual, ok a next.
 # Nová místa se přidávají do venues.json/next.
 # Nové kapely z line-upů se přidávají do bands.json/next.
 # Zahraniční kapely po ověření země původu přesunout rovnou do bands.json/ok.
