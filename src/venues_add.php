@@ -10,9 +10,10 @@ function kf_venue_clean(array $r): array {
 }
 function kf_venue_validate(array $v): array {
     $e=[]; if($v['name']==='')$e[]='name';
-    $city=q('SELECT country_id FROM '.tbl('cities').' WHERE id=?',[$v['city_id']])->fetchColumn();
-    if($v['city_id']<1||$city===false||($v['country_id']>0&&(int)$city!==$v['country_id']))$e[]='city';
+    $city=q('SELECT country_id, name FROM '.tbl('cities').' WHERE id=?',[$v['city_id']])->fetch();
+    if($v['city_id']<1||!$city||mb_strlen(trim((string)$city['name']))<2||($v['country_id']>0&&(int)$city['country_id']!==$v['country_id']))$e[]='city';
     if($v['country_id']<1||!q('SELECT 1 FROM '.tbl('countries').' WHERE id=?',[$v['country_id']])->fetchColumn())$e[]='country';
+    if($v['address']!==''&&mb_strlen($v['address'])<2)$e[]='address';
     if($v['address']===''&&$v['google_maps']===''&&$v['mapy_maps']==='')$e[]='location';
     if($v['email']!==''&&!filter_var($v['email'],FILTER_VALIDATE_EMAIL))$e[]='email';
     foreach(['www','google_maps','mapy_maps'] as $k)if($v[$k]!==''&&kf_safe_url($v[$k])===null)$e[]=$k;
