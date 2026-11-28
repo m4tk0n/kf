@@ -10,7 +10,7 @@
 
 ## Soubory
 
-- band_queue.json: fronta 140 výchozích kapel; stav každé kapely a pořadí dotazu.
+- band_queue.json: fronta 181 výchozích kapel; stav každé kapely a pořadí dotazu.
 - automation_state.json: checkpoint posledního běhu.
 - candidates/search_results.jsonl: nalezené URL, názvy a úryvky výsledků.
 - candidates/search_queries.jsonl: audit provedených dotazů a chyb.
