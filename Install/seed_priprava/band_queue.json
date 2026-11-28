@@ -978,5 +978,54 @@
     "status": "pending",
     "discovered_from": "2027/events.txt",
     "seed_year": 2027
+  },
+  {
+    "name": "Strompopper",
+    "key": "strompopper",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2023/events.txt",
+    "seed_year": 2023
+  },
+  {
+    "name": "Copycats",
+    "key": "copycats",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2023/events.txt",
+    "seed_year": 2023
+  },
+  {
+    "name": "Dafy and the Rafters",
+    "key": "dafyandtherafters",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2023/events.txt",
+    "seed_year": 2023
+  },
+  {
+    "name": "Akela",
+    "key": "akela",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2023/events.txt",
+    "seed_year": 2023
+  },
+  {
+    "name": "HallucinatorZ",
+    "key": "hallucinatorz",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2023/events.txt",
+    "seed_year": 2023
+  },
+  {
+    "name": "Jackmans",
+    "key": "jackmans",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2023/events.txt",
+    "seed_year": 2023
+  },
+  {
+    "name": "Junkies",
+    "key": "junkies",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2023/events.txt",
+    "seed_year": 2023
   }
 ]
