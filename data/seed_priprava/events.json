@@ -12299,10 +12299,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2023-05-13",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-zemezluc-official-concert-calendar"
     ]
   },
   {
@@ -14319,10 +14326,17 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2026-09-05",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
+      "src-nezfales-official-archive",
+      "src-zemezluc-official-concert-calendar"
     ]
   },
   {
@@ -16197,10 +16211,17 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-07-30",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
+      "src-nezfales-official-archive",
+      "src-zemezluc-official-concert-calendar"
     ]
   },
   {
@@ -16750,13 +16771,20 @@
         "name": "E!E",
         "country_code": "CZ",
         "band_id": "ee"
+      },
+      {
+        "date": "2020-08-14",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
       }
     ],
     "source_ids": [
       "src-nezfales-official-archive",
       "src-houba-official-archive",
       "src-ee-bandzone-archive",
-      "src-ee-official-concerts"
+      "src-ee-official-concerts",
+      "src-zemezluc-official-concert-calendar"
     ],
     "venue_name": "Pod Parou Fest 2020"
   },
@@ -18424,10 +18452,17 @@
         "name": "HOUBA",
         "country_code": "CZ",
         "band_id": "houba"
+      },
+      {
+        "date": "2021-08-07",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
       }
     ],
     "source_ids": [
-      "src-houba-official-archive"
+      "src-houba-official-archive",
+      "src-zemezluc-official-concert-calendar"
     ],
     "venue_name": "letní kino"
   },
@@ -18516,10 +18551,17 @@
         "name": "HOUBA",
         "country_code": "CZ",
         "band_id": "houba"
+      },
+      {
+        "date": "2021-09-18",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
       }
     ],
     "source_ids": [
-      "src-houba-official-archive"
+      "src-houba-official-archive",
+      "src-zemezluc-official-concert-calendar"
     ],
     "venue_name": "Riot Over River 2021"
   },
@@ -18562,10 +18604,17 @@
         "name": "HOUBA",
         "country_code": "SK",
         "band_id": "houba"
+      },
+      {
+        "date": "2020-01-18",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
       }
     ],
     "source_ids": [
-      "src-houba-official-archive"
+      "src-houba-official-archive",
+      "src-zemezluc-official-concert-calendar"
     ],
     "venue_name": "Houba v Košicích"
   },
@@ -25930,10 +25979,17 @@
         "name": "P.U.M.",
         "country_code": "CZ",
         "band_id": "p-u-m"
+      },
+      {
+        "date": "2020-01-31",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
       }
     ],
     "source_ids": [
-      "src-plexis-bandzone-archive"
+      "src-plexis-bandzone-archive",
+      "src-zemezluc-official-concert-calendar"
     ],
     "venue_name": "Smer Music Bar"
   },
@@ -25982,5 +26038,2381 @@
       "src-plexis-bandzone-archive"
     ],
     "venue_name": "Hvjezda"
+  },
+  {
+    "id": "zemeluc-2026-03-20-prostredni-becva",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-03-20",
+    "end_date": "2026-03-20",
+    "city": "Prostřední Bečva",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-03-20",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-04-11-hodonin",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-04-11",
+    "end_date": "2026-04-11",
+    "city": "Hodonín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-04-11",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-04-18-opole",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-04-18",
+    "end_date": "2026-04-18",
+    "city": "Opole",
+    "country_code": "PL",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-04-18",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-05-08-praha",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-05-08",
+    "end_date": "2026-05-08",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-05-08",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-05-09-brno",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-05-09",
+    "end_date": "2026-05-09",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-05-09",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-05-23-kamyk-nad-vltavou",
+    "name": "Zelesa fest",
+    "event_type": "festival",
+    "start_date": "2026-05-23",
+    "end_date": "2026-05-23",
+    "city": "Kamýk nad Vltavou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-05-23",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-06-27-horice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-06-27",
+    "end_date": "2026-06-27",
+    "city": "Hořice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-06-27",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-07-11-otovice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-07-11",
+    "end_date": "2026-07-11",
+    "city": "Otovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-07-11",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-07-17-banska-bystrica",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "city": "Banská Bystrica",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-07-17",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-07-18-vestinek",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-07-18",
+    "end_date": "2026-07-18",
+    "city": "Věstínek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-07-18",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-07-31-chvalkov",
+    "name": "Kravínfest 2026",
+    "event_type": "festival",
+    "start_date": "2026-07-31",
+    "end_date": "2026-07-31",
+    "city": "Chválkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-07-31",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-08-15-horni-jiretin",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-08-15",
+    "end_date": "2026-08-15",
+    "city": "Horní Jiřetín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-08-15",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-08-28-bohuslavice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-08-28",
+    "end_date": "2026-08-28",
+    "city": "Bohuslavice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-08-28",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-10-03-krkonose-dvorska-bouda",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-10-03",
+    "end_date": "2026-10-03",
+    "city": "Krkonoše – Dvorská bouda",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-10-03",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-11-20-brno",
+    "name": "Sibiř",
+    "event_type": "concert",
+    "start_date": "2026-11-20",
+    "end_date": "2026-11-20",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-11-20",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2026-11-21-litomerice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2026-11-21",
+    "end_date": "2026-11-21",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-11-21",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-03-22-pribram",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-03-22",
+    "end_date": "2025-03-22",
+    "city": "Příbram",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-03-22",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-03-29-breclav",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-03-29",
+    "end_date": "2025-03-29",
+    "city": "Břeclav",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-03-29",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-04-19-radenin-u-tabora",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-04-19",
+    "end_date": "2025-04-19",
+    "city": "Radenín u Tábora",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-04-19",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-04-26-znojmo",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-04-26",
+    "end_date": "2025-04-26",
+    "city": "Znojmo",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-04-26",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-05-01-praha",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-05-01",
+    "end_date": "2025-05-01",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-05-01",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-05-02-bohuslavice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-05-02",
+    "end_date": "2025-05-02",
+    "city": "Bohuslavice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-05-02",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-05-03-brno",
+    "name": "Střelák",
+    "event_type": "concert",
+    "start_date": "2025-05-03",
+    "end_date": "2025-05-03",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-05-03",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-06-06-kosice",
+    "name": "Colloseum",
+    "event_type": "concert",
+    "start_date": "2025-06-06",
+    "end_date": "2025-06-06",
+    "city": "Košice",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-06-06",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-06-07-ruzomberok",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-06-07",
+    "end_date": "2025-06-07",
+    "city": "Ružomberok",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-06-07",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-06-28-lesonice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-06-28",
+    "end_date": "2025-06-28",
+    "city": "Lesonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-06-28",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-07-04-partizanske",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-07-04",
+    "end_date": "2025-07-04",
+    "city": "Partizánske",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-07-04",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-07-19-vestinek",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-07-19",
+    "end_date": "2025-07-19",
+    "city": "Věstínek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-07-19",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-08-09-otovice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-08-09",
+    "end_date": "2025-08-09",
+    "city": "Otovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-08-09",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-08-23-stare-mesto-u-uherskeho-hradiste",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-08-23",
+    "end_date": "2025-08-23",
+    "city": "Staré Město u Uherského Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-08-23",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-08-30-lampertice-u-trutnova",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-08-30",
+    "end_date": "2025-08-30",
+    "city": "Lampertice u Trutnova",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-08-30",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-09-06-sloup-v-moravskem-krasu",
+    "name": "Krasfest",
+    "event_type": "festival",
+    "start_date": "2025-09-06",
+    "end_date": "2025-09-06",
+    "city": "Sloup v Moravském Krasu",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-09-06",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-09-13-zilina",
+    "name": "Hájovňa",
+    "event_type": "concert",
+    "start_date": "2025-09-13",
+    "end_date": "2025-09-13",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-09-13",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-10-30-bratislava",
+    "name": "Pink Whale",
+    "event_type": "concert",
+    "start_date": "2025-10-30",
+    "end_date": "2025-10-30",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-10-30",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-11-07-brno",
+    "name": "Střelák",
+    "event_type": "concert",
+    "start_date": "2025-11-07",
+    "end_date": "2025-11-07",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-11-07",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-11-15-frydek-mistek",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-11-15",
+    "end_date": "2025-11-15",
+    "city": "Frýdek-Místek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-11-15",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2025-11-16-bohuslavice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2025-11-16",
+    "end_date": "2025-11-16",
+    "city": "Bohuslavice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-11-16",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-03-02-martin",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-03-02",
+    "end_date": "2024-03-02",
+    "city": "Martin",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-03-02",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-03-15-praha",
+    "name": "007",
+    "event_type": "concert",
+    "start_date": "2024-03-15",
+    "end_date": "2024-03-15",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-03-15",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-04-05-boskovice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-04-05",
+    "end_date": "2024-04-05",
+    "city": "Boskovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-04-05",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-04-20-bratislava",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-04-20",
+    "end_date": "2024-04-20",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-04-20",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-04-27-hradec-kralove",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-04-27",
+    "end_date": "2024-04-27",
+    "city": "Hradec Králové",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-04-27",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-05-11-brno",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-05-11",
+    "end_date": "2024-05-11",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-05-11",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-06-14-skalakuv-mlyn-u-meziricka",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-06-14",
+    "end_date": "2024-06-14",
+    "city": "Skalákův mlýn u Meziříčka",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-06-14",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-06-15-olomouc",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-06-15",
+    "end_date": "2024-06-15",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-06-15",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-07-13-vestinek",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-07-13",
+    "end_date": "2024-07-13",
+    "city": "Věstínek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-07-13",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-07-26-trutnov",
+    "name": "Pod Parou",
+    "event_type": "festival",
+    "start_date": "2024-07-26",
+    "end_date": "2024-07-26",
+    "city": "Trutnov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-07-26",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-07-27-spisska-bela",
+    "name": "Fajný Fest",
+    "event_type": "festival",
+    "start_date": "2024-07-27",
+    "end_date": "2024-07-27",
+    "city": "Spišská Belá",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-07-27",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-08-17-praha",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-08-17",
+    "end_date": "2024-08-17",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-08-17",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-08-23-brno",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-08-23",
+    "end_date": "2024-08-23",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-08-23",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-08-31-trencin",
+    "name": "Punkáči deťom",
+    "event_type": "festival",
+    "start_date": "2024-08-31",
+    "end_date": "2024-08-31",
+    "city": "Trenčín",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-08-31",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-08-31-hodonin",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-08-31",
+    "end_date": "2024-08-31",
+    "city": "Hodonín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-08-31",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-10-05-krkonose-dvorska-bouda",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-10-05",
+    "end_date": "2024-10-05",
+    "city": "Krkonoše – Dvorská bouda",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-10-05",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-10-19-litvinov",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-10-19",
+    "end_date": "2024-10-19",
+    "city": "Litvínov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-10-19",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-10-26-velky-krtis",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-10-26",
+    "end_date": "2024-10-26",
+    "city": "Velký Krtíš",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-10-26",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-11-08-bohuslavice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-11-08",
+    "end_date": "2024-11-08",
+    "city": "Bohuslavice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-11-08",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-11-09-kladno",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-11-09",
+    "end_date": "2024-11-09",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-11-09",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-11-22-policka",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-11-22",
+    "end_date": "2024-11-22",
+    "city": "Polička",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-11-22",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2024-12-07-brno",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2024-12-07",
+    "end_date": "2024-12-07",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2024-12-07",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-01-13-ostrava",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-01-13",
+    "end_date": "2023-01-13",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-01-13",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-02-25-policka",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-02-25",
+    "end_date": "2023-02-25",
+    "city": "Polička",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-02-25",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-03-24-pribram",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-03-24",
+    "end_date": "2023-03-24",
+    "city": "Příbram",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-24",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-03-31-pardubice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-03-31",
+    "end_date": "2023-03-31",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-31",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-04-01-trebic",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-04-01",
+    "end_date": "2023-04-01",
+    "city": "Třebíč",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-04-01",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-04-07-uherske-hradiste",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-04-07",
+    "end_date": "2023-04-07",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-04-07",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-04-15-frydek-mistek",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-04-15",
+    "end_date": "2023-04-15",
+    "city": "Frýdek-Místek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-04-15",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-04-22-horovice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-04-22",
+    "end_date": "2023-04-22",
+    "city": "Hořovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-04-22",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-05-05-slapanice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-05-05",
+    "end_date": "2023-05-05",
+    "city": "Šlapanice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-05-05",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-07-15-vestinek",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-07-15",
+    "end_date": "2023-07-15",
+    "city": "Věstínek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-15",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-07-22-ledec-nad-sazavou",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-07-22",
+    "end_date": "2023-07-22",
+    "city": "Ledeč nad Sázavou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-22",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-07-29-vodnany",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-07-29",
+    "end_date": "2023-07-29",
+    "city": "Vodňany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-29",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-08-05-chrudim",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-08-05",
+    "end_date": "2023-08-05",
+    "city": "Chrudim",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-08-05",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-08-26-pobiedna",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-08-26",
+    "end_date": "2023-08-26",
+    "city": "Pobiedna",
+    "country_code": "PL",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-08-26",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-09-08-otrokovice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-09-08",
+    "end_date": "2023-09-08",
+    "city": "Otrokovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-09-08",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-10-28-velke-mezirici",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-10-28",
+    "end_date": "2023-10-28",
+    "city": "Velké Meziříčí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-10-28",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-11-03-litomerice",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-11-03",
+    "end_date": "2023-11-03",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-11-03",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2023-11-25-brno",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2023-11-25",
+    "end_date": "2023-11-25",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-11-25",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-03-26-trebic",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2022-03-26",
+    "end_date": "2022-03-26",
+    "city": "Třebíč",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-03-26",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-04-09-znojmo",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2022-04-09",
+    "end_date": "2022-04-09",
+    "city": "Znojmo",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-09",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-04-16-frydek-mistek",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2022-04-16",
+    "end_date": "2022-04-16",
+    "city": "Frýdek-Místek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-16",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-04-23-brno",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2022-04-23",
+    "end_date": "2022-04-23",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-23",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-06-11-brno",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2022-06-11",
+    "end_date": "2022-06-11",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-06-11",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-06-18-trutnov",
+    "name": "Pilníkov",
+    "event_type": "concert",
+    "start_date": "2022-06-18",
+    "end_date": "2022-06-18",
+    "city": "Trutnov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-06-18",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-06-25-olomouc",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2022-06-25",
+    "end_date": "2022-06-25",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-06-25",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-07-02-havlickuv-brod",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2022-07-02",
+    "end_date": "2022-07-02",
+    "city": "Havlíčkův Brod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-07-02",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-07-16-vestinek",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2022-07-16",
+    "end_date": "2022-07-16",
+    "city": "Věstínek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-07-16",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-09-24-jihlava",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2022-09-24",
+    "end_date": "2022-09-24",
+    "city": "Jihlava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-09-24",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-10-08-krkonose-dvorska-bouda",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2022-10-08",
+    "end_date": "2022-10-08",
+    "city": "Krkonoše – Dvorská bouda",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-08",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2022-11-26-brno",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2022-11-26",
+    "end_date": "2022-11-26",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-11-26",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2021-06-19-cechyne",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2021-06-19",
+    "end_date": "2021-06-19",
+    "city": "Čechyně",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-06-19",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2021-07-03-ostrava",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2021-07-03",
+    "end_date": "2021-07-03",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-03",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2021-07-17-vestinek",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2021-07-17",
+    "end_date": "2021-07-17",
+    "city": "Věstínek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-17",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2021-07-24-ledec-nad-sazavou",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2021-07-24",
+    "end_date": "2021-07-24",
+    "city": "Ledeč nad Sázavou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-24",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2021-07-31-kamenice-nad-lipou",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2021-07-31",
+    "end_date": "2021-07-31",
+    "city": "Kamenice nad Lipou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-31",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2021-08-20-podbor",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2021-08-20",
+    "end_date": "2021-08-20",
+    "city": "Podbor",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-08-20",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2021-08-22-brno",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2021-08-22",
+    "end_date": "2021-08-22",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-08-22",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2021-08-28-frydek-mistek",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2021-08-28",
+    "end_date": "2021-08-28",
+    "city": "Frýdek-Místek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-08-28",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2021-09-04-sazava",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2021-09-04",
+    "end_date": "2021-09-04",
+    "city": "Sázava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-09-04",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2021-10-22-praha",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2021-10-22",
+    "end_date": "2021-10-22",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-10-22",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2021-11-20-chotebor",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2021-11-20",
+    "end_date": "2021-11-20",
+    "city": "Chotěboř",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-11-20",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2020-02-08-usti-nad-labem",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2020-02-08",
+    "end_date": "2020-02-08",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-02-08",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2020-02-29-zatec",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2020-02-29",
+    "end_date": "2020-02-29",
+    "city": "Žatec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-02-29",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2020-06-13-radoskov",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2020-06-13",
+    "end_date": "2020-06-13",
+    "city": "Radoškov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-06-13",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2020-06-20-vyskov",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2020-06-20",
+    "end_date": "2020-06-20",
+    "city": "Vyškov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-06-20",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2020-07-18-vestinek",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2020-07-18",
+    "end_date": "2020-07-18",
+    "city": "Věstínek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-07-18",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2020-08-08-havlickuv-brod",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2020-08-08",
+    "end_date": "2020-08-08",
+    "city": "Havlíčkův Brod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-08",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2020-08-29-sered",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2020-08-29",
+    "end_date": "2020-08-29",
+    "city": "Sereď",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-29",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "zemeluc-2020-09-26-cechyne",
+    "name": "Zeměžluč – koncert",
+    "event_type": "concert",
+    "start_date": "2020-09-26",
+    "end_date": "2020-09-26",
+    "city": "Čechyně",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-09-26",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zemezluc-official-concert-calendar"
+    ]
   }
 ]

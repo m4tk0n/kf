@@ -352,7 +352,8 @@
     "country_code": "CZ",
     "genres": [],
     "sources": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-zemezluc-official-concert-calendar"
     ],
     "verification": "country_code_labelled_in_punkgen_archive"
   },

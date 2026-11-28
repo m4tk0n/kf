@@ -666,5 +666,22 @@
       "venues",
       "lineups"
     ]
+  },
+  {
+    "id": "src-zemezluc-official-concert-calendar",
+    "name": "Zeměžluč – oficiální koncertní archiv",
+    "url": "https://www.zemezluc.cz/koncerty.php",
+    "publisher": "Zeměžluč",
+    "source_type": "official_band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "foreign_concerts"
+    ],
+    "limitations": [
+      "Archiv uvádí některá místa pouze jako obec či město bez konkrétního klubu."
+    ]
   }
 ]
