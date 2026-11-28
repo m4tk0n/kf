@@ -58,18 +58,25 @@ foreach ($cities as $c) {
         data-suggest-url="<?= e(url('venue/name-suggest')) ?>">
       <div class="autocomplete-list" id="venue-name-suggestions" data-autocomplete-suggestions role="listbox" hidden></div>
     </label>
-    <label><?= e(t('event.f.city')) ?>
-      <select name="city_id">
-        <option value="0"><?= e(t('event.f.city_pick')) ?></option>
-        <?php foreach ($byCountry as $country => $rows): ?>
-          <optgroup label="<?= e($country) ?>">
-            <?php foreach ($rows as $c): ?>
-              <option value="<?= (int)$c['id'] ?>"<?= (int)$old['city_id'] === (int)$c['id'] ? ' selected' : '' ?>><?= e((string)$c['name']) ?></option>
-            <?php endforeach; ?>
-          </optgroup>
-        <?php endforeach; ?>
-      </select>
-    </label>
+    <div class="venue-location-grid">
+      <label class="event-name-field"><?= e(t('event.f.city')) ?>
+        <input type="hidden" name="city_id" value="<?= (int)$old['city_id'] ?>" data-venue-city-id>
+        <input type="text" name="city_name" value="<?= e((string)($old['city_name'] ?? '')) ?>" maxlength="120" minlength="2" required
+          autocomplete="off" placeholder="<?= e(t('event.f.city_pick')) ?>"
+          data-venue-city-input data-validate-city data-invalid-message="<?= e(t('event.err.city')) ?>" data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
+          data-suggest-url="<?= e(url('venue/city-suggest')) ?>">
+        <div class="autocomplete-list" data-venue-city-suggestions role="listbox" hidden></div>
+      </label>
+      <label class="event-name-field"><?= e(t('venue.f.country')) ?>
+        <input type="hidden" name="country_id" value="<?= (int)($old['country_id'] ?? 0) ?>" data-venue-country-id>
+        <input type="text" name="country_name" value="<?= e((string)($old['country_name'] ?? '')) ?>" maxlength="120" required
+          autocomplete="off" placeholder="<?= e(t('venue.f.country')) ?>"
+          data-venue-country-input data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
+          data-suggest-url="<?= e(url('venue/country-suggest')) ?>">
+        <div class="autocomplete-list" data-venue-country-suggestions role="listbox" hidden></div>
+        <span class="venue-iso2" data-venue-country-iso2><?= e((string)($old['country_iso2'] ?? '')) ?></span>
+      </label>
+    </div>
 
     <fieldset class="bands-box">
       <legend><?= e(t('event.f.bands')) ?></legend>
