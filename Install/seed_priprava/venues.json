@@ -1,12 +1,26 @@
 {
-  "_purpose": "Centralni evidence fyzickych mist konani. Pri pruzkumu akci se kontroluje, zda misto jiz existuje v aktual, ok nebo next. Nove objevene misto se prida do next; po overeni identity a udaju se presune do ok. V zaznamu akce se misto odkazuje pouze pres venue_id. Nazev a adresa se proto v events.json neopakuji. ID je stabilni pracovni ID mista.",
+  "_purpose": "Centralni evidence fyzickych mist konani. Pri pruzkumu akci se kontroluje, zda misto jiz existuje v aktual, ok nebo next. Nove objevene misto se prida do next; po overeni identity a udaju se presune do ok. V zaznamu akce se misto odkazuje pouze pres venue_id. Nazev a adresa se proto v event_YYYY.json neopakuji. ID je stabilni pracovni ID mista. Zdroje a overena tvrzeni jsou vedena take v evidence.json.",
   "_workflow": {
     "aktual": "Misto, jehoz identita nebo udaje se prave overuji.",
-    "ok": "Overena mista konani.",
+    "ok": "Overena mista konani vcetne nazvu, mesta, statu a adresy, pokud je dostupna.",
     "next": "Nova nebo dosud neoverena mista objevena pri pruzkumu akci.",
-    "deduplication": "Pred zalozenim porovnat nazev i historicke nazvy, adresu, mesto a stat. Stejne misto s jinym nazvem nesmi automaticky vzniknout jako duplicita; ruzna fyzicka mista se stejnym nazvem se nesmeji sloucit."
+    "deduplication": "Pred zalozenim porovnat nazev i historicke nazvy, adresu, mesto a stat. Stejne misto s jinym nazvem nesmi automaticky vzniknout jako duplicita; ruzna fyzicka mista se stejnym nazvem se nesmeji sloucit.",
+    "evidence": "Pole sources obsahuje URL zdroju. Adresu neprebirat z neoverenych katalogu, pokud ji lze overit u provozovatele nebo poradatele."
   },
   "aktual": [],
-  "ok": [],
+  "ok": [
+    {
+      "id": 1,
+      "name": "Kulturni dum Klobucan",
+      "city": "Valasske Klobouky",
+      "country": "CZ",
+      "address": "Masarykovo namesti 942, 766 01 Valasske Klobouky",
+      "url": "https://www.kdklobucan.cz/",
+      "sources": [
+        "https://www.kvs-vk.cz/aktualne/kalendar-akci/sps-the-fialky-406_362cs.html",
+        "https://www.kdklobucan.cz/kontakt"
+      ]
+    }
+  ],
   "next": []
 }
