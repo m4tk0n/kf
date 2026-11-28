@@ -314,6 +314,68 @@
         "https://www.festivaltrutnoff.cz/cs/areal-na-bojisti",
         "https://www.bojistetrutnov.cz/kontakty"
       ]
+    },
+    {
+      "id": 26,
+      "name": "Areál Farák Fest",
+      "city": "Heřmanova Huť",
+      "country": "CZ",
+      "address": "Areál Farák Fest, Heřmanova Huť, 330 24, Česko",
+      "url": "https://www.farak-fest.cz/",
+      "sources": [
+        "https://www.farak-fest.cz/",
+        "https://www.farak-fest.cz/predprodej/"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Amfiteátr Pod Skálou",
+      "city": "Třebíz",
+      "country": "CZ",
+      "address": "Amfiteátr Pod Skálou, Třebíz, Česko",
+      "url": "https://www.letsgofest.cz/",
+      "sources": [
+        "https://www.letsgofest.cz/",
+        "https://vikendo.cz/events/let-s-go-fest-summer-vol-11"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Kravín Chválkov",
+      "city": "Chválkov",
+      "country": "CZ",
+      "address": "Areál zemědělského objektu na okraji obce Chválkov, Česko",
+      "url": "https://kravinfest.cz/",
+      "sources": [
+        "https://kravinfest.cz/",
+        "https://kravinfest.cz/zakladni-informace/",
+        "https://www.darkzin.cz/archiv-probehlych-akci/kravin-fest-2026-vol-10-/"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Hospůdka U Pavla",
+      "city": "Police nad Metují",
+      "country": "CZ",
+      "address": "Žďěřina 390, 549 54 Police nad Metují, Česko",
+      "url": "https://www.facebook.com/ZderinaHospudka",
+      "sources": [
+        "https://www.smsticket.cz/vstupenky/64199-bez-sance-fest-xii-hospudka-u-pavla-police-nad-metuji-volant-sps",
+        "https://www.firmy.cz/detail/13261299-hospudka-u-pavla-police-nad-metuji.html"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Sportovní areál Vesec",
+      "city": "Liberec",
+      "country": "CZ",
+      "address": "Vesec 463 12, 463 12 Liberec – Vratislavice nad Nisou, Česko",
+      "url": "https://www.arealvesec.cz/",
+      "sources": [
+        "https://www.arealvesec.cz/",
+        "https://www.protheus.cz/koncert/benatska-2026/",
+        "https://www.benatska.cz/uvod-2026/"
+      ]
     }
   ],
   "next": []
