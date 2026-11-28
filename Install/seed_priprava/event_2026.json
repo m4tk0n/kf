@@ -657,6 +657,192 @@
         "https://bandzone.cz/koncert/562542-2026-11-21-thefialky-kass-vltava",
         "https://www.podcarou.cz/kontakt/"
       ]
+    },
+    {
+      "id": 18,
+      "name": "God Save The Punk II.",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-10-02",
+      "date_to": "2026-10-02",
+      "time_start": "20:00",
+      "city": "České Budějovice",
+      "country": "CZ",
+      "venue_id": 18,
+      "bands": [
+        {
+          "band_id": 2,
+          "sort_order": 1,
+          "time_play": null
+        },
+        {
+          "band_id": 1,
+          "sort_order": 2,
+          "time_play": "22:00"
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.sps.litvinoff.cz/_koncerty.php",
+        "https://www.mcfabrika.cz/kontakt"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "God Save The Punk II.",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-10-03",
+      "date_to": "2026-10-03",
+      "time_start": "20:00",
+      "city": "Kolín",
+      "country": "CZ",
+      "venue_id": 19,
+      "bands": [
+        {
+          "band_id": 2,
+          "sort_order": 1,
+          "time_play": null
+        },
+        {
+          "band_id": 1,
+          "sort_order": 2,
+          "time_play": "20:30"
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.sps.litvinoff.cz/_koncerty.php",
+        "https://www.novinykraje.cz/akce/v-koline-prijdte-na-koncert-dvou-punkovych-kapel/",
+        "https://www.msd-kolin.cz/vyrocni_zprava.pdf"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "God Save The Punk II. – křest EP UNITED 20YEARS",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-10-08",
+      "date_to": "2026-10-08",
+      "time_start": "20:00",
+      "city": "Praha",
+      "country": "CZ",
+      "venue_id": 20,
+      "bands": [
+        {
+          "band_id": 2,
+          "sort_order": 1,
+          "time_play": "20:30"
+        },
+        {
+          "band_id": 1,
+          "sort_order": 2,
+          "time_play": "21:45"
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.sps.litvinoff.cz/_koncerty.php",
+        "https://rockcafe.cz/en/program/god-save-the-punk-ii-sps-the-fialky/",
+        "https://rockcafe.cz/cs/info-a-kontakty/"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "God Save The Punk II.",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-10-09",
+      "date_to": "2026-10-09",
+      "time_start": "20:00",
+      "city": "Praha",
+      "country": "CZ",
+      "venue_id": 20,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "20:30"
+        },
+        {
+          "band_id": 2,
+          "sort_order": 2,
+          "time_play": "21:45"
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.sps.litvinoff.cz/_koncerty.php",
+        "https://rockcafe.cz/en/program/god-save-the-punk-ii-sps-the-fialky-2/",
+        "https://rockcafe.cz/cs/info-a-kontakty/"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "God Save The Punk II.",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-10-16",
+      "date_to": "2026-10-16",
+      "time_start": "20:00",
+      "city": "Plzeň",
+      "country": "CZ",
+      "venue_id": 21,
+      "bands": [
+        {
+          "band_id": 2,
+          "sort_order": 1,
+          "time_play": null
+        },
+        {
+          "band_id": 1,
+          "sort_order": 2,
+          "time_play": "20:30"
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.sps.litvinoff.cz/_koncerty.php",
+        "https://goout.net/en/god-save-the-punk-ii-sps%2Bthe-fialky/sznnrky/",
+        "https://kultura.plzen.eu/kulturni-infrastruktura/objekty-a-zarizeni/hala-bilej-medved/"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "God Save The Punk II.",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-10-17",
+      "date_to": "2026-10-17",
+      "time_start": "20:00",
+      "city": "Brno",
+      "country": "CZ",
+      "venue_id": 9,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "20:30"
+        },
+        {
+          "band_id": 2,
+          "sort_order": 2,
+          "time_play": "21:45"
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.sps.litvinoff.cz/_koncerty.php",
+        "https://bandzone.cz/koncert/562536-2026-10-17-thefialky-prvni-patro",
+        "https://www.objevbrno.cz/cs/event/sps-the-fialky-v-brne-god-save-the-punk-ii-2026",
+        "https://patrobrno.cz/kontakt/"
+      ]
     }
   ],
   "next": []
