@@ -7,7 +7,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "just-war",
@@ -17,7 +22,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "censorshit",
@@ -27,7 +37,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "fast-food-orchestra",
@@ -37,7 +52,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "certuf-punk",
@@ -47,7 +67,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "hlavni-jistic",
@@ -57,7 +82,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "takhle-vole",
@@ -67,7 +97,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "roztrhlej-dedac",
@@ -77,7 +112,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "barbar-punk",
@@ -87,7 +127,13 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025",
+      "totalni-nasazeni-2025-07-19-lovosice"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "zatrest",
@@ -97,7 +143,13 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025",
+      "fialky-2025-07-05-brnenec"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "hannibal-lecter",
@@ -107,7 +159,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "totalni-nasazeni",
@@ -118,7 +175,167 @@
       "src-podparou-lineup-2025",
       "src-totalni-nasazeni-bandzone-archive"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025",
+      "punkaci-detom-2025",
+      "punkgen-2022-havlickuv-brod-07-01",
+      "sps-2025-08-23-slany",
+      "sps-2025-08-08-vysoke-nad-jizerou",
+      "sps-2025-07-11-podebrady",
+      "sps-2025-06-13-chomutov",
+      "sps-2024-11-30-kolin",
+      "sps-2024-11-22-sadov",
+      "sps-2024-04-19-klecany",
+      "sps-2026-08-21-slany",
+      "sps-2023-10-13-praha",
+      "sps-2022-05-07-pribram",
+      "sps-2020-08-21-slany",
+      "sps-2020-07-11-podebrady",
+      "fialky-2026-04-17-karlovy-vary",
+      "fialky-2026-04-11-liberec",
+      "fialky-2026-04-10-pardubice",
+      "fialky-2026-03-28-brno",
+      "fialky-2026-03-27-zlin",
+      "fialky-2026-03-21-praha",
+      "fialky-2026-03-20-ceske-budejovice",
+      "fialky-2026-03-14-bratislava",
+      "fialky-2026-03-13-teplice",
+      "fialky-2026-02-27-volyne",
+      "fialky-2026-02-14-plzen",
+      "fialky-2025-12-06-praha",
+      "fialky-2025-07-05-brnenec",
+      "fialky-2024-12-07-praha",
+      "fialky-2024-04-13-bratislava",
+      "fialky-2024-04-12-uherske-hradiste",
+      "fialky-2024-04-06-ostrava",
+      "fialky-2024-04-05-brno",
+      "fialky-2024-03-23-plzen",
+      "fialky-2024-03-22-vimperk",
+      "fialky-2024-03-16-liberec",
+      "fialky-2024-03-15-teplice",
+      "fialky-2024-03-09-ceske-budejovice",
+      "fialky-2024-03-08-praha",
+      "fialky-2022-02-25-rakovnik",
+      "fialky-2022-02-26-plzen",
+      "fialky-2022-03-11-liberec",
+      "fialky-2022-03-12-ceske-budejovice",
+      "fialky-2022-03-19-kolin",
+      "fialky-2022-03-25-ostrava",
+      "fialky-2022-03-26-uherske-hradiste",
+      "fialky-2022-04-01-brno",
+      "fialky-2022-04-02-bratislava",
+      "fialky-2022-04-08-teplice",
+      "fialky-2022-04-09-praha",
+      "fialky-2021-10-09-praha",
+      "fialky-2020-08-02-ceske-budejovice",
+      "nezfales-2026-07-04-brnenec",
+      "nezfales-2022-03-18-klecany",
+      "nezfales-2021-07-31-trebiz",
+      "houba-2025-01-17-usti-nad-labem",
+      "punk-floid-2026-11-14-pardubice",
+      "punk-floid-2022-06-25-brnenec",
+      "totalni-nasazeni-2025-01-25-vyskov",
+      "totalni-nasazeni-2025-02-07-trebic",
+      "totalni-nasazeni-2025-02-21-libceves",
+      "totalni-nasazeni-2025-03-07-ceske-budejovice",
+      "totalni-nasazeni-2025-03-08-praha",
+      "totalni-nasazeni-2025-03-15-pardubice",
+      "totalni-nasazeni-2025-03-21-jindrichuv-hradec",
+      "totalni-nasazeni-2025-03-22-milevsko",
+      "totalni-nasazeni-2025-03-28-liberec",
+      "totalni-nasazeni-2025-03-29-plzen",
+      "totalni-nasazeni-2025-04-04-havlickuv-brod",
+      "totalni-nasazeni-2025-04-05-brno",
+      "totalni-nasazeni-2025-04-11-decin",
+      "totalni-nasazeni-2025-04-12-ostrava",
+      "totalni-nasazeni-2025-05-03-telc",
+      "totalni-nasazeni-2025-05-17-studena",
+      "totalni-nasazeni-2025-05-17-cesky-krumlov",
+      "totalni-nasazeni-2025-05-24-velvary",
+      "totalni-nasazeni-2025-05-30-pavlikov",
+      "totalni-nasazeni-2025-05-31-praha",
+      "totalni-nasazeni-2025-06-06-cheb",
+      "totalni-nasazeni-2025-06-07-trebetice",
+      "totalni-nasazeni-2025-06-14-dobris",
+      "totalni-nasazeni-2025-06-21-drinov",
+      "totalni-nasazeni-2025-06-21-strakonice",
+      "totalni-nasazeni-2025-06-28-pacov",
+      "totalni-nasazeni-2025-07-04-slany",
+      "totalni-nasazeni-2025-07-05-bulhary",
+      "totalni-nasazeni-2025-07-12-prysk",
+      "totalni-nasazeni-2025-07-19-peruc",
+      "totalni-nasazeni-2025-07-19-lovosice",
+      "totalni-nasazeni-2025-08-01-chvalkov-u-kamenice-nad-lipou",
+      "totalni-nasazeni-2025-08-02-sporice",
+      "totalni-nasazeni-2025-08-09-domazlice",
+      "totalni-nasazeni-2025-08-15-volyne",
+      "totalni-nasazeni-2025-08-16-maly-rohozec",
+      "totalni-nasazeni-2025-08-29-opatovce-u-trencina",
+      "totalni-nasazeni-2022-02-12-praha",
+      "totalni-nasazeni-2022-04-14-studena",
+      "totalni-nasazeni-2022-05-14-strakonice",
+      "totalni-nasazeni-2022-05-28-hnacov",
+      "totalni-nasazeni-2022-06-03-pavlikov",
+      "totalni-nasazeni-2022-06-09-letohrad",
+      "totalni-nasazeni-2022-07-08-prachov",
+      "totalni-nasazeni-2022-07-09-tabor",
+      "totalni-nasazeni-2022-07-16-podoli-u-mohelnice",
+      "totalni-nasazeni-2022-07-22-podebrady",
+      "totalni-nasazeni-2022-07-23-bor-u-tachova",
+      "totalni-nasazeni-2022-10-07-ceske-budejovice",
+      "totalni-nasazeni-2022-10-08-daskabat",
+      "totalni-nasazeni-2022-10-14-brno",
+      "totalni-nasazeni-2022-10-15-praha",
+      "totalni-nasazeni-2022-10-21-pardubice",
+      "totalni-nasazeni-2022-10-22-most",
+      "totalni-nasazeni-2022-11-04-bratislava",
+      "totalni-nasazeni-2022-11-05-zilina",
+      "totalni-nasazeni-2022-11-11-kosice",
+      "totalni-nasazeni-2022-11-12-presov",
+      "totalni-nasazeni-2022-11-18-nove-mesto-nad-vahom",
+      "totalni-nasazeni-2022-11-19-puchov",
+      "totalni-nasazeni-2022-12-09-praha",
+      "totalni-nasazeni-2022-12-10-nechvalice",
+      "totalni-nasazeni-2020-01-10-praha",
+      "totalni-nasazeni-2020-01-11-brno",
+      "totalni-nasazeni-2020-01-17-harrachov",
+      "totalni-nasazeni-2020-01-18-slany",
+      "totalni-nasazeni-2020-04-12-jistebnice",
+      "totalni-nasazeni-2020-05-21-slany",
+      "ee-2023-11-24-plzen",
+      "ee-2023-11-25-ceske-budejovice",
+      "ee-2022-10-30-pardubice",
+      "ee-2021-07-01-holysov",
+      "ee-2021-07-30-trebiz",
+      "dilemma-in-cinema-2023-01-28-jablonec-nad-jizerou",
+      "dilemma-in-cinema-2023-03-17-rokycany",
+      "dilemma-in-cinema-2023-03-31-brno",
+      "dilemma-in-cinema-2023-12-08-praha",
+      "dilemma-in-cinema-2024-02-09-chrudim",
+      "dilemma-in-cinema-2024-10-11-brno",
+      "dilemma-in-cinema-2024-10-12-rakovnik",
+      "dilemma-in-cinema-2024-10-25-litvinov",
+      "dilemma-in-cinema-2024-11-08-jihlava",
+      "dilemma-in-cinema-2024-11-16-stribro",
+      "dilemma-in-cinema-2024-12-06-kladno",
+      "dilemma-in-cinema-2025-11-08-brno",
+      "dilemma-in-cinema-2025-11-14-rakovnik",
+      "dilemma-in-cinema-2025-11-21-sadov",
+      "dilemma-in-cinema-2025-11-22-olomouc",
+      "dilemma-in-cinema-2025-11-29-plzen",
+      "dilemma-in-cinema-2026-02-28-olomouc",
+      "dilemma-in-cinema-2026-07-17-pavlikov",
+      "vision-days-2021-10-30-pardubice",
+      "zputnik-2020-07-11-strelna",
+      "zputnik-2020-07-31-chvalkov",
+      "zputnik-2020-08-07-harrachov",
+      "zputnik-2022-08-05-chvalkov"
+    ],
+    "tour_ids": [
+      "totalni-nasazeni-smola-hrusky-tour-2022"
+    ],
+    "status": "pending"
   },
   {
     "id": "sto-zvirat",
@@ -128,7 +345,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "apple-juice",
@@ -138,7 +360,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "session",
@@ -148,7 +375,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "glejt",
@@ -158,7 +390,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "hazydecay",
@@ -168,7 +405,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "zavis",
@@ -178,7 +420,12 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "ilegality",
@@ -188,7 +435,13 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025",
+      "punkgen-2022-havlickuv-brod-07-01"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "punk-floid",
@@ -199,7 +452,89 @@
       "src-podparou-lineup-2025",
       "src-punkfloid-official-archive"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025",
+      "punkaci-detom-2025",
+      "fialky-2025-prague-03-01",
+      "fialky-2025-bratislava-03-15",
+      "punkaci-detom-2024",
+      "punkaci-detom-winter-2026",
+      "sps-2023-11-18-pardubice",
+      "sps-2021-07-23-police-nad-metuji",
+      "fialky-2026-08-28-trencin",
+      "fialky-2025-11-15-pardubice",
+      "fialky-2025-07-05-brnenec",
+      "fialky-2024-01-19-usti-nad-labem",
+      "nezfales-2026-08-22-slany",
+      "nezfales-2026-07-04-brnenec",
+      "nezfales-2026-06-18-praha",
+      "nezfales-2020-06-27-olesko",
+      "houba-2026-03-14-jihlava",
+      "houba-2026-04-25-praha",
+      "houba-2024-03-08-uherske-hradiste",
+      "houba-2024-04-20-praha",
+      "houba-2022-06-23-praha",
+      "houba-2022-10-15-trutnov",
+      "punk-floid-2026-11-27-praha",
+      "punk-floid-2026-11-14-pardubice",
+      "punk-floid-2026-11-07-lesnice",
+      "punk-floid-2026-10-24-jindrichuv-hradec",
+      "punk-floid-2026-10-17-bridla",
+      "punk-floid-2026-10-09-litomerice",
+      "punk-floid-2026-10-03-brno",
+      "punk-floid-2026-09-05-dolany",
+      "punk-floid-2026-08-22-holesov",
+      "punk-floid-2026-08-01-chvalkov",
+      "punk-floid-2026-08-01-trebiz",
+      "punk-floid-2026-07-11-soprec",
+      "punk-floid-2026-06-26-tabor",
+      "punk-floid-2026-06-20-olomouc",
+      "punk-floid-2026-06-20-benesov",
+      "punk-floid-2026-06-13-ujezd-u-prelouce",
+      "punk-floid-2026-04-18-liberec",
+      "punk-floid-2026-04-10-kunstat",
+      "punk-floid-2026-03-19-praha",
+      "punk-floid-2026-02-27-brno",
+      "punk-floid-2026-02-07-nikolcice",
+      "punk-floid-2026-01-22-praha",
+      "punk-floid-2025-11-07-zabreh",
+      "punk-floid-2025-11-01-vrchlabi",
+      "punk-floid-2025-10-18-trencin",
+      "punk-floid-2025-10-11-praha",
+      "punk-floid-2025-10-04-ceske-budejovice",
+      "punk-floid-2025-09-27-ostrava",
+      "punk-floid-2025-01-11-brno",
+      "punk-floid-2024-12-07-zdarna",
+      "punk-floid-2024-11-16-pardubice",
+      "punk-floid-2024-11-09-lesnice",
+      "punk-floid-2024-10-26-mladosovice",
+      "punk-floid-2024-08-30-trencin",
+      "punk-floid-2024-08-17-slany",
+      "punk-floid-2024-08-10-chrudim",
+      "punk-floid-2024-05-10-kladno",
+      "punk-floid-2024-04-13-frydek-mistek",
+      "punk-floid-2024-04-06-velke-losiny",
+      "punk-floid-2024-01-20-brno",
+      "punk-floid-2023-12-01-kladno",
+      "punk-floid-2023-11-24-praha",
+      "punk-floid-2023-11-04-zabreh",
+      "punk-floid-2023-10-28-jindrichuv-hradec",
+      "punk-floid-2022-10-27-brno",
+      "punk-floid-2022-07-29-vyskov",
+      "punk-floid-2022-06-25-brnenec",
+      "punk-floid-2022-05-14-nove-mesto-nad-vahom",
+      "punk-floid-2022-04-02-jindrichuv-hradec",
+      "punk-floid-2022-03-22-zabreh",
+      "punk-floid-2021-08-20-slany",
+      "punk-floid-2020-06-25-praha",
+      "ee-2022-10-30-pardubice",
+      "vision-days-2021-10-30-pardubice",
+      "volant-2023-03-31-praha",
+      "vvu-2026-06-12-ujezd-u-prelouce"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "houba",
@@ -210,7 +545,121 @@
       "src-podparou-lineup-2025",
       "src-houba-official-archive"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025",
+      "punkaci-detom-2025",
+      "sps-2025-06-19-praha",
+      "sps-2024-05-25-mostiste-u-velkeho-mezirici",
+      "sps-2023-06-29-praha",
+      "sps-2021-06-24-praha",
+      "sps-2020-08-21-slany",
+      "sps-2020-07-11-roudnice-nad-labem",
+      "fialky-2026-02-21-svitavy",
+      "fialky-2026-01-23-usti-nad-labem",
+      "fialky-2024-06-20-praha",
+      "fialky-2024-06-08-brno",
+      "fialky-2024-01-19-usti-nad-labem",
+      "fialky-2023-06-02-letohrad",
+      "fialky-2021-09-03-litomerice",
+      "fialky-2020-09-04-litomerice",
+      "nezfales-2023-04-15-melnik",
+      "nezfales-2023-04-14-plzen",
+      "nezfales-2023-03-25-martin",
+      "nezfales-2023-03-24-opava",
+      "nezfales-2023-03-11-ceske-budejovice",
+      "nezfales-2023-03-10-teplice",
+      "nezfales-2023-02-18-pardubice",
+      "nezfales-2023-02-17-radomysl-u-strakonic",
+      "nezfales-2022-08-19-slany",
+      "nezfales-2022-07-30-trutnov",
+      "nezfales-2022-07-23-tremosnice",
+      "nezfales-2020-08-14-vyskov",
+      "nezfales-2020-06-27-olesko",
+      "houba-2026-01-24-usti-nad-labem",
+      "houba-2026-02-20-harrachov",
+      "houba-2026-03-13-praha",
+      "houba-2026-03-14-jihlava",
+      "houba-2026-03-20-klatovy",
+      "houba-2026-03-21-brno",
+      "houba-2026-04-10-ceske-budejovice",
+      "houba-2026-04-11-ostrava",
+      "houba-2026-04-17-odolena-voda",
+      "houba-2026-04-18-nova-role-u-karlovych-varu",
+      "houba-2026-04-24-uherske-hradiste",
+      "houba-2026-04-25-praha",
+      "houba-2025-01-17-usti-nad-labem",
+      "houba-2025-01-18-usti-nad-labem",
+      "houba-2025-06-07-strasice-u-rokycan",
+      "houba-2025-06-14-ceska-kamenice",
+      "houba-2025-06-14-olesko",
+      "houba-2025-06-21-opava",
+      "houba-2025-07-18-milevsko",
+      "houba-2025-07-19-vyskov",
+      "houba-2025-08-16-horni-jiretin",
+      "houba-2025-08-16-bystrice-nad-uhlavou",
+      "houba-2025-08-30-opatovce-u-trencina",
+      "houba-2024-01-20-usti-nad-labem",
+      "houba-2024-02-23-praha",
+      "houba-2024-02-24-ledec-nad-sazavou",
+      "houba-2024-03-08-uherske-hradiste",
+      "houba-2024-03-09-opava",
+      "houba-2024-03-15-litomerice",
+      "houba-2024-03-16-ceske-budejovice",
+      "houba-2024-03-30-police-nad-metuji",
+      "houba-2024-04-19-decin",
+      "houba-2024-04-20-praha",
+      "houba-2024-04-20-kralupy-nad-vltavou",
+      "houba-2023-05-05-praha",
+      "houba-2023-05-06-liberec",
+      "houba-2023-06-09-usti-nad-labem",
+      "houba-2023-06-10-strasice-u-rokycan",
+      "houba-2023-06-25-tabor",
+      "houba-2022-03-25-klatovy",
+      "houba-2022-04-15-liberec",
+      "houba-2022-04-16-havlickuv-brod",
+      "houba-2022-04-23-praha",
+      "houba-2022-06-23-praha",
+      "houba-2022-06-24-kremze",
+      "houba-2022-07-22-police-nad-metuji",
+      "houba-2022-07-23-dobra-voda-u-pacova",
+      "houba-2022-08-20-volyne",
+      "houba-2022-08-26-pobiedna",
+      "houba-2022-09-23-brno",
+      "houba-2022-09-24-frydek-mistek",
+      "houba-2022-10-15-trutnov",
+      "houba-2021-06-12-police-nad-metuji",
+      "houba-2021-06-19-kolin",
+      "houba-2021-06-19-louny",
+      "houba-2021-06-25-usti-nad-labem",
+      "houba-2021-07-23-olesko",
+      "houba-2021-07-31-kdyne",
+      "houba-2021-07-31-vodnany",
+      "houba-2021-08-06-praha",
+      "houba-2021-08-07-chrudim",
+      "houba-2021-08-07-dobra-voda-u-pacova",
+      "houba-2021-08-14-libochovice",
+      "houba-2021-08-28-mlekojedy",
+      "houba-2021-09-18-praha",
+      "houba-2020-01-17-brno",
+      "houba-2020-01-18-kosice",
+      "houba-2020-06-13-strasice-u-rokycan",
+      "houba-2020-08-07-hradec-kralove",
+      "houba-2020-08-08-petrovice-u-sedlcan",
+      "houba-2020-08-14-ricany-u-prahy",
+      "houba-2020-08-15-volyne",
+      "houba-2020-10-09-usti-nad-labem",
+      "houba-2020-10-10-jindrichuv-hradec",
+      "totalni-nasazeni-2025-08-29-opatovce-u-trencina",
+      "ee-2022-10-30-pardubice",
+      "vision-days-2021-10-30-pardubice",
+      "vvu-2025-07-18-bustehrad"
+    ],
+    "tour_ids": [
+      "nezfales-houba-tour-autumn-2024",
+      "nezfales-houba-tour-autumn-2026"
+    ],
+    "status": "pending"
   },
   {
     "id": "nvu",
@@ -221,7 +670,21 @@
       "src-podparou-lineup-2025",
       "src-nvu-bandzone-archive"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025",
+      "sps-2025-08-23-slany",
+      "sps-2026-08-21-slany",
+      "sps-2020-08-21-slany",
+      "nezfales-2026-10-17-litomysl",
+      "ee-2021-04-23-praha",
+      "p-u-m-2022-01-22-kladno",
+      "vvu-2026-01-31-praha",
+      "vvu-2026-04-04-litvinov",
+      "zputnik-2022-07-22-morkovice-slizany"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "konflikt",
@@ -233,7 +696,44 @@
       "src-konflikt-gigography",
       "src-konflikt-official"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025",
+      "punkgen-2022-havlickuv-brod-07-01",
+      "sps-2025-06-21-manetin",
+      "zemeluc-2024-07-26-trutnov",
+      "konflikt-2026-07-11-slatinany",
+      "konflikt-2026-06-25-bela-nad-cirochou",
+      "konflikt-2026-02-21-ceske-budejovice",
+      "konflikt-2025-10-25-nova-role",
+      "konflikt-2025-09-20-jirikov",
+      "konflikt-2025-09-19-kladno",
+      "konflikt-2025-08-16-dubnany",
+      "konflikt-2025-07-19-olomouc",
+      "konflikt-2025-06-28-snina",
+      "konflikt-2025-05-24-budapest",
+      "konflikt-2024-10-12-valasske-klobouky",
+      "konflikt-2024-09-27-oravska-lesna",
+      "konflikt-2024-06-29-snina",
+      "konflikt-2024-05-11-uherske-hradiste",
+      "konflikt-2024-05-10-ostrava",
+      "konflikt-2024-05-04-brno",
+      "konflikt-2023-11-10-chrudim",
+      "konflikt-2023-11-04-teplice",
+      "konflikt-2023-07-27-trutnov",
+      "konflikt-2023-06-24-trnovec-nad-vahom",
+      "konflikt-2022-10-06-miami",
+      "konflikt-2022-09-14-bratislava",
+      "konflikt-2022-09-10-budapest",
+      "konflikt-2021-09-03-ziharec",
+      "konflikt-2021-08-27-malinovo",
+      "konflikt-2021-08-07-jaslovske-bohunice",
+      "konflikt-2021-07-24-snina",
+      "zputnik-2022-07-22-morkovice-slizany",
+      "zputnik-2022-08-05-chvalkov"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "ee",
@@ -245,7 +745,117 @@
       "src-ee-bandzone-archive",
       "src-ee-official-concerts"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025",
+      "punkaci-detom-2025",
+      "punkgen-2022-havlickuv-brod-07-01",
+      "sps-2025-08-23-slany",
+      "sps-2025-07-11-podebrady",
+      "sps-2026-08-21-slany",
+      "sps-2026-08-14-vysoke-nad-jizerou",
+      "sps-2023-10-13-praha",
+      "sps-2022-05-07-pribram",
+      "sps-2022-04-23-pisek",
+      "sps-2021-11-20-horni-slavkov",
+      "sps-2020-08-21-slany",
+      "sps-2020-07-11-podebrady",
+      "fialky-2025-07-05-brnenec",
+      "fialky-2023-04-22-praha",
+      "fialky-2020-08-02-ceske-budejovice",
+      "nezfales-2026-08-29-lysa-nad-labem",
+      "nezfales-2026-08-07-letohrad",
+      "nezfales-2026-07-04-brnenec",
+      "nezfales-2023-05-20-mostiste-u-velkeho-mezirici",
+      "nezfales-2020-08-14-vyskov",
+      "nezfales-2020-06-27-olesko",
+      "punk-floid-2022-06-25-brnenec",
+      "totalni-nasazeni-2025-08-01-chvalkov-u-kamenice-nad-lipou",
+      "ee-2026-02-06-jindrichuv-hradec",
+      "ee-2026-02-07-plzen",
+      "ee-2026-03-14-karlovy-vary",
+      "ee-2026-04-11-nova-ves-u-bakova",
+      "ee-2026-08-01-krasna-lipa",
+      "ee-2026-08-08-chrudim",
+      "ee-2026-08-15-bystrice-nad-uhlavou",
+      "ee-2026-08-15-trutnov",
+      "ee-2026-08-21-podebrady",
+      "ee-2026-08-22-tocnik",
+      "ee-2026-08-28-domazlice",
+      "ee-2026-08-28-breznice",
+      "ee-2026-08-29-neveklov",
+      "ee-2026-09-04-usti-nad-labem",
+      "ee-2026-09-05-sloup-v-moravskem-krasu",
+      "ee-2026-09-11-konopiste",
+      "ee-2026-09-12-praha",
+      "ee-2026-09-19-krasna-hora-nad-vltavou",
+      "ee-2026-10-03-jaromer",
+      "ee-2026-10-09-usti-nad-labem",
+      "ee-2026-10-17-zahori-u-semil",
+      "ee-2026-10-31-jablonec-nad-nisou",
+      "ee-2026-11-06-as",
+      "ee-2026-11-07-kolin",
+      "ee-2026-11-14-lestkov-u-marianskych-lazni",
+      "ee-2026-11-21-pelhrimov",
+      "ee-2026-11-27-strakonice",
+      "ee-2025-02-01-plzen",
+      "ee-2025-02-07-jindrichuv-hradec",
+      "ee-2025-02-08-kladno",
+      "ee-2025-02-14-praha",
+      "ee-2025-10-25-klatovy",
+      "ee-2025-11-08-ostrava",
+      "ee-2023-01-14-radomysl",
+      "ee-2023-02-25-bezno",
+      "ee-2023-03-11-praha",
+      "ee-2023-06-30-brnenec",
+      "ee-2023-11-24-plzen",
+      "ee-2023-11-25-ceske-budejovice",
+      "ee-2022-02-05-harrachov",
+      "ee-2022-04-13-praha",
+      "ee-2022-04-21-praha",
+      "ee-2022-07-30-chvalkov-u-kamenice-nad-lipou",
+      "ee-2022-10-30-pardubice",
+      "ee-2022-11-20-horni-slavkov",
+      "ee-2022-11-27-pisek",
+      "ee-2021-02-12-harrachov",
+      "ee-2021-04-22-hermanuv-mestec",
+      "ee-2021-04-23-praha",
+      "ee-2021-04-24-horni-slavkov",
+      "ee-2021-04-29-policka",
+      "ee-2021-05-01-frydek-mistek",
+      "ee-2021-06-04-strakonice",
+      "ee-2021-06-11-plzen",
+      "ee-2021-06-12-strasice",
+      "ee-2021-06-18-liberec",
+      "ee-2021-06-25-brandys-nad-labem-stara-boleslav",
+      "ee-2021-06-26-rokycany",
+      "ee-2021-07-01-holysov",
+      "ee-2021-07-23-hyskov",
+      "ee-2021-07-30-chvalkov-u-kamenice-nad-lipou",
+      "ee-2021-07-30-trebiz",
+      "ee-2021-08-20-brno",
+      "ee-2021-09-25-pribram",
+      "ee-2021-10-09-jindrichuv-hradec",
+      "ee-2021-10-23-tabor",
+      "ee-2021-11-06-bavorov",
+      "ee-2021-11-12-frydek-mistek",
+      "ee-2021-11-18-praha",
+      "ee-2021-11-19-usti-nad-orlici",
+      "ee-2021-11-27-pisek",
+      "ee-2021-12-04-litomerice",
+      "ee-2020-01-17-klatovy",
+      "ee-2020-01-18-praha",
+      "ee-2020-02-15-harrachov",
+      "ee-2020-02-22-pribram",
+      "vvu-2026-05-16-dolni-benesov",
+      "sas-2025-09-05-sloup-v-moravskem-krasu",
+      "zputnik-2020-07-31-chvalkov",
+      "zputnik-2020-09-18-kostelec-nad-orlici",
+      "zputnik-2022-08-05-chvalkov",
+      "vvu-2026-06-12-ujezd-u-prelouce"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "degradace",
@@ -255,7 +865,13 @@
     "sources": [
       "src-podparou-lineup-2025"
     ],
-    "verification": "country_confirmed_by_official_program_label"
+    "verification": "country_confirmed_by_official_program_label",
+    "event_ids": [
+      "fest-pod-parou-2025",
+      "punkaci-detom-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "rana",
@@ -265,7 +881,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2020-zilina-hajovna-01-03"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "distax",
@@ -275,7 +896,14 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2020-zilina-hajovna-01-03",
+      "punkgen-2024-veseli-02-02",
+      "punkgen-2024-znojmo-02-03"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "jezisovi-pivo-nelej",
@@ -285,7 +913,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2020-zilina-hajovna-01-03"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "diskoterror-ss",
@@ -295,7 +928,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2020-zilina-hajovna-01-03"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "ctib",
@@ -305,7 +943,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2021-basta-bardejov-06-10"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "dasa-fon-flasa",
@@ -315,7 +958,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2021-basta-bardejov-06-10"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "manon-meurt",
@@ -325,7 +973,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2021-basta-bardejov-06-10"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "sps",
@@ -336,7 +989,323 @@
       "src-punkgen-archive",
       "src-sps-official-concert-calendar"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2022-havlickuv-brod-07-01",
+      "sps-2025-11-22-bratislava",
+      "sps-2025-11-21-ceske-budejovice",
+      "sps-2025-11-15-znojmo",
+      "sps-2025-11-14-klatovy",
+      "sps-2025-11-01-london",
+      "sps-2025-10-31-london",
+      "sps-2025-10-24-praha",
+      "sps-2025-10-18-pisek",
+      "sps-2025-10-17-plzen",
+      "sps-2025-10-04-uherske-hradiste",
+      "sps-2025-10-03-pardubice",
+      "sps-2025-09-20-trutnov",
+      "sps-2025-09-06-pohorelice",
+      "sps-2025-08-23-tachov",
+      "sps-2025-08-23-slany",
+      "sps-2025-08-22-trutnov",
+      "sps-2025-08-15-ricany-u-prahy",
+      "sps-2025-08-08-vysoke-nad-jizerou",
+      "sps-2025-08-02-chvalkov-u-kamenice-nad-lipou",
+      "sps-2025-08-01-litomerice",
+      "sps-2025-07-24-liberec",
+      "sps-2025-07-19-zelec-u-tabora",
+      "sps-2025-07-19-vlctejn",
+      "sps-2025-07-18-horice-v-podkrkonosi",
+      "sps-2025-07-17-horice",
+      "sps-2025-07-11-podebrady",
+      "sps-2025-07-05-brnenec-u-svitav",
+      "sps-2025-06-28-strasice-u-strakonic",
+      "sps-2025-06-21-manetin",
+      "sps-2025-06-21-petrovice-u-sedlcan",
+      "sps-2025-06-19-praha",
+      "sps-2025-06-14-horepnik",
+      "sps-2025-06-14-ujezd-u-prelouce",
+      "sps-2025-06-13-chomutov",
+      "sps-2025-06-07-usti-nad-labem",
+      "sps-2025-05-24-kamyk-nad-vltavou",
+      "sps-2025-05-16-praha",
+      "sps-2025-05-10-kunice-u-prahy",
+      "sps-2025-04-12-kosice",
+      "sps-2025-04-05-mlada-boleslav",
+      "sps-2025-04-04-kladno",
+      "sps-2025-03-28-rakovnik",
+      "sps-2025-03-22-koprivnice",
+      "sps-2025-03-21-as",
+      "sps-2025-03-15-brno",
+      "sps-2025-03-14-teplice",
+      "sps-2025-03-01-karlovy-vary",
+      "sps-2025-02-28-trebic",
+      "sps-2025-02-22-pribram",
+      "sps-2025-02-21-jindrichuv-hradec",
+      "sps-2024-12-14-uherske-hradiste",
+      "sps-2024-12-13-liberec",
+      "sps-2024-12-07-pec-pod-snezkou",
+      "sps-2024-11-30-kolin",
+      "sps-2024-11-29-olomouc",
+      "sps-2024-11-23-zlin",
+      "sps-2024-11-22-sadov",
+      "sps-2024-11-15-litomerice",
+      "sps-2024-10-25-brno",
+      "sps-2024-10-19-pisek",
+      "sps-2024-10-11-praha",
+      "sps-2024-10-10-praha",
+      "sps-2024-10-05-pardubice",
+      "sps-2024-10-04-jihlava",
+      "sps-2024-08-25-trutnov",
+      "sps-2024-08-16-volyne",
+      "sps-2024-08-09-harrachov",
+      "sps-2024-08-09-jihlava",
+      "sps-2024-08-03-chvalkov-u-kamenice-nad-lipou",
+      "sps-2024-08-02-frydek-mistek",
+      "sps-2024-07-26-ceska-lipa",
+      "sps-2024-07-25-trutnov",
+      "sps-2024-07-20-vlctejn",
+      "sps-2024-07-13-zelec-u-tabora",
+      "sps-2024-07-13-prysk",
+      "sps-2024-07-12-podebrady",
+      "sps-2024-07-05-manetin",
+      "sps-2024-06-29-slavicin",
+      "sps-2024-06-22-brnenec",
+      "sps-2024-06-15-chrastany-u-prahy",
+      "sps-2024-06-14-ujezd-u-prelouce",
+      "sps-2024-05-25-mostiste-u-velkeho-mezirici",
+      "sps-2024-05-24-pasohlavky",
+      "sps-2024-05-17-praha",
+      "sps-2024-05-11-morkovice-slizany",
+      "sps-2024-05-11-lesnice",
+      "sps-2024-04-19-klecany",
+      "sps-2024-04-13-jesenik",
+      "sps-2024-04-12-roudnice-nad-labem",
+      "sps-2024-04-06-zilina",
+      "sps-2024-03-29-pardubice",
+      "sps-2024-03-23-znojmo",
+      "sps-2024-03-22-tabor",
+      "sps-2024-03-16-mlada-boleslav",
+      "sps-2024-03-09-hodonin",
+      "sps-2024-03-08-svitavy",
+      "sps-2024-03-02-kladno",
+      "sps-2024-03-01-decin",
+      "sps-2026-11-21-kralupy-nad-vltavou",
+      "sps-2026-11-20-mlada-boleslav",
+      "sps-2026-11-14-valasske-klobouky",
+      "sps-2026-11-13-ostrava",
+      "sps-2026-10-31-pisek",
+      "sps-2026-10-30-litomysl",
+      "sps-2026-10-17-brno",
+      "sps-2026-10-16-plzen",
+      "sps-2026-10-09-praha",
+      "sps-2026-10-08-praha",
+      "sps-2026-10-03-kolin",
+      "sps-2026-10-02-ceske-budejovice",
+      "sps-2026-08-29-destna-u-jindrichova-hradce",
+      "sps-2026-08-28-nitra",
+      "sps-2026-08-22-vintirov",
+      "sps-2026-08-21-slany",
+      "sps-2026-08-15-jihlava",
+      "sps-2026-08-14-vysoke-nad-jizerou",
+      "sps-2026-08-01-slusovice",
+      "sps-2026-07-25-zdikov-u-prachatic",
+      "sps-2026-07-24-police-nad-metuji",
+      "sps-2026-07-18-vlctejn",
+      "sps-2026-07-17-lovosice",
+      "sps-2026-07-11-prysk",
+      "sps-2026-07-10-podebrady",
+      "sps-2026-06-26-volyne",
+      "sps-2026-06-20-manetin",
+      "sps-2026-06-20-plzen",
+      "sps-2026-06-19-habartov-u-sokolova",
+      "sps-2026-06-13-vrchlabi",
+      "sps-2026-05-30-pasohlavky",
+      "sps-2026-05-16-lesnice",
+      "sps-2026-05-08-trencin",
+      "sps-2026-05-02-plzen",
+      "sps-2026-04-24-praha",
+      "sps-2026-03-13-sadov-u-karlovych-varu",
+      "sps-2023-12-09-koprivnice",
+      "sps-2023-12-08-policka",
+      "sps-2023-12-02-pec-pod-snezkou",
+      "sps-2023-11-25-jindrichuv-hradec",
+      "sps-2023-11-24-litomerice",
+      "sps-2023-11-18-pardubice",
+      "sps-2023-11-11-ceske-budejovice",
+      "sps-2023-11-10-sadov-u-karlovych-varu",
+      "sps-2023-10-28-uherske-hradiste",
+      "sps-2023-10-27-pisek",
+      "sps-2023-10-21-brno",
+      "sps-2023-10-20-plzen",
+      "sps-2023-10-13-praha",
+      "sps-2023-10-06-nachod",
+      "sps-2023-09-29-praha",
+      "sps-2023-09-02-pohorelice",
+      "sps-2023-09-01-strakonice",
+      "sps-2023-08-28-nitra",
+      "sps-2023-08-19-trutnov",
+      "sps-2023-08-18-slany",
+      "sps-2023-08-12-jihlava",
+      "sps-2023-08-12-ricany-u-prahy",
+      "sps-2023-08-11-harrachov",
+      "sps-2023-08-05-chvalkov",
+      "sps-2023-08-04-letohrad-kuncice",
+      "sps-2023-07-29-brno",
+      "sps-2023-07-29-borkovany",
+      "sps-2023-07-28-trutnov",
+      "sps-2023-07-27-liberec",
+      "sps-2023-07-26-praha",
+      "sps-2023-07-22-vlctejn",
+      "sps-2023-07-21-benesov",
+      "sps-2023-07-15-podebrady",
+      "sps-2023-07-05-manetin",
+      "sps-2023-07-01-brnenec",
+      "sps-2023-06-30-kostany-u-teplic",
+      "sps-2023-06-29-praha",
+      "sps-2023-06-24-tabor",
+      "sps-2023-06-24-praha",
+      "sps-2023-06-23-chlistov",
+      "sps-2023-06-10-trebetice-u-dacic",
+      "sps-2023-06-09-chomutov",
+      "sps-2023-06-03-okrouhlicka-u-havlickova-brodu",
+      "sps-2023-06-03-velke-bilovice",
+      "sps-2023-05-26-praha",
+      "sps-2023-05-20-kamyk-nad-vltavou",
+      "sps-2023-05-13-morkovice-slizany",
+      "sps-2023-05-12-litomerice",
+      "sps-2023-05-02-plzen",
+      "sps-2023-04-22-vsetin",
+      "sps-2023-04-15-olomouc",
+      "sps-2023-04-01-pisek",
+      "sps-2023-03-31-velke-mezirici",
+      "sps-2023-03-25-racice-u-steti",
+      "sps-2023-03-24-nove-mesto-nad-metuji",
+      "sps-2023-03-18-pribram",
+      "sps-2023-03-10-vimperk",
+      "sps-2023-03-04-kladno",
+      "sps-2023-03-03-litvinov",
+      "sps-2023-01-21-benesov",
+      "sps-2022-12-10-teplice",
+      "sps-2022-12-09-karlovy-vary",
+      "sps-2022-12-03-pec-pod-snezkou",
+      "sps-2022-11-26-jindrichuv-hradec",
+      "sps-2022-11-25-klatovy",
+      "sps-2022-11-19-ceske-budejovice",
+      "sps-2022-11-18-litomerice",
+      "sps-2022-10-29-brno",
+      "sps-2022-10-28-bratislava",
+      "sps-2022-10-22-as",
+      "sps-2022-10-21-praha",
+      "sps-2022-10-14-plzen",
+      "sps-2022-10-08-ostrava",
+      "sps-2022-10-07-liberec",
+      "sps-2022-09-02-vrchlabi",
+      "sps-2022-08-27-drouzkovice",
+      "sps-2022-08-26-trencin",
+      "sps-2022-08-20-slany",
+      "sps-2022-08-13-trtenice",
+      "sps-2022-08-13-jihlava",
+      "sps-2022-08-12-ricany-u-prahy",
+      "sps-2022-08-06-kozarovice",
+      "sps-2022-08-06-sporice-u-chomutova",
+      "sps-2022-08-05-harrachov",
+      "sps-2022-07-23-teplice",
+      "sps-2022-07-16-zelec-u-tabora",
+      "sps-2022-07-15-bilina",
+      "sps-2022-07-09-havlickuv-brod",
+      "sps-2022-07-02-lipi-u-ceskych-budejovic",
+      "sps-2022-07-02-strasice-u-strakonic",
+      "sps-2022-06-26-spalene-porici",
+      "sps-2022-06-25-rousinov",
+      "sps-2022-06-18-strenice-u-mlade-boleslavi",
+      "sps-2022-06-17-zacler",
+      "sps-2022-06-11-letohrad",
+      "sps-2022-06-04-zdar-nad-sazavou",
+      "sps-2022-06-03-pavlikov-u-rakovnika",
+      "sps-2022-05-28-pasohlavky",
+      "sps-2022-05-14-lesnice",
+      "sps-2022-05-07-pribram",
+      "sps-2022-04-30-uherske-hradiste",
+      "sps-2022-04-29-kladno",
+      "sps-2022-04-23-pisek",
+      "sps-2022-04-22-praha",
+      "sps-2022-04-16-mladosovice-u-trebone",
+      "sps-2022-04-15-velke-mezirici",
+      "sps-2022-04-09-strakonice",
+      "sps-2022-03-26-bukovno",
+      "sps-2022-03-25-novy-jicin",
+      "sps-2022-03-05-vimperk",
+      "sps-2022-03-04-litvinov",
+      "sps-2022-02-05-pec-pod-snezkou",
+      "sps-2021-11-20-horni-slavkov",
+      "sps-2021-11-19-upice",
+      "sps-2021-11-12-brno",
+      "sps-2021-10-29-bratislava",
+      "sps-2021-10-23-plzen",
+      "sps-2021-10-16-klatovy",
+      "sps-2021-10-15-litomerice",
+      "sps-2021-10-02-trutnov",
+      "sps-2021-10-01-praha",
+      "sps-2021-09-25-lipnice-nad-sazavou",
+      "sps-2021-09-11-ostrov",
+      "sps-2021-07-31-chvalkov-u-kamenice-nad-lipou",
+      "sps-2021-07-30-bakov-nad-jizerou",
+      "sps-2021-07-24-nejdek-u-karlovych-varu",
+      "sps-2021-07-23-police-nad-metuji",
+      "sps-2021-07-17-tremosnice",
+      "sps-2021-07-17-podebrady",
+      "sps-2021-07-10-prysk",
+      "sps-2021-07-09-ceske-budejovice",
+      "sps-2021-07-05-pardubice",
+      "sps-2021-07-04-manetin",
+      "sps-2021-06-25-pavlikov-u-rakovnika",
+      "sps-2021-06-24-praha",
+      "sps-2021-05-15-lesnice-u-zabrehu",
+      "sps-2021-05-14-morkovice",
+      "sps-2020-09-05-voznice-u-dobrise",
+      "sps-2020-08-29-hronov",
+      "sps-2020-08-28-dolni-porici-u-strakonic",
+      "sps-2020-08-22-pohorelice",
+      "sps-2020-08-22-brno",
+      "sps-2020-08-21-slany",
+      "sps-2020-08-13-vyskov",
+      "sps-2020-08-08-harrachov",
+      "sps-2020-08-07-holkov",
+      "sps-2020-08-01-chvalkov-u-kamenice-nad-lipou",
+      "sps-2020-07-11-roudnice-nad-labem",
+      "sps-2020-07-11-podebrady",
+      "sps-2020-07-11-strenice-u-mlade-boleslavi",
+      "sps-2020-07-10-podebrady",
+      "sps-2020-06-13-velke-bilovice",
+      "sps-2020-06-12-louny",
+      "sps-2025-12-06-pec-pod-snezkou",
+      "fialky-2025-07-05-brnenec",
+      "fialky-2024-11-09-ostrava",
+      "fialky-2024-11-08-ceske-budejovice",
+      "fialky-2024-10-18-plzen",
+      "punk-floid-2022-06-25-brnenec",
+      "totalni-nasazeni-2025-08-01-chvalkov-u-kamenice-nad-lipou",
+      "totalni-nasazeni-2022-06-03-pavlikov",
+      "ee-2022-11-27-pisek",
+      "ee-2021-11-27-pisek",
+      "visaci-zamek-2025-08-23-trutnov",
+      "zputnik-2020-07-11-strelna",
+      "zputnik-2020-07-31-chvalkov",
+      "zputnik-2020-08-07-harrachov",
+      "zputnik-2022-07-22-morkovice-slizany",
+      "vvu-2026-06-12-ujezd-u-prelouce"
+    ],
+    "tour_ids": [
+      "sps-jsme-v-hajzlu-tour-2022",
+      "sps-jsme-v-hajzlu-tour-2023",
+      "sps-mista-neznama-tour-2024",
+      "sps-fialky-tour-2024",
+      "sps-poprvý-spolu-tour-2024",
+      "sps-punk-film-tour-2025",
+      "sps-god-save-punk-ii-2026"
+    ],
+    "status": "pending"
   },
   {
     "id": "naco-nazov",
@@ -346,7 +1315,14 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "punkgen-2022-havlickuv-brod-07-01",
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "zemeluc",
@@ -357,7 +1333,130 @@
       "src-punkgen-archive",
       "src-zemezluc-official-concert-calendar"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2022-havlickuv-brod-07-01",
+      "punkaci-detom-2024",
+      "fialky-2023-05-13-lesnice",
+      "nezfales-2026-09-05-klopina",
+      "nezfales-2022-07-30-trutnov",
+      "nezfales-2020-08-14-vyskov",
+      "houba-2021-08-07-chrudim",
+      "houba-2021-09-18-praha",
+      "houba-2020-01-18-kosice",
+      "plexis-2020-01-31-zilina",
+      "zemeluc-2026-03-20-prostredni-becva",
+      "zemeluc-2026-04-11-hodonin",
+      "zemeluc-2026-04-18-opole",
+      "zemeluc-2026-05-08-praha",
+      "zemeluc-2026-05-09-brno",
+      "zemeluc-2026-05-23-kamyk-nad-vltavou",
+      "zemeluc-2026-06-27-horice",
+      "zemeluc-2026-07-11-otovice",
+      "zemeluc-2026-07-17-banska-bystrica",
+      "zemeluc-2026-07-18-vestinek",
+      "zemeluc-2026-07-31-chvalkov",
+      "zemeluc-2026-08-15-horni-jiretin",
+      "zemeluc-2026-08-28-bohuslavice",
+      "zemeluc-2026-10-03-krkonose-dvorska-bouda",
+      "zemeluc-2026-11-20-brno",
+      "zemeluc-2026-11-21-litomerice",
+      "zemeluc-2025-03-22-pribram",
+      "zemeluc-2025-03-29-breclav",
+      "zemeluc-2025-04-19-radenin-u-tabora",
+      "zemeluc-2025-04-26-znojmo",
+      "zemeluc-2025-05-01-praha",
+      "zemeluc-2025-05-02-bohuslavice",
+      "zemeluc-2025-05-03-brno",
+      "zemeluc-2025-06-06-kosice",
+      "zemeluc-2025-06-07-ruzomberok",
+      "zemeluc-2025-06-28-lesonice",
+      "zemeluc-2025-07-04-partizanske",
+      "zemeluc-2025-07-19-vestinek",
+      "zemeluc-2025-08-09-otovice",
+      "zemeluc-2025-08-23-stare-mesto-u-uherskeho-hradiste",
+      "zemeluc-2025-08-30-lampertice-u-trutnova",
+      "zemeluc-2025-09-06-sloup-v-moravskem-krasu",
+      "zemeluc-2025-09-13-zilina",
+      "zemeluc-2025-10-30-bratislava",
+      "zemeluc-2025-11-07-brno",
+      "zemeluc-2025-11-15-frydek-mistek",
+      "zemeluc-2025-11-16-bohuslavice",
+      "zemeluc-2024-03-02-martin",
+      "zemeluc-2024-03-15-praha",
+      "zemeluc-2024-04-05-boskovice",
+      "zemeluc-2024-04-20-bratislava",
+      "zemeluc-2024-04-27-hradec-kralove",
+      "zemeluc-2024-05-11-brno",
+      "zemeluc-2024-06-14-skalakuv-mlyn-u-meziricka",
+      "zemeluc-2024-06-15-olomouc",
+      "zemeluc-2024-07-13-vestinek",
+      "zemeluc-2024-07-26-trutnov",
+      "zemeluc-2024-07-27-spisska-bela",
+      "zemeluc-2024-08-17-praha",
+      "zemeluc-2024-08-23-brno",
+      "zemeluc-2024-08-31-trencin",
+      "zemeluc-2024-08-31-hodonin",
+      "zemeluc-2024-10-05-krkonose-dvorska-bouda",
+      "zemeluc-2024-10-19-litvinov",
+      "zemeluc-2024-10-26-velky-krtis",
+      "zemeluc-2024-11-08-bohuslavice",
+      "zemeluc-2024-11-09-kladno",
+      "zemeluc-2024-11-22-policka",
+      "zemeluc-2024-12-07-brno",
+      "zemeluc-2023-01-13-ostrava",
+      "zemeluc-2023-02-25-policka",
+      "zemeluc-2023-03-24-pribram",
+      "zemeluc-2023-03-31-pardubice",
+      "zemeluc-2023-04-01-trebic",
+      "zemeluc-2023-04-07-uherske-hradiste",
+      "zemeluc-2023-04-15-frydek-mistek",
+      "zemeluc-2023-04-22-horovice",
+      "zemeluc-2023-05-05-slapanice",
+      "zemeluc-2023-07-15-vestinek",
+      "zemeluc-2023-07-22-ledec-nad-sazavou",
+      "zemeluc-2023-07-29-vodnany",
+      "zemeluc-2023-08-05-chrudim",
+      "zemeluc-2023-08-26-pobiedna",
+      "zemeluc-2023-09-08-otrokovice",
+      "zemeluc-2023-10-28-velke-mezirici",
+      "zemeluc-2023-11-03-litomerice",
+      "zemeluc-2023-11-25-brno",
+      "zemeluc-2022-03-26-trebic",
+      "zemeluc-2022-04-09-znojmo",
+      "zemeluc-2022-04-16-frydek-mistek",
+      "zemeluc-2022-04-23-brno",
+      "zemeluc-2022-06-11-brno",
+      "zemeluc-2022-06-18-trutnov",
+      "zemeluc-2022-06-25-olomouc",
+      "zemeluc-2022-07-02-havlickuv-brod",
+      "zemeluc-2022-07-16-vestinek",
+      "zemeluc-2022-09-24-jihlava",
+      "zemeluc-2022-10-08-krkonose-dvorska-bouda",
+      "zemeluc-2022-11-26-brno",
+      "zemeluc-2021-06-19-cechyne",
+      "zemeluc-2021-07-03-ostrava",
+      "zemeluc-2021-07-17-vestinek",
+      "zemeluc-2021-07-24-ledec-nad-sazavou",
+      "zemeluc-2021-07-31-kamenice-nad-lipou",
+      "zemeluc-2021-08-20-podbor",
+      "zemeluc-2021-08-22-brno",
+      "zemeluc-2021-08-28-frydek-mistek",
+      "zemeluc-2021-09-04-sazava",
+      "zemeluc-2021-10-22-praha",
+      "zemeluc-2021-11-20-chotebor",
+      "zemeluc-2020-02-08-usti-nad-labem",
+      "zemeluc-2020-02-29-zatec",
+      "zemeluc-2020-06-13-radoskov",
+      "zemeluc-2020-06-20-vyskov",
+      "zemeluc-2020-07-18-vestinek",
+      "zemeluc-2020-08-08-havlickuv-brod",
+      "zemeluc-2020-08-29-sered",
+      "zemeluc-2020-09-26-cechyne",
+      "zputnik-2022-06-18-pilnikov"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "do-rady",
@@ -367,7 +1466,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2022-havlickuv-brod-07-01"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "rozpor",
@@ -378,7 +1482,35 @@
       "src-punkgen-archive",
       "src-rozpor-gigography"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2024-veseli-02-02",
+      "punkgen-2024-znojmo-02-03",
+      "punkaci-detom-2024",
+      "sps-2022-08-26-trencin",
+      "sps-2022-04-22-praha",
+      "zemeluc-2024-07-26-trutnov",
+      "zemeluc-2023-04-15-frydek-mistek",
+      "rozpor-2026-07-08-trencin",
+      "rozpor-2026-05-01-plzen",
+      "rozpor-2026-03-14-praha",
+      "rozpor-2026-02-13-brno",
+      "rozpor-2025-10-25-valasske-klobouky",
+      "rozpor-2025-01-11-praha",
+      "rozpor-2024-08-30-opatovce",
+      "rozpor-2024-07-20-police-nad-metuji",
+      "rozpor-2024-06-14-praha",
+      "rozpor-2024-05-25-bratislava",
+      "rozpor-2024-05-03-orlova",
+      "rozpor-2023-09-23-uherske-hradiste",
+      "rozpor-2023-07-07-trencin",
+      "rozpor-2023-03-25-brno",
+      "rozpor-2023-02-24-liptovsky-mikulas",
+      "rozpor-2022-07-29-turany",
+      "zputnik-2022-07-22-morkovice-slizany"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "marno",
@@ -391,7 +1523,15 @@
     "verification": "country_code_labelled_in_punkgen_archive",
     "aliases": [
       "MARNO"
-    ]
+    ],
+    "event_ids": [
+      "punkgen-2024-veseli-02-02",
+      "punkgen-2024-znojmo-02-03",
+      "punkgen-2026-uherske-hradiste-04-02",
+      "punkgen-2026-bratislava-04-04"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "interpunkce",
@@ -401,7 +1541,13 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2025-kosice-03-14",
+      "punkgen-2026-brno-04-18"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "lickspit",
@@ -411,7 +1557,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2025-kosice-03-14"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "incriminate",
@@ -421,7 +1572,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2025-kosice-03-14"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "diktat",
@@ -431,7 +1587,13 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2025-kosice-03-14",
+      "punkgen-2025-banska-bystrica-01-04"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "my-o-vlkoch",
@@ -441,7 +1603,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-brno-04-18"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "godot-youth",
@@ -451,7 +1618,10 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "pipesh",
@@ -461,7 +1631,10 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "plesen",
@@ -471,7 +1644,10 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "buchty-nouze",
@@ -481,7 +1657,13 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-trnava-01-23",
+      "punkgen-2026-zilina-01-24"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "goofy-ginz",
@@ -491,7 +1673,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-trnava-01-23"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "barren",
@@ -501,7 +1688,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-zilina-01-24"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "zabloudil-a",
@@ -511,7 +1703,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-zilina-01-30"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "jadran",
@@ -521,7 +1718,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-zilina-01-30"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "komplex-viny",
@@ -531,7 +1733,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-brno-04-18"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "rozruch",
@@ -541,7 +1748,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-brno-04-18"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "kurare",
@@ -551,7 +1763,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-brno-04-18"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "pivnica",
@@ -561,7 +1778,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-liptovsky-mikulas-01-31"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "fajront",
@@ -571,7 +1793,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-liptovsky-mikulas-01-31"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "the-plan-c",
@@ -581,7 +1808,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-liptovsky-mikulas-01-31"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "na",
@@ -591,7 +1823,13 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-liptovsky-mikulas-01-31",
+      "punkgen-2025-banska-bystrica-01-04"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "50m-znak",
@@ -601,7 +1839,13 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-trnava-01-23",
+      "punkgen-2026-zilina-01-24"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "rouilleux",
@@ -611,7 +1855,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2026-zilina-01-30"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "ataraxia",
@@ -621,7 +1870,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2025-poprad-01-17"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "oros",
@@ -631,7 +1885,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2025-poprad-01-17"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "kovosrot",
@@ -641,7 +1900,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2025-poprad-01-17"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "disident",
@@ -651,7 +1915,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2024-zilina-01-13"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "nazi-tampons",
@@ -661,7 +1930,14 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2021-basta-bardejov-06-10",
+      "punkgen-2024-zilina-01-13",
+      "fialky-2025-kosice-03-21"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "dxfxfx",
@@ -671,7 +1947,12 @@
     "sources": [
       "src-punkgen-archive"
     ],
-    "verification": "country_code_labelled_in_punkgen_archive"
+    "verification": "country_code_labelled_in_punkgen_archive",
+    "event_ids": [
+      "punkgen-2024-zilina-01-13"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "the-fialky",
@@ -685,7 +1966,249 @@
       "src-fialky-played-2025",
       "src-fialky-official-concert-archive"
     ],
-    "verification": "official_band_website"
+    "verification": "official_band_website",
+    "event_ids": [
+      "fialky-2025-warsaw-05-16",
+      "fialky-2025-ruda-slaska-05-17",
+      "fialky-2025-eggenthal-09-12",
+      "fialky-2025-wunstock-09-13",
+      "fialky-2025-prague-03-01",
+      "fialky-2025-finsterwalde-03-07",
+      "fialky-2025-bratislava-03-15",
+      "fialky-2025-kosice-03-21",
+      "fialky-2025-zilina-03-22",
+      "fialky-2025-falkirk-02-15",
+      "punkaci-detom-2024",
+      "sps-2025-08-23-slany",
+      "sps-2025-08-08-vysoke-nad-jizerou",
+      "sps-2025-06-19-praha",
+      "sps-2025-06-14-horepnik",
+      "sps-2024-10-25-brno",
+      "sps-2024-10-19-pisek",
+      "sps-2024-10-11-praha",
+      "sps-2024-10-10-praha",
+      "sps-2024-10-05-pardubice",
+      "sps-2024-10-04-jihlava",
+      "sps-2024-07-20-vlctejn",
+      "sps-2024-06-22-brnenec",
+      "sps-2024-05-25-mostiste-u-velkeho-mezirici",
+      "sps-2026-11-21-kralupy-nad-vltavou",
+      "sps-2026-11-20-mlada-boleslav",
+      "sps-2026-11-14-valasske-klobouky",
+      "sps-2026-11-13-ostrava",
+      "sps-2026-10-31-pisek",
+      "sps-2026-10-30-litomysl",
+      "sps-2026-10-17-brno",
+      "sps-2026-10-16-plzen",
+      "sps-2026-10-09-praha",
+      "sps-2026-10-08-praha",
+      "sps-2026-10-03-kolin",
+      "sps-2026-10-02-ceske-budejovice",
+      "sps-2026-07-10-podebrady",
+      "sps-2023-06-09-chomutov",
+      "sps-2023-03-10-vimperk",
+      "sps-2022-05-07-pribram",
+      "sps-2021-06-24-praha",
+      "sps-2020-07-11-podebrady",
+      "fialky-2026-08-28-trencin",
+      "fialky-2026-08-16-trutnov",
+      "fialky-2026-08-14-ricany-u-prahy",
+      "fialky-2026-07-25-police-nad-metuji",
+      "fialky-2026-05-22-praha",
+      "fialky-2026-04-18-vrchlabi",
+      "fialky-2026-04-17-karlovy-vary",
+      "fialky-2026-04-11-liberec",
+      "fialky-2026-04-10-pardubice",
+      "fialky-2026-03-28-brno",
+      "fialky-2026-03-27-zlin",
+      "fialky-2026-03-21-praha",
+      "fialky-2026-03-20-ceske-budejovice",
+      "fialky-2026-03-14-bratislava",
+      "fialky-2026-03-13-teplice",
+      "fialky-2026-02-27-volyne",
+      "fialky-2026-02-21-svitavy",
+      "fialky-2026-02-14-plzen",
+      "fialky-2026-02-13-zdarna",
+      "fialky-2026-02-07-harrachov",
+      "fialky-2026-01-31-klatovy",
+      "fialky-2026-01-30-litvinov",
+      "fialky-2026-01-24-trebic",
+      "fialky-2026-01-23-usti-nad-labem",
+      "fialky-2025-12-20-hradec-kralove",
+      "fialky-2025-12-06-praha",
+      "fialky-2025-11-22-sedlcany",
+      "fialky-2025-11-21-vimperk",
+      "fialky-2025-11-15-pardubice",
+      "fialky-2025-11-14-decin",
+      "fialky-2025-11-08-liberec",
+      "fialky-2025-11-07-ceske-budejovice",
+      "fialky-2025-10-18-ostrava",
+      "fialky-2025-10-17-uherske-hradiste",
+      "fialky-2025-10-11-olomouc",
+      "fialky-2025-10-10-brno",
+      "fialky-2025-09-27-plzen",
+      "fialky-2025-09-26-praha",
+      "fialky-2025-09-05-litomerice",
+      "fialky-2025-08-23-olsi-nad-oslavou",
+      "fialky-2025-08-21-hluboka-nad-vltavou",
+      "fialky-2025-08-16-cepi",
+      "fialky-2025-08-16-ceska-trebova",
+      "fialky-2025-08-15-jiretin",
+      "fialky-2025-08-08-praha",
+      "fialky-2025-07-26-nove-role",
+      "fialky-2025-07-25-mnichovo-hradiste",
+      "fialky-2025-07-24-plzen",
+      "fialky-2025-07-05-holysov",
+      "fialky-2025-07-05-brnenec",
+      "fialky-2025-06-21-olomouc",
+      "fialky-2025-06-20-habartov",
+      "fialky-2025-06-13-liberec",
+      "fialky-2025-06-07-dobris",
+      "fialky-2025-05-31-brno",
+      "fialky-2025-05-30-racice-u-steti",
+      "fialky-2025-05-02-praha",
+      "fialky-2024-12-07-praha",
+      "fialky-2024-11-16-jindrichuv-hradec",
+      "fialky-2024-11-15-klatovy",
+      "fialky-2024-11-09-ostrava",
+      "fialky-2024-11-08-ceske-budejovice",
+      "fialky-2024-10-18-plzen",
+      "fialky-2024-08-30-pobiedna",
+      "fialky-2024-08-24-pardubice",
+      "fialky-2024-08-23-jablonec-nad-nisou",
+      "fialky-2024-08-10-klaster-hradiste-nad-jizerou",
+      "fialky-2024-08-09-strakonice",
+      "fialky-2024-07-19-police-nad-metuji",
+      "fialky-2024-07-13-hlucin",
+      "fialky-2024-06-28-tabor",
+      "fialky-2024-06-20-praha",
+      "fialky-2024-06-12-praha",
+      "fialky-2024-06-08-brno",
+      "fialky-2024-06-08-neveklov",
+      "fialky-2024-06-07-praha",
+      "fialky-2024-05-25-krasna-hora-nad-vltavou",
+      "fialky-2024-05-11-kostelec-nad-orlici",
+      "fialky-2024-05-10-opava",
+      "fialky-2024-04-27-vsetin",
+      "fialky-2024-04-26-dobris",
+      "fialky-2024-04-13-bratislava",
+      "fialky-2024-04-12-uherske-hradiste",
+      "fialky-2024-04-06-ostrava",
+      "fialky-2024-04-05-brno",
+      "fialky-2024-03-23-plzen",
+      "fialky-2024-03-22-vimperk",
+      "fialky-2024-03-16-liberec",
+      "fialky-2024-03-15-teplice",
+      "fialky-2024-03-09-ceske-budejovice",
+      "fialky-2024-03-08-praha",
+      "fialky-2024-02-03-zdarna",
+      "fialky-2024-02-02-kladno",
+      "fialky-2024-01-26-mlada-vozice",
+      "fialky-2024-01-19-usti-nad-labem",
+      "fialky-2023-01-13-valasske-mezirici",
+      "fialky-2023-01-14-znojmo",
+      "fialky-2023-01-20-kutna-hora",
+      "fialky-2023-01-21-klatovy",
+      "fialky-2023-02-03-litvinov",
+      "fialky-2023-02-04-harrachov",
+      "fialky-2023-02-24-chrudim",
+      "fialky-2023-02-25-teplice",
+      "fialky-2023-03-11-plzen",
+      "fialky-2023-03-17-uherske-hradiste",
+      "fialky-2023-03-18-bratislava",
+      "fialky-2023-03-24-praha",
+      "fialky-2023-03-25-ceske-budejovice",
+      "fialky-2023-04-14-brno",
+      "fialky-2023-04-15-ostrava",
+      "fialky-2023-04-22-praha",
+      "fialky-2023-05-13-lesnice",
+      "fialky-2023-06-01-praha",
+      "fialky-2023-06-02-letohrad",
+      "fialky-2023-06-03-ostrov-u-macochy",
+      "fialky-2023-06-10-strasice",
+      "fialky-2023-06-10-ohrazeni-u-ceskych-budejovic",
+      "fialky-2023-06-16-slany",
+      "fialky-2023-06-17-brno",
+      "fialky-2023-06-22-spalene-porici",
+      "fialky-2022-02-25-rakovnik",
+      "fialky-2022-02-26-plzen",
+      "fialky-2022-03-11-liberec",
+      "fialky-2022-03-12-ceske-budejovice",
+      "fialky-2022-03-18-strakonice",
+      "fialky-2022-03-19-kolin",
+      "fialky-2022-03-25-ostrava",
+      "fialky-2022-03-26-uherske-hradiste",
+      "fialky-2022-04-01-brno",
+      "fialky-2022-04-02-bratislava",
+      "fialky-2022-04-08-teplice",
+      "fialky-2022-04-09-praha",
+      "fialky-2022-10-14-olomouc",
+      "fialky-2022-10-15-nachod",
+      "fialky-2022-10-21-decin",
+      "fialky-2022-10-22-kolin",
+      "fialky-2022-10-28-ceske-budejovice",
+      "fialky-2022-10-29-sedlcany",
+      "fialky-2022-11-18-praha",
+      "fialky-2022-11-19-pardubice",
+      "fialky-2022-12-17-praha",
+      "fialky-2021-11-26-brno",
+      "fialky-2021-11-05-praha",
+      "fialky-2021-10-22-klatovy",
+      "fialky-2021-10-16-roudnice-nad-labem",
+      "fialky-2021-10-09-praha",
+      "fialky-2021-09-25-kostelec-nad-orlici",
+      "fialky-2021-09-17-privrat-u-ceske-trebove",
+      "fialky-2021-09-04-pisek",
+      "fialky-2021-09-03-litomerice",
+      "fialky-2021-08-21-slany",
+      "fialky-2021-08-13-ricany-u-prahy",
+      "fialky-2021-08-07-vlctejn",
+      "fialky-2021-08-06-harrachov",
+      "fialky-2021-07-24-police-nad-metuji",
+      "fialky-2021-07-17-vrchlabi",
+      "fialky-2021-07-16-olesko",
+      "fialky-2021-07-09-tabor",
+      "fialky-2021-06-25-brno",
+      "fialky-2021-06-19-chodov",
+      "fialky-2021-06-18-praha",
+      "fialky-2021-06-05-pavlikov",
+      "fialky-2021-05-29-chomutov",
+      "fialky-2021-05-22-stribro",
+      "fialky-2021-05-15-hermanuv-mestec",
+      "fialky-2021-05-15-kunice",
+      "fialky-2021-05-08-pardubice",
+      "fialky-2020-10-03-roudnice-nad-labem",
+      "fialky-2020-09-04-litomerice",
+      "fialky-2020-08-28-strakonice",
+      "fialky-2020-08-15-vyskov",
+      "fialky-2020-08-14-volyne",
+      "fialky-2020-08-02-ceske-budejovice",
+      "fialky-2020-08-01-trebiz",
+      "fialky-2020-08-01-beroun",
+      "fialky-2020-07-30-praha",
+      "fialky-2020-07-11-janovice-nad-uhlavou",
+      "fialky-2020-07-10-kladno",
+      "fialky-2020-07-04-benesov",
+      "nezfales-2026-07-04-brnenec",
+      "nezfales-2022-03-18-klecany",
+      "punk-floid-2022-06-25-brnenec",
+      "totalni-nasazeni-2022-07-16-podoli-u-mohelnice",
+      "totalni-nasazeni-2020-01-18-slany",
+      "totalni-nasazeni-2020-04-12-jistebnice",
+      "p-u-m-2022-01-22-kladno",
+      "zputnik-2022-08-05-chvalkov"
+    ],
+    "tour_ids": [
+      "the-fialky-25-punkrock-years-tour-2025",
+      "sps-fialky-tour-2024",
+      "sps-god-save-punk-ii-2026",
+      "the-fialky-10x3-tour-2024",
+      "the-fialky-punk-rock-radio-tour-2022",
+      "the-fialky-dont-worry-be-punk-tour-2023",
+      "the-fialky-winter-punkrock-show-2023",
+      "the-fialky-winter-punk-mini-tour-2026"
+    ],
+    "status": "pending"
   },
   {
     "id": "the-minority",
@@ -698,7 +2221,12 @@
       "src-dinkel-2025",
       "src-minority-official"
     ],
-    "verification": "festival_program_and_independent_report"
+    "verification": "festival_program_and_independent_report",
+    "event_ids": [
+      "minority-2025-dinkelscherben-07-25"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "nezfales",
@@ -711,7 +2239,193 @@
       "src-fialky-played-2025",
       "src-nezfales-official-archive"
     ],
-    "verification": "named_in_official_czech_band_tour_archive"
+    "verification": "named_in_official_czech_band_tour_archive",
+    "event_ids": [
+      "fialky-2025-prague-03-01",
+      "fialky-2025-bratislava-03-15",
+      "fialky-2025-kosice-03-21",
+      "fialky-2025-zilina-03-22",
+      "sps-2025-08-23-slany",
+      "sps-2025-07-11-podebrady",
+      "sps-2025-05-16-praha",
+      "sps-2024-08-16-volyne",
+      "sps-2024-08-09-harrachov",
+      "sps-2024-08-03-chvalkov-u-kamenice-nad-lipou",
+      "sps-2024-06-22-brnenec",
+      "sps-2026-08-14-vysoke-nad-jizerou",
+      "sps-2023-06-29-praha",
+      "sps-2022-10-29-brno",
+      "sps-2022-08-26-trencin",
+      "sps-2020-08-21-slany",
+      "fialky-2026-04-17-karlovy-vary",
+      "fialky-2026-04-11-liberec",
+      "fialky-2026-04-10-pardubice",
+      "fialky-2026-03-28-brno",
+      "fialky-2026-03-27-zlin",
+      "fialky-2026-03-21-praha",
+      "fialky-2026-03-20-ceske-budejovice",
+      "fialky-2026-03-14-bratislava",
+      "fialky-2026-03-13-teplice",
+      "fialky-2026-02-27-volyne",
+      "fialky-2026-02-14-plzen",
+      "fialky-2026-01-23-usti-nad-labem",
+      "fialky-2025-11-15-pardubice",
+      "fialky-2024-04-13-bratislava",
+      "fialky-2024-04-12-uherske-hradiste",
+      "fialky-2024-04-06-ostrava",
+      "fialky-2024-04-05-brno",
+      "fialky-2024-03-23-plzen",
+      "fialky-2024-03-22-vimperk",
+      "fialky-2024-03-16-liberec",
+      "fialky-2024-03-15-teplice",
+      "fialky-2024-03-09-ceske-budejovice",
+      "fialky-2024-03-08-praha",
+      "fialky-2023-01-20-kutna-hora",
+      "fialky-2023-01-21-klatovy",
+      "fialky-2023-02-24-chrudim",
+      "fialky-2023-06-17-brno",
+      "fialky-2022-02-25-rakovnik",
+      "fialky-2022-02-26-plzen",
+      "fialky-2022-03-11-liberec",
+      "fialky-2022-03-12-ceske-budejovice",
+      "fialky-2022-03-19-kolin",
+      "fialky-2022-03-25-ostrava",
+      "fialky-2022-03-26-uherske-hradiste",
+      "fialky-2022-04-01-brno",
+      "fialky-2022-04-02-bratislava",
+      "fialky-2022-04-08-teplice",
+      "fialky-2022-04-09-praha",
+      "fialky-2022-12-17-praha",
+      "fialky-2021-09-17-privrat-u-ceske-trebove",
+      "fialky-2021-08-21-slany",
+      "fialky-2021-06-25-brno",
+      "nezfales-2026-11-21-jindrichuv-hradec",
+      "nezfales-2026-11-07-praha",
+      "nezfales-2026-11-06-znojmo",
+      "nezfales-2026-10-24-zilina",
+      "nezfales-2026-10-23-kosice",
+      "nezfales-2026-10-17-litomysl",
+      "nezfales-2026-10-03-liberec",
+      "nezfales-2026-10-02-kladno",
+      "nezfales-2026-09-05-klopina",
+      "nezfales-2026-09-04-litomerice",
+      "nezfales-2026-08-29-lysa-nad-labem",
+      "nezfales-2026-08-28-opatovce-u-trencina",
+      "nezfales-2026-08-22-slany",
+      "nezfales-2026-08-08-sobeslav",
+      "nezfales-2026-08-07-letohrad",
+      "nezfales-2026-08-01-chvalkov-u-kamenice-nad-lipou",
+      "nezfales-2026-07-25-strakonice",
+      "nezfales-2026-07-11-soprec-u-prelouce",
+      "nezfales-2026-07-04-brnenec",
+      "nezfales-2026-07-04-holysov",
+      "nezfales-2026-06-19-jesenik",
+      "nezfales-2026-06-18-praha",
+      "nezfales-2026-06-13-mnichovo-hradiste",
+      "nezfales-2026-06-12-chomutov",
+      "nezfales-2026-05-30-mostiste-u-velkeho-mezirici",
+      "nezfales-2026-05-16-lesnice-u-zabrehu",
+      "nezfales-2025-12-13-jesenik",
+      "nezfales-2025-12-12-jablonec-nad-nisou",
+      "nezfales-2025-11-22-pisek",
+      "nezfales-2025-11-21-jihlava",
+      "nezfales-2025-10-18-teplice",
+      "nezfales-2025-10-17-brno",
+      "nezfales-2025-09-27-hradec-kralove",
+      "nezfales-2025-09-26-uherske-hradiste",
+      "nezfales-2025-08-23-slany",
+      "nezfales-2025-07-19-police-nad-metuji",
+      "nezfales-2025-07-18-lovosice",
+      "nezfales-2025-07-12-hlucin",
+      "nezfales-2025-06-27-tabor",
+      "nezfales-2025-06-13-hradec-kralove",
+      "nezfales-2025-05-03-plzen",
+      "nezfales-2025-04-26-praha",
+      "nezfales-2024-12-06-litomerice",
+      "nezfales-2024-11-22-plzen",
+      "nezfales-2024-11-08-litomysl",
+      "nezfales-2024-10-19-bohuslavice",
+      "nezfales-2024-10-18-praha",
+      "nezfales-2024-10-05-klatovy",
+      "nezfales-2024-10-04-racice",
+      "nezfales-2024-07-12-hlucin",
+      "nezfales-2024-06-15-ohrazeni-u-ceskych-budejovic",
+      "nezfales-2024-06-08-vikyrovice-u-sumperka",
+      "nezfales-2024-06-01-benesov",
+      "nezfales-2023-12-09-praha",
+      "nezfales-2023-12-08-litvinov",
+      "nezfales-2023-11-25-pribram",
+      "nezfales-2023-11-11-havlickuv-brod",
+      "nezfales-2023-11-10-praha",
+      "nezfales-2023-10-27-vimperk",
+      "nezfales-2023-10-21-karlovy-vary",
+      "nezfales-2023-10-14-znojmo",
+      "nezfales-2023-08-26-trencin",
+      "nezfales-2023-08-19-slany",
+      "nezfales-2023-08-05-chvalkov-u-kamenice-nad-lipou",
+      "nezfales-2023-07-22-police-nad-metuji",
+      "nezfales-2023-07-15-lovosice",
+      "nezfales-2023-06-23-tabor",
+      "nezfales-2023-05-20-mostiste-u-velkeho-mezirici",
+      "nezfales-2023-04-21-praha",
+      "nezfales-2023-04-15-melnik",
+      "nezfales-2023-04-14-plzen",
+      "nezfales-2023-03-25-martin",
+      "nezfales-2023-03-24-opava",
+      "nezfales-2023-03-11-ceske-budejovice",
+      "nezfales-2023-03-10-teplice",
+      "nezfales-2023-02-25-decin",
+      "nezfales-2023-02-18-pardubice",
+      "nezfales-2023-02-17-radomysl-u-strakonic",
+      "nezfales-2022-11-12-olomouc",
+      "nezfales-2022-11-11-kladno",
+      "nezfales-2022-11-05-usti-nad-labem",
+      "nezfales-2022-11-03-praha",
+      "nezfales-2022-10-15-jindrichuv-hradec",
+      "nezfales-2022-10-14-hradec-kralove",
+      "nezfales-2022-09-23-jihlava",
+      "nezfales-2022-08-19-slany",
+      "nezfales-2022-07-30-trutnov",
+      "nezfales-2022-07-23-tremosnice",
+      "nezfales-2022-07-16-podebrady",
+      "nezfales-2022-07-01-jesenik",
+      "nezfales-2022-06-25-olesko",
+      "nezfales-2022-06-22-praha",
+      "nezfales-2022-05-21-bohusovice-nad-ohri",
+      "nezfales-2022-03-18-klecany",
+      "nezfales-2021-10-08-nachod",
+      "nezfales-2021-10-01-litomerice",
+      "nezfales-2021-09-24-jindrichuv-hradec",
+      "nezfales-2021-09-04-vrchlabi",
+      "nezfales-2021-09-03-praha",
+      "nezfales-2021-08-28-ceske-budejovice",
+      "nezfales-2021-08-20-volyne",
+      "nezfales-2021-08-19-praha",
+      "nezfales-2021-08-07-harrachov",
+      "nezfales-2021-07-31-trebiz",
+      "nezfales-2021-07-03-benesov",
+      "nezfales-2021-06-26-strakonice",
+      "nezfales-2020-09-18-praha",
+      "nezfales-2020-09-11-brno",
+      "nezfales-2020-08-14-vyskov",
+      "nezfales-2020-07-18-novy-bydzov",
+      "nezfales-2020-07-04-vrchlabi",
+      "nezfales-2020-06-27-olesko",
+      "nezfales-2020-05-28-brno",
+      "nezfales-2020-05-26-praha",
+      "nezfales-2020-01-24-havlickuv-brod",
+      "nezfales-2020-01-11-kladno",
+      "totalni-nasazeni-2025-05-30-pavlikov",
+      "totalni-nasazeni-2020-04-12-jistebnice",
+      "ee-2021-07-30-trebiz",
+      "zputnik-2022-08-05-chvalkov",
+      "vvu-2025-04-25-praha"
+    ],
+    "tour_ids": [
+      "nezfales-houba-tour-autumn-2024",
+      "nezfales-houba-tour-autumn-2026"
+    ],
+    "status": "pending"
   },
   {
     "id": "stare-pusky",
@@ -724,7 +2438,17 @@
       "src-fialky-played-2025",
       "src-stare-pusky-bandzone-archive"
     ],
-    "verification": "named_in_official_czech_band_tour_archive"
+    "verification": "named_in_official_czech_band_tour_archive",
+    "event_ids": [
+      "fialky-2025-bratislava-03-15",
+      "fialky-2025-zilina-03-22",
+      "sps-2025-08-23-slany",
+      "fialky-2025-07-05-brnenec",
+      "nezfales-2025-09-26-uherske-hradiste",
+      "houba-2025-01-17-usti-nad-labem"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "bratislavske-dievcata",
@@ -736,7 +2460,15 @@
     "sources": [
       "src-fialky-played-2025"
     ],
-    "verification": "named_in_official_tour_archive"
+    "verification": "named_in_official_tour_archive",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "fialky-2025-bratislava-03-15",
+      "punkaci-detom-2024",
+      "sps-2025-08-23-slany"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "stamgasti",
@@ -749,7 +2481,14 @@
       "src-fialky-played-2025",
       "src-punkaci-program-2025"
     ],
-    "verification": "named_in_official_czech_band_tour_archive"
+    "verification": "named_in_official_czech_band_tour_archive",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "fialky-2025-bratislava-03-15",
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "blank-out",
@@ -763,7 +2502,25 @@
       "src-blankout-balkan-2024",
       "src-blankout-sarajevo-2024"
     ],
-    "verification": "official_band_profile_and_tour_announcement"
+    "verification": "official_band_profile_and_tour_announcement",
+    "event_ids": [
+      "blankout-balkan-2024-linz",
+      "blankout-balkan-2024-ljubljana",
+      "blankout-balkan-2024-pula",
+      "blankout-balkan-2024-rijeka",
+      "blankout-balkan-2024-sarajevo",
+      "blankout-balkan-2024-pancevo",
+      "blankout-balkan-2024-belgrade",
+      "blankout-balkan-2024-novi-sad",
+      "blankout-balkan-2024-zagreb",
+      "blankout-balkan-2024-vienna",
+      "fialky-2026-01-23-usti-nad-labem",
+      "vvu-2025-07-18-bustehrad"
+    ],
+    "tour_ids": [
+      "blank-out-lidske-zdroje-balkan-tour-2024"
+    ],
+    "status": "pending"
   },
   {
     "id": "lidske-zdroje",
@@ -777,7 +2534,23 @@
       "src-lidskezdroje-bandcamp",
       "src-blankout-balkan-2024"
     ],
-    "verification": "official_bandcamp_profile_and_tour_announcement"
+    "verification": "official_bandcamp_profile_and_tour_announcement",
+    "event_ids": [
+      "blankout-balkan-2024-linz",
+      "blankout-balkan-2024-ljubljana",
+      "blankout-balkan-2024-pula",
+      "blankout-balkan-2024-rijeka",
+      "blankout-balkan-2024-sarajevo",
+      "blankout-balkan-2024-pancevo",
+      "blankout-balkan-2024-belgrade",
+      "blankout-balkan-2024-novi-sad",
+      "blankout-balkan-2024-zagreb",
+      "blankout-balkan-2024-vienna"
+    ],
+    "tour_ids": [
+      "blank-out-lidske-zdroje-balkan-tour-2024"
+    ],
+    "status": "pending"
   },
   {
     "id": "slobodna-europa",
@@ -789,7 +2562,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "jaksi-taksi",
@@ -801,7 +2579,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "znouzectnost",
@@ -814,7 +2597,24 @@
       "src-punkaci-2024-goout",
       "src-znouzectnost-bandzone-archive"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024",
+      "sps-2025-08-23-slany",
+      "sps-2024-06-22-brnenec",
+      "sps-2026-08-21-slany",
+      "sps-2021-11-20-horni-slavkov",
+      "sps-2020-08-21-slany",
+      "fialky-2025-07-05-brnenec",
+      "nezfales-2026-10-17-litomysl",
+      "nezfales-2023-08-19-slany",
+      "totalni-nasazeni-2022-07-16-podoli-u-mohelnice",
+      "totalni-nasazeni-2020-01-18-slany",
+      "visaci-zamek-2025-08-23-trutnov",
+      "vvu-2026-01-31-praha"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "muerti",
@@ -826,7 +2626,16 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024",
+      "fialky-2025-07-05-brnenec",
+      "punk-floid-2022-06-25-brnenec",
+      "vvu-2025-04-25-praha",
+      "vvu-2025-07-18-bustehrad"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "gutalax",
@@ -838,7 +2647,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "driak",
@@ -851,7 +2665,50 @@
       "src-punkaci-program-2025",
       "src-driak-bandzone-archive"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "punkaci-detom-2024",
+      "sps-2025-08-23-slany",
+      "fialky-2025-07-05-brnenec",
+      "fialky-2021-05-08-pardubice",
+      "nezfales-2026-07-04-brnenec",
+      "nezfales-2022-07-30-trutnov",
+      "houba-2026-03-14-jihlava",
+      "houba-2025-08-16-horni-jiretin",
+      "punk-floid-2026-11-14-pardubice",
+      "totalni-nasazeni-2025-08-01-chvalkov-u-kamenice-nad-lipou",
+      "totalni-nasazeni-2025-08-29-opatovce-u-trencina",
+      "ee-2025-02-01-plzen",
+      "ee-2025-11-08-ostrava",
+      "vision-days-2024-01-27-svitavy",
+      "vision-days-2024-02-03-praha",
+      "vision-days-2022-02-05-praha",
+      "vision-days-2025-02-15-svitavy",
+      "vision-days-2025-08-01-chvalkov",
+      "driak-2026-01-17-trutnov",
+      "driak-2026-01-24-brno",
+      "driak-2020-02-22-slany",
+      "driak-2020-02-28-janske-lazne",
+      "driak-2020-03-13-vrchlabi",
+      "driak-2021-01-22-janske-lazne",
+      "driak-2021-03-12-trutnov",
+      "driak-2021-05-15-praha",
+      "driak-2022-01-21-brno",
+      "driak-2022-02-12-kladno",
+      "driak-2022-03-18-rokytnice-nad-jizerou",
+      "driak-2022-03-26-vrchlabi",
+      "driak-2023-01-21-brno",
+      "driak-2023-01-28-nove-mesto-nad-metuji",
+      "driak-2023-02-04-praha",
+      "driak-2023-02-04-plzen",
+      "volant-2026-09-05-vrchlabi",
+      "vvu-2026-06-12-ujezd-u-prelouce",
+      "vvu-2025-04-25-praha",
+      "vvu-2025-07-18-bustehrad"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "tragedis",
@@ -863,7 +2720,21 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024",
+      "nezfales-2026-10-17-litomysl",
+      "nezfales-2026-07-04-brnenec",
+      "punk-floid-2024-04-13-frydek-mistek",
+      "punk-floid-2022-06-25-brnenec",
+      "totalni-nasazeni-2025-08-01-chvalkov-u-kamenice-nad-lipou",
+      "ee-2025-02-14-praha",
+      "ee-2021-04-23-praha",
+      "zputnik-2020-01-18-kolin",
+      "zputnik-2020-07-31-chvalkov"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "vvu",
@@ -876,7 +2747,44 @@
       "src-punkaci-2024-goout",
       "src-vvu-bandzone-archive"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024",
+      "sps-2025-08-23-slany",
+      "fialky-2025-11-15-pardubice",
+      "fialky-2025-09-26-praha",
+      "nezfales-2026-10-17-litomysl",
+      "nezfales-2026-07-04-brnenec",
+      "ee-2026-09-05-sloup-v-moravskem-krasu",
+      "ee-2025-02-14-praha",
+      "ee-2025-11-08-ostrava",
+      "dilemma-in-cinema-2024-02-09-chrudim",
+      "vision-days-2025-08-01-chvalkov",
+      "p-u-m-2022-02-26-praha",
+      "visaci-zamek-2025-08-23-trutnov",
+      "vvu-2026-01-31-praha",
+      "vvu-2026-04-04-litvinov",
+      "vvu-2026-05-16-dolni-benesov",
+      "vvu-2025-03-22-tabor",
+      "zputnik-2020-01-18-kolin",
+      "zputnik-2020-03-07-melnik",
+      "zputnik-2020-09-02-litomerice",
+      "zputnik-2020-11-13-nachod",
+      "zputnik-2022-08-05-chvalkov",
+      "vvu-2026-05-23-kostelec-nad-orlici",
+      "vvu-2026-05-29-radomysl",
+      "vvu-2026-06-12-ujezd-u-prelouce",
+      "vvu-2026-07-25-prelovice",
+      "vvu-2025-04-25-praha",
+      "vvu-2025-05-31-sobinov",
+      "vvu-2025-06-07-okrouhlicka",
+      "vvu-2025-07-18-bustehrad",
+      "vvu-2025-07-26-hukvaldy",
+      "vvu-2025-08-09-nova-role",
+      "vvu-2025-09-13-praha"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "bijouterrier",
@@ -888,7 +2796,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "nekultura",
@@ -900,7 +2813,13 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "plus-minus",
@@ -912,7 +2831,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "municia",
@@ -924,7 +2848,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "p-u-m",
@@ -938,7 +2867,33 @@
       "src-punkaci-program-2025",
       "src-pum-bandzone-archive"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "punkaci-detom-2024",
+      "sps-2026-08-21-slany",
+      "fialky-2025-07-05-brnenec",
+      "nezfales-2026-07-04-brnenec",
+      "houba-2026-03-14-jihlava",
+      "houba-2024-04-20-praha",
+      "punk-floid-2024-04-13-frydek-mistek",
+      "totalni-nasazeni-2025-08-29-opatovce-u-trencina",
+      "ee-2025-02-14-praha",
+      "ee-2021-04-23-praha",
+      "vision-days-2022-03-05-radvanec",
+      "vision-days-2022-03-25-jaromer",
+      "p-u-m-2022-01-22-kladno",
+      "p-u-m-2022-02-26-praha",
+      "p-u-m-2024-03-16-hlavatce",
+      "plexis-2020-01-31-zilina",
+      "zputnik-2020-07-11-strelna",
+      "zputnik-2020-07-31-chvalkov",
+      "vvu-2025-04-25-praha",
+      "vvu-2025-07-18-bustehrad",
+      "vvu-2025-09-13-praha"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "marhule",
@@ -950,7 +2905,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "head2down",
@@ -962,7 +2922,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "fuera-fondo",
@@ -974,7 +2939,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "grobiani",
@@ -986,7 +2956,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "vystraha",
@@ -998,7 +2973,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "cista-ryza",
@@ -1010,7 +2990,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "fraktura",
@@ -1022,7 +3007,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "empty-hall-of-fame",
@@ -1034,7 +3024,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "proti-smeru",
@@ -1046,7 +3041,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "editor",
@@ -1058,7 +3058,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "sitnan",
@@ -1070,7 +3075,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "vysoke-napeti",
@@ -1082,7 +3092,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "bez-sance",
@@ -1094,7 +3109,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "sba",
@@ -1106,7 +3126,12 @@
     "sources": [
       "src-punkaci-2024-goout"
     ],
-    "verification": "country_of_origin_labelled_by_event_listing"
+    "verification": "country_of_origin_labelled_by_event_listing",
+    "event_ids": [
+      "punkaci-detom-2024"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "konfront",
@@ -1118,7 +3143,12 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "bermudskej-kvadr",
@@ -1130,7 +3160,12 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "svindl",
@@ -1142,7 +3177,13 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "totalni-nasazeni-2025-08-01-chvalkov-u-kamenice-nad-lipou"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "barikady-z-popelnic",
@@ -1154,7 +3195,12 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "sour-bitch",
@@ -1166,7 +3212,12 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "exnito",
@@ -1178,7 +3229,12 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "pirates-of-the-pubs",
@@ -1190,7 +3246,12 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "kohout-plasi-smrt",
@@ -1202,7 +3263,13 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "ee-2021-04-23-praha"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "street-machine",
@@ -1214,7 +3281,12 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "the-rocket-dogz",
@@ -1226,7 +3298,13 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "totalni-nasazeni-2025-08-29-opatovce-u-trencina"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "volant",
@@ -1240,7 +3318,47 @@
       "src-volant-bandzone-archive",
       "src-volant-official-calendar"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "sps-2025-06-13-chomutov",
+      "sps-2026-08-21-slany",
+      "sps-2022-05-07-pribram",
+      "fialky-2025-11-15-pardubice",
+      "fialky-2025-07-05-brnenec",
+      "fialky-2023-02-25-teplice",
+      "fialky-2023-03-25-ceske-budejovice",
+      "nezfales-2026-11-21-jindrichuv-hradec",
+      "nezfales-2026-07-04-brnenec",
+      "nezfales-2022-07-30-trutnov",
+      "nezfales-2021-07-31-trebiz",
+      "punk-floid-2026-11-14-pardubice",
+      "punk-floid-2024-04-13-frydek-mistek",
+      "punk-floid-2022-06-25-brnenec",
+      "totalni-nasazeni-2025-07-19-peruc",
+      "totalni-nasazeni-2025-07-19-lovosice",
+      "ee-2026-02-07-plzen",
+      "ee-2025-02-01-plzen",
+      "ee-2022-02-05-harrachov",
+      "ee-2022-10-30-pardubice",
+      "ee-2021-02-12-harrachov",
+      "ee-2021-07-30-trebiz",
+      "ee-2021-11-12-frydek-mistek",
+      "ee-2020-02-15-harrachov",
+      "dilemma-in-cinema-2021-11-19-nechvalice",
+      "vision-days-2022-01-14-svitavy",
+      "vision-days-2021-10-30-pardubice",
+      "vision-days-2025-02-15-svitavy",
+      "volant-2026-09-05-vrchlabi",
+      "volant-2026-10-31-karlovy-vary",
+      "volant-2023-02-18-ledec-nad-sazavou",
+      "volant-2023-03-31-praha",
+      "zputnik-2020-07-31-chvalkov",
+      "vvu-2026-06-12-ujezd-u-prelouce",
+      "vvu-2025-04-25-praha"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "zadnej-stres",
@@ -1252,7 +3370,12 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "sex-deviants",
@@ -1264,7 +3387,12 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "dukla-vozovna",
@@ -1276,7 +3404,17 @@
     "sources": [
       "src-punkaci-program-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "sps-2020-08-21-slany",
+      "totalni-nasazeni-2025-08-01-chvalkov-u-kamenice-nad-lipou",
+      "totalni-nasazeni-2025-08-29-opatovce-u-trencina",
+      "ee-2026-02-07-plzen",
+      "ee-2025-02-01-plzen"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "vision-days",
@@ -1289,7 +3427,63 @@
       "src-punkaci-program-2025",
       "src-vision-days-bandzone-archive"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "sps-2025-08-23-slany",
+      "sps-2025-06-13-chomutov",
+      "sps-2020-08-21-slany",
+      "fialky-2026-01-23-usti-nad-labem",
+      "fialky-2025-11-15-pardubice",
+      "fialky-2025-07-05-brnenec",
+      "fialky-2023-02-25-teplice",
+      "fialky-2023-03-25-ceske-budejovice",
+      "fialky-2021-10-09-praha",
+      "nezfales-2026-10-17-litomysl",
+      "nezfales-2026-07-04-brnenec",
+      "nezfales-2022-07-30-trutnov",
+      "nezfales-2021-07-31-trebiz",
+      "houba-2026-03-14-jihlava",
+      "punk-floid-2026-11-14-pardubice",
+      "punk-floid-2022-06-25-brnenec",
+      "totalni-nasazeni-2025-03-07-ceske-budejovice",
+      "totalni-nasazeni-2025-03-15-pardubice",
+      "totalni-nasazeni-2025-03-22-milevsko",
+      "totalni-nasazeni-2025-03-28-liberec",
+      "totalni-nasazeni-2025-03-29-plzen",
+      "totalni-nasazeni-2025-04-04-havlickuv-brod",
+      "totalni-nasazeni-2025-04-05-brno",
+      "totalni-nasazeni-2025-04-11-decin",
+      "totalni-nasazeni-2025-04-12-ostrava",
+      "totalni-nasazeni-2025-08-01-chvalkov-u-kamenice-nad-lipou",
+      "ee-2026-02-06-jindrichuv-hradec",
+      "ee-2025-02-07-jindrichuv-hradec",
+      "ee-2022-10-30-pardubice",
+      "ee-2021-04-23-praha",
+      "dilemma-in-cinema-2024-02-09-chrudim",
+      "vision-days-2024-01-19-kladno",
+      "vision-days-2024-01-27-svitavy",
+      "vision-days-2024-02-03-praha",
+      "vision-days-2022-01-14-svitavy",
+      "vision-days-2022-02-05-praha",
+      "vision-days-2022-03-05-radvanec",
+      "vision-days-2022-03-25-jaromer",
+      "vision-days-2021-07-30-chvalkov",
+      "vision-days-2021-10-30-pardubice",
+      "vision-days-2025-02-15-svitavy",
+      "vision-days-2025-08-01-chvalkov",
+      "driak-2023-02-04-praha",
+      "volant-2026-09-05-vrchlabi",
+      "p-u-m-2022-02-26-praha",
+      "zputnik-2020-04-11-ludvikovice",
+      "zputnik-2020-07-31-chvalkov",
+      "zputnik-2020-09-18-kostelec-nad-orlici",
+      "zputnik-2022-08-13-klaster-hradiste-nad-jizerou",
+      "vvu-2025-04-25-praha",
+      "vvu-2025-07-26-hukvaldy"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "otras",
@@ -1301,7 +3495,12 @@
     "sources": [
       "src-punkgen-archive-2021"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkgen-2021-basta-bardejov-06-10"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "ahoj",
@@ -1313,7 +3512,12 @@
     "sources": [
       "src-punkgen-archive-2021"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkgen-2021-basta-bardejov-06-10"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "cameleon",
@@ -1325,7 +3529,12 @@
     "sources": [
       "src-punkgen-archive-2021"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkgen-2021-basta-bardejov-06-10"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "tvoi-postoi",
@@ -1337,7 +3546,12 @@
     "sources": [
       "src-punkgen-archive-2021"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkgen-2021-basta-bardejov-06-10"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "dno",
@@ -1349,7 +3563,12 @@
     "sources": [
       "src-punkgen-archive-2026"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkgen-2026-uherske-hradiste-04-02"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "no-god-rhetoric",
@@ -1361,7 +3580,12 @@
     "sources": [
       "src-punkgen-archive-2026"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkgen-2026-uherske-hradiste-04-02"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "wargame",
@@ -1373,7 +3597,12 @@
     "sources": [
       "src-punkgen-archive-2026"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkgen-2026-bratislava-04-04"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "velkosklad",
@@ -1385,7 +3614,12 @@
     "sources": [
       "src-punkgen-archive-2025"
     ],
-    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+    "verification": "country_code_labelled_in_official_program_or_concert_archive",
+    "event_ids": [
+      "punkgen-2025-banska-bystrica-01-04"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "dilemma-in-cinema",
@@ -1397,7 +3631,101 @@
     "sources": [
       "src-dilemma-in-cinema-official-archive"
     ],
-    "verification": "named_in_official_band_concert_archive"
+    "verification": "named_in_official_band_concert_archive",
+    "event_ids": [
+      "sps-2024-11-30-kolin",
+      "sps-2024-11-22-sadov",
+      "sps-2024-04-19-klecany",
+      "sps-2023-10-13-praha",
+      "sps-2023-08-18-slany",
+      "sps-2020-08-21-slany",
+      "fialky-2026-04-11-liberec",
+      "fialky-2026-04-10-pardubice",
+      "fialky-2026-03-21-praha",
+      "fialky-2026-03-20-ceske-budejovice",
+      "fialky-2026-02-14-plzen",
+      "fialky-2025-12-06-praha",
+      "fialky-2024-12-07-praha",
+      "fialky-2024-04-05-brno",
+      "fialky-2024-03-23-plzen",
+      "fialky-2024-03-15-teplice",
+      "fialky-2022-02-25-rakovnik",
+      "fialky-2022-03-11-liberec",
+      "fialky-2022-03-12-ceske-budejovice",
+      "fialky-2022-03-19-kolin",
+      "fialky-2021-10-09-praha",
+      "fialky-2020-08-02-ceske-budejovice",
+      "nezfales-2026-08-22-slany",
+      "nezfales-2025-08-23-slany",
+      "nezfales-2023-04-21-praha",
+      "nezfales-2022-03-18-klecany",
+      "nezfales-2021-10-01-litomerice",
+      "punk-floid-2024-05-10-kladno",
+      "punk-floid-2021-08-20-slany",
+      "totalni-nasazeni-2025-01-25-vyskov",
+      "totalni-nasazeni-2025-02-07-trebic",
+      "totalni-nasazeni-2025-02-21-libceves",
+      "totalni-nasazeni-2025-03-07-ceske-budejovice",
+      "totalni-nasazeni-2025-03-08-praha",
+      "totalni-nasazeni-2025-05-30-pavlikov",
+      "totalni-nasazeni-2025-05-31-praha",
+      "totalni-nasazeni-2025-07-12-prysk",
+      "totalni-nasazeni-2022-02-12-praha",
+      "totalni-nasazeni-2022-10-15-praha",
+      "totalni-nasazeni-2022-10-21-pardubice",
+      "totalni-nasazeni-2022-10-22-most",
+      "totalni-nasazeni-2022-12-09-praha",
+      "totalni-nasazeni-2020-01-10-praha",
+      "totalni-nasazeni-2020-01-11-brno",
+      "totalni-nasazeni-2020-04-12-jistebnice",
+      "ee-2023-11-24-plzen",
+      "ee-2023-11-25-ceske-budejovice",
+      "dilemma-in-cinema-2020-01-25-kladno",
+      "dilemma-in-cinema-2020-02-15-nachod",
+      "dilemma-in-cinema-2020-06-06-pavlikov-u-rakovnika",
+      "dilemma-in-cinema-2020-07-10-slany",
+      "dilemma-in-cinema-2020-07-11-prysk",
+      "dilemma-in-cinema-2020-09-05-slany",
+      "dilemma-in-cinema-2020-09-12-usti-nad-labem",
+      "dilemma-in-cinema-2021-02-13-jihlava",
+      "dilemma-in-cinema-2021-10-02-kladno",
+      "dilemma-in-cinema-2021-11-19-nechvalice",
+      "dilemma-in-cinema-2021-11-27-roudnice-nad-labem",
+      "dilemma-in-cinema-2021-12-10-praha",
+      "dilemma-in-cinema-2021-12-11-brno",
+      "dilemma-in-cinema-2022-02-05-brno",
+      "dilemma-in-cinema-2022-06-17-chomutov",
+      "dilemma-in-cinema-2022-11-26-slany",
+      "dilemma-in-cinema-2023-01-28-jablonec-nad-jizerou",
+      "dilemma-in-cinema-2023-03-17-rokycany",
+      "dilemma-in-cinema-2023-03-31-brno",
+      "dilemma-in-cinema-2023-04-07-litomerice",
+      "dilemma-in-cinema-2023-04-22-melnik",
+      "dilemma-in-cinema-2023-05-20-bohusovice-nad-ohri",
+      "dilemma-in-cinema-2023-12-08-praha",
+      "dilemma-in-cinema-2023-12-26-strakonice",
+      "dilemma-in-cinema-2024-02-09-chrudim",
+      "dilemma-in-cinema-2024-05-04-trebic",
+      "dilemma-in-cinema-2024-06-07-chomutov",
+      "dilemma-in-cinema-2024-06-08-hostoun",
+      "dilemma-in-cinema-2024-10-11-brno",
+      "dilemma-in-cinema-2024-10-12-rakovnik",
+      "dilemma-in-cinema-2024-10-25-litvinov",
+      "dilemma-in-cinema-2024-11-08-jihlava",
+      "dilemma-in-cinema-2024-11-16-stribro",
+      "dilemma-in-cinema-2024-12-06-kladno",
+      "dilemma-in-cinema-2025-09-10-praha",
+      "dilemma-in-cinema-2025-11-08-brno",
+      "dilemma-in-cinema-2025-11-14-rakovnik",
+      "dilemma-in-cinema-2025-11-21-sadov",
+      "dilemma-in-cinema-2025-11-22-olomouc",
+      "dilemma-in-cinema-2025-11-29-plzen",
+      "dilemma-in-cinema-2026-02-07-kladno",
+      "dilemma-in-cinema-2026-02-28-olomouc",
+      "dilemma-in-cinema-2026-07-17-pavlikov"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "visaci-zamek",
@@ -1409,7 +3737,132 @@
     "sources": [
       "src-visaci-official-archive"
     ],
-    "verification": "official_band_archive"
+    "verification": "official_band_archive",
+    "event_ids": [
+      "sps-2024-07-25-trutnov",
+      "sps-2026-08-22-vintirov",
+      "sps-2026-08-21-slany",
+      "sps-2026-06-26-volyne",
+      "nezfales-2026-07-04-brnenec",
+      "visaci-zamek-2026-11-07-olomouc",
+      "visaci-zamek-2026-11-06-havirov",
+      "visaci-zamek-2026-10-24-london",
+      "visaci-zamek-2026-10-17-rumburk",
+      "visaci-zamek-2026-10-16-liberec",
+      "visaci-zamek-2026-10-10-plzen",
+      "visaci-zamek-2026-09-26-chomutov",
+      "visaci-zamek-2026-09-25-sumperk",
+      "visaci-zamek-2026-09-19-kuncice-pod-ondrejnikem",
+      "visaci-zamek-2026-09-12-most",
+      "visaci-zamek-2026-09-11-strakonice",
+      "visaci-zamek-2026-09-05-mesice",
+      "visaci-zamek-2026-09-04-unhost",
+      "visaci-zamek-2026-09-03-doksy",
+      "visaci-zamek-2026-08-29-hluboka-nad-vltavou",
+      "visaci-zamek-2026-08-28-luzany",
+      "visaci-zamek-2026-08-15-cesky-tesin",
+      "visaci-zamek-2026-08-14-jihlava",
+      "visaci-zamek-2026-08-13-trutnov",
+      "visaci-zamek-2026-08-08-rostin-u-kromerize",
+      "visaci-zamek-2026-08-01-litomerice",
+      "visaci-zamek-2026-07-31-teplice",
+      "visaci-zamek-2026-07-24-olomouc",
+      "visaci-zamek-2026-07-05-drevohostice",
+      "visaci-zamek-2026-07-04-jihlava",
+      "visaci-zamek-2026-07-03-holysov",
+      "visaci-zamek-2026-06-27-vapeny-podol",
+      "visaci-zamek-2026-06-27-pardubice",
+      "visaci-zamek-2026-06-20-novy-jicin",
+      "visaci-zamek-2026-06-19-benatky-nad-jizerou",
+      "visaci-zamek-2026-06-11-bratislava",
+      "visaci-zamek-2026-06-12-olesna",
+      "visaci-zamek-2025-12-11-brno",
+      "visaci-zamek-2025-12-06-ceske-budejovice",
+      "visaci-zamek-2025-12-05-uherske-hradiste",
+      "visaci-zamek-2025-12-03-praha",
+      "visaci-zamek-2025-11-29-kolin",
+      "visaci-zamek-2025-11-28-klatovy",
+      "visaci-zamek-2025-11-08-sklenarice",
+      "visaci-zamek-2025-11-01-havlickuv-brod",
+      "visaci-zamek-2025-10-31-viden",
+      "visaci-zamek-2025-10-18-benesov-nad-ploucnici",
+      "visaci-zamek-2025-10-17-kadan",
+      "visaci-zamek-2025-10-11-velka-bystrice",
+      "visaci-zamek-2025-10-10-svitavy",
+      "visaci-zamek-2025-09-06-javac",
+      "visaci-zamek-2025-09-05-jablonne-v-podjestedi",
+      "visaci-zamek-2025-08-29-bezdez",
+      "visaci-zamek-2025-08-23-trutnov",
+      "visaci-zamek-2025-08-23-bouzov",
+      "visaci-zamek-2025-08-16-hradec-nad-moravici",
+      "visaci-zamek-2025-08-15-rychnov-nad-kneznou",
+      "visaci-zamek-2025-08-09-veveri",
+      "visaci-zamek-2025-08-02-rozmberk-nad-vltavou",
+      "visaci-zamek-2025-08-01-nove-mesto-na-morave",
+      "visaci-zamek-2025-07-30-praha",
+      "visaci-zamek-2025-07-26-svihov",
+      "visaci-zamek-2025-06-14-radomilice",
+      "visaci-zamek-2025-06-07-benesov",
+      "visaci-zamek-2025-06-06-frydek-mistek",
+      "visaci-zamek-2025-05-31-velky-drevic",
+      "visaci-zamek-2025-05-30-pasohlavky",
+      "visaci-zamek-2025-05-24-praha",
+      "visaci-zamek-2025-04-12-sedlcany",
+      "visaci-zamek-2025-04-11-most",
+      "visaci-zamek-2025-04-05-usti-nad-orlici",
+      "visaci-zamek-2025-03-29-bavorov",
+      "visaci-zamek-2025-03-28-pardubice",
+      "visaci-zamek-2025-03-22-pec-pod-snezkou",
+      "visaci-zamek-2025-03-19-praha",
+      "visaci-zamek-2025-03-14-ostrava",
+      "visaci-zamek-2025-03-08-plzen",
+      "visaci-zamek-2025-01-30-praha",
+      "visaci-zamek-2024-12-05-praha",
+      "visaci-zamek-2024-11-30-brno",
+      "visaci-zamek-2024-11-29-marianske-lazne",
+      "visaci-zamek-2024-11-23-ceske-budejovice",
+      "visaci-zamek-2024-11-16-trebic",
+      "visaci-zamek-2024-11-08-semily",
+      "visaci-zamek-2024-11-02-frydek-mistek",
+      "visaci-zamek-2024-11-01-moravska-trebova",
+      "visaci-zamek-2024-10-26-svrcovec",
+      "visaci-zamek-2024-10-25-horovice",
+      "visaci-zamek-2024-10-19-vyskov",
+      "visaci-zamek-2024-10-12-pencin",
+      "visaci-zamek-2024-10-11-hradec-kralove",
+      "visaci-zamek-2024-09-14-most",
+      "visaci-zamek-2024-09-11-praha",
+      "visaci-zamek-2024-09-07-vyrava",
+      "visaci-zamek-2024-08-31-bezdez",
+      "visaci-zamek-2024-08-24-trutnov",
+      "visaci-zamek-2024-08-24-bouzov",
+      "visaci-zamek-2024-08-23-vizovice",
+      "visaci-zamek-2024-08-17-hradec-nad-moravici",
+      "visaci-zamek-2024-08-16-sadska",
+      "visaci-zamek-2024-08-10-veveri",
+      "visaci-zamek-2024-08-03-rozmberk-nad-vltavou",
+      "visaci-zamek-2024-08-02-jirikov-u-rumburka",
+      "visaci-zamek-2024-07-27-nova-role",
+      "visaci-zamek-2024-07-26-svihov",
+      "visaci-zamek-2024-07-20-kuneticka-hora",
+      "visaci-zamek-2024-07-19-horice",
+      "visaci-zamek-2024-07-13-suchdol-nad-luznici",
+      "visaci-zamek-2024-07-13-tocnik",
+      "visaci-zamek-2024-07-12-zbraslavec",
+      "visaci-zamek-2024-06-22-vratislavice",
+      "visaci-zamek-2024-06-21-zelcin-u-melnika",
+      "visaci-zamek-2024-06-15-litovel",
+      "visaci-zamek-2024-06-15-hradec-kralove",
+      "visaci-zamek-2024-06-14-brna",
+      "visaci-zamek-2024-06-08-milovice",
+      "visaci-zamek-2024-06-01-ceske-budejovice",
+      "visaci-zamek-2024-05-31-kamenite",
+      "visaci-zamek-2024-05-24-kutna-hora",
+      "visaci-zamek-2024-05-18-rosice",
+      "zputnik-2026-06-06-ostrava"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "zputnik",
@@ -1421,7 +3874,60 @@
     "sources": [
       "src-zputnik-bandzone-archive"
     ],
-    "verification": "Bandzone_band_archive"
+    "verification": "Bandzone_band_archive",
+    "event_ids": [
+      "sps-2026-08-21-slany",
+      "sps-2026-07-11-prysk",
+      "sps-2022-08-12-ricany-u-prahy",
+      "sps-2020-08-21-slany",
+      "sps-2020-07-11-podebrady",
+      "sps-2020-07-10-podebrady",
+      "nezfales-2026-10-17-litomysl",
+      "nezfales-2022-07-30-trutnov",
+      "punk-floid-2022-06-25-brnenec",
+      "ee-2020-01-18-praha",
+      "vision-days-2021-07-30-chvalkov",
+      "vision-days-2025-08-01-chvalkov",
+      "vvu-2026-05-16-dolni-benesov",
+      "zputnik-2020-01-18-kolin",
+      "zputnik-2020-02-28-ceske-budejovice",
+      "zputnik-2020-03-07-melnik",
+      "zputnik-2020-04-04-mnich",
+      "zputnik-2020-04-11-ludvikovice",
+      "zputnik-2020-06-27-rousinov",
+      "zputnik-2020-07-11-strelna",
+      "zputnik-2020-07-18-ujezd-u-chanovic",
+      "zputnik-2020-07-31-chvalkov",
+      "zputnik-2020-08-07-harrachov",
+      "zputnik-2020-09-02-litomerice",
+      "zputnik-2020-09-05-postoloprty",
+      "zputnik-2020-09-18-kostelec-nad-orlici",
+      "zputnik-2020-09-26-volduchy",
+      "zputnik-2020-11-13-nachod",
+      "zputnik-2022-03-05-ceske-budejovice",
+      "zputnik-2022-04-02-litvinov",
+      "zputnik-2022-06-18-pilnikov",
+      "zputnik-2022-07-09-prysk",
+      "zputnik-2022-07-09-tynec-nad-labem",
+      "zputnik-2022-07-22-morkovice-slizany",
+      "zputnik-2022-07-29-nekor",
+      "zputnik-2022-08-05-chvalkov",
+      "zputnik-2022-08-13-klaster-hradiste-nad-jizerou",
+      "zputnik-2022-08-20-nova-bystrice",
+      "zputnik-2022-09-03-vodnany",
+      "zputnik-2022-09-24-brno",
+      "zputnik-2026-01-07-mlada-boleslav",
+      "zputnik-2026-02-14-nova-vcelnice",
+      "zputnik-2026-03-21-nymburk",
+      "zputnik-2026-06-06-ostrava",
+      "zputnik-2026-06-12-trebetice",
+      "zputnik-2026-06-13-petrovice",
+      "zputnik-2026-07-10-cesky-sternberk",
+      "zputnik-2026-08-22-zlutice",
+      "zputnik-2026-10-17-plzen"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "plexis",
@@ -1433,7 +3939,19 @@
     "sources": [
       "src-plexis-bandzone-archive"
     ],
-    "verification": "Bandzone_archive"
+    "verification": "Bandzone_archive",
+    "event_ids": [
+      "sps-2022-08-12-ricany-u-prahy",
+      "fialky-2021-10-09-praha",
+      "ee-2021-04-23-praha",
+      "plexis-2020-01-31-zilina",
+      "plexis-2020-02-28-klatovy",
+      "plexis-2020-02-29-teplice",
+      "zputnik-2020-07-31-chvalkov",
+      "zputnik-2022-08-05-chvalkov"
+    ],
+    "tour_ids": [],
+    "status": "pending"
   },
   {
     "id": "sas",
@@ -1445,6 +3963,69 @@
     "sources": [
       "src-sas-bandzone-archive"
     ],
-    "verification": "Bandzone_band_archive"
+    "verification": "Bandzone_band_archive",
+    "event_ids": [
+      "sps-2025-08-23-slany",
+      "sps-2025-06-13-chomutov",
+      "fialky-2025-11-15-pardubice",
+      "fialky-2025-09-26-praha",
+      "punk-floid-2026-06-13-ujezd-u-prelouce",
+      "punk-floid-2024-04-13-frydek-mistek",
+      "ee-2026-02-07-plzen",
+      "ee-2025-02-01-plzen",
+      "ee-2025-11-08-ostrava",
+      "vision-days-2025-08-01-chvalkov",
+      "visaci-zamek-2025-08-23-trutnov",
+      "visaci-zamek-2025-03-08-plzen",
+      "vvu-2026-04-04-litvinov",
+      "sas-2026-01-17-altheim",
+      "sas-2026-01-23-chodov",
+      "sas-2026-01-31-caslav",
+      "sas-2025-06-07-strasice",
+      "sas-2025-09-05-sloup-v-moravskem-krasu",
+      "zputnik-2020-02-28-ceske-budejovice",
+      "vvu-2026-06-12-ujezd-u-prelouce",
+      "vvu-2025-04-25-praha",
+      "vvu-2025-05-31-sobinov",
+      "vvu-2025-06-07-okrouhlicka",
+      "vvu-2025-07-18-bustehrad",
+      "vvu-2025-07-26-hukvaldy",
+      "vvu-2025-08-09-nova-role",
+      "vvu-2025-09-13-praha",
+      "sas-2026-02-20-stribro",
+      "sas-2026-03-21-plzen",
+      "sas-2026-03-28-nyrany",
+      "sas-2026-05-08-zaluzi",
+      "sas-2026-05-23-svastalova-lhota",
+      "sas-2026-06-06-malesice",
+      "sas-2026-06-12-rasna",
+      "sas-2026-06-26-plzen",
+      "sas-2026-07-24-stedra",
+      "sas-2026-08-07-plzen",
+      "sas-2026-08-16-plzen",
+      "sas-2026-08-29-nyrany",
+      "sas-2026-09-12-plzen",
+      "sas-2026-09-19-brno",
+      "sas-2026-10-03-pisek",
+      "sas-2025-02-15-branickov",
+      "sas-2025-02-22-vesely-zdar"
+    ],
+    "tour_ids": [],
+    "status": "pending"
+  },
+  {
+    "id": "smola-a-hrusky",
+    "name": "Smola a Hrušky",
+    "country_code": null,
+    "genres": [],
+    "sources": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "verification": "referenced_in_tour_archive_origin_not_confirmed",
+    "event_ids": [],
+    "tour_ids": [
+      "totalni-nasazeni-smola-hrusky-tour-2022"
+    ],
+    "status": "pending"
   }
 ]
