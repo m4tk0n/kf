@@ -7,6 +7,7 @@ $id = (int)$d['id'];
 $r = $d['row'];
 $x = $d['extra'];
 $name = (string)$r['name'];
+$preview = !empty($d['preview']);
 $place = e((string)$r['city']) . ' <abbr title="' . e((string)$r['country']) . '">(' . e((string)$r['iso2']) . ')</abbr>';
 
 $row = static fn(string $label, string $html): string => '<dt>' . e($label) . '</dt><dd>' . $html . '</dd>';
@@ -27,20 +28,20 @@ $evList = static function (array $rows): string {
 ?>
 <article class="card detail detail-<?= e($kind) ?>">
   <div class="detail-toolbar">
-    <?php if ($user !== null && (int)($user['user_state'] ?? 0) === (int)cfg('enums.user_state.active')): ?>
+    <?php if (!$preview && $user !== null && (int)($user['user_state'] ?? 0) === (int)cfg('enums.user_state.active')): ?>
       <button type="button" class="fav<?= $d['fav'] ? ' on' : '' ?>" data-fav
         data-url="<?= e(url('fav')) ?>" data-csrf-field="<?= e((string)cfg('security.csrf_field')) ?>" data-csrf="<?= e(csrf_token()) ?>"
         data-kind="<?= e($kind) ?>" data-id="<?= $id ?>" aria-pressed="<?= $d['fav'] ? 'true' : 'false' ?>"
         data-label-on="<?= e(t('detail.fav_remove')) ?>" data-label-off="<?= e(t('detail.fav_add')) ?>"
         data-msg-limit="<?= e(t('detail.fav_limit')) ?>" data-msg-error="<?= e(t('detail.fav_error')) ?>"
         aria-label="<?= e(t($d['fav'] ? 'detail.fav_remove' : 'detail.fav_add')) ?>" title="<?= e(t($d['fav'] ? 'detail.fav_remove' : 'detail.fav_add')) ?>"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3.5 2.65 5.37 5.93.86-4.29 4.18 1.01 5.9L12 17.03l-5.3 2.78 1.01-5.9-4.29-4.18 5.93-.86L12 3.5Z"></path></svg></button>
-    <?php else: ?>
+    <?php elseif (!$preview): ?>
       <span class="fav off" role="img" aria-disabled="true" aria-label="<?= e(t('detail.fav_login')) ?>" title="<?= e(t('detail.fav_login')) ?>"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3.5 2.65 5.37 5.93.86-4.29 4.18 1.01 5.9L12 17.03l-5.3 2.78 1.01-5.9-4.29-4.18 5.93-.86L12 3.5Z"></path></svg></span>
     <?php endif; ?>
     <a class="btn ghost page-back" data-detail-back href="<?= e((string)$d['back']) ?>">← <?= e(t('detail.back')) ?></a>
   </div>
 
-  <?php if ($x['large']): $img = kf_img((string)$d['bucket'], $id, 'l'); ?>
+  <?php if ($x['large']): $img = (string)($d['preview_img'] ?? kf_img((string)$d['bucket'], $id, 'l')); ?>
     <a class="detail-img" href="<?= e($img) ?>" data-lightbox><img src="<?= e($img) ?>" alt="<?= e($name) ?>"></a>
   <?php endif; ?>
 
@@ -73,6 +74,12 @@ $evList = static function (array $rows): string {
     }
     if ($x['www'] !== null) {
         echo $row(t('detail.www'), '<a href="' . e($x['www']) . '" target="_blank" rel="noopener nofollow ugc">' . e((string)preg_replace('~^https?://~i', '', $x['www'])) . '</a>');
+    }
+    if ($kind === 'band' && ($x['facebook'] ?? '') !== '') {
+        echo $row('Facebook', '<a href="' . e($x['facebook']) . '" target="_blank" rel="noopener nofollow ugc">Facebook</a>');
+    }
+    if ($kind === 'band' && ($x['bandzone'] ?? '') !== '') {
+        echo $row('Bandzone', '<a href="' . e($x['bandzone']) . '" target="_blank" rel="noopener nofollow ugc">Bandzone</a>');
     }
     if ($kind === 'event') {
         echo $row(t('detail.price'), e($x['price'] !== '' ? $x['price'] : '-'));
