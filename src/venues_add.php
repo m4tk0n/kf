@@ -42,7 +42,7 @@ function kf_city_existing_id(int $cityId,string $cityName,int $countryId): int {
 }
 function kf_city_resolve_or_create(int $cityId,string $cityName,int $countryId): int {
     $existing=kf_city_existing_id($cityId,$cityName,$countryId);if($existing>0)return $existing;
-    q('INSERT INTO '.tbl('cities').' (country_id,name) VALUES (?,?)',[$countryId,$cityName]);return (int)db()->lastInsertId();
+    q('INSERT INTO '.tbl('cities').' (country_id,name,name_ascii) VALUES (?,?,?)',[$countryId,$cityName,kf_ascii($cityName)]);return (int)db()->lastInsertId();
 }
 function kf_venue_publish(array $v,?string $srcL,int $uid): int {
     $pdo=db();$id=0;$base='';$pdo->beginTransaction();
