@@ -6,3 +6,8 @@
 2026-S03 | https://www.goout.net/en/the-trousers/pzamv/ | Identifikace The Trousers jako kapely z Budapešti; žánrové zařazení garage rock. |
 2026-S04 | https://www.ticketlive.sk/sk/event/cestujuci-punk-island-bratislava-18-12-2026 | Datum, začátek, místo, kompletní zveřejněný line-up bratislavské zastávky Cestujúci Punk Island vol.2 a text potvrzující tři klubové zastávky v Bratislavě, Košicích a Banské Bystrici. |
 2026-S05 | https://www.ticketlive.sk/sk/venue/randal-club-bratislava | Název a adresa Randal Club: Karpatská 2, Bratislava. |
+2026-S06 | https://www.mightysounds.cz/akce/tim-vantol-nl-support | Oficiální stránka pořadatele: datum 10. 12. 2026, čas 19:00, Café v lese Praha a vystoupení Tim Vantol. |
+2026-S07 | https://www.mightysounds.cz/en/kapela/tim-vantol | Oficiální profil interpreta u pořadatele: země Nizozemsko, žánrové označení Acoustic Folk a popis interpreta. |
+2026-S08 | https://www.nporadio2.nl/muziek/artiesten/c0256856-116e-4edb-b7da-ecf1ca407102/tim-vantol | Profil interpreta uvádí Hoofddorp jako místo původu a popisuje jeho tvorbu jako folk punk. |
+2026-S09 | https://esns.nl/en/festival/artists/tim-vantol/ | Profil interpreta uvádí nizozemský původ a žánrový popis acoustic punk folk. |
+2026-S10 | https://festivalmate.net/artists/tim-vantol/ | Doplňující profil uvádí Amsterdam; v rozporu s údajem Hoofddorp ze zdroje 2026-S08. Místo původu proto zůstává neuzavřené. |
