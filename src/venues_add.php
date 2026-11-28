@@ -67,7 +67,7 @@ function kf_venue_pending_create(array $v,?string $srcL,int $uid): int {
 }
 function kf_venue_form_page(array $v,array $errors=[],string $img='',int $status=200): never {
     $selected=q('SELECT c.name AS city, c.country_id, co.iso2, co.`'.country_col().'` AS country FROM '.tbl('cities').' c JOIN '.tbl('countries').' co ON co.id=c.country_id WHERE c.id=?',[(int)($v['city_id']??0)])->fetch() ?: ['city'=>'','country_id'=>0,'country'=>''];
-    $v['city_name']=(string)$selected['city'];
+    $v['city_name']=(string)($selected['city']!==''?$selected['city']:($v['city_name']??''));
     $v['country_id']=(int)($v['country_id']?:$selected['country_id']);
     $v['country_name']=(string)$selected['country'];
     $v['country_iso2']=(string)($selected['iso2']??'');
@@ -132,18 +132,21 @@ function route_venue_city_suggest(): never
     $params = [addcslashes($search, '%_\\\\') . '%'];
     if ($countryId > 0) { $sql .= " AND co.id=?"; $params[] = $countryId; }
     $sql .= " ORDER BY c.name COLLATE utf8mb4_unicode_ci LIMIT " . $limit;
-    $rows = q($sql, $params)->fetchAll();
     $items=[];$seen=[];
-    foreach($rows as $r){$key=(int)$r['country_id'].'|'.kf_text_normalize((string)$r['name']);$seen[$key]=true;$items[]=['id'=>(int)$r['id'],'name'=>(string)$r['name'],'country_id'=>(int)$r['country_id'],'country'=>(string)$r['country'],'iso2'=>(string)$r['iso2']];}
+    // Vlastní návrhy mají přednost, aby je limit neodsunul za města z katalogu.
     $pending=q('SELECT id FROM '.tbl('pending').' WHERE created_by=? ORDER BY id DESC LIMIT 500',[(int)auth_resolve()['id']])->fetchAll();
     foreach($pending as $p){$data=json_read_file(json_bucket_rel('pending',(int)$p['id']));$pv=$data['values']??null;if(!is_array($pv))continue;
         $name=trim((string)($pv['city_name']??''));$cid=(int)($pv['country_id']??0);if($name===''||$cid<1||!str_starts_with(kf_text_normalize($name),$search))continue;
-        $key=$cid.'|'.kf_text_normalize($name);if(isset($seen[$key]))continue;
+        if($countryId>0&&$cid!==$countryId)continue;$key=$cid.'|'.kf_text_normalize($name);if(isset($seen[$key]))continue;
         $country=q('SELECT iso2, `'.country_col().'` AS country FROM '.tbl('countries').' WHERE id=?',[$cid])->fetch();if(!$country)continue;
-        if($countryId>0&&$cid!==$countryId)continue;$seen[$key]=true;$items[]=['id'=>0,'name'=>$name,'country_id'=>$cid,'country'=>(string)$country['country'],'iso2'=>(string)$country['iso2']];
+        $seen[$key]=true;$items[]=['id'=>0,'name'=>$name,'country_id'=>$cid,'country'=>(string)$country['country'],'iso2'=>(string)$country['iso2']];
         if(count($items)>=$limit)break;
     }
-    $items=array_slice($items,0,$limit);
+    if(count($items)<$limit){$rows=q($sql,$params)->fetchAll();foreach($rows as $r){
+        $key=(int)$r['country_id'].'|'.kf_text_normalize((string)$r['name']);if(isset($seen[$key]))continue;$seen[$key]=true;
+        $items[]=['id'=>(int)$r['id'],'name'=>(string)$r['name'],'country_id'=>(int)$r['country_id'],'country'=>(string)$r['country'],'iso2'=>(string)$r['iso2']];
+        if(count($items)>=$limit)break;
+    }}
     echo json_encode(['items'=>$items], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     exit;
 }
