@@ -1,0 +1,73 @@
+name: K&F seed research crawler
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_year:
+        description: First year to scan (newest)
+        required: true
+        default: "2026"
+      end_year:
+        description: Last year to scan (oldest)
+        required: true
+        default: "2000"
+  schedule:
+    - cron: "23 3 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kf-seed-research
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install crawler dependency
+        run: python -m pip install --disable-pip-version-check beautifulsoup4
+
+      - name: Validate current seed structure
+        run: python Install/seed_priprava/automation/validate_seed.py
+
+      - name: Scan official and cross-check archives
+        run: |
+          python Install/seed_priprava/automation/scan_archives.py \
+            --start-year "${{ inputs.start_year || '2026' }}" \
+            --end-year "${{ inputs.end_year || '2000' }}"
+
+      - name: Store audit output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seed-research-audit
+          path: |
+            seed-audit-errors.txt
+            seed-audit-warnings.txt
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Commit candidate queue and scan checkpoint
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Install/seed_priprava/research_candidates.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(seed): update automated archive research"
+            git push origin HEAD:main
+          else
+            echo "No archive changes to commit."
+          fi
