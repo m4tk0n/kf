@@ -160,7 +160,8 @@
     "start_date": "2024-10-04",
     "end_date": "2024-10-25",
     "band_ids": [
-      "sps"
+      "sps",
+      "the-fialky"
     ],
     "event_ids": [
       "sps-2024-10-25-brno",
@@ -174,7 +175,8 @@
       "CZ"
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-fialky-official-concert-archive"
     ],
     "verification": "tour_name_and_stops_listed_in_official_band_archive"
   },
@@ -247,7 +249,8 @@
     "start_date": "2026-10-02",
     "end_date": "2026-11-21",
     "band_ids": [
-      "sps"
+      "sps",
+      "the-fialky"
     ],
     "event_ids": [
       "sps-2026-11-21-kralupy-nad-vltavou",
@@ -267,7 +270,37 @@
       "CZ"
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-fialky-official-concert-archive"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "the-fialky-10x3-tour-2024",
+    "name": "10×3 tour jaro 2024",
+    "start_date": "2024-03-08",
+    "end_date": "2024-04-13",
+    "band_ids": [
+      "the-fialky"
+    ],
+    "event_ids": [
+      "fialky-2024-04-13-bratislava",
+      "fialky-2024-04-12-uherske-hradiste",
+      "fialky-2024-04-06-ostrava",
+      "fialky-2024-04-05-brno",
+      "fialky-2024-03-23-plzen",
+      "fialky-2024-03-22-vimperk",
+      "fialky-2024-03-16-liberec",
+      "fialky-2024-03-15-teplice",
+      "fialky-2024-03-09-ceske-budejovice",
+      "fialky-2024-03-08-praha"
+    ],
+    "country_codes": [
+      "SK",
+      "CZ"
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
     ],
     "verification": "tour_name_and_stops_listed_in_official_band_archive"
   }

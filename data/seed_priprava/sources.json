@@ -419,5 +419,24 @@
       "Zrušené termíny a volné dny nejsou importovány jako odehrané akce.",
       "U festivalů nemusí archiv uvádět úplný program."
     ]
+  },
+  {
+    "id": "src-fialky-official-concert-archive",
+    "name": "The Fialky – oficiální archiv odehraných koncertů",
+    "url": "https://thefialky.cz/odehrane-koncerty/",
+    "publisher": "The Fialky",
+    "source_type": "official_band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venue_names",
+      "lineups",
+      "tour_names",
+      "foreign_concerts"
+    ],
+    "limitations": [
+      "Archiv obsahuje také soukromé akce, akustické koncerty a položky, které nejsou běžným veřejným koncertem; ty jsou označeny nebo vynechány podle popisu."
+    ]
   }
 ]
