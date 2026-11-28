@@ -227,6 +227,23 @@ def write_candidates(task,result):
  for name in result.get("band_followups",[]): enqueue_band(name,task.get("year",2027),"recursive discovery")
  return added
 
+def commit_checkpoint():
+    # Persist every completed task to GitHub so an interrupted runner cannot lose prior batches.
+    paths = [
+        "Install/seed_priprava/candidates",
+        "Install/seed_priprava/automation_state.json",
+        "Install/seed_priprava/band_queue.json",
+        "Install/seed_priprava/research_log.jsonl",
+    ]
+    subprocess.run(["git", "add", "-A", *paths], cwd=ROOT, check=True)
+    changed = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT).returncode
+    if changed == 0:
+        return
+    subprocess.run(["git", "config", "user.name", "github-actions[bot]"], cwd=ROOT, check=True)
+    subprocess.run(["git", "config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com"], cwd=ROOT, check=True)
+    subprocess.run(["git", "commit", "-m", "Save concert research checkpoint"], cwd=ROOT, check=True)
+    subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
+
 def main():
  if not os.getenv("OPENAI_API_KEY"): raise RuntimeError("Není nastaven OPENAI_API_KEY; výzkum nebyl spuštěn.")
  CANDIDATES.mkdir(parents=True,exist_ok=True)
@@ -258,7 +275,7 @@ def main():
      state["target_index"]=0; state["target_year"]-=1
    state["completed_tasks"]+=1; state["last_task"]=json.dumps(task,ensure_ascii=False); state["last_run"]=now()
    append_jsonl(LOG_FILE,{"timestamp":now(),"task":task,"summary":result.get("summary",""),"added":added,"status":"completed"})
-   save_json(STATE_FILE,state); done+=1
+   save_json(STATE_FILE,state); commit_checkpoint(); done+=1
    print("Uloženo:",json.dumps(added,ensure_ascii=False))
   except Exception as exc:
    append_jsonl(LOG_FILE,{"timestamp":now(),"task":task,"status":"error","error":str(exc)})
@@ -268,6 +285,7 @@ def main():
      if row.get("key")==task["key"]: row["status"]="pending"; row["last_error"]=str(exc)[:500]
     save_json(QUEUE_FILE,queue)
    save_json(STATE_FILE,state)
+   commit_checkpoint()
    raise
  print(f"Hotovo: {done} úloh v tomto běhu; celkem {state['completed_tasks']}.")
 
