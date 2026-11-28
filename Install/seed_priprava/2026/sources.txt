@@ -11,3 +11,9 @@
 2026-S08 | https://www.nporadio2.nl/muziek/artiesten/c0256856-116e-4edb-b7da-ecf1ca407102/tim-vantol | Profil interpreta uvádí Hoofddorp jako místo původu a popisuje jeho tvorbu jako folk punk. |
 2026-S09 | https://esns.nl/en/festival/artists/tim-vantol/ | Profil interpreta uvádí nizozemský původ a žánrový popis acoustic punk folk. |
 2026-S10 | https://festivalmate.net/artists/tim-vantol/ | Doplňující profil uvádí Amsterdam; v rozporu s údajem Hoofddorp ze zdroje 2026-S08. Místo původu proto zůstává neuzavřené. |
+2026-S11 | https://pum-band.cz/o-nas/ | Oficiální historie P.U.M.: vznik pod názvem P.U.M. v roce 2010 a vlastní žánrové vymezení, převážně punkrock s prvky dalších stylů. |
+2026-S12 | https://goout.net/cs/pum/pzxgppf/ | Profil P.U.M. potvrzuje pražský původ, punkrockové zaměření a další žánrové štítky. |
+2026-S13 | https://www.veveucka.cz/o_kapele | Oficiální profil !V.V.Ú.: vznik na podzim 2019 a popis stylu jako melodický punk and roll s prvky ska, reggae a HC punku. |
+2026-S14 | https://www.darkzin.cz/shlednute-kapely/-v-v-u-/ | Doplňující profil !V.V.Ú. uvádí český původ a město Pardubice; žánr punk. |
+2026-S15 | https://www.hrubydomaciprodukt.sk/ | Oficiální web Hrubý Domáci Produkt; potvrzuje identitu rockové kapely a její působení na Slovensku a v Česku. |
+2026-S16 | https://www.konflikt.sk/ | Oficiální profil KONFLIKT: slovenská punk-rocková kapela a její historie. |
