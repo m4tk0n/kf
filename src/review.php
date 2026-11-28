@@ -113,7 +113,7 @@ function route_review(): never
     $id = (int)($_GET['id'] ?? 0);
     if ($id > 0) {
         $p = kf_pending_get($id);
-        if ($p === null) abort(404, t('error.404'));
+        if ($p === null) redirect('review?m=review_invalid');
         $mine = kf_pending_lock($id, $u);
         $p = kf_pending_get($id) ?? $p;
         $lock = $p['data']['lock'] ?? null;
