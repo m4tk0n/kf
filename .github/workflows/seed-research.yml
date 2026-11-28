@@ -44,14 +44,14 @@ jobs:
           MAX_QUERIES: ${{ inputs.max_queries || '12' }}
         run: |
           set -euo pipefail
-          : "\${AI_WRITE_KEY:?Missing GitHub Secret AI_WRITE_KEY}"
+          : "${AI_WRITE_KEY:?Missing GitHub Secret AI_WRITE_KEY}"
           curl --fail-with-body --silent --show-error \
             --connect-timeout 15 --max-time 240 \
             --retry 2 --retry-delay 3 \
             -X POST \
-            -H "X-AI-Key: \${AI_WRITE_KEY}" \
+            -H "X-AI-Key: ${AI_WRITE_KEY}" \
             -H "Content-Type: application/json" \
-            --data "{\"max_queries\":\${MAX_QUERIES}}" \
+            --data "{\"max_queries\":${MAX_QUERIES}}" \
             "https://7x.wz.cz/_kf/seed-worker.php" \
             | tee /tmp/seed-research-result.json
 
@@ -64,11 +64,11 @@ jobs:
           FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
         run: |
           set -euo pipefail
-          : "\${FTP_SERVER:?Missing GitHub Secret FTP_SERVER}"
-          : "\${FTP_USERNAME:?Missing GitHub Secret FTP_USERNAME}"
-          : "\${FTP_PASSWORD:?Missing GitHub Secret FTP_PASSWORD}"
-          : "\${FTP_REMOTE_DIR:?Missing GitHub Secret FTP_REMOTE_DIR}"
-          export FTP_PORT="\${FTP_PORT:-21}"
+          : "${FTP_SERVER:?Missing GitHub Secret FTP_SERVER}"
+          : "${FTP_USERNAME:?Missing GitHub Secret FTP_USERNAME}"
+          : "${FTP_PASSWORD:?Missing GitHub Secret FTP_PASSWORD}"
+          : "${FTP_REMOTE_DIR:?Missing GitHub Secret FTP_REMOTE_DIR}"
+          export FTP_PORT="${FTP_PORT:-21}"
           mkdir -p Install/seed_priprava/candidates
 
           python3 - <<'PY'
