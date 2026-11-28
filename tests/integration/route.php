@@ -25,6 +25,9 @@ $_SERVER['REQUEST_METHOD'] = $isPost ? 'POST' : 'GET';
 if ($action === 'event_name_suggest' || $action === 'venue_name_suggest') {
     $_GET['q'] = (string)($argv[3] ?? '');
 }
+if ($action === 'review_band_preview') {
+    $_GET['id'] = (string)($argv[3] ?? '0');
+}
 
 if ($isPost) {
     $_SERVER['HTTP_ORIGIN'] = 'http://127.0.0.1';
@@ -51,6 +54,8 @@ switch ($action) {
         route_band_preview();
     case 'band_submit':
         route_band_submit();
+    case 'review_band_preview':
+        route_review();
     case 'event_name_suggest':
         route_event_name_suggest();
     case 'venue_name_suggest':
