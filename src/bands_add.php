@@ -40,7 +40,8 @@ function kf_band_image_path(int $uid,string $name,string $size): ?string {
 }
 function kf_band_image_remove(int $uid,string $name): void {foreach(['s','l'] as $s){$p=kf_band_image_path($uid,$name,$s);if($p!==null)@unlink($p);}}
 function kf_band_draft_clear(int $uid): void {
-    $d=kf_band_draft_get($uid);if($d){kf_band_image_remove($uid,(string)($d['logo_image']??''));kf_band_image_remove($uid,(string)($d['detail_image']??''));}
+    $d=kf_band_draft_get($uid);if(!$d)return;
+    kf_band_image_remove($uid,(string)($d['logo_image']??''));kf_band_image_remove($uid,(string)($d['detail_image']??''));
     @unlink(abs_path(draft_rel($uid)));
 }
 function kf_band_image_request(string $field,string $url): array {
