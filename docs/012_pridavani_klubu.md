@@ -70,3 +70,8 @@ Je potřeba prakticky vyzkoušet:
 ## Společná validace formulářů
 
 Validace je centralizována v `src/form_validation.php` (server) a `assets/js/form-validation.js` (prohlížeč). Společné funkce kontrolují formát e-mailu a URL a minimální délku adresy a města. Formulář klubu navíc vyžaduje adresu alespoň 2 znaky nebo platný GPS odkaz. Formulář akce používá stejnou kontrolu URL. Další formuláře, včetně samostatného formuláře kapely, mají používat stejné funkce a datové atributy; pravidla se nemají kopírovat do jejich vlastních JS souborů.
+
+
+## Nová města u akcí
+
+Formulář nové akce používá stejnou podporu neznámých měst jako formulář klubu. Pokud město není v `cities`, uloží se do návrhu `city_name` a `country_id` s `city_id = 0`. Našeptávač zobrazuje města z `cities` a města z vlastních návrhů uživatele. Při schválení se znovu ověří existence města; případně se založí v `cities` a akce se uloží s jeho ID.
