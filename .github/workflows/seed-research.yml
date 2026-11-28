@@ -32,6 +32,15 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Validate Python worker syntax
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path("scripts/seed_research.py")
+          compile(path.read_text(encoding="utf-8"), str(path), "exec")
+          print("Python syntax OK")
+          PY
+
       - name: Check research activation
         id: activation
         env:
