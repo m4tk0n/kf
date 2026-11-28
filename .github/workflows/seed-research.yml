@@ -35,8 +35,8 @@ jobs:
       - name: Check research activation
         id: activation
         env:
-          ENABLED: \${{ vars.SEED_RESEARCH_ENABLED }}
-          API_KEY: \${{ secrets.OPENAI_API_KEY }}
+          ENABLED: ${{ vars.SEED_RESEARCH_ENABLED }}
+          API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           if [ "$ENABLED" != "true" ]; then
             echo "enabled=false" >> "$GITHUB_OUTPUT"
@@ -52,10 +52,10 @@ jobs:
       - name: Run resumable file-first research
         if: steps.activation.outputs.enabled == 'true'
         env:
-          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-6.2-astra
-          MAX_TASKS: \${{ inputs.max_tasks || '2' }}
-          MAX_SECONDS: \${{ inputs.max_seconds || '3300' }}
+          MAX_TASKS: ${{ inputs.max_tasks || '2' }}
+          MAX_SECONDS: ${{ inputs.max_seconds || '3300' }}
         run: |
           set -euo pipefail
           python3 scripts/seed_research.py
