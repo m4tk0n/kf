@@ -9,6 +9,7 @@ CREATE TABLE `{prefix}pending` (
   `date_from` DATE NULL DEFAULT NULL,
   `source_url` VARCHAR(255) CHARACTER SET ascii COLLATE ascii_bin NULL DEFAULT NULL,
   `created_at` INT UNSIGNED NOT NULL,
+  `payload` LONGTEXT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_user_type` (`created_by`, `type`),
   KEY `idx_source` (`source_url`),
