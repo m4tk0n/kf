@@ -215,3 +215,20 @@ Poznámka:
 - U Moták Festu je potvrzen dvoudenní termín 12.–13. 6.; The Fialky vystoupily 13. 6. ve 13:40.
 - U Motozrazu Drienok nebyl v této dávce dohledán samostatný potvrzený rozpis ostatních kapel; ponechána pouze ověřená účast The Fialky.
 - U Rock for People a Mighty Sounds jsou uvedeni pouze účinkující, jejichž skutečné vystoupení bylo v této fázi doloženo.
+
+
+## 2026-11-28 — The Fialky — červenec 2026 — čtyři další ověřené akce
+
+Doplněno:
+- 2026-07-03 až 04 — Den fotbalu Polička 2026 / Stadion SK Polička. Oficiální pořadatel potvrzuje termín, místo a aftermovie; Bandzone uvádí koncert 3. 7. ve 14:00 a The Fialky v programu; archiv The Fialky uvádí jejich čas 17:10.
+- 2026-07-04 — Brněnecfest XXV / Areál firmy Composite Components, Brněnec. Tisková zpráva pořadatele a SMS Ticket uvádějí kompletní časový rozpis; The Fialky 18:55, Punk Floid 17:50, Totální nasazení 16:45 a Nežfaleš 11:40. Účast kapel je potvrzena i jejich vlastními koncertními archivy.
+- 2026-07-10 až 11 — Barvy léta 2026 / Jezero Poděbrady. Oficiální pořadatel potvrzuje dvoudenní festival; detailní program uvádí Totální nasazení 19:20, SPS 20:40 a The Fialky 23:35; report po prvním dni potvrzuje, že tyto kapely skutečně vystoupily.
+- 2026-07-11 — Staré Pušky fest / Štěrkovna Hlučín. Bandzone uvádí konkrétní koncert The Fialky; oficiální provozovatel areálu potvrzuje adresu.
+
+Zapsáno:
+- event_2026.json: akce ID 45–48.
+- venues.json: místa ID 37–40.
+- evidence.json: zdroje SRC-0104 až SRC-0114 a tvrzení CLM-0352 až CLM-0383.
+
+Poznámka:
+- U Den fotbalu Polička a Staré Pušky festu je zatím v line-upu ponechána pouze The Fialky; další účinkující se doplní až po potvrzení jejich skutečného vystoupení.
