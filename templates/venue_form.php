@@ -39,11 +39,10 @@ declare(strict_types=1);
         <div class="autocomplete-list" data-venue-country-suggestions role="listbox" hidden></div>
       </label>
 
-      <label><?= e('ISO2') ?>
+      <label aria-label="ISO2">
         <input type="text" name="country_iso2" value="<?= e((string)($old['country_iso2'] ?? '')) ?>"
-          maxlength="2" readonly aria-label="ISO2" data-venue-country-iso2>
-      </label>
-    </div>
+          maxlength="2" readonly aria-label="ISO2" title="ISO2" data-venue-country-iso2>
+      </label>    </div>
 
     <?php foreach (['address', 'email', 'phone', 'www', 'google_maps', 'mapy_maps'] as $k): ?>
       <label><?= e(t('venue.f.' . $k)) ?>
