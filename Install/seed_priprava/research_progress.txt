@@ -23,9 +23,9 @@ AKTUALNI_KAPELA | The Fialky (bands.json, id 1)
 ROZSAH | 2026 až 2000 včetně; průzkum probíhá průběžně a v libovolném pořadí
 ZDROJE_ARCHIVU | Oficiální archiv The Fialky 2000–2015; oficiální archiv odehraných koncertů 2016–2026; Bandzone archiv 2006–2026
 KONTROLNI_INDEX | band_archive_index.json
-ROK_2026 | rozpracováno; v event_2026.json je 32 ověřených akcí; obě turné (23 zastávek) a 9 dalších ověřených festivalů/akcí jsou zapsány
+ROK_2026 | rozpracováno; v event_2026.json je 38 ověřených akcí; obě turné (23 zastávek) a 15 dalších ověřených festivalů/akcí jsou zapsány
 ROKY_2025_2000 | dosud nezpracováno
-NOVE_KAPELY | SPS (id 2), Totální nasazení (id 3), Nežfaleš (id 4), Dilemma in Cinema (id 5), Deratizéři (id 6); identita, původ a žánr ověřeny; vlastní historie čeká na dokončení The Fialky
-NOVA_MISTA | 12 ověřených míst: KD Klobučan, MMC Bratislava, DEPO2015, Sál Na Nové, Dům kultury Teplice, KD Vltava, MeetFactory, Masters of Rock Café, První Patro, ABC klub, Dům kultury Liberec, Lidový dům Stará Role
-NOVE_AKCE | 32 ověřených akcí: 23 zastávek obou turné a 9 dalších festivalů/akcí (Starák Fest, Summer Punk Párty, Trutnoff, Punkáči deťom, Farák Fest, Let’s GO fest, Kravín Fest, Bez Šance Fest, Benátská!)
-DALSI_KROK | Pokračovat dalšími koncerty The Fialky v roce 2026: červencové a červnové festivaly, 5.9. Motosraz Kameňák a další položky archivu; poté pokračovat zpět do roku 2025.
+NOVE_KAPELY | SPS (id 2), Totální nasazení (id 3), Nežfaleš (id 4), Dilemma in Cinema (id 5), Deratizéři (id 6), Punk Floid (id 7); identita, původ a žánr ověřeny; vlastní historie čeká na dokončení The Fialky
+NOVA_MISTA | 36 ověřených míst: dosavadních 30 + Park 360, Hřebíkárna, Sportovní areál Třebětice, Modrá Vopice, ŠRZ Drienok, Letiště Čápův Dvůr
+NOVE_AKCE | 38 ověřených akcí: 23 zastávek obou turné a 15 dalších festivalů/akcí včetně Rock for People, Hřebejkárny, Moták Festu, Zakoule Punk Festu, Motozrazu Drienok a Mighty Sounds
+DALSI_KROK | Pokračovat dalšími koncerty The Fialky v roce 2026: květnové akce (22., 29., 30. a 31.5.), červencové festivaly a 5.9. Motosraz Kameňák; poté dokončit zbytek roku 2026 a pokračovat zpět do roku 2025.
