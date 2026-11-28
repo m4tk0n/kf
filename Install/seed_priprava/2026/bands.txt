@@ -1,5 +1,5 @@
 # Kapely zjištěné v akcích roku 2026
 # Formát: název | město původu | stát původu | žánr | zdroje | poznámka
 
-The Trousers | Budapešť | Maďarsko | garage rock / hard rock | 2026-S01; 2026-S03 | Stejná maďarská kapela jako v programu Cestujúci Punk Island Vol.2 v roce 2027.
+The Trousers | Budapešť | Maďarsko | garage rock / hard rock / rock'n'roll | 2026-S01; 2026-S03 | Stejná kanonická maďarská kapela jako v letech 2024 a 2027; rozdílné žánrové popisy jsou doloženy samostatnými zdroji, nejde o různé kapely.
 Asphalt Horsemen | Gödöllő | Maďarsko | southern rock | 2026-S01 | Původ a žánr uvádí pořadatelský/prodejní popis akce.
