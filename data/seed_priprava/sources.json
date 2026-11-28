@@ -540,5 +540,61 @@
     "limitations": [
       "Soukromé akce jsou vynechány; u některých položek archiv neuvádí přesný klub."
     ]
+  },
+  {
+    "id": "src-vision-days-bandzone-archive",
+    "name": "VISION DAYS – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/visiondays?at=gig&gy=2026",
+    "publisher": "VISION DAYS",
+    "source_type": "band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "tour_names"
+    ]
+  },
+  {
+    "id": "src-driak-bandzone-archive",
+    "name": "DRIÁK – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/driak?at=gig&gy=2026",
+    "publisher": "DRIÁK",
+    "source_type": "band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "tour_names"
+    ]
+  },
+  {
+    "id": "src-volant-bandzone-archive",
+    "name": "VOLANT – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/volant?at=gig&gy=2023",
+    "publisher": "VOLANT",
+    "source_type": "band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "tour_names"
+    ]
+  },
+  {
+    "id": "src-volant-official-calendar",
+    "name": "VOLANT – oficiální koncertní kalendář",
+    "url": "https://www.volant.cz/",
+    "publisher": "VOLANT",
+    "source_type": "band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "tour_names"
+    ]
   }
 ]

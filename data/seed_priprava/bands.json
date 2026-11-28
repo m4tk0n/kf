@@ -841,7 +841,8 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025"
+      "src-punkaci-program-2025",
+      "src-driak-bandzone-archive"
     ],
     "verification": "country_of_origin_labelled_by_event_listing"
   },
@@ -1226,7 +1227,9 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025"
+      "src-punkaci-program-2025",
+      "src-volant-bandzone-archive",
+      "src-volant-official-calendar"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1274,7 +1277,8 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025"
+      "src-punkaci-program-2025",
+      "src-vision-days-bandzone-archive"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
