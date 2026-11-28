@@ -86,3 +86,27 @@ Zapsáno:
 Poznámka k časům:
 - U Volyně jsou převzaty časy kapel z detailního záznamu koncertu. Čas 18:30 jsou dveře, nikoli začátek vystoupení; proto není uložen jako time_start akce.
 - U dalších zastávek nebyly do eventu doplňovány časy, které nebyly jednoznačně doloženy.
+
+
+## 2026-11-28 — The Fialky — PUNKROCK ON THE ROAD – TOUR 2026 — dokončení všech jedenácti zastávek
+
+Doplněno posledních šest zastávek:
+- 2026-03-21 — Praha / MeetFactory. Oficiální program MeetFactory potvrzuje datum, čas 20:00, místo a hlavní trojici.
+- 2026-03-27 — Zlín / Masters of Rock Café. Oficiální stránka místa potvrzuje akci a uvádí rozpis Deratizéři, Totální nasazení, Nežfaleš a The Fialky.
+- 2026-03-28 — Brno / První Patro. Detail koncertu uvádí přesný line-up včetně Deratizérů a časy vystoupení; oficiální stránky klubu potvrzují místo a jeho adresu.
+- 2026-04-10 — Pardubice / ABC klub. Detail koncertu uvádí Dilemma in Cinema, Nežfaleš, The Fialky a Totální nasazení včetně časů; oficiální klub potvrzuje adresu.
+- 2026-04-11 — Liberec / Dům kultury Liberec. Detail koncertu uvádí Dilemma in Cinema, The Fialky, Totální nasazení a Nežfaleš včetně časů; oficiální DK Liberec potvrzuje adresu.
+- 2026-04-17 — Karlovy Vary / Lidový dům Stará Role. Detail koncertu uvádí Deratizéry, Totální nasazení, Nežfaleš a The Fialky včetně časů; oficiální web Lidového domu potvrzuje adresu.
+
+U všech šesti akcí potvrzuje archiv The Fialky, že šlo o odehrané koncerty. Dokončení celého jedenáctizastávkového turné potvrzuje také oficiální retrospektiva Nežfaleš.
+
+Zapsáno:
+- event_2026.json: akce ID 7–12.
+- venues.json: místa ID 7–12.
+- tours.txt: TOUR-003 nyní obsahuje všech 11 samostatně zapsaných zastávek.
+- evidence.json: zdroje SRC-0024 až SRC-0035 a tvrzení CLM-0078 až CLM-0131.
+
+Poznámky:
+- U Prahy nebyl support jednoznačně doložen pro konkrétní zastávku, proto jsou uvedeny pouze tři hlavní kapely.
+- U Zlína, Brna, Pardubic, Liberce a Karlových Varů jsou support a časy uvedeny podle konkrétních rozpisů koncertů.
+- Čas otevření dveří není zaměněn za začátek vystoupení ani za čas začátku akce.
