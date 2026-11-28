@@ -152,6 +152,10 @@ $formHtml = run_route('event_form', $userToken);
 check(str_contains($formHtml, 'Festival - test event approval') && str_contains($formHtml, 'event/draft-image')
     && str_contains($formHtml, 'data-admission-currency') && str_contains($formHtml, 'value="CZK"'), 'new-event form renders saved values, protected image and country-default currency');
 check(kf_event_validate($userValues) === [], 'validates numeric admission amount and supported currency');
+$defaultCurrencyValues = $userValues;
+$defaultCurrencyValues['admission_currency'] = '';
+check(kf_event_validate($defaultCurrencyValues) === [] && $defaultCurrencyValues['admission_currency'] === 'CZK',
+    'server defaults the admission currency from the event country when no currency was submitted');
 $previewHtml = run_route('event_preview', $userToken);
 check(str_contains($previewHtml, 'Festival - test event approval') && str_contains($previewHtml, 'Test klub')
     && str_contains($previewHtml, '250 CZK'), 'event preview renders admission amount and currency');
