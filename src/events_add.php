@@ -339,6 +339,7 @@ function kf_event_publish(array $v, ?string $srcL, ?int $createdBy): int
     $base = '';
     $pdo->beginTransaction();
     try {
+        $cityId = kf_city_resolve_or_create($v['city_id'], $v['city_name'], $v['country_id']);
         q(
             'INSERT INTO ' . tbl('events') . ' (name, type, date_from, date_to, time_start, city_id, venue_id, flyer, created_by, created_at)
              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
