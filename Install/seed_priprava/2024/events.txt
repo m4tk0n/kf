@@ -1,0 +1,6 @@
+# Zahraniční klubová vystoupení nalezená při průzkumu kapely The Trousers
+# Formát: název | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka
+
+The Trousers + Dirty Honey | uskutečněno | 3. 3. 2024 | Budapešť | Maďarsko | Analog Music Hall | The Trousers; Dirty Honey | 2024-S01; 2024-S02 | The Trousers v rozhovoru potvrzují, že na jaře 2024 předskakovali Dirty Honey v Analog Music Hall; datum a místo upřesňuje koncertní archiv.
+
+The Trousers + Tygers of Pan Tang | uskutečněno | 9. 5. 2024 | Budapešť | Maďarsko | Analog Music Hall | The Trousers; Tygers of Pan Tang | 2024-S01; 2024-S03 | The Trousers v rozhovoru potvrzují, že na jaře 2024 předskakovali Tygers of Pan Tang v Analog Music Hall; datum a místo upřesňují koncertní archivy.
