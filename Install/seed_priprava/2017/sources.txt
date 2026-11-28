@@ -1,0 +1,7 @@
+# Zdroje pro koncertní historii The Trousers – rok 2017
+# Formát: ID | URL | co zdroj dokládá | poznámka
+
+2017-S01 | https://www.hunderground.hu/booking/news.php?id=63&nid=847 | Koncert 25. 3. 2017 v Dürer Kert, Budapešť; program Asphalt Horsemen, MAB a The Trousers. | Dobová pozvánka pořadatele.
+2017-S02 | https://www.a38.hu/hu/program/the-trousers-hu-dungaree-hu-1 | Oficiální program A38: The Trousers a Dungaree dne 24. 8. 2017 v koncertním sále A38, Budapešť. | Primární zdroj místa konání.
+2017-S03 | https://blog.a38.hu/2017/08/20/the-trousers-dungaree-sulyos-nyarzaras/ | Před koncertem potvrzuje společné vystoupení The Trousers a Dungaree a charakteristiku Dungaree jako szegedské stoner/grunge kapely. | Oficiální blog A38.
+2017-S04 | https://otrnrmagazine.blog.hu/2017/09/21/the_trousers_otallomasos_turne_szeptember_vegen | Pět zastávek turné 22.–30. 9. 2017: Pécsi Est s Junkies; Szekszárdi Est s Junkies; Robot Budapest s Peter Kovary & the Royal Rebels a Z3 The Blues Wheels; Wakuum Graz s Basin City Orchestra, Pan a Sleeepwalker; Arena Beisl Vienna s Basin City Orchestra. | Dobové oznámení kapely; uvádí přesná data, města, místa a spoluúčinkující.
