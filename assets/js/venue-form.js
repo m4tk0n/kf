@@ -39,6 +39,27 @@
   var countryId = form.querySelector('[data-venue-country-id]');
   var countryList = form.querySelector('[data-venue-country-suggestions]');
   var countryIso2 = form.querySelector('[data-venue-country-iso2]');
+
+  var addressInput = form.querySelector('[name="address"]');
+  var googleMapsInput = form.querySelector('[name="google_maps"]');
+  var mapyMapsInput = form.querySelector('[name="mapy_maps"]');
+  var locationMessage = form.getAttribute('data-location-required') || 'Enter an address or a GPS link.';
+  function validateLocation() {
+    var hasLocation = [addressInput, googleMapsInput, mapyMapsInput].some(function (input) {
+      return input && input.value.trim() !== '';
+    });
+    if (addressInput) addressInput.setCustomValidity(hasLocation ? '' : locationMessage);
+    return hasLocation;
+  }
+  [addressInput, googleMapsInput, mapyMapsInput].forEach(function (input) {
+    if (input) input.addEventListener('input', validateLocation);
+  });
+  form.addEventListener('submit', function (event) {
+    if (!validateLocation()) {
+      event.preventDefault();
+      if (addressInput) addressInput.reportValidity();
+    }
+  });
   var timer = 0;
   var request = { city: 0, country: 0 };
 
