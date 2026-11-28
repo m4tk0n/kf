@@ -81,8 +81,8 @@ $evList = static function (array $rows): string {
     if ($kind === 'band' && ($x['bandzone'] ?? '') !== '') {
         echo $row('Bandzone', '<a href="' . e($x['bandzone']) . '" target="_blank" rel="noopener nofollow ugc">Bandzone</a>');
     }
-    if ($kind === 'event') {
-        echo $row(t('detail.price'), e($x['price'] !== '' ? $x['price'] : '-'));
+    if ($kind === 'event' && $x['price'] !== '') {
+        echo $row(t('detail.price'), e($x['price']));
     }
     if ($x['email'] !== '') {
         echo $row(t('detail.email'), '<a href="mailto:' . e($x['email']) . '">' . e($x['email']) . '</a>');
