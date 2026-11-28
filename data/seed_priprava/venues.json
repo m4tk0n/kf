@@ -62,12 +62,15 @@
     "name": "Pod Chlístovskou skálou",
     "city": "Havlíčkův Brod",
     "country_code": "CZ",
-    "address": null,
-    "coordinates": null,
+    "address": "Přírodní areál mezi Perknovem a osadou Chlístov, obec Okrouhlice, Česká republika",
+    "coordinates": {
+      "latitude": 49.622,
+      "longitude": 15.53175
+    },
     "source_ids": [
       "src-punkgen-archive"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "location_and_coordinates_provided_by_user"
   },
   {
     "id": "zarazicka-hospoda-veseli-nad-moravou",
