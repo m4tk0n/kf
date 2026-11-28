@@ -25,7 +25,8 @@
     "source_ids": [
       "src-fialky-played-2025"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "blank-out-lidske-zdroje-balkan-tour-2024",
@@ -60,7 +61,8 @@
       "src-blankout-sarajevo-2024",
       "src-blankout-balkan-review-2024"
     ],
-    "verification": "official_band_announcement_confirmed_by_official_live_release_and_independent_report"
+    "verification": "official_band_announcement_confirmed_by_official_live_release_and_independent_report",
+    "status": "pending"
   },
   {
     "id": "sps-jsme-v-hajzlu-tour-2022",
@@ -93,7 +95,8 @@
     "source_ids": [
       "src-sps-official-concert-calendar"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "sps-jsme-v-hajzlu-tour-2023",
@@ -121,7 +124,8 @@
     "source_ids": [
       "src-sps-official-concert-calendar"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "sps-mista-neznama-tour-2024",
@@ -152,7 +156,8 @@
     "source_ids": [
       "src-sps-official-concert-calendar"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "sps-fialky-tour-2024",
@@ -181,7 +186,8 @@
       "src-sps-official-concert-calendar",
       "src-fialky-official-concert-archive"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "sps-poprvý-spolu-tour-2024",
@@ -203,7 +209,8 @@
     "source_ids": [
       "src-sps-official-concert-calendar"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "sps-punk-film-tour-2025",
@@ -244,7 +251,8 @@
     "source_ids": [
       "src-sps-official-concert-calendar"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "sps-god-save-punk-ii-2026",
@@ -276,7 +284,8 @@
       "src-sps-official-concert-calendar",
       "src-fialky-official-concert-archive"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "the-fialky-10x3-tour-2024",
@@ -305,7 +314,8 @@
     "source_ids": [
       "src-fialky-official-concert-archive"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "the-fialky-punk-rock-radio-tour-2022",
@@ -336,7 +346,8 @@
     "source_ids": [
       "src-fialky-official-concert-archive"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "the-fialky-dont-worry-be-punk-tour-2023",
@@ -364,7 +375,8 @@
     "source_ids": [
       "src-fialky-official-concert-archive"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "the-fialky-winter-punkrock-show-2023",
@@ -388,7 +400,8 @@
     "source_ids": [
       "src-fialky-official-concert-archive"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "the-fialky-winter-punk-mini-tour-2026",
@@ -411,7 +424,8 @@
     "source_ids": [
       "src-fialky-official-concert-archive"
     ],
-    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+    "verification": "tour_name_and_stops_listed_in_official_band_archive",
+    "status": "pending"
   },
   {
     "id": "nezfales-houba-tour-autumn-2024",
@@ -438,7 +452,8 @@
       "src-nezfales-official-archive",
       "src-houba-official-archive"
     ],
-    "verification": "official_band_archive"
+    "verification": "official_band_archive",
+    "status": "pending"
   },
   {
     "id": "nezfales-houba-tour-autumn-2026",
@@ -466,7 +481,8 @@
       "src-nezfales-official-archive",
       "src-houba-official-archive"
     ],
-    "verification": "official_band_archive"
+    "verification": "official_band_archive",
+    "status": "pending"
   },
   {
     "id": "totalni-nasazeni-smola-hrusky-tour-2022",
@@ -497,6 +513,7 @@
     "source_ids": [
       "src-totalni-nasazeni-bandzone-archive"
     ],
-    "verification": "named_tour_from_bandzone_archive"
+    "verification": "named_tour_from_bandzone_archive",
+    "status": "pending"
   }
 ]
