@@ -954,6 +954,130 @@
         "https://punkacidetom.sk/2026/09/02/15-rocnik-punkaci-detom-dopadol-skvele-vdaka-vam/",
         "https://punkacidetom.sk/info/rady/"
       ]
+    },
+    {
+      "id": 28,
+      "name": "Farák Fest",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-08-01",
+      "date_to": "2026-08-01",
+      "time_start": null,
+      "city": "Heřmanova Huť",
+      "country": "CZ",
+      "venue_id": 26,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "14:00"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.farak-fest.cz/",
+        "https://www.farak-fest.cz/predprodej/"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Let’s GO fest summer vol. 11",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-07-31",
+      "date_to": "2026-08-01",
+      "time_start": null,
+      "city": "Třebíz",
+      "country": "CZ",
+      "venue_id": 27,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "22:00"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.letsgofest.cz/",
+        "https://vikendo.cz/events/let-s-go-fest-summer-vol-11"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Kravín Fest – 10. ročník",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-07-31",
+      "date_to": "2026-08-01",
+      "time_start": null,
+      "city": "Chválkov",
+      "country": "CZ",
+      "venue_id": 28,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "21:15"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://kravinfest.cz/",
+        "https://kravinfest.cz/zakladni-informace/",
+        "https://www.darkzin.cz/archiv-probehlych-akci/kravin-fest-2026-vol-10-/"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Bez Šance Fest XII.",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-07-24",
+      "date_to": "2026-07-25",
+      "time_start": null,
+      "city": "Police nad Metují",
+      "country": "CZ",
+      "venue_id": 29,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "20:50"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.broumovsko.cz/akce/bez-sance-fest-xii",
+        "https://www.smsticket.cz/vstupenky/64199-bez-sance-fest-xii-hospudka-u-pavla-police-nad-metuji-volant-sps",
+        "https://www.policenm.cz/zivot-ve-meste/oznamene-venkovni-akce/"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Benátská! s Impulsem 2026",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-07-23",
+      "date_to": "2026-07-26",
+      "time_start": null,
+      "city": "Liberec",
+      "country": "CZ",
+      "venue_id": 30,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "17:45"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.benatska.cz/uvod-2026/",
+        "https://www.protheus.cz/koncert/benatska-2026/",
+        "https://www.arealvesec.cz/",
+        "https://www.benatska.cz/clanky/novinky/"
+      ]
     }
   ],
   "next": []
