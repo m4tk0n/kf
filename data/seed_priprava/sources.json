@@ -495,5 +495,32 @@
     "limitations": [
       "Archivní seznam obsahuje také akce s nejasnou veřejnou dostupností; importovány jsou dohledatelné koncerty a festivaly, soukromé položky se vynechávají."
     ]
+  },
+  {
+    "id": "src-ee-bandzone-archive",
+    "name": "E!E – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/ee?at=gig&gy=2021",
+    "publisher": "Bandzone / E!E",
+    "source_type": "band_profile_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "lineups"
+    ]
+  },
+  {
+    "id": "src-ee-official-concerts",
+    "name": "E!E – oficiální koncertní kalendář",
+    "url": "https://www.eecka.eu/concerts/",
+    "publisher": "E!E",
+    "source_type": "official_band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues"
+    ]
   }
 ]

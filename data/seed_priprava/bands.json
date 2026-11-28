@@ -238,7 +238,9 @@
     "country_code": "CZ",
     "genres": [],
     "sources": [
-      "src-podparou-lineup-2025"
+      "src-podparou-lineup-2025",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
     ],
     "verification": "country_confirmed_by_official_program_label"
   },
@@ -330,16 +332,6 @@
     "sources": [
       "src-punkgen-archive",
       "src-sps-official-concert-calendar"
-    ],
-    "verification": "country_code_labelled_in_punkgen_archive"
-  },
-  {
-    "id": "e-e",
-    "name": "E!E",
-    "country_code": "CZ",
-    "genres": [],
-    "sources": [
-      "src-punkgen-archive"
     ],
     "verification": "country_code_labelled_in_punkgen_archive"
   },

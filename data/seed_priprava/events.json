@@ -791,7 +791,7 @@
       {
         "name": "E!E",
         "country_code": "CZ",
-        "band_id": "e-e"
+        "band_id": "ee"
       },
       {
         "name": "NAČO NÁZOV",
@@ -2672,7 +2672,9 @@
     "source_ids": [
       "src-sps-official-concert-calendar",
       "src-fialky-official-concert-archive",
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
     ],
     "venue_name": "Letní kino Slaný"
   },
@@ -5116,11 +5118,20 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2026-08-21",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
   },
   {
     "id": "sps-2026-08-15-jihlava",
@@ -5166,12 +5177,21 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2026-08-14",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
   },
   {
     "id": "sps-2026-08-01-slusovice",
@@ -5864,11 +5884,26 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2023-10-13",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2023-10-13",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Futurum"
   },
   {
     "id": "sps-2023-10-06-nachod",
@@ -7849,7 +7884,9 @@
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
     ],
     "venue_name": "Junior"
   },
@@ -7913,11 +7950,20 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2022-04-23",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Divadlo Pod čarou"
   },
   {
     "id": "sps-2022-04-22-praha",
@@ -8133,11 +8179,20 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2021-11-20",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
   },
   {
     "id": "sps-2021-11-19-upice",
@@ -8828,12 +8883,20 @@
         "name": "HOUBA",
         "country_code": "CZ",
         "band_id": "houba"
+      },
+      {
+        "date": "2020-08-21",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
       "src-nezfales-official-archive",
-      "src-houba-official-archive"
+      "src-houba-official-archive",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
     ],
     "venue_name": "Rock na Valníku 2020"
   },
@@ -10409,7 +10472,7 @@
         "date": "2025-07-05",
         "name": "E!E",
         "country_code": "CZ",
-        "band_id": "e-e"
+        "band_id": "ee"
       },
       {
         "date": "2025-07-05",
@@ -11975,11 +12038,20 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2023-04-22",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Modrá Vopice"
   },
   {
     "id": "fialky-2023-05-13-lesnice",
@@ -13937,11 +14009,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2026-08-29",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
   },
   {
     "id": "nezfales-2026-08-28-opatovce-u-trencina",
@@ -14033,11 +14114,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2026-08-07",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Kunčice"
   },
   {
     "id": "nezfales-2026-08-01-chvalkov-u-kamenice-nad-lipou",
@@ -15215,11 +15305,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2023-05-20",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
   },
   {
     "id": "nezfales-2023-04-21-praha",
@@ -16217,11 +16316,19 @@
         "name": "HOUBA",
         "country_code": "CZ",
         "band_id": "houba"
+      },
+      {
+        "date": "2020-08-14",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
       "src-nezfales-official-archive",
-      "src-houba-official-archive"
+      "src-houba-official-archive",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
     ],
     "venue_name": "Pod Parou Fest 2020"
   },
@@ -16297,12 +16404,20 @@
         "name": "PUNK FLOID",
         "country_code": "CZ",
         "band_id": "punk-floid"
+      },
+      {
+        "date": "2020-06-27",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
       "src-nezfales-official-archive",
       "src-houba-official-archive",
-      "src-punkfloid-official-archive"
+      "src-punkfloid-official-archive",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
     ],
     "venue_name": "Oleško"
   },
@@ -20193,7 +20308,9 @@
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
     ],
     "venue_name": "areál"
   },
@@ -21096,5 +21213,2009 @@
       "src-totalni-nasazeni-bandzone-archive"
     ],
     "venue_name": "Městské divadlo Slaný"
+  },
+  {
+    "id": "ee-2026-02-06-jindrichuv-hradec",
+    "name": "VISION DAYS + E!E",
+    "event_type": "concert",
+    "start_date": "2026-02-06",
+    "end_date": "2026-02-06",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-02-06",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2026-02-06",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Lucky Pery"
+  },
+  {
+    "id": "ee-2026-02-07-plzen",
+    "name": "VYVRHELL FEST",
+    "event_type": "festival",
+    "start_date": "2026-02-07",
+    "end_date": "2026-02-07",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-02-07",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2026-02-07",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2026-02-07",
+        "name": "DUKLA VOZOVNA",
+        "country_code": "CZ",
+        "band_id": "dukla-vozovna"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Hospoda Pod Kopcem"
+  },
+  {
+    "id": "ee-2026-03-14-karlovy-vary",
+    "name": "ŠpuntQaně a E!E",
+    "event_type": "concert",
+    "start_date": "2026-03-14",
+    "end_date": "2026-03-14",
+    "city": "Karlovy Vary",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-03-14",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Náplavka"
+  },
+  {
+    "id": "ee-2026-04-11-nova-ves-u-bakova",
+    "name": "Bacilion",
+    "event_type": "concert",
+    "start_date": "2026-04-11",
+    "end_date": "2026-04-11",
+    "city": "Nová Ves u Bakova",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-04-11",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Restaurace Na Veselce"
+  },
+  {
+    "id": "ee-2026-08-01-krasna-lipa",
+    "name": "13. výročí pivovaru Falkenštejn",
+    "event_type": "festival",
+    "start_date": "2026-08-01",
+    "end_date": "2026-08-01",
+    "city": "Krásná Lípa",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-08-01",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Křinické náměstí"
+  },
+  {
+    "id": "ee-2026-08-08-chrudim",
+    "name": "Punkfest",
+    "event_type": "concert",
+    "start_date": "2026-08-08",
+    "end_date": "2026-08-08",
+    "city": "Chrudim",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-08-08",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-08-15-bystrice-nad-uhlavou",
+    "name": "Világoš fest",
+    "event_type": "concert",
+    "start_date": "2026-08-15",
+    "end_date": "2026-08-15",
+    "city": "Bystřice nad Úhlavou",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-08-15",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-08-15-trutnov",
+    "name": "Trutnoff fest",
+    "event_type": "concert",
+    "start_date": "2026-08-15",
+    "end_date": "2026-08-15",
+    "city": "Trutnov",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-08-15",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-08-21-podebrady",
+    "name": "Festival Soutok",
+    "event_type": "concert",
+    "start_date": "2026-08-21",
+    "end_date": "2026-08-21",
+    "city": "Poděbrady",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-08-21",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-08-22-tocnik",
+    "name": "Tři sestry tour",
+    "event_type": "concert",
+    "start_date": "2026-08-22",
+    "end_date": "2026-08-22",
+    "city": "Točník",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-08-22",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-08-28-domazlice",
+    "name": "Tři Sestry tour",
+    "event_type": "concert",
+    "start_date": "2026-08-28",
+    "end_date": "2026-08-28",
+    "city": "Domažlice",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-08-28",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-08-28-breznice",
+    "name": "Rock fest",
+    "event_type": "concert",
+    "start_date": "2026-08-28",
+    "end_date": "2026-08-28",
+    "city": "Březnice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-08-28",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-08-29-neveklov",
+    "name": "Na Antuce fest",
+    "event_type": "concert",
+    "start_date": "2026-08-29",
+    "end_date": "2026-08-29",
+    "city": "Neveklov",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-08-29",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-09-04-usti-nad-labem",
+    "name": "Zputnik",
+    "event_type": "concert",
+    "start_date": "2026-09-04",
+    "end_date": "2026-09-04",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-09-04",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Marva Club"
+  },
+  {
+    "id": "ee-2026-09-05-sloup-v-moravskem-krasu",
+    "name": "Krasfest",
+    "event_type": "concert",
+    "start_date": "2026-09-05",
+    "end_date": "2026-09-05",
+    "city": "Sloup v Moravském Krasu",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-09-05",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-09-11-konopiste",
+    "name": "Tři sestry tour",
+    "event_type": "concert",
+    "start_date": "2026-09-11",
+    "end_date": "2026-09-11",
+    "city": "Konopiště",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-09-11",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-09-12-praha",
+    "name": "008",
+    "event_type": "concert",
+    "start_date": "2026-09-12",
+    "end_date": "2026-09-12",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-09-12",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Modrá Vopice"
+  },
+  {
+    "id": "ee-2026-09-19-krasna-hora-nad-vltavou",
+    "name": "Zelesa",
+    "event_type": "concert",
+    "start_date": "2026-09-19",
+    "end_date": "2026-09-19",
+    "city": "Krásná Hora nad Vltavou",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-09-19",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-10-03-jaromer",
+    "name": "Vision Days",
+    "event_type": "concert",
+    "start_date": "2026-10-03",
+    "end_date": "2026-10-03",
+    "city": "Jaroměř",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-10-03",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Bastion"
+  },
+  {
+    "id": "ee-2026-10-09-usti-nad-labem",
+    "name": "Vision Days",
+    "event_type": "concert",
+    "start_date": "2026-10-09",
+    "end_date": "2026-10-09",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-10-09",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Nároďák"
+  },
+  {
+    "id": "ee-2026-10-17-zahori-u-semil",
+    "name": "Punková sobota",
+    "event_type": "festival",
+    "start_date": "2026-10-17",
+    "end_date": "2026-10-17",
+    "city": "Záhoří u Semil",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-10-17",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Dlouhý 16"
+  },
+  {
+    "id": "ee-2026-10-31-jablonec-nad-nisou",
+    "name": "30 let Kohout plaší smrt",
+    "event_type": "concert",
+    "start_date": "2026-10-31",
+    "end_date": "2026-10-31",
+    "city": "Jablonec nad Nisou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-10-31",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Stage"
+  },
+  {
+    "id": "ee-2026-11-06-as",
+    "name": "E!E",
+    "event_type": "concert",
+    "start_date": "2026-11-06",
+    "end_date": "2026-11-06",
+    "city": "Aš",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-11-06",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "LaRitma"
+  },
+  {
+    "id": "ee-2026-11-07-kolin",
+    "name": "Vision Days",
+    "event_type": "concert",
+    "start_date": "2026-11-07",
+    "end_date": "2026-11-07",
+    "city": "Kolín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-11-07",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "kulturní dům"
+  },
+  {
+    "id": "ee-2026-11-14-lestkov-u-marianskych-lazni",
+    "name": "Antikomunist fest",
+    "event_type": "concert",
+    "start_date": "2026-11-14",
+    "end_date": "2026-11-14",
+    "city": "Lestkov u Mariánských Lázní",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-11-14",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2026-11-21-pelhrimov",
+    "name": "Paradentoza",
+    "event_type": "concert",
+    "start_date": "2026-11-21",
+    "end_date": "2026-11-21",
+    "city": "Pelhřimov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-11-21",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "malá scéna KD"
+  },
+  {
+    "id": "ee-2026-11-27-strakonice",
+    "name": "E!E",
+    "event_type": "concert",
+    "start_date": "2026-11-27",
+    "end_date": "2026-11-27",
+    "city": "Strakonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2026-11-27",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Křemelka"
+  },
+  {
+    "id": "ee-2025-02-01-plzen",
+    "name": "VYVRHELL FEST",
+    "event_type": "festival",
+    "start_date": "2025-02-01",
+    "end_date": "2025-02-01",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2025-02-01",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2025-02-01",
+        "name": "DUKLA VOZOVNA",
+        "country_code": "CZ",
+        "band_id": "dukla-vozovna"
+      },
+      {
+        "date": "2025-02-01",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": "driak"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Hospoda Pod Kopcem"
+  },
+  {
+    "id": "ee-2025-02-07-jindrichuv-hradec",
+    "name": "VISION DAYS + E!E",
+    "event_type": "concert",
+    "start_date": "2025-02-07",
+    "end_date": "2025-02-07",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2025-02-07",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2025-02-07",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Lucky Pery"
+  },
+  {
+    "id": "ee-2025-02-08-kladno",
+    "name": "E!E",
+    "event_type": "concert",
+    "start_date": "2025-02-08",
+    "end_date": "2025-02-08",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2025-02-08",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Auto DA FÉ"
+  },
+  {
+    "id": "ee-2025-02-14-praha",
+    "name": "15 let P.U.M. a křest LP",
+    "event_type": "concert",
+    "start_date": "2025-02-14",
+    "end_date": "2025-02-14",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2025-02-14",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2025-02-14",
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Futurum"
+  },
+  {
+    "id": "ee-2025-10-25-klatovy",
+    "name": "Indiánská rezervace a E!E",
+    "event_type": "concert",
+    "start_date": "2025-10-25",
+    "end_date": "2025-10-25",
+    "city": "Klatovy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2025-10-25",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Kulturní centrum Falcon"
+  },
+  {
+    "id": "ee-2025-11-08-ostrava",
+    "name": "E!E, Driák, !V.V.Ú., Jednota Kolín a…",
+    "event_type": "concert",
+    "start_date": "2025-11-08",
+    "end_date": "2025-11-08",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2025-11-08",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2025-11-08",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": "driak"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Barrák"
+  },
+  {
+    "id": "ee-2023-01-14-radomysl",
+    "name": "E!E, Cela pro Klárku a Původní Bureš",
+    "event_type": "concert",
+    "start_date": "2023-01-14",
+    "end_date": "2023-01-14",
+    "city": "Radomyšl",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2023-01-14",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "ee-2023-02-25-bezno",
+    "name": "E!E, Synové výčepu, De Bill Heads a…",
+    "event_type": "concert",
+    "start_date": "2023-02-25",
+    "end_date": "2023-02-25",
+    "city": "Bezno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2023-02-25",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "ee-2023-03-11-praha",
+    "name": "E!E",
+    "event_type": "concert",
+    "start_date": "2023-03-11",
+    "end_date": "2023-03-11",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2023-03-11",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Vagon"
+  },
+  {
+    "id": "ee-2023-06-30-brnenec",
+    "name": "Brněnecfest 2023",
+    "event_type": "concert",
+    "start_date": "2023-06-30",
+    "end_date": "2023-06-30",
+    "city": "Brněnec",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2023-06-30",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2023-11-24-plzen",
+    "name": "Totální Nasazení retro tour",
+    "event_type": "concert",
+    "start_date": "2023-11-24",
+    "end_date": "2023-11-24",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2023-11-24",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2023-11-24",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Bílej Medvěd"
+  },
+  {
+    "id": "ee-2023-11-25-ceske-budejovice",
+    "name": "Totální Nasazení retro tour",
+    "event_type": "concert",
+    "start_date": "2023-11-25",
+    "end_date": "2023-11-25",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2023-11-25",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2023-11-25",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "MC Fabrika"
+  },
+  {
+    "id": "ee-2022-02-05-harrachov",
+    "name": "Punk rock night Harrach off",
+    "event_type": "festival",
+    "start_date": "2022-02-05",
+    "end_date": "2022-02-05",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2022-02-05",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2022-02-05",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Sklářská chalupa"
+  },
+  {
+    "id": "ee-2022-04-13-praha",
+    "name": "E!E unplugged Na Kovárně",
+    "event_type": "concert",
+    "start_date": "2022-04-13",
+    "end_date": "2022-04-13",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2022-04-13",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Palác Akropolis"
+  },
+  {
+    "id": "ee-2022-04-21-praha",
+    "name": "Open air 37 let Tři sestry",
+    "event_type": "festival",
+    "start_date": "2022-04-21",
+    "end_date": "2022-04-21",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2022-04-21",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Erpet Smíchov"
+  },
+  {
+    "id": "ee-2022-07-30-chvalkov-u-kamenice-nad-lipou",
+    "name": "Kravín Fest 2022",
+    "event_type": "zemeluc,vision-days,tragedis,certuf-punk,zputnik,totalni-nasazeni,sps",
+    "start_date": "2022-07-30",
+    "end_date": "2022-07-30",
+    "city": "Chválkov u Kamenice nad Lipou",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2022-07-30",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2022-10-30-pardubice",
+    "name": "25 let Volant fest",
+    "event_type": "festival",
+    "start_date": "2022-10-30",
+    "end_date": "2022-10-30",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2022-10-30",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2022-10-30",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2022-10-30",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-10-30",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      },
+      {
+        "date": "2022-10-30",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2022-10-30",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "ABC klub"
+  },
+  {
+    "id": "ee-2022-11-20-horni-slavkov",
+    "name": "E!E, SPS a Znouzectnost",
+    "event_type": "sps,znouzectnost",
+    "start_date": "2022-11-20",
+    "end_date": "2022-11-20",
+    "city": "Horní Slavkov",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2022-11-20",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2022-11-27-pisek",
+    "name": "E!E a SPS",
+    "event_type": "concert",
+    "start_date": "2022-11-27",
+    "end_date": "2022-11-27",
+    "city": "Písek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2022-11-27",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2022-11-27",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Divadlo Pod čarou"
+  },
+  {
+    "id": "ee-2021-02-12-harrachov",
+    "name": "E!E, Volant a VHS PUNK",
+    "event_type": "concert",
+    "start_date": "2021-02-12",
+    "end_date": "2021-02-12",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-02-12",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2021-02-12",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Sklářská chalupa"
+  },
+  {
+    "id": "ee-2021-04-22-hermanuv-mestec",
+    "name": "Sokolovna fest",
+    "event_type": "concert",
+    "start_date": "2021-04-22",
+    "end_date": "2021-04-22",
+    "city": "Heřmanův Městec",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-04-22",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2021-04-23-praha",
+    "name": "Číro Fest 2021",
+    "event_type": "festival",
+    "start_date": "2021-04-23",
+    "end_date": "2021-04-23",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-04-23",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2021-04-23",
+        "name": "N.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "nvu"
+      },
+      {
+        "date": "2021-04-23",
+        "name": "KOHOUT PLAŠÍ SMRT",
+        "country_code": "CZ",
+        "band_id": "kohout-plasi-smrt"
+      },
+      {
+        "date": "2021-04-23",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2021-04-23",
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
+      },
+      {
+        "date": "2021-04-23",
+        "name": "TRAGEDIS",
+        "country_code": "CZ",
+        "band_id": "tragedis"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Modrá Vopice"
+  },
+  {
+    "id": "ee-2021-04-24-horni-slavkov",
+    "name": "E!E",
+    "event_type": "concert",
+    "start_date": "2021-04-24",
+    "end_date": "2021-04-24",
+    "city": "Horní Slavkov",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-04-24",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2021-04-29-policka",
+    "name": "Rockoupání",
+    "event_type": "concert",
+    "start_date": "2021-04-29",
+    "end_date": "2021-04-29",
+    "city": "Polička",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-04-29",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2021-05-01-frydek-mistek",
+    "name": "E!E",
+    "event_type": "concert",
+    "start_date": "2021-05-01",
+    "end_date": "2021-05-01",
+    "city": "Frýdek-Místek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-05-01",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Fabrika"
+  },
+  {
+    "id": "ee-2021-06-04-strakonice",
+    "name": "Tři sestry Letní Open air Tour 2021",
+    "event_type": "concert",
+    "start_date": "2021-06-04",
+    "end_date": "2021-06-04",
+    "city": "Strakonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-06-04",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "letní kino"
+  },
+  {
+    "id": "ee-2021-06-11-plzen",
+    "name": "Tři sestry tour",
+    "event_type": "concert",
+    "start_date": "2021-06-11",
+    "end_date": "2021-06-11",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-06-11",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Amfiteátr Plaza"
+  },
+  {
+    "id": "ee-2021-06-12-strasice",
+    "name": "Koupák",
+    "event_type": "concert",
+    "start_date": "2021-06-12",
+    "end_date": "2021-06-12",
+    "city": "Strašice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-06-12",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2021-06-18-liberec",
+    "name": "E!E",
+    "event_type": "concert",
+    "start_date": "2021-06-18",
+    "end_date": "2021-06-18",
+    "city": "Liberec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-06-18",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Přehrada"
+  },
+  {
+    "id": "ee-2021-06-25-brandys-nad-labem-stara-boleslav",
+    "name": "Tři sestry Letní Open air Tour 2021",
+    "event_type": "concert",
+    "start_date": "2021-06-25",
+    "end_date": "2021-06-25",
+    "city": "Brandýs nad Labem-Stará Boleslav",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-06-25",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Letní kino Houšťka"
+  },
+  {
+    "id": "ee-2021-06-26-rokycany",
+    "name": "E!E, Sex Deviants, Budulínek, Strakator…",
+    "event_type": "concert",
+    "start_date": "2021-06-26",
+    "end_date": "2021-06-26",
+    "city": "Rokycany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-06-26",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "U Pardála"
+  },
+  {
+    "id": "ee-2021-07-01-holysov",
+    "name": "Pekelný poloostrov 2021",
+    "event_type": "festival",
+    "start_date": "2021-07-01",
+    "end_date": "2021-07-01",
+    "city": "Holýšov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-07-01",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2021-07-01",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "přírodní ostrov"
+  },
+  {
+    "id": "ee-2021-07-23-hyskov",
+    "name": "E!E a Black Hill",
+    "event_type": "concert",
+    "start_date": "2021-07-23",
+    "end_date": "2021-07-23",
+    "city": "Hýskov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-07-23",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Restaurace U Bony"
+  },
+  {
+    "id": "ee-2021-07-30-chvalkov-u-kamenice-nad-lipou",
+    "name": "Kravín Fest 2021",
+    "event_type": "zemeluc,vision-days,tragedis,certuf-punk,zputnik,totalni-nasazeni,sps",
+    "start_date": "2021-07-30",
+    "end_date": "2021-07-30",
+    "city": "Chválkov u Kamenice nad Lipou",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-07-30",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "ee-2021-07-30-trebiz",
+    "name": "Let's GO fest summer vol.7",
+    "event_type": "festival",
+    "start_date": "2021-07-30",
+    "end_date": "2021-07-30",
+    "city": "Třebíz",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-07-30",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2021-07-30",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2021-07-30",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2021-07-30",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "areál pod skálou"
+  },
+  {
+    "id": "ee-2021-08-20-brno",
+    "name": "TrutnOFF BrnoON Festival 2021",
+    "event_type": "festival",
+    "start_date": "2021-08-20",
+    "end_date": "2021-08-20",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-08-20",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Na Střelnici"
+  },
+  {
+    "id": "ee-2021-09-25-pribram",
+    "name": "E!E",
+    "event_type": "concert",
+    "start_date": "2021-09-25",
+    "end_date": "2021-09-25",
+    "city": "Příbram",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-09-25",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Letní kino"
+  },
+  {
+    "id": "ee-2021-10-09-jindrichuv-hradec",
+    "name": "E!E",
+    "event_type": "concert",
+    "start_date": "2021-10-09",
+    "end_date": "2021-10-09",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-10-09",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Lucky Pery"
+  },
+  {
+    "id": "ee-2021-10-23-tabor",
+    "name": "E!E, Procrastinatin, Crawall, Kullt Sklla",
+    "event_type": "concert",
+    "start_date": "2021-10-23",
+    "end_date": "2021-10-23",
+    "city": "Tábor",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-10-23",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Bar Bar"
+  },
+  {
+    "id": "ee-2021-11-06-bavorov",
+    "name": "E!E a Visací zámek",
+    "event_type": "concert",
+    "start_date": "2021-11-06",
+    "end_date": "2021-11-06",
+    "city": "Bavorov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-11-06",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "ee-2021-11-12-frydek-mistek",
+    "name": "E!E a Volant",
+    "event_type": "concert",
+    "start_date": "2021-11-12",
+    "end_date": "2021-11-12",
+    "city": "Frýdek-Místek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-11-12",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2021-11-12",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Zkušebna Art Club"
+  },
+  {
+    "id": "ee-2021-11-18-praha",
+    "name": "Koncert E!E ve Vagonu",
+    "event_type": "concert",
+    "start_date": "2021-11-18",
+    "end_date": "2021-11-18",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-11-18",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Vagon"
+  },
+  {
+    "id": "ee-2021-11-19-usti-nad-orlici",
+    "name": "E!E, Visací zámek a Upside Down",
+    "event_type": "concert",
+    "start_date": "2021-11-19",
+    "end_date": "2021-11-19",
+    "city": "Ústí nad Orlicí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-11-19",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "ee-2021-11-27-pisek",
+    "name": "E!E a SPS",
+    "event_type": "concert",
+    "start_date": "2021-11-27",
+    "end_date": "2021-11-27",
+    "city": "Písek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-11-27",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2021-11-27",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Divadlo Pod čarou"
+  },
+  {
+    "id": "ee-2021-12-04-litomerice",
+    "name": "Barbar Punk a E!E",
+    "event_type": "concert",
+    "start_date": "2021-12-04",
+    "end_date": "2021-12-04",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2021-12-04",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Baronka"
+  },
+  {
+    "id": "ee-2020-01-17-klatovy",
+    "name": "E!E a Bikini karneval",
+    "event_type": "concert",
+    "start_date": "2020-01-17",
+    "end_date": "2020-01-17",
+    "city": "Klatovy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2020-01-17",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Kulturní centrum Falcon"
+  },
+  {
+    "id": "ee-2020-01-18-praha",
+    "name": "E!E a Zputnik",
+    "event_type": "concert",
+    "start_date": "2020-01-18",
+    "end_date": "2020-01-18",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2020-01-18",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Music Club Jižák"
+  },
+  {
+    "id": "ee-2020-02-15-harrachov",
+    "name": "E!E, VHS PUNK a další",
+    "event_type": "concert",
+    "start_date": "2020-02-15",
+    "end_date": "2020-02-15",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2020-02-15",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2020-02-15",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "Sklářská chalupa"
+  },
+  {
+    "id": "ee-2020-02-22-pribram",
+    "name": "E!E",
+    "event_type": "concert",
+    "start_date": "2020-02-22",
+    "end_date": "2020-02-22",
+    "city": "Příbram",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_and_official_archive",
+    "performances": [
+      {
+        "date": "2020-02-22",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      }
+    ],
+    "source_ids": [
+      "src-ee-bandzone-archive",
+      "src-ee-official-concerts"
+    ],
+    "venue_name": "CZ"
   }
 ]
