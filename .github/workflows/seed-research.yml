@@ -86,10 +86,10 @@ jobs:
               "set ftp:passive-mode yes",
               f"open -p {q(os.environ['FTP_PORT'])} {q(os.environ['FTP_SERVER'])}",
               f"user {q(os.environ['FTP_USERNAME'])} {q(os.environ['FTP_PASSWORD'])}",
-              f"get -o {q(local + '/band_queue.json')} {q(remote + '/Install/seed_priprava/band_queue.json')}",
-              f"get -o {q(local + '/automation_state.json')} {q(remote + '/Install/seed_priprava/automation_state.json')}",
-              f"get -o {q(local + '/candidates/search_results.jsonl')} {q(remote + '/Install/seed_priprava/candidates/search_results.jsonl')}",
-              f"get -o {q(local + '/candidates/search_queries.jsonl')} {q(remote + '/Install/seed_priprava/candidates/search_queries.jsonl')}",
+              f"get -O {q(local)} {q(remote + '/Install/seed_priprava/band_queue.json')}",
+              f"get -O {q(local)} {q(remote + '/Install/seed_priprava/automation_state.json')}",
+              f"get -O {q(local + '/candidates')} {q(remote + '/Install/seed_priprava/candidates/search_results.jsonl')}",
+              f"get -O {q(local + '/candidates')} {q(remote + '/Install/seed_priprava/candidates/search_queries.jsonl')}",
               "bye",
           ]
           with open("/tmp/kf-seed-import.lftp", "w", encoding="utf-8") as f:
