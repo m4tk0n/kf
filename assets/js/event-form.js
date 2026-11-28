@@ -35,6 +35,31 @@
   var countryInput = document.querySelector('[data-venue-country-input]');
   var countryId = document.querySelector('[data-venue-country-id]');
   var countryIso2 = document.querySelector('[data-venue-country-iso2]');
+  var admissionType = document.querySelector('[data-admission-type]');
+  var admissionTextField = document.querySelector('[data-admission-text-field]');
+  var admissionAmountFields = document.querySelector('[data-admission-amount-fields]');
+  var admissionCurrency = document.querySelector('[data-admission-currency]');
+  var countryCurrencyMap = {};
+  if (admissionCurrency) {
+    try { countryCurrencyMap = JSON.parse(admissionCurrency.getAttribute('data-country-currencies') || '{}'); } catch (e) {}
+  }
+  var lastCurrencyCountry = countryId ? countryId.value : '';
+  function applyCountryCurrency() {
+    var nextCountry = countryId ? countryId.value : '';
+    if (!admissionCurrency || !nextCountry || nextCountry === lastCurrencyCountry) return;
+    lastCurrencyCountry = nextCountry;
+    var currency = countryCurrencyMap[nextCountry] || '';
+    if (currency) admissionCurrency.value = currency;
+  }
+  function updateAdmissionFields() {
+    var mode = admissionType ? admissionType.value : '';
+    if (admissionTextField) admissionTextField.hidden = mode !== 'text';
+    if (admissionAmountFields) admissionAmountFields.hidden = mode !== 'amount';
+  }
+  if (admissionType) {
+    admissionType.addEventListener('change', updateAdmissionFields);
+    updateAdmissionFields();
+  }
 
   // Společné ovládání našeptávačů ve formuláři (název akce a klub/místo).
   Array.prototype.forEach.call(document.querySelectorAll('[data-autocomplete-input]'), function (nameInput) {
@@ -89,6 +114,7 @@
               if (cityId && item.city_id) cityId.value = String(item.city_id);
               if (countryInput && (item.country_name || item.country)) countryInput.value = String(item.country_name || item.country);
               if (countryId && item.country_id) countryId.value = String(item.country_id);
+              applyCountryCurrency();
               if (countryIso2) countryIso2.textContent = item.iso2 || '';
             }
             closeSuggestions();
@@ -146,10 +172,10 @@
   }
   cityCountrySuggest(cityInput,cityId,document.querySelector('[data-venue-city-suggestions]'),null,
     {country_id:function(){return countryId?countryId.value:'';}},
-    function(item){cityInput.value=item.name;cityId.value=String(item.id||0);if(countryInput)countryInput.value=item.country;if(countryId)countryId.value=String(item.country_id);if(countryIso2)countryIso2.textContent=item.iso2||'';},
+    function(item){cityInput.value=item.name;cityId.value=String(item.id||0);if(countryInput)countryInput.value=item.country;if(countryId)countryId.value=String(item.country_id);applyCountryCurrency();if(countryIso2)countryIso2.textContent=item.iso2||'';},
     function(item){return item.name+' · '+item.country;});
   cityCountrySuggest(countryInput,countryId,document.querySelector('[data-venue-country-suggestions]'),null,{},
-    function(item){countryInput.value=item.name;countryId.value=String(item.id);if(countryIso2)countryIso2.textContent=item.iso2||'';},
+    function(item){countryInput.value=item.name;countryId.value=String(item.id);applyCountryCurrency();if(countryIso2)countryIso2.textContent=item.iso2||'';},
     function(item){return item.name;});
 
   // Řádky kapel: zobrazí se vyplněné + jeden prázdný, tlačítko "+" přidá další.
