@@ -1,0 +1,6 @@
+{
+  "_purpose": "Tento soubor slouzi k postupnemu vyhledavani, overovani a identifikaci klubu a dalsich mist konani pro seed databaze K&F. Udaje u mista (name, city, country a pripadne address a url) slouzi k rozpoznani spravneho fyzickeho mista a kontrole duplicit. Nejde o popis klubu ani o kompletni profil. Do databaze venues se ukladaji pouze name, city_id a address; city_id se urci podle kombinace mesta a statu. ID je poradove ID mista v ramci teto pripravy. 'aktual' obsahuje prave proverovane misto, 'ok' overena mista a 'next' mista cekajici na provereni.",
+  "aktual": [],
+  "ok": [],
+  "next": []
+}
