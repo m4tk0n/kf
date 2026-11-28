@@ -1,0 +1,12 @@
+# Kapely zjištěné v koncertní historii The Trousers – rok 2023
+# Formát: název | město původu | stát původu | žánr | zdroje | poznámka
+
+The Trousers | Budapešť | Maďarsko | garage rock / hard rock / rock'n'roll | 2023-S01; 2023-S04; 2023-S05; 2023-S06; 2023-S07; 2023-S08 | Stejná kanonická maďarská kapela jako v záznamech 2024, 2026 a 2027.
+Degradace | Ostrava | Česko | punk rock'n'roll | 2023-S01; 2023-S02 | Česká punk-rock'n'rollová kapela z Ostravy; spoluúčast na Monarchy Madness II.
+Strompopper | Budapešť | Maďarsko | garage rock | 2023-S01 | Článek ji výslovně popisuje jako budapešťskou garážrockovou formaci.
+Copycats | neuvedeno | Česko | hardcore; punk | 2023-S02 | Festivaly.eu uvádí český původ a žánry; město původu neověřeno.
+Dafy and the Rafters | neuvedeno | Slovensko | rock | 2023-S02 | Festivaly.eu uvádí slovenský původ a rock; město původu neověřeno.
+Akela | neuvedeno | neuvedeno | neuvedeno | 2023-S05 | Účast na koncertu v Sárváru doložena; identitu, původ a žánr ověřit.
+HallucinatorZ | neuvedeno | neuvedeno | neuvedeno | 2023-S06; 2023-S07 | Účast na koncertu v Robotu doložena; identitu, původ a žánr ověřit.
+Jackmans | neuvedeno | neuvedeno | neuvedeno | 2023-S06; 2023-S07 | Účast na koncertu v Robotu doložena; identitu, původ a žánr ověřit.
+Junkies | neuvedeno | Maďarsko | rock'n'roll | 2023-S08 | The Trousers potvrzují společný koncert; identitu a další historii ověřit.
