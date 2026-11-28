@@ -4436,5 +4436,4273 @@
     "source_ids": [
       "src-sps-official-concert-calendar"
     ]
+  },
+  {
+    "id": "sps-2026-11-21-kralupy-nad-vltavou",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-11-21",
+    "end_date": "2026-11-21",
+    "city": "Kralupy nad Vltavou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-11-21",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-11-20-mlada-boleslav",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-11-20",
+    "end_date": "2026-11-20",
+    "city": "Mladá Boleslav",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-11-20",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-11-14-valasske-klobouky",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-11-14",
+    "end_date": "2026-11-14",
+    "city": "Valašské Klobouky",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-11-14",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-11-13-ostrava",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-11-13",
+    "end_date": "2026-11-13",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-11-13",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-10-31-pisek",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-10-31",
+    "end_date": "2026-10-31",
+    "city": "Písek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-10-31",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-10-30-litomysl",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-10-30",
+    "end_date": "2026-10-30",
+    "city": "Litomyšl",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-10-30",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-10-17-brno",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-10-17",
+    "end_date": "2026-10-17",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-10-17",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-10-16-plzen",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-10-16",
+    "end_date": "2026-10-16",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-10-16",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-10-09-praha",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-10-09",
+    "end_date": "2026-10-09",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-10-09",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-10-08-praha",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-10-08",
+    "end_date": "2026-10-08",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-10-08",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-10-03-kolin",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-10-03",
+    "end_date": "2026-10-03",
+    "city": "Kolín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-10-03",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-10-02-ceske-budejovice",
+    "name": "God Save The Punk II.",
+    "event_type": "concert",
+    "start_date": "2026-10-02",
+    "end_date": "2026-10-02",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-10-02",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-08-29-destna-u-jindrichova-hradce",
+    "name": "Deštník Fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-08-29",
+    "end_date": "2026-08-29",
+    "city": "Deštná u Jindřichova Hradce",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-08-29",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-08-28-nitra",
+    "name": "Slížovica 2026",
+    "event_type": "festival",
+    "start_date": "2026-08-28",
+    "end_date": "2026-08-28",
+    "city": "Nitra",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-08-28",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-08-22-vintirov",
+    "name": "Rockfest",
+    "event_type": "festival",
+    "start_date": "2026-08-22",
+    "end_date": "2026-08-22",
+    "city": "Vintířov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-08-22",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-08-21-slany",
+    "name": "Valník 2026",
+    "event_type": "festival",
+    "start_date": "2026-08-21",
+    "end_date": "2026-08-21",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-08-21",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-08-15-jihlava",
+    "name": "Magmafest 2026",
+    "event_type": "festival",
+    "start_date": "2026-08-15",
+    "end_date": "2026-08-15",
+    "city": "Jihlava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-08-15",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-08-14-vysoke-nad-jizerou",
+    "name": "Keltská Noc 2026",
+    "event_type": "festival",
+    "start_date": "2026-08-14",
+    "end_date": "2026-08-14",
+    "city": "Vysoké nad Jizerou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-08-14",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-08-01-slusovice",
+    "name": "SudRockFest 2026",
+    "event_type": "festival",
+    "start_date": "2026-08-01",
+    "end_date": "2026-08-01",
+    "city": "Slušovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-08-01",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-07-25-zdikov-u-prachatic",
+    "name": "SPS – Zdíkov",
+    "event_type": "concert",
+    "start_date": "2026-07-25",
+    "end_date": "2026-07-25",
+    "city": "Zdíkov u Prachatic",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-07-25",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-07-24-police-nad-metuji",
+    "name": "Bez Šance Fest XII.",
+    "event_type": "festival",
+    "start_date": "2026-07-24",
+    "end_date": "2026-07-24",
+    "city": "Police nad Metují",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-07-24",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-07-18-vlctejn",
+    "name": "Prasofest 2026",
+    "event_type": "festival",
+    "start_date": "2026-07-18",
+    "end_date": "2026-07-18",
+    "city": "Vlčtejn",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-07-18",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-07-17-lovosice",
+    "name": "Altros Rockfest",
+    "event_type": "festival",
+    "start_date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "city": "Lovosice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-07-17",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-07-11-prysk",
+    "name": "ČKSD Cup",
+    "event_type": "concert",
+    "start_date": "2026-07-11",
+    "end_date": "2026-07-11",
+    "city": "Prysk",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-07-11",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-07-10-podebrady",
+    "name": "Barvy Léta 2026",
+    "event_type": "festival",
+    "start_date": "2026-07-10",
+    "end_date": "2026-07-10",
+    "city": "Poděbrady",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-07-10",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-06-26-volyne",
+    "name": "SPS – Volyně",
+    "event_type": "concert",
+    "start_date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "city": "Volyně",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-06-26",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-06-20-manetin",
+    "name": "Rock For JK",
+    "event_type": "festival",
+    "start_date": "2026-06-20",
+    "end_date": "2026-06-20",
+    "city": "Manětín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-06-20",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-06-20-plzen",
+    "name": "SPS – Plzeň",
+    "event_type": "concert",
+    "start_date": "2026-06-20",
+    "end_date": "2026-06-20",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-06-20",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-06-19-habartov-u-sokolova",
+    "name": "Festival Habartov",
+    "event_type": "festival",
+    "start_date": "2026-06-19",
+    "end_date": "2026-06-19",
+    "city": "Habartov u Sokolova",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-06-19",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-06-13-vrchlabi",
+    "name": "Venkovní Parket",
+    "event_type": "concert",
+    "start_date": "2026-06-13",
+    "end_date": "2026-06-13",
+    "city": "Vrchlabí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-06-13",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-05-30-pasohlavky",
+    "name": "Euro Bike Fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-05-30",
+    "end_date": "2026-05-30",
+    "city": "Pasohlávky",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-05-30",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-05-22-praha",
+    "name": "Tři Sestry Open Air – Zdeněk 60",
+    "event_type": "festival",
+    "start_date": "2026-05-22",
+    "end_date": "2026-05-22",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-05-22",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-05-16-lesnice",
+    "name": "FO.GO. Fest Lesnice",
+    "event_type": "festival",
+    "start_date": "2026-05-16",
+    "end_date": "2026-05-16",
+    "city": "Lesnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-05-16",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-05-08-trencin",
+    "name": "SPS – Trenčín",
+    "event_type": "concert",
+    "start_date": "2026-05-08",
+    "end_date": "2026-05-08",
+    "city": "Trenčín",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-05-08",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-05-02-plzen",
+    "name": "Pilsen Punk Fest",
+    "event_type": "festival",
+    "start_date": "2026-05-02",
+    "end_date": "2026-05-02",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-05-02",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-04-24-praha",
+    "name": "Číro Fest",
+    "event_type": "festival",
+    "start_date": "2026-04-24",
+    "end_date": "2026-04-24",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-04-24",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-04-25-brno",
+    "name": "Zdeněk 60 + Štamgasti",
+    "event_type": "concert",
+    "start_date": "2026-04-25",
+    "end_date": "2026-04-25",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-04-25",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-03-20-jablonec-nad-nisou",
+    "name": "Zdeněk 60",
+    "event_type": "concert",
+    "start_date": "2026-03-20",
+    "end_date": "2026-03-20",
+    "city": "Jablonec nad Nisou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-03-20",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-03-14-strenice-u-mlade-boleslavi",
+    "name": "Karel 50",
+    "event_type": "concert",
+    "start_date": "2026-03-14",
+    "end_date": "2026-03-14",
+    "city": "Střeníce u Mladé Boleslavi",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-03-14",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-03-13-sadov-u-karlovych-varu",
+    "name": "Zdeněk 60",
+    "event_type": "concert",
+    "start_date": "2026-03-13",
+    "end_date": "2026-03-13",
+    "city": "Sadov u Karlových Varů",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-03-13",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2026-03-06-litomerice",
+    "name": "Zdeněk 60",
+    "event_type": "concert",
+    "start_date": "2026-03-06",
+    "end_date": "2026-03-06",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2026-03-06",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-12-09-koprivnice",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-12-09",
+    "end_date": "2023-12-09",
+    "city": "Kopřivnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-12-09",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-12-08-policka",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-12-08",
+    "end_date": "2023-12-08",
+    "city": "Polička",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-12-08",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-12-02-pec-pod-snezkou",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-12-02",
+    "end_date": "2023-12-02",
+    "city": "Pec pod Sněžkou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-12-02",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-11-25-jindrichuv-hradec",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-11-25",
+    "end_date": "2023-11-25",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-11-25",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-11-24-litomerice",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-11-24",
+    "end_date": "2023-11-24",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-11-24",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-11-18-pardubice",
+    "name": "Volant Fest – 35 let SPS",
+    "event_type": "festival",
+    "start_date": "2023-11-18",
+    "end_date": "2023-11-18",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-11-18",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-11-11-ceske-budejovice",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-11-11",
+    "end_date": "2023-11-11",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-11-11",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-11-10-sadov-u-karlovych-varu",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-11-10",
+    "end_date": "2023-11-10",
+    "city": "Sadov u Karlových Varů",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-11-10",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-10-28-uherske-hradiste",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-10-28",
+    "end_date": "2023-10-28",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-10-28",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-10-27-pisek",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-10-27",
+    "end_date": "2023-10-27",
+    "city": "Písek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-10-27",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-10-21-brno",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-10-21",
+    "end_date": "2023-10-21",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-10-21",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-10-20-plzen",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-10-20",
+    "end_date": "2023-10-20",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-10-20",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-10-13-praha",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-10-13",
+    "end_date": "2023-10-13",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-10-13",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-10-06-nachod",
+    "name": "35 let SPS",
+    "event_type": "concert",
+    "start_date": "2023-10-06",
+    "end_date": "2023-10-06",
+    "city": "Náchod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-10-06",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-09-29-praha",
+    "name": "SPS – soukromá akce",
+    "event_type": "concert",
+    "start_date": "2023-09-29",
+    "end_date": "2023-09-29",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-09-29",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-09-02-pohorelice",
+    "name": "Rockfest 2023",
+    "event_type": "festival",
+    "start_date": "2023-09-02",
+    "end_date": "2023-09-02",
+    "city": "Pohořelice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-09-02",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-09-01-strakonice",
+    "name": "Festpival",
+    "event_type": "festival",
+    "start_date": "2023-09-01",
+    "end_date": "2023-09-01",
+    "city": "Strakonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-09-01",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-08-28-nitra",
+    "name": "Festival Slížovica",
+    "event_type": "festival",
+    "start_date": "2023-08-28",
+    "end_date": "2023-08-28",
+    "city": "Nitra",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-08-28",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-08-19-trutnov",
+    "name": "Trutnoff Open Air Festival",
+    "event_type": "festival",
+    "start_date": "2023-08-19",
+    "end_date": "2023-08-19",
+    "city": "Trutnov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-08-19",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-08-18-slany",
+    "name": "Valník",
+    "event_type": "festival",
+    "start_date": "2023-08-18",
+    "end_date": "2023-08-18",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-08-18",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-08-12-jihlava",
+    "name": "Magmafest 2023",
+    "event_type": "festival",
+    "start_date": "2023-08-12",
+    "end_date": "2023-08-12",
+    "city": "Jihlava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-08-12",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-08-12-ricany-u-prahy",
+    "name": "Starák Fest 2023",
+    "event_type": "festival",
+    "start_date": "2023-08-12",
+    "end_date": "2023-08-12",
+    "city": "Říčany u Prahy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-08-12",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-08-11-harrachov",
+    "name": "Keltská Noc 2023",
+    "event_type": "festival",
+    "start_date": "2023-08-11",
+    "end_date": "2023-08-11",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-08-11",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-08-05-chvalkov",
+    "name": "Kravín Fest",
+    "event_type": "festival",
+    "start_date": "2023-08-05",
+    "end_date": "2023-08-05",
+    "city": "Chválkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-08-05",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-08-04-letohrad-kuncice",
+    "name": "Open Air Festival Kunčický Kravál",
+    "event_type": "festival",
+    "start_date": "2023-08-04",
+    "end_date": "2023-08-04",
+    "city": "Letohrad-Kunčice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-08-04",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-07-29-brno",
+    "name": "SPS + Tři Sestry",
+    "event_type": "concert",
+    "start_date": "2023-07-29",
+    "end_date": "2023-07-29",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-29",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-07-29-borkovany",
+    "name": "Borkovanský Woodstock",
+    "event_type": "concert",
+    "start_date": "2023-07-29",
+    "end_date": "2023-07-29",
+    "city": "Borkovany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-29",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-07-28-trutnov",
+    "name": "Festival Pod Parou",
+    "event_type": "festival",
+    "start_date": "2023-07-28",
+    "end_date": "2023-07-28",
+    "city": "Trutnov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-28",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-07-27-liberec",
+    "name": "Benátská! 2023",
+    "event_type": "festival",
+    "start_date": "2023-07-27",
+    "end_date": "2023-07-27",
+    "city": "Liberec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-27",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-07-26-praha",
+    "name": "Festonda Cup 2023",
+    "event_type": "festival",
+    "start_date": "2023-07-26",
+    "end_date": "2023-07-26",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-26",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-07-22-vlctejn",
+    "name": "Prasofest 2023",
+    "event_type": "festival",
+    "start_date": "2023-07-22",
+    "end_date": "2023-07-22",
+    "city": "Vlčtejn",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-22",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-07-21-benesov",
+    "name": "SPS – Benešov",
+    "event_type": "concert",
+    "start_date": "2023-07-21",
+    "end_date": "2023-07-21",
+    "city": "Benešov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-21",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-07-15-podebrady",
+    "name": "Barvy Léta",
+    "event_type": "festival",
+    "start_date": "2023-07-15",
+    "end_date": "2023-07-15",
+    "city": "Poděbrady",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-15",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-07-05-manetin",
+    "name": "Rock For JK",
+    "event_type": "festival",
+    "start_date": "2023-07-05",
+    "end_date": "2023-07-05",
+    "city": "Manětín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-05",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-07-01-brnenec",
+    "name": "PunkFest",
+    "event_type": "festival",
+    "start_date": "2023-07-01",
+    "end_date": "2023-07-01",
+    "city": "Brněnec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-07-01",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-06-30-kostany-u-teplic",
+    "name": "Košťanský Woodstock",
+    "event_type": "concert",
+    "start_date": "2023-06-30",
+    "end_date": "2023-06-30",
+    "city": "Košťany u Teplic",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-30",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-06-29-praha",
+    "name": "Za Koule Fest",
+    "event_type": "festival",
+    "start_date": "2023-06-29",
+    "end_date": "2023-06-29",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-29",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-06-24-tabor",
+    "name": "Mighty Sounds 2023",
+    "event_type": "concert",
+    "start_date": "2023-06-24",
+    "end_date": "2023-06-24",
+    "city": "Tábor",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-24",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-06-24-praha",
+    "name": "SPS – Praha",
+    "event_type": "concert",
+    "start_date": "2023-06-24",
+    "end_date": "2023-06-24",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-24",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-06-23-chlistov",
+    "name": "Chlístovský Hejk",
+    "event_type": "concert",
+    "start_date": "2023-06-23",
+    "end_date": "2023-06-23",
+    "city": "Chlístov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-23",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-06-10-trebetice-u-dacic",
+    "name": "Moták Fest 2023",
+    "event_type": "festival",
+    "start_date": "2023-06-10",
+    "end_date": "2023-06-10",
+    "city": "Třebětice u Dačic",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-10",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-06-09-chomutov",
+    "name": "SPS + The Fialky",
+    "event_type": "concert",
+    "start_date": "2023-06-09",
+    "end_date": "2023-06-09",
+    "city": "Chomutov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-09",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-06-03-okrouhlicka-u-havlickova-brodu",
+    "name": "Hubertka Open Air 2023",
+    "event_type": "festival",
+    "start_date": "2023-06-03",
+    "end_date": "2023-06-03",
+    "city": "Okrouhlička u Havlíčkova Brodu",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-03",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-06-03-velke-bilovice",
+    "name": "Ferby Fest 2023",
+    "event_type": "festival",
+    "start_date": "2023-06-03",
+    "end_date": "2023-06-03",
+    "city": "Velké Bílovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-03",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-05-26-praha",
+    "name": "Tři Sestry Open Air",
+    "event_type": "festival",
+    "start_date": "2023-05-26",
+    "end_date": "2023-05-26",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-05-26",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-05-20-kamyk-nad-vltavou",
+    "name": "Zelesa Fest",
+    "event_type": "festival",
+    "start_date": "2023-05-20",
+    "end_date": "2023-05-20",
+    "city": "Kamýk nad Vltavou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-05-20",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-05-13-morkovice-slizany",
+    "name": "Festival Máj a Les",
+    "event_type": "festival",
+    "start_date": "2023-05-13",
+    "end_date": "2023-05-13",
+    "city": "Morkovice-Slížany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-05-13",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-05-12-litomerice",
+    "name": "25 let klubu Baronka",
+    "event_type": "concert",
+    "start_date": "2023-05-12",
+    "end_date": "2023-05-12",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-05-12",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-05-02-plzen",
+    "name": "Pilsen Punk Fest",
+    "event_type": "festival",
+    "start_date": "2023-05-02",
+    "end_date": "2023-05-02",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-05-02",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-04-22-vsetin",
+    "name": "Jsme v hajzlu (Turné 2023)",
+    "event_type": "concert",
+    "start_date": "2023-04-22",
+    "end_date": "2023-04-22",
+    "city": "Vsetín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-04-22",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-04-15-olomouc",
+    "name": "Jsme v hajzlu (Turné 2023)",
+    "event_type": "concert",
+    "start_date": "2023-04-15",
+    "end_date": "2023-04-15",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-04-15",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-04-01-pisek",
+    "name": "Jsme v hajzlu (Turné 2023)",
+    "event_type": "concert",
+    "start_date": "2023-04-01",
+    "end_date": "2023-04-01",
+    "city": "Písek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-04-01",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-03-31-velke-mezirici",
+    "name": "Jsme v hajzlu (Turné 2023)",
+    "event_type": "concert",
+    "start_date": "2023-03-31",
+    "end_date": "2023-03-31",
+    "city": "Velké Meziříčí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-31",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-03-25-racice-u-steti",
+    "name": "Jsme v hajzlu (Turné 2023)",
+    "event_type": "concert",
+    "start_date": "2023-03-25",
+    "end_date": "2023-03-25",
+    "city": "Račice u Štětí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-25",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-03-24-nove-mesto-nad-metuji",
+    "name": "Jsme v hajzlu (Turné 2023)",
+    "event_type": "concert",
+    "start_date": "2023-03-24",
+    "end_date": "2023-03-24",
+    "city": "Nové Město nad Metují",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-24",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-03-18-pribram",
+    "name": "Jsme v hajzlu (Turné 2023)",
+    "event_type": "concert",
+    "start_date": "2023-03-18",
+    "end_date": "2023-03-18",
+    "city": "Příbram",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-18",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-03-10-vimperk",
+    "name": "Jsme v hajzlu (Turné 2023)",
+    "event_type": "concert",
+    "start_date": "2023-03-10",
+    "end_date": "2023-03-10",
+    "city": "Vimperk",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-10",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-03-04-kladno",
+    "name": "Jsme v hajzlu (Turné 2023)",
+    "event_type": "concert",
+    "start_date": "2023-03-04",
+    "end_date": "2023-03-04",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-04",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-03-03-litvinov",
+    "name": "Jsme v hajzlu (Turné 2023)",
+    "event_type": "concert",
+    "start_date": "2023-03-03",
+    "end_date": "2023-03-03",
+    "city": "Litvínov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-03",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2023-01-21-benesov",
+    "name": "SPS + Záviš",
+    "event_type": "concert",
+    "start_date": "2023-01-21",
+    "end_date": "2023-01-21",
+    "city": "Benešov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-01-21",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-12-10-teplice",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-12-10",
+    "end_date": "2022-12-10",
+    "city": "Teplice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-12-10",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-12-09-karlovy-vary",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-12-09",
+    "end_date": "2022-12-09",
+    "city": "Karlovy Vary",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-12-09",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-12-03-pec-pod-snezkou",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-12-03",
+    "end_date": "2022-12-03",
+    "city": "Pec pod Sněžkou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-12-03",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-11-26-jindrichuv-hradec",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-11-26",
+    "end_date": "2022-11-26",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-11-26",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-11-25-klatovy",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-11-25",
+    "end_date": "2022-11-25",
+    "city": "Klatovy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-11-25",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-11-19-ceske-budejovice",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-11-19",
+    "end_date": "2022-11-19",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-11-19",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-11-18-litomerice",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-11-18",
+    "end_date": "2022-11-18",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-11-18",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-10-29-brno",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-10-29",
+    "end_date": "2022-10-29",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-29",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-10-28-bratislava",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-10-28",
+    "end_date": "2022-10-28",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-28",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-10-22-as",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-10-22",
+    "end_date": "2022-10-22",
+    "city": "Aš",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-22",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-10-21-praha",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-10-21",
+    "end_date": "2022-10-21",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-21",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-10-14-plzen",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-10-14",
+    "end_date": "2022-10-14",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-14",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-10-08-ostrava",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-10-08",
+    "end_date": "2022-10-08",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-08",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-10-07-liberec",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "event_type": "concert",
+    "start_date": "2022-10-07",
+    "end_date": "2022-10-07",
+    "city": "Liberec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-07",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-09-02-vrchlabi",
+    "name": "Ska Punk Night 4",
+    "event_type": "concert",
+    "start_date": "2022-09-02",
+    "end_date": "2022-09-02",
+    "city": "Vrchlabí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-09-02",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-08-27-drouzkovice",
+    "name": "Vyjížďka – bav se a pomáhej",
+    "event_type": "concert",
+    "start_date": "2022-08-27",
+    "end_date": "2022-08-27",
+    "city": "Droužkovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-08-27",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-08-26-trencin",
+    "name": "Pankáči deťom",
+    "event_type": "concert",
+    "start_date": "2022-08-26",
+    "end_date": "2022-08-26",
+    "city": "Trenčín",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-08-26",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-08-20-slany",
+    "name": "Slaný Valník",
+    "event_type": "festival",
+    "start_date": "2022-08-20",
+    "end_date": "2022-08-20",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-08-20",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-08-13-trtenice",
+    "name": "Rockové Třtěnice",
+    "event_type": "concert",
+    "start_date": "2022-08-13",
+    "end_date": "2022-08-13",
+    "city": "Třtěnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-08-13",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-08-13-jihlava",
+    "name": "Magmafest 2022",
+    "event_type": "festival",
+    "start_date": "2022-08-13",
+    "end_date": "2022-08-13",
+    "city": "Jihlava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-08-13",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-08-12-ricany-u-prahy",
+    "name": "Starák Fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-08-12",
+    "end_date": "2022-08-12",
+    "city": "Říčany u Prahy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-08-12",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-08-06-kozarovice",
+    "name": "Kozy Fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-08-06",
+    "end_date": "2022-08-06",
+    "city": "Kozárovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-08-06",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-08-06-sporice-u-chomutova",
+    "name": "Multižánrový Festival",
+    "event_type": "festival",
+    "start_date": "2022-08-06",
+    "end_date": "2022-08-06",
+    "city": "Spořice u Chomutova",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-08-06",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-08-05-harrachov",
+    "name": "Keltská Noc 2022",
+    "event_type": "festival",
+    "start_date": "2022-08-05",
+    "end_date": "2022-08-05",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-08-05",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-07-23-teplice",
+    "name": "SPS + Krucipüsk",
+    "event_type": "concert",
+    "start_date": "2022-07-23",
+    "end_date": "2022-07-23",
+    "city": "Teplice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-07-23",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-07-16-zelec-u-tabora",
+    "name": "FootFest 2020",
+    "event_type": "festival",
+    "start_date": "2022-07-16",
+    "end_date": "2022-07-16",
+    "city": "Želeč u Tábora",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-07-16",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-07-15-bilina",
+    "name": "Koncert pro Kamerunské kozy",
+    "event_type": "concert",
+    "start_date": "2022-07-15",
+    "end_date": "2022-07-15",
+    "city": "Bílina",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-07-15",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-07-09-havlickuv-brod",
+    "name": "Punkový festival pod Chlístovskou skálou",
+    "event_type": "festival",
+    "start_date": "2022-07-09",
+    "end_date": "2022-07-09",
+    "city": "Havlíčkův Brod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-07-09",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-07-02-lipi-u-ceskych-budejovic",
+    "name": "ValníkFest 2022",
+    "event_type": "festival",
+    "start_date": "2022-07-02",
+    "end_date": "2022-07-02",
+    "city": "Lípí u Českých Budějovic",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-07-02",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-07-02-strasice-u-strakonic",
+    "name": "Motosraz",
+    "event_type": "concert",
+    "start_date": "2022-07-02",
+    "end_date": "2022-07-02",
+    "city": "Strašice u Strakonic",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-07-02",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-06-26-spalene-porici",
+    "name": "Basinfirefest 2022",
+    "event_type": "festival",
+    "start_date": "2022-06-26",
+    "end_date": "2022-06-26",
+    "city": "Spálené Poříčí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-06-26",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-06-25-rousinov",
+    "name": "RousFest 2022",
+    "event_type": "festival",
+    "start_date": "2022-06-25",
+    "end_date": "2022-06-25",
+    "city": "Rousínov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-06-25",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-06-18-strenice-u-mlade-boleslavi",
+    "name": "SPS – Střeníce",
+    "event_type": "concert",
+    "start_date": "2022-06-18",
+    "end_date": "2022-06-18",
+    "city": "Střeníce u Mladé Boleslavi",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-06-18",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-06-17-zacler",
+    "name": "Bornflossrock",
+    "event_type": "concert",
+    "start_date": "2022-06-17",
+    "end_date": "2022-06-17",
+    "city": "Žacléř",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-06-17",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-06-11-letohrad",
+    "name": "JamRock 2022",
+    "event_type": "concert",
+    "start_date": "2022-06-11",
+    "end_date": "2022-06-11",
+    "city": "Letohrad",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-06-11",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-06-04-zdar-nad-sazavou",
+    "name": "Motosraz",
+    "event_type": "concert",
+    "start_date": "2022-06-04",
+    "end_date": "2022-06-04",
+    "city": "Žďár nad Sázavou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-06-04",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-06-03-pavlikov-u-rakovnika",
+    "name": "SPS – Pavlíkov",
+    "event_type": "concert",
+    "start_date": "2022-06-03",
+    "end_date": "2022-06-03",
+    "city": "Pavlíkov u Rakovníka",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-06-03",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-05-28-pasohlavky",
+    "name": "Euro Bike Fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-05-28",
+    "end_date": "2022-05-28",
+    "city": "Pasohlávky",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-05-28",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-05-14-lesnice",
+    "name": "Festival Lesnice",
+    "event_type": "festival",
+    "start_date": "2022-05-14",
+    "end_date": "2022-05-14",
+    "city": "Lesnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-05-14",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-05-07-pribram",
+    "name": "35 let E!E",
+    "event_type": "concert",
+    "start_date": "2022-05-07",
+    "end_date": "2022-05-07",
+    "city": "Příbram",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-05-07",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-04-30-uherske-hradiste",
+    "name": "SPS – Uherské Hradiště",
+    "event_type": "concert",
+    "start_date": "2022-04-30",
+    "end_date": "2022-04-30",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-30",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-04-29-kladno",
+    "name": "SPS – Kladno",
+    "event_type": "concert",
+    "start_date": "2022-04-29",
+    "end_date": "2022-04-29",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-29",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-04-23-pisek",
+    "name": "SPS – Písek",
+    "event_type": "concert",
+    "start_date": "2022-04-23",
+    "end_date": "2022-04-23",
+    "city": "Písek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-23",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-04-22-praha",
+    "name": "Číro Fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-04-22",
+    "end_date": "2022-04-22",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-22",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-04-16-mladosovice-u-trebone",
+    "name": "SPS – Mladošovice",
+    "event_type": "concert",
+    "start_date": "2022-04-16",
+    "end_date": "2022-04-16",
+    "city": "Mladošovice u Třeboně",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-16",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-04-15-velke-mezirici",
+    "name": "SPS – Velké Meziříčí",
+    "event_type": "concert",
+    "start_date": "2022-04-15",
+    "end_date": "2022-04-15",
+    "city": "Velké Meziříčí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-15",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-04-09-strakonice",
+    "name": "Tattoo Jam",
+    "event_type": "concert",
+    "start_date": "2022-04-09",
+    "end_date": "2022-04-09",
+    "city": "Strakonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-09",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-03-26-bukovno",
+    "name": "Narozeniny",
+    "event_type": "concert",
+    "start_date": "2022-03-26",
+    "end_date": "2022-03-26",
+    "city": "Bukovno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-03-26",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-03-25-novy-jicin",
+    "name": "SPS – Nový Jičín",
+    "event_type": "concert",
+    "start_date": "2022-03-25",
+    "end_date": "2022-03-25",
+    "city": "Nový Jičín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-03-25",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-03-05-vimperk",
+    "name": "SPS – Vimperk",
+    "event_type": "concert",
+    "start_date": "2022-03-05",
+    "end_date": "2022-03-05",
+    "city": "Vimperk",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-03-05",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-03-04-litvinov",
+    "name": "SPS – Litvínov",
+    "event_type": "concert",
+    "start_date": "2022-03-04",
+    "end_date": "2022-03-04",
+    "city": "Litvínov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-03-04",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2022-02-05-pec-pod-snezkou",
+    "name": "SPS – Pec pod Sněžkou",
+    "event_type": "concert",
+    "start_date": "2022-02-05",
+    "end_date": "2022-02-05",
+    "city": "Pec pod Sněžkou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-02-05",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-11-20-horni-slavkov",
+    "name": "SPS – Horní Slavkov",
+    "event_type": "concert",
+    "start_date": "2021-11-20",
+    "end_date": "2021-11-20",
+    "city": "Horní Slavkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-11-20",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-11-19-upice",
+    "name": "Křest desky Adios, kamarádi pankáči",
+    "event_type": "concert",
+    "start_date": "2021-11-19",
+    "end_date": "2021-11-19",
+    "city": "Úpice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-11-19",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-11-12-brno",
+    "name": "Křest desky Adios, kamarádi pankáči",
+    "event_type": "concert",
+    "start_date": "2021-11-12",
+    "end_date": "2021-11-12",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-11-12",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-10-29-bratislava",
+    "name": "Křest desky Adios, kamarádi pankáči",
+    "event_type": "concert",
+    "start_date": "2021-10-29",
+    "end_date": "2021-10-29",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-10-29",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-10-23-plzen",
+    "name": "Křest desky Adios, kamarádi pankáči",
+    "event_type": "concert",
+    "start_date": "2021-10-23",
+    "end_date": "2021-10-23",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-10-23",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-10-16-klatovy",
+    "name": "Křest desky Adios, kamarádi pankáči",
+    "event_type": "concert",
+    "start_date": "2021-10-16",
+    "end_date": "2021-10-16",
+    "city": "Klatovy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-10-16",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-10-15-litomerice",
+    "name": "Křest desky Adios, kamarádi pankáči",
+    "event_type": "concert",
+    "start_date": "2021-10-15",
+    "end_date": "2021-10-15",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-10-15",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-10-02-trutnov",
+    "name": "Otevřené Hospody Open Air",
+    "event_type": "festival",
+    "start_date": "2021-10-02",
+    "end_date": "2021-10-02",
+    "city": "Trutnov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-10-02",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-10-01-praha",
+    "name": "Křest desky Adios, kamarádi pankáči",
+    "event_type": "concert",
+    "start_date": "2021-10-01",
+    "end_date": "2021-10-01",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-10-01",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-09-25-lipnice-nad-sazavou",
+    "name": "Rocková Lipnice",
+    "event_type": "concert",
+    "start_date": "2021-09-25",
+    "end_date": "2021-09-25",
+    "city": "Lipnice nad Sázavou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-09-25",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-09-11-ostrov",
+    "name": "Festival Island 2021",
+    "event_type": "festival",
+    "start_date": "2021-09-11",
+    "end_date": "2021-09-11",
+    "city": "Ostrov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-09-11",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-07-31-chvalkov-u-kamenice-nad-lipou",
+    "name": "Kravín Fest 2021",
+    "event_type": "festival",
+    "start_date": "2021-07-31",
+    "end_date": "2021-07-31",
+    "city": "Chválkov u Kamenice nad Lipou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-31",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-07-30-bakov-nad-jizerou",
+    "name": "FryyFest 2020",
+    "event_type": "festival",
+    "start_date": "2021-07-30",
+    "end_date": "2021-07-30",
+    "city": "Bakov nad Jizerou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-30",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-07-24-nejdek-u-karlovych-varu",
+    "name": "SPS – Nejdek",
+    "event_type": "concert",
+    "start_date": "2021-07-24",
+    "end_date": "2021-07-24",
+    "city": "Nejdek u Karlových Varů",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-24",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-07-23-police-nad-metuji",
+    "name": "Bez Šance Fest 2021",
+    "event_type": "festival",
+    "start_date": "2021-07-23",
+    "end_date": "2021-07-23",
+    "city": "Police nad Metují",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-23",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-07-17-tremosnice",
+    "name": "Čwachták Fest",
+    "event_type": "festival",
+    "start_date": "2021-07-17",
+    "end_date": "2021-07-17",
+    "city": "Třemošnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-17",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-07-17-podebrady",
+    "name": "Barvy Léta 2021",
+    "event_type": "festival",
+    "start_date": "2021-07-17",
+    "end_date": "2021-07-17",
+    "city": "Poděbrady",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-17",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-07-10-prysk",
+    "name": "ČKSD CUP 2021",
+    "event_type": "concert",
+    "start_date": "2021-07-10",
+    "end_date": "2021-07-10",
+    "city": "Prysk",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-10",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-07-09-ceske-budejovice",
+    "name": "Křest desky Adios, kamarádi pankáči",
+    "event_type": "concert",
+    "start_date": "2021-07-09",
+    "end_date": "2021-07-09",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-09",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-07-05-pardubice",
+    "name": "Léto na Přihrádku",
+    "event_type": "concert",
+    "start_date": "2021-07-05",
+    "end_date": "2021-07-05",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-05",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-07-04-manetin",
+    "name": "Rock For JK",
+    "event_type": "festival",
+    "start_date": "2021-07-04",
+    "end_date": "2021-07-04",
+    "city": "Manětín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-04",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-06-25-pavlikov-u-rakovnika",
+    "name": "Totální Fest",
+    "event_type": "festival",
+    "start_date": "2021-06-25",
+    "end_date": "2021-06-25",
+    "city": "Pavlíkov u Rakovníka",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-06-25",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-06-24-praha",
+    "name": "Zakoule Punk Fest 2021",
+    "event_type": "festival",
+    "start_date": "2021-06-24",
+    "end_date": "2021-06-24",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-06-24",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-05-15-lesnice-u-zabrehu",
+    "name": "Pogo Fest",
+    "event_type": "festival",
+    "start_date": "2021-05-15",
+    "end_date": "2021-05-15",
+    "city": "Lesnice u Zábřehu",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-05-15",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2021-05-14-morkovice",
+    "name": "Festival Máj a Les 2021",
+    "event_type": "festival",
+    "start_date": "2021-05-14",
+    "end_date": "2021-05-14",
+    "city": "Morkovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-05-14",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-09-05-voznice-u-dobrise",
+    "name": "SPS – Voznice",
+    "event_type": "concert",
+    "start_date": "2020-09-05",
+    "end_date": "2020-09-05",
+    "city": "Voznice u Dobříše",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-09-05",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-08-29-hronov",
+    "name": "Slavnosti",
+    "event_type": "festival",
+    "start_date": "2020-08-29",
+    "end_date": "2020-08-29",
+    "city": "Hronov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-29",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-08-28-dolni-porici-u-strakonic",
+    "name": "SPS + E!E",
+    "event_type": "concert",
+    "start_date": "2020-08-28",
+    "end_date": "2020-08-28",
+    "city": "Dolní Poříčí u Strakonic",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-28",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-08-22-pohorelice",
+    "name": "RockFest",
+    "event_type": "festival",
+    "start_date": "2020-08-22",
+    "end_date": "2020-08-22",
+    "city": "Pohořelice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-22",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-08-22-brno",
+    "name": "Trutnoff Brnoon Open Air Festival",
+    "event_type": "festival",
+    "start_date": "2020-08-22",
+    "end_date": "2020-08-22",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-22",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-08-21-slany",
+    "name": "Valník 2020",
+    "event_type": "festival",
+    "start_date": "2020-08-21",
+    "end_date": "2020-08-21",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-21",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-08-13-vyskov",
+    "name": "Festival Pod Parou",
+    "event_type": "festival",
+    "start_date": "2020-08-13",
+    "end_date": "2020-08-13",
+    "city": "Vyškov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-13",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-08-08-harrachov",
+    "name": "Keltská Noc",
+    "event_type": "festival",
+    "start_date": "2020-08-08",
+    "end_date": "2020-08-08",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-08",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-08-07-holkov",
+    "name": "SPS + Visací Zámek",
+    "event_type": "concert",
+    "start_date": "2020-08-07",
+    "end_date": "2020-08-07",
+    "city": "Holkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-07",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-08-01-chvalkov-u-kamenice-nad-lipou",
+    "name": "Kravín Fest 2020",
+    "event_type": "festival",
+    "start_date": "2020-08-01",
+    "end_date": "2020-08-01",
+    "city": "Chválkov u Kamenice nad Lipou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-01",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-07-11-roudnice-nad-labem",
+    "name": "Altros Rockfest",
+    "event_type": "festival",
+    "start_date": "2020-07-11",
+    "end_date": "2020-07-11",
+    "city": "Roudnice nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-07-11",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-07-11-podebrady",
+    "name": "Barvy Léta 2020",
+    "event_type": "festival",
+    "start_date": "2020-07-11",
+    "end_date": "2020-07-11",
+    "city": "Poděbrady",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-07-11",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-07-11-strenice-u-mlade-boleslavi",
+    "name": "SPS – Střeníce",
+    "event_type": "concert",
+    "start_date": "2020-07-11",
+    "end_date": "2020-07-11",
+    "city": "Střeníce u Mladé Boleslavi",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-07-11",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-07-10-podebrady",
+    "name": "Barvy Léta",
+    "event_type": "festival",
+    "start_date": "2020-07-10",
+    "end_date": "2020-07-10",
+    "city": "Poděbrady",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-07-10",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-06-13-velke-bilovice",
+    "name": "Ferby Fest",
+    "event_type": "festival",
+    "start_date": "2020-06-13",
+    "end_date": "2020-06-13",
+    "city": "Velké Bílovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-06-13",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2020-06-12-louny",
+    "name": "KřikLoun Fest",
+    "event_type": "festival",
+    "start_date": "2020-06-12",
+    "end_date": "2020-06-12",
+    "city": "Louny",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-06-12",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
   }
 ]
