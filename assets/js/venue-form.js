@@ -125,7 +125,7 @@
           function (item) {
             countryInput.value = item.name;
             countryId.value = String(item.id);
-            if (countryIso2) countryIso2.value = item.iso2 || '';
+            if (countryIso2) countryIso2.textContent = item.iso2 || '';
           },
           function (item) { return item.name; });
       }, 180);
