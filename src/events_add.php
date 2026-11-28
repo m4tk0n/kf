@@ -230,7 +230,7 @@ function kf_event_validate(array &$v): array
     if ($v['city_id'] < 1 || !q('SELECT 1 FROM ' . tbl('cities') . ' WHERE id = ?', [$v['city_id']])->fetchColumn()) {
         $err[] = 'city';
     }
-    if ($v['www'] !== '' && kf_safe_url($v['www']) === null) {
+    if ($v['www'] !== '' && !kf_form_valid_url($v['www'])) {
         $err[] = 'www';
     }
     if ($v['bands']) {
