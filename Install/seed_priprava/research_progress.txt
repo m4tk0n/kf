@@ -1,17 +1,17 @@
 # Průběžný stav průzkumu kapel a akcí
 
 # Hlavní fronta je v bands.json:
-# - aktual: jedna kapela, jejíž historii právě procházíme od roku 2026 do roku 2000
+# - aktual: jedna kapela, jejíž kompletní historii právě procházíme od roku 2026 do roku 2000
 # - next: nově objevené kapely čekající na zpracování
 # - ok: dokončené CZ/SK kapely a ověřené zahraniční kapely
 #
+# Kompletnost archivu aktuální kapely se kontroluje v band_archive_index.json.
+# Každý rok musí být celý zpracován a jeho položky porovnány s dostupnými archivy.
 # Akce se ukládají do event_YYYY.json podle roku konání.
-# Každý ročníkový soubor má vlastní aktual, ok a next.
 # Nová místa se přidávají do venues.json/next.
 # Nové kapely z line-upů se přidávají do bands.json/next.
 # Zahraniční kapely po ověření země původu přesunout rovnou do bands.json/ok.
-# Po dokončení celé historie aktuální kapelu přesunout do bands.json/ok.
-# Poté přesunout další CZ/SK kapelu z bands.json/next do bands.json/aktual.
+# Aktuální kapelu nepřesouvat do ok, dokud nejsou dokončeny a zkontrolovány všechny roky 2026–2000.
 #
 # evidence.json uchovává zdroje a konkrétní tvrzení, která potvrzují.
 # research_log.txt uchovává chronologický protokol dokončených dávek.
@@ -20,8 +20,12 @@
 
 DATUM | 2026-11-28
 AKTUALNI_KAPELA | The Fialky (bands.json, id 1)
-PROZKOUMANE_ROKY | 2026 – částečně; první ověřená zastávka 14. 11. 2026, celý rok dosud neprozkoumán
-NOVE_KAPELY | SPS (bands.json, id 2; ověřený původ a žánr, čeká na vlastní historický průzkum)
+ROZSAH | 2026 až 2000 včetně; kompletní průzkum zatím nedokončen
+ZDROJE_ARCHIVU | Oficiální archiv The Fialky 2000–2015; oficiální archiv odehraných koncertů 2016–2026; Bandzone archiv 2006–2026
+KONTROLNI_INDEX | band_archive_index.json
+ROK_2026 | rozpracováno; Bandzone uvádí 62 archivních položek, zatím je v event_2026.json zapsána 1 ověřená akce; zbývá celý ročník porovnat a zpracovat
+ROKY_2025_2000 | dosud nezpracováno
+NOVE_KAPELY | SPS (bands.json, id 2; ověřený původ a žánr, čeká na vlastní historii; nezačínat, dokud nebude hotová historie The Fialky)
 NOVA_MISTA | Kulturní dům Klobučan, Valašské Klobouky (venues.json, id 1; ověřeno)
-NOVE_AKCE | God Save The Punk II., 14. 11. 2026 (event_2026.json, id 1; konání a line-up ověřeny)
-DALSI_KROK | Pokračovat v archivu odehraných koncertů The Fialky za rok 2026; další nalezené akce ověřovat proti pořadatelům a místům, doplňovat line-up a evidenci zdrojů.
+NOVE_AKCE | God Save The Punk II., 14. 11. 2026 (event_2026.json, id 1; ověřeno)
+DALSI_KROK | Dokončit celý rok 2026: projít všech 62 položek kontrolního archivu, porovnat je s oficiálním archivem The Fialky, vyloučit neakce a duplicity, ověřit konání, line-up a místo každé zařazené akce. Poté postupovat rok po roku až do 2000.
