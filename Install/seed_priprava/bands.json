@@ -11,21 +11,6 @@
   },
   "aktual": [
     {
-      "id": 1,
-      "name": "The Fialky",
-      "genre": "punk rock",
-      "country": "CZ",
-      "city": "Praha",
-      "url": "https://thefialky.cz/",
-      "sources": [
-        "https://thefialky.cz/",
-        "https://thefialky.cz/bandstory/"
-      ]
-    }
-  ],
-  "ok": [],
-  "next": [
-    {
       "id": 2,
       "name": "SPS",
       "genre": "punk",
@@ -37,6 +22,22 @@
         "https://slovnik.ceskyhudebnislovnik.cz/component/mdictionary/?id=1002761&task=record.record_detail"
       ],
       "note": "Identita, punkovy zanr a puvod v Praze overeny. Vlastni koncertni historie zatim neprozkoumana."
+    }
+  ],
+  "ok": [],
+  "next": [
+    {
+      "id": 1,
+      "name": "The Fialky",
+      "genre": "punk rock",
+      "country": "CZ",
+      "city": "Praha",
+      "url": "https://thefialky.cz/",
+      "sources": [
+        "https://thefialky.cz/",
+        "https://thefialky.cz/bandstory/"
+      ],
+      "note": "Průzkum pozastaven na pokyn uživatele; dosavadní data zůstávají zachována a průzkum bude později pokračovat."
     },
     {
       "id": 3,
@@ -101,6 +102,88 @@
         "https://tourism.zabreh.cz/katalog-sluzby-firmy/punk-floid-o-s/"
       ],
       "note": "Identita, punkrockový žánr a původ v Zábřehu ověřeny oficiálním webem a TIC Zábřeh. Vlastní koncertní historie zatím neprozkoumaná."
+    },
+    {
+      "id": 8,
+      "name": "Vypsaná fiXa",
+      "genre": "alternative rock",
+      "country": "CZ",
+      "city": "Pardubice",
+      "url": "https://vypsanafixa.cz/",
+      "sources": [
+        "https://vypsanafixa.cz/"
+      ],
+      "note": "Identita, původ v Pardubicích a žánrový kontext ověřeny na oficiálním webu; koncertní historie čeká."
+    },
+    {
+      "id": 9,
+      "name": "Smola a Hrušky",
+      "genre": "rock (punk, ska a reggae vlivy)",
+      "country": "SK",
+      "city": "Spišská Nová Ves",
+      "url": "https://smolaahrusky.sk/",
+      "sources": [
+        "https://smolaahrusky.sk/bio/"
+      ],
+      "note": "Slovenský původ ve Spišské Nové Vsi a hudební vlivy ověřeny na oficiálním webu; koncertní historie se v této fázi neprochází."
+    },
+    {
+      "id": 10,
+      "name": "E!E",
+      "genre": "punk",
+      "country": "CZ",
+      "url": "https://www.eecka.eu/",
+      "sources": [
+        "https://www.eecka.eu/"
+      ],
+      "note": "Identita punkové kapely ověřena na oficiálním webu; koncertní historie čeká."
+    },
+    {
+      "id": 11,
+      "name": "Houba",
+      "genre": "punk rock",
+      "country": "CZ",
+      "url": "https://www.houba.info/",
+      "sources": [
+        "https://www.houba.info/biografie/"
+      ],
+      "note": "Identita, vznik v roce 1995 a punkrockový žánr ověřeny na oficiálním webu; koncertní historie čeká."
+    },
+    {
+      "id": 12,
+      "name": "Vision Days",
+      "genre": "ska punk",
+      "country": "CZ",
+      "city": "Brněnec",
+      "url": "https://www.visiondays.cz/",
+      "sources": [
+        "https://www.visiondays.cz/historie_kapely"
+      ],
+      "note": "Identita, vznik v roce 1990 a původ v Brněnci ověřeny na oficiálním webu; koncertní historie čeká."
+    },
+    {
+      "id": 13,
+      "name": "Znouzectnost",
+      "genre": "punk",
+      "country": "CZ",
+      "url": "https://www.znc.cz/",
+      "sources": [
+        "https://www.znc.cz/"
+      ],
+      "note": "Identita ověřena na oficiálním webu; koncertní historie čeká."
+    },
+    {
+      "id": 14,
+      "name": "Covers for Lovers",
+      "genre": "punk / pop rock",
+      "country": "CZ",
+      "city": "Praha",
+      "url": "https://www.coversforlovers.cz/",
+      "sources": [
+        "https://www.coversforlovers.cz/",
+        "https://www.hudebniknihovna.cz/covers-for-lovers.html"
+      ],
+      "note": "Identita, český původ, pražské působení a žánrové zařazení ověřeny; koncertní historie čeká."
     }
   ]
 }
