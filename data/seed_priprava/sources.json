@@ -992,5 +992,148 @@
       "venue_city",
       "venue_address"
     ]
+  },
+  {
+    "id": "src-venue-prvni-patro",
+    "name": "První Patro – adresa a kontaktní údaje",
+    "url": "https://patrobrno.cz/klub/",
+    "publisher": "První Patro",
+    "source_type": "official_venue_website",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-black-road",
+    "name": "Black Road Cafe – adresa a kontaktní údaje",
+    "url": "https://www.blackroadcafe.cz/",
+    "publisher": "Black Road Cafe",
+    "source_type": "official_venue_website",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-tyjatr",
+    "name": "Alternativní klub Tyjátr – adresa a kontaktní údaje",
+    "url": "https://tyjatrklub.cz/tyjatr.page/kontakty",
+    "publisher": "Alternativní klub Tyjátr",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-randal",
+    "name": "Randal Club – adresa a kontaktní údaje",
+    "url": "https://www.randalclub.eu",
+    "publisher": "Randal Club",
+    "source_type": "venue_website",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-abc-klub",
+    "name": "ABC klub – adresa a kontaktní údaje",
+    "url": "https://www.abcklub.cz/",
+    "publisher": "ABC klub",
+    "source_type": "official_venue_website",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-meetfactory",
+    "name": "MeetFactory – adresa a kontaktní údaje",
+    "url": "https://www.meetfactory.cz/cs/prakticke_informace",
+    "publisher": "MeetFactory",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-depo2015",
+    "name": "DEPO2015 – adresa a kontaktní údaje",
+    "url": "https://www.depo2015.cz/kontakty",
+    "publisher": "DEPO2015",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-ponorka-litvinov",
+    "name": "Hudební klub Ponorka – adresa a kontaktní údaje",
+    "url": "https://www.ponorka-litvinov.cz/kontakt/",
+    "publisher": "Ponorka Litvínov",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-stara-mydlarna",
+    "name": "Stará Mydlárna – adresa a kontaktní údaje",
+    "url": "https://www.staramydlarna.cz/kontakt.php",
+    "publisher": "Stará Mydlárna",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-lucerna-velky-sal",
+    "name": "Palác Lucerna – Velký sál – adresa a kontaktní údaje",
+    "url": "https://www.lucerna.cz/cz/8_kontakty",
+    "publisher": "Palác Lucerna",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-unleaded-coffee",
+    "name": "Unleaded Coffee – adresa a kontaktní údaje",
+    "url": "https://unleadedcoffee.cz/kontakt",
+    "publisher": "Unleaded Coffee",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
   }
 ]

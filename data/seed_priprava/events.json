@@ -9794,7 +9794,7 @@
     "end_date": "2026-03-21",
     "city": "Praha",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "meetfactory-praha",
     "lineup_completeness": "official_band_calendar",
     "performances": [
       {
@@ -9825,7 +9825,8 @@
     "source_ids": [
       "src-fialky-official-concert-archive",
       "src-nezfales-official-archive",
-      "src-dilemma-in-cinema-official-archive"
+      "src-dilemma-in-cinema-official-archive",
+      "src-venue-meetfactory"
     ],
     "venue_name": "Meet Factory"
   },
@@ -10015,7 +10016,7 @@
     "end_date": "2026-02-14",
     "city": "Plzeň",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "depo2015-plzen",
     "lineup_completeness": "official_band_calendar",
     "performances": [
       {
@@ -10046,7 +10047,8 @@
     "source_ids": [
       "src-fialky-official-concert-archive",
       "src-nezfales-official-archive",
-      "src-dilemma-in-cinema-official-archive"
+      "src-dilemma-in-cinema-official-archive",
+      "src-venue-depo2015"
     ],
     "venue_name": "Depo"
   },
@@ -11775,7 +11777,7 @@
     "end_date": "2024-04-05",
     "city": "Brno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "prvni-patro-brno",
     "lineup_completeness": "official_band_calendar",
     "performances": [
       {
@@ -11806,7 +11808,8 @@
     "source_ids": [
       "src-fialky-official-concert-archive",
       "src-nezfales-official-archive",
-      "src-dilemma-in-cinema-official-archive"
+      "src-dilemma-in-cinema-official-archive",
+      "src-venue-prvni-patro"
     ],
     "venue_name": "První patro"
   },
@@ -13536,7 +13539,7 @@
     "end_date": "2021-10-09",
     "city": "Praha",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "lucerna-velky-sal-praha",
     "lineup_completeness": "official_band_calendar",
     "performances": [
       {
@@ -13573,7 +13576,8 @@
     "source_ids": [
       "src-fialky-official-concert-archive",
       "src-dilemma-in-cinema-official-archive",
-      "src-plexis-bandzone-archive"
+      "src-plexis-bandzone-archive",
+      "src-venue-lucerna-velky-sal"
     ],
     "venue_name": "Lucerna – velký sál"
   },
@@ -17496,7 +17500,7 @@
     "end_date": "2026-03-21",
     "city": "Brno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "prvni-patro-brno",
     "lineup_completeness": "official_band_archive",
     "performances": [
       {
@@ -17507,7 +17511,8 @@
       }
     ],
     "source_ids": [
-      "src-houba-official-archive"
+      "src-houba-official-archive",
+      "src-venue-prvni-patro"
     ],
     "venue_name": "První patro"
   },
@@ -19642,7 +19647,7 @@
     "end_date": "2026-02-27",
     "city": "Brno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "prvni-patro-brno",
     "lineup_completeness": "official_band_archive",
     "performances": [
       {
@@ -19653,7 +19658,8 @@
       }
     ],
     "source_ids": [
-      "src-punkfloid-official-archive"
+      "src-punkfloid-official-archive",
+      "src-venue-prvni-patro"
     ],
     "venue_name": "První patro"
   },
@@ -19850,7 +19856,7 @@
     "end_date": "2025-01-11",
     "city": "Brno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "unleaded-coffee-brno",
     "lineup_completeness": "official_band_archive",
     "performances": [
       {
@@ -19861,7 +19867,8 @@
       }
     ],
     "source_ids": [
-      "src-punkfloid-official-archive"
+      "src-punkfloid-official-archive",
+      "src-venue-unleaded-coffee"
     ],
     "venue_name": "Unleaded Coffee"
   },
@@ -20159,7 +20166,7 @@
     "end_date": "2023-12-01",
     "city": "Kladno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "black-road-cafe-kladno",
     "lineup_completeness": "official_band_archive",
     "performances": [
       {
@@ -20170,7 +20177,8 @@
       }
     ],
     "source_ids": [
-      "src-punkfloid-official-archive"
+      "src-punkfloid-official-archive",
+      "src-venue-black-road"
     ],
     "venue_name": "Black Road Café"
   },
@@ -20829,7 +20837,7 @@
     "end_date": "2025-04-05",
     "city": "Brno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "prvni-patro-brno",
     "lineup_completeness": "bandzone_archive",
     "performances": [
       {
@@ -20846,7 +20854,8 @@
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-venue-prvni-patro"
     ],
     "venue_name": "První patro"
   },
@@ -22007,7 +22016,7 @@
     "end_date": "2022-11-04",
     "city": "Bratislava",
     "country_code": "SK",
-    "venue_id": null,
+    "venue_id": "randal-club-bratislava",
     "lineup_completeness": "bandzone_archive",
     "performances": [
       {
@@ -22018,7 +22027,8 @@
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-venue-randal"
     ],
     "venue_name": "Randal Club"
   },
@@ -23560,7 +23570,7 @@
     "end_date": "2022-10-30",
     "city": "Pardubice",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "abc-klub-pardubice",
     "lineup_completeness": "bandzone_and_official_archive",
     "performances": [
       {
@@ -23602,7 +23612,8 @@
     ],
     "source_ids": [
       "src-ee-bandzone-archive",
-      "src-ee-official-concerts"
+      "src-ee-official-concerts",
+      "src-venue-abc-klub"
     ],
     "venue_name": "ABC klub"
   },
@@ -24923,7 +24934,7 @@
     "end_date": "2023-03-31",
     "city": "Brno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "prvni-patro-brno",
     "lineup_completeness": "official_band_archive",
     "performances": [
       {
@@ -24940,7 +24951,8 @@
       }
     ],
     "source_ids": [
-      "src-dilemma-in-cinema-official-archive"
+      "src-dilemma-in-cinema-official-archive",
+      "src-venue-prvni-patro"
     ],
     "venue_name": "První patro"
   },
@@ -24975,7 +24987,7 @@
     "end_date": "2023-04-22",
     "city": "Mělník",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "stara-mydlarna-melnik",
     "lineup_completeness": "official_band_archive",
     "performances": [
       {
@@ -24986,7 +24998,8 @@
       }
     ],
     "source_ids": [
-      "src-dilemma-in-cinema-official-archive"
+      "src-dilemma-in-cinema-official-archive",
+      "src-venue-stara-mydlarna"
     ],
     "venue_name": "Stará Mydlárna"
   },
@@ -25186,7 +25199,7 @@
     "end_date": "2024-10-11",
     "city": "Brno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "prvni-patro-brno",
     "lineup_completeness": "official_band_archive",
     "performances": [
       {
@@ -25203,7 +25216,8 @@
       }
     ],
     "source_ids": [
-      "src-dilemma-in-cinema-official-archive"
+      "src-dilemma-in-cinema-official-archive",
+      "src-venue-prvni-patro"
     ],
     "venue_name": "První patro"
   },
@@ -25331,7 +25345,7 @@
     "end_date": "2024-12-06",
     "city": "Kladno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "black-road-cafe-kladno",
     "lineup_completeness": "official_band_archive",
     "performances": [
       {
@@ -25348,7 +25362,8 @@
       }
     ],
     "source_ids": [
-      "src-dilemma-in-cinema-official-archive"
+      "src-dilemma-in-cinema-official-archive",
+      "src-venue-black-road"
     ],
     "venue_name": "Black Road Café"
   },
@@ -25634,7 +25649,7 @@
     "end_date": "2024-01-27",
     "city": "Svitavy",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "tyjatr-svitavy",
     "lineup_completeness": "bandzone_and_official_archive",
     "performances": [
       {
@@ -25652,7 +25667,8 @@
     ],
     "source_ids": [
       "src-vision-days-bandzone-archive",
-      "src-driak-bandzone-archive"
+      "src-driak-bandzone-archive",
+      "src-venue-tyjatr"
     ],
     "venue_name": "Alternativní klub Tyjátr"
   },
@@ -25695,7 +25711,7 @@
     "end_date": "2022-01-14",
     "city": "Svitavy",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "tyjatr-svitavy",
     "lineup_completeness": "bandzone_and_official_archive",
     "performances": [
       {
@@ -25713,7 +25729,8 @@
     ],
     "source_ids": [
       "src-vision-days-bandzone-archive",
-      "src-volant-bandzone-archive"
+      "src-volant-bandzone-archive",
+      "src-venue-tyjatr"
     ],
     "venue_name": "Alternativní klub Tyjátr"
   },
@@ -25846,7 +25863,7 @@
     "end_date": "2021-10-30",
     "city": "Pardubice",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "abc-klub-pardubice",
     "lineup_completeness": "bandzone_and_official_archive",
     "performances": [
       {
@@ -25881,7 +25898,8 @@
       }
     ],
     "source_ids": [
-      "src-vision-days-bandzone-archive"
+      "src-vision-days-bandzone-archive",
+      "src-venue-abc-klub"
     ],
     "venue_name": "ABC klub"
   },
@@ -25893,7 +25911,7 @@
     "end_date": "2025-02-15",
     "city": "Svitavy",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "tyjatr-svitavy",
     "lineup_completeness": "bandzone_and_official_archive",
     "performances": [
       {
@@ -25916,7 +25934,8 @@
       }
     ],
     "source_ids": [
-      "src-vision-days-bandzone-archive"
+      "src-vision-days-bandzone-archive",
+      "src-venue-tyjatr"
     ],
     "venue_name": "Alternativní klub Tyjátr"
   },
@@ -26252,7 +26271,7 @@
     "end_date": "2023-01-21",
     "city": "Brno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "unleaded-coffee-brno",
     "lineup_completeness": "bandzone_and_official_archive",
     "performances": [
       {
@@ -26263,7 +26282,8 @@
       }
     ],
     "source_ids": [
-      "src-driak-bandzone-archive"
+      "src-driak-bandzone-archive",
+      "src-venue-unleaded-coffee"
     ],
     "venue_name": "Unleaded Coffee"
   },
@@ -31716,7 +31736,7 @@
     "end_date": "2025-09-19",
     "city": "Kladno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "black-road-cafe-kladno",
     "lineup_completeness": "band_and_gigography_archives",
     "performances": [
       {
@@ -31727,7 +31747,8 @@
       }
     ],
     "source_ids": [
-      "src-konflikt-gigography"
+      "src-konflikt-gigography",
+      "src-venue-black-road"
     ],
     "venue_name": "Black Road Café"
   },
@@ -32084,7 +32105,7 @@
     "end_date": "2022-09-14",
     "city": "Bratislava",
     "country_code": "SK",
-    "venue_id": null,
+    "venue_id": "randal-club-bratislava",
     "lineup_completeness": "band_and_gigography_archives",
     "performances": [
       {
@@ -32095,7 +32116,8 @@
       }
     ],
     "source_ids": [
-      "src-konflikt-gigography"
+      "src-konflikt-gigography",
+      "src-venue-randal"
     ],
     "venue_name": "Randal Club"
   },
@@ -32626,7 +32648,7 @@
     "end_date": "2026-04-04",
     "city": "Litvínov",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "ponorka-litvinov",
     "lineup_completeness": "bandzone_archive",
     "performances": [
       {
@@ -32650,7 +32672,8 @@
     ],
     "source_ids": [
       "src-vvu-bandzone-archive",
-      "src-sas-bandzone-archive"
+      "src-sas-bandzone-archive",
+      "src-venue-ponorka-litvinov"
     ],
     "venue_name": "Hudební klub Ponorka"
   },
@@ -32907,7 +32930,7 @@
     "end_date": "2020-03-07",
     "city": "Mělník",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "stara-mydlarna-melnik",
     "lineup_completeness": "bandzone_archive",
     "performances": [
       {
@@ -32924,7 +32947,8 @@
       }
     ],
     "source_ids": [
-      "src-zputnik-bandzone-archive"
+      "src-zputnik-bandzone-archive",
+      "src-venue-stara-mydlarna"
     ],
     "venue_name": "Stará Mydlárna"
   },
@@ -33344,7 +33368,7 @@
     "end_date": "2022-04-02",
     "city": "Litvínov",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "ponorka-litvinov",
     "lineup_completeness": "bandzone_archive",
     "performances": [
       {
@@ -33355,7 +33379,8 @@
       }
     ],
     "source_ids": [
-      "src-zputnik-bandzone-archive"
+      "src-zputnik-bandzone-archive",
+      "src-venue-ponorka-litvinov"
     ],
     "venue_name": "Hudební klub Ponorka"
   },
@@ -33651,7 +33676,7 @@
     "end_date": "2022-09-24",
     "city": "Brno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "unleaded-coffee-brno",
     "lineup_completeness": "bandzone_archive",
     "performances": [
       {
@@ -33662,7 +33687,8 @@
       }
     ],
     "source_ids": [
-      "src-zputnik-bandzone-archive"
+      "src-zputnik-bandzone-archive",
+      "src-venue-unleaded-coffee"
     ],
     "venue_name": "Unleaded Coffee"
   },
@@ -34604,7 +34630,7 @@
     "end_date": "2026-09-19",
     "city": "Brno",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "unleaded-coffee-brno",
     "lineup_completeness": "bandzone_archive",
     "performances": [
       {
@@ -34615,7 +34641,8 @@
       }
     ],
     "source_ids": [
-      "src-sas-bandzone-archive"
+      "src-sas-bandzone-archive",
+      "src-venue-unleaded-coffee"
     ],
     "venue_name": "Unleaded Coffee"
   },

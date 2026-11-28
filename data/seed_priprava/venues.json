@@ -642,5 +642,134 @@
       "src-venue-bunkr-liberec"
     ],
     "verification": "address_confirmed"
+  },
+  {
+    "id": "prvni-patro-brno",
+    "name": "První Patro",
+    "city": "Brno",
+    "country_code": "CZ",
+    "address": "Dominikánská 342/19, 602 00 Brno, Česká republika",
+    "source_ids": [
+      "src-venue-prvni-patro"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "black-road-cafe-kladno",
+    "name": "Black Road Cafe",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "address": "Vodárenská 2375, 272 01 Kladno, Česká republika",
+    "source_ids": [
+      "src-venue-black-road"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "tyjatr-svitavy",
+    "name": "Alternativní klub Tyjátr",
+    "city": "Svitavy",
+    "country_code": "CZ",
+    "address": "Purkyňova 250/17, 568 02 Svitavy, Česká republika",
+    "coordinates": {
+      "lat": 49.753026,
+      "long": 16.471483
+    },
+    "source_ids": [
+      "src-venue-tyjatr"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "randal-club-bratislava",
+    "name": "Randal Club",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "address": "Karpatská 2, 811 05 Bratislava, Slovensko",
+    "source_ids": [
+      "src-venue-randal"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "abc-klub-pardubice",
+    "name": "ABC klub",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "address": "Štolbova 2665, 530 02 Pardubice, Česká republika",
+    "source_ids": [
+      "src-venue-abc-klub"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "meetfactory-praha",
+    "name": "MeetFactory",
+    "city": "Praha",
+    "country_code": "CZ",
+    "address": "Ke Sklárně 3213/15, 150 00 Praha 5, Česká republika",
+    "coordinates": {
+      "lat": 50.053653,
+      "long": 14.408441
+    },
+    "source_ids": [
+      "src-venue-meetfactory"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "depo2015-plzen",
+    "name": "DEPO2015",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "address": "Presslova 14, 301 00 Plzeň, Česká republika",
+    "source_ids": [
+      "src-venue-depo2015"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "ponorka-litvinov",
+    "name": "Hudební klub Ponorka",
+    "city": "Litvínov",
+    "country_code": "CZ",
+    "address": "Podkrušnohorská 1720, 436 06 Litvínov, Česká republika",
+    "source_ids": [
+      "src-venue-ponorka-litvinov"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "stara-mydlarna-melnik",
+    "name": "Stará Mydlárna",
+    "city": "Mělník",
+    "country_code": "CZ",
+    "address": "Náměstí Karla IV. 140, 276 01 Mělník, Česká republika",
+    "source_ids": [
+      "src-venue-stara-mydlarna"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "lucerna-velky-sal-praha",
+    "name": "Palác Lucerna – Velký sál",
+    "city": "Praha",
+    "country_code": "CZ",
+    "address": "Štěpánská 61, 116 02 Praha 1, Česká republika",
+    "source_ids": [
+      "src-venue-lucerna-velky-sal"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "unleaded-coffee-brno",
+    "name": "Unleaded Coffee",
+    "city": "Brno",
+    "country_code": "CZ",
+    "address": "Hybešova 46, Brno, Česká republika",
+    "source_ids": [
+      "src-venue-unleaded-coffee"
+    ],
+    "verification": "address_confirmed"
   }
 ]
