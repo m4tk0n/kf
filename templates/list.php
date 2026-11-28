@@ -47,7 +47,7 @@ $kind = ['events' => 'event', 'bands' => 'band', 'venues' => 'venue'][$s];
       <strong class="name"><?= e($r['name']) ?></strong>
       <span class="meta"><?= $place ?></span>
     </span>
-    <?php if ((int)$r['img'] === 1): ?><img class="thumb" src="<?= e(kf_img('venues', $id, 's')) ?>" alt="" loading="lazy"><?php endif; ?>
+
   <?php endif; ?>
   </a></li>
 <?php endforeach; ?>
