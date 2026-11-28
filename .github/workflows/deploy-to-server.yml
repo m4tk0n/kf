@@ -61,7 +61,7 @@ jobs:
           import subprocess
 
           excluded = (
-              ".git", ".github", ".env", "tests", "data", "cache",
+              ".git", ".github", ".env", "tests", "cache",
               "img", "uploads", "logs", "tmp", "ai-backups",
               ".ftp-deploy-sync-state.json",
           )
