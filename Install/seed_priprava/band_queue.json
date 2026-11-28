@@ -1216,5 +1216,54 @@
     "status": "pending",
     "discovered_from": "Install/seed_priprava/2013/events.txt",
     "seed_year": 2013
+  },
+  {
+    "name": "MAB",
+    "key": "mab",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2017/events.txt",
+    "seed_year": 2017
+  },
+  {
+    "name": "Dungaree",
+    "key": "dungaree",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2017/events.txt",
+    "seed_year": 2017
+  },
+  {
+    "name": "Peter Kovary & The Royal Rebels",
+    "key": "peterkovarytheroyalrebels",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2017/events.txt",
+    "seed_year": 2017
+  },
+  {
+    "name": "Z3 The Blues Wheels",
+    "key": "z3theblueswheels",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2017/events.txt",
+    "seed_year": 2017
+  },
+  {
+    "name": "Basin City Orchestra",
+    "key": "basincityorchestra",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2017/events.txt",
+    "seed_year": 2017
+  },
+  {
+    "name": "Pan",
+    "key": "pan",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2017/events.txt",
+    "seed_year": 2017
+  },
+  {
+    "name": "Sleeepwalker",
+    "key": "sleeepwalker",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2017/events.txt",
+    "seed_year": 2017
   }
 ]
