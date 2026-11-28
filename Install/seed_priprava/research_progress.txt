@@ -1,31 +1,18 @@
 # Průběžný stav průzkumu kapel a akcí
 
-# Hlavní fronta je v bands.json:
-# - aktual: jedna kapela, jejíž historii průběžně procházíme v rozsahu 2026 až 2000; jednotlivé akce zapisujeme v libovolném pořadí
-# - next: nově objevené kapely čekající na zpracování
-# - ok: dokončené CZ/SK kapely a ověřené zahraniční kapely
-#
-# Kompletnost archivu aktuální kapely se kontroluje v band_archive_index.json.
-# Každý rok musí být nakonec celý zpracován a jeho položky porovnány s dostupnými archivy; mezi roky lze průběžně přeskakovat.
-# Akce se ukládají do event_YYYY.json podle roku konání.
-# Nová místa se přidávají do venues.json/next.
-# Nové kapely z line-upů se přidávají do bands.json/next.
-# Zahraniční kapely po ověření země původu přesunout rovnou do bands.json/ok.
-# Aktuální kapelu nepřesouvat do ok, dokud nejsou dokončeny a zkontrolovány všechny roky 2026–2000.
-#
-# evidence.json uchovává zdroje a konkrétní tvrzení, která potvrzují.
-# research_log.txt uchovává chronologický protokol dokončených dávek.
-# Neověřené údaje se nikdy nevydávají za potvrzené.
-# Aktualizovat tento checkpoint po každé menší dávce práce.
+# Hlavní fronta je v bands.json. Aktuálně se zpracovává SPS; The Fialky jsou dočasně pozastavené a jejich dosavadní data zůstávají zachována.
+# Akce více kapel se slučují do jediného záznamu; při dalším průzkumu se doplňuje line-up a odkazy, nikoli duplicitní event.
+# Neověřené kandidáty ponechávat v next a jejich claims označit unverified.
 
 DATUM | 2026-11-28
-AKTUALNI_KAPELA | The Fialky (bands.json, id 1)
+AKTUALNI_KAPELA | SPS (bands.json, id 2)
+POZASTAVENA_KAPELA | The Fialky (bands.json, id 1) — průzkum 2026 zatím nedokončen; zachováno pro pozdější pokračování
 ROZSAH | 2026 až 2000 včetně; průzkum probíhá průběžně a v libovolném pořadí
-ZDROJE_ARCHIVU | Oficiální archiv The Fialky 2000–2015; oficiální archiv odehraných koncertů 2016–2026; Bandzone archiv 2006–2026
-KONTROLNI_INDEX | band_archive_index.json
-ROK_2026 | rozpracováno; v event_2026.json je 42 ověřených akcí; obě turné (23 zastávek) a 19 dalších ověřených festivalů/akcí jsou zapsány
-ROKY_2025_2000 | dosud nezpracováno
-NOVE_KAPELY | SPS (id 2), Totální nasazení (id 3), Nežfaleš (id 4), Dilemma in Cinema (id 5), Deratizéři (id 6), Punk Floid (id 7); identita, původ a žánr ověřeny; vlastní historie čeká na dokončení The Fialky
-NOVA_MISTA | 40 ověřených míst: dosavadních 36 + Stadion SK Polička, Areál firmy Composite Components, Jezero Poděbrady, Štěrkovna Hlučín
-NOVE_AKCE | 42 ověřených akcí: 23 zastávek obou turné a 19 dalších festivalů/akcí včetně Den fotbalu Polička, Brněnecfestu, Barvy léta a Staré Pušky festu
-DALSI_KROK | Pokračovat dalšími koncerty The Fialky v roce 2026: květnové akce (22., 29., 30. a 31.5.), 5.9. Motosraz Kameňák a zbývající lednové až dubnové akce; poté dokončit rok 2026 a pokračovat zpět do roku 2025.
+ZDROJE_SPS | Oficiální koncertní archiv SPS https://www.sps.litvinoff.cz/_koncerty.php; Bandzone https://bandzone.cz/sps?at=gig&gy=YYYY
+ROK_2026 | archiv SPS prochází; společné koncerty s The Fialky v říjnu a listopadu 2026 již existují v event_2026.json a byly deduplikovány
+ROK_2025 | dosud nezpracováno
+ROK_2024 | 6 společných zastávek SPS + The Fialky Tour 2024 zapsáno do event_2024.json/next; čekají na nezávislé ověření
+ROK_2023 | 5 společných akcí SPS a The Fialky zapsáno do event_2023.json/next; čekají na nezávislé ověření
+NOVE_KAPELY | SPS (id 2) aktuální; nově doplněny Vypsaná fiXa (8), Smola a Hrušky (9), E!E (10), Houba (11), Vision Days (12), Znouzectnost (13), Covers for Lovers (14)
+NOVA_MISTA | Žlutý Pes Pardubice (41), D Club Jihlava (42), Hotel Zlatá Hvězda Vimperk (43) — kandidáti, adresy a přesná identita čekají na ověření
+DALSI_KROK | Pokračovat SPS archivem 2026–2000, ověřovat jednotlivé akce z dalších zdrojů, doplňovat line-upy a deduplikovat proti eventům The Fialky; poté teprve další kapela
