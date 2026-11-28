@@ -37,3 +37,13 @@ Já následně zdroje ověřuji, rozlišuji stejnojmenné kapely, sestavuji konc
 ## Spuštění
 
 Workflow .github/workflows/seed-research.yml se spouští jednou denně nebo ručně přes Actions. Pro ruční běh lze nastavit počet dotazů 1–12.
+
+## První spuštění – chyba 403
+
+První automatický pokus dne 28. 11. 2026 došel na server, ale PHP endpoint vrátil 403 forbidden. To znamená, že hodnota GitHub Secret AI_WRITE_KEY nebyla shodná s hodnotou AI_WRITE_KEY načtenou na serveru z .env (nebo serverová hodnota chybí). Žádné rešeršní dotazy se v tomto běhu neprovedly.
+
+Je nutné nastavit stejný dlouhý náhodný klíč na obou místech:
+- server: řádek AI_WRITE_KEY v souboru .env;
+- GitHub: Settings → Secrets and variables → Actions → AI_WRITE_KEY.
+
+Hodnotu klíče neposílej do chatu ani ji neukládej do GitHub souborů. Po synchronizaci lze workflow znovu spustit ručně.
