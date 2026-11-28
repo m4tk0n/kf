@@ -219,6 +219,114 @@
       "source_type": "music_reference",
       "retrieved_on": "2026-11-28",
       "supports": "Sekundární profil potvrzuje český původ, folk/punk žánr a původ ve Slaném."
+    },
+    {
+      "id": "SRC-0024",
+      "url": "https://meetfactory.cz/cs/program/detail/punkrock-on-the-road-totalni-nasazeni-the-fialky-nezfales",
+      "publisher": "MeetFactory",
+      "title": "PUNKROCK ON THE ROAD: Totální nasazení, The Fialky, Nežfaleš",
+      "source_type": "official_venue_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální program MeetFactory potvrzuje koncert 21. 3. 2026 ve 20:00, místo a hlavní line-up."
+    },
+    {
+      "id": "SRC-0025",
+      "url": "https://www.meetfactory.cz/cs/kontakty",
+      "publisher": "MeetFactory",
+      "title": "Kontakty",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální název a adresa Ke Sklárně 3213/15, 150 00 Praha 5."
+    },
+    {
+      "id": "SRC-0026",
+      "url": "https://www.mastersofrockcafe.cz/cs/koncerty/2026-punkrock-on-the-road-tour-2026",
+      "publisher": "Masters of Rock Café",
+      "title": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "source_type": "official_venue_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální stránka místa potvrzuje termín 27. 3. 2026, Masters of Rock Café ve Zlíně, turné a časový rozpis kapel včetně Deratizérů."
+    },
+    {
+      "id": "SRC-0027",
+      "url": "https://www.mastersofrockcafe.cz/cs/kontakt/",
+      "publisher": "Masters of Rock Café",
+      "title": "Kontakt",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální adresa Tyršovo nábřeží 5497, 760 01 Zlín."
+    },
+    {
+      "id": "SRC-0028",
+      "url": "https://bandzone.cz/koncert/557851-brno-prvni-patro-punkrock-on-the-road-tour-2026",
+      "publisher": "Bandzone",
+      "title": "PUNKROCK ON THE ROAD – TOUR 2026 – Brno",
+      "source_type": "concert_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Záznam koncertu 28. 3. 2026 v Prvním Patře; line-up a časy Deratizéři, Totální nasazení, The Fialky a Nežfaleš."
+    },
+    {
+      "id": "SRC-0029",
+      "url": "https://patrobrno.cz/kontakt/",
+      "publisher": "První Patro",
+      "title": "Kontakt",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální provozovatel a návštěvnické informace; provozovna První Patro v Brně, právní adresa Dominikánská 342/19."
+    },
+    {
+      "id": "SRC-0030",
+      "url": "https://bandzone.cz/koncert/557852-pardubice-abc-klub-punkrock-on-the-road-tour-2026",
+      "publisher": "Bandzone",
+      "title": "PUNKROCK ON THE ROAD – TOUR 2026 – Pardubice",
+      "source_type": "concert_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Záznam koncertu 10. 4. 2026 v ABC klubu; line-up a časy Dilemma in Cinema, Nežfaleš, The Fialky a Totální nasazení."
+    },
+    {
+      "id": "SRC-0031",
+      "url": "https://www.abcklub.cz/",
+      "publisher": "ABC klub",
+      "title": "Kontakt",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální adresa ABC klubu Štolbova 2665, 530 02 Pardubice."
+    },
+    {
+      "id": "SRC-0032",
+      "url": "https://bandzone.cz/koncert/557853-liberec-dk-liberec-punkrock-on-the-road-tour-2026",
+      "publisher": "Bandzone",
+      "title": "PUNKROCK ON THE ROAD – TOUR 2026 – Liberec",
+      "source_type": "concert_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Záznam koncertu 11. 4. 2026 v Domě kultury Liberec; line-up a časy Dilemma in Cinema, The Fialky, Totální nasazení a Nežfaleš."
+    },
+    {
+      "id": "SRC-0033",
+      "url": "https://www.dkliberec.cz/kontakty/",
+      "publisher": "Dům kultury Liberec",
+      "title": "Kontakty",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální adresa náměstí Soukenné 613/3, 460 01 Liberec."
+    },
+    {
+      "id": "SRC-0034",
+      "url": "https://bandzone.cz/koncert/557854-karlovy-vary-lidovy-dum-stara-role-punkrock-on-the-road-tour-2026",
+      "publisher": "Bandzone",
+      "title": "PUNKROCK ON THE ROAD – TOUR 2026 – Karlovy Vary",
+      "source_type": "concert_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Záznam koncertu 17. 4. 2026 v Lidovém Domě Stará Role; line-up a časy Deratizéři, Totální nasazení, Nežfaleš a The Fialky."
+    },
+    {
+      "id": "SRC-0035",
+      "url": "https://www.ldkv.cz/kontakty",
+      "publisher": "Lidový dům Karlovy Vary",
+      "title": "Kontakty",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální adresa Lidového domu Školní 358/7, 360 17 Karlovy Vary."
     }
   ],
   "claims": [
@@ -1136,6 +1244,780 @@
       "source_ids": [
         "SRC-0022",
         "SRC-0023"
+      ]
+    },
+    {
+      "id": "CLM-0078",
+      "entity_type": "event",
+      "entity_id": 7,
+      "field": "name",
+      "value": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0024",
+        "SRC-0025"
+      ]
+    },
+    {
+      "id": "CLM-0079",
+      "entity_type": "event",
+      "entity_id": 7,
+      "field": "date",
+      "value": "2026-03-21",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0024",
+        "SRC-0025"
+      ]
+    },
+    {
+      "id": "CLM-0080",
+      "entity_type": "event",
+      "entity_id": 7,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0024",
+        "SRC-0025"
+      ]
+    },
+    {
+      "id": "CLM-0081",
+      "entity_type": "event",
+      "entity_id": 7,
+      "field": "venue_id",
+      "value": 7,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0024",
+        "SRC-0025"
+      ]
+    },
+    {
+      "id": "CLM-0082",
+      "entity_type": "event",
+      "entity_id": 7,
+      "field": "lineup",
+      "value": "The Fialky; Totální nasazení; Nežfaleš",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0024",
+        "SRC-0025"
+      ]
+    },
+    {
+      "id": "CLM-0083",
+      "entity_type": "event",
+      "entity_id": 7,
+      "field": "tour_id",
+      "value": "TOUR-003",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0007",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0024",
+        "SRC-0025"
+      ]
+    },
+    {
+      "id": "CLM-0084",
+      "entity_type": "venue",
+      "entity_id": 7,
+      "field": "name",
+      "value": "MeetFactory",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0024",
+        "SRC-0025"
+      ]
+    },
+    {
+      "id": "CLM-0085",
+      "entity_type": "venue",
+      "entity_id": 7,
+      "field": "address",
+      "value": "Ke Sklárně 3213/15, 150 00 Praha 5",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0024",
+        "SRC-0025"
+      ]
+    },
+    {
+      "id": "CLM-0086",
+      "entity_type": "venue",
+      "entity_id": 7,
+      "field": "city_country",
+      "value": "Praha, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0024",
+        "SRC-0025"
+      ]
+    },
+    {
+      "id": "CLM-0087",
+      "entity_type": "event",
+      "entity_id": 8,
+      "field": "name",
+      "value": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0026",
+        "SRC-0027"
+      ]
+    },
+    {
+      "id": "CLM-0088",
+      "entity_type": "event",
+      "entity_id": 8,
+      "field": "date",
+      "value": "2026-03-27",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0026",
+        "SRC-0027"
+      ]
+    },
+    {
+      "id": "CLM-0089",
+      "entity_type": "event",
+      "entity_id": 8,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0026",
+        "SRC-0027"
+      ]
+    },
+    {
+      "id": "CLM-0090",
+      "entity_type": "event",
+      "entity_id": 8,
+      "field": "venue_id",
+      "value": 8,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0026",
+        "SRC-0027"
+      ]
+    },
+    {
+      "id": "CLM-0091",
+      "entity_type": "event",
+      "entity_id": 8,
+      "field": "lineup",
+      "value": "The Fialky; Totální nasazení; Nežfaleš; Deratizéři",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0026",
+        "SRC-0027"
+      ]
+    },
+    {
+      "id": "CLM-0092",
+      "entity_type": "event",
+      "entity_id": 8,
+      "field": "tour_id",
+      "value": "TOUR-003",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0007",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0026",
+        "SRC-0027"
+      ]
+    },
+    {
+      "id": "CLM-0093",
+      "entity_type": "venue",
+      "entity_id": 8,
+      "field": "name",
+      "value": "Masters of Rock Café",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0026",
+        "SRC-0027"
+      ]
+    },
+    {
+      "id": "CLM-0094",
+      "entity_type": "venue",
+      "entity_id": 8,
+      "field": "address",
+      "value": "Tyršovo nábřeží 5497, 760 01 Zlín",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0026",
+        "SRC-0027"
+      ]
+    },
+    {
+      "id": "CLM-0095",
+      "entity_type": "venue",
+      "entity_id": 8,
+      "field": "city_country",
+      "value": "Zlín, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0026",
+        "SRC-0027"
+      ]
+    },
+    {
+      "id": "CLM-0096",
+      "entity_type": "event",
+      "entity_id": 9,
+      "field": "name",
+      "value": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0028",
+        "SRC-0029"
+      ]
+    },
+    {
+      "id": "CLM-0097",
+      "entity_type": "event",
+      "entity_id": 9,
+      "field": "date",
+      "value": "2026-03-28",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0028",
+        "SRC-0029"
+      ]
+    },
+    {
+      "id": "CLM-0098",
+      "entity_type": "event",
+      "entity_id": 9,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0028",
+        "SRC-0029"
+      ]
+    },
+    {
+      "id": "CLM-0099",
+      "entity_type": "event",
+      "entity_id": 9,
+      "field": "venue_id",
+      "value": 9,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0028",
+        "SRC-0029"
+      ]
+    },
+    {
+      "id": "CLM-0100",
+      "entity_type": "event",
+      "entity_id": 9,
+      "field": "lineup",
+      "value": "The Fialky; Totální nasazení; Nežfaleš; Deratizéři",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0028",
+        "SRC-0029"
+      ]
+    },
+    {
+      "id": "CLM-0101",
+      "entity_type": "event",
+      "entity_id": 9,
+      "field": "tour_id",
+      "value": "TOUR-003",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0007",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0028",
+        "SRC-0029"
+      ]
+    },
+    {
+      "id": "CLM-0102",
+      "entity_type": "venue",
+      "entity_id": 9,
+      "field": "name",
+      "value": "První Patro",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0028",
+        "SRC-0029"
+      ]
+    },
+    {
+      "id": "CLM-0103",
+      "entity_type": "venue",
+      "entity_id": 9,
+      "field": "address",
+      "value": "Dominikánská 342/19, 602 00 Brno",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0028",
+        "SRC-0029"
+      ]
+    },
+    {
+      "id": "CLM-0104",
+      "entity_type": "venue",
+      "entity_id": 9,
+      "field": "city_country",
+      "value": "Brno, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0028",
+        "SRC-0029"
+      ]
+    },
+    {
+      "id": "CLM-0105",
+      "entity_type": "event",
+      "entity_id": 10,
+      "field": "name",
+      "value": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0030",
+        "SRC-0031"
+      ]
+    },
+    {
+      "id": "CLM-0106",
+      "entity_type": "event",
+      "entity_id": 10,
+      "field": "date",
+      "value": "2026-04-10",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0030",
+        "SRC-0031"
+      ]
+    },
+    {
+      "id": "CLM-0107",
+      "entity_type": "event",
+      "entity_id": 10,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0030",
+        "SRC-0031"
+      ]
+    },
+    {
+      "id": "CLM-0108",
+      "entity_type": "event",
+      "entity_id": 10,
+      "field": "venue_id",
+      "value": 10,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0030",
+        "SRC-0031"
+      ]
+    },
+    {
+      "id": "CLM-0109",
+      "entity_type": "event",
+      "entity_id": 10,
+      "field": "lineup",
+      "value": "The Fialky; Totální nasazení; Nežfaleš; Dilemma in Cinema",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0030",
+        "SRC-0031"
+      ]
+    },
+    {
+      "id": "CLM-0110",
+      "entity_type": "event",
+      "entity_id": 10,
+      "field": "tour_id",
+      "value": "TOUR-003",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0007",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0030",
+        "SRC-0031"
+      ]
+    },
+    {
+      "id": "CLM-0111",
+      "entity_type": "venue",
+      "entity_id": 10,
+      "field": "name",
+      "value": "ABC klub",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0030",
+        "SRC-0031"
+      ]
+    },
+    {
+      "id": "CLM-0112",
+      "entity_type": "venue",
+      "entity_id": 10,
+      "field": "address",
+      "value": "Štolbova 2665, 530 02 Pardubice",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0030",
+        "SRC-0031"
+      ]
+    },
+    {
+      "id": "CLM-0113",
+      "entity_type": "venue",
+      "entity_id": 10,
+      "field": "city_country",
+      "value": "Pardubice, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0030",
+        "SRC-0031"
+      ]
+    },
+    {
+      "id": "CLM-0114",
+      "entity_type": "event",
+      "entity_id": 11,
+      "field": "name",
+      "value": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0032",
+        "SRC-0033"
+      ]
+    },
+    {
+      "id": "CLM-0115",
+      "entity_type": "event",
+      "entity_id": 11,
+      "field": "date",
+      "value": "2026-04-11",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0032",
+        "SRC-0033"
+      ]
+    },
+    {
+      "id": "CLM-0116",
+      "entity_type": "event",
+      "entity_id": 11,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0032",
+        "SRC-0033"
+      ]
+    },
+    {
+      "id": "CLM-0117",
+      "entity_type": "event",
+      "entity_id": 11,
+      "field": "venue_id",
+      "value": 11,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0032",
+        "SRC-0033"
+      ]
+    },
+    {
+      "id": "CLM-0118",
+      "entity_type": "event",
+      "entity_id": 11,
+      "field": "lineup",
+      "value": "The Fialky; Totální nasazení; Nežfaleš; Dilemma in Cinema",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0032",
+        "SRC-0033"
+      ]
+    },
+    {
+      "id": "CLM-0119",
+      "entity_type": "event",
+      "entity_id": 11,
+      "field": "tour_id",
+      "value": "TOUR-003",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0007",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0032",
+        "SRC-0033"
+      ]
+    },
+    {
+      "id": "CLM-0120",
+      "entity_type": "venue",
+      "entity_id": 11,
+      "field": "name",
+      "value": "Dům kultury Liberec",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0032",
+        "SRC-0033"
+      ]
+    },
+    {
+      "id": "CLM-0121",
+      "entity_type": "venue",
+      "entity_id": 11,
+      "field": "address",
+      "value": "náměstí Soukenné 613/3, 460 01 Liberec",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0032",
+        "SRC-0033"
+      ]
+    },
+    {
+      "id": "CLM-0122",
+      "entity_type": "venue",
+      "entity_id": 11,
+      "field": "city_country",
+      "value": "Liberec, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0032",
+        "SRC-0033"
+      ]
+    },
+    {
+      "id": "CLM-0123",
+      "entity_type": "event",
+      "entity_id": 12,
+      "field": "name",
+      "value": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0034",
+        "SRC-0035"
+      ]
+    },
+    {
+      "id": "CLM-0124",
+      "entity_type": "event",
+      "entity_id": 12,
+      "field": "date",
+      "value": "2026-04-17",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0034",
+        "SRC-0035"
+      ]
+    },
+    {
+      "id": "CLM-0125",
+      "entity_type": "event",
+      "entity_id": 12,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0034",
+        "SRC-0035"
+      ]
+    },
+    {
+      "id": "CLM-0126",
+      "entity_type": "event",
+      "entity_id": 12,
+      "field": "venue_id",
+      "value": 12,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0034",
+        "SRC-0035"
+      ]
+    },
+    {
+      "id": "CLM-0127",
+      "entity_type": "event",
+      "entity_id": 12,
+      "field": "lineup",
+      "value": "The Fialky; Totální nasazení; Nežfaleš; Deratizéři",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0034",
+        "SRC-0035"
+      ]
+    },
+    {
+      "id": "CLM-0128",
+      "entity_type": "event",
+      "entity_id": 12,
+      "field": "tour_id",
+      "value": "TOUR-003",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0007",
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0034",
+        "SRC-0035"
+      ]
+    },
+    {
+      "id": "CLM-0129",
+      "entity_type": "venue",
+      "entity_id": 12,
+      "field": "name",
+      "value": "Lidový dům Stará Role",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0034",
+        "SRC-0035"
+      ]
+    },
+    {
+      "id": "CLM-0130",
+      "entity_type": "venue",
+      "entity_id": 12,
+      "field": "address",
+      "value": "Školní 358/7, 360 17 Karlovy Vary",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0034",
+        "SRC-0035"
+      ]
+    },
+    {
+      "id": "CLM-0131",
+      "entity_type": "venue",
+      "entity_id": 12,
+      "field": "city_country",
+      "value": "Karlovy Vary, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0034",
+        "SRC-0035"
       ]
     }
   ]
