@@ -454,5 +454,193 @@
       "src-punkaci-darkzin-archive"
     ],
     "verification": "venue_and_city_listed_in_independent_festival_archive"
+  },
+  {
+    "id": "modra-vopice-praha",
+    "name": "Modrá Vopice",
+    "city": "Praha",
+    "country_code": "CZ",
+    "address": "roh ulic Spojovací a K Žižkovu, Praha 9 – Vysočany, Česká republika",
+    "coordinates": {
+      "lat": 50.099397,
+      "long": 14.493744
+    },
+    "source_ids": [
+      "src-venue-modra-vopice"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "vagon-praha",
+    "name": "Vagon Music Pub & Club",
+    "city": "Praha",
+    "country_code": "CZ",
+    "address": "Národní 25, 110 00 Praha 1, Česká republika",
+    "source_ids": [
+      "src-venue-vagon"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "mc-fabrika-ceske-budejovice",
+    "name": "MC Fabrika",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "address": "Jeronýmova 6, 370 01 České Budějovice, Česká republika",
+    "source_ids": [
+      "src-venue-mc-fabrika"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "barrak-ostrava",
+    "name": "Barrák Music Club",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "address": "Fügnerova 595/1, 702 00 Ostrava, Česká republika",
+    "source_ids": [
+      "src-venue-barrak"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "kabinet-muz-brno",
+    "name": "Kabinet Múz",
+    "city": "Brno",
+    "country_code": "CZ",
+    "address": "Sukova 49/4, 602 00 Brno, Česká republika",
+    "source_ids": [
+      "src-venue-kabinet-muz"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "klub-007-strahov-praha",
+    "name": "Klub 007 Strahov",
+    "city": "Praha",
+    "country_code": "CZ",
+    "address": "Chaloupeckého 1903/6, 169 00 Praha 6, Česká republika",
+    "source_ids": [
+      "src-venue-klub-007"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "rock-cafe-praha",
+    "name": "Rock Café",
+    "city": "Praha",
+    "country_code": "CZ",
+    "address": "Národní 20, 110 00 Praha 1, Česká republika",
+    "source_ids": [
+      "src-venue-rock-cafe"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "zluty-pes-pardubice",
+    "name": "Music club Žlutý pes",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "address": "Ke Koupališti 62, 530 09 Pardubice, Česká republika",
+    "source_ids": [
+      "src-venue-zluty-pes"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "letni-kino-slany",
+    "name": "Letní kino Slaný",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "address": "Politických vězňů 1493/9, 274 01 Slaný, Česká republika",
+    "source_ids": [
+      "src-venue-letni-kino-slany"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "hrebikarna-chomutov",
+    "name": "Hřebíkárna",
+    "city": "Chomutov",
+    "country_code": "CZ",
+    "address": "Bezručova 5877, 430 03 Chomutov, Česká republika",
+    "source_ids": [
+      "src-venue-hrebikarna"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "divadlo-pod-carou-pisek",
+    "name": "Divadlo Pod čarou",
+    "city": "Písek",
+    "country_code": "CZ",
+    "address": "Tyršova 28, 397 01 Písek, Česká republika",
+    "source_ids": [
+      "src-venue-pod-carou"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "knak-teplice",
+    "name": "KNAK",
+    "city": "Teplice",
+    "country_code": "CZ",
+    "address": "Rooseveltovo náměstí 265/3, 415 03 Teplice, Česká republika",
+    "source_ids": [
+      "src-venue-knak"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "lucky-pery-jindrichuv-hradec",
+    "name": "Lucky Pery club",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "address": "9. května 256/II, 377 01 Jindřichův Hradec, Česká republika",
+    "coordinates": {
+      "lat": 49.1537985,
+      "long": 14.9975952
+    },
+    "source_ids": [
+      "src-venue-lucky-pery"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "futurum-music-bar-praha",
+    "name": "Futurum Music Bar",
+    "city": "Praha",
+    "country_code": "CZ",
+    "address": "Zborovská 82/7, 150 00 Praha 5, Česká republika",
+    "source_ids": [
+      "src-venue-futurum"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "bilej-medved-plzen",
+    "name": "Bílej Medvěd",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "address": "Prokopova 30, Plzeň, Česká republika",
+    "source_ids": [
+      "src-venue-bilej-medved"
+    ],
+    "verification": "address_confirmed"
+  },
+  {
+    "id": "bunkr-rock-club-liberec",
+    "name": "Bunkr Rock Club",
+    "city": "Liberec",
+    "country_code": "CZ",
+    "address": "Tržní náměstí 1385/8, 460 01 Liberec, Česká republika",
+    "coordinates": {
+      "lat": 50.774139,
+      "long": 15.060444
+    },
+    "source_ids": [
+      "src-venue-bunkr-liberec"
+    ],
+    "verification": "address_confirmed"
   }
 ]

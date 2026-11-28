@@ -784,5 +784,213 @@
       "venues",
       "lineups"
     ]
+  },
+  {
+    "id": "src-venue-modra-vopice",
+    "name": "Modrá Vopice – adresa a kontaktní údaje",
+    "url": "https://www.modravopice.cz/kontakt/",
+    "publisher": "Modrá Vopice",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-vagon",
+    "name": "Vagon Music Pub & Club – adresa a kontaktní údaje",
+    "url": "https://www.vagon.cz/index.php",
+    "publisher": "Vagon Music Pub & Club",
+    "source_type": "official_venue_website",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-mc-fabrika",
+    "name": "MC Fabrika – adresa a kontaktní údaje",
+    "url": "https://www.mcfabrika.cz/kontakt",
+    "publisher": "MC Fabrika",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-barrak",
+    "name": "Barrák Music Club – adresa a kontaktní údaje",
+    "url": "https://www.barrak-club.cz/cz/kontakty",
+    "publisher": "Barrák Music Club",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-kabinet-muz",
+    "name": "Kabinet Múz – adresa a kontaktní údaje",
+    "url": "https://www.kabinetmuz.cz/kontakt",
+    "publisher": "Kabinet Múz",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-klub-007",
+    "name": "Klub 007 Strahov – adresa a kontaktní údaje",
+    "url": "https://klub007strahov.cz/kontakt/",
+    "publisher": "Klub 007 Strahov",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-rock-cafe",
+    "name": "Rock Café – adresa a kontaktní údaje",
+    "url": "https://rockcafe.cz/cs/info-a-kontakty/",
+    "publisher": "Rock Café",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-zluty-pes",
+    "name": "Music club Žlutý pes – adresa a kontaktní údaje",
+    "url": "https://www.zlutak.cz/",
+    "publisher": "Music club Žlutý pes",
+    "source_type": "official_venue_website",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-letni-kino-slany",
+    "name": "Letní kino Slaný – adresa a kontaktní údaje",
+    "url": "https://valnik.cz/",
+    "publisher": "Slánský festival Valník",
+    "source_type": "official_festival_website",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-hrebikarna",
+    "name": "Hřebíkárna – adresa a kontaktní údaje",
+    "url": "https://www.hrebikarna.cz/cs/kontakt?format=html",
+    "publisher": "Hřebíkárna",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-pod-carou",
+    "name": "Divadlo Pod čarou – adresa a kontaktní údaje",
+    "url": "https://www.podcarou.cz/kontakt/",
+    "publisher": "Divadlo Pod čarou",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-knak",
+    "name": "KNAK – adresa a kontaktní údaje",
+    "url": "https://www.firmy.cz/detail/13208330-knak-teplice-retenice.html",
+    "publisher": "Firmy.cz",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-lucky-pery",
+    "name": "Lucky Pery club – adresa a kontaktní údaje",
+    "url": "https://www.darkzin.cz/kluby-cesko/lucky-pery-club/",
+    "publisher": "Darkzin",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-futurum",
+    "name": "Futurum Music Bar – adresa a kontaktní údaje",
+    "url": "https://futurum.musicbar.cz/kontakty/",
+    "publisher": "Futurum Music Bar",
+    "source_type": "official_venue_contact",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-bilej-medved",
+    "name": "Bílej Medvěd – adresa a kontaktní údaje",
+    "url": "https://kultura.plzen.eu/kulturni-infrastruktura/objekty-a-zarizeni/pub-bilej-medved/",
+    "publisher": "Kulturní Plzeň",
+    "source_type": "municipal_venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-bunkr-liberec",
+    "name": "Bunkr Rock Club – adresa a kontaktní údaje",
+    "url": "https://www.visitliberec.eu/vyhledavani/?cat=kultura_a_zabava&detail=14000&v=Bunkr+Rock+Club",
+    "publisher": "Visit Liberec",
+    "source_type": "municipal_tourism_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_city",
+      "venue_address"
+    ]
   }
 ]
