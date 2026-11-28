@@ -1,6 +1,11 @@
 name: K&F – rešerše koncertů (PHP worker)
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'seed-worker.php'
+      - '.github/workflows/seed-research.yml'
   workflow_dispatch:
     inputs:
       max_queries:
