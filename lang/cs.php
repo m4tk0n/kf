@@ -230,6 +230,7 @@ return [
     'venue.err.name' => 'Vyplň název klubu.',
     'venue.err.city' => 'Vyber město.',
     'venue.err.country' => 'Vyber stát.',
+    'venue.err.location' => 'Vyplň adresu nebo alespoň jeden GPS odkaz.',
     'venue.err.email' => 'Neplatný e-mail.',
     'venue.err.www' => 'Neplatná adresa webu.',
     'venue.err.google_maps' => 'Neplatný odkaz Google Maps.',
