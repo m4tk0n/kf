@@ -16,7 +16,7 @@ Zapsano:
 - venues.json: misto ID 1, overeny nazev a adresa.
 - bands.json: SPS ID 2 v next; puvod, mesto a zanr overeny, vlastni historie zatim neprozkoumana.
 - tours.txt: TOUR-002, jedna overena zastavka God Save The Punk Tour II.
-- evidence.json: zdroje SRC-0001 az SRC-0005 a jednotliva tvrzeni CLM-0001 az CLM-0015.
+- evidence.json: zdroje SRC-0001 az SRC-0006 a jednotliva tvrzeni CLM-0001 az CLM-0018.
 
 Poznamka:
 - Zacatek akce 20:00 je cas uvedeny poradatelem; cas vystoupeni The Fialky 21:45 je uveden v archivu kapely. Nejde o rozpor.
