@@ -35,7 +35,7 @@ function kf_venue_publish(array $v,?string $srcL,int $uid): int {
     try {
         q('INSERT INTO '.tbl('venues').' (name,city_id,address,img,created_by,created_at) VALUES (?,?,?,?,?,?)',[$v['name'],$v['city_id'],$v['address']?:null,$srcL!==null?1:0,$uid,time()]);
         $id=(int)$pdo->lastInsertId();
-        json_write_file(json_bucket_rel('venues',$id),['description'=>$v['description'],'www'=>kf_safe_url($v['www'])??'','email'=>$v['email'],'phone'=>$v['phone'],'google_maps'=>kf_safe_url($v['google_maps'])??'','mapy_maps'=>kf_safe_url($v['mapy_maps'])??'','img_l'=>$srcL!==null],true);
+        json_write_file(json_bucket_rel('venues',$id),['description'=>$v['description'],'address'=>$v['address'],'www'=>kf_safe_url($v['www'])??'','email'=>$v['email'],'phone'=>$v['phone'],'google_maps'=>kf_safe_url($v['google_maps'])??'','mapy_maps'=>kf_safe_url($v['mapy_maps'])??'','img_l'=>$srcL!==null],true);
         if($srcL!==null){$base=abs_path((string)cfg('img.subdirs.venues')).'/'.intdiv($id,(int)cfg('img.folder_divisor')).'/'.$id;kf_img_install($srcL,$base);}
         $pdo->commit();return $id;
     } catch(Throwable $e){if($pdo->inTransaction())$pdo->rollBack();if($id>0)json_remove('venues',$id);if($base!=='')kf_img_remove($base);throw $e;}
