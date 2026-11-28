@@ -48,6 +48,31 @@ foreach ($cities as $c) {
     <label><?= e(t('event.f.time')) ?>
       <input type="time" name="time_start" value="<?= e((string)$old['time_start']) ?>">
     </label>
+    <fieldset class="bands-box admission-box">
+      <legend><?= e(t('event.f.admission')) ?></legend>
+      <label><?= e(t('event.f.admission_type')) ?>
+        <select name="admission_type" data-admission-type>
+          <option value=""<?= ($old['admission_type'] ?? '') === '' ? ' selected' : '' ?>><?= e(t('event.f.admission_none')) ?></option>
+          <option value="text"<?= ($old['admission_type'] ?? '') === 'text' ? ' selected' : '' ?>><?= e(t('event.f.admission_text')) ?></option>
+          <option value="amount"<?= ($old['admission_type'] ?? '') === 'amount' ? ' selected' : '' ?>><?= e(t('event.f.admission_amount')) ?></option>
+        </select>
+      </label>
+      <label data-admission-text-field<?= ($old['admission_type'] ?? '') !== 'text' ? ' hidden' : '' ?>><?= e(t('event.f.admission_text')) ?>
+        <input type="text" name="admission_value" value="<?= e(($old['admission_type'] ?? '') === 'text' ? (string)$old['admission_value'] : '') ?>" maxlength="100" data-admission-text>
+      </label>
+      <div class="admission-amount-grid" data-admission-amount-fields<?= ($old['admission_type'] ?? '') !== 'amount' ? ' hidden' : '' ?>>
+        <label><?= e(t('event.f.admission_value')) ?>
+          <input type="number" name="admission_value" min="0" max="999999999" step="0.01" value="<?= e(($old['admission_type'] ?? '') === 'amount' ? (string)$old['admission_value'] : '') ?>" data-admission-amount>
+        </label>
+        <label><?= e(t('event.f.currency')) ?>
+          <select name="admission_currency" data-admission-currency data-country-currencies="<?= e(json_encode(array_column($countryCurrencies, 'currency_code', 'id'), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)) ?>">
+            <?php foreach ($currencies as $currency): $code = (string)$currency['currency_code']; ?>
+              <option value="<?= e($code) ?>"<?= (string)($old['admission_currency'] ?? '') === $code ? ' selected' : '' ?>><?= e($code) ?></option>
+            <?php endforeach; ?>
+          </select>
+        </label>
+      </div>
+    </fieldset>
     <label class="event-name-field"><?= e(t('event.f.venue')) ?>
       <input type="hidden" name="venue_id" value="<?= (int)$old['venue_id'] ?>" data-venue-id>
       <input type="text" value="<?= e((string)($old['venue_name'] ?? '')) ?>" maxlength="160"
