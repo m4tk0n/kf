@@ -87,9 +87,9 @@
               venueId.value = String(item.id || 0);
               if (cityInput && item.city) cityInput.value = String(item.city);
               if (cityId && item.city_id) cityId.value = String(item.city_id);
-              if (countryInput && item.country_name) countryInput.value = String(item.country_name);
+              if (countryInput && (item.country_name || item.country)) countryInput.value = String(item.country_name || item.country);
               if (countryId && item.country_id) countryId.value = String(item.country_id);
-              if (countryIso2) countryIso2.textContent = item.country || '';
+              if (countryIso2) countryIso2.textContent = item.iso2 || '';
             }
             closeSuggestions();
             nameInput.focus();
