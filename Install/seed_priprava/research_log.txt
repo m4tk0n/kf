@@ -133,3 +133,23 @@ Zapsáno:
 
 Poznámka:
 - Čas začátku akce u Kralup nebyl sjednocen, protože zdroje uvádějí různé časy začátku programu. Časy vystoupení obou kapel jsou ale potvrzeny konkrétním rozpisem.
+
+
+## 2026-11-28 — God Save The Punk II. — doplnění zbývajících šesti říjnových zastávek
+
+Ověřeno přes oficiální archivy The Fialky a SPS a konkrétní pořadatelské/venue zdroje:
+- 2026-10-02 — České Budějovice / MC Fabrika. Oba archivy kapel uvádějí odehranou zastávku; oficiální web MC Fabrika potvrzuje identitu a adresu místa.
+- 2026-10-03 — Kolín / Městský společenský dům. SPS a The Fialky jsou potvrzeny v archivech obou kapel; místní oznámení potvrzuje datum a čas, oficiální výroční zpráva místa adresu.
+- 2026-10-08 — Praha / Rock Café. Oficiální program klubu potvrzuje koncert, SPS 20:30, The Fialky 21:45 a křest EP UNITED 20YEARS.
+- 2026-10-09 — Praha / Rock Café. Oficiální program klubu potvrzuje koncert a pořadí vystoupení The Fialky 20:30, SPS 21:45.
+- 2026-10-16 — Plzeň / Bílej Medvěd. GoOut potvrzuje koncert SPS a The Fialky v 20:00; oba archivy kapel potvrzují odehrání; městský katalog a klubový profil ověřují místo.
+- 2026-10-17 — Brno / První Patro. Bandzone, Objev Brno a archivy obou kapel potvrzují koncert; zdroje uvádějí The Fialky 20:30 a SPS 21:45.
+
+Zapsáno:
+- event_2026.json: akce ID 18–23.
+- venues.json: nová místa ID 18–21; První Patro znovu použito jako venue_id 9.
+- tours.txt: TOUR-002 nyní obsahuje všech 12 dohledaných zastávek.
+- evidence.json: zdroje SRC-0047 až SRC-0057 a tvrzení CLM-0177 až CLM-0227.
+
+Poznámka:
+- U 2. 10. a 3. 10. jsou doloženy časy začátku programu z archivu SPS, nikoli přesné časy nástupu obou kapel; časy vystoupení se proto nedoplňují bez rozpisu.
