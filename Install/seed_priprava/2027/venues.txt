@@ -1,12 +1,10 @@
 # Místa konání akcí 2027
 # Formát: název | typ | město | stát | adresa | zdroje | poznámka
 
-Collosseum Club | hudební klub | Košice | Slovensko | adresa zatím nezjištěna | 2027-S03 |
-Klub 007 | hudební klub | Praha | Česko | adresa zatím nezjištěna | 2027-S04 |
-Palác Akropolis | kulturní/koncertní klub | Praha | Česko | adresa zatím nezjištěna | 2027-S05 |
-Cargo Gallery | koncertní prostor/loď | Praha | Česko | adresa zatím nezjištěna | 2027-S06 |
-Urban Spot | kulturní a koncertní prostor | Banská Bystrica | Slovensko | adresa zatím nezjištěna | 2027-S07 |
-ROXY | hudební klub | Praha | Česko | adresa zatím nezjištěna | 2027-S08 |
-
-# Mighty Sounds 2027
-# Tábor je potvrzené město konání, ale přesný areál nebyl v použitých zdrojích pro ročník 2027 potvrzen.
+Letiště Aeroklubu Tábor | festivalový areál / letiště | Tábor | Česko | areál Aeroklubu Tábor, přesná adresa zatím neuvedena | 2027-S11 | Oficiální FAQ potvrzuje přesné místo konání Mighty Sounds 2027.
+Collosseum Club | hudební klub | Košice | Slovensko | Vrátna 639/70, 040 01 Košice | 2027-S12 |
+Klub 007 | hudební klub | Praha | Česko | adresa zatím neověřena | 2027-S04 |
+Palác Akropolis | kulturní/koncertní klub | Praha | Česko | adresa zatím neověřena | 2027-S05 |
+Cargo Gallery | koncertní prostor/loď | Praha | Česko | adresa zatím neověřena | 2027-S06 |
+Urban Spot | kulturní a koncertní prostor | Banská Bystrica | Slovensko | adresa zatím neověřena | 2027-S07 |
+ROXY | hudební klub | Praha | Česko | adresa zatím neověřena | 2027-S08 |
