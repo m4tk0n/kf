@@ -1394,5 +1394,29 @@
       "src-dilemma-in-cinema-official-archive"
     ],
     "verification": "named_in_official_band_concert_archive"
+  },
+  {
+    "id": "visaci-zamek",
+    "name": "VISACÍ ZÁMEK",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-visaci-official-archive"
+    ],
+    "verification": "official_band_archive"
+  },
+  {
+    "id": "zputnik",
+    "name": "ZPUTNIK",
+    "country_code": "CZ",
+    "genres": [
+      "industrial punk"
+    ],
+    "sources": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "verification": "Bandzone_band_archive"
   }
 ]

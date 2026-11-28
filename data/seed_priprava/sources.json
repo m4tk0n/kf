@@ -683,5 +683,33 @@
     "limitations": [
       "Archiv uvádí některá místa pouze jako obec či město bez konkrétního klubu."
     ]
+  },
+  {
+    "id": "src-visaci-official-archive",
+    "name": "Visací zámek – oficiální archiv odehraných koncertů",
+    "url": "https://visaci.cz/koncerty/odehrane",
+    "publisher": "Visací zámek",
+    "source_type": "official_band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "foreign_concerts"
+    ]
+  },
+  {
+    "id": "src-zputnik-bandzone-archive",
+    "name": "Zputnik – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/zputnik?at=gig&gy=2026",
+    "publisher": "Zputnik",
+    "source_type": "official_band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "foreign_concerts"
+    ]
   }
 ]

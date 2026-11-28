@@ -4119,11 +4119,19 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2024-07-25",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
   },
   {
     "id": "sps-2024-07-20-vlctejn",
@@ -5163,11 +5171,19 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2026-08-22",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
   },
   {
     "id": "sps-2026-08-21-slany",
@@ -5437,11 +5453,19 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2026-06-26",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
   },
   {
     "id": "sps-2026-06-20-manetin",
@@ -14257,12 +14281,19 @@
         "name": "N.V.Ú.",
         "country_code": "CZ",
         "band_id": "nvu"
+      },
+      {
+        "date": "2026-10-17",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
       }
     ],
     "source_ids": [
       "src-nezfales-official-archive",
       "src-znouzectnost-bandzone-archive",
-      "src-nvu-bandzone-archive"
+      "src-nvu-bandzone-archive",
+      "src-zputnik-bandzone-archive"
     ],
     "venue_name": "Kotelna"
   },
@@ -14592,11 +14623,18 @@
         "name": "PUNK FLOID",
         "country_code": "CZ",
         "band_id": "punk-floid"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
       }
     ],
     "source_ids": [
       "src-nezfales-official-archive",
-      "src-punkfloid-official-archive"
+      "src-punkfloid-official-archive",
+      "src-visaci-official-archive"
     ],
     "venue_name": "Brněnec Fest"
   },
@@ -23873,11 +23911,18 @@
         "name": "E!E",
         "country_code": "CZ",
         "band_id": "ee"
+      },
+      {
+        "date": "2020-01-18",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
       }
     ],
     "source_ids": [
       "src-ee-bandzone-archive",
-      "src-ee-official-concerts"
+      "src-ee-official-concerts",
+      "src-zputnik-bandzone-archive"
     ],
     "venue_name": "Music Club Jižák"
   },
@@ -25263,10 +25308,17 @@
         "name": "VISION DAYS",
         "country_code": "festival",
         "band_id": "vision-days"
+      },
+      {
+        "date": "2021-07-30",
+        "name": "ZPUTNIK",
+        "country_code": "festival",
+        "band_id": "zputnik"
       }
     ],
     "source_ids": [
-      "src-vision-days-bandzone-archive"
+      "src-vision-days-bandzone-archive",
+      "src-zputnik-bandzone-archive"
     ],
     "venue_name": "CZ"
   },
@@ -25374,11 +25426,18 @@
         "name": "DRIÁK",
         "country_code": "festival",
         "band_id": "driak"
+      },
+      {
+        "date": "2025-08-01",
+        "name": "ZPUTNIK",
+        "country_code": "festival",
+        "band_id": "zputnik"
       }
     ],
     "source_ids": [
       "src-vision-days-bandzone-archive",
-      "src-driak-bandzone-archive"
+      "src-driak-bandzone-archive",
+      "src-zputnik-bandzone-archive"
     ],
     "venue_name": "CZ"
   },
@@ -28414,5 +28473,2535 @@
     "source_ids": [
       "src-zemezluc-official-concert-calendar"
     ]
+  },
+  {
+    "id": "visaci-zamek-2026-11-07-olomouc",
+    "name": "S Club - Olomouc",
+    "start_date": "2026-11-07",
+    "end_date": "2026-11-07",
+    "city": "Olomouc",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-11-07",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-11-06-havirov",
+    "name": "Stolárna - Havířov",
+    "start_date": "2026-11-06",
+    "end_date": "2026-11-06",
+    "city": "Havířov",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-11-06",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-10-24-london",
+    "name": "100 Club",
+    "start_date": "2026-10-24",
+    "end_date": "2026-10-24",
+    "city": "London",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-10-24",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "GB"
+  },
+  {
+    "id": "visaci-zamek-2026-10-17-rumburk",
+    "name": "Výběžek free L!VE 26",
+    "start_date": "2026-10-17",
+    "end_date": "2026-10-17",
+    "city": "Rumburk",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-10-17",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-10-16-liberec",
+    "name": "Lidové Sady",
+    "start_date": "2026-10-16",
+    "end_date": "2026-10-16",
+    "city": "Liberec",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-10-16",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-10-10-plzen",
+    "name": "Pilsner fest",
+    "start_date": "2026-10-10",
+    "end_date": "2026-10-10",
+    "city": "Plzeň",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-10-10",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-09-26-chomutov",
+    "name": "Cafe44",
+    "start_date": "2026-09-26",
+    "end_date": "2026-09-26",
+    "city": "Chomutov",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-09-26",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-09-25-sumperk",
+    "name": "Visací zámek",
+    "start_date": "2026-09-25",
+    "end_date": "2026-09-25",
+    "city": "Šumperk",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-09-25",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-09-19-kuncice-pod-ondrejnikem",
+    "name": "Ogarfest",
+    "start_date": "2026-09-19",
+    "end_date": "2026-09-19",
+    "city": "Kunčice pod Ondřejníkem",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-09-19",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-09-12-most",
+    "name": "Mostecká slavnost",
+    "start_date": "2026-09-12",
+    "end_date": "2026-09-12",
+    "city": "Most",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-09-12",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-09-11-strakonice",
+    "name": "Visací zámek",
+    "start_date": "2026-09-11",
+    "end_date": "2026-09-11",
+    "city": "Strakonice",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-09-11",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-09-05-mesice",
+    "name": "Hromosvod fest",
+    "start_date": "2026-09-05",
+    "end_date": "2026-09-05",
+    "city": "Měšice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-09-05",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-09-04-unhost",
+    "name": "Visací zámek",
+    "start_date": "2026-09-04",
+    "end_date": "2026-09-04",
+    "city": "Unhošť",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-09-04",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-09-03-doksy",
+    "name": "Máchovo Jezero – VIP ČD",
+    "start_date": "2026-09-03",
+    "end_date": "2026-09-03",
+    "city": "Doksy",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-09-03",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-08-29-hluboka-nad-vltavou",
+    "name": "Punk’s not dead vy volové",
+    "start_date": "2026-08-29",
+    "end_date": "2026-08-29",
+    "city": "Hluboká nad Vltavou",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-08-29",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-08-28-luzany",
+    "name": "Motofest",
+    "start_date": "2026-08-28",
+    "end_date": "2026-08-28",
+    "city": "Lužany",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-08-28",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-08-15-cesky-tesin",
+    "name": "Rockování nad Olzou",
+    "start_date": "2026-08-15",
+    "end_date": "2026-08-15",
+    "city": "Český Těšín",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-08-15",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-08-14-jihlava",
+    "name": "Magmafest",
+    "start_date": "2026-08-14",
+    "end_date": "2026-08-14",
+    "city": "Jihlava",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-08-14",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-08-13-trutnov",
+    "name": "Visací zámek",
+    "start_date": "2026-08-13",
+    "end_date": "2026-08-13",
+    "city": "Trutnov",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-08-13",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-08-08-rostin-u-kromerize",
+    "name": "Kamínka kemp",
+    "start_date": "2026-08-08",
+    "end_date": "2026-08-08",
+    "city": "Roštín u Kroměříže",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-08-08",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-08-01-litomerice",
+    "name": "Punk’s not dead vy volové",
+    "start_date": "2026-08-01",
+    "end_date": "2026-08-01",
+    "city": "Litoměřice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-08-01",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-07-31-teplice",
+    "name": "Punk’s not dead vy volové",
+    "start_date": "2026-07-31",
+    "end_date": "2026-07-31",
+    "city": "Teplice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-07-31",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-07-24-olomouc",
+    "name": "Pod Parou",
+    "start_date": "2026-07-24",
+    "end_date": "2026-07-24",
+    "city": "Olomouc",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-07-24",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-07-05-drevohostice",
+    "name": "Dřevorockfest",
+    "start_date": "2026-07-05",
+    "end_date": "2026-07-05",
+    "city": "Dřevohostice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-07-05",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-07-04-jihlava",
+    "name": "Vysočinafest",
+    "start_date": "2026-07-04",
+    "end_date": "2026-07-04",
+    "city": "Jihlava",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-07-04",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-07-03-holysov",
+    "name": "Pekelný Ostrov",
+    "start_date": "2026-07-03",
+    "end_date": "2026-07-03",
+    "city": "Holýšov",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-07-03",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-06-27-vapeny-podol",
+    "name": "Podolfest",
+    "start_date": "2026-06-27",
+    "end_date": "2026-06-27",
+    "city": "Vápený Podol",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-27",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-06-27-pardubice",
+    "name": "Podolfest",
+    "start_date": "2026-06-27",
+    "end_date": "2026-06-27",
+    "city": "Pardubice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-27",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-06-20-novy-jicin",
+    "name": "pivobraní",
+    "start_date": "2026-06-20",
+    "end_date": "2026-06-20",
+    "city": "Nový Jičín",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-20",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-06-19-benatky-nad-jizerou",
+    "name": "Loděnice",
+    "start_date": "2026-06-19",
+    "end_date": "2026-06-19",
+    "city": "Benátky nad Jizerou",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-19",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2026-06-11-bratislava",
+    "name": "Pink Whale",
+    "start_date": "2026-06-11",
+    "end_date": "2026-06-11",
+    "city": "Bratislava",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-11",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "SK"
+  },
+  {
+    "id": "visaci-zamek-2026-06-12-olesna",
+    "name": "Pivovar",
+    "start_date": "2026-06-12",
+    "end_date": "2026-06-12",
+    "city": "Olešná",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-12",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-12-11-brno",
+    "name": "Fléda",
+    "start_date": "2025-12-11",
+    "end_date": "2025-12-11",
+    "city": "Brno",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-12-11",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-12-06-ceske-budejovice",
+    "name": "KTC Gerbera",
+    "start_date": "2025-12-06",
+    "end_date": "2025-12-06",
+    "city": "České Budějovice",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-12-06",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-12-05-uherske-hradiste",
+    "name": "Mír",
+    "start_date": "2025-12-05",
+    "end_date": "2025-12-05",
+    "city": "Uherské Hradiště",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-12-05",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-12-03-praha",
+    "name": "Lucerna Music Bar",
+    "start_date": "2025-12-03",
+    "end_date": "2025-12-03",
+    "city": "Praha",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-12-03",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-11-29-kolin",
+    "name": "MKS",
+    "start_date": "2025-11-29",
+    "end_date": "2025-11-29",
+    "city": "Kolín",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-11-29",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-11-28-klatovy",
+    "name": "KD",
+    "start_date": "2025-11-28",
+    "end_date": "2025-11-28",
+    "city": "Klatovy",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-11-28",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-11-08-sklenarice",
+    "name": "Sokolovna",
+    "start_date": "2025-11-08",
+    "end_date": "2025-11-08",
+    "city": "Sklenařice",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-11-08",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-11-01-havlickuv-brod",
+    "name": "OKO",
+    "start_date": "2025-11-01",
+    "end_date": "2025-11-01",
+    "city": "Havlíčkův Brod",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-11-01",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-10-31-viden",
+    "name": "KD",
+    "start_date": "2025-10-31",
+    "end_date": "2025-10-31",
+    "city": "Vídeň",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-10-31",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-10-18-benesov-nad-ploucnici",
+    "name": "Městské kino",
+    "start_date": "2025-10-18",
+    "end_date": "2025-10-18",
+    "city": "Benešov nad Ploučnicí",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-10-18",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-10-17-kadan",
+    "name": "KD Orfeum",
+    "start_date": "2025-10-17",
+    "end_date": "2025-10-17",
+    "city": "Kadaň",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-10-17",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-10-11-velka-bystrice",
+    "name": "KD Nadační",
+    "start_date": "2025-10-11",
+    "end_date": "2025-10-11",
+    "city": "Velká Bystřice",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-10-11",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-10-10-svitavy",
+    "name": "Lidové divadlo",
+    "start_date": "2025-10-10",
+    "end_date": "2025-10-10",
+    "city": "Svitavy",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-10-10",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-09-06-javac",
+    "name": "Visací zámek",
+    "start_date": "2025-09-06",
+    "end_date": "2025-09-06",
+    "city": "Javáč",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-09-06",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-09-05-jablonne-v-podjestedi",
+    "name": "koupaliště",
+    "start_date": "2025-09-05",
+    "end_date": "2025-09-05",
+    "city": "Jablonné v Podještědí",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-09-05",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-08-29-bezdez",
+    "name": "Hrady CZ",
+    "start_date": "2025-08-29",
+    "end_date": "2025-08-29",
+    "city": "Bezděz",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-29",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-08-23-trutnov",
+    "name": "Trutnoff",
+    "start_date": "2025-08-23",
+    "end_date": "2025-08-23",
+    "city": "Trutnov",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-23",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-08-23-bouzov",
+    "name": "Hrady CZ",
+    "start_date": "2025-08-23",
+    "end_date": "2025-08-23",
+    "city": "Bouzov",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-23",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-08-16-hradec-nad-moravici",
+    "name": "Hrady CZ",
+    "start_date": "2025-08-16",
+    "end_date": "2025-08-16",
+    "city": "Hradec nad Moravicí",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-16",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-08-15-rychnov-nad-kneznou",
+    "name": "Jízdárna fest",
+    "start_date": "2025-08-15",
+    "end_date": "2025-08-15",
+    "city": "Rychnov nad Kněžnou",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-15",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-08-09-veveri",
+    "name": "Hrady CZ",
+    "start_date": "2025-08-09",
+    "end_date": "2025-08-09",
+    "city": "Veveří",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-09",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-08-02-rozmberk-nad-vltavou",
+    "name": "Hrady CZ",
+    "start_date": "2025-08-02",
+    "end_date": "2025-08-02",
+    "city": "Rožmberk nad Vltavou",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-02",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-08-01-nove-mesto-na-morave",
+    "name": "Vázafest",
+    "start_date": "2025-08-01",
+    "end_date": "2025-08-01",
+    "city": "Nové Město na Moravě",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-01",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-07-30-praha",
+    "name": "Holešovice – Areál",
+    "start_date": "2025-07-30",
+    "end_date": "2025-07-30",
+    "city": "Praha",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-07-30",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-07-26-svihov",
+    "name": "Hrady CZ",
+    "start_date": "2025-07-26",
+    "end_date": "2025-07-26",
+    "city": "Švihov",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-07-26",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-06-14-radomilice",
+    "name": "Louka 2025",
+    "start_date": "2025-06-14",
+    "end_date": "2025-06-14",
+    "city": "Radomilice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-06-14",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-06-07-benesov",
+    "name": "letní parket na Sladovce",
+    "start_date": "2025-06-07",
+    "end_date": "2025-06-07",
+    "city": "Benešov",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-06-07",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-06-06-frydek-mistek",
+    "name": "HellPdays",
+    "start_date": "2025-06-06",
+    "end_date": "2025-06-06",
+    "city": "Frýdek-Místek",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-06-06",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-05-31-velky-drevic",
+    "name": "Dřevíčská Lávka",
+    "start_date": "2025-05-31",
+    "end_date": "2025-05-31",
+    "city": "Velký Dřevíč",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-05-31",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-05-30-pasohlavky",
+    "name": "Eurobike",
+    "start_date": "2025-05-30",
+    "end_date": "2025-05-30",
+    "city": "Pasohlávky",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-05-30",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-05-24-praha",
+    "name": "Mezi ploty",
+    "start_date": "2025-05-24",
+    "end_date": "2025-05-24",
+    "city": "Praha",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-05-24",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-04-12-sedlcany",
+    "name": "Statek Hrby",
+    "start_date": "2025-04-12",
+    "end_date": "2025-04-12",
+    "city": "Sedlčany",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-04-12",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-04-11-most",
+    "name": "Nový obzor",
+    "start_date": "2025-04-11",
+    "end_date": "2025-04-11",
+    "city": "Most",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-04-11",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-04-05-usti-nad-orlici",
+    "name": "KD",
+    "start_date": "2025-04-05",
+    "end_date": "2025-04-05",
+    "city": "Ústí nad Orlicí",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-04-05",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-03-29-bavorov",
+    "name": "KD",
+    "start_date": "2025-03-29",
+    "end_date": "2025-03-29",
+    "city": "Bavorov",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-29",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-03-28-pardubice",
+    "name": "Žluťák",
+    "start_date": "2025-03-28",
+    "end_date": "2025-03-28",
+    "city": "Pardubice",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-28",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-03-22-pec-pod-snezkou",
+    "name": "Klondike",
+    "start_date": "2025-03-22",
+    "end_date": "2025-03-22",
+    "city": "Pec pod Sněžkou",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-22",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-03-19-praha",
+    "name": "Palác Akropolis",
+    "start_date": "2025-03-19",
+    "end_date": "2025-03-19",
+    "city": "Praha",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-19",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-03-14-ostrava",
+    "name": "Barrák",
+    "start_date": "2025-03-14",
+    "end_date": "2025-03-14",
+    "city": "Ostrava",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-14",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-03-08-plzen",
+    "name": "Šeříkovka",
+    "start_date": "2025-03-08",
+    "end_date": "2025-03-08",
+    "city": "Plzeň",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-08",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2025-01-30-praha",
+    "name": "Vagon",
+    "start_date": "2025-01-30",
+    "end_date": "2025-01-30",
+    "city": "Praha",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-01-30",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-12-05-praha",
+    "name": "Lucerna Music Bar",
+    "start_date": "2024-12-05",
+    "end_date": "2024-12-05",
+    "city": "Praha",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-12-05",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-11-30-brno",
+    "name": "Fléda",
+    "start_date": "2024-11-30",
+    "end_date": "2024-11-30",
+    "city": "Brno",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-11-30",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-11-29-marianske-lazne",
+    "name": "Rampa",
+    "start_date": "2024-11-29",
+    "end_date": "2024-11-29",
+    "city": "Mariánské Lázně",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-11-29",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-11-23-ceske-budejovice",
+    "name": "KTC Gerbera",
+    "start_date": "2024-11-23",
+    "end_date": "2024-11-23",
+    "city": "České Budějovice",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-11-23",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-11-16-trebic",
+    "name": "Roxy",
+    "start_date": "2024-11-16",
+    "end_date": "2024-11-16",
+    "city": "Třebíč",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-11-16",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-11-08-semily",
+    "name": "KC Golf",
+    "start_date": "2024-11-08",
+    "end_date": "2024-11-08",
+    "city": "Semily",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-11-08",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-11-02-frydek-mistek",
+    "name": "Zkušebna",
+    "start_date": "2024-11-02",
+    "end_date": "2024-11-02",
+    "city": "Frýdek-Místek",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-11-02",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-11-01-moravska-trebova",
+    "name": "Duku Duku",
+    "start_date": "2024-11-01",
+    "end_date": "2024-11-01",
+    "city": "Moravská Třebová",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-11-01",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-10-26-svrcovec",
+    "name": "KD",
+    "start_date": "2024-10-26",
+    "end_date": "2024-10-26",
+    "city": "Svrčovec",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-10-26",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-10-25-horovice",
+    "name": "Společenský dům",
+    "start_date": "2024-10-25",
+    "end_date": "2024-10-25",
+    "city": "Hořovice",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-10-25",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-10-19-vyskov",
+    "name": "Pivovar",
+    "start_date": "2024-10-19",
+    "end_date": "2024-10-19",
+    "city": "Vyškov",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-10-19",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-10-12-pencin",
+    "name": "KD",
+    "start_date": "2024-10-12",
+    "end_date": "2024-10-12",
+    "city": "Pěnčín",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-10-12",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-10-11-hradec-kralove",
+    "name": "MOOD",
+    "start_date": "2024-10-11",
+    "end_date": "2024-10-11",
+    "city": "Hradec Králové",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-10-11",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-09-14-most",
+    "name": "Mostecká slavnost",
+    "start_date": "2024-09-14",
+    "end_date": "2024-09-14",
+    "city": "Most",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-09-14",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-09-11-praha",
+    "name": "Ledárny",
+    "start_date": "2024-09-11",
+    "end_date": "2024-09-11",
+    "city": "Praha",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-09-11",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-09-07-vyrava",
+    "name": "Visací zámek",
+    "start_date": "2024-09-07",
+    "end_date": "2024-09-07",
+    "city": "Výrava",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-09-07",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-08-31-bezdez",
+    "name": "České Hrady",
+    "start_date": "2024-08-31",
+    "end_date": "2024-08-31",
+    "city": "Bezděz",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-08-31",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-08-24-trutnov",
+    "name": "Trutnov Open Air",
+    "start_date": "2024-08-24",
+    "end_date": "2024-08-24",
+    "city": "Trutnov",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-08-24",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-08-24-bouzov",
+    "name": "České Hrady",
+    "start_date": "2024-08-24",
+    "end_date": "2024-08-24",
+    "city": "Bouzov",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-08-24",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-08-23-vizovice",
+    "name": "Trnkobraní",
+    "start_date": "2024-08-23",
+    "end_date": "2024-08-23",
+    "city": "Vizovice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-08-23",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-08-17-hradec-nad-moravici",
+    "name": "České Hrady",
+    "start_date": "2024-08-17",
+    "end_date": "2024-08-17",
+    "city": "Hradec nad Moravicí",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-08-17",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-08-16-sadska",
+    "name": "Rock of Sadska",
+    "start_date": "2024-08-16",
+    "end_date": "2024-08-16",
+    "city": "Sadská",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-08-16",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-08-10-veveri",
+    "name": "České Hrady",
+    "start_date": "2024-08-10",
+    "end_date": "2024-08-10",
+    "city": "Veveří",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-08-10",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-08-03-rozmberk-nad-vltavou",
+    "name": "České Hrady",
+    "start_date": "2024-08-03",
+    "end_date": "2024-08-03",
+    "city": "Rožmberk nad Vltavou",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-08-03",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-08-02-jirikov-u-rumburka",
+    "name": "Houmrův Triathlon",
+    "start_date": "2024-08-02",
+    "end_date": "2024-08-02",
+    "city": "Jiříkov u Rumburka",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-08-02",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-07-27-nova-role",
+    "name": "Rock in Roll",
+    "start_date": "2024-07-27",
+    "end_date": "2024-07-27",
+    "city": "Nová Role",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-07-27",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-07-26-svihov",
+    "name": "České Hrady",
+    "start_date": "2024-07-26",
+    "end_date": "2024-07-26",
+    "city": "Švihov",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-07-26",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-07-20-kuneticka-hora",
+    "name": "České Hrady",
+    "start_date": "2024-07-20",
+    "end_date": "2024-07-20",
+    "city": "Kunětická Hora",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-07-20",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-07-19-horice",
+    "name": "The Legends Rock Fest",
+    "start_date": "2024-07-19",
+    "end_date": "2024-07-19",
+    "city": "Hořice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-07-19",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-07-13-suchdol-nad-luznici",
+    "name": "Visací zámek",
+    "start_date": "2024-07-13",
+    "end_date": "2024-07-13",
+    "city": "Suchdol nad Lužnicí",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-07-13",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-07-13-tocnik",
+    "name": "České Hrady",
+    "start_date": "2024-07-13",
+    "end_date": "2024-07-13",
+    "city": "Točník",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-07-13",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-07-12-zbraslavec",
+    "name": "Motosraz",
+    "start_date": "2024-07-12",
+    "end_date": "2024-07-12",
+    "city": "Zbraslavec",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-07-12",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-06-22-vratislavice",
+    "name": "Pivní slavnosti",
+    "start_date": "2024-06-22",
+    "end_date": "2024-06-22",
+    "city": "Vratislavice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-06-22",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-06-21-zelcin-u-melnika",
+    "name": "Visací zámek",
+    "start_date": "2024-06-21",
+    "end_date": "2024-06-21",
+    "city": "Zelčín u Mělníka",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-06-21",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-06-15-litovel",
+    "name": "Litovelská jízda",
+    "start_date": "2024-06-15",
+    "end_date": "2024-06-15",
+    "city": "Litovel",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-06-15",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-06-15-hradec-kralove",
+    "name": "Rock for People",
+    "start_date": "2024-06-15",
+    "end_date": "2024-06-15",
+    "city": "Hradec Králové",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-06-15",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-06-14-brna",
+    "name": "Útulek Fest",
+    "start_date": "2024-06-14",
+    "end_date": "2024-06-14",
+    "city": "Brná",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-06-14",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-06-08-milovice",
+    "name": "Votvírák",
+    "start_date": "2024-06-08",
+    "end_date": "2024-06-08",
+    "city": "Milovice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-06-08",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-06-01-ceske-budejovice",
+    "name": "Fabrika",
+    "start_date": "2024-06-01",
+    "end_date": "2024-06-01",
+    "city": "České Budějovice",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-06-01",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-05-31-kamenite",
+    "name": "Rockfest",
+    "start_date": "2024-05-31",
+    "end_date": "2024-05-31",
+    "city": "Kamenité",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-05-31",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "festival",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-05-24-kutna-hora",
+    "name": "Megakoncert",
+    "start_date": "2024-05-24",
+    "end_date": "2024-05-24",
+    "city": "Kutná Hora",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-05-24",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "visaci-zamek-2024-05-18-rosice",
+    "name": "Zámek",
+    "start_date": "2024-05-18",
+    "end_date": "2024-05-18",
+    "city": "Rosice",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_or_bandzone_archive",
+    "performances": [
+      {
+        "date": "2024-05-18",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "concert",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-visaci-official-archive"
+    ],
+    "venue_name": "CZ"
   }
 ]
