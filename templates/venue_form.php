@@ -13,7 +13,7 @@ declare(strict_types=1);
     </ul>
   <?php endif; ?>
 
-  <form method="post" action="<?= e(url('venue/new')) ?>" enctype="multipart/form-data" class="stack" data-venue-form>
+  <form method="post" action="<?= e(url('venue/new')) ?>" enctype="multipart/form-data" class="stack" data-venue-form data-location-required="<?= e(t('venue.err.location')) ?>">
     <?= csrf_field() ?>
 
     <label><?= e(t('venue.f.name')) ?>
@@ -23,7 +23,7 @@ declare(strict_types=1);
     <div class="venue-location-grid">
       <label class="event-name-field"><?= e(t('venue.f.city')) ?>
         <input type="hidden" name="city_id" value="<?= (int)$old['city_id'] ?>" data-venue-city-id>
-        <input type="text" name="city_name" value="<?= e((string)($old['city_name'] ?? '')) ?>" maxlength="120"
+        <input type="text" name="city_name" value="<?= e((string)($old['city_name'] ?? '')) ?>" maxlength="120" required
           autocomplete="off" placeholder="<?= e(t('event.f.city_pick')) ?>"
           data-venue-city-input data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
           data-suggest-url="<?= e(url('venue/city-suggest')) ?>">
