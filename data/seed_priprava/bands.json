@@ -218,7 +218,8 @@
     "country_code": "CZ",
     "genres": [],
     "sources": [
-      "src-podparou-lineup-2025"
+      "src-podparou-lineup-2025",
+      "src-nvu-bandzone-archive"
     ],
     "verification": "country_confirmed_by_official_program_label"
   },
@@ -716,7 +717,8 @@
       "punk"
     ],
     "sources": [
-      "src-fialky-played-2025"
+      "src-fialky-played-2025",
+      "src-stare-pusky-bandzone-archive"
     ],
     "verification": "named_in_official_czech_band_tour_archive"
   },
@@ -805,7 +807,8 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-2024-goout"
+      "src-punkaci-2024-goout",
+      "src-znouzectnost-bandzone-archive"
     ],
     "verification": "country_of_origin_labelled_by_event_listing"
   },
@@ -927,7 +930,8 @@
     ],
     "sources": [
       "src-punkaci-2024-goout",
-      "src-punkaci-program-2025"
+      "src-punkaci-program-2025",
+      "src-pum-bandzone-archive"
     ],
     "verification": "country_of_origin_labelled_by_event_listing"
   },

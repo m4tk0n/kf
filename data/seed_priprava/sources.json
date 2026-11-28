@@ -596,5 +596,75 @@
       "venues",
       "tour_names"
     ]
+  },
+  {
+    "id": "src-pum-bandzone-archive",
+    "name": "P.U.M. – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/pum?at=gig&gy=2026",
+    "publisher": "Bandzone",
+    "source_type": "band_profile_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "lineups"
+    ]
+  },
+  {
+    "id": "src-znouzectnost-bandzone-archive",
+    "name": "Znouzectnost – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/znouzectnost?at=gig&gy=2026",
+    "publisher": "Bandzone",
+    "source_type": "band_profile_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "lineups"
+    ]
+  },
+  {
+    "id": "src-nvu-bandzone-archive",
+    "name": "N.V.Ú. – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/nvu",
+    "publisher": "Bandzone",
+    "source_type": "band_profile_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "lineups"
+    ]
+  },
+  {
+    "id": "src-plexis-bandzone-archive",
+    "name": "Plexis – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/plexis?at=gig&gy=2020",
+    "publisher": "Bandzone",
+    "source_type": "band_profile_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "lineups"
+    ]
+  },
+  {
+    "id": "src-stare-pusky-bandzone-archive",
+    "name": "Staré Pušky – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/starepusky?at=gig&gy=2025",
+    "publisher": "Bandzone",
+    "source_type": "band_profile_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "lineups"
+    ]
   }
 ]
