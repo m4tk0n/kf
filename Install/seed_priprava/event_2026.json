@@ -1,16 +1,17 @@
 {
-  "_purpose": "Evidence koncertnich akci pro konkretni kalendarni rok. Nazev souboru event_YYYY.json oznacuje rok konani; YYYY se nahradi konkretnim rokem. Kazdy rok ma vlastni aktual, ok a next, aby se data rozdelila do mensich souboru. Nove nalezene akce se ukladaji do next a po overeni do ok. ID akce je stabilni pracovni ID v ramci cele pripravy a nesmi se opakovat mezi rocniky.",
+  "_purpose": "Evidence koncertnich akci pro konkretni kalendarni rok. Nazev souboru event_YYYY.json oznacuje rok konani; YYYY se nahradi konkretnim rokem. Kazdy rok ma vlastni aktual, ok a next, aby se data rozdelila do mensich souboru. Nove nalezene akce se ukladaji do next a po overeni do ok. ID akce je stabilni pracovni ID v ramci vsech souboru event_YYYY.json a nesmi se opakovat mezi rocniky.",
   "_rules": {
     "types": {
       "concert": "Jednodenni hudebni akce. Program pokracujici po pulnoci zustava koncertem, pokud nejde o dalsi samostatny koncertni den.",
       "festival": "Vice-denni hudebni akce s programem ve vice dnech. Nazev obsahujici Fest nebo Festival sam o sobe typ neurcuje."
     },
+    "status": "Status held pouzit pouze tehdy, kdyz je dolozeno, ze se akce skutecne konala. Planned znamena pouze ohlasena akce; cancelled a postponed pouzit jen pri dolozenem zruseni nebo presunuti. Nejasny pripad zustava nevyreseny.",
     "tour": "Turne je nadrazeny zaznam evidovany globalne v tours.txt. Kazda zastavka je samostatna akce s vlastnim datem, mistem a line-upem; tour_id odkazuje na zaznam turne. Turne muze zasahovat do vice let.",
     "dates": "U vice-denni akce vyplnit date_from a date_to. U jednodeni akce jsou obe data stejna. Neoverene datum nebo cas neodhadovat.",
-    "lineup": "Line-up obsahuje band_id odkazujici na stabilni ID v bands.json, sort_order a pripadne time_play. Nazvy kapel se zde neopakuji.",
+    "lineup": "Line-up obsahuje band_id odkazujici na stabilni ID v bands.json, sort_order a pripadne time_play. Nazvy kapel se zde neopakuji. Ohlaseny line-up neni automaticky dukazem, ze kapela skutecne vystoupila.",
     "venue": "venue_id odkazuje na stabilni ID v venues.json. Nazev ani adresa mista se do akce nekopiruji. Pokud misto neni identifikovano, venue_id je null.",
-    "ids": "ID akce je stabilni pracovni ID v ramci celeho events.json, nikoli databazove ID.",
-    "sources": "U kazde akce ulozit URL zdroju, ktere potvrzuji konani akce, datum, misto nebo line-up."
+    "ids": "ID akce je stabilni pracovni ID napric vsemi soubory event_YYYY.json, nikoli databazove ID.",
+    "sources": "U kazde akce ulozit URL zdroju, ktere potvrzuji konani akce, datum, misto a line-up. Jednotlive tvrzeni a zdroje propojit v evidence.json."
   },
   "_record_template": {
     "id": 1,
@@ -34,6 +35,36 @@
     "sources": []
   },
   "aktual": [],
-  "ok": [],
+  "ok": [
+    {
+      "id": 1,
+      "name": "God Save The Punk II.",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-11-14",
+      "date_to": "2026-11-14",
+      "time_start": "20:00",
+      "city": "Valasske Klobouky",
+      "country": "CZ",
+      "venue_id": 1,
+      "bands": [
+        {
+          "band_id": 2,
+          "sort_order": 1,
+          "time_play": null
+        },
+        {
+          "band_id": 1,
+          "sort_order": 2,
+          "time_play": "21:45"
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.kvs-vk.cz/aktualne/kalendar-akci/sps-the-fialky-406_362cs.html"
+      ]
+    }
+  ],
   "next": []
 }
