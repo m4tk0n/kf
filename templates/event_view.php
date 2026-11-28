@@ -25,9 +25,9 @@ $row = static fn(string $label, string $html): string => '<dt>' . e($label) . '<
         echo $row(t('detail.venue'), e((string)$ev['venue']));
     }
     if (($v['admission_type'] ?? '') === 'text' && ($v['admission_value'] ?? '') !== '') {
-        echo $row(t('detail.price'), e((string)$v['admission_value']));
+        echo $row(t('event.f.admission'), e((string)$v['admission_value']));
     } elseif (($v['admission_type'] ?? '') === 'amount' && is_numeric($v['admission_value'] ?? null)) {
-        echo $row(t('detail.price'), e(rtrim(rtrim(number_format((float)$v['admission_value'], 2, '.', ''), '0'), '.') . ' ' . (string)$v['admission_currency']));
+        echo $row(t('event.f.admission'), e(rtrim(rtrim(number_format((float)$v['admission_value'], 2, '.', ''), '0'), '.') . ' ' . (string)$v['admission_currency']));
     }
     if (kf_safe_url((string)$v['www']) !== null) {
         echo $row(t('detail.www'), e((string)preg_replace('~^https?://~i', '', (string)$v['www'])));
