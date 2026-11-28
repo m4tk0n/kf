@@ -459,7 +459,7 @@ function kf_event_form_page(array $v, array $errors, string $image, int $status 
     $countryRow=$v['country_id']>0?q('SELECT `'.country_col().'` AS country,iso2,currency_code FROM '.tbl('countries').' WHERE id=?',[$v['country_id']])->fetch():false;
     $v['country_name']=(string)($countryRow['country']??'');$v['country_iso2']=(string)($countryRow['iso2']??'');
     $v['country_currency']=(string)($countryRow['currency_code']??'');
-    if (($v['admission_type'] ?? '') === 'amount' && $v['admission_currency'] === '' && $v['country_currency'] !== '') {
+    if ($v['admission_currency'] === '' && $v['country_currency'] !== '') {
         $v['admission_currency'] = $v['country_currency'];
     }
     $countryCurrencies = q('SELECT id,currency_code FROM ' . tbl('countries'))->fetchAll();
