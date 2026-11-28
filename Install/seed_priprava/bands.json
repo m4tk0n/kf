@@ -1,12 +1,13 @@
 {
   "_purpose": "Evidence kapel pro postupny pruzkum koncertni historie. Zpracovavaji se pouze kapely z Ceske republiky a Slovenska. U kazde aktualni kapely se prochazi akce od roku 2026 zpetne do roku 2000. Kapely objevene v line-upu se pridavaji do next, pokud jeste nejsou evidovane. Po dokonceni cele historie se aktualni kapela presune do ok. Zahranicni kapely se eviduji kvuli line-upu, ale jejich historii neprochazime a po overeni statu se presouvaji rovnou do ok. ID je stabilni pracovni ID kapely; v zaznamech akci se pouziva band_id. Zdroje k jednotlivym tvrzenim jsou evidovany take v evidence.json.",
   "_workflow": {
-    "aktual": "Jedina ceska nebo slovenska kapela, jejiz koncertni historie se prave prochazi od roku 2026 do roku 2000.",
+    "aktual": "Jedina ceska nebo slovenska kapela, jejiz koncertni historie se prave prubezne prozkoumava v rozsahu 2026 az 2000; jednotlive akce se zapisuji v libovolnem poradi podle toho, jak jsou nalezeny a overeny.",
     "ok": "Kapely s dokoncenym pruzkumem (CZ/SK) nebo overene zahranicni kapely, jejichz historii neprochazime.",
     "next": "Nove objevene kapely cekajici na identifikaci nebo vlastni pruzkum.",
     "new_band": "Pred pridanim porovnat nazev, mesto, stat, cleny, diskografii a oficialni profily, aby nevznikaly duplicity. Overit kazdy evidovany udaj a ulozit zdroje.",
     "foreign_band": "Pokud je overeno, ze kapela neni z CZ/SK, presunout ji z next rovnou do ok. Nezahranicni puvod neodhadovat; neznamy stat zustava v next do overeni.",
-    "evidence": "Pole sources obsahuje URL zdroju. Jednotlive overene udaje a jejich zdroje se zapisuji do evidence.json."
+    "evidence": "Pole sources obsahuje URL zdroju. Jednotlive overene udaje a jejich zdroje se zapisuji do evidence.json.",
+    "discovery_order": "Neni vyzadovano chronologicke poradi ani dokonceni celeho roku pred prechodem na jiny nalezeny rok. Akce, mista a kapely z line-upu se doplnuji prubezne."
   },
   "aktual": [
     {
@@ -36,6 +37,31 @@
         "https://slovnik.ceskyhudebnislovnik.cz/component/mdictionary/?id=1002761&task=record.record_detail"
       ],
       "note": "Identita, punkovy zanr a puvod v Praze overeny. Vlastni koncertni historie zatim neprozkoumana."
+    },
+    {
+      "id": 3,
+      "name": "Totální nasazení",
+      "genre": "punk rock",
+      "country": "CZ",
+      "city": "Slaný",
+      "url": "https://totaci.cz/",
+      "sources": [
+        "https://totaci.cz/tn-english-info",
+        "https://totaci.cz/kapela"
+      ],
+      "note": "Identita, punkrockový žánr a původ ve Slaném ověřeny na oficiálním webu. Vlastní koncertní historie zatím neprozkoumaná."
+    },
+    {
+      "id": 4,
+      "name": "Nežfaleš",
+      "genre": "punk rock",
+      "country": "CZ",
+      "city": "Praha",
+      "url": "https://www.nezfales.cz/",
+      "sources": [
+        "https://www.nezfales.cz/"
+      ],
+      "note": "Identita, pražský původ a punkrockový žánr ověřeny na oficiálním webu. Vlastní koncertní historie zatím neprozkoumaná."
     }
   ]
 }
