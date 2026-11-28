@@ -57,6 +57,15 @@
       "source_type": "official_band_page",
       "retrieved_on": "2026-11-28",
       "supports": "Oficialni stranka kapely SPS a jeji historie."
+    },
+    {
+      "id": "SRC-0006",
+      "url": "https://thefialky.cz/bandstory/",
+      "publisher": "The Fialky",
+      "title": "Bandstory",
+      "source_type": "official_band_biography",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficialni pribeh kapely; uvadi vznik kapely v roce 2000, prazske prostredi a punkrockovy kontext."
     }
   ],
   "claims": [
@@ -67,7 +76,10 @@
       "field": "name",
       "value": "God Save The Punk II.",
       "status": "verified",
-      "source_ids": ["SRC-0001", "SRC-0002"]
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0002"
+      ]
     },
     {
       "id": "CLM-0002",
@@ -76,7 +88,10 @@
       "field": "date",
       "value": "2026-11-14",
       "status": "verified",
-      "source_ids": ["SRC-0001", "SRC-0002"]
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0002"
+      ]
     },
     {
       "id": "CLM-0003",
@@ -85,7 +100,9 @@
       "field": "status",
       "value": "held",
       "status": "verified",
-      "source_ids": ["SRC-0001"]
+      "source_ids": [
+        "SRC-0001"
+      ]
     },
     {
       "id": "CLM-0004",
@@ -94,7 +111,9 @@
       "field": "time_start",
       "value": "20:00",
       "status": "verified",
-      "source_ids": ["SRC-0002"],
+      "source_ids": [
+        "SRC-0002"
+      ],
       "note": "Zacatek akce; nezamenovat s casem vystoupeni kapely."
     },
     {
@@ -104,7 +123,10 @@
       "field": "venue_id",
       "value": 1,
       "status": "verified",
-      "source_ids": ["SRC-0002", "SRC-0003"]
+      "source_ids": [
+        "SRC-0002",
+        "SRC-0003"
+      ]
     },
     {
       "id": "CLM-0006",
@@ -113,7 +135,11 @@
       "field": "lineup.band_id=2",
       "value": "SPS",
       "status": "verified",
-      "source_ids": ["SRC-0001", "SRC-0002", "SRC-0005"]
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0002",
+        "SRC-0005"
+      ]
     },
     {
       "id": "CLM-0007",
@@ -122,7 +148,10 @@
       "field": "lineup.band_id=1",
       "value": "The Fialky",
       "status": "verified",
-      "source_ids": ["SRC-0001", "SRC-0002"]
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0002"
+      ]
     },
     {
       "id": "CLM-0008",
@@ -131,7 +160,9 @@
       "field": "lineup.band_id=1.time_play",
       "value": "21:45",
       "status": "verified",
-      "source_ids": ["SRC-0001"]
+      "source_ids": [
+        "SRC-0001"
+      ]
     },
     {
       "id": "CLM-0009",
@@ -140,7 +171,9 @@
       "field": "tour_id",
       "value": "TOUR-002",
       "status": "verified",
-      "source_ids": ["SRC-0002"]
+      "source_ids": [
+        "SRC-0002"
+      ]
     },
     {
       "id": "CLM-0010",
@@ -149,7 +182,10 @@
       "field": "name",
       "value": "Kulturni dum Klobucan",
       "status": "verified",
-      "source_ids": ["SRC-0002", "SRC-0003"]
+      "source_ids": [
+        "SRC-0002",
+        "SRC-0003"
+      ]
     },
     {
       "id": "CLM-0011",
@@ -158,7 +194,10 @@
       "field": "address",
       "value": "Masarykovo namesti 942, 766 01 Valasske Klobouky",
       "status": "verified",
-      "source_ids": ["SRC-0002", "SRC-0003"]
+      "source_ids": [
+        "SRC-0002",
+        "SRC-0003"
+      ]
     },
     {
       "id": "CLM-0012",
@@ -167,7 +206,10 @@
       "field": "city_country",
       "value": "Valasske Klobouky, CZ",
       "status": "verified",
-      "source_ids": ["SRC-0002", "SRC-0003"]
+      "source_ids": [
+        "SRC-0002",
+        "SRC-0003"
+      ]
     },
     {
       "id": "CLM-0013",
@@ -176,7 +218,10 @@
       "field": "genre",
       "value": "punk",
       "status": "verified",
-      "source_ids": ["SRC-0004", "SRC-0005"]
+      "source_ids": [
+        "SRC-0004",
+        "SRC-0005"
+      ]
     },
     {
       "id": "CLM-0014",
@@ -185,7 +230,10 @@
       "field": "country_city",
       "value": "CZ, Praha",
       "status": "verified",
-      "source_ids": ["SRC-0004", "SRC-0005"]
+      "source_ids": [
+        "SRC-0004",
+        "SRC-0005"
+      ]
     },
     {
       "id": "CLM-0015",
@@ -194,7 +242,43 @@
       "field": "identity",
       "value": "SPS",
       "status": "verified",
-      "source_ids": ["SRC-0004", "SRC-0005"]
+      "source_ids": [
+        "SRC-0004",
+        "SRC-0005"
+      ]
+    },
+    {
+      "id": "CLM-0016",
+      "entity_type": "band",
+      "entity_id": 1,
+      "field": "identity",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0006"
+      ]
+    },
+    {
+      "id": "CLM-0017",
+      "entity_type": "band",
+      "entity_id": 1,
+      "field": "genre",
+      "value": "punk rock",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0006"
+      ]
+    },
+    {
+      "id": "CLM-0018",
+      "entity_type": "band",
+      "entity_id": 1,
+      "field": "city_country",
+      "value": "Praha, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0006"
+      ]
     }
   ]
 }
