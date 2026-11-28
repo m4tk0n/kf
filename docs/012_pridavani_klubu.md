@@ -20,7 +20,7 @@ Přidávání klubu je dostupné přihlášeným uživatelům s oprávněním su
 - Lokalita je zobrazena v jednom řádku se třemi poli: Město, Stát a ISO2.
 - Město: textové pole s našeptávačem z tabulky cities.
 - Stát: textové pole s našeptávačem z tabulky countries. Výběr města automaticky doplní odpovídající stát i jeho ISO2; při výběru státu se našeptávání měst omezí na tento stát.
-- ISO2: samostatné pouze pro čtení, automaticky se doplňuje podle vybraného státu.
+- ISO2: automaticky doplňovaný textový údaj bez inputu; zobrazuje se podle vybraného státu.
 - Odeslání vyžaduje platné vybrané ID města i státu a server ověřuje jejich vzájemnou příslušnost.
 - Adresa
 - E-mail
