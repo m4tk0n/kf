@@ -1373,5 +1373,17 @@
       "src-punkgen-archive-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "dilemma-in-cinema",
+    "name": "DILEMMA IN CINEMA",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "verification": "named_in_official_band_concert_archive"
   }
 ]

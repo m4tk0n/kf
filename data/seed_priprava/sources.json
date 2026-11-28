@@ -522,5 +522,23 @@
       "cities",
       "venues"
     ]
+  },
+  {
+    "id": "src-dilemma-in-cinema-official-archive",
+    "name": "DILEMMA IN CINEMA – oficiální archiv koncertů",
+    "url": "https://www.dilemmaincinema.cz/index.php?kategorie_polozky=vlastni&nadpis_sekce=k+o+n+c+e+r+t+y&odkaz_na=sekce_koncerty.php&pom_prom=sekce_koncerty1&sekce_polozky=sekce_koncerty",
+    "publisher": "DILEMMA IN CINEMA",
+    "source_type": "official_band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "tour_names",
+      "lineups"
+    ],
+    "limitations": [
+      "Soukromé akce jsou vynechány; u některých položek archiv neuvádí přesný klub."
+    ]
   }
 ]

@@ -3615,11 +3615,25 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2024-11-30",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2024-11-30",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "KD"
   },
   {
     "id": "sps-2024-11-29-olomouc",
@@ -3681,11 +3695,25 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2024-11-22",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2024-11-22",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "KD"
   },
   {
     "id": "sps-2024-11-15-litomerice",
@@ -4440,11 +4468,25 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2024-04-19",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2024-04-19",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "KD"
   },
   {
     "id": "sps-2024-04-13-jesenik",
@@ -5896,12 +5938,19 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2023-10-13",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
       "src-ee-bandzone-archive",
-      "src-ee-official-concerts"
+      "src-ee-official-concerts",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Futurum"
   },
@@ -6053,11 +6102,19 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2023-08-18",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "CZ"
   },
   {
     "id": "sps-2023-08-12-jihlava",
@@ -9353,12 +9410,20 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2026-04-11",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "KD"
   },
   {
     "id": "fialky-2026-04-10-pardubice",
@@ -9388,12 +9453,20 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2026-04-10",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "ABC"
   },
   {
     "id": "fialky-2026-03-28-brno",
@@ -9493,12 +9566,20 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2026-03-21",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Meet Factory"
   },
   {
     "id": "fialky-2026-03-20-ceske-budejovice",
@@ -9528,12 +9609,20 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2026-03-20",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "KD Vltava"
   },
   {
     "id": "fialky-2026-03-14-bratislava",
@@ -9698,12 +9787,20 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2026-02-14",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Depo"
   },
   {
     "id": "fialky-2026-02-13-zdarna",
@@ -9883,11 +9980,25 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-12-06",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2025-12-06",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Vagon"
   },
   {
     "id": "fialky-2025-11-22-sedlcany",
@@ -10669,11 +10780,25 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-12-07",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2024-12-07",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Vagon"
   },
   {
     "id": "fialky-2024-11-16-jindrichuv-hradec",
@@ -11351,12 +11476,20 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2024-04-05",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "První patro"
   },
   {
     "id": "fialky-2024-03-23-plzen",
@@ -11386,12 +11519,20 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2024-03-23",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Bílej Medvěd"
   },
   {
     "id": "fialky-2024-03-22-vimperk",
@@ -11491,12 +11632,20 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2024-03-15",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "KNAK"
   },
   {
     "id": "fialky-2024-03-09-ceske-budejovice",
@@ -12294,12 +12443,19 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-02-25",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
       "src-nezfales-official-archive",
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Dům osvěty"
   },
@@ -12368,12 +12524,19 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-03-11",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
       "src-nezfales-official-archive",
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Bunkr Rock Club"
   },
@@ -12405,12 +12568,19 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-03-12",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
       "src-nezfales-official-archive",
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Café Klub Slavie"
   },
@@ -12464,12 +12634,19 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-03-19",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
       "src-nezfales-official-archive",
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "MSD Kolín"
   },
@@ -13004,11 +13181,31 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2021-10-09",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2021-10-09",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2021-10-09",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Lucerna – velký sál"
   },
   {
     "id": "fialky-2021-09-25-kostelec-nad-orlici",
@@ -13635,11 +13832,31 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2020-08-02",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2020-08-02",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2020-08-02",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Letní kino"
   },
   {
     "id": "fialky-2020-08-01-trebiz",
@@ -14068,11 +14285,18 @@
         "name": "PUNK FLOID",
         "country_code": "CZ",
         "band_id": "punk-floid"
+      },
+      {
+        "date": "2026-08-22",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-nezfales-official-archive",
-      "src-punkfloid-official-archive"
+      "src-punkfloid-official-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Rock na Valníku"
   },
@@ -14579,11 +14803,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2025-08-23",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "CZ"
   },
   {
     "id": "nezfales-2025-07-19-police-nad-metuji",
@@ -15336,11 +15568,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2023-04-21",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Modrá Vopice"
   },
   {
     "id": "nezfales-2023-04-15-melnik",
@@ -15978,11 +16218,18 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-03-18",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-nezfales-official-archive",
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "KD"
   },
@@ -16024,11 +16271,19 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2021-10-01",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Baronka"
   },
   {
     "id": "nezfales-2021-09-24-jindrichuv-hradec",
@@ -19110,10 +19365,17 @@
         "name": "PUNK FLOID",
         "country_code": "CZ",
         "band_id": "punk-floid"
+      },
+      {
+        "date": "2024-05-10",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-punkfloid-official-archive"
+      "src-punkfloid-official-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Auto Dafé"
   },
@@ -19432,10 +19694,17 @@
         "name": "PUNK FLOID",
         "country_code": "CZ",
         "band_id": "punk-floid"
+      },
+      {
+        "date": "2021-08-20",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-punkfloid-official-archive"
+      "src-punkfloid-official-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Rock na Valníku"
   },
@@ -19478,10 +19747,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-01-25",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Peklo Vyškov"
   },
@@ -19501,10 +19777,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-02-07",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Hudební klub B"
   },
@@ -19524,10 +19807,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-02-21",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "obecní taneční sál"
   },
@@ -19547,10 +19837,23 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-03-07",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2025-03-07",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "MC Fabrika"
   },
@@ -19570,10 +19873,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-03-08",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Futurum"
   },
@@ -19946,10 +20256,17 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2025-05-30",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "FotbalPark"
   },
@@ -19969,10 +20286,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-05-31",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Střelecký ostrov"
   },
@@ -20176,10 +20500,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-07-12",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "hřiště"
   },
@@ -20475,10 +20806,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-02-12",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Vagon"
   },
@@ -20815,10 +21153,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-10-15",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Vagon"
   },
@@ -20838,10 +21183,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-10-21",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Žlutý pes"
   },
@@ -20861,10 +21213,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-10-22",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Nový Obzor Music Arena"
   },
@@ -21022,10 +21381,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-12-09",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Vagon"
   },
@@ -21068,10 +21434,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2020-01-10",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Vagon"
   },
@@ -21091,10 +21464,17 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2020-01-11",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Eleven Club"
   },
@@ -21184,10 +21564,17 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2020-04-12",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "KD Jistebnice"
   },
@@ -22172,11 +22559,18 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2023-11-24",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-ee-bandzone-archive",
-      "src-ee-official-concerts"
+      "src-ee-official-concerts",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "Bílej Medvěd"
   },
@@ -22202,11 +22596,18 @@
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2023-11-25",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
       "src-ee-bandzone-archive",
-      "src-ee-official-concerts"
+      "src-ee-official-concerts",
+      "src-dilemma-in-cinema-official-archive"
     ],
     "venue_name": "MC Fabrika"
   },
@@ -23217,5 +23618,1112 @@
       "src-ee-official-concerts"
     ],
     "venue_name": "CZ"
+  },
+  {
+    "id": "dilemma-in-cinema-2020-01-25-kladno",
+    "name": "E!E / Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2020-01-25",
+    "end_date": "2020-01-25",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-01-25",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Auto Da Fe"
+  },
+  {
+    "id": "dilemma-in-cinema-2020-02-15-nachod",
+    "name": "CYBER PUNK FESTIVAL",
+    "event_type": "festival",
+    "start_date": "2020-02-15",
+    "end_date": "2020-02-15",
+    "city": "Náchod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-02-15",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Basswood"
+  },
+  {
+    "id": "dilemma-in-cinema-2020-06-06-pavlikov-u-rakovnika",
+    "name": "PUNKROCK PARKET",
+    "event_type": "festival",
+    "start_date": "2020-06-06",
+    "end_date": "2020-06-06",
+    "city": "Pavlíkov u Rakovníka",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-06-06",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Fotbalpark"
+  },
+  {
+    "id": "dilemma-in-cinema-2020-07-10-slany",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2020-07-10",
+    "end_date": "2020-07-10",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-07-10",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "náměstí"
+  },
+  {
+    "id": "dilemma-in-cinema-2020-07-11-prysk",
+    "name": "Festival na hřišti",
+    "event_type": "festival",
+    "start_date": "2020-07-11",
+    "end_date": "2020-07-11",
+    "city": "Prysk",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-07-11",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "hřiště"
+  },
+  {
+    "id": "dilemma-in-cinema-2020-09-05-slany",
+    "name": "Slánský Tuplák",
+    "start_date": "2020-09-05",
+    "end_date": "2020-09-05",
+    "city": "Slaný",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-09-05",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "dilemma-in-cinema-2020-09-12-usti-nad-labem",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2020-09-12",
+    "end_date": "2020-09-12",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-09-12",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Exil"
+  },
+  {
+    "id": "dilemma-in-cinema-2021-02-13-jihlava",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "the-fialky,nezfales",
+    "start_date": "2021-02-13",
+    "end_date": "2021-02-13",
+    "city": "Jihlava",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-02-13",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "dilemma-in-cinema-2021-10-02-kladno",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2021-10-02",
+    "end_date": "2021-10-02",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-10-02",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Auto Da Fé"
+  },
+  {
+    "id": "dilemma-in-cinema-2021-11-19-nechvalice",
+    "name": "Poluce'r'na Tour 2021",
+    "event_type": "concert",
+    "start_date": "2021-11-19",
+    "end_date": "2021-11-19",
+    "city": "Nechvalice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-11-19",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2021-11-19",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "dilemma-in-cinema-2021-11-27-roudnice-nad-labem",
+    "name": "Svět se změnil TOUR",
+    "event_type": "concert",
+    "start_date": "2021-11-27",
+    "end_date": "2021-11-27",
+    "city": "Roudnice nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-11-27",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Club Renda"
+  },
+  {
+    "id": "dilemma-in-cinema-2021-12-10-praha",
+    "name": "Poluce'r'na Tour 2021",
+    "event_type": "concert",
+    "start_date": "2021-12-10",
+    "end_date": "2021-12-10",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-12-10",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Vagon"
+  },
+  {
+    "id": "dilemma-in-cinema-2021-12-11-brno",
+    "name": "Poluce'r'na Tour 2021",
+    "event_type": "concert",
+    "start_date": "2021-12-11",
+    "end_date": "2021-12-11",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-12-11",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Melodka"
+  },
+  {
+    "id": "dilemma-in-cinema-2022-02-05-brno",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2022-02-05",
+    "end_date": "2022-02-05",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-02-05",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Kabinet Múz"
+  },
+  {
+    "id": "dilemma-in-cinema-2022-06-17-chomutov",
+    "name": "Otevřeno",
+    "event_type": "festival",
+    "start_date": "2022-06-17",
+    "end_date": "2022-06-17",
+    "city": "Chomutov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-06-17",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Hřebíkárna"
+  },
+  {
+    "id": "dilemma-in-cinema-2022-11-26-slany",
+    "name": "Speciální unplugged koncert",
+    "event_type": "concert",
+    "start_date": "2022-11-26",
+    "end_date": "2022-11-26",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-11-26",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Divadlo"
+  },
+  {
+    "id": "dilemma-in-cinema-2023-01-28-jablonec-nad-jizerou",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2023-01-28",
+    "end_date": "2023-01-28",
+    "city": "Jablonec nad Jizerou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-01-28",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2023-01-28",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "dilemma-in-cinema-2023-03-17-rokycany",
+    "name": "TN + ZO",
+    "event_type": "concert",
+    "start_date": "2023-03-17",
+    "end_date": "2023-03-17",
+    "city": "Rokycany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-03-17",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2023-03-17",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Na Střelnici"
+  },
+  {
+    "id": "dilemma-in-cinema-2023-03-31-brno",
+    "name": "TN + ZO",
+    "event_type": "concert",
+    "start_date": "2023-03-31",
+    "end_date": "2023-03-31",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-03-31",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2023-03-31",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "První patro"
+  },
+  {
+    "id": "dilemma-in-cinema-2023-04-07-litomerice",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2023-04-07",
+    "end_date": "2023-04-07",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-04-07",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Baronka"
+  },
+  {
+    "id": "dilemma-in-cinema-2023-04-22-melnik",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2023-04-22",
+    "end_date": "2023-04-22",
+    "city": "Mělník",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-04-22",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Stará Mydlárna"
+  },
+  {
+    "id": "dilemma-in-cinema-2023-05-20-bohusovice-nad-ohri",
+    "name": "Eger Fest",
+    "start_date": "2023-05-20",
+    "end_date": "2023-05-20",
+    "city": "Bohušovice nad Ohří",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-05-20",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "dilemma-in-cinema-2023-12-08-praha",
+    "name": "Totální Nasazení + Deratizéři",
+    "event_type": "concert",
+    "start_date": "2023-12-08",
+    "end_date": "2023-12-08",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-12-08",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2023-12-08",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Vagon"
+  },
+  {
+    "id": "dilemma-in-cinema-2023-12-26-strakonice",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2023-12-26",
+    "end_date": "2023-12-26",
+    "city": "Strakonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-12-26",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Habeš"
+  },
+  {
+    "id": "dilemma-in-cinema-2024-02-09-chrudim",
+    "name": "Vision Days + TN",
+    "event_type": "concert",
+    "start_date": "2024-02-09",
+    "end_date": "2024-02-09",
+    "city": "Chrudim",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-02-09",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2024-02-09",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2024-02-09",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "R-Klub"
+  },
+  {
+    "id": "dilemma-in-cinema-2024-05-04-trebic",
+    "name": "VPV / Funkce šroubu",
+    "event_type": "concert",
+    "start_date": "2024-05-04",
+    "end_date": "2024-05-04",
+    "city": "Třebíč",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-05-04",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Art klub Bistro"
+  },
+  {
+    "id": "dilemma-in-cinema-2024-06-07-chomutov",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2024-06-07",
+    "end_date": "2024-06-07",
+    "city": "Chomutov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-06-07",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Hřebíkárna"
+  },
+  {
+    "id": "dilemma-in-cinema-2024-06-08-hostoun",
+    "name": "Moto sraz",
+    "event_type": "totalni-nasazeni",
+    "start_date": "2024-06-08",
+    "end_date": "2024-06-08",
+    "city": "Hostouň",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-06-08",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "dilemma-in-cinema-2024-10-11-brno",
+    "name": "Deratizéři + Totální nasazení",
+    "event_type": "concert",
+    "start_date": "2024-10-11",
+    "end_date": "2024-10-11",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-10-11",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2024-10-11",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "První patro"
+  },
+  {
+    "id": "dilemma-in-cinema-2024-10-12-rakovnik",
+    "name": "Deratizéři + Totální nasazení",
+    "event_type": "concert",
+    "start_date": "2024-10-12",
+    "end_date": "2024-10-12",
+    "city": "Rakovník",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-10-12",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2024-10-12",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Dům Osvěty"
+  },
+  {
+    "id": "dilemma-in-cinema-2024-10-25-litvinov",
+    "name": "Totální nasazení + Zakázaný Ovoce",
+    "event_type": "concert",
+    "start_date": "2024-10-25",
+    "end_date": "2024-10-25",
+    "city": "Litvínov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-10-25",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2024-10-25",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Ponorka"
+  },
+  {
+    "id": "dilemma-in-cinema-2024-11-08-jihlava",
+    "name": "Totální nasazení + Zakázaný Ovoce",
+    "event_type": "concert",
+    "start_date": "2024-11-08",
+    "end_date": "2024-11-08",
+    "city": "Jihlava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-11-08",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2024-11-08",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "D-Klub"
+  },
+  {
+    "id": "dilemma-in-cinema-2024-11-16-stribro",
+    "name": "Totální nasazení + Zakázaný Ovoce",
+    "event_type": "concert",
+    "start_date": "2024-11-16",
+    "end_date": "2024-11-16",
+    "city": "Stříbro",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-11-16",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2024-11-16",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Beseda"
+  },
+  {
+    "id": "dilemma-in-cinema-2024-12-06-kladno",
+    "name": "Deratizéři + Totální nasazení",
+    "event_type": "concert",
+    "start_date": "2024-12-06",
+    "end_date": "2024-12-06",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-12-06",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2024-12-06",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Black Road Café"
+  },
+  {
+    "id": "dilemma-in-cinema-2025-09-10-praha",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2025-09-10",
+    "end_date": "2025-09-10",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-09-10",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Rock Café"
+  },
+  {
+    "id": "dilemma-in-cinema-2025-11-08-brno",
+    "name": "Totální nasazení akusticky",
+    "event_type": "concert",
+    "start_date": "2025-11-08",
+    "end_date": "2025-11-08",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-11-08",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2025-11-08",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "ART BAR"
+  },
+  {
+    "id": "dilemma-in-cinema-2025-11-14-rakovnik",
+    "name": "Totální nasazení akusticky",
+    "event_type": "concert",
+    "start_date": "2025-11-14",
+    "end_date": "2025-11-14",
+    "city": "Rakovník",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-11-14",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2025-11-14",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Dům Osvěty"
+  },
+  {
+    "id": "dilemma-in-cinema-2025-11-21-sadov",
+    "name": "Totální nasazení akusticky",
+    "event_type": "concert",
+    "start_date": "2025-11-21",
+    "end_date": "2025-11-21",
+    "city": "Sadov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-11-21",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2025-11-21",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "sál KD"
+  },
+  {
+    "id": "dilemma-in-cinema-2025-11-22-olomouc",
+    "name": "Totální nasazení akusticky",
+    "event_type": "concert",
+    "start_date": "2025-11-22",
+    "end_date": "2025-11-22",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-11-22",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2025-11-22",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Hellpaso"
+  },
+  {
+    "id": "dilemma-in-cinema-2025-11-29-plzen",
+    "name": "Totální nasazení akusticky",
+    "event_type": "concert",
+    "start_date": "2025-11-29",
+    "end_date": "2025-11-29",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-11-29",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2025-11-29",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Bílej Medvěd"
+  },
+  {
+    "id": "dilemma-in-cinema-2026-02-07-kladno",
+    "name": "Koncert Dilemma In Cinema",
+    "event_type": "concert",
+    "start_date": "2026-02-07",
+    "end_date": "2026-02-07",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-02-07",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Auto Da Fé"
+  },
+  {
+    "id": "dilemma-in-cinema-2026-02-28-olomouc",
+    "name": "Totální nasazení",
+    "event_type": "concert",
+    "start_date": "2026-02-28",
+    "end_date": "2026-02-28",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-02-28",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2026-02-28",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Jazz Tibet"
+  },
+  {
+    "id": "dilemma-in-cinema-2026-07-17-pavlikov",
+    "name": "Totální nasazení + Zakázaný Ovoce",
+    "event_type": "concert",
+    "start_date": "2026-07-17",
+    "end_date": "2026-07-17",
+    "city": "Pavlíkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-07-17",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
+      },
+      {
+        "date": "2026-07-17",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-dilemma-in-cinema-official-archive"
+    ],
+    "venue_name": "Fotbalpark"
   }
 ]
