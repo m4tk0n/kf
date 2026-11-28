@@ -1,5 +1,4 @@
 # Místa konání doložených akcí The Trousers – rok 2015
 # Formát: název | typ | město | stát | adresa | zdroje | poznámka
 
-MÁV Előre pálya / Sóstói Ipari Park | festivalový areál | Székesfehérvár | Maďarsko | neuvedeno | 2015-S01; 2015-S02; 2015-S03 | FEZEN 2015 probíhal na více scénách.
-A38 Hajó | klub | Budapešť | Maďarsko | Petőfi híd budai hídfő | 2015-S04; 2015-S05 |
+A38 Hajó | klub | Budapešť | Maďarsko | Petőfi híd budai hídfő | 2015-S01; 2015-S02 |
