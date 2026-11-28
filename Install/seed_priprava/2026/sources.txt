@@ -1,0 +1,6 @@
+# Zdroje pro rok 2026
+# Formát: ID | URL | co zdroj dokládá | poznámka
+
+2026-S01 | https://www.tixa.hu/the-trousers-asphalt-horsemen-live-at-muzikum-20260417 | Konkrétní akce The Trousers / Asphalt Horsemen, datum, čas, klub Muzikum, adresa a popis obou kapel. |
+2026-S02 | https://www.setlist.fm/setlists/the-trousers-7bcc1670.html | Koncertní záznam The Trousers v Muzikum Klub & Bisztró v Budapešti dne 17. 4. 2026. | Komunitní databáze; použito jako doplňující potvrzení účasti.
+2026-S03 | https://www.goout.net/en/the-trousers/pzamv/ | Identifikace The Trousers jako kapely z Budapešti; žánrové zařazení garage rock. |
