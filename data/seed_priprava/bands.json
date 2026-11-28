@@ -806,7 +806,7 @@
     "verification": "country_of_origin_labelled_by_event_listing"
   },
   {
-    "id": "j aksi-taksi",
+    "id": "jaksi-taksi",
     "name": "JAKSI TAKSI",
     "country_code": "CZ",
     "genres": [
@@ -818,7 +818,7 @@
     "verification": "country_of_origin_labelled_by_event_listing"
   },
   {
-    "id": "zn ouzectnost",
+    "id": "znouzectnost",
     "name": "ZNOUZECTNOST",
     "country_code": "CZ",
     "genres": [
@@ -878,7 +878,7 @@
     "verification": "country_of_origin_labelled_by_event_listing"
   },
   {
-    "id": "vv u",
+    "id": "vvu",
     "name": "!V.V.Ú.",
     "country_code": "CZ",
     "genres": [

@@ -2038,12 +2038,12 @@
       {
         "name": "JAKSI TAKSI",
         "country_code": "CZ",
-        "band_id": "j aksi-taksi"
+        "band_id": "jaksi-taksi"
       },
       {
         "name": "ZNOUZECTNOST",
         "country_code": "CZ",
-        "band_id": "zn ouzectnost"
+        "band_id": "znouzectnost"
       },
       {
         "name": "MUERTI",
@@ -2078,7 +2078,7 @@
       {
         "name": "!V.V.Ú.",
         "country_code": "CZ",
-        "band_id": "vv u"
+        "band_id": "vvu"
       },
       {
         "name": "BIJOUTERRIER",
