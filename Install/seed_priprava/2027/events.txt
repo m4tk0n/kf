@@ -1,17 +1,17 @@
 # Akce 2027
 # Stav: PLÁNOVÁNO = akce je oznámená, ale k datu zápisu ještě neproběhla.
-# Formát: název | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka
+# Formát: název | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka | turné (pracovní ID)
 
-Mighty Sounds 2027 | plánováno | 25.–27. 6. 2027 | Tábor | Česko | přesný areál zatím neověřen | Dropkick Murphys; The Interrupters; Dubioza Kolektiv; Feine Sahne Fischfilet; The Adicts; Madball; The Rumjacks; Speed; H2O; The Suicide Machines; Deine Cousine; Shelter; The Rumpled; Jaya The Cat; Haywire; Skinhead; Defiance | 2027-S01; 2027-S02 | Průběžně oznámený line-up k 28. 11. 2026; další účinkující mohou přibýt. Oficiální web uvádí Tábor, přesné místo konání nebylo v použitých zdrojích spolehlivě potvrzeno.
+Mighty Sounds 2027 | plánováno | 25.–27. 6. 2027 | Tábor | Česko | Letiště Aeroklubu Tábor | Dropkick Murphys; The Interrupters; Dubioza Kolektiv; Feine Sahne Fischfilet; The Adicts; Madball; The Rumjacks; Speed; H2O; The Suicide Machines; Deine Cousine; Shelter; The Rumpled; Jaya The Cat; Haywire; Rat Boy; Wohnout; Heľenine oči; Dragged Under; Defiance; Loikaemie; Dead to me; Los Fastidios; Skinhead; Rantanplan; Fast Food Orchestra; P/\st; Elektrïck Mann; Krav Boca; Ocean Grove; Akne Kid Joe; Plaiins; Nežfaleš; Skampararas; VOLE; Vision Days; Tragedis; Scoop; Pirates of the Pubs; Hory | 2027-S01; 2027-S02; 2027-S10; 2027-S11 | Plánovaný festival; oficiální lineup pořadatele uvádí 40 kapel. Přehled se může dále měnit. |
 
-CESTUJÚCI PUNK ISLAND VOL.2 – Košice | plánováno | 23. 1. 2027, začátek 17:00 | Košice | Slovensko | Collosseum Club Košice | Tri groše; The Trousers; Hasiací Prístroj; Hrubý Domáci Produkt; Konflikt | 2027-S03 | The Trousers jsou maďarská kapela; národnostní označení (H) je uvedeno v programu.
+CESTUJÚCI PUNK ISLAND VOL.2 – Košice | plánováno | 23. 1. 2027, začátek 17:00 (otevření 16:30) | Košice | Slovensko | Collosseum Club Košice | Tri groše; The Trousers; Hasiací Prístroj; Hrubý Domáci Produkt; KONFLIKT | 2027-S03 | Druhá ze tří klubových zastávek putovní série; pořadatel uvádí také Bratislavu a Banskou Bystrici. | TOUR-001
 
 Dave Hause & The Mermaid + Support | plánováno | 26. 1. 2027, 19:00 | Praha | Česko | Klub 007 | Dave Hause & The Mermaid; support neuveden | 2027-S04 |
 
 Talco v Paláci Akropolis | plánováno | 6. 2. 2027, 18:00 | Praha | Česko | Palác Akropolis | Talco | 2027-S05 |
 
-Henge (UK) v Praze | plánováno | 12. 2. 2027, 19:00 | Praha | Česko | Cargo Gallery | Henge | 2027-S06 | Pořadatel uvádí původ kapely v Manchesteru ve Spojeném království.
+Henge (UK) v Praze | plánováno | 12. 2. 2027, 19:00 | Praha | Česko | Cargo Gallery | Henge | 2027-S06 |
 
-CESTUJÚCI PUNK ISLAND VOL.2 – Banská Bystrica | plánováno | 20. 2. 2027, začátek 17:30 | Banská Bystrica | Slovensko | Urban Spot | Bez Šance; Hrubý Domáci Produkt; The Trousers; Hasiací Prístroj; Konflikt; Odpad; Zatrest | 2027-S07 | V programu je uvedeno také „Prekvapenie“, bez známého názvu účinkujícího; nezařazeno jako kapela.
+CESTUJÚCI PUNK ISLAND VOL.2 – Banská Bystrica | plánováno | 20. 2. 2027, začátek 17:30 (otevření 17:00) | Banská Bystrica | Slovensko | Urban Spot | Bez Šance; Hrubý Domáci Produkt; The Trousers; Hasiací Prístroj; KONFLIKT; Odpad; Zatrest | 2027-S07 | Třetí ze tří klubových zastávek putovní série; položka „Prekvapenie“ nemá zveřejněný název účinkujícího a není evidována jako kapela. | TOUR-001
 
 Public Image Ltd: Actual Intelligence Tour 2027 | plánováno | 5. 12. 2027, 20:00 | Praha | Česko | ROXY | Public Image Ltd. | 2027-S08 |
