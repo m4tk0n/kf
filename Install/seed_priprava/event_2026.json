@@ -1078,6 +1078,182 @@
         "https://www.arealvesec.cz/",
         "https://www.benatska.cz/clanky/novinky/"
       ]
+    },
+    {
+      "id": 39,
+      "name": "Rock for People 2026",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-06-10",
+      "date_to": "2026-06-13",
+      "time_start": null,
+      "city": "Hradec Králové",
+      "country": "CZ",
+      "venue_id": 31,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "21:30"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://thefialky.cz/pogo-na-leto-2026/",
+        "https://rockforpeople.cz/kontakty/",
+        "https://www.ireport.cz/clanky/recenze/rock-for-people-den-1-legendy-agnostic-front-the-exploited-a-duo-house-of-protection-ktere-vsechny-strcilo-do-kapsy"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Hřebejkárna 2026",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-06-12",
+      "date_to": "2026-06-12",
+      "time_start": "17:00",
+      "city": "Chomutov",
+      "country": "CZ",
+      "venue_id": 32,
+      "bands": [
+        {
+          "band_id": 3,
+          "sort_order": 1,
+          "time_play": "20:00"
+        },
+        {
+          "band_id": 4,
+          "sort_order": 2,
+          "time_play": "18:45"
+        },
+        {
+          "band_id": 1,
+          "sort_order": 3,
+          "time_play": "21:15"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://visit.chomutov.cz/kalendar/hrebejkarna-punkfest-2026/",
+        "https://vikendo.cz/events/hrebejkarna-2026-totalni-nasazeni-the-fialky-nezfales-dukla-vozovna-peshata",
+        "https://www.hrebikarna.cz/cs/kontakt?format=html"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Moták Fest",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-06-12",
+      "date_to": "2026-06-13",
+      "time_start": null,
+      "city": "Třebětice",
+      "country": "CZ",
+      "venue_id": 33,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "13:40"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.motakfest.cz/informace",
+        "https://kdykam.com/cs/event/477/"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Zakoule Punk Fest 2026",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-06-18",
+      "date_to": "2026-06-18",
+      "time_start": null,
+      "city": "Praha",
+      "country": "CZ",
+      "venue_id": 34,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "19:50"
+        },
+        {
+          "band_id": 4,
+          "sort_order": 2,
+          "time_play": "17:30"
+        },
+        {
+          "band_id": 7,
+          "sort_order": 3,
+          "time_play": "18:40"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.punkfloid.com/praha-zakoule-punk-fest",
+        "https://www.nezfales.cz/odehrane-koncerty/",
+        "https://www.modravopice.cz/kontakt/"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Motozraz Drienok 2026",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-06-19",
+      "date_to": "2026-06-21",
+      "time_start": null,
+      "city": "Mošovce",
+      "country": "SK",
+      "venue_id": 35,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "22:00"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://happeningnext.com/event/motozraz-drienok-2026-eid3a0d72i8tj",
+        "https://www.drienok.sk/assets/documents/PrevadzkovyPoriadokPenzion.pdf",
+        "https://www.turiec.com/ubytovanie/kemping-srz-drienok-mosovce/",
+        "https://www.youtube.com/watch?v=y7E54o14BI8"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Mighty Sounds vol. 20",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-06-26",
+      "date_to": "2026-06-28",
+      "time_start": null,
+      "city": "Tábor",
+      "country": "CZ",
+      "venue_id": 36,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "17:10"
+        },
+        {
+          "band_id": 7,
+          "sort_order": 2,
+          "time_play": null
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.mightysounds.cz/faq",
+        "https://www.mightysounds.cz/info/doprava",
+        "https://www.ireport.cz/clanky/recenze/rock-for-people-den-1-legendy-agnostic-front-the-exploited-a-duo-house-of-protection-ktere-vsechny-strcilo-do-kapsy",
+        "https://www.setlist.fm/setlist/the-fialky/2026/letist-apv-dvr-tabor-czechia-b75cdb2.html"
+      ]
     }
   ],
   "next": []
