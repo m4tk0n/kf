@@ -113,3 +113,8 @@ Turné je samostatný nadřazený záznam se společným názvem. Každá zastá
 Po každé menší dávce ukládej změny JSON souborů na GitHub a aktualizuj `research_progress.txt`, aby bylo možné pokračovat po přerušení. Zapisuj, kterou kapelu a které roky jsi prověřil, co bylo ověřeno a jaký je další konkrétní krok.
 
 **Základní princip:** procházíme historii jedné kapely; její akce odhalují další místa a kapely; nové české a slovenské kapely následně procházejí stejným cyklem.
+
+
+## Automatizovaný průzkum
+
+Automatický sběr archivních podkladů a strukturální audit zajišťuje GitHub Actions workflow `K&F seed research crawler`. Popis spuštění, výstupů a omezení je v [automation/README.md](automation/README.md). Workflow ukládá pouze neověřené kandidáty; nikdy samo nepovyšuje nálezy do ověřených akcí.
