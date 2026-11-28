@@ -1,6 +1,8 @@
 {
+  "_purpose": "Tento soubor slouzi k postupnemu vyhledavani, overovani a identifikaci kapel pro seed databaze K&F. Udaje u kapely (name, genre, country, city a pripadne url) jsou identifikatory, podle kterych se kapela rozpoznava a overuje, ze jde o spravny zaznam. Nejde o kompletni profil kapely ani o definitivni databazovy zaznam. 'aktual' obsahuje prave proverovanou kapelu, 'ok' overene kapely a 'next' kapely cekajici na provereni. ID je poradove ID kapely v ramci teto pripravy; nove kapely dostavaji dalsi volne ID.",
   "aktual": [
     {
+      "id": 1,
       "name": "The Fialky",
       "genre": "punk rock",
       "country": "CZ",
