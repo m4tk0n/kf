@@ -1,0 +1,10 @@
+# Místa konání doložených akcí The Trousers – rok 2017
+# Formát: název | typ | město | stát | adresa | zdroje | poznámka
+
+Dürer Kert – Középső terem | klub | Budapešť | Maďarsko | neuvedeno | 2017-S01 |
+A38 Hajó – koncertní sál | klub | Budapešť | Maďarsko | Petőfi híd budai hídfő | 2017-S02; 2017-S03 |
+Pécsi Est | klub | Pécs | Maďarsko | neuvedeno | 2017-S04 |
+Szekszárdi Est | klub | Szekszárd | Maďarsko | neuvedeno | 2017-S04 |
+Robot | klub | Budapešť | Maďarsko | neuvedeno | 2017-S04 |
+Wakuum | klub | Graz | Rakousko | neuvedeno | 2017-S04 |
+Arena Beisl | klub | Vídeň | Rakousko | neuvedeno | 2017-S04 |
