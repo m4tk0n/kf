@@ -7524,7 +7524,7 @@
     "end_date": "2022-08-26",
     "city": "Trenčín",
     "country_code": "SK",
-    "venue_id": null,
+    "venue_id": "letiste-trencin",
     "lineup_completeness": "official_band_calendar",
     "performances": [
       {
@@ -7549,7 +7549,8 @@
     "source_ids": [
       "src-sps-official-concert-calendar",
       "src-nezfales-official-archive",
-      "src-rozpor-gigography"
+      "src-rozpor-gigography",
+      "src-venue-letiste-trencin-address"
     ],
     "venue_name": "Letiště Trenčín"
   },
@@ -17618,7 +17619,7 @@
     "end_date": "2026-04-24",
     "city": "Uherské Hradiště",
     "country_code": "CZ",
-    "venue_id": null,
+    "venue_id": "klub-mir-uherske-hradiste",
     "lineup_completeness": "official_band_archive",
     "performances": [
       {
@@ -17629,7 +17630,8 @@
       }
     ],
     "source_ids": [
-      "src-houba-official-archive"
+      "src-houba-official-archive",
+      "src-venue-mir-address"
     ],
     "venue_name": "Mír"
   },
@@ -22063,7 +22065,7 @@
     "end_date": "2022-11-11",
     "city": "Košice",
     "country_code": "SK",
-    "venue_id": null,
+    "venue_id": "collosseum-kosice",
     "lineup_completeness": "bandzone_archive",
     "performances": [
       {
@@ -22074,7 +22076,8 @@
       }
     ],
     "source_ids": [
-      "src-totalni-nasazeni-bandzone-archive"
+      "src-totalni-nasazeni-bandzone-archive",
+      "src-venue-collosseum-address"
     ],
     "venue_name": "Collosseum"
   },
@@ -32241,7 +32244,7 @@
     "end_date": "2026-07-08",
     "city": "Trenčín",
     "country_code": "SK",
-    "venue_id": null,
+    "venue_id": "letiste-trencin",
     "lineup_completeness": "band_and_gigography_archives",
     "performances": [
       {
@@ -32252,7 +32255,8 @@
       }
     ],
     "source_ids": [
-      "src-rozpor-gigography"
+      "src-rozpor-gigography",
+      "src-venue-letiste-trencin-address"
     ],
     "venue_name": "Letiště Trenčín"
   },
@@ -32520,7 +32524,7 @@
     "end_date": "2023-07-07",
     "city": "Trenčín",
     "country_code": "SK",
-    "venue_id": null,
+    "venue_id": "letiste-trencin",
     "lineup_completeness": "band_and_gigography_archives",
     "performances": [
       {
@@ -32531,7 +32535,8 @@
       }
     ],
     "source_ids": [
-      "src-rozpor-gigography"
+      "src-rozpor-gigography",
+      "src-venue-letiste-trencin-address"
     ],
     "venue_name": "Letiště Trenčín"
   },
