@@ -20,6 +20,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     seed_reply(405, ['error' => 'method_not_allowed']);
 }
 
+@set_time_limit(240);
+
 $keyName = (string)cfg('seed_research.key_env', 'AI_WRITE_KEY');
 $expected = (string)env($keyName, '');
 $provided = (string)($_SERVER['HTTP_X_AI_KEY'] ?? '');
