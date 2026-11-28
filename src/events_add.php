@@ -186,7 +186,7 @@ function kf_event_clean(array $r): array
     return [
         'name' => kf_event_name_normalize(is_string($r['name'] ?? null) ? $r['name'] : ''), 'type' => $i('type'),
         'date_from' => $s('date_from', 10), 'date_to' => $s('date_to', 10), 'time_start' => $s('time_start', 5),
-        'city_id' => $i('city_id'), 'venue_id' => $i('venue_id'),
+        'city_id' => $i('city_id'), 'city_name' => $s('city_name', 120), 'country_id' => $i('country_id'), 'venue_id' => $i('venue_id'),
         'description' => $s('description', 5000), 'www' => $s('www', 300),
         'bands' => $bands,
     ];
@@ -219,15 +219,15 @@ function kf_event_validate(array &$v): array
         $err[] = 'time';
     }
     if ($v['venue_id'] > 0) {
-        $vc = q('SELECT city_id FROM ' . tbl('venues') . ' WHERE id = ?', [$v['venue_id']])->fetchColumn();
-        if ($vc === false) {
-            $err[] = 'venue';
-            $v['venue_id'] = 0;
-        } elseif ($v['city_id'] < 1) {
-            $v['city_id'] = (int)$vc;
-        }
+        $venueCity = q('SELECT c.id,c.name,c.country_id FROM ' . tbl('venues') . ' v JOIN ' . tbl('cities') . ' c ON c.id=v.city_id WHERE v.id=?', [$v['venue_id']])->fetch();
+        if (!$venueCity) { $err[] = 'venue'; $v['venue_id'] = 0; }
+        elseif ($v['city_id'] < 1 && $v['city_name'] === '') { $v['city_id']=(int)$venueCity['id'];$v['city_name']=(string)$venueCity['name'];$v['country_id']=(int)$venueCity['country_id']; }
     }
-    if ($v['city_id'] < 1 || !q('SELECT 1 FROM ' . tbl('cities') . ' WHERE id = ?', [$v['city_id']])->fetchColumn()) {
+    if ($v['city_id'] > 0) {
+        $city = q('SELECT name,country_id FROM ' . tbl('cities') . ' WHERE id=?', [$v['city_id']])->fetch();
+        if (!$city) $err[]='city';
+        else { $v['city_name']=(string)$city['name'];$v['country_id']=(int)$city['country_id']; }
+    } elseif (!kf_form_valid_city($v['city_name']) || $v['country_id'] < 1 || !q('SELECT 1 FROM ' . tbl('countries') . ' WHERE id=?', [$v['country_id']])->fetchColumn()) {
         $err[] = 'city';
     }
     if ($v['www'] !== '' && !kf_form_valid_url($v['www'])) {
@@ -264,7 +264,7 @@ function kf_event_input(): array
     $v = kf_event_clean([
         'name' => $_POST['name'] ?? '', 'type' => $_POST['type'] ?? 0,
         'date_from' => $_POST['date_from'] ?? '', 'date_to' => $_POST['date_to'] ?? '', 'time_start' => $_POST['time_start'] ?? '',
-        'city_id' => $_POST['city_id'] ?? 0, 'venue_id' => $_POST['venue_id'] ?? 0,
+        'city_id' => $_POST['city_id'] ?? 0, 'city_name' => $_POST['city_name'] ?? '', 'country_id' => $_POST['country_id'] ?? 0, 'venue_id' => $_POST['venue_id'] ?? 0,
         'description' => $_POST['description'] ?? '', 'www' => $_POST['www'] ?? '', 'bands' => $bands,
     ]);
     $err = kf_event_validate($v);
@@ -284,10 +284,11 @@ function kf_event_defaults(): array
 /** Názvy města, státu, klubu a kapel pro zobrazení (náhled, schvalování). */
 function kf_event_view_data(array $v): array
 {
-    $c = q(
+    $c = $v['city_id']>0 ? q(
         'SELECT c.name AS city, co.iso2, co.`' . country_col() . '` AS country FROM ' . tbl('cities') . ' c JOIN ' . tbl('countries') . ' co ON co.id = c.country_id WHERE c.id = ?',
         [$v['city_id']]
-    )->fetch() ?: ['city' => '', 'iso2' => '', 'country' => ''];
+    )->fetch() : false;
+    if(!$c){$c=q('SELECT iso2, `'.country_col().'` AS country FROM '.tbl('countries').' WHERE id=?',[$v['country_id']])->fetch()?:['iso2'=>'','country'=>''];$c['city']=$v['city_name'];}
     $venue = '';
     if ($v['venue_id'] > 0) {
         $venue = (string)q('SELECT name FROM ' . tbl('venues') . ' WHERE id = ?', [$v['venue_id']])->fetchColumn();
@@ -341,7 +342,7 @@ function kf_event_publish(array $v, ?string $srcL, ?int $createdBy): int
         q(
             'INSERT INTO ' . tbl('events') . ' (name, type, date_from, date_to, time_start, city_id, venue_id, flyer, created_by, created_at)
              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-            [$v['name'], $v['type'], $v['date_from'], $v['date_to'], $time, $v['city_id'],
+            [$v['name'], $v['type'], $v['date_from'], $v['date_to'], $time, $cityId,
                 $v['venue_id'] > 0 ? $v['venue_id'] : null, $srcL !== null ? 1 : 0, $createdBy, $now]
         );
         $id = (int)$pdo->lastInsertId();
@@ -425,6 +426,8 @@ function kf_event_form_page(array $v, array $errors, string $image, int $status 
         $venueName = (string)(q('SELECT name FROM ' . tbl('venues') . ' WHERE id = ?', [(int)$v['venue_id']])->fetchColumn() ?: '');
     }
     $v['venue_name'] = $venueName;
+    $countryRow=$v['country_id']>0?q('SELECT `'.country_col().'` AS country,iso2 FROM '.tbl('countries').' WHERE id=?',[$v['country_id']])->fetch():false;
+    $v['country_name']=(string)($countryRow['country']??'');$v['country_iso2']=(string)($countryRow['iso2']??'');
     $bands = q('SELECT id, name FROM ' . tbl('bands') . ' ORDER BY name')->fetchAll();
     page((string)($options['pageTitle'] ?? t('event.new.title')), 'event_form', [
         'old' => $v, 'errors' => $errors, 'cities' => $cities, 'bands' => $bands,
