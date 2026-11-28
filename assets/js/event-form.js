@@ -49,7 +49,7 @@
     if (!admissionCurrency || !nextCountry || nextCountry === lastCurrencyCountry) return;
     lastCurrencyCountry = nextCountry;
     var currency = countryCurrencyMap[nextCountry] || '';
-    if (currency) admissionCurrency.value = currency;
+    admissionCurrency.value = currency;
   }
   function updateAdmissionFields() {
     var mode = admissionType ? admissionType.value : '';
