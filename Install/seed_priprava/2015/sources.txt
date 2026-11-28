@@ -1,5 +1,0 @@
-# Zdroje pro koncertní historii The Trousers – rok 2015
-# Formát: ID | URL | co zdroj dokládá | poznámka
-
-2015-S01 | https://testv2.a38.hu/en/series/zenere-ehesen-koncert-vacsora-az-a38-hajon-2015 | Oficiální archiv A38 uvádí Black Stone Cherry a The Trousers dne 10. 8. 2015 v koncertním sále A38. | Primární zdroj místa konání.
-2015-S02 | https://www.shockmagazin.hu/koncert/black-stone-cherry-the-trousers-budapest-2015-augusztus-10 | Koncertní report potvrzuje datum 10. 8. 2015, A38 Hajó a pořadí kapel; The Trousers vystoupili před Black Stone Cherry. | Dobová reportáž po akci.

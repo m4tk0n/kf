@@ -1,7 +1,0 @@
-# Místa konání doložených akcí The Trousers – rok 2010
-# Formát: název | typ | město | stát | adresa | zdroje | poznámka
-
-Corvintető / Tűzraktér | klub | Budapešť | Maďarsko | neuvedeno | 2010-S01; 2010-S02 | Rozpor v dobových zdrojích; místo koncertu 29. 1. 2010 není zatím rozhodnuto.
-Mappa Club (ex-Trafó Bár) | klub | Budapešť | Maďarsko | neuvedeno | 2010-S06 |
-Corvintető | klub | Budapešť | Maďarsko | neuvedeno | 2010-S03 |
-A38 Hajó | klub | Budapešť | Maďarsko | Petőfi híd budai hídfő | 2010-S04; 2010-S05 |

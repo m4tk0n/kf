@@ -1,7 +1,0 @@
-# Zdroje pro rok 2025
-# Formát: ID | URL | co zdroj dokládá | poznámka
-
-2025-S01 | https://bandzone.cz/koncert/550601-brnenec-areal-firmy-composite-components-brnenecfest-2025-xxiv-aneb-punkovej-klystyr | Datum, místo, časový harmonogram a line-up Brněnecfestu XXIV dne 5. 7. 2025; profily některých kapel včetně města a žánru. | Bandzone; v harmonogramu a souhrnném seznamu je rozpor ohledně Muerti.
-2025-S02 | https://www.darkzin.cz/archiv-probehlych-akci/brnenecfest-xxiv-aneb-punkovej-klystyr-2025/ | Datum, místo, seznam kapel a časový harmonogram Brněnecfestu XXIV. | Sekundární archiv; zveřejněná verze harmonogramu začíná Muerti.
-2025-S03 | https://www.podparou.cz/lineup | Kompletní denní program a všech 39 kapel Festu Pod Parou 2025 ve dnech 17.–19. 7. 2025. | Oficiální pořadatel; primární zdroj line-upu.
-2025-S04 | https://www.podparou.cz/novinky/detail/id/2459 | Oznámení pořadatele o 22. ročníku, termínu, místě a celkovém počtu kapel; doplňující profily vybraných účinkujících. | Oficiální pořadatel.

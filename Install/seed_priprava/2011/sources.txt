@@ -1,5 +1,0 @@
-# Zdroje pro koncertní historii The Trousers – rok 2011
-# Formát: ID | URL | co zdroj dokládá | poznámka
-
-2011-S01 | https://cdn.concertarchives.org/concerts/carbovaris-lo-fi-stereo-superego-moog-pills-the-trousers-zombie-girlfriend-hol-van-ilyenkor-a-rendorseg-calico-island-hammer-of-gods | Koncert 26. 12. 2011 v Dürer Kert, Budapešť; line-up deseti kapel včetně The Trousers. | Konkrétní záznam akce s kompletním line-upem.
-2011-S02 | https://mymusic.hu/koncert/index.php?archive=1&date=&favorite=&m=&ob=&od=&page=60&q=Keresett+sz%C3%B3&qOption=&rpp=50&styles= | Koncertní archiv uvádí The Trousers 20. 10. 2011 v Cross Clubu Praha, 21. 10. 2011 ve Wats Clubu Holešov společně s Dead Pope's Company a 22. 10. 2011 v H-Klubu Šumperk. | Dobový koncertní přehled; line-up dalších dvou akcí není uveden.

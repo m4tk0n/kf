@@ -1,6 +1,0 @@
-# Kapely zjištěné v koncertní historii The Trousers – rok 2013
-# Formát: název | město původu | stát původu | žánr | zdroje | poznámka
-
-The Trousers | Budapešť | Maďarsko | garage rock / hard rock / rock'n'roll | 2013-S01; 2013-S02; 2013-S03; 2013-S04 | Stejná kanonická maďarská kapela jako v ostatních ročnících.
-Peter Hook & The Light | neuvedeno | Spojené království | neuvedeno | 2013-S01 | Účast jako hlavní interpret doložena; projekt a jeho koncertní sestavu ověřit.
-Ozone Mama | neuvedeno | Maďarsko | hard rock | 2013-S02; 2013-S04 | Účast na koncertu doložena; přesný původ ověřit.

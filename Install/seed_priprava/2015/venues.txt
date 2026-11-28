@@ -1,4 +1,0 @@
-# Místa konání doložených akcí The Trousers – rok 2015
-# Formát: název | typ | město | stát | adresa | zdroje | poznámka
-
-A38 Hajó | klub | Budapešť | Maďarsko | Petőfi híd budai hídfő | 2015-S01; 2015-S02 |

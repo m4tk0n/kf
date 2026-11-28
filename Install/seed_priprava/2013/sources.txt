@@ -1,7 +1,0 @@
-# Zdroje pro koncertní historii The Trousers – rok 2013
-# Formát: ID | URL | co zdroj dokládá | poznámka
-
-2013-S01 | https://www.origo.hu/kultura/2013/03/budapesti-koncertek-marcius-25-es-aprilis-1-kozott | Koncert Peter Hook & The Light dne 25. 3. 2013 v A38 Budapešť; The Trousers jsou výslovně uvedeni jako předkapela. | Dobová koncertní pozvánka.
-2013-S02 | https://www.concertarchives.org/bands/the-trousers | Koncert The Trousers a Ozone Mama dne 25. 7. 2013 v A38 Hajó, Budapešť. | Koncertní databáze; konkrétní záznam akce.
-2013-S03 | https://zene.hu/programok/gyorkereso.php?page=25&ti=m&ym=2013-02 | Programový archiv uvádí The Trousers – klippremier és koncert dne 14. 2. 2013 ve Filter Otherground Music Pub, Budapešť. | Dobový programový přehled.
-2013-S04 | https://budapestnekem.hu/search/profil.php?r=100 | Program A38 dne 25. 7. 2013: The Trousers a Ozone Mama na PestiEst Tetőterasz. | Programový archiv s přesným místem a line-upem.

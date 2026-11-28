@@ -1,5 +1,0 @@
-# Kapely zjištěné v koncertní historii The Trousers – rok 2015
-# Formát: název | město původu | stát původu | žánr | zdroje | poznámka
-
-The Trousers | Budapešť | Maďarsko | garage rock / hard rock / rock'n'roll | 2015-S01; 2015-S02 | Stejná kanonická maďarská kapela jako v ostatních ročnících.
-Black Stone Cherry | Edmonton, Kentucky | USA | southern rock; hard rock | 2015-S01; 2015-S02 | Americká kapela z Kentucky; vystoupila jako hlavní interpret koncertu, The Trousers byli support.

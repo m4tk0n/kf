@@ -1,8 +1,0 @@
-# Zahraniční klubová vystoupení nalezená při průzkumu kapely The Trousers
-# Formát: název | typ | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka | turné (pracovní ID)
-
-The Trousers + Dirty Honey | koncert | uskutečněno | 3. 3. 2024 | Budapešť | Maďarsko | Analog Music Hall | The Trousers; Dirty Honey | 2024-S01; 2024-S02 | The Trousers v rozhovoru potvrzují, že na jaře 2024 předskakovali Dirty Honey v Analog Music Hall; datum a místo upřesňuje koncertní archiv. |
-
-The Trousers + Tygers of Pan Tang | koncert | uskutečněno | 9. 5. 2024 | Budapešť | Maďarsko | Analog Music Hall | The Trousers; Tygers of Pan Tang | 2024-S01; 2024-S03 | The Trousers v rozhovoru potvrzují, že na jaře 2024 předskakovali Tygers of Pan Tang v Analog Music Hall; datum a místo upřesňují koncertní archivy. |
-
-Brněnecfest XXIII aneb Punkovej Klystýr | koncert | uskutečněno | 22. 6. 2024, program od 09:00 do 04:00 následujícího dne | Brněnec | Česko | areál hasičského hřiště za teplárnou, Podlesí 9 | Muerti; Driák; P.U.M.; Jaksi Taksi; E!E; Totální nasazení; Houba; Inseminační stanice; Nežfaleš; Tragedis; The Fialky; Vision Days; SPS; Acidez; Dukla Vozovna; !V.V.Ú.; VHS; Bez Šance; Banda | 2024-S05; 2024-S06 | Jednodenní hudební program; hraní pokračovalo po půlnoci, ale nejde o vícedenní festival. Line-up převzat z archivního programu; jiné koncertní archivy potvrzují účast části kapel. |

@@ -1,4 +1,0 @@
-# Místa konání akcí 2024
-# Formát: název | typ | město | stát | adresa | zdroje | poznámka
-
-Analog Music Hall | hudební klub / koncertní sál | Budapešť | Maďarsko | adresa zatím neověřena | 2024-S01; 2024-S02; 2024-S03 |

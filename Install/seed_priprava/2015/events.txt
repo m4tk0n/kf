@@ -1,4 +1,0 @@
-# Koncertní historie kapely The Trousers – doložené akce roku 2015
-# Formát: název | typ | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka | turné
-
-Black Stone Cherry + The Trousers | koncert | uskutečněno | 10. 8. 2015 | Budapešť | Maďarsko | A38 Hajó | Black Stone Cherry; The Trousers | 2015-S01; 2015-S02 | The Trousers byli předkapelou při prvním maďarském koncertu Black Stone Cherry. |

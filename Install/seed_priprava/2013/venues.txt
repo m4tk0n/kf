@@ -1,6 +1,0 @@
-# Místa konání doložených akcí The Trousers – rok 2013
-# Formát: název | typ | město | stát | adresa | zdroje | poznámka
-
-A38 Hajó | klub | Budapešť | Maďarsko | Petőfi híd budai hídfő | 2013-S01; 2013-S02 |
-Filter Otherground Music Pub | klub | Budapešť | Maďarsko | Almássy utca 1 | 2013-S03 |
-A38 Hajó – PestiEst Tetőterasz | klub / venkovní terasa | Budapešť | Maďarsko | Petőfi híd budai hídfő | 2013-S04 | Venkovní střešní terasa A38.

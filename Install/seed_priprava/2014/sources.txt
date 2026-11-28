@@ -1,7 +1,0 @@
-# Zdroje pro koncertní historii The Trousers – rok 2014
-# Formát: ID | URL | co zdroj dokládá | poznámka
-
-2014-S01 | https://www.punk.cz/index.asp?menu=3&record=17422 | Česká miniturné The Trousers s Degradace; přesná data, města, kluby a účinkující pro Ostravu 27. 11., Olomouc 28. 11. a Prahu 29. 11. 2014. | Dobová pozvánka s konkrétním rozpisem všech tří zastávek.
-2014-S02 | https://mymusic.hu/20141118_the_trousers_psycho_mutants_alba_hyseni_g3 | Koncert 21. 11. 2014 v G3 Budapešť s Psycho Mutants a Alba Hyseni Projekt; následující den The Trousers jako support Tankcsapda v Expresszó ve Veszprému; zároveň odkazuje na české koncerty 27.–29. 11. | Dobový hudební magazín; konkrétní data a spoluúčinkující.
-2014-S03 | https://mymusic.hu/cikk.php?id=14262 | Koncert The Trousers, [zalan] a The Signature dne 27. 9. 2014 v Roham Bár, Budapešť; adresa Dohány utca 22. | Dobová pozvánka a podrobný program.
-2014-S04 | https://www.concertarchives.org/bands/the-trousers | Koncert The Trousers, Junkie Jack Flash a Volume Under Kontroll dne 30. 7. 2014 v A38 Hajó, Budapešť. | Koncertní databáze; doplnit primární zdroj, pokud bude nalezen.
