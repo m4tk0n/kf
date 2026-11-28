@@ -66,7 +66,9 @@
     "Seed je propojený pomocí stabilních ID: akce → místa a vystoupení → kapely; turné → zastávky akcí a kapely. Zpětné vazby event_ids a tour_ids slouží ke kontrole vztahů.",
     "Všechny záznamy v events.json, bands.json, venues.json, tours.json a sources.json mají status=pending; žádný záznam není označen jako publikovaný.",
     "Při propojení seed balíčku bylo opraveno 137 chybných event_type, přesunuto 137 kódů zemí do country_code a doplněny 2 jednoznačné vazby akcí na existující místa.",
-    "Neověřené údaje, neznámé země původu, chybějící místa a chybějící data vystoupení zůstávají null nebo nedoplněné; jsou určeny ke kontrole před schválením."
+    "Neověřené údaje, neznámé země původu, chybějící místa a chybějící data vystoupení zůstávají null nebo nedoplněné; jsou určeny ke kontrole před schválením.",
+    "Byly vytvořeny SQL seed soubory 70–74_seed_pending_*.sql. Při instalaci vkládají všech 1 631 připravených záznamů (akce, kapely, místa, zdroje, turné) do skutečné tabulky pending a ukládají celý původní JSON záznam do sloupce pending.payload. Všechny záznamy zůstávají pending; nejde o přímé publikování.",
+    "SQL seed soubory se vykonávají při instalaci, nikoli při běžném FTP deployi. FTP deploy pouze nahraje soubory na server."
   ],
   "seed_status": "pending",
   "seed_integrity": {
@@ -87,6 +89,26 @@
     "invalidTourBands": 0,
     "eventsWithoutVenue": 1164,
     "performancesWithoutBand": 45,
-    "performancesWithoutDate": 45
+    "performancesWithoutDate": 45,
+    "sql_pending_seed": {
+      "files": [
+        "70_seed_pending_events.sql",
+        "71_seed_pending_bands.sql",
+        "72_seed_pending_venues.sql",
+        "73_seed_pending_sources.sql",
+        "74_seed_pending_tours.sql"
+      ],
+      "counts": {
+        "events": 1318,
+        "bands": 130,
+        "venues": 64,
+        "sources": 102,
+        "tours": 17
+      },
+      "total": 1631,
+      "allPending": true,
+      "payloadColumn": "pending.payload",
+      "importMode": "installer_seed_only"
+    }
   }
 }
