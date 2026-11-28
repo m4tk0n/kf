@@ -25,6 +25,8 @@ Pracovní data se ukládají do JSON souborů. Akce jsou rozdělené podle kalen
 - `event_2026.json` až `event_2000.json` — samostatná evidence akcí pro každý kalendářní rok.
 - `tours.txt` — globální evidence turné, která mohou zasahovat do více roků.
 - `research_progress.txt` — checkpoint průzkumu a informace, kde pokračovat.
+- `evidence.json` — registr zdrojů a jednotlivých tvrzení, která zdroje potvrzují.
+- `research_log.txt` — stručný chronologický protokol dokončených dávek a dalších kroků.
 
 Každý soubor s kapelami, místy i akcemi používá pole `aktual`, `ok` a `next`:
 
@@ -35,6 +37,15 @@ Každý soubor s kapelami, místy i akcemi používá pole `aktual`, `ok` a `nex
 V `bands.json/aktual` je vždy jedna právě procházená česká nebo slovenská kapela. Akce se zapisují do ročníku odpovídajícího datu konání.
 
 ## Pravidla evidence
+
+### Ověřování a zdroje — `evidence.json`
+
+- Každý zdroj dostane stabilní ID `SRC-XXXX`; jeden zdroj lze použít pro více tvrzení.
+- Každé důležité tvrzení má vlastní ID `CLM-XXXX`, typ entity, ID entity, pole, hodnotu, stav a seznam zdrojů.
+- Stavy tvrzení: `verified`, `unverified`, `conflict`. Neúspěšné hledání není důkazem neexistence.
+- Přednost mají primární zdroje: oficiální stránky kapel, pořadatelů a míst. Sekundární zdroje slouží ke křížové kontrole.
+- Zdroje v samotném záznamu (`sources`) zůstávají jako URL; `evidence.json` navíc přesně určuje, které tvrzení který zdroj potvrzuje.
+- Pokud se zdroje rozcházejí, údaj se nesmí odhadnout ani označit jako ověřený.
 
 ### Kapely — `bands.json`
 
@@ -73,7 +84,8 @@ V `bands.json/aktual` je vždy jedna právě procházená česká nebo slovensk�
 - Před založením místa porovnej název, adresu, město, stát a historické názvy.
 - Před založením kapely ověř, zda nejde o jinou kapelu se stejným nebo podobným názvem.
 - Pokud se objeví rozpor ve zdrojích, zaznamenej jej a nepovažuj údaj za potvrzený.
-- Každý záznam akce musí mít alespoň jeden dohledatelný zdroj, který potvrzuje její konání nebo program. Zdroje ukládej přímo do pole `sources` jako URL.
+- Každý záznam akce musí mít dohledatelné zdroje pro datum, místo, line-up a skutečné konání. Zdroje ukládej přímo do pole `sources` jako URL a jednotlivá tvrzení propojuj přes `evidence.json`.
+- Ohlášený program sám o sobě nedokazuje, že se akce uskutečnila. Stav `held` vyžaduje důkaz o skutečném konání; plánovaná akce zůstává `planned`.
 
 ## Turné
 
