@@ -1,53 +1,39 @@
-# Automatický výzkum koncertů
+# Automatický výzkum koncertů (bez modelového API)
 
-## Co automatizace dělá
+## Architektura
 
-Workflow .github/workflows/seed-research.yml spouští scripts/seed_research.py:
-- načte výchozí kapely z ročních bands.txt a vytvoří deduplikovanou frontu;
-- nejprve zpracovává jednotlivé kapely a hledá jejich koncertní historii 2000–2027;
-- následně prochází výchozí festivaly a koncertní série po ročnících od 2027 zpět do roku 2000;
-- vyhledává varianty názvů, koncerty, line-upy, spoluúčinkující a doložená turné;
-- nové kapely přidává do fronty, takže se rešerše rekurzivně rozšiřuje;
-- ukládá dílčí výsledky do samostatných souborů JSONL.
+- seed-worker.php je chráněný PHP endpoint nasazený na serveru.
+- GitHub Actions jej jednou denně zavolá přes HTTPS.
+- PHP worker prohledává veřejné výsledky Bing RSS bez modelu a bez placeného vyhledávacího API.
+- Výsledky ukládá přímo na server do souborů v tomto adresáři.
+- Workflow následně stáhne pouze výzkumné soubory přes FTP, uloží je do GitHubu a deploy workflow je vrátí na server.
 
-## Soubory a význam
+## Soubory
 
-- band_queue.json: stav fronty kapel (pending, in_progress, done).
-- automation_state.json: poslední rok/ročník, index výchozího cíle a počty dokončených úloh.
-- research_log.jsonl: audit každé dokončené nebo chybové úlohy.
-- candidates/YYYY/events.jsonl: nalezené kandidátní akce podle roku.
-- candidates/bands.jsonl: kandidátní profily kapel.
-- candidates/venues.jsonl: kandidátní místa.
-- candidates/sources.jsonl: URL zdrojů a co mají dokládat.
+- band_queue.json: fronta 140 výchozích kapel; stav každé kapely a pořadí dotazu.
+- automation_state.json: checkpoint posledního běhu.
+- candidates/search_results.jsonl: nalezené URL, názvy a úryvky výsledků.
+- candidates/search_queries.jsonl: audit provedených dotazů a chyb.
+- research_progress.txt: ručně vedený stav ověřené rešerše.
 
-Každý kandidát má review_status=needs_manual_review. Automatizace nezapisuje automaticky do ověřených ročních events.txt, bands.txt, venues.txt ani sources.txt. Tím se zabrání tomu, aby chybný výstup modelu vypadal jako ověřený fakt. Kandidáty lze po kontrole převést do těchto textových souborů.
+## Jak worker hledá
 
-## Obnovení po přerušení
+Pro každou kapelu používá varianty přesného názvu, koncertů, live/tour/gig, festivalů a line-upů, setlistů, historie kapely, klubů a zápisu bez diakritiky. Jedno spuštění má limit 12 dotazů. Po každém dotazu se ihned uloží výsledky i pozice ve frontě. Přerušený běh proto pokračuje od další varianty.
 
-- Fronta a stav se ukládají do souborů v repozitáři.
-- Přerušená položka in_progress se při dalším spuštění vrátí do pending.
-- Kandidáti se zapisují průběžně a deduplikují podle identifikátoru.
-- Workflow má concurrency, takže se dva výzkumné běhy nepřekrývají.
-- Po skončení nebo chybě běhu se dostupné změny commitnou do main.
+## Co výsledky znamenají
 
-## Zapnutí
+Výsledky vyhledávače jsou pouze zdrojové stopy, nikoli potvrzené koncerty. Skript sám nevymýšlí data, line-upy ani identitu kapel a automaticky nic nepřidává do ověřených ročních events.txt, bands.txt, venues.txt nebo sources.txt.
 
-Zatím je automatické spouštění bezpečně vypnuté. V GitHubu v repozitáři m4tk0n/kf nastav:
+Já následně zdroje ověřuji, rozlišuji stejnojmenné kapely, sestavuji koncerty a line-upy a zapisuji ověřené údaje do příslušných ročních souborů. Nové kapely z ověřených line-upů se přidávají do fronty.
 
-1. Settings → Secrets and variables → Actions → New repository secret
-   - název: OPENAI_API_KEY
-   - hodnota: tvůj API klíč OpenAI.
-2. Settings → Secrets and variables → Actions → Variables → New repository variable
-   - název: SEED_RESEARCH_ENABLED
-   - hodnota: true
+## Bezpečnost a nastavení
 
-API používá Responses API s web search nástrojem a modelem gpt-6.2-astra. Použití OpenAI API může být zpoplatněné podle aktuálního API ceníku a účtu; není součástí běžného ChatGPT tarifu. Dokud proměnná není true, workflow rešerši nespustí a API se nevolá.
+- Endpoint přijímá pouze POST a vyžaduje hlavičku X-AI-Key.
+- Používá existující AI_WRITE_KEY z .env; stejná hodnota musí být v GitHub Secret AI_WRITE_KEY.
+- Soubory v candidates/ jsou na webu blokované pomocí .htaccess.
+- Worker používá zámek, aby se běhy nepřekrývaly.
+- Žádné OpenAI API, žádný modelový secret, žádné SQL a žádný zápis do databáze.
 
-Po zapnutí se workflow spouští jednou denně (výchozí limit dvě rešeršní úlohy). Ručně jej lze spustit přes Actions → K&F – automatický výzkum koncertů → Run workflow. Výchozí limit jsou dvě rešeršní úlohy na běh; lze jej zvýšit na nejvýše osm.
+## Spuštění
 
-## Důležité limity
-
-- Web search a jazykový model mohou přehlédnout zdroje nebo chybně vyhodnotit podobné názvy. Výstupy jsou proto kandidáti, nikoli automaticky ověřená data.
-- Nelze zaručit nalezení všech koncertů ani všech variant názvu.
-- U zahraničních koncertů se ukládají pouze klubové akce; zahraniční festivaly se vynechávají.
-- Skript nepřistupuje k databázi, nevytváří SQL a nenasazuje nic na živý web.
+Workflow .github/workflows/seed-research.yml se spouští jednou denně nebo ručně přes Actions. Pro ruční běh lze nastavit počet dotazů 1–12.
