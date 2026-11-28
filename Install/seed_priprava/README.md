@@ -230,3 +230,8 @@ Teprve po dokončení sběru a samostatné kontrole dat se z připravených zdro
 Do výsledného SQL patří pouze autentické, ověřené kapely, akce a místa a správné vazby mezi nimi. Jedna kanonická kapela se vloží pouze jednou, její vystoupení se propojí se všemi odpovídajícími akcemi a zastávky doloženého turné se propojí s jedním nadřazeným záznamem turné. Neověřené nebo fiktivní záznamy do seedu nepatří.
 
 **Základní princip práce: každá ověřená akce přináší kapely, každá kapela může odhalit další akce a každá další akce přináší další kapely. Prohledáváme tímto způsobem historii české a slovenské koncertní scény v letech 2000–2027.**
+
+
+## Automatizovaný výzkum
+
+Rekurzivní průzkum kapel a jejich koncertních historií zajišťuje GitHub Actions. Popis, strukturu souborů, checkpointy a zapnutí najdeš v AUTOMATIZACE.md v tomto adresáři. Automaticky nalezené údaje se ukládají nejprve jako kandidáti k ruční kontrole; do ověřených ročních textových souborů se bez kontroly nepřidávají.
