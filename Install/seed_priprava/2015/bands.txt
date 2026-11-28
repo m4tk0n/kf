@@ -1,55 +1,5 @@
 # Kapely zjištěné v koncertní historii The Trousers – rok 2015
 # Formát: název | město původu | stát původu | žánr | zdroje | poznámka
 
-Judas Priest | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-HIM | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Ákos | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Sabaton | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Halott Pénz | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Punnany Massif | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Black Label Society | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Soilwork | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Magna Cum Laude | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Wellhello | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Brains | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Danko Jones | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Gus G. | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Hooligans | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Péterfy Bori & Love Band | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Vad Fruttik | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Hiperkarma | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Sex Action 25 | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Depresszió | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Subscribe | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Kalapács | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Aurora | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Road | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Lord | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Kiscsillag | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Irie Maffia | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Cloud 9+ | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Magashegyi Underground | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Moby Dick | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Dalriada | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Cadaveres | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-The Biebers | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-OchoMacho | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-VL45 | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Ivan & the Parazol | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Anima Sound System | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Supernem | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Anna & the Barbies | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-The Trousers | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Burnout | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Karai Anna | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Babel | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Kalef | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-ED IS ON | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Good Time Boys | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-A Nyughatatlan | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Voler Mouche | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Exchanged | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-E.V.M. | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Kovbojok | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-SKA-Pécs | neuvedeno | neuvedeno | neuvedeno | 2015-S01; 2015-S02 | Účast na FEZEN 2015 doložena programem; původ a žánr ověřit samostatně.
-Black Stone Cherry | Edmonton, Kentucky | USA | southern rock; hard rock | 2015-S04; 2015-S05 | Americká kapela z Kentucky; vystoupila jako hlavní interpret koncertu, The Trousers byli support.
+The Trousers | Budapešť | Maďarsko | garage rock / hard rock / rock'n'roll | 2015-S01; 2015-S02 | Stejná kanonická maďarská kapela jako v ostatních ročnících.
+Black Stone Cherry | Edmonton, Kentucky | USA | southern rock; hard rock | 2015-S01; 2015-S02 | Americká kapela z Kentucky; vystoupila jako hlavní interpret koncertu, The Trousers byli support.
