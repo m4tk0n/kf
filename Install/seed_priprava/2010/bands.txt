@@ -1,0 +1,12 @@
+# Kapely zjištěné v koncertní historii The Trousers – rok 2010
+# Formát: název | město původu | stát původu | žánr | zdroje | poznámka
+
+The Trousers | Budapešť | Maďarsko | garage rock / hard rock / rock'n'roll | 2010-S01; 2010-S03; 2010-S04; 2010-S05; 2010-S06 | Stejná kanonická maďarská kapela jako v záznamech 2014, 2023, 2024, 2026 a 2027.
+Kinkiez | neuvedeno | neuvedeno | neuvedeno | 2010-S01; 2010-S02 | Účast na koncertu doložena; identitu a další historii ověřit.
+Kollaps | neuvedeno | neuvedeno | neuvedeno | 2010-S01; 2010-S02 | Účast na koncertu doložena; identitu a další historii ověřit.
+Supernem | neuvedeno | Maďarsko | rock | 2010-S06 | Účast na tribute večeru doložena; město původu a přesnější žánr ověřit.
+Electric Bastards | neuvedeno | neuvedeno | neuvedeno | 2010-S06 | Účast na tribute večeru doložena; identitu a další historii ověřit.
+Dead Pope's Company | neuvedeno | Česko | garage-glam; indie rock | 2010-S03 | Dobový článek je označuje za českou garážově-glam-indie kapelu; město původu ověřit.
+Esti Kornél | neuvedeno | Maďarsko | neuvedeno | 2010-S03 | Účast na koncertu doložena; město původu a žánr ověřit.
+Obits | Brooklyn | USA | punk rockabilly; post-punk | 2010-S04; 2010-S05 | Dobový článek uvádí Brooklyn a popisuje žánrové vlivy.
+Auxes | neuvedeno | USA | neuvedeno | 2010-S04; 2010-S05 | Zdroje označují Auxes jako americkou kapelu; přesný původ a žánr ověřit.
