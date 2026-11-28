@@ -62,6 +62,31 @@
     "U areálu Pod Chlístovskou skálou byla podle dodaných údajů doplněna popisná poloha mezi Perknovem a Chlístovem v obci Okrouhlice a souřadnice 49.622000, 15.531750; nejde o poštovní adresu.",
     "U Youth Center CK13 v Novém Sadu byla doplněna adresa Vojvode Bojovića 13, 21000 Novi Sad, Srbsko podle údaje dodaného uživatelem; souřadnice zůstávají null.",
     "U klubu Podrum v Rijece byla doplněna adresa Delta 5/I, 51000 Rijeka, Chorvatsko podle údaje dodaného uživatelem; souřadnice zůstávají null.",
-    "U AKAB Okretnica v Bělehradě byla doplněna popisná poloha podle oficiální kontaktní stránky: pod Pančevačkim mostem, vedle železniční stanice Pančevački most; nejde o přesnou poštovní adresu. Prostor ukončil činnost 23. 11. 2024."
-  ]
+    "U AKAB Okretnica v Bělehradě byla doplněna popisná poloha podle oficiální kontaktní stránky: pod Pančevačkim mostem, vedle železniční stanice Pančevački most; nejde o přesnou poštovní adresu. Prostor ukončil činnost 23. 11. 2024.",
+    "Seed je propojený pomocí stabilních ID: akce → místa a vystoupení → kapely; turné → zastávky akcí a kapely. Zpětné vazby event_ids a tour_ids slouží ke kontrole vztahů.",
+    "Všechny záznamy v events.json, bands.json, venues.json, tours.json a sources.json mají status=pending; žádný záznam není označen jako publikovaný.",
+    "Při propojení seed balíčku bylo opraveno 137 chybných event_type, přesunuto 137 kódů zemí do country_code a doplněny 2 jednoznačné vazby akcí na existující místa.",
+    "Neověřené údaje, neznámé země původu, chybějící místa a chybějící data vystoupení zůstávají null nebo nedoplněné; jsou určeny ke kontrole před schválením."
+  ],
+  "seed_status": "pending",
+  "seed_integrity": {
+    "counts": {
+      "events": 1318,
+      "bands": 130,
+      "venues": 64,
+      "sources": 102,
+      "tours": 17
+    },
+    "allPending": true,
+    "invalidEventVenues": 0,
+    "invalidEventSources": 0,
+    "invalidPerformanceBands": 0,
+    "invalidBandSources": 0,
+    "invalidVenueSources": 0,
+    "invalidTourEvents": 0,
+    "invalidTourBands": 0,
+    "eventsWithoutVenue": 1164,
+    "performancesWithoutBand": 45,
+    "performancesWithoutDate": 45
+  }
 }
