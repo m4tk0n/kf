@@ -1,0 +1,10 @@
+# Koncertní historie kapely The Trousers – doložené akce roku 2017
+# Formát: název | typ | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka | turné
+
+Asphalt Horsemen + MAB + The Trousers | koncert | uskutečněno | 25. 3. 2017 | Budapešť | Maďarsko | Dürer Kert, Középső terem | Asphalt Horsemen; MAB; The Trousers | 2017-S01 | Program uvádí Asphalt Horsemen, MAB a The Trousers v uvedeném pořadí. |
+The Trousers + Dungaree | koncert | uskutečněno | 24. 8. 2017 | Budapešť | Maďarsko | A38 Hajó, koncertní sál | The Trousers; Dungaree | 2017-S02; 2017-S03 | Oficiální program A38 uvádí oba účinkující, datum a místo. |
+Junkies + The Trousers | koncert | uskutečněno | 22. 9. 2017 | Pécs | Maďarsko | Pécsi Est | Junkies; The Trousers | 2017-S04 | The Trousers jako hosté výročního turné Junkies k albu Nihil. | The Trousers – 5-stop tour 2017
+Junkies + The Trousers | koncert | uskutečněno | 23. 9. 2017 | Szekszárd | Maďarsko | Szekszárdi Est | Junkies; The Trousers | 2017-S04 | The Trousers jako hosté výročního turné Junkies k albu Nihil. | The Trousers – 5-stop tour 2017
+The Trousers + Peter Kovary & The Royal Rebels + Z3 The Blues Wheels | koncert | uskutečněno | 27. 9. 2017 | Budapešť | Maďarsko | Robot | The Trousers; Peter Kovary & The Royal Rebels; Z3 The Blues Wheels | 2017-S04 | Line-up podle oznámení kapely; Z3 The Blues Wheels jsou označeni jako bratislavská kapela. | The Trousers – 5-stop tour 2017
+The Trousers + Basin City Orchestra + Pan + Sleeepwalker | koncert | uskutečněno | 29. 9. 2017 | Graz | Rakousko | Wakuum | The Trousers; Basin City Orchestra; Pan; Sleeepwalker | 2017-S04 | Zahraniční klubový koncert; Basin City Orchestra z Norimberku, Pan a Sleeepwalker místní kapely. | The Trousers – 5-stop tour 2017
+The Trousers + Basin City Orchestra | koncert | uskutečněno | 30. 9. 2017 | Vídeň | Rakousko | Arena Beisl | The Trousers; Basin City Orchestra | 2017-S04 | Zahraniční klubový koncert; závěrečná zastávka pětičlenného turné. | The Trousers – 5-stop tour 2017
