@@ -17,7 +17,8 @@ Přidávání klubu je dostupné přihlášeným uživatelům s oprávněním su
 ### Pole
 
 - Název klubu / místa
-- Město a stát (výběr existujícího města; stát je určen městem)
+- Město: textové pole s našeptávačem z tabulky cities.
+- Stát: samostatné textové pole s našeptávačem z tabulky countries. Výběr města automaticky doplní odpovídající stát; při výběru státu se našeptávání měst omezí na tento stát. Odeslání vyžaduje platné vybrané ID města i státu a server ověřuje jejich vzájemnou příslušnost.
 - Adresa
 - E-mail
 - Telefon
