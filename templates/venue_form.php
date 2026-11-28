@@ -13,7 +13,7 @@ declare(strict_types=1);
     </ul>
   <?php endif; ?>
 
-  <form method="post" action="<?= e(url('venue/new')) ?>" enctype="multipart/form-data" class="stack" data-venue-form data-location-required="<?= e(t('venue.err.location')) ?>">
+  <form method="post" action="<?= e(url('venue/new')) ?>" enctype="multipart/form-data" class="stack" data-venue-form data-location-required="<?= e(t('venue.err.location')) ?>" data-address-invalid="<?= e(t('venue.err.address')) ?>" data-city-invalid="<?= e(t('venue.err.city')) ?>">
     <?= csrf_field() ?>
 
     <label><?= e(t('venue.f.name')) ?>
@@ -23,7 +23,7 @@ declare(strict_types=1);
     <div class="venue-location-grid">
       <label class="event-name-field"><?= e(t('venue.f.city')) ?>
         <input type="hidden" name="city_id" value="<?= (int)$old['city_id'] ?>" data-venue-city-id>
-        <input type="text" name="city_name" value="<?= e((string)($old['city_name'] ?? '')) ?>" maxlength="120" required
+        <input type="text" name="city_name" value="<?= e((string)($old['city_name'] ?? '')) ?>" maxlength="120" minlength="2" required
           autocomplete="off" placeholder="<?= e(t('event.f.city_pick')) ?>"
           data-venue-city-input data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
           data-suggest-url="<?= e(url('venue/city-suggest')) ?>">
@@ -45,7 +45,7 @@ declare(strict_types=1);
 
     <?php foreach (['address', 'email', 'phone', 'www', 'google_maps', 'mapy_maps'] as $k): ?>
       <label><?= e(t('venue.f.' . $k)) ?>
-        <input type="text" name="<?= e($k) ?>" value="<?= e((string)$old[$k]) ?>"
+        <input type="<?= $k === 'email' ? 'email' : (in_array($k, ['www', 'google_maps', 'mapy_maps'], true) ? 'url' : 'text') ?>" name="<?= e($k) ?>" value="<?= e((string)$old[$k]) ?>"
           maxlength="<?= $k === 'address' ? 255 : ($k === 'email' ? 120 : ($k === 'phone' ? 30 : ($k === 'www' ? 300 : 500))) ?>"
           <?= in_array($k, ['www', 'google_maps', 'mapy_maps'], true) ? 'placeholder="https://"' : '' ?>>
       </label>
@@ -60,7 +60,7 @@ declare(strict_types=1);
     </label>
 
     <label><?= e(t('event.f.image_url')) ?>
-      <input type="text" name="image_url" maxlength="300" placeholder="https://" data-event-image-url>
+      <input type="url" name="image_url" maxlength="300" placeholder="https://" data-event-image-url>
     </label>
 
     <?php if ($imgUrl !== ''): ?>
