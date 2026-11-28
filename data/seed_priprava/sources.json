@@ -477,5 +477,23 @@
       "cities",
       "tour_names"
     ]
+  },
+  {
+    "id": "src-totalni-nasazeni-bandzone-archive",
+    "name": "TOTÁLNÍ NASAZENÍ – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/totaci?at=gig&cd=1&gy=2025",
+    "publisher": "Bandzone / Totální nasazení",
+    "source_type": "band_profile_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "lineups",
+      "tour_names"
+    ],
+    "limitations": [
+      "Archivní seznam obsahuje také akce s nejasnou veřejnou dostupností; importovány jsou dohledatelné koncerty a festivaly, soukromé položky se vynechávají."
+    ]
   }
 ]

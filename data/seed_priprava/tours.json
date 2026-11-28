@@ -467,5 +467,36 @@
       "src-houba-official-archive"
     ],
     "verification": "official_band_archive"
+  },
+  {
+    "id": "totalni-nasazeni-smola-hrusky-tour-2022",
+    "name": "Totální Hrušky – CZ/SK Tour 2022",
+    "start_date": "2022-10-08",
+    "end_date": "2022-11-19",
+    "band_ids": [
+      "totalni-nasazeni",
+      "smola-a-hrusky"
+    ],
+    "event_ids": [
+      "totalni-nasazeni-2022-10-08-daskabat",
+      "totalni-nasazeni-2022-10-14-brno",
+      "totalni-nasazeni-2022-10-15-praha",
+      "totalni-nasazeni-2022-10-21-pardubice",
+      "totalni-nasazeni-2022-10-22-most",
+      "totalni-nasazeni-2022-11-04-bratislava",
+      "totalni-nasazeni-2022-11-05-zilina",
+      "totalni-nasazeni-2022-11-11-kosice",
+      "totalni-nasazeni-2022-11-12-presov",
+      "totalni-nasazeni-2022-11-18-nove-mesto-nad-vahom",
+      "totalni-nasazeni-2022-11-19-puchov"
+    ],
+    "country_codes": [
+      "CZ",
+      "SK"
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "verification": "named_tour_from_bandzone_archive"
   }
 ]

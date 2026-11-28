@@ -365,8 +365,10 @@
     "source_ids": [
       "src-podparou-lineup-2025",
       "src-podparou-venue-2025",
-      "src-podparou-history"
-    ]
+      "src-podparou-history",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Korunní pevnůstka"
   },
   {
     "id": "punkaci-detom-2025",
@@ -2623,12 +2625,56 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-08-22",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-08-22",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2025-08-22",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2025-08-22",
+        "name": "BRATISLAVSKÉ DIEVČATÁ",
+        "country_code": "SK",
+        "band_id": "bratislavske-dievcata"
+      },
+      {
+        "date": "2025-08-22",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2025-08-22",
+        "name": "N.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "nvu"
+      },
+      {
+        "date": "2025-08-22",
+        "name": "STARÉ PUŠKY",
+        "country_code": "CZ",
+        "band_id": "stare-pusky"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Letní kino Slaný"
   },
   {
     "id": "sps-2025-08-22-trutnov",
@@ -2696,12 +2742,20 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-08-08",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "nový areál"
   },
   {
     "id": "sps-2025-08-02-chvalkov-u-kamenice-nad-lipou",
@@ -2879,12 +2933,26 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2025-07-11",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-07-11",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "jezero"
   },
   {
     "id": "sps-2025-07-05-brnenec-u-svitav",
@@ -3065,7 +3133,7 @@
   {
     "id": "sps-2025-06-13-chomutov",
     "name": "Hřebíkárna Open Air",
-    "event_type": "concert",
+    "event_type": "festival",
     "start_date": "2025-06-13",
     "end_date": "2025-06-13",
     "city": "Chomutov",
@@ -3078,11 +3146,31 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2025-06-13",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-06-13",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2025-06-13",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Hřebíkárna"
   },
   {
     "id": "sps-2025-06-07-usti-nad-labem",
@@ -7720,7 +7808,7 @@
   {
     "id": "sps-2022-05-07-pribram",
     "name": "35 let E!E",
-    "event_type": "concert",
+    "event_type": "festival",
     "start_date": "2022-05-07",
     "end_date": "2022-05-07",
     "city": "Příbram",
@@ -7733,11 +7821,37 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2022-05-07",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-05-07",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2022-05-07",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-05-07",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Junior"
   },
   {
     "id": "sps-2022-04-30-uherske-hradiste",
@@ -10242,11 +10356,85 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": "driak"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "STARÉ PUŠKY",
+        "country_code": "CZ",
+        "band_id": "stare-pusky"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "MUERTI",
+        "country_code": "CZ",
+        "band_id": "muerti"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "e-e"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "ZNOUZECTNOST",
+        "country_code": "CZ",
+        "band_id": "znouzectnost"
+      },
+      {
+        "date": "2025-07-05",
+        "name": "ZATREST",
+        "country_code": "CZ",
+        "band_id": "zatrest"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "areál firmy Composite Components"
   },
   {
     "id": "fialky-2025-06-21-olomouc",
@@ -12028,12 +12216,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-02-25",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Dům osvěty"
   },
   {
     "id": "fialky-2022-02-26-plzen",
@@ -12057,12 +12253,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-02-26",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Buena Vista Club"
   },
   {
     "id": "fialky-2022-03-11-liberec",
@@ -12086,12 +12290,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-03-11",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Bunkr Rock Club"
   },
   {
     "id": "fialky-2022-03-12-ceske-budejovice",
@@ -12115,12 +12327,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-03-12",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Café Klub Slavie"
   },
   {
     "id": "fialky-2022-03-18-strakonice",
@@ -12166,12 +12386,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-03-19",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "MSD Kolín"
   },
   {
     "id": "fialky-2022-03-25-ostrava",
@@ -12195,12 +12423,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-03-25",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Barrák"
   },
   {
     "id": "fialky-2022-03-26-uherske-hradiste",
@@ -12224,12 +12460,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-03-26",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Klub Mír"
   },
   {
     "id": "fialky-2022-04-01-brno",
@@ -12253,12 +12497,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-04-01",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Melodka"
   },
   {
     "id": "fialky-2022-04-02-bratislava",
@@ -12282,12 +12534,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-04-02",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Fuga"
   },
   {
     "id": "fialky-2022-04-08-teplice",
@@ -12311,12 +12571,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-04-08",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "KNAK"
   },
   {
     "id": "fialky-2022-04-09-praha",
@@ -12340,12 +12608,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-04-09",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Futurum"
   },
   {
     "id": "fialky-2022-10-14-olomouc",
@@ -15591,11 +15867,25 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-03-18",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-03-18",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
       }
     ],
     "source_ids": [
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "KD"
   },
   {
     "id": "nezfales-2021-10-08-nachod",
@@ -16410,10 +16700,23 @@
         "name": "HOUBA",
         "country_code": "CZ",
         "band_id": "houba"
+      },
+      {
+        "date": "2025-01-17",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-01-17",
+        "name": "STARÉ PUŠKY",
+        "country_code": "CZ",
+        "band_id": "stare-pusky"
       }
     ],
     "source_ids": [
-      "src-houba-official-archive"
+      "src-houba-official-archive",
+      "src-totalni-nasazeni-bandzone-archive"
     ],
     "venue_name": "Svět sám pro sebe"
   },
@@ -19043,5 +19346,1755 @@
       "src-punkfloid-official-archive"
     ],
     "venue_name": "Za koule Punk Fest"
+  },
+  {
+    "id": "totalni-nasazeni-2025-01-25-vyskov",
+    "name": "TOTÁLNÍ NASAZENÍ VE VYŠKOVĚ",
+    "event_type": "concert",
+    "start_date": "2025-01-25",
+    "end_date": "2025-01-25",
+    "city": "Vyškov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-01-25",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Peklo Vyškov"
+  },
+  {
+    "id": "totalni-nasazeni-2025-02-07-trebic",
+    "name": "TOTÁLNÍ NASAZENÍ V TŘEBÍČI",
+    "event_type": "concert",
+    "start_date": "2025-02-07",
+    "end_date": "2025-02-07",
+    "city": "Třebíč",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-02-07",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Hudební klub B"
+  },
+  {
+    "id": "totalni-nasazeni-2025-02-21-libceves",
+    "name": "TOTÁLNÍ NASAZENÍ V LIBČEVSI",
+    "event_type": "concert",
+    "start_date": "2025-02-21",
+    "end_date": "2025-02-21",
+    "city": "Libčeves",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-02-21",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "obecní taneční sál"
+  },
+  {
+    "id": "totalni-nasazeni-2025-03-07-ceske-budejovice",
+    "name": "TOTÁLNÍ NASAZENÍ V ČESKÝCH BUDĚJOVICÍCH",
+    "event_type": "concert",
+    "start_date": "2025-03-07",
+    "end_date": "2025-03-07",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-07",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "MC Fabrika"
+  },
+  {
+    "id": "totalni-nasazeni-2025-03-08-praha",
+    "name": "NAROZENINOVÁ OSLAVA – 50 LET P.P.CVOKA",
+    "event_type": "concert",
+    "start_date": "2025-03-08",
+    "end_date": "2025-03-08",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-08",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Futurum"
+  },
+  {
+    "id": "totalni-nasazeni-2025-03-15-pardubice",
+    "name": "TOTÁLNÍ NASAZENÍ & VISION DAYS / TURNÉ 2025",
+    "event_type": "concert",
+    "start_date": "2025-03-15",
+    "end_date": "2025-03-15",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-15",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-03-15",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Žlutý pes"
+  },
+  {
+    "id": "totalni-nasazeni-2025-03-21-jindrichuv-hradec",
+    "name": "TOTÁLNÍ NASAZENÍ V JINDŘICHOVĚ HRADCI",
+    "event_type": "concert",
+    "start_date": "2025-03-21",
+    "end_date": "2025-03-21",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-21",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Lucky Pery"
+  },
+  {
+    "id": "totalni-nasazeni-2025-03-22-milevsko",
+    "name": "TOTÁLNÍ NASAZENÍ & VISION DAYS / TURNÉ 2025",
+    "event_type": "concert",
+    "start_date": "2025-03-22",
+    "end_date": "2025-03-22",
+    "city": "Milevsko",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-22",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-03-22",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "DK Milevsko"
+  },
+  {
+    "id": "totalni-nasazeni-2025-03-28-liberec",
+    "name": "TOTÁLNÍ NASAZENÍ & VISION DAYS / TURNÉ 2025",
+    "event_type": "concert",
+    "start_date": "2025-03-28",
+    "end_date": "2025-03-28",
+    "city": "Liberec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-28",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-03-28",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Bunkr Rock Club"
+  },
+  {
+    "id": "totalni-nasazeni-2025-03-29-plzen",
+    "name": "TOTÁLNÍ NASAZENÍ & VISION DAYS / TURNÉ 2025",
+    "event_type": "concert",
+    "start_date": "2025-03-29",
+    "end_date": "2025-03-29",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-03-29",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-03-29",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Bílej Medvěd"
+  },
+  {
+    "id": "totalni-nasazeni-2025-04-04-havlickuv-brod",
+    "name": "TOTÁLNÍ NASAZENÍ & VISION DAYS / TURNÉ 2025",
+    "event_type": "concert",
+    "start_date": "2025-04-04",
+    "end_date": "2025-04-04",
+    "city": "Havlíčkův Brod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-04-04",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-04-04",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Klub Oko"
+  },
+  {
+    "id": "totalni-nasazeni-2025-04-05-brno",
+    "name": "TOTÁLNÍ NASAZENÍ & VISION DAYS / TURNÉ 2025",
+    "event_type": "concert",
+    "start_date": "2025-04-05",
+    "end_date": "2025-04-05",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-04-05",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-04-05",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "První patro"
+  },
+  {
+    "id": "totalni-nasazeni-2025-04-11-decin",
+    "name": "TOTÁLNÍ NASAZENÍ & VISION DAYS / TURNÉ 2025",
+    "event_type": "concert",
+    "start_date": "2025-04-11",
+    "end_date": "2025-04-11",
+    "city": "Děčín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-04-11",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-04-11",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Le Garage Noir"
+  },
+  {
+    "id": "totalni-nasazeni-2025-04-12-ostrava",
+    "name": "TOTÁLNÍ NASAZENÍ & VISION DAYS / TURNÉ 2025",
+    "event_type": "concert",
+    "start_date": "2025-04-12",
+    "end_date": "2025-04-12",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-04-12",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-04-12",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Barrák"
+  },
+  {
+    "id": "totalni-nasazeni-2025-05-03-telc",
+    "name": "TOTÁLNÍ NASAZENÍ & VOSOLIT! V PROSTORU",
+    "event_type": "concert",
+    "start_date": "2025-05-03",
+    "end_date": "2025-05-03",
+    "city": "Telč",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-05-03",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Prostor"
+  },
+  {
+    "id": "totalni-nasazeni-2025-05-17-studena",
+    "name": "III. STUDENSKÁ PIVOSLÁVA",
+    "event_type": "festival",
+    "start_date": "2025-05-17",
+    "end_date": "2025-05-17",
+    "city": "Studená",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-05-17",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "náměstí sv. Jana Nepomuckého"
+  },
+  {
+    "id": "totalni-nasazeni-2025-05-17-cesky-krumlov",
+    "name": "Den pivovaru Krumlov – Festival piva",
+    "event_type": "festival",
+    "start_date": "2025-05-17",
+    "end_date": "2025-05-17",
+    "city": "Český Krumlov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-05-17",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Historický pivovar Český Krumlov"
+  },
+  {
+    "id": "totalni-nasazeni-2025-05-24-velvary",
+    "name": "MALVAFEST 2025",
+    "event_type": "festival",
+    "start_date": "2025-05-24",
+    "end_date": "2025-05-24",
+    "city": "Velvary",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-05-24",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Malovarský rybník"
+  },
+  {
+    "id": "totalni-nasazeni-2025-05-30-pavlikov",
+    "name": "TOTÁLNÍ NASAZENÍ & HOSTÉ V PAVLÍKOVĚ",
+    "event_type": "concert",
+    "start_date": "2025-05-30",
+    "end_date": "2025-05-30",
+    "city": "Pavlíkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-05-30",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-05-30",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "FotbalPark"
+  },
+  {
+    "id": "totalni-nasazeni-2025-05-31-praha",
+    "name": "20 LET OPEN AIR zakázanÝovoce",
+    "event_type": "festival",
+    "start_date": "2025-05-31",
+    "end_date": "2025-05-31",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-05-31",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Střelecký ostrov"
+  },
+  {
+    "id": "totalni-nasazeni-2025-06-06-cheb",
+    "name": "GURMAN NIGHT OPEN AIR 2025",
+    "event_type": "festival",
+    "start_date": "2025-06-06",
+    "end_date": "2025-06-06",
+    "city": "Cheb",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-06-06",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Krajinná výstava"
+  },
+  {
+    "id": "totalni-nasazeni-2025-06-07-trebetice",
+    "name": "MOTÁKfest",
+    "event_type": "festival",
+    "start_date": "2025-06-07",
+    "end_date": "2025-06-07",
+    "city": "Třebětice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-06-07",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Sportovní areál"
+  },
+  {
+    "id": "totalni-nasazeni-2025-06-14-dobris",
+    "name": "FAMILIES DAY 2025",
+    "event_type": "festival",
+    "start_date": "2025-06-14",
+    "end_date": "2025-06-14",
+    "city": "Dobříš",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-06-14",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "V Lipkách"
+  },
+  {
+    "id": "totalni-nasazeni-2025-06-21-drinov",
+    "name": "NA DŘÍNOVĚ TAM JE BIG BEAT VOL.7",
+    "event_type": "festival",
+    "start_date": "2025-06-21",
+    "end_date": "2025-06-21",
+    "city": "Dřínov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-06-21",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "fotbalové hřiště"
+  },
+  {
+    "id": "totalni-nasazeni-2025-06-21-strakonice",
+    "name": "PIVOVARSKÁ POUŤ 2025",
+    "event_type": "festival",
+    "start_date": "2025-06-21",
+    "end_date": "2025-06-21",
+    "city": "Strakonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-06-21",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "parkoviště u pivovaru"
+  },
+  {
+    "id": "totalni-nasazeni-2025-06-28-pacov",
+    "name": "JATKA FEST 2025",
+    "event_type": "festival",
+    "start_date": "2025-06-28",
+    "end_date": "2025-06-28",
+    "city": "Pacov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-06-28",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Zámecká zahrada"
+  },
+  {
+    "id": "totalni-nasazeni-2025-07-04-slany",
+    "name": "Music on the Square",
+    "event_type": "concert",
+    "start_date": "2025-07-04",
+    "end_date": "2025-07-04",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-07-04",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Masarykovo náměstí"
+  },
+  {
+    "id": "totalni-nasazeni-2025-07-05-bulhary",
+    "name": "Fesťák Bulharská jízda",
+    "event_type": "festival",
+    "start_date": "2025-07-05",
+    "end_date": "2025-07-05",
+    "city": "Bulhary",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-07-05",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "totalni-nasazeni-2025-07-12-prysk",
+    "name": "ČKSD fest 2025",
+    "event_type": "festival",
+    "start_date": "2025-07-12",
+    "end_date": "2025-07-12",
+    "city": "Prysk",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-07-12",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "hřiště"
+  },
+  {
+    "id": "totalni-nasazeni-2025-07-19-peruc",
+    "name": "Plutofest 2025",
+    "event_type": "festival",
+    "start_date": "2025-07-19",
+    "end_date": "2025-07-19",
+    "city": "Peruc",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-07-19",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-07-19",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Zámecký park"
+  },
+  {
+    "id": "totalni-nasazeni-2025-07-19-lovosice",
+    "name": "Altros Rockfest Lovosice 25. ročník",
+    "event_type": "festival",
+    "start_date": "2025-07-19",
+    "end_date": "2025-07-19",
+    "city": "Lovosice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-07-19",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-07-19",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2025-07-19",
+        "name": "BARBAR PUNK",
+        "country_code": "CZ",
+        "band_id": "barbar-punk"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Lesopark Osmička"
+  },
+  {
+    "id": "totalni-nasazeni-2025-08-01-chvalkov-u-kamenice-nad-lipou",
+    "name": "Kravín Fest 2025",
+    "event_type": "festival",
+    "start_date": "2025-08-01",
+    "end_date": "2025-08-01",
+    "city": "Chválkov u Kamenice nad Lipou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-01",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-08-01",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2025-08-01",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      },
+      {
+        "date": "2025-08-01",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": "driak"
+      },
+      {
+        "date": "2025-08-01",
+        "name": "TRAGEDIS",
+        "country_code": "CZ",
+        "band_id": "tragedis"
+      },
+      {
+        "date": "2025-08-01",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2025-08-01",
+        "name": "DUKLA VOZOVNA",
+        "country_code": "CZ",
+        "band_id": "dukla-vozovna"
+      },
+      {
+        "date": "2025-08-01",
+        "name": "ŠVINDL",
+        "country_code": "CZ",
+        "band_id": "svindl"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "areál"
+  },
+  {
+    "id": "totalni-nasazeni-2025-08-02-sporice",
+    "name": "Multižánrový festival Spořice 2025",
+    "event_type": "festival",
+    "start_date": "2025-08-02",
+    "end_date": "2025-08-02",
+    "city": "Spořice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-02",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "areál u koupaliště"
+  },
+  {
+    "id": "totalni-nasazeni-2025-08-09-domazlice",
+    "name": "Chodrockfest 2025",
+    "event_type": "festival",
+    "start_date": "2025-08-09",
+    "end_date": "2025-08-09",
+    "city": "Domažlice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-09",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "jezdecký areál TJ START"
+  },
+  {
+    "id": "totalni-nasazeni-2025-08-15-volyne",
+    "name": "Summer Punk Párty Volyně vol. XIV",
+    "event_type": "festival",
+    "start_date": "2025-08-15",
+    "end_date": "2025-08-15",
+    "city": "Volyně",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-15",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "areál koupaliště"
+  },
+  {
+    "id": "totalni-nasazeni-2025-08-16-maly-rohozec",
+    "name": "PIVNÍ FESTIVAL ROHOZEC 2025",
+    "event_type": "festival",
+    "start_date": "2025-08-16",
+    "end_date": "2025-08-16",
+    "city": "Malý Rohozec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-16",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "areál pivovaru Rohozec"
+  },
+  {
+    "id": "totalni-nasazeni-2025-08-29-opatovce-u-trencina",
+    "name": "Punkáči deťom 2025",
+    "event_type": "festival",
+    "start_date": "2025-08-29",
+    "end_date": "2025-08-29",
+    "city": "Opatovce u Trenčína",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-29",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": "driak"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "THE ROCKET DOGZ",
+        "country_code": "CZ",
+        "band_id": "the-rocket-dogz"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "DUKLA VOZOVNA",
+        "country_code": "CZ",
+        "band_id": "dukla-vozovna"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Camping Opatovce"
+  },
+  {
+    "id": "totalni-nasazeni-2022-02-12-praha",
+    "name": "Totální nasazení, Dilemma in cinema, Deratizéři",
+    "event_type": "concert",
+    "start_date": "2022-02-12",
+    "end_date": "2022-02-12",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-02-12",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Vagon"
+  },
+  {
+    "id": "totalni-nasazeni-2022-04-14-studena",
+    "name": "VELIKONOČNÍ TOTÁČI A DERÁČI",
+    "event_type": "concert",
+    "start_date": "2022-04-14",
+    "end_date": "2022-04-14",
+    "city": "Studená",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-04-14",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "U Šebestů"
+  },
+  {
+    "id": "totalni-nasazeni-2022-05-14-strakonice",
+    "name": "Totální nasazení a Krwawý Koleno",
+    "event_type": "concert",
+    "start_date": "2022-05-14",
+    "end_date": "2022-05-14",
+    "city": "Strakonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-05-14",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Panská zahrada"
+  },
+  {
+    "id": "totalni-nasazeni-2022-05-28-hnacov",
+    "name": "8. sraz socialistických vozidel",
+    "event_type": "festival",
+    "start_date": "2022-05-28",
+    "end_date": "2022-05-28",
+    "city": "Hnačov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-05-28",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Autokemp"
+  },
+  {
+    "id": "totalni-nasazeni-2022-06-03-pavlikov",
+    "name": "TOTÁLNÍ NASAZENÍ & SPS V PAVLÍKOVĚ",
+    "event_type": "concert",
+    "start_date": "2022-06-03",
+    "end_date": "2022-06-03",
+    "city": "Pavlíkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-06-03",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-06-03",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Fotbalpark"
+  },
+  {
+    "id": "totalni-nasazeni-2022-06-09-letohrad",
+    "name": "JamRock 2022",
+    "event_type": "festival",
+    "start_date": "2022-06-09",
+    "end_date": "2022-06-09",
+    "city": "Letohrad",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-06-09",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "areál"
+  },
+  {
+    "id": "totalni-nasazeni-2022-07-08-prachov",
+    "name": "TURBÁZA JEDE 2022 – Totáči a FiXa poprvé na Prachově",
+    "event_type": "concert",
+    "start_date": "2022-07-08",
+    "end_date": "2022-07-08",
+    "city": "Prachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-07-08",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Turistická chata Prachov"
+  },
+  {
+    "id": "totalni-nasazeni-2022-07-09-tabor",
+    "name": "MIGHTY SOUNDS 2022",
+    "event_type": "festival",
+    "start_date": "2022-07-09",
+    "end_date": "2022-07-09",
+    "city": "Tábor",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-07-09",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Open-air letiště Čápův Dvůr"
+  },
+  {
+    "id": "totalni-nasazeni-2022-07-16-podoli-u-mohelnice",
+    "name": "Punkrock Mejdan Podolí",
+    "event_type": "festival",
+    "start_date": "2022-07-16",
+    "end_date": "2022-07-16",
+    "city": "Podolí u Mohelnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-07-16",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-07-16",
+        "name": "ZNOUZECTNOST",
+        "country_code": "CZ",
+        "band_id": "znouzectnost"
+      },
+      {
+        "date": "2022-07-16",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "fotbalové hřiště"
+  },
+  {
+    "id": "totalni-nasazeni-2022-07-22-podebrady",
+    "name": "Morčata na útěku + Totální nasazení + Covers for Lovers + LaSpilka",
+    "event_type": "concert",
+    "start_date": "2022-07-22",
+    "end_date": "2022-07-22",
+    "city": "Poděbrady",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-07-22",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Open-air Na Soutoku"
+  },
+  {
+    "id": "totalni-nasazeni-2022-07-23-bor-u-tachova",
+    "name": "Totální nasazení – Bor u Tachova",
+    "event_type": "concert",
+    "start_date": "2022-07-23",
+    "end_date": "2022-07-23",
+    "city": "Bor u Tachova",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-07-23",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Zámecký parket"
+  },
+  {
+    "id": "totalni-nasazeni-2022-10-07-ceske-budejovice",
+    "name": "zakázanÝovoce + Totální nasazení",
+    "event_type": "concert",
+    "start_date": "2022-10-07",
+    "end_date": "2022-10-07",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-10-07",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "mcFabrika"
+  },
+  {
+    "id": "totalni-nasazeni-2022-10-08-daskabat",
+    "name": "Totální Hrušky – CZ/SK Tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-10-08",
+    "end_date": "2022-10-08",
+    "city": "Daskabát",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-10-08",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Jack's Cowhouse"
+  },
+  {
+    "id": "totalni-nasazeni-2022-10-14-brno",
+    "name": "Totální Hrušky – CZ/SK Tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-10-14",
+    "end_date": "2022-10-14",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-10-14",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Melodka"
+  },
+  {
+    "id": "totalni-nasazeni-2022-10-15-praha",
+    "name": "Totální Hrušky – CZ/SK Tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-10-15",
+    "end_date": "2022-10-15",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-10-15",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Vagon"
+  },
+  {
+    "id": "totalni-nasazeni-2022-10-21-pardubice",
+    "name": "Totální Hrušky – CZ/SK Tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-10-21",
+    "end_date": "2022-10-21",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-10-21",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Žlutý pes"
+  },
+  {
+    "id": "totalni-nasazeni-2022-10-22-most",
+    "name": "Totální Hrušky – CZ/SK Tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-10-22",
+    "end_date": "2022-10-22",
+    "city": "Most",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-10-22",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Nový Obzor Music Arena"
+  },
+  {
+    "id": "totalni-nasazeni-2022-11-04-bratislava",
+    "name": "Totální Hrušky tour / 25 rokov Smola a Hrušky",
+    "event_type": "concert",
+    "start_date": "2022-11-04",
+    "end_date": "2022-11-04",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-11-04",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Randal Club"
+  },
+  {
+    "id": "totalni-nasazeni-2022-11-05-zilina",
+    "name": "Totální Hrušky tour / 25 rokov Smola a Hrušky",
+    "event_type": "concert",
+    "start_date": "2022-11-05",
+    "end_date": "2022-11-05",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-11-05",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Smer Music Bar"
+  },
+  {
+    "id": "totalni-nasazeni-2022-11-11-kosice",
+    "name": "Totální Hrušky tour / 25 rokov Smola a Hrušky",
+    "event_type": "concert",
+    "start_date": "2022-11-11",
+    "end_date": "2022-11-11",
+    "city": "Košice",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-11-11",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Collosseum"
+  },
+  {
+    "id": "totalni-nasazeni-2022-11-12-presov",
+    "name": "Totální Hrušky tour / 25 rokov Smola a Hrušky",
+    "event_type": "concert",
+    "start_date": "2022-11-12",
+    "end_date": "2022-11-12",
+    "city": "Prešov",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-11-12",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Stromoradie"
+  },
+  {
+    "id": "totalni-nasazeni-2022-11-18-nove-mesto-nad-vahom",
+    "name": "Totální Hrušky tour / 25 rokov Smola a Hrušky",
+    "event_type": "concert",
+    "start_date": "2022-11-18",
+    "end_date": "2022-11-18",
+    "city": "Nové Mesto nad Váhom",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-11-18",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Klub Za Rampami"
+  },
+  {
+    "id": "totalni-nasazeni-2022-11-19-puchov",
+    "name": "Totální Hrušky tour / 25 rokov Smola a Hrušky",
+    "event_type": "concert",
+    "start_date": "2022-11-19",
+    "end_date": "2022-11-19",
+    "city": "Púchov",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-11-19",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Queen's pub"
+  },
+  {
+    "id": "totalni-nasazeni-2022-12-09-praha",
+    "name": "Tradiční vánoční pražský Vagon",
+    "event_type": "concert",
+    "start_date": "2022-12-09",
+    "end_date": "2022-12-09",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-12-09",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Vagon"
+  },
+  {
+    "id": "totalni-nasazeni-2022-12-10-nechvalice",
+    "name": "TOTÁLNÍ NASAZENÍ, Deratizéři a Peshata",
+    "event_type": "concert",
+    "start_date": "2022-12-10",
+    "end_date": "2022-12-10",
+    "city": "Nechvalice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-12-10",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "totalni-nasazeni-2020-01-10-praha",
+    "name": "MAD MINI TOUR 2020",
+    "event_type": "concert",
+    "start_date": "2020-01-10",
+    "end_date": "2020-01-10",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-01-10",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Vagon"
+  },
+  {
+    "id": "totalni-nasazeni-2020-01-11-brno",
+    "name": "MAD MINI TOUR 2020",
+    "event_type": "concert",
+    "start_date": "2020-01-11",
+    "end_date": "2020-01-11",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-01-11",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Eleven Club"
+  },
+  {
+    "id": "totalni-nasazeni-2020-01-17-harrachov",
+    "name": "MAD MINI TOUR 2020",
+    "event_type": "concert",
+    "start_date": "2020-01-17",
+    "end_date": "2020-01-17",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-01-17",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Sklářská Chalupa Music Pub"
+  },
+  {
+    "id": "totalni-nasazeni-2020-01-18-slany",
+    "name": "ZIMNÍ VALNÍK 2020",
+    "event_type": "festival",
+    "start_date": "2020-01-18",
+    "end_date": "2020-01-18",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-01-18",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2020-01-18",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2020-01-18",
+        "name": "ZNOUZECTNOST",
+        "country_code": "CZ",
+        "band_id": "znouzectnost"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Městské centrum Grand"
+  },
+  {
+    "id": "totalni-nasazeni-2020-04-12-jistebnice",
+    "name": "Punk Rock Rádio Tour 2020",
+    "event_type": "concert",
+    "start_date": "2020-04-12",
+    "end_date": "2020-04-12",
+    "city": "Jistebnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-04-12",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2020-04-12",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2020-04-12",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "KD Jistebnice"
+  },
+  {
+    "id": "totalni-nasazeni-2020-05-21-slany",
+    "name": "TOTÁLNÍ NASAZENÍ PRO NEMOCNICI SLANÝ",
+    "event_type": "concert",
+    "start_date": "2020-05-21",
+    "end_date": "2020-05-21",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-05-21",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-totalni-nasazeni-bandzone-archive"
+    ],
+    "venue_name": "Městské divadlo Slaný"
   }
 ]
