@@ -1309,5 +1309,156 @@
     "source_ids": [
       "src-punkgen-archive-2024"
     ]
+  },
+  {
+    "id": "fialky-2025-warsaw-05-16",
+    "name": "The Fialky / Bulbulators / Lazy Class",
+    "event_type": "concert",
+    "start_date": "2025-05-16",
+    "end_date": "2025-05-16",
+    "city": "Warszawa",
+    "country_code": "PL",
+    "venue_id": "2kola-warsaw",
+    "lineup_completeness": "independent_listing",
+    "performances": [
+      {
+        "date": "2025-05-16",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-05-16",
+        "name": "BULBULATORS",
+        "country_code": "PL",
+        "band_id": null
+      },
+      {
+        "date": "2025-05-16",
+        "name": "LAZY CLASS",
+        "country_code": "PL",
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-punkowastrona-2025-05",
+      "src-fialky-2025-summer"
+    ]
+  },
+  {
+    "id": "fialky-2025-ruda-slaska-05-17",
+    "name": "The Fialky / Bulbulators / Blitzed / Zbeer",
+    "event_type": "concert",
+    "start_date": "2025-05-17",
+    "end_date": "2025-05-17",
+    "city": "Ruda Śląska",
+    "country_code": "PL",
+    "venue_id": "druid-pub-ruda-slaska",
+    "lineup_completeness": "independent_listing",
+    "performances": [
+      {
+        "date": "2025-05-17",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-05-17",
+        "name": "BULBULATORS",
+        "country_code": "PL",
+        "band_id": null
+      },
+      {
+        "date": "2025-05-17",
+        "name": "BLITZED",
+        "country_code": null,
+        "band_id": null
+      },
+      {
+        "date": "2025-05-17",
+        "name": "ZBEER",
+        "country_code": null,
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-punkowastrona-2025-05",
+      "src-fialky-2025-summer"
+    ]
+  },
+  {
+    "id": "fialky-2025-eggenthal-09-12",
+    "name": "The Fialky",
+    "event_type": "concert",
+    "start_date": "2025-09-12",
+    "end_date": "2025-09-12",
+    "city": "Eggenthal",
+    "country_code": "DE",
+    "venue_id": "underground-club-eggenthal",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-09-12",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-2025-summer",
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-wunstock-09-13",
+    "name": "Wunstock Festival 2025",
+    "event_type": "festival",
+    "start_date": "2025-09-12",
+    "end_date": "2025-09-14",
+    "city": "Wunsiedel",
+    "country_code": "DE",
+    "venue_id": "wunstock-festplatz-wunsiedel",
+    "lineup_completeness": "official_band_archive_and_festival_program",
+    "performances": [
+      {
+        "date": "2025-09-13",
+        "start_time": "20:30",
+        "end_time": "21:30",
+        "stage": null,
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-2025-summer",
+      "src-fialky-played-2025",
+      "src-wunstock-2025"
+    ]
+  },
+  {
+    "id": "minority-2025-dinkelscherben-07-25",
+    "name": "Dinkel-Festival 2025",
+    "event_type": "festival",
+    "start_date": "2025-07-24",
+    "end_date": "2025-07-27",
+    "city": "Dinkelscherben",
+    "country_code": "DE",
+    "venue_id": "raiffeisenhof-dinkelscherben",
+    "lineup_completeness": "official_program",
+    "performances": [
+      {
+        "date": "2025-07-25",
+        "start_time": "20:30",
+        "end_time": "21:30",
+        "stage": "HIP",
+        "name": "THE MINORITY",
+        "country_code": "SK",
+        "band_id": "the-minority"
+      }
+    ],
+    "source_ids": [
+      "src-dinkel-2025"
+    ]
   }
 ]

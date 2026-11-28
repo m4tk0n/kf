@@ -182,5 +182,80 @@
       "src-punkgen-archive"
     ],
     "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "2kola-warsaw",
+    "name": "2Koła",
+    "city": "Warszawa",
+    "country_code": "PL",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-fialky-2025-summer",
+      "src-punkowastrona-2025-05",
+      "src-wunstock-2025",
+      "src-dinkel-2025"
+    ],
+    "verification": "venue_name_and_city_confirmed_by_event_source"
+  },
+  {
+    "id": "druid-pub-ruda-slaska",
+    "name": "Druid Pub",
+    "city": "Ruda Śląska",
+    "country_code": "PL",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-fialky-2025-summer",
+      "src-punkowastrona-2025-05",
+      "src-wunstock-2025",
+      "src-dinkel-2025"
+    ],
+    "verification": "venue_name_and_city_confirmed_by_event_source"
+  },
+  {
+    "id": "underground-club-eggenthal",
+    "name": "Underground Club",
+    "city": "Eggenthal",
+    "country_code": "DE",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-fialky-2025-summer",
+      "src-punkowastrona-2025-05",
+      "src-wunstock-2025",
+      "src-dinkel-2025"
+    ],
+    "verification": "venue_name_and_city_confirmed_by_event_source"
+  },
+  {
+    "id": "wunstock-festplatz-wunsiedel",
+    "name": "Festplatz Burgermühlweiher",
+    "city": "Wunsiedel",
+    "country_code": "DE",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-fialky-2025-summer",
+      "src-punkowastrona-2025-05",
+      "src-wunstock-2025",
+      "src-dinkel-2025"
+    ],
+    "verification": "venue_name_and_city_confirmed_by_event_source"
+  },
+  {
+    "id": "raiffeisenhof-dinkelscherben",
+    "name": "Raiffeisenhof – HIP Stage",
+    "city": "Dinkelscherben",
+    "country_code": "DE",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-fialky-2025-summer",
+      "src-punkowastrona-2025-05",
+      "src-wunstock-2025",
+      "src-dinkel-2025"
+    ],
+    "verification": "venue_name_and_city_confirmed_by_event_source"
   }
 ]

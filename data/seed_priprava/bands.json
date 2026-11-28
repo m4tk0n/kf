@@ -678,5 +678,30 @@
       "src-punkgen-archive"
     ],
     "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "the-fialky",
+    "name": "THE FIALKY",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-fialky-2025-summer",
+      "src-fialky-played-2025"
+    ],
+    "verification": "official_band_website"
+  },
+  {
+    "id": "the-minority",
+    "name": "THE MINORITY",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-dinkel-2025"
+    ],
+    "verification": "festival_program_and_independent_report"
   }
 ]

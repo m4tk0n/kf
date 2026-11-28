@@ -219,5 +219,75 @@
     "limitations": [
       "Komunitní archiv; záznamy je nutné ověřovat proti plakátům nebo pořadatelům."
     ]
+  },
+  {
+    "id": "src-fialky-2025-summer",
+    "name": "The Fialky – Léto 2025",
+    "url": "https://thefialky.cz/leto-2025/",
+    "publisher": "The Fialky",
+    "source_type": "official_band_tour_dates",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "band_identity",
+      "concert_dates",
+      "cities",
+      "venues",
+      "two_german_dates"
+    ]
+  },
+  {
+    "id": "src-fialky-played-2025",
+    "name": "The Fialky – odehrané koncerty 2025",
+    "url": "https://thefialky.cz/odehrane-koncerty/",
+    "publisher": "The Fialky",
+    "source_type": "official_band_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "past_concert_dates",
+      "tour_names",
+      "lineups",
+      "venues"
+    ]
+  },
+  {
+    "id": "src-punkowastrona-2025-05",
+    "name": "Punkowa Strona – koncerty 16.–22. května 2025",
+    "url": "https://punkowastrona.wordpress.com/2025/05/15/co-gdzie-kiedy-16-22-maja-2025/",
+    "publisher": "Punkowa Strona",
+    "source_type": "independent_concert_listing",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "venues",
+      "lineups"
+    ]
+  },
+  {
+    "id": "src-wunstock-2025",
+    "name": "Wunstock Festival 2025 – program",
+    "url": "https://www.xn--untergrund-blttle-2qb.ch/events/203878/wunstock-festival-12-203878-festplatz-wunsiedel.html",
+    "publisher": "Untergrund-Blättle",
+    "source_type": "festival_program_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "festival_dates",
+      "venue_location",
+      "lineup",
+      "performance_times"
+    ]
+  },
+  {
+    "id": "src-dinkel-2025",
+    "name": "Dinkel-Festival 2025 – program",
+    "url": "https://dinkelscherben.info/images/freizeitundkultur/dinkel-festivals/dinkel25/Dinkel25_Programmheft.pdf",
+    "publisher": "Dinkel-Festival",
+    "source_type": "official_festival_program",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "festival_dates",
+      "lineup",
+      "performance_times",
+      "stage_location"
+    ]
   }
 ]
