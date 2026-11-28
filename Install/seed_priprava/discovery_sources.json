@@ -18,6 +18,36 @@
       "url": "https://livemusicradar.net/czechia/genre/punk-hardcore",
       "kind": "genre_calendar",
       "curated_punk": true
+    },
+    {
+      "id": "PUNKGEN",
+      "url": "https://www.punkgen.sk/koncerty.php?year=2026",
+      "kind": "punk_calendar",
+      "curated_punk": true
+    },
+    {
+      "id": "PUNKACIDETOM",
+      "url": "https://punkacidetom.sk/koncerty/",
+      "kind": "promoter_calendar",
+      "curated_punk": true
+    },
+    {
+      "id": "FESTIVALY_SK",
+      "url": "https://festivaly.eu/sk/koncerty/slovensko?tag%5B0%5D=punk",
+      "kind": "genre_calendar",
+      "curated_punk": true
+    },
+    {
+      "id": "HAPSY_SK",
+      "url": "https://hapsy.co/sk/slovensko/punk",
+      "kind": "genre_calendar",
+      "curated_punk": true
+    },
+    {
+      "id": "ODPAD",
+      "url": "https://www.punkodpad.sk/",
+      "kind": "band_calendar",
+      "curated_punk": true
     }
   ]
 }
