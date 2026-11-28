@@ -184,6 +184,7 @@ abbr{text-decoration:none}
 .narrow{max-width:520px;margin-left:auto;margin-right:auto}
 .stack{display:grid;gap:12px;margin-top:14px}
 .stack label{display:grid;gap:5px;color:var(--muted);font-size:.85rem}
+.image-field{min-width:0;margin:0;padding:10px;border:1px solid var(--line);border-radius:10px;display:grid;gap:9px}.image-field legend{padding:0 5px;color:var(--text);font-size:.9rem;font-weight:700}.image-field .event-preview{display:block;width:100%;max-height:220px;object-fit:contain;border-radius:8px;background:#101722}.band-list-preview h2{margin-bottom:10px}
 .stack input[type=text],.stack select{height:36px;padding:0 11px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);font:inherit}
 .check{display:flex!important;align-items:center;gap:8px;color:var(--text)!important}
 .btn.wide{width:100%;min-height:42px;font-size:.95rem}
