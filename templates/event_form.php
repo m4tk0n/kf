@@ -22,7 +22,7 @@ foreach ($cities as $c) {
     </ul>
     <?php if ($imgUrl === '' && (string)$old['image_url'] === ''): ?><p class="muted"><?= e(t('event.err.reselect')) ?></p><?php endif; ?>
   <?php endif; ?>
-  <form method="post" action="<?= e($formAction) ?>" enctype="multipart/form-data" class="stack"<?= $formId !== '' ? ' id="' . e($formId) . '"' : '' ?>>
+  <form method="post" action="<?= e($formAction) ?>" enctype="multipart/form-data" class="stack" data-common-validation<?= $formId !== '' ? ' id="' . e($formId) . '"' : '' ?>>
     <?= csrf_field() ?>
     <?php if (str_contains($formAction, 'review/edit')): ?><input type="hidden" name="id" value="<?= (int)($_GET['id'] ?? 0) ?>"><?php endif; ?>
     <label class="event-name-field"><?= e(t('event.f.name')) ?>
@@ -88,7 +88,7 @@ foreach ($cities as $c) {
     </fieldset>
 
     <label><?= e(t('event.f.www')) ?>
-      <input type="text" name="www" value="<?= e((string)$old['www']) ?>" maxlength="300" placeholder="https://">
+      <input type="url" data-validate-url name="www" value="<?= e((string)$old['www']) ?>" maxlength="300" placeholder="https://">
     </label>
     <label><?= e(t('event.f.desc')) ?>
       <textarea name="description" rows="5" maxlength="5000"><?= e((string)$old['description']) ?></textarea>
@@ -97,7 +97,7 @@ foreach ($cities as $c) {
       <input type="file" name="image" accept="image/jpeg,image/png,image/webp,image/gif" data-event-image>
     </label>
     <label><?= e(t('event.f.image_url')) ?>
-      <input type="text" name="image_url" value="<?= e((string)$old['image_url']) ?>" maxlength="300" placeholder="https://" data-event-image-url>
+      <input type="url" data-validate-url name="image_url" value="<?= e((string)$old['image_url']) ?>" maxlength="300" placeholder="https://" data-event-image-url>
     </label>
     <?php if ($imgUrl !== ''): ?>
       <label class="check"><input type="checkbox" name="remove_image" value="1"> <?= e(t('event.f.image_remove')) ?></label>
