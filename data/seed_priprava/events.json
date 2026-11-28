@@ -1688,5 +1688,305 @@
     "source_ids": [
       "src-fialky-played-2025"
     ]
+  },
+  {
+    "id": "blankout-balkan-2024-linz",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-22",
+    "end_date": "2024-03-22",
+    "city": "Linz",
+    "country_code": "AT",
+    "venue_id": "kapu-linz",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-22",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-22",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-ljubljana",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-23",
+    "end_date": "2024-03-23",
+    "city": "Ljubljana",
+    "country_code": "SI",
+    "venue_id": "gromka-ljubljana",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-23",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-23",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-pula",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-24",
+    "end_date": "2024-03-24",
+    "city": "Pula",
+    "country_code": "HR",
+    "venue_id": "monte-paradiso-pula",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-24",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-24",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-rijeka",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-25",
+    "end_date": "2024-03-25",
+    "city": "Rijeka",
+    "country_code": "HR",
+    "venue_id": "podrum-rijeka",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-25",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-25",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-sarajevo",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-27",
+    "end_date": "2024-03-27",
+    "city": "Sarajevo",
+    "country_code": "BA",
+    "venue_id": "ag-club-sarajevo",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-27",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-27",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-pancevo",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-28",
+    "end_date": "2024-03-28",
+    "city": "Pančevo",
+    "country_code": "RS",
+    "venue_id": null,
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-28",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-28",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-belgrade",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-29",
+    "end_date": "2024-03-29",
+    "city": "Beograd",
+    "country_code": "RS",
+    "venue_id": "akab-okretnica-belgrade",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-29",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-29",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-novi-sad",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-30",
+    "end_date": "2024-03-30",
+    "city": "Novi Sad",
+    "country_code": "RS",
+    "venue_id": "ck13-novi-sad",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-30",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-30",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-zagreb",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-31",
+    "end_date": "2024-03-31",
+    "city": "Zagreb",
+    "country_code": "HR",
+    "venue_id": "akc-attack-zagreb",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-31",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-31",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-vienna",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-04-01",
+    "end_date": "2024-04-01",
+    "city": "Vídeň",
+    "country_code": "AT",
+    "venue_id": "arena-beisl-vienna",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-04-01",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-04-01",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
   }
 ]
