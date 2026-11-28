@@ -239,6 +239,9 @@ function kf_event_validate(array &$v): array
     if ($v['admission_type'] === 'text' && $v['admission_value'] === '') {
         $err[] = 'admission';
     } elseif ($v['admission_type'] === 'amount') {
+        if ($v['admission_currency'] === '' && $v['country_id'] > 0) {
+            $v['admission_currency'] = (string)(q('SELECT currency_code FROM ' . tbl('countries') . ' WHERE id = ?', [$v['country_id']])->fetchColumn() ?: '');
+        }
         $v['admission_value'] = str_replace(',', '.', $v['admission_value']);
         if (!preg_match('/^\d{1,9}(?:\.\d{1,2})?$/', $v['admission_value'])
             || !preg_match('/^[A-Z]{3}$/', $v['admission_currency'])
