@@ -26,6 +26,16 @@ declare(strict_types=1);
 <p class="back"><a href="<?= e(url('review')) ?>">← <?= e(t('review.title')) ?></a></p>
 <?php if ($ev !== null): ?><?php require __DIR__ . '/event_view.php'; ?>
 <?php elseif ($venue !== null): ?><?php require __DIR__ . '/venue_view.php'; ?>
+<?php elseif ($band !== null):
+  $bandData = $band;
+  $logoUrl = $bandImgS;
+  $v = $band['v'];
+  $d = ['kind'=>'band','id'=>0,'row'=>['name'=>$v['name'],'city'=>$band['city'],'country'=>$band['country'],'iso2'=>$band['iso2'],'genre'=>$band['genre']],
+    'extra'=>['desc'=>$v['description'],'www'=>kf_safe_url($v['www']),'email'=>'','phone'=>'','facebook'=>kf_safe_url($v['facebook']),'bandzone'=>kf_safe_url($v['bandzone']),'large'=>$bandImgL!== ''],
+    'fav'=>false,'back'=>url('review'),'upcoming'=>[],'past'=>[],'preview'=>true,'preview_img'=>$bandImgL];
+  require __DIR__ . '/detail.php';
+?>
+<section class="card narrow band-list-preview"><h2><?= e(t('band.preview.list_title')) ?></h2><?php require __DIR__ . '/band_list_preview.php'; ?></section>
 <?php else: ?><section class="card"><h1><?= e((string)$pend['title']) ?></h1><p class="muted"><?= e(t('flash.review_unsupported')) ?></p></section><?php endif; ?>
 <section class="card narrow">
   <?php if (!$lockMine): ?>
@@ -36,7 +46,7 @@ declare(strict_types=1);
     <p class="muted"><?= e(str_replace('{min}', (string)ceil(max(60,(int)cfg('review.lock_ttl_sec',900))/60), t('review.lock_mine'))) ?></p>
     <div class="inline">
       <?php if ($ev !== null): ?><a class="btn" href="<?= e(url('review/edit?id=' . (int)$pend['id'])) ?>"><?= e(t('review.btn.edit')) ?></a><?php endif; ?>
-      <?php if ($ev !== null || $venue !== null): ?><form method="post" action="<?= e(url('review')) ?>"><?= csrf_field() ?><input type="hidden" name="id" value="<?= (int)$pend['id'] ?>"><button class="btn" name="action" value="approve"><?= e(t('review.approve')) ?></button></form><?php endif; ?>
+      <?php if ($ev !== null || $venue !== null || $band !== null): ?><form method="post" action="<?= e(url('review')) ?>"><?= csrf_field() ?><input type="hidden" name="id" value="<?= (int)$pend['id'] ?>"><button class="btn" name="action" value="approve"><?= e(t('review.approve')) ?></button></form><?php endif; ?>
       <form method="post" action="<?= e(url('review')) ?>"><?= csrf_field() ?><input type="hidden" name="id" value="<?= (int)$pend['id'] ?>"><button class="btn danger" name="action" value="reject" data-confirm="<?= e(t('review.reject_confirm')) ?>"><?= e(t('review.reject')) ?></button></form>
       <form method="post" action="<?= e(url('review')) ?>"><?= csrf_field() ?><input type="hidden" name="id" value="<?= (int)$pend['id'] ?>"><button class="btn ghost" name="action" value="unlock"><?= e(t('review.btn.release')) ?></button></form>
     </div>
