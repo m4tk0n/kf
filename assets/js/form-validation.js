@@ -14,7 +14,7 @@
     }
   }
   function validAddress(value) { return value.trim().length >= 2; }
-  function validCity(value, selectedId) { return value.trim().length >= 2 && Number(selectedId) > 0; }
+  function validCity(value) { return value.trim().length >= 2; }
 
   function validate(form) {
     var valid = true;
@@ -46,7 +46,7 @@
     Array.prototype.forEach.call(form.querySelectorAll('[data-validate-city]'), function (input) {
       var selector = input.getAttribute('data-city-id-selector') || '[name="city_id"]';
       var idField = form.querySelector(selector);
-      var ok = validCity(input.value, idField ? idField.value : 0);
+      var ok = validCity(input.value);
       input.setCustomValidity(ok ? '' : (input.getAttribute('data-invalid-message') || 'Select a valid city.'));
       valid = valid && ok;
     });
