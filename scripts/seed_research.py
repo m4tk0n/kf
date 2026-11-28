@@ -193,13 +193,25 @@ def enqueue_band(name,year,discovered_from):
  queue.append({"name":name,"key":key,"status":"pending","discovered_from":discovered_from,"seed_year":year})
  save_json(QUEUE_FILE,queue)
 
+def existing_event_keys():
+ keys=set()
+ for path in BASE.glob("20[0-2][0-9]/events.txt"):
+  year=int(path.parent.name)
+  for line in path.read_text(encoding="utf-8").splitlines():
+   if not line.strip() or line.lstrip().startswith("#") or " | " not in line: continue
+   parts=line.split(" | ")
+   if len(parts)>=8:
+    keys.add((norm(parts[0]),norm(parts[4]),year))
+ return keys
+
 def write_candidates(task,result):
- urls=valid_urls(result); added={"events":0,"bands":0,"venues":0,"sources":0}
+ urls=valid_urls(result); existing=existing_event_keys(); added={"events":0,"bands":0,"venues":0,"sources":0}
  for event in result.get("events",[]):
   date=event.get("date_from","")
   if not re.fullmatch(r"20\d\d-\d\d-\d\d",date): continue
   year=int(date[:4])
   if year not in YEARS or (task["kind"]=="target" and year!=task["year"]): continue
+  if (norm(event.get("name","")),norm(event.get("city","")),year) in existing: continue
   refs=[u.rstrip("/") for u in event.get("sources",[]) if u.rstrip("/") in urls]
   if not refs: continue
   if task["kind"]=="band" and event.get("country","").casefold() not in ("česko","česká republika","czechia","czech republic","slovensko","slovakia"):
