@@ -2190,5 +2190,95 @@
       "src-punkaci-2024-official",
       "src-punkaci-2024-goout"
     ]
+  },
+  {
+    "id": "punkaci-detom-2021",
+    "name": "Punkáči deťom 2020 + 2021",
+    "event_type": "festival",
+    "start_date": "2021-08-25",
+    "end_date": "2021-08-28",
+    "city": "Trenčín",
+    "country_code": "SK",
+    "venue_id": "letiste-trencin",
+    "lineup_completeness": "not_transcribed_from_archive",
+    "performances": [],
+    "source_ids": [
+      "src-punkaci-darkzin-archive"
+    ]
+  },
+  {
+    "id": "punkaci-detom-2022",
+    "name": "Punkáči deťom 2022",
+    "event_type": "festival",
+    "start_date": "2022-08-24",
+    "end_date": "2022-08-27",
+    "city": "Trenčín",
+    "country_code": "SK",
+    "venue_id": "letiste-trencin",
+    "lineup_completeness": "not_transcribed_from_archive",
+    "performances": [],
+    "source_ids": [
+      "src-punkaci-darkzin-archive"
+    ]
+  },
+  {
+    "id": "punkaci-detom-2023",
+    "name": "Punkáči deťom 2023",
+    "event_type": "festival",
+    "start_date": "2023-08-23",
+    "end_date": "2023-08-26",
+    "city": "Opatovce",
+    "country_code": "SK",
+    "venue_id": "kemping-rybniky-opatovce",
+    "lineup_completeness": "not_transcribed_from_archive",
+    "performances": [],
+    "source_ids": [
+      "src-punkaci-darkzin-archive"
+    ]
+  },
+  {
+    "id": "punkaci-detom-winter-2025",
+    "name": "Punkáči deťom – Winter edition 3",
+    "event_type": "festival",
+    "start_date": "2025-02-15",
+    "end_date": "2025-02-15",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "smer-klub-77-zilina",
+    "lineup_completeness": "not_transcribed_from_archive",
+    "performances": [],
+    "source_ids": [
+      "src-punkaci-darkzin-archive"
+    ]
+  },
+  {
+    "id": "punkaci-detom-winter-2026",
+    "name": "Punkáči deťom – Winter edition 4",
+    "event_type": "festival",
+    "start_date": "2026-02-28",
+    "end_date": "2026-02-28",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "smer-klub-77-zilina",
+    "lineup_completeness": "not_transcribed_from_archive",
+    "performances": [],
+    "source_ids": [
+      "src-punkaci-darkzin-archive"
+    ]
+  },
+  {
+    "id": "punkaci-detom-2026",
+    "name": "Punkáči deťom 2026 (vol. 15)",
+    "event_type": "festival",
+    "start_date": "2026-08-27",
+    "end_date": "2026-08-29",
+    "city": "Opatovce",
+    "country_code": "SK",
+    "venue_id": "kemping-rybniky-opatovce",
+    "lineup_completeness": "not_transcribed_from_archive",
+    "performances": [],
+    "source_ids": [
+      "src-punkaci-darkzin-archive"
+    ]
   }
 ]

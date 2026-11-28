@@ -382,5 +382,22 @@
       "performing_bands",
       "band_country_labels"
     ]
+  },
+  {
+    "id": "src-punkaci-darkzin-archive",
+    "name": "Punkáči deťom – archiv ročníků a zimních edic",
+    "url": "https://www.darkzin.cz/festivaly-slovensko/punkaci-detom/",
+    "publisher": "Darkzin",
+    "source_type": "independent_festival_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "festival_dates",
+      "venue_names",
+      "venue_cities",
+      "event_archive"
+    ],
+    "limitations": [
+      "Archiv neobsahuje úplný line-up všech ročníků."
+    ]
   }
 ]

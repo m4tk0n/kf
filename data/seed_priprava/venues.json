@@ -25,7 +25,8 @@
       "src-punkaci-home-2025",
       "src-punkaci-history",
       "src-punkaci-2024-official",
-      "src-punkaci-2024-goout"
+      "src-punkaci-2024-goout",
+      "src-punkaci-darkzin-archive"
     ],
     "verification": "venue_name_and_location_confirmed_exact_street_address_not_confirmed"
   },
@@ -429,5 +430,29 @@
       "src-blankout-balkan-2024"
     ],
     "verification": "venue_and_city_listed_in_official_tour_announcement"
+  },
+  {
+    "id": "letiste-trencin",
+    "name": "Letiště Trenčín",
+    "city": "Trenčín",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkaci-darkzin-archive"
+    ],
+    "verification": "venue_and_city_listed_in_independent_festival_archive"
+  },
+  {
+    "id": "smer-klub-77-zilina",
+    "name": "Smer Klub 77",
+    "city": "Žilina",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkaci-darkzin-archive"
+    ],
+    "verification": "venue_and_city_listed_in_independent_festival_archive"
   }
 ]
