@@ -20,6 +20,17 @@
         "https://www.kvs-vk.cz/aktualne/kalendar-akci/sps-the-fialky-406_362cs.html",
         "https://www.kdklobucan.cz/kontakt"
       ]
+    },
+    {
+      "id": 2,
+      "name": "Majestic Music Club",
+      "city": "Bratislava",
+      "country": "SK",
+      "address": "Karpatská 2, 811 05 Bratislava",
+      "url": "https://majestic.sk/",
+      "sources": [
+        "https://majestic.sk/kontakt"
+      ]
     }
   ],
   "next": []
