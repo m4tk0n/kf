@@ -18,7 +18,7 @@ if (!preg_match('/^[a-f0-9]{64}$/', $token)) {
 }
 $_COOKIE[(string)cfg('session.name')] = $token;
 
-$postActions = ['event_submit', 'review_approve', 'review_reject', 'my_delete'];
+$postActions = ['event_submit', 'band_submit', 'review_approve', 'review_reject', 'my_delete'];
 $isPost = in_array($action, $postActions, true);
 $_SERVER['REQUEST_METHOD'] = $isPost ? 'POST' : 'GET';
 
@@ -45,6 +45,12 @@ if ($isPost) {
 switch ($action) {
     case 'event_form':
         route_event_new();
+    case 'band_form':
+        route_band_new();
+    case 'band_preview':
+        route_band_preview();
+    case 'band_submit':
+        route_band_submit();
     case 'event_name_suggest':
         route_event_name_suggest();
     case 'venue_name_suggest':
