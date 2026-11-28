@@ -1135,5 +1135,125 @@
       "venue_city",
       "venue_address"
     ]
+  },
+  {
+    "id": "src-venue-hajovna-address",
+    "name": "Hájovňa – adresa",
+    "url": "https://goout.net/de/hajovna/vzmgxe/",
+    "publisher": "GoOut",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-basta-address",
+    "name": "Bašta – kontakt a adresa",
+    "url": "https://bastakulturcentrum.sk/kontakt/",
+    "publisher": "Bašta – kultúrno-komunitné centrum",
+    "source_type": "official_venue_information",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-collosseum-address",
+    "name": "Collosseum Club – adresa",
+    "url": "https://visitkosice.org/vidiet-a-zazit/colloseum-club",
+    "publisher": "Visit Košice",
+    "source_type": "city_tourism_venue_listing",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-mir-address",
+    "name": "Klub Mír – adresa a GPS",
+    "url": "https://www.koncertyostrava.cz/kulturni-zarizeni.php?id=828&nazev=klub-mir",
+    "publisher": "Koncerty Ostrava",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-zalar-address",
+    "name": "Žalár – adresa",
+    "url": "https://cml.citylife.sk/miesto/zalar",
+    "publisher": "CITYLIFE",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-bosorka-address",
+    "name": "Bosorka klub – adresa",
+    "url": "https://nerobimerozdiely.sk/miesto/32-bosorka-klub",
+    "publisher": "Nerobíme rozdiely",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-wunstock-address",
+    "name": "Festplatz Burgermühlweiher – adresa",
+    "url": "https://www.festivaly.eu/en/venues/festplatz-wunsiedel",
+    "publisher": "Festivaly.eu",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-gromka-address",
+    "name": "Klub Gromka – umístění a souřadnice",
+    "url": "https://www.culture.si/en/Klub_Gromka",
+    "publisher": "Culture.si",
+    "source_type": "cultural_venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-letiste-trencin-address",
+    "name": "Letiště Trenčín – adresa",
+    "url": "https://www.aeroweb.cz/letiste/lztn-letiste-trencin",
+    "publisher": "Aeroweb",
+    "source_type": "airport_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-kemping-opatovce-address",
+    "name": "Kemping Rybníky Opatovce – adresa",
+    "url": "https://www.trencinregion.sk/50887/kemping-rybniky-opatovce",
+    "publisher": "Trenčín región",
+    "source_type": "regional_tourism_official",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
   }
 ]
