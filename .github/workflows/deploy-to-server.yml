@@ -123,6 +123,11 @@ jobs:
               f"rm -r -f {q(posixpath.join(remote_root, 'tests'))}",
           ]
 
+          # Git does not track empty directories. If a directory is absent from
+          # the checkout, remove its remote counterpart as part of synchronization.
+          if not os.path.exists("Install/seed_priprava"):
+              commands.append(f"rm -r -f {q(posixpath.join(remote_root, 'Install/seed_priprava'))}")
+
           for path in uploads:
               remote_dir = posixpath.join(remote_root, posixpath.dirname(path))
               remote_dir = remote_dir.rstrip("/")
