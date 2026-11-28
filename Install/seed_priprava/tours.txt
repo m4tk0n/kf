@@ -2,4 +2,4 @@
 # Formát: pracovní ID | název | stav | zastávky (datum – město – místo – ročníkový záznam) | zdroje | poznámka
 
 TOUR-001 | Cestujúci Punk Island vol.2 | plánováno | 18. 12. 2026 – Bratislava – Randal Club – event_2026.json; 23. 1. 2027 – Košice – Collosseum Club – event_2027.json; 20. 2. 2027 – Banská Bystrica – Urban Spot – event_2027.json | 2026-S04; 2027-S03; 2027-S07 | Pořadatel výslovně uvádí, že jde o tři klubové festivaly pod společným názvem, které cestují do tří měst. Každá zastávka má samostatný line-up a samostatný záznam akce.
-TOUR-002 | God Save The Punk Tour II. 2026 | ověřeno | 14. 11. 2026 – Valašské Klobouky – Kulturní dům Klobučan – event_2026.json#1 | SRC-0001; SRC-0002 | Oficiální archiv kapely a pořadatel potvrzují tuto zastávku. Další zastávky doplnit až po samostatném ověření.
+TOUR-002 | God Save The Punk Tour II | ověřeno | 14. 11. 2026 – Valašské Klobouky – Kulturní dům Klobučan – event_2026.json#1 | SRC-0001; SRC-0002 | Oficiální archiv kapely a pořadatel potvrzují tuto zastávku. Další zastávky doplnit až po samostatném ověření.
