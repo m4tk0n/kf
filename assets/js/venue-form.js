@@ -38,6 +38,7 @@
   var countryInput = form.querySelector('[data-venue-country-input]');
   var countryId = form.querySelector('[data-venue-country-id]');
   var countryList = form.querySelector('[data-venue-country-suggestions]');
+  var countryIso2 = form.querySelector('[data-venue-country-iso2]');
   var timer = 0;
   var request = { city: 0, country: 0 };
 
@@ -101,6 +102,7 @@
             if (countryInput && countryId) {
               countryInput.value = item.country;
               countryId.value = String(item.country_id);
+              if (countryIso2) countryIso2.value = item.iso2 || '';
             }
           },
           function (item) { return item.name + ' · ' + item.country; });
@@ -114,6 +116,7 @@
   if (countryInput && countryId && countryList) {
     countryInput.addEventListener('input', function () {
       countryId.value = '0';
+      if (countryIso2) countryIso2.value = '';
       if (cityId) cityId.value = '0';
       if (cityInput) cityInput.value = '';
       window.clearTimeout(timer);
@@ -122,6 +125,7 @@
           function (item) {
             countryInput.value = item.name;
             countryId.value = String(item.id);
+            if (countryIso2) countryIso2.value = item.iso2 || '';
           },
           function (item) { return item.name; });
       }, 180);
