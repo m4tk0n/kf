@@ -29,6 +29,8 @@ return [
             'bands' => 'bands',
             'events' => 'events',
             'event_bands' => 'event_bands',
+            'events_tour' => 'events_tour',
+            'events_tour_events' => 'events_tour_events',
             'pending' => 'pending',
             'fav_events' => 'fav_events',
             'fav_bands' => 'fav_bands',
