@@ -1,16 +1,12 @@
-name: K&F – automatický výzkum koncertů
+name: K&F – rešerše koncertů (PHP worker)
 
 on:
   workflow_dispatch:
     inputs:
-      max_tasks:
-        description: Počet rešeršních úloh v tomto běhu (1–8)
+      max_queries:
+        description: Počet vyhledávacích dotazů v jednom běhu (1–12)
         required: false
-        default: "2"
-      max_seconds:
-        description: Časový limit běhu v sekundách
-        required: false
-        default: "3300"
+        default: "12"
   schedule:
     - cron: "17 2 * * *"
 
@@ -24,7 +20,7 @@ concurrency:
 jobs:
   research:
     runs-on: ubuntu-latest
-    timeout-minutes: 58
+    timeout-minutes: 10
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
@@ -32,56 +28,84 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Validate Python worker syntax
+      - name: Validate PHP worker syntax
         run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          path = Path("scripts/seed_research.py")
-          compile(path.read_text(encoding="utf-8"), str(path), "exec")
-          print("Python syntax OK")
-          PY
+          php -l seed-worker.php
 
-      - name: Check research activation
-        id: activation
+      - name: Run bounded research batch on the live server
         env:
-          ENABLED: ${{ vars.SEED_RESEARCH_ENABLED }}
-          API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          if [ "$ENABLED" != "true" ]; then
-            echo "enabled=false" >> "$GITHUB_OUTPUT"
-            echo "Automatický výzkum je vypnutý. Nastav Repository variable SEED_RESEARCH_ENABLED=true."
-            exit 0
-          fi
-          if [ -z "$API_KEY" ]; then
-            echo "::error::Chybí Repository secret OPENAI_API_KEY."
-            exit 1
-          fi
-          echo "enabled=true" >> "$GITHUB_OUTPUT"
-
-      - name: Run resumable file-first research
-        if: steps.activation.outputs.enabled == 'true'
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: gpt-6.2-astra
-          MAX_TASKS: ${{ inputs.max_tasks || '2' }}
-          MAX_SECONDS: ${{ inputs.max_seconds || '3300' }}
+          AI_WRITE_KEY: ${{ secrets.AI_WRITE_KEY }}
+          MAX_QUERIES: ${{ inputs.max_queries || '12' }}
         run: |
           set -euo pipefail
-          python3 scripts/seed_research.py
+          : "\${AI_WRITE_KEY:?Missing GitHub Secret AI_WRITE_KEY}"
+          curl --fail-with-body --silent --show-error \
+            --connect-timeout 15 --max-time 240 \
+            --retry 2 --retry-delay 3 \
+            -X POST \
+            -H "X-AI-Key: \${AI_WRITE_KEY}" \
+            -H "Content-Type: application/json" \
+            --data "{\"max_queries\":\${MAX_QUERIES}}" \
+            "https://7x.wz.cz/_kf/seed-worker.php" \
+            | tee /tmp/seed-research-result.json
 
-      - name: Commit candidates and checkpoint
-        if: always() && steps.activation.outputs.enabled == 'true'
+      - name: Download research files from the server
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ secrets.FTP_PORT }}
+          FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
+        run: |
+          set -euo pipefail
+          : "\${FTP_SERVER:?Missing GitHub Secret FTP_SERVER}"
+          : "\${FTP_USERNAME:?Missing GitHub Secret FTP_USERNAME}"
+          : "\${FTP_PASSWORD:?Missing GitHub Secret FTP_PASSWORD}"
+          : "\${FTP_REMOTE_DIR:?Missing GitHub Secret FTP_REMOTE_DIR}"
+          export FTP_PORT="\${FTP_PORT:-21}"
+          mkdir -p Install/seed_priprava/candidates
+
+          python3 - <<'PY'
+          import os
+          def q(value):
+              if "\n" in value or "\r" in value:
+                  raise SystemExit("FTP settings must not contain newlines")
+              return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
+          remote = os.environ["FTP_REMOTE_DIR"].rstrip("/")
+          local = os.path.abspath("Install/seed_priprava")
+          commands = [
+              "set cmd:fail-exit yes",
+              "set net:max-retries 2",
+              "set net:timeout 30",
+              "set ftp:passive-mode yes",
+              f"open -p {q(os.environ['FTP_PORT'])} {q(os.environ['FTP_SERVER'])}",
+              f"user {q(os.environ['FTP_USERNAME'])} {q(os.environ['FTP_PASSWORD'])}",
+              f"get -o {q(local + '/band_queue.json')} {q(remote + '/Install/seed_priprava/band_queue.json')}",
+              f"get -o {q(local + '/automation_state.json')} {q(remote + '/Install/seed_priprava/automation_state.json')}",
+              f"get -o {q(local + '/candidates/search_results.jsonl')} {q(remote + '/Install/seed_priprava/candidates/search_results.jsonl')}",
+              f"get -o {q(local + '/candidates/search_queries.jsonl')} {q(remote + '/Install/seed_priprava/candidates/search_queries.jsonl')}",
+              "bye",
+          ]
+          with open("/tmp/kf-seed-import.lftp", "w", encoding="utf-8") as f:
+              f.write("\n".join(commands) + "\n")
+          PY
+          sudo apt-get update
+          sudo apt-get install -y lftp
+          lftp -f /tmp/kf-seed-import.lftp
+          rm -f /tmp/kf-seed-import.lftp
+
+      - name: Commit research files to GitHub
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Install/seed_priprava/candidates \
+          git add Install/seed_priprava/band_queue.json \
             Install/seed_priprava/automation_state.json \
-            Install/seed_priprava/band_queue.json \
-            Install/seed_priprava/research_log.jsonl
+            Install/seed_priprava/candidates/search_results.jsonl \
+            Install/seed_priprava/candidates/search_queries.jsonl
           if git diff --cached --quiet; then
-            echo "Žádné nové soubory k uložení."
+            echo "No research files changed."
             exit 0
           fi
-          git commit -m "Update concert research candidates and checkpoint"
+          git commit -m "Save concert research search results"
           git push origin HEAD:main
