@@ -843,6 +843,117 @@
         "https://www.objevbrno.cz/cs/event/sps-the-fialky-v-brne-god-save-the-punk-ii-2026",
         "https://patrobrno.cz/kontakt/"
       ]
+    },
+    {
+      "id": 24,
+      "name": "Starák Fest",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-08-14",
+      "date_to": "2026-08-15",
+      "time_start": null,
+      "city": "Říčany",
+      "country": "CZ",
+      "venue_id": 22,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "19:15"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.ricany.cz/udalost/starak-fest-3/",
+        "https://vikendo.cz/events/starak-fest-2026",
+        "https://www.findglocal.com/CZ/Ricany/308694282544774/STAR%C3%81K-FEST"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Summer Punk Párty Volyně vol. XV",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-08-14",
+      "date_to": "2026-08-15",
+      "time_start": null,
+      "city": "Volyně",
+      "country": "CZ",
+      "venue_id": 23,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "18:40"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://kultura-volyne.cz/typ/akce/page/2/",
+        "https://vikendo.cz/events/summer-punk-party-volyne-vol-xv",
+        "https://www.ireport.cz/fotoreporty/krav-boca-h2o-a-mad-rabbit-divoke-finale-summer-punk-party-ve-volyni",
+        "https://plovarnavolyne.cz/"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Trutnoff Open Air",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-08-13",
+      "date_to": "2026-08-16",
+      "time_start": null,
+      "city": "Trutnov",
+      "country": "CZ",
+      "venue_id": 25,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "14:55"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.festivaltrutnoff.cz/bands/",
+        "https://www.festivaltrutnoff.cz/",
+        "https://www.bojistetrutnov.cz/kontakty"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Punkáči deťom 2026",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-08-27",
+      "date_to": "2026-08-29",
+      "time_start": null,
+      "city": "Opatovce",
+      "country": "SK",
+      "venue_id": 24,
+      "bands": [
+        {
+          "band_id": 4,
+          "sort_order": 1,
+          "time_play": "20:00"
+        },
+        {
+          "band_id": 1,
+          "sort_order": 2,
+          "time_play": "21:30"
+        },
+        {
+          "band_id": 7,
+          "sort_order": 3,
+          "time_play": "23:10"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://punkacidetom.sk/2026/08/13/casovy-rozpis-punkaci-detom-2026/",
+        "https://punkacidetom.sk/2026/09/02/15-rocnik-punkaci-detom-dopadol-skvele-vdaka-vam/",
+        "https://punkacidetom.sk/info/rady/"
+      ]
     }
   ],
   "next": []
