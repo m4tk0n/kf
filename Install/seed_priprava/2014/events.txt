@@ -1,0 +1,10 @@
+# Koncertní historie kapely The Trousers – doložené akce roku 2014
+# Formát: název | typ | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka | turné
+
+The Trousers + Junkie Jack Flash + Volume Under Kontroll | koncert | uskutečněno | 30. 7. 2014 | Budapešť | Maďarsko | A38 Hajó | The Trousers; Junkie Jack Flash; Volume Under Kontroll | 2014-S04 | Koncertní archiv uvádí všechny tři účinkující a místo. |
+The Trousers + [zalan] + The Signature | koncert | uskutečněno | 27. 9. 2014 | Budapešť | Maďarsko | Roham Bár, Dohány utca 22 | The Trousers; [zalan]; The Signature | 2014-S03 | Koncert spojený s natáčením videoklipu; zdroj uvádí přesný line-up, datum a adresu. |
+The Trousers + Psycho Mutants + Alba Hyseni Projekt | koncert | uskutečněno | 21. 11. 2014 | Budapešť | Maďarsko | G3 Rendezvényközpont, Király utca 8–10 | The Trousers; Psycho Mutants; Alba Hyseni Projekt | 2014-S02 | Tři účinkující uvedeni v programu akce. |
+The Trousers + Tankcsapda | koncert | uskutečněno | 22. 11. 2014 | Veszprém | Maďarsko | Expresszó | The Trousers; Tankcsapda | 2014-S02 | The Trousers vystoupili jako předkapela Tankcsapda; místo a datum uvádí dobová pozvánka. |
+The Trousers + Lowland Cowboys | koncert | uskutečněno | 27. 11. 2014 | Ostrava | Česko | Plan B | The Trousers; Lowland Cowboys | 2014-S01; 2014-S02 | První zastávka českého miniturné. | The Trousers – CZ mini-tour 2014
+The Trousers + Degradace | koncert | uskutečněno | 28. 11. 2014 | Olomouc | Česko | 15 minut | The Trousers; Degradace | 2014-S01; 2014-S02 | Druhá zastávka českého miniturné. | The Trousers – CZ mini-tour 2014
+The Trousers + Lowland Cowboys + Degradace | koncert | uskutečněno | 29. 11. 2014 | Praha | Česko | Klub Buben | The Trousers; Lowland Cowboys; Degradace | 2014-S01; 2014-S02 | Třetí zastávka českého miniturné; zdroj uvádí oba spoluúčinkující. | The Trousers – CZ mini-tour 2014
