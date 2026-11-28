@@ -385,7 +385,7 @@
     "country_code": "CZ",
     "genres": [],
     "sources": [
-      "src-punkgen-archive"
+      "src-punkgen-archive-2026"
     ],
     "verification": "country_code_labelled_in_punkgen_archive"
   },
@@ -739,7 +739,8 @@
       "punk"
     ],
     "sources": [
-      "src-fialky-played-2025"
+      "src-fialky-played-2025",
+      "src-punkaci-program-2025"
     ],
     "verification": "named_in_official_czech_band_tour_archive"
   },
@@ -839,7 +840,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-2024-goout"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_of_origin_labelled_by_event_listing"
   },
@@ -923,7 +924,8 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-2024-goout"
+      "src-punkaci-2024-goout",
+      "src-punkaci-program-2025"
     ],
     "verification": "country_of_origin_labelled_by_event_listing"
   },
@@ -1103,23 +1105,19 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
   {
-    "id": "bermud skej-kvadr",
+    "id": "bermudskej-kvadr",
     "name": "BERMUDSKEJ KVÁDR",
     "country_code": "CZ",
     "genres": [
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1131,9 +1129,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1145,9 +1141,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1159,9 +1153,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1173,9 +1165,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1187,9 +1177,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1201,9 +1189,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1215,9 +1201,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1229,9 +1213,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1243,9 +1225,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1257,9 +1237,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1271,9 +1249,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1285,9 +1261,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1299,9 +1273,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkaci-program-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1313,9 +1285,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkgen-archive-2021"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1327,9 +1297,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkgen-archive-2021"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1341,9 +1309,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkgen-archive-2021"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1355,9 +1321,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkgen-archive-2021"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   },
@@ -1369,8 +1333,6 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
       "src-punkgen-archive-2026"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
@@ -1383,8 +1345,6 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
       "src-punkgen-archive-2026"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
@@ -1397,8 +1357,6 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
       "src-punkgen-archive-2026"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
@@ -1411,9 +1369,7 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-program-2025",
-      "src-punkgen-archive-2021",
-      "src-punkgen-archive-2026"
+      "src-punkgen-archive-2025"
     ],
     "verification": "country_code_labelled_in_official_program_or_concert_archive"
   }
