@@ -1110,6 +1110,15 @@
       "source_type": "secondary_band_profile",
       "retrieved_on": "2026-11-28",
       "supports": "Sekundární profil potvrzuje český původ, pražské působení a žánrové zařazení Covers for Lovers."
+    },
+    {
+      "id": "SRC-0123",
+      "url": "https://www.zakazanyovoce.cz/",
+      "publisher": "zakázanÝovoce",
+      "title": "Oficiální web kapely",
+      "source_type": "official_band_biography",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web potvrzuje identitu české punkrockové kapely zakázanÝovoce, její vznik v roce 2005 a historii kapely."
     }
   ],
   "claims": [
@@ -7140,6 +7149,226 @@
       "status": "unverified",
       "source_ids": [
         "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0458",
+      "entity_type": "event",
+      "entity_id": 60,
+      "field": "date",
+      "value": "2025-08-23",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0459",
+      "entity_type": "event",
+      "entity_id": 60,
+      "field": "city_country",
+      "value": "Slaný, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0460",
+      "entity_type": "event",
+      "entity_id": 60,
+      "field": "venue_id",
+      "value": 44,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0461",
+      "entity_type": "event",
+      "entity_id": 60,
+      "field": "lineup",
+      "value": "SPS; The Fialky; Totální nasazení; Nežfaleš",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0462",
+      "entity_type": "event",
+      "entity_id": 61,
+      "field": "date",
+      "value": "2025-07-05",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0463",
+      "entity_type": "event",
+      "entity_id": 61,
+      "field": "city_country",
+      "value": "Brněnec, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0464",
+      "entity_type": "event",
+      "entity_id": 61,
+      "field": "venue_id",
+      "value": null,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0465",
+      "entity_type": "event",
+      "entity_id": 61,
+      "field": "lineup",
+      "value": "SPS; Totální nasazení; Vision Days; Punk Floid; E!E; The Fialky; Znouzectnost",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0466",
+      "entity_type": "event",
+      "entity_id": 62,
+      "field": "date",
+      "value": "2025-06-19",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0467",
+      "entity_type": "event",
+      "entity_id": 62,
+      "field": "city_country",
+      "value": "Praha, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0468",
+      "entity_type": "event",
+      "entity_id": 62,
+      "field": "venue_id",
+      "value": 34,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0469",
+      "entity_type": "event",
+      "entity_id": 62,
+      "field": "lineup",
+      "value": "SPS; The Fialky; Vision Days; Houba",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0470",
+      "entity_type": "event",
+      "entity_id": 63,
+      "field": "date",
+      "value": "2025-06-14",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0471",
+      "entity_type": "event",
+      "entity_id": 63,
+      "field": "city_country",
+      "value": "Hořepník, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0472",
+      "entity_type": "event",
+      "entity_id": 63,
+      "field": "venue_id",
+      "value": 45,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0473",
+      "entity_type": "event",
+      "entity_id": 63,
+      "field": "lineup",
+      "value": "SPS; The Fialky; zakázanÝovoce",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0474",
+      "entity_type": "band",
+      "entity_id": 15,
+      "field": "name",
+      "value": "zakázanÝovoce",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0123"
+      ]
+    },
+    {
+      "id": "CLM-0475",
+      "entity_type": "band",
+      "entity_id": 15,
+      "field": "country",
+      "value": "CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0123"
+      ]
+    },
+    {
+      "id": "CLM-0476",
+      "entity_type": "band",
+      "entity_id": 15,
+      "field": "city",
+      "value": "Říčany",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0123"
+      ]
+    },
+    {
+      "id": "CLM-0477",
+      "entity_type": "band",
+      "entity_id": 15,
+      "field": "genre",
+      "value": "punk rock",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0123"
       ]
     }
   ]
