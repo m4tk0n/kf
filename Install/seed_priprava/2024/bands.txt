@@ -1,6 +1,6 @@
 # Kapely zjištěné v akcích roku 2024
 # Formát: název | město původu | stát původu | žánr | zdroje | poznámka
 
-The Trousers | Budapešť | Maďarsko | garage rock / hard rock | 2024-S01; 2024-S04 | Kapela, jejíž zahraniční klubová vystoupení se dohledávají.
+The Trousers | Budapešť | Maďarsko | garage rock / hard rock / rock'n'roll | 2024-S01; 2024-S04; 2027-S13; 2027-S14; 2027-S15 | Jedna kanonická maďarská kapela; stejné vystupující těleso jako v záznamech 2026 a 2027. Žánrové popisy se mezi zdroji liší, ale neznamená to různé kapely.
 Dirty Honey | Los Angeles | USA | hard rock | 2024-S02 | Účast v akci je doložena; původ a žánr jsou převzaty z koncertního archivu a je třeba samostatně ověřit.
 Tygers of Pan Tang | neuvedeno | neuvedeno | heavy metal | 2024-S03 | Účast v akci doložena; profil kapely zatím není doplněn.
