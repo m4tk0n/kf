@@ -327,6 +327,105 @@
       "source_type": "official_venue",
       "retrieved_on": "2026-11-28",
       "supports": "Oficiální adresa Lidového domu Školní 358/7, 360 17 Karlovy Vary."
+    },
+    {
+      "id": "SRC-0036",
+      "url": "https://www.sps.litvinoff.cz/_koncerty.php",
+      "publisher": "SPS",
+      "title": "Odehrané koncerty",
+      "source_type": "official_band_archive",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální archiv SPS uvádí jako odehrané zastávky God Save The Punk II. 30. 10. Litomyšl, 31. 10. Písek, 13. 11. Ostrava, 20. 11. Mladá Boleslav a 21. 11. Kralupy nad Vltavou; u každé potvrzuje společné vystoupení s The Fialky."
+    },
+    {
+      "id": "SRC-0037",
+      "url": "https://www.litomysl.cz/kalendar_akci/kultura",
+      "publisher": "Město Litomyšl",
+      "title": "SPS a The Fialky: God Save The Punk II",
+      "source_type": "official_city_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Městský kalendář potvrzuje koncert 30. 10. 2026 v Music Club Kotelna, otevření 19:00, SPS 20:30 a The Fialky 21:45."
+    },
+    {
+      "id": "SRC-0038",
+      "url": "https://www.mckotelna.cz/",
+      "publisher": "Music Club Kotelna",
+      "title": "Oficiální web",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální název klubu a adresa Kpt. Jaroše 1129, 570 01 Litomyšl."
+    },
+    {
+      "id": "SRC-0039",
+      "url": "https://kalendarium.piseckem.cz/cs/akce/?od=2026-10-23&view=info",
+      "publisher": "Kalendárium Píseckem",
+      "title": "SPS a THE FIALKY",
+      "source_type": "regional_event_calendar",
+      "retrieved_on": "2026-11-28",
+      "supports": "Kalendář uvádí koncert SPS a The Fialky 31. 10. 2026 od 20:00 v Divadle Pod čarou v Písku."
+    },
+    {
+      "id": "SRC-0040",
+      "url": "https://www.podcarou.cz/kontakt/",
+      "publisher": "Divadlo Pod čarou",
+      "title": "Kontakt",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální adresa Tyršova 28, 397 01 Písek."
+    },
+    {
+      "id": "SRC-0041",
+      "url": "https://goout.net/en/sps%2Bthe-fialky-god-save-the-punk-ii-2026/szkmtky/",
+      "publisher": "GoOut",
+      "title": "SPS + The Fialky – God Save the Punk II. 2026",
+      "source_type": "event_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Koncert 13. 11. 2026 ve 20:00 v Barráku, Ostrava; účinkující SPS a The Fialky."
+    },
+    {
+      "id": "SRC-0042",
+      "url": "https://www.barrak-club.cz/cz/kontakty",
+      "publisher": "Barrák Music Club",
+      "title": "Kontakty",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální adresa Fügnerova 595/1, 702 00 Ostrava."
+    },
+    {
+      "id": "SRC-0043",
+      "url": "https://ukvakose.cz/",
+      "publisher": "U Kvakoše / Willax Klub Heineken",
+      "title": "Listopad 2026 ve Willax Klubu",
+      "source_type": "official_venue_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web uvádí koncert SPS + The Fialky 20. 11. 2026 ve Willax Klubu Heineken a adresu Havlíčkova 1307, Mladá Boleslav."
+    },
+    {
+      "id": "SRC-0044",
+      "url": "https://buyer-api.darkzin.cz/kluby-cesko/willax-klub-heineken/",
+      "publisher": "Darkzin",
+      "title": "Willax Klub Heineken",
+      "source_type": "venue_reference",
+      "retrieved_on": "2026-11-28",
+      "supports": "Sekundární profil potvrzuje adresu Havlíčkova 1307, Mladá Boleslav."
+    },
+    {
+      "id": "SRC-0045",
+      "url": "https://www.kasskralupy.cz/?filterIndex=26",
+      "publisher": "Kulturní a společenské středisko Kralupy nad Vltavou",
+      "title": "SPS a THE FIALKY : God Save The Punk II 2026",
+      "source_type": "official_venue_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální program KaSS potvrzuje akci 21. 11. 2026 v 18:30 v Kulturním domě v Kralupech."
+    },
+    {
+      "id": "SRC-0046",
+      "url": "https://bandzone.cz/koncert/562542-2026-11-21-thefialky-kass-vltava",
+      "publisher": "Bandzone",
+      "title": "God Save the Punk II. – Kralupy nad Vltavou",
+      "source_type": "concert_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Konkrétní záznam koncertu 21. 11. 2026, místo KaSS Vltava, adresa náměstí Jaroslava Seiferta 706 a účast The Fialky a SPS."
     }
   ],
   "claims": [
@@ -2018,6 +2117,651 @@
         "SRC-0015",
         "SRC-0034",
         "SRC-0035"
+      ]
+    },
+    {
+      "id": "CLM-0132",
+      "entity_type": "event",
+      "entity_id": 13,
+      "field": "name",
+      "value": "God Save The Punk II.",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038"
+      ]
+    },
+    {
+      "id": "CLM-0133",
+      "entity_type": "event",
+      "entity_id": 13,
+      "field": "date",
+      "value": "2026-10-30",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038"
+      ]
+    },
+    {
+      "id": "CLM-0134",
+      "entity_type": "event",
+      "entity_id": 13,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038"
+      ]
+    },
+    {
+      "id": "CLM-0135",
+      "entity_type": "event",
+      "entity_id": 13,
+      "field": "venue_id",
+      "value": 17,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038"
+      ]
+    },
+    {
+      "id": "CLM-0136",
+      "entity_type": "event",
+      "entity_id": 13,
+      "field": "lineup",
+      "value": "SPS; The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038"
+      ]
+    },
+    {
+      "id": "CLM-0137",
+      "entity_type": "event",
+      "entity_id": 13,
+      "field": "tour_id",
+      "value": "TOUR-002",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0036",
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038"
+      ]
+    },
+    {
+      "id": "CLM-0138",
+      "entity_type": "venue",
+      "entity_id": 17,
+      "field": "name",
+      "value": "Music Club Kotelna",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038"
+      ]
+    },
+    {
+      "id": "CLM-0139",
+      "entity_type": "venue",
+      "entity_id": 17,
+      "field": "address",
+      "value": "Kpt. Jaroše 1129, 570 01 Litomyšl",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038"
+      ]
+    },
+    {
+      "id": "CLM-0140",
+      "entity_type": "venue",
+      "entity_id": 17,
+      "field": "city_country",
+      "value": "Litomyšl, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038"
+      ]
+    },
+    {
+      "id": "CLM-0141",
+      "entity_type": "event",
+      "entity_id": 14,
+      "field": "name",
+      "value": "God Save The Punk II.",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0039",
+        "SRC-0040"
+      ]
+    },
+    {
+      "id": "CLM-0142",
+      "entity_type": "event",
+      "entity_id": 14,
+      "field": "date",
+      "value": "2026-10-31",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0039",
+        "SRC-0040"
+      ]
+    },
+    {
+      "id": "CLM-0143",
+      "entity_type": "event",
+      "entity_id": 14,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0039",
+        "SRC-0040"
+      ]
+    },
+    {
+      "id": "CLM-0144",
+      "entity_type": "event",
+      "entity_id": 14,
+      "field": "venue_id",
+      "value": 16,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0039",
+        "SRC-0040"
+      ]
+    },
+    {
+      "id": "CLM-0145",
+      "entity_type": "event",
+      "entity_id": 14,
+      "field": "lineup",
+      "value": "The Fialky; SPS",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0039",
+        "SRC-0040"
+      ]
+    },
+    {
+      "id": "CLM-0146",
+      "entity_type": "event",
+      "entity_id": 14,
+      "field": "tour_id",
+      "value": "TOUR-002",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0036",
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0039",
+        "SRC-0040"
+      ]
+    },
+    {
+      "id": "CLM-0147",
+      "entity_type": "venue",
+      "entity_id": 16,
+      "field": "name",
+      "value": "Divadlo Pod čarou",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0039",
+        "SRC-0040"
+      ]
+    },
+    {
+      "id": "CLM-0148",
+      "entity_type": "venue",
+      "entity_id": 16,
+      "field": "address",
+      "value": "Tyršova 28, 397 01 Písek",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0039",
+        "SRC-0040"
+      ]
+    },
+    {
+      "id": "CLM-0149",
+      "entity_type": "venue",
+      "entity_id": 16,
+      "field": "city_country",
+      "value": "Písek, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0039",
+        "SRC-0040"
+      ]
+    },
+    {
+      "id": "CLM-0150",
+      "entity_type": "event",
+      "entity_id": 15,
+      "field": "name",
+      "value": "God Save The Punk II.",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0041",
+        "SRC-0042"
+      ]
+    },
+    {
+      "id": "CLM-0151",
+      "entity_type": "event",
+      "entity_id": 15,
+      "field": "date",
+      "value": "2026-11-13",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0041",
+        "SRC-0042"
+      ]
+    },
+    {
+      "id": "CLM-0152",
+      "entity_type": "event",
+      "entity_id": 15,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0041",
+        "SRC-0042"
+      ]
+    },
+    {
+      "id": "CLM-0153",
+      "entity_type": "event",
+      "entity_id": 15,
+      "field": "venue_id",
+      "value": 15,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0041",
+        "SRC-0042"
+      ]
+    },
+    {
+      "id": "CLM-0154",
+      "entity_type": "event",
+      "entity_id": 15,
+      "field": "lineup",
+      "value": "SPS; The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0041",
+        "SRC-0042"
+      ]
+    },
+    {
+      "id": "CLM-0155",
+      "entity_type": "event",
+      "entity_id": 15,
+      "field": "tour_id",
+      "value": "TOUR-002",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0036",
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0041",
+        "SRC-0042"
+      ]
+    },
+    {
+      "id": "CLM-0156",
+      "entity_type": "venue",
+      "entity_id": 15,
+      "field": "name",
+      "value": "Barrák Music Club",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0041",
+        "SRC-0042"
+      ]
+    },
+    {
+      "id": "CLM-0157",
+      "entity_type": "venue",
+      "entity_id": 15,
+      "field": "address",
+      "value": "Fügnerova 595/1, 702 00 Ostrava",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0041",
+        "SRC-0042"
+      ]
+    },
+    {
+      "id": "CLM-0158",
+      "entity_type": "venue",
+      "entity_id": 15,
+      "field": "city_country",
+      "value": "Ostrava, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0041",
+        "SRC-0042"
+      ]
+    },
+    {
+      "id": "CLM-0159",
+      "entity_type": "event",
+      "entity_id": 16,
+      "field": "name",
+      "value": "God Save The Punk II.",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0043",
+        "SRC-0044"
+      ]
+    },
+    {
+      "id": "CLM-0160",
+      "entity_type": "event",
+      "entity_id": 16,
+      "field": "date",
+      "value": "2026-11-20",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0043",
+        "SRC-0044"
+      ]
+    },
+    {
+      "id": "CLM-0161",
+      "entity_type": "event",
+      "entity_id": 16,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0043",
+        "SRC-0044"
+      ]
+    },
+    {
+      "id": "CLM-0162",
+      "entity_type": "event",
+      "entity_id": 16,
+      "field": "venue_id",
+      "value": 14,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0043",
+        "SRC-0044"
+      ]
+    },
+    {
+      "id": "CLM-0163",
+      "entity_type": "event",
+      "entity_id": 16,
+      "field": "lineup",
+      "value": "SPS; The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0043",
+        "SRC-0044"
+      ]
+    },
+    {
+      "id": "CLM-0164",
+      "entity_type": "event",
+      "entity_id": 16,
+      "field": "tour_id",
+      "value": "TOUR-002",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0036",
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0043",
+        "SRC-0044"
+      ]
+    },
+    {
+      "id": "CLM-0165",
+      "entity_type": "venue",
+      "entity_id": 14,
+      "field": "name",
+      "value": "Willax Klub Heineken",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0043",
+        "SRC-0044"
+      ]
+    },
+    {
+      "id": "CLM-0166",
+      "entity_type": "venue",
+      "entity_id": 14,
+      "field": "address",
+      "value": "Havlíčkova 1307, 293 01 Mladá Boleslav",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0043",
+        "SRC-0044"
+      ]
+    },
+    {
+      "id": "CLM-0167",
+      "entity_type": "venue",
+      "entity_id": 14,
+      "field": "city_country",
+      "value": "Mladá Boleslav, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0043",
+        "SRC-0044"
+      ]
+    },
+    {
+      "id": "CLM-0168",
+      "entity_type": "event",
+      "entity_id": 17,
+      "field": "name",
+      "value": "God Save The Punk II.",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0045",
+        "SRC-0046"
+      ]
+    },
+    {
+      "id": "CLM-0169",
+      "entity_type": "event",
+      "entity_id": 17,
+      "field": "date",
+      "value": "2026-11-21",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0045",
+        "SRC-0046"
+      ]
+    },
+    {
+      "id": "CLM-0170",
+      "entity_type": "event",
+      "entity_id": 17,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0045",
+        "SRC-0046"
+      ]
+    },
+    {
+      "id": "CLM-0171",
+      "entity_type": "event",
+      "entity_id": 17,
+      "field": "venue_id",
+      "value": 13,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0045",
+        "SRC-0046"
+      ]
+    },
+    {
+      "id": "CLM-0172",
+      "entity_type": "event",
+      "entity_id": 17,
+      "field": "lineup",
+      "value": "The Fialky; SPS",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0045",
+        "SRC-0046"
+      ]
+    },
+    {
+      "id": "CLM-0173",
+      "entity_type": "event",
+      "entity_id": 17,
+      "field": "tour_id",
+      "value": "TOUR-002",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0036",
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0045",
+        "SRC-0046"
+      ]
+    },
+    {
+      "id": "CLM-0174",
+      "entity_type": "venue",
+      "entity_id": 13,
+      "field": "name",
+      "value": "Kulturní a společenské středisko Vltava",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0045",
+        "SRC-0046"
+      ]
+    },
+    {
+      "id": "CLM-0175",
+      "entity_type": "venue",
+      "entity_id": 13,
+      "field": "address",
+      "value": "náměstí Jaroslava Seiferta 706, 278 01 Kralupy nad Vltavou",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0045",
+        "SRC-0046"
+      ]
+    },
+    {
+      "id": "CLM-0176",
+      "entity_type": "venue",
+      "entity_id": 13,
+      "field": "city_country",
+      "value": "Kralupy nad Vltavou, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0036",
+        "SRC-0045",
+        "SRC-0046"
       ]
     }
   ]
