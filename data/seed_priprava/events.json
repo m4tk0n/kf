@@ -1516,7 +1516,8 @@
       }
     ],
     "source_ids": [
-      "src-fialky-played-2025"
+      "src-fialky-played-2025",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -1596,7 +1597,8 @@
       }
     ],
     "source_ids": [
-      "src-fialky-played-2025"
+      "src-fialky-played-2025",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -2862,10 +2864,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2025-07-11",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -3105,7 +3114,7 @@
   {
     "id": "sps-2025-05-16-praha",
     "name": "40 let Tři Sestry Open Air",
-    "event_type": "concert",
+    "event_type": "festival",
     "start_date": "2025-05-16",
     "end_date": "2025-05-16",
     "city": "Praha",
@@ -3118,10 +3127,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2025-05-16",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -3798,10 +3814,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2024-08-16",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -3820,10 +3843,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2024-08-09",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -3864,10 +3894,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2024-08-03",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -4097,11 +4134,18 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-06-22",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -5003,10 +5047,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2026-08-14",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -6220,10 +6271,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2023-06-29",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -6916,10 +6974,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2022-10-29",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -7101,7 +7166,7 @@
   {
     "id": "sps-2022-08-26-trencin",
     "name": "Pankáči deťom",
-    "event_type": "concert",
+    "event_type": "festival",
     "start_date": "2022-08-26",
     "end_date": "2022-08-26",
     "city": "Trenčín",
@@ -7114,10 +7179,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2022-08-26",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -8573,10 +8645,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2020-08-21",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -8969,10 +9048,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-04-17",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2026-04-17",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -8991,10 +9083,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-04-11",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2026-04-11",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -9013,10 +9118,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-04-10",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2026-04-10",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -9035,10 +9153,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-03-28",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2026-03-28",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -9057,10 +9188,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-03-27",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2026-03-27",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -9079,10 +9223,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-03-21",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2026-03-21",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -9101,10 +9258,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-03-20",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2026-03-20",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -9123,10 +9293,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-03-14",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2026-03-14",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -9145,10 +9328,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-03-13",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2026-03-13",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -9167,10 +9363,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-02-27",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2026-02-27",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -9211,10 +9420,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-02-14",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2026-02-14",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -10640,10 +10862,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-04-13",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2024-04-13",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -10662,10 +10897,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-04-12",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2024-04-12",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -10684,10 +10932,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-04-06",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2024-04-06",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -10706,10 +10967,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-04-05",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2024-04-05",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -10728,10 +11002,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-03-23",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2024-03-23",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -10750,10 +11037,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-03-22",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2024-03-22",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -10772,10 +11072,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-03-16",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2024-03-16",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -10794,10 +11107,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-03-15",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2024-03-15",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -10816,10 +11142,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-03-09",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2024-03-09",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -10838,10 +11177,23 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-03-08",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2024-03-08",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -10992,10 +11344,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2023-01-20",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11014,10 +11373,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2023-01-21",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11080,10 +11446,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2023-02-24",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11454,10 +11827,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2023-06-17",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11498,10 +11878,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-02-25",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11520,10 +11907,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-02-26",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11542,10 +11936,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-03-11",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11564,10 +11965,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-03-12",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11608,10 +12016,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-03-19",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11630,10 +12045,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-03-25",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11652,10 +12074,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-03-26",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11674,10 +12103,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-04-01",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11696,10 +12132,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-04-02",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11718,10 +12161,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-04-08",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11740,10 +12190,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-04-09",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -11938,10 +12395,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-12-17",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -12092,10 +12556,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2021-09-17",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -12158,10 +12629,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2021-08-21",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -12321,7 +12799,7 @@
   {
     "id": "fialky-2021-06-25-brno",
     "name": "The Fialky – Brno",
-    "event_type": "concert",
+    "event_type": "festival",
     "start_date": "2021-06-25",
     "end_date": "2021-06-25",
     "city": "Brno",
@@ -12334,10 +12812,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2021-06-25",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-nezfales-official-archive"
     ]
   },
   {
@@ -12778,6 +13263,2558 @@
     ],
     "source_ids": [
       "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-11-21-jindrichuv-hradec",
+    "name": "Live v Jindřichově Hradci",
+    "event_type": "concert",
+    "start_date": "2026-11-21",
+    "end_date": "2026-11-21",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-11-21",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-11-07-praha",
+    "name": "NEŽFALEŠ + HOUBA podzim 2026",
+    "event_type": "concert",
+    "start_date": "2026-11-07",
+    "end_date": "2026-11-07",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-11-07",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-11-06-znojmo",
+    "name": "NEŽFALEŠ + HOUBA podzim 2026",
+    "event_type": "concert",
+    "start_date": "2026-11-06",
+    "end_date": "2026-11-06",
+    "city": "Znojmo",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-11-06",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-10-24-zilina",
+    "name": "NEŽFALEŠ + HOUBA podzim 2026",
+    "event_type": "concert",
+    "start_date": "2026-10-24",
+    "end_date": "2026-10-24",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-10-24",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-10-23-kosice",
+    "name": "NEŽFALEŠ + HOUBA podzim 2026",
+    "event_type": "concert",
+    "start_date": "2026-10-23",
+    "end_date": "2026-10-23",
+    "city": "Košice",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-10-23",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-10-17-litomysl",
+    "name": "Upside Down fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-10-17",
+    "end_date": "2026-10-17",
+    "city": "Litomyšl",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-10-17",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-10-03-liberec",
+    "name": "NEŽFALEŠ + HOUBA podzim 2026",
+    "event_type": "concert",
+    "start_date": "2026-10-03",
+    "end_date": "2026-10-03",
+    "city": "Liberec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-10-03",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-10-02-kladno",
+    "name": "NEŽFALEŠ + HOUBA podzim 2026",
+    "event_type": "concert",
+    "start_date": "2026-10-02",
+    "end_date": "2026-10-02",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-10-02",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-09-05-klopina",
+    "name": "Klopina fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-09-05",
+    "end_date": "2026-09-05",
+    "city": "Klopina",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-09-05",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-09-04-litomerice",
+    "name": "NEŽFALEŠ + HOUBA podzim 2026",
+    "event_type": "concert",
+    "start_date": "2026-09-04",
+    "end_date": "2026-09-04",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-09-04",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-08-29-lysa-nad-labem",
+    "name": "Dávka štěstí fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-08-29",
+    "end_date": "2026-08-29",
+    "city": "Lysá nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-08-29",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-08-28-opatovce-u-trencina",
+    "name": "Punkáči deťom 2026",
+    "event_type": "festival",
+    "start_date": "2026-08-28",
+    "end_date": "2026-08-28",
+    "city": "Opatovce u Trenčína",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-08-28",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-08-22-slany",
+    "name": "Valník 2026",
+    "event_type": "festival",
+    "start_date": "2026-08-22",
+    "end_date": "2026-08-22",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-08-22",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-08-08-sobeslav",
+    "name": "Sobě punk fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-08-08",
+    "end_date": "2026-08-08",
+    "city": "Soběslav",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-08-08",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-08-07-letohrad",
+    "name": "Kunčický Kravál 23",
+    "event_type": "festival",
+    "start_date": "2026-08-07",
+    "end_date": "2026-08-07",
+    "city": "Letohrad",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-08-07",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-08-01-chvalkov-u-kamenice-nad-lipou",
+    "name": "Kravín fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-08-01",
+    "end_date": "2026-08-01",
+    "city": "Chválkov u Kamenice nad Lipou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-08-01",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-07-25-strakonice",
+    "name": "Let’s go párty 2026",
+    "event_type": "festival",
+    "start_date": "2026-07-25",
+    "end_date": "2026-07-25",
+    "city": "Strakonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-07-25",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-07-11-soprec-u-prelouce",
+    "name": "Čmoud fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-07-11",
+    "end_date": "2026-07-11",
+    "city": "Sopřeč u Přelouče",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-07-11",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-07-04-brnenec",
+    "name": "Brněnecfest 2026",
+    "event_type": "festival",
+    "start_date": "2026-07-04",
+    "end_date": "2026-07-04",
+    "city": "Brněnec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-07-04",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-07-04-holysov",
+    "name": "Pekelný Ostrov 2026",
+    "event_type": "festival",
+    "start_date": "2026-07-04",
+    "end_date": "2026-07-04",
+    "city": "Holýšov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-07-04",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-06-19-jesenik",
+    "name": "S.O.S. fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-06-19",
+    "end_date": "2026-06-19",
+    "city": "Jeseník",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-06-19",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-06-18-praha",
+    "name": "Zakoule punkfest 2026",
+    "event_type": "festival",
+    "start_date": "2026-06-18",
+    "end_date": "2026-06-18",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-06-18",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-06-13-mnichovo-hradiste",
+    "name": "Vostrov open air 2026",
+    "event_type": "festival",
+    "start_date": "2026-06-13",
+    "end_date": "2026-06-13",
+    "city": "Mnichovo Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-06-13",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-06-12-chomutov",
+    "name": "Hřebejkárna punkfest 2026",
+    "event_type": "festival",
+    "start_date": "2026-06-12",
+    "end_date": "2026-06-12",
+    "city": "Chomutov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-06-12",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-05-30-mostiste-u-velkeho-mezirici",
+    "name": "Glády v před fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-05-30",
+    "end_date": "2026-05-30",
+    "city": "Mostiště u Velkého Meziříčí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-05-30",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2026-05-16-lesnice-u-zabrehu",
+    "name": "Fo.Go fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-05-16",
+    "end_date": "2026-05-16",
+    "city": "Lesnice u Zábřehu",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2026-05-16",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-12-13-jesenik",
+    "name": "STARÝ NEŽ tour 2025",
+    "event_type": "concert",
+    "start_date": "2025-12-13",
+    "end_date": "2025-12-13",
+    "city": "Jeseník",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-12-13",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-12-12-jablonec-nad-nisou",
+    "name": "STARÝ NEŽ tour 2025",
+    "event_type": "concert",
+    "start_date": "2025-12-12",
+    "end_date": "2025-12-12",
+    "city": "Jablonec nad Nisou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-12-12",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-11-22-pisek",
+    "name": "STARÝ NEŽ tour 2025",
+    "event_type": "concert",
+    "start_date": "2025-11-22",
+    "end_date": "2025-11-22",
+    "city": "Písek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-11-22",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-11-21-jihlava",
+    "name": "STARÝ NEŽ tour 2025",
+    "event_type": "concert",
+    "start_date": "2025-11-21",
+    "end_date": "2025-11-21",
+    "city": "Jihlava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-11-21",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-10-18-teplice",
+    "name": "STARÝ NEŽ tour 2025",
+    "event_type": "concert",
+    "start_date": "2025-10-18",
+    "end_date": "2025-10-18",
+    "city": "Teplice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-10-18",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-10-17-brno",
+    "name": "STARÝ NEŽ tour 2025",
+    "event_type": "concert",
+    "start_date": "2025-10-17",
+    "end_date": "2025-10-17",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-10-17",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-09-27-hradec-kralove",
+    "name": "STARÝ NEŽ tour 2025",
+    "event_type": "concert",
+    "start_date": "2025-09-27",
+    "end_date": "2025-09-27",
+    "city": "Hradec Králové",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-09-27",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-09-26-uherske-hradiste",
+    "name": "STARÝ NEŽ tour 2025",
+    "event_type": "concert",
+    "start_date": "2025-09-26",
+    "end_date": "2025-09-26",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-09-26",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-08-23-slany",
+    "name": "Valník 2025",
+    "event_type": "festival",
+    "start_date": "2025-08-23",
+    "end_date": "2025-08-23",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-08-23",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-07-19-police-nad-metuji",
+    "name": "Bez Šance Fest XI 2025",
+    "event_type": "festival",
+    "start_date": "2025-07-19",
+    "end_date": "2025-07-19",
+    "city": "Police nad Metují",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-07-19",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-07-18-lovosice",
+    "name": "Altros fest 2025",
+    "event_type": "festival",
+    "start_date": "2025-07-18",
+    "end_date": "2025-07-18",
+    "city": "Lovosice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-07-18",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-07-12-hlucin",
+    "name": "Staré Pušky fest II",
+    "event_type": "festival",
+    "start_date": "2025-07-12",
+    "end_date": "2025-07-12",
+    "city": "Hlučín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-07-12",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-06-27-tabor",
+    "name": "Mighty Sounds 2025",
+    "event_type": "festival",
+    "start_date": "2025-06-27",
+    "end_date": "2025-06-27",
+    "city": "Tábor",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-06-27",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-06-13-hradec-kralove",
+    "name": "Rock For People 2025",
+    "event_type": "festival",
+    "start_date": "2025-06-13",
+    "end_date": "2025-06-13",
+    "city": "Hradec Králové",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-06-13",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-05-03-plzen",
+    "name": "Plzeň punk fest 2025",
+    "event_type": "festival",
+    "start_date": "2025-05-03",
+    "end_date": "2025-05-03",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-05-03",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2025-04-26-praha",
+    "name": "Číro fest 2025",
+    "event_type": "festival",
+    "start_date": "2025-04-26",
+    "end_date": "2025-04-26",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-04-26",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2024-12-06-litomerice",
+    "name": "NEŽFALEŠ + HOUBA podzim 2024",
+    "event_type": "concert",
+    "start_date": "2024-12-06",
+    "end_date": "2024-12-06",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-12-06",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2024-11-22-plzen",
+    "name": "NEŽFALEŠ + HOUBA podzim 2024",
+    "event_type": "concert",
+    "start_date": "2024-11-22",
+    "end_date": "2024-11-22",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-11-22",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2024-11-08-litomysl",
+    "name": "NEŽFALEŠ + HOUBA podzim 2024",
+    "event_type": "concert",
+    "start_date": "2024-11-08",
+    "end_date": "2024-11-08",
+    "city": "Litomyšl",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-11-08",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2024-10-19-bohuslavice",
+    "name": "NEŽFALEŠ + HOUBA podzim 2024",
+    "event_type": "concert",
+    "start_date": "2024-10-19",
+    "end_date": "2024-10-19",
+    "city": "Bohuslavice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-10-19",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2024-10-18-praha",
+    "name": "NEŽFALEŠ + HOUBA podzim 2024",
+    "event_type": "concert",
+    "start_date": "2024-10-18",
+    "end_date": "2024-10-18",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-10-18",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2024-10-05-klatovy",
+    "name": "NEŽFALEŠ + HOUBA podzim 2024",
+    "event_type": "concert",
+    "start_date": "2024-10-05",
+    "end_date": "2024-10-05",
+    "city": "Klatovy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-10-05",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2024-10-04-racice",
+    "name": "NEŽFALEŠ + HOUBA podzim 2024",
+    "event_type": "concert",
+    "start_date": "2024-10-04",
+    "end_date": "2024-10-04",
+    "city": "Račice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-10-04",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2024-07-12-hlucin",
+    "name": "Staré Pušky fest",
+    "event_type": "festival",
+    "start_date": "2024-07-12",
+    "end_date": "2024-07-12",
+    "city": "Hlučín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-07-12",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2024-06-15-ohrazeni-u-ceskych-budejovic",
+    "name": "Vohradník fest 2024",
+    "event_type": "festival",
+    "start_date": "2024-06-15",
+    "end_date": "2024-06-15",
+    "city": "Ohrazení u Českých Budějovic",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-06-15",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2024-06-08-vikyrovice-u-sumperka",
+    "name": "P.Fest 2024",
+    "event_type": "festival",
+    "start_date": "2024-06-08",
+    "end_date": "2024-06-08",
+    "city": "Vikýřovice u Šumperka",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-06-08",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2024-06-01-benesov",
+    "name": "Punkrock for Ferdinand 2024",
+    "event_type": "festival",
+    "start_date": "2024-06-01",
+    "end_date": "2024-06-01",
+    "city": "Benešov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2024-06-01",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-12-09-praha",
+    "name": "Punkrock Xmas 2023",
+    "event_type": "concert",
+    "start_date": "2023-12-09",
+    "end_date": "2023-12-09",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-12-09",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-12-08-litvinov",
+    "name": "Vánoční punk v Ponorce!",
+    "event_type": "concert",
+    "start_date": "2023-12-08",
+    "end_date": "2023-12-08",
+    "city": "Litvínov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-12-08",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-11-25-pribram",
+    "name": "Live v Příbrami",
+    "event_type": "concert",
+    "start_date": "2023-11-25",
+    "end_date": "2023-11-25",
+    "city": "Příbram",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-11-25",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-11-11-havlickuv-brod",
+    "name": "Live v Havlíčkově Brodě",
+    "event_type": "concert",
+    "start_date": "2023-11-11",
+    "end_date": "2023-11-11",
+    "city": "Havlíčkův Brod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-11-11",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-11-10-praha",
+    "name": "Live v Praze",
+    "event_type": "concert",
+    "start_date": "2023-11-10",
+    "end_date": "2023-11-10",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-11-10",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-10-27-vimperk",
+    "name": "Live ve Vimperku",
+    "event_type": "concert",
+    "start_date": "2023-10-27",
+    "end_date": "2023-10-27",
+    "city": "Vimperk",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-10-27",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-10-21-karlovy-vary",
+    "name": "Live v Karlových Varech",
+    "event_type": "concert",
+    "start_date": "2023-10-21",
+    "end_date": "2023-10-21",
+    "city": "Karlovy Vary",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-10-21",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-10-14-znojmo",
+    "name": "Live ve Znojmě",
+    "event_type": "concert",
+    "start_date": "2023-10-14",
+    "end_date": "2023-10-14",
+    "city": "Znojmo",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-10-14",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-08-26-trencin",
+    "name": "Punkáči deťom 2023",
+    "event_type": "festival",
+    "start_date": "2023-08-26",
+    "end_date": "2023-08-26",
+    "city": "Trenčín",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-08-26",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-08-19-slany",
+    "name": "Valník 2023",
+    "event_type": "festival",
+    "start_date": "2023-08-19",
+    "end_date": "2023-08-19",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-08-19",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-08-05-chvalkov-u-kamenice-nad-lipou",
+    "name": "Kravín fest 2023",
+    "event_type": "festival",
+    "start_date": "2023-08-05",
+    "end_date": "2023-08-05",
+    "city": "Chválkov u Kamenice nad Lipou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-08-05",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-07-22-police-nad-metuji",
+    "name": "Bez Šance fest 2023",
+    "event_type": "festival",
+    "start_date": "2023-07-22",
+    "end_date": "2023-07-22",
+    "city": "Police nad Metují",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-07-22",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-07-15-lovosice",
+    "name": "Altros fest 2023",
+    "event_type": "festival",
+    "start_date": "2023-07-15",
+    "end_date": "2023-07-15",
+    "city": "Lovosice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-07-15",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-06-23-tabor",
+    "name": "Mighty Sounds 2023",
+    "event_type": "festival",
+    "start_date": "2023-06-23",
+    "end_date": "2023-06-23",
+    "city": "Tábor",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-06-23",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-05-20-mostiste-u-velkeho-mezirici",
+    "name": "Glády v před fest vol. 10",
+    "event_type": "festival",
+    "start_date": "2023-05-20",
+    "end_date": "2023-05-20",
+    "city": "Mostiště u Velkého Meziříčí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-05-20",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-04-21-praha",
+    "name": "Číro fest 2023",
+    "event_type": "festival",
+    "start_date": "2023-04-21",
+    "end_date": "2023-04-21",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-04-21",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-04-15-melnik",
+    "name": "Nežfaleš + Houba na Mělníku",
+    "event_type": "concert",
+    "start_date": "2023-04-15",
+    "end_date": "2023-04-15",
+    "city": "Mělník",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-04-15",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-04-14-plzen",
+    "name": "Nežfaleš + Houba v Plzni",
+    "event_type": "concert",
+    "start_date": "2023-04-14",
+    "end_date": "2023-04-14",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-04-14",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-03-25-martin",
+    "name": "Nežfaleš + Houba v Martině",
+    "event_type": "concert",
+    "start_date": "2023-03-25",
+    "end_date": "2023-03-25",
+    "city": "Martin",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-03-25",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-03-24-opava",
+    "name": "Nežfaleš + Houba v Opavě",
+    "event_type": "concert",
+    "start_date": "2023-03-24",
+    "end_date": "2023-03-24",
+    "city": "Opava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-03-24",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-03-11-ceske-budejovice",
+    "name": "Nežfaleš + Houba v Českých Budějovicích",
+    "event_type": "concert",
+    "start_date": "2023-03-11",
+    "end_date": "2023-03-11",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-03-11",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-03-10-teplice",
+    "name": "Nežfaleš + Houba v Teplicích",
+    "event_type": "concert",
+    "start_date": "2023-03-10",
+    "end_date": "2023-03-10",
+    "city": "Teplice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-03-10",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-02-25-decin",
+    "name": "Live v Děčíně",
+    "event_type": "concert",
+    "start_date": "2023-02-25",
+    "end_date": "2023-02-25",
+    "city": "Děčín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-02-25",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-02-18-pardubice",
+    "name": "Nežfaleš + Houba v Pardubicích",
+    "event_type": "concert",
+    "start_date": "2023-02-18",
+    "end_date": "2023-02-18",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-02-18",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2023-02-17-radomysl-u-strakonic",
+    "name": "Nežfaleš + Houba v Radomyšli",
+    "event_type": "concert",
+    "start_date": "2023-02-17",
+    "end_date": "2023-02-17",
+    "city": "Radomyšl u Strakonic",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2023-02-17",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-11-12-olomouc",
+    "name": "Nežfaleš 20 let v Olomouci",
+    "event_type": "concert",
+    "start_date": "2022-11-12",
+    "end_date": "2022-11-12",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-11-12",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-11-11-kladno",
+    "name": "Nežfaleš 20 let na Kladně",
+    "event_type": "concert",
+    "start_date": "2022-11-11",
+    "end_date": "2022-11-11",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-11-11",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-11-05-usti-nad-labem",
+    "name": "Nežfaleš 20 let v Ústí nad Labem",
+    "event_type": "concert",
+    "start_date": "2022-11-05",
+    "end_date": "2022-11-05",
+    "city": "Ústí nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-11-05",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-11-03-praha",
+    "name": "20 let Nežfaleš",
+    "event_type": "concert",
+    "start_date": "2022-11-03",
+    "end_date": "2022-11-03",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-11-03",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-10-15-jindrichuv-hradec",
+    "name": "Nežfaleš 20 let v Jindřichově Hradci",
+    "event_type": "concert",
+    "start_date": "2022-10-15",
+    "end_date": "2022-10-15",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-10-15",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-10-14-hradec-kralove",
+    "name": "Nežfaleš 20 let v Hradci Králové",
+    "event_type": "concert",
+    "start_date": "2022-10-14",
+    "end_date": "2022-10-14",
+    "city": "Hradec Králové",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-10-14",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-09-23-jihlava",
+    "name": "Nežfaleš 20 let v Jihlavě",
+    "event_type": "concert",
+    "start_date": "2022-09-23",
+    "end_date": "2022-09-23",
+    "city": "Jihlava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-09-23",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-08-19-slany",
+    "name": "Valník 2022",
+    "event_type": "festival",
+    "start_date": "2022-08-19",
+    "end_date": "2022-08-19",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-08-19",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-07-30-trutnov",
+    "name": "Pod Parou 2022",
+    "event_type": "festival",
+    "start_date": "2022-07-30",
+    "end_date": "2022-07-30",
+    "city": "Trutnov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-07-30",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-07-23-tremosnice",
+    "name": "Čwachták fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-07-23",
+    "end_date": "2022-07-23",
+    "city": "Třemošnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-07-23",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-07-16-podebrady",
+    "name": "Barvy léta Poděbrady 2022",
+    "event_type": "festival",
+    "start_date": "2022-07-16",
+    "end_date": "2022-07-16",
+    "city": "Poděbrady",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-07-16",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-07-01-jesenik",
+    "name": "S.O.S. festival 2022",
+    "event_type": "festival",
+    "start_date": "2022-07-01",
+    "end_date": "2022-07-01",
+    "city": "Jeseník",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-07-01",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-06-25-olesko",
+    "name": "Oleško 2022",
+    "event_type": "festival",
+    "start_date": "2022-06-25",
+    "end_date": "2022-06-25",
+    "city": "Oleško",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-06-25",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-06-22-praha",
+    "name": "Benefiční akce Písně a ne bomby!",
+    "event_type": "concert",
+    "start_date": "2022-06-22",
+    "end_date": "2022-06-22",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-06-22",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-05-21-bohusovice-nad-ohri",
+    "name": "Eger fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-05-21",
+    "end_date": "2022-05-21",
+    "city": "Bohušovice nad Ohří",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-05-21",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2022-03-18-klecany",
+    "name": "Jarní turné 2022",
+    "event_type": "concert",
+    "start_date": "2022-03-18",
+    "end_date": "2022-03-18",
+    "city": "Klecany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2022-03-18",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-10-08-nachod",
+    "name": "Live v Náchodě",
+    "event_type": "concert",
+    "start_date": "2021-10-08",
+    "end_date": "2021-10-08",
+    "city": "Náchod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-10-08",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-10-01-litomerice",
+    "name": "Live v Baronce",
+    "event_type": "concert",
+    "start_date": "2021-10-01",
+    "end_date": "2021-10-01",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-10-01",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-09-24-jindrichuv-hradec",
+    "name": "Live v Jindřichově Hradci",
+    "event_type": "concert",
+    "start_date": "2021-09-24",
+    "end_date": "2021-09-24",
+    "city": "Jindřichův Hradec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-09-24",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-09-04-vrchlabi",
+    "name": "Ska punk night vol.3",
+    "event_type": "festival",
+    "start_date": "2021-09-04",
+    "end_date": "2021-09-04",
+    "city": "Vrchlabí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-09-04",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-09-03-praha",
+    "name": "Tři Sestry 36 let open air",
+    "event_type": "festival",
+    "start_date": "2021-09-03",
+    "end_date": "2021-09-03",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-09-03",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-08-28-ceske-budejovice",
+    "name": "Totální fest",
+    "event_type": "festival",
+    "start_date": "2021-08-28",
+    "end_date": "2021-08-28",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-08-28",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-08-20-volyne",
+    "name": "Summer Punk Párty 2021",
+    "event_type": "festival",
+    "start_date": "2021-08-20",
+    "end_date": "2021-08-20",
+    "city": "Volyně",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-08-20",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-08-19-praha",
+    "name": "Letní pražská show na Vltavě",
+    "event_type": "concert",
+    "start_date": "2021-08-19",
+    "end_date": "2021-08-19",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-08-19",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-08-07-harrachov",
+    "name": "Keltská Noc 2021",
+    "event_type": "festival",
+    "start_date": "2021-08-07",
+    "end_date": "2021-08-07",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-08-07",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-07-31-trebiz",
+    "name": "Let’s go fest 2021",
+    "event_type": "festival",
+    "start_date": "2021-07-31",
+    "end_date": "2021-07-31",
+    "city": "Třebíz",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-07-31",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-07-03-benesov",
+    "name": "Punkrock for Ferdinand 2021",
+    "event_type": "festival",
+    "start_date": "2021-07-03",
+    "end_date": "2021-07-03",
+    "city": "Benešov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-07-03",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2021-06-26-strakonice",
+    "name": "Strakonice punk fest",
+    "event_type": "festival",
+    "start_date": "2021-06-26",
+    "end_date": "2021-06-26",
+    "city": "Strakonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2021-06-26",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2020-09-18-praha",
+    "name": "Radkovi je 40!",
+    "event_type": "concert",
+    "start_date": "2020-09-18",
+    "end_date": "2020-09-18",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-09-18",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2020-09-11-brno",
+    "name": "Radek akusticky na výročí Pubu u dvou přátel",
+    "event_type": "concert",
+    "start_date": "2020-09-11",
+    "end_date": "2020-09-11",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-09-11",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2020-08-14-vyskov",
+    "name": "Pod Parou 2020",
+    "event_type": "festival",
+    "start_date": "2020-08-14",
+    "end_date": "2020-08-14",
+    "city": "Vyškov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-08-14",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2020-07-18-novy-bydzov",
+    "name": "Fest v Novém Bydžově",
+    "event_type": "festival",
+    "start_date": "2020-07-18",
+    "end_date": "2020-07-18",
+    "city": "Nový Bydžov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-07-18",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2020-07-04-vrchlabi",
+    "name": "Punkfest v Krkonoších",
+    "event_type": "festival",
+    "start_date": "2020-07-04",
+    "end_date": "2020-07-04",
+    "city": "Vrchlabí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-07-04",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2020-06-27-olesko",
+    "name": "Oleško fest 2020",
+    "event_type": "festival",
+    "start_date": "2020-06-27",
+    "end_date": "2020-06-27",
+    "city": "Oleško",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-06-27",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2020-05-28-brno",
+    "name": "Live v Brně na Špilberku",
+    "event_type": "concert",
+    "start_date": "2020-05-28",
+    "end_date": "2020-05-28",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-05-28",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2020-05-26-praha",
+    "name": "První punk na Storm street!",
+    "event_type": "concert",
+    "start_date": "2020-05-26",
+    "end_date": "2020-05-26",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-05-26",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2020-01-24-havlickuv-brod",
+    "name": "Warm-up párty jarního tour!",
+    "event_type": "concert",
+    "start_date": "2020-01-24",
+    "end_date": "2020-01-24",
+    "city": "Havlíčkův Brod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-01-24",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
+    ]
+  },
+  {
+    "id": "nezfales-2020-01-11-kladno",
+    "name": "Bastard punk fest Kladno",
+    "event_type": "festival",
+    "start_date": "2020-01-11",
+    "end_date": "2020-01-11",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2020-01-11",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      }
+    ],
+    "source_ids": [
+      "src-nezfales-official-archive"
     ]
   }
 ]

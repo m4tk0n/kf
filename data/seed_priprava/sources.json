@@ -438,5 +438,18 @@
     "limitations": [
       "Archiv obsahuje také soukromé akce, akustické koncerty a položky, které nejsou běžným veřejným koncertem; ty jsou označeny nebo vynechány podle popisu."
     ]
+  },
+  {
+    "id": "src-nezfales-official-archive",
+    "name": "NEŽFALEŠ – oficiální archiv odehraných koncertů",
+    "url": "https://www.nezfales.cz/odehrane-koncerty/",
+    "publisher": "NEŽFALEŠ",
+    "source_type": "official_band_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "tour_names"
+    ]
   }
 ]
