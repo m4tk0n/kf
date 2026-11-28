@@ -440,12 +440,12 @@
     "name": "CK13",
     "city": "Novi Sad",
     "country_code": "RS",
-    "address": null,
+    "address": "Vojvode Bojovića 13, 21000 Novi Sad, Srbsko",
     "coordinates": null,
     "source_ids": [
       "src-blankout-balkan-2024"
     ],
-    "verification": "venue_and_city_listed_in_official_tour_announcement"
+    "verification": "address_provided_by_user"
   },
   {
     "id": "akc-attack-zagreb",
