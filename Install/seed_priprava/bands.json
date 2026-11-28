@@ -1,11 +1,12 @@
 {
-  "_purpose": "Evidence kapel pro postupny pruzkum koncertni historie. Zpracovavaji se pouze kapely z Ceske republiky a Slovenska. U kazde aktualni kapely se prochazi akce od roku 2026 zpetne do roku 2000. Kapely objevene v line-upu se pridávaji do next, pokud jeste nejsou evidovane. Po dokonceni cele historie se aktualni kapela presune do ok. Zahranicni kapely se eviduji kvuli line-upu, ale jejich historii neprochazime a po overeni statu se presouvaji rovnou do ok. ID je stabilni pracovni ID kapely; v zaznamech akci se pouziva band_id.",
+  "_purpose": "Evidence kapel pro postupny pruzkum koncertni historie. Zpracovavaji se pouze kapely z Ceske republiky a Slovenska. U kazde aktualni kapely se prochazi akce od roku 2026 zpetne do roku 2000. Kapely objevene v line-upu se pridavaji do next, pokud jeste nejsou evidovane. Po dokonceni cele historie se aktualni kapela presune do ok. Zahranicni kapely se eviduji kvuli line-upu, ale jejich historii neprochazime a po overeni statu se presouvaji rovnou do ok. ID je stabilni pracovni ID kapely; v zaznamech akci se pouziva band_id. Zdroje k jednotlivym tvrzenim jsou evidovany take v evidence.json.",
   "_workflow": {
-    "aktual": "Jedina kapela, jejiz koncertni historie se prave prochazi od roku 2026 do roku 2000.",
+    "aktual": "Jedina ceska nebo slovenska kapela, jejiz koncertni historie se prave prochazi od roku 2026 do roku 2000.",
     "ok": "Kapely s dokoncenym pruzkumem (CZ/SK) nebo overene zahranicni kapely, jejichz historii neprochazime.",
-    "next": "Nove objevene kapely cekajici na identifikaci a pripadne pruzkum.",
-    "new_band": "Pred pridanim porovnat nazev, mesto, stat, cleny, diskografii a oficialni profily, aby nevznikaly duplicity.",
-    "foreign_band": "Pokud je overeno, ze kapela neni z CZ/SK, presunout ji z next rovnou do ok. Nezahranicni puvod neodhadovat; neznamy stat zustava ve fronte k overeni."
+    "next": "Nove objevene kapely cekajici na identifikaci nebo vlastni pruzkum.",
+    "new_band": "Pred pridanim porovnat nazev, mesto, stat, cleny, diskografii a oficialni profily, aby nevznikaly duplicity. Overit kazdy evidovany udaj a ulozit zdroje.",
+    "foreign_band": "Pokud je overeno, ze kapela neni z CZ/SK, presunout ji z next rovnou do ok. Nezahranicni puvod neodhadovat; neznamy stat zustava v next do overeni.",
+    "evidence": "Pole sources obsahuje URL zdroju. Jednotlive overene udaje a jejich zdroje se zapisuji do evidence.json."
   },
   "aktual": [
     {
@@ -14,9 +15,26 @@
       "genre": "punk rock",
       "country": "CZ",
       "city": "Praha",
-      "url": "https://thefialky.cz/"
+      "url": "https://thefialky.cz/",
+      "sources": [
+        "https://thefialky.cz/"
+      ]
     }
   ],
   "ok": [],
-  "next": []
+  "next": [
+    {
+      "id": 2,
+      "name": "SPS",
+      "genre": "punk",
+      "country": "CZ",
+      "city": "Praha",
+      "url": "https://sps.litvinoff.cz/_kapela.html",
+      "sources": [
+        "https://sps.litvinoff.cz/_kapela.html",
+        "https://slovnik.ceskyhudebnislovnik.cz/component/mdictionary/?id=1002761&task=record.record_detail"
+      ],
+      "note": "Identita, punkovy zanr a puvod v Praze overeny. Vlastni koncertni historie zatim neprozkoumana."
+    }
+  ]
 }
