@@ -1,0 +1,4 @@
+# Globální seznam turné a putovních sérií
+# Formát: pracovní ID | název | stav | zastávky (datum – město – místo – ročníkový záznam) | zdroje | poznámka
+
+TOUR-001 | Cestujúci Punk Island vol.2 | plánováno | 18. 12. 2026 – Bratislava – Randal Club – 2026/events.txt; 23. 1. 2027 – Košice – Collosseum Club – 2027/events.txt; 20. 2. 2027 – Banská Bystrica – Urban Spot – 2027/events.txt | 2026-S04; 2027-S03; 2027-S07 | Pořadatel výslovně uvádí, že jde o tři klubové festivaly pod společným názvem, které cestují do tří měst. Každá zastávka má samostatný line-up a samostatný záznam akce.
