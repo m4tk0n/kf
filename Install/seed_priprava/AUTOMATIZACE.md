@@ -29,7 +29,7 @@ Já následně zdroje ověřuji, rozlišuji stejnojmenné kapely, sestavuji konc
 ## Bezpečnost a nastavení
 
 - Endpoint přijímá pouze POST a vyžaduje hlavičku X-AI-Key.
-- Používá existující AI_WRITE_KEY z .env; stejná hodnota musí být v GitHub Secret AI_WRITE_KEY.
+- Používá existující AI_WRITE_KEY z .env; stejná hodnota musí být v GitHub Secret AI_WRITE_KEY. Jde pouze o společný přístupový token mezi GitHubem a serverem, nikoli o klíč k modelovému nebo placenému API.
 - Soubory v candidates/ jsou na webu blokované pomocí .htaccess.
 - Worker používá zámek, aby se běhy nepřekrývaly.
 - Žádné OpenAI API, žádný modelový secret, žádné SQL a žádný zápis do databáze.
