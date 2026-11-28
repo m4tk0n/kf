@@ -117,8 +117,6 @@
     countryInput.addEventListener('input', function () {
       countryId.value = '0';
       if (countryIso2) countryIso2.textContent = '';
-      if (cityId) cityId.value = '0';
-      if (cityInput) cityInput.value = '';
       window.clearTimeout(timer);
       timer = window.setTimeout(function () {
         load('country', countryInput, countryList, countryInput.getAttribute('data-suggest-url'), {},
