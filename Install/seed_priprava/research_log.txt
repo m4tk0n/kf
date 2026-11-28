@@ -232,3 +232,22 @@ Zapsáno:
 
 Poznámka:
 - U Den fotbalu Polička a Staré Pušky festu je zatím v line-upu ponechána pouze The Fialky; další účinkující se doplní až po potvrzení jejich skutečného vystoupení.
+
+## 2026-11-28 — Přepnutí průzkumu na SPS a kombinace dat
+
+Na pokyn uživatele byl průzkum The Fialky pozastaven a aktuální kapelou se stalo SPS. Dosavadní záznam The Fialky zůstal zachován ve frontě next; jeho historie není označena jako dokončená.
+
+Primární zdroj:
+- https://www.sps.litvinoff.cz/_koncerty.php
+Kontrolní zdroj:
+- https://bandzone.cz/sps?at=gig&gy=YYYY
+
+Doplněno do kandidátních dat:
+- event_2024.json: šest zastávek SPS + The Fialky Tour 2024 (4.–25. 10. 2024), ID 49–54.
+- event_2023.json: pět společných akcí SPS a The Fialky, ID 55–59.
+- Existující společné akce SPS + The Fialky z roku 2026 zůstaly deduplikované v event_2026.json; nebyly vytvořeny znovu.
+- venues.json/next: Žlutý Pes (Pardubice), D Club (Jihlava), Hotel Zlatá Hvězda (Vimperk); adresy a identita prostorů čekají na ověření.
+- bands.json/next: Vypsaná fiXa, Smola a Hrušky, E!E, Houba, Vision Days, Znouzectnost a Covers for Lovers.
+- tours.txt: TOUR-004 SPS + The Fialky Tour 2024 a TOUR-005 Jsme v hajzlu – Turné 2023.
+
+Všechny nové akce z SPS archivu jsou zatím v poli next a související claims mají stav unverified. Oficiální archiv SPS je primární zdroj, ale další nezávislé ověření a kontrola úplnosti line-upu stále probíhají.
