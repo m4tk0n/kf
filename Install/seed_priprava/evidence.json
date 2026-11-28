@@ -939,6 +939,105 @@
       "source_type": "setlist_archive",
       "retrieved_on": "2026-11-28",
       "supports": "Záznam koncertu The Fialky 26. 6. 2026 na Letišti Čápův Dvůr v Táboře; uvádí plánovaný čas 17:10."
+    },
+    {
+      "id": "SRC-0104",
+      "url": "https://denfotbalu.cz/informace/",
+      "publisher": "Den fotbalu Polička",
+      "title": "Informace pro návštěvníky 2026",
+      "source_type": "official_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální pořadatel potvrzuje festival 3.–4. 7. 2026 na Stadionu SK Polička a otevření areálu 3. 7. ve 13:00."
+    },
+    {
+      "id": "SRC-0105",
+      "url": "https://bandzone.cz/koncert/559138-policka-stadion-sk-policka-den-fotbalu-policka-2026",
+      "publisher": "Bandzone",
+      "title": "Den fotbalu Polička 2026",
+      "source_type": "concert_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Záznam uvádí 3. 7. 2026 od 14:00, Stadion SK Polička a The Fialky v line-upu."
+    },
+    {
+      "id": "SRC-0106",
+      "url": "https://denfotbalu.cz/home/",
+      "publisher": "Den fotbalu Polička",
+      "title": "Den fotbalu Polička 2026 – aftermovie",
+      "source_type": "official_event_report",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web zveřejňuje aftermovie a potvrzuje konání ročníku 2026."
+    },
+    {
+      "id": "SRC-0107",
+      "url": "https://www.lacultura.cz/brnenecfest-xxv-jubilejni-rocnik-punkoveho-festivalu-opet-rozbouri-brnenec/tiskova-zprava/",
+      "publisher": "LaCultura / pořadatel Brněnecfestu",
+      "title": "Brněnecfest XXV – tisková zpráva",
+      "source_type": "organizer_press_release",
+      "retrieved_on": "2026-11-28",
+      "supports": "Tisková zpráva pořadatele potvrzuje konání 4. 7. 2026 v areálu Composite Components a zveřejňuje přesný časový rozpis kapel."
+    },
+    {
+      "id": "SRC-0108",
+      "url": "https://www.smsticket.cz/vstupenky/61921-brnenecfest-xxv-aneb-punkovej-klystyr-brnenec-brnenec-los-fastidios-visaci-zamek-totalni-nasazeni",
+      "publisher": "SMS Ticket",
+      "title": "Brněnecfest XXV",
+      "source_type": "ticketing_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Záznam akce potvrzuje termín, místo, celodenní program a rozpis Nežfaleš, Totální nasazení, Punk Floid a The Fialky."
+    },
+    {
+      "id": "SRC-0109",
+      "url": "https://www.barvyleta.cz/?page=o-akci",
+      "publisher": "Barvy léta",
+      "title": "O akci – Barvy léta 2026",
+      "source_type": "official_festival_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální pořadatel potvrzuje dvoudenní festival 10.–11. 7. 2026 v areálu Jezera Poděbrady a účast The Fialky, SPS a Totálního nasazení."
+    },
+    {
+      "id": "SRC-0110",
+      "url": "https://collaborate.darkzin.cz/archiv-probehlych-akci/barvy-leta-2026-podebrady-vol-25-/",
+      "publisher": "Darkzin",
+      "title": "Barvy léta 2026 – program",
+      "source_type": "event_archive",
+      "retrieved_on": "2026-11-28",
+      "supports": "Archiv obsahuje rozpis 10. 7. 2026: Totální nasazení 19:20, SPS 20:40 a The Fialky 23:35."
+    },
+    {
+      "id": "SRC-0111",
+      "url": "https://rocklist.cz/fotoreport-z-festivalu-barvy-leta-2026-patek/",
+      "publisher": "Rocklist",
+      "title": "Legendární festival Barvy léta 2026 zahájil svůj 25. ročník",
+      "source_type": "post_event_report",
+      "retrieved_on": "2026-11-28",
+      "supports": "Report 11. 7. 2026 potvrzuje skutečná vystoupení Totálního nasazení, SPS a The Fialky v pátek 10. 7."
+    },
+    {
+      "id": "SRC-0112",
+      "url": "https://koupalistejezero.cz/kontakty",
+      "publisher": "Jezero Poděbrady",
+      "title": "Kontakty pro koupaliště a kemp",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální provozovatel a kontaktní údaje areálu Jezero Poděbrady."
+    },
+    {
+      "id": "SRC-0113",
+      "url": "https://bandzone.cz/koncert/560767-hlucin-sterkovna-stare-pusky-fest",
+      "publisher": "Bandzone",
+      "title": "Staré Pušky fest",
+      "source_type": "concert_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Konkrétní záznam koncertu 11. 7. 2026 na Štěrkovně v Hlučíně uvádí The Fialky."
+    },
+    {
+      "id": "SRC-0114",
+      "url": "https://www.sak-hlucin.cz/cs/hlucinske-jezero/informace-o-arealu-hlucinskeho-jezera/a-1626/",
+      "publisher": "Sport a kultura Hlučín",
+      "title": "Informace o areálu Hlučínského jezera",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální provozovatel potvrzuje adresu areálu Celní 1731/12a, 748 01 Hlučín."
     }
   ],
   "claims": [
@@ -5715,6 +5814,446 @@
         "SRC-0101",
         "SRC-0102",
         "SRC-0103"
+      ]
+    },
+    {
+      "id": "CLM-0352",
+      "entity_type": "event",
+      "entity_id": 45,
+      "field": "name",
+      "value": "Den fotbalu Polička 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0104",
+        "SRC-0105",
+        "SRC-0106"
+      ]
+    },
+    {
+      "id": "CLM-0353",
+      "entity_type": "event",
+      "entity_id": 45,
+      "field": "date",
+      "value": "2026-07-03–2026-07-04",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0104",
+        "SRC-0105",
+        "SRC-0106"
+      ]
+    },
+    {
+      "id": "CLM-0354",
+      "entity_type": "event",
+      "entity_id": 45,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0104",
+        "SRC-0105",
+        "SRC-0106"
+      ]
+    },
+    {
+      "id": "CLM-0355",
+      "entity_type": "event",
+      "entity_id": 45,
+      "field": "venue_id",
+      "value": 37,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0104",
+        "SRC-0105",
+        "SRC-0106"
+      ]
+    },
+    {
+      "id": "CLM-0356",
+      "entity_type": "event",
+      "entity_id": 45,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0104",
+        "SRC-0105",
+        "SRC-0106"
+      ]
+    },
+    {
+      "id": "CLM-0357",
+      "entity_type": "venue",
+      "entity_id": 37,
+      "field": "name",
+      "value": "Stadion SK Polička",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0104",
+        "SRC-0105",
+        "SRC-0106"
+      ]
+    },
+    {
+      "id": "CLM-0358",
+      "entity_type": "venue",
+      "entity_id": 37,
+      "field": "address",
+      "value": "U Liboháje 60, 572 01 Polička, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0104",
+        "SRC-0105",
+        "SRC-0106"
+      ]
+    },
+    {
+      "id": "CLM-0359",
+      "entity_type": "venue",
+      "entity_id": 37,
+      "field": "city_country",
+      "value": "Polička, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0104",
+        "SRC-0105",
+        "SRC-0106"
+      ]
+    },
+    {
+      "id": "CLM-0360",
+      "entity_type": "event",
+      "entity_id": 46,
+      "field": "name",
+      "value": "Brněnecfest XXV aneb Punkovej klystýr",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0107",
+        "SRC-0108"
+      ]
+    },
+    {
+      "id": "CLM-0361",
+      "entity_type": "event",
+      "entity_id": 46,
+      "field": "date",
+      "value": "2026-07-04–2026-07-04",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0107",
+        "SRC-0108"
+      ]
+    },
+    {
+      "id": "CLM-0362",
+      "entity_type": "event",
+      "entity_id": 46,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0107",
+        "SRC-0108"
+      ]
+    },
+    {
+      "id": "CLM-0363",
+      "entity_type": "event",
+      "entity_id": 46,
+      "field": "venue_id",
+      "value": 38,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0107",
+        "SRC-0108"
+      ]
+    },
+    {
+      "id": "CLM-0364",
+      "entity_type": "event",
+      "entity_id": 46,
+      "field": "lineup",
+      "value": "The Fialky; Nežfaleš; Totální nasazení; Punk Floid",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0107",
+        "SRC-0108"
+      ]
+    },
+    {
+      "id": "CLM-0365",
+      "entity_type": "venue",
+      "entity_id": 38,
+      "field": "name",
+      "value": "Areál firmy Composite Components",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0107",
+        "SRC-0108"
+      ]
+    },
+    {
+      "id": "CLM-0366",
+      "entity_type": "venue",
+      "entity_id": 38,
+      "field": "address",
+      "value": "Brněnec 55, 569 04 Brněnec, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0107",
+        "SRC-0108"
+      ]
+    },
+    {
+      "id": "CLM-0367",
+      "entity_type": "venue",
+      "entity_id": 38,
+      "field": "city_country",
+      "value": "Brněnec, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0107",
+        "SRC-0108"
+      ]
+    },
+    {
+      "id": "CLM-0368",
+      "entity_type": "event",
+      "entity_id": 47,
+      "field": "name",
+      "value": "Barvy léta 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0109",
+        "SRC-0110",
+        "SRC-0111",
+        "SRC-0112"
+      ]
+    },
+    {
+      "id": "CLM-0369",
+      "entity_type": "event",
+      "entity_id": 47,
+      "field": "date",
+      "value": "2026-07-10–2026-07-11",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0109",
+        "SRC-0110",
+        "SRC-0111",
+        "SRC-0112"
+      ]
+    },
+    {
+      "id": "CLM-0370",
+      "entity_type": "event",
+      "entity_id": 47,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0109",
+        "SRC-0110",
+        "SRC-0111",
+        "SRC-0112"
+      ]
+    },
+    {
+      "id": "CLM-0371",
+      "entity_type": "event",
+      "entity_id": 47,
+      "field": "venue_id",
+      "value": 39,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0109",
+        "SRC-0110",
+        "SRC-0111",
+        "SRC-0112"
+      ]
+    },
+    {
+      "id": "CLM-0372",
+      "entity_type": "event",
+      "entity_id": 47,
+      "field": "lineup",
+      "value": "The Fialky; SPS; Totální nasazení",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0109",
+        "SRC-0110",
+        "SRC-0111",
+        "SRC-0112"
+      ]
+    },
+    {
+      "id": "CLM-0373",
+      "entity_type": "venue",
+      "entity_id": 39,
+      "field": "name",
+      "value": "Jezero Poděbrady",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0109",
+        "SRC-0110",
+        "SRC-0111",
+        "SRC-0112"
+      ]
+    },
+    {
+      "id": "CLM-0374",
+      "entity_type": "venue",
+      "entity_id": 39,
+      "field": "address",
+      "value": "Pražská 50, 290 01 Poděbrady, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0109",
+        "SRC-0110",
+        "SRC-0111",
+        "SRC-0112"
+      ]
+    },
+    {
+      "id": "CLM-0375",
+      "entity_type": "venue",
+      "entity_id": 39,
+      "field": "city_country",
+      "value": "Poděbrady, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0109",
+        "SRC-0110",
+        "SRC-0111",
+        "SRC-0112"
+      ]
+    },
+    {
+      "id": "CLM-0376",
+      "entity_type": "event",
+      "entity_id": 48,
+      "field": "name",
+      "value": "Staré Pušky fest",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0113",
+        "SRC-0114"
+      ]
+    },
+    {
+      "id": "CLM-0377",
+      "entity_type": "event",
+      "entity_id": 48,
+      "field": "date",
+      "value": "2026-07-11–2026-07-11",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0113",
+        "SRC-0114"
+      ]
+    },
+    {
+      "id": "CLM-0378",
+      "entity_type": "event",
+      "entity_id": 48,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0113",
+        "SRC-0114"
+      ]
+    },
+    {
+      "id": "CLM-0379",
+      "entity_type": "event",
+      "entity_id": 48,
+      "field": "venue_id",
+      "value": 40,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0113",
+        "SRC-0114"
+      ]
+    },
+    {
+      "id": "CLM-0380",
+      "entity_type": "event",
+      "entity_id": 48,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0113",
+        "SRC-0114"
+      ]
+    },
+    {
+      "id": "CLM-0381",
+      "entity_type": "venue",
+      "entity_id": 40,
+      "field": "name",
+      "value": "Štěrkovna Hlučín",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0113",
+        "SRC-0114"
+      ]
+    },
+    {
+      "id": "CLM-0382",
+      "entity_type": "venue",
+      "entity_id": 40,
+      "field": "address",
+      "value": "Celní 1731/12a, 748 01 Hlučín, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0113",
+        "SRC-0114"
+      ]
+    },
+    {
+      "id": "CLM-0383",
+      "entity_type": "venue",
+      "entity_id": 40,
+      "field": "city_country",
+      "value": "Hlučín, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0113",
+        "SRC-0114"
       ]
     }
   ]
