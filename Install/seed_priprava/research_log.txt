@@ -110,3 +110,26 @@ Poznámky:
 - U Prahy nebyl support jednoznačně doložen pro konkrétní zastávku, proto jsou uvedeny pouze tři hlavní kapely.
 - U Zlína, Brna, Pardubic, Liberce a Karlových Varů jsou support a časy uvedeny podle konkrétních rozpisů koncertů.
 - Čas otevření dveří není zaměněn za začátek vystoupení ani za čas začátku akce.
+
+
+## 2026-11-28 — The Fialky + SPS — God Save The Punk II. — pět dalších zastávek
+
+Ověřeno křížově přes oficiální archivy obou kapel:
+- Oficiální archiv The Fialky: https://thefialky.cz/odehrane-koncerty/
+- Oficiální archiv SPS: https://www.sps.litvinoff.cz/_koncerty.php
+
+Doplněné akce:
+- 2026-10-30 — Litomyšl / Music Club Kotelna. Městský kalendář potvrzuje akci, otevření v 19:00, SPS v 20:30 a The Fialky v 21:45. Oficiální web klubu potvrzuje adresu.
+- 2026-10-31 — Písek / Divadlo Pod čarou. Regionální kalendář potvrzuje SPS a The Fialky 31. 10. od 20:00; oba oficiální archivy uvádějí odehraný koncert. Oficiální web místa potvrzuje adresu.
+- 2026-11-13 — Ostrava / Barrák Music Club. GoOut uvádí koncert SPS + The Fialky 13. 11. ve 20:00; oba archivy kapel potvrzují odehrání. Oficiální klub potvrzuje adresu.
+- 2026-11-20 — Mladá Boleslav / Willax Klub Heineken. Oficiální web klubu uvádí SPS + The Fialky 20. 11.; oba archivy kapel potvrzují odehrání. Adresa je křížově ověřena.
+- 2026-11-21 — Kralupy nad Vltavou / Kulturní dům Vltava. Oficiální program KaSS a záznam Bandzone potvrzují koncert a místo; oba archivy kapel potvrzují odehrání. Bandzone uvádí The Fialky 20:30 a SPS 21:45.
+
+Zapsáno:
+- event_2026.json: akce ID 13–17.
+- venues.json: místa ID 13–17.
+- tours.txt: TOUR-002 rozšířeno na šest ověřených zastávek.
+- evidence.json: zdroje SRC-0036 až SRC-0046 a tvrzení CLM-0132 až CLM-0176.
+
+Poznámka:
+- Čas začátku akce u Kralup nebyl sjednocen, protože zdroje uvádějí různé časy začátku programu. Časy vystoupení obou kapel jsou ale potvrzeny konkrétním rozpisem.
