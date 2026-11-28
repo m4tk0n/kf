@@ -19,6 +19,7 @@ Toto procházení se opakuje, dokud přibývají nové ověřitelné akce a kape
 - Postupovat **od roku 2027 směrem do minulosti**, rok po roce.
 - Základní územní rozsah akcí: **Česká republika a Slovensko**.
 - Zahrnout festivaly, klubové koncerty, koncertní série i další veřejné hudební akce.
+- U každé akce určit typ podle skutečné délky hudebního programu: festival = vícedenní hudební akce; koncert = jednodenní hudební akce. Název s „Fest“, „Festival“ nebo „Open Air Fest“ sám o sobě typ neurčuje. Přesah programu po půlnoci ani dřívější otevření areálu bez dalšího koncertního dne z jednodenní akce nedělá festival.
 - U velkých a známých festivalů procházet jednotlivé ročníky a jejich programy.
 - Kapely mohou pocházet z libovolné země.
 - Při průzkumu historie každé kapely zapisovat také její doložená vystoupení v **klubech v zahraničí** (mimo ČR a SR). U takového vystoupení uložit konkrétní akci i klub/místo, datum, město, stát a zdroje. Tato zahraniční klubová vystoupení se evidují kvůli úplnějšímu přehledu koncertní historie kapely.
@@ -102,6 +103,7 @@ Adresáře a soubory zakládat podle potřeby. Pracovní data zapisovat do adres
 Každý konkrétní ročník nebo samostatná akce je samostatný záznam. Uvádět:
 
 - název akce,
+- typ akce (festival / koncert podle skutečné délky hudebního programu),
 - stav akce (plánováno / uskutečněno / zrušeno, pokud je doloženo),
 - datum nebo přesný rozsah dat,
 - město,
@@ -110,6 +112,8 @@ Každý konkrétní ročník nebo samostatná akce je samostatný záznam. Uvád
 - seznam ověřených účinkujících kapel,
 - odkazy na zdroje,
 - případně pracovní ID turné z globálního souboru `tours.txt`.
+
+Pořadí polí: název | typ | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka | turné (pracovní ID). Pokud akce není součástí turné, poslední pole zůstává prázdné.
 
 U vícedenního festivalu uvést celý termín. Pokud není přesný den ověřen, nevymýšlet ho; zaznamenat pouze ověřený rozsah nebo údaj označit jako neověřený.
 
