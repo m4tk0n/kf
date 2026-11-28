@@ -10,9 +10,9 @@ POZASTAVENA_KAPELA | The Fialky (bands.json, id 1) — průzkum 2026 zatím nedo
 ROZSAH | 2026 až 2000 včetně; průzkum probíhá průběžně a v libovolném pořadí
 ZDROJE_SPS | Oficiální koncertní archiv SPS https://www.sps.litvinoff.cz/_koncerty.php; Bandzone https://bandzone.cz/sps?at=gig&gy=YYYY
 ROK_2026 | archiv SPS prochází; společné koncerty s The Fialky v říjnu a listopadu 2026 již existují v event_2026.json a byly deduplikovány
-ROK_2025 | dosud nezpracováno
+ROK_2025 | 4 společné akce SPS + The Fialky zapsány do event_2025.json/next; čekají na nezávislé ověření
 ROK_2024 | 6 společných zastávek SPS + The Fialky Tour 2024 zapsáno do event_2024.json/next; čekají na nezávislé ověření
 ROK_2023 | 5 společných akcí SPS a The Fialky zapsáno do event_2023.json/next; čekají na nezávislé ověření
-NOVE_KAPELY | SPS (id 2) aktuální; nově doplněny Vypsaná fiXa (8), Smola a Hrušky (9), E!E (10), Houba (11), Vision Days (12), Znouzectnost (13), Covers for Lovers (14)
-NOVA_MISTA | Žlutý Pes Pardubice (41), D Club Jihlava (42), Hotel Zlatá Hvězda Vimperk (43) — kandidáti, adresy a přesná identita čekají na ověření
+NOVE_KAPELY | SPS (id 2) aktuální; nově doplněny zakázanÝovoce (15), Vypsaná fiXa (8), Smola a Hrušky (9), E!E (10), Houba (11), Vision Days (12), Znouzectnost (13), Covers for Lovers (14) Vypsaná fiXa (8), Smola a Hrušky (9), E!E (10), Houba (11), Vision Days (12), Znouzectnost (13), Covers for Lovers (14)
+NOVA_MISTA | Žlutý Pes Pardubice (41), D Club Jihlava (42), Hotel Zlatá Hvězda Vimperk (43), Letní kino Slaný (44), Letní Parket Hořepník (45) — kandidáti, adresy a přesná identita čekají na ověření
 DALSI_KROK | Pokračovat SPS archivem 2026–2000, ověřovat jednotlivé akce z dalších zdrojů, doplňovat line-upy a deduplikovat proti eventům The Fialky; poté teprve další kapela
