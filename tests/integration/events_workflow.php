@@ -258,6 +258,27 @@ check(kf_band_draft_get($users['user']) === null
     && kf_band_image_path($users['user'], $bandImages['logo'], 's') === null
     && kf_band_image_path($users['user'], $bandImages['detail'], 'l') === null, 'band submission clears both draft images');
 $bandReviewHtml = run_route('review_band_preview', $reviewToken, $pendingBandId);
+check(str_contains($bandReviewHtml, 'KF test band submission') && str_contains($bandReviewHtml, 'band-list-preview')
+    && str_contains($bandReviewHtml, 'pending/image?id=' . $pendingBandId . '&size=s'), 'moderation displays the band detail and the small-logo list preview');
+run_route('review_approve', $reviewToken, $pendingBandId);
+$publishedBand = q('SELECT id, logo FROM ' . tbl('bands') . ' WHERE name=?', ['KF test band submission'])->fetch();
+check($publishedBand !== false && (int)$publishedBand['logo'] === 1, 'moderator approval publishes the band and marks its small logo');
+$publishedBandId = (int)$publishedBand['id'];
+$bandJson = json_read_file(json_bucket_rel('bands', $publishedBandId));
+check(($bandJson['description'] ?? '') === 'Popis testovací kapely.'
+    && ($bandJson['www'] ?? '') === 'https://example.com/band'
+    && ($bandJson['facebook'] ?? '') === 'https://facebook.com/exampleband'
+    && ($bandJson['bandzone'] ?? '') === 'https://bandzone.cz/exampleband'
+    && !empty($bandJson['image_l']), 'publication stores band description, website, social links and detail-image flag');
+$bandBase = abs_path((string)cfg('img.subdirs.bands')) . '/' . intdiv($publishedBandId, (int)cfg('img.folder_divisor')) . '/' . $publishedBandId;
+check(is_file($bandBase . '_s.webp') && is_file($bandBase . '_l.webp'), 'publication installs the separate small logo and detail WebP files');
+$bandDetail = kf_detail_load('band', $publishedBandId);
+check($bandDetail !== null && !empty($bandDetail['extra']['large'])
+    && ($bandDetail['extra']['facebook'] ?? '') === 'https://facebook.com/exampleband'
+    && ($bandDetail['extra']['bandzone'] ?? '') === 'https://bandzone.cz/exampleband', 'published band detail loads its large image and social links');
+check(kf_pending_get($pendingBandId) === null
+    && !is_file($pendingBandDir . '/' . $pendingBandId . '_s.webp')
+    && !is_file($pendingBandDir . '/' . $pendingBandId . '_l.webp'), 'band approval removes pending metadata and both temporary images');
 
 $trustedToken = session_token_for($users['trusted']);
 $trustedValues = event_values('KF test trusted direct publish', date('Y-m-d', strtotime('+31 days')), $cityId, $venueId, $bandId);
