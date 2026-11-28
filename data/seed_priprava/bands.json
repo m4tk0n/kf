@@ -764,5 +764,33 @@
       "src-fialky-played-2025"
     ],
     "verification": "country_labelled_in_official_tour_archive"
+  },
+  {
+    "id": "blank-out",
+    "name": "BLANK OUT",
+    "country_code": "CZ",
+    "genres": [
+      "punk",
+      "hardcore"
+    ],
+    "sources": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024"
+    ],
+    "verification": "official_band_profile_and_tour_announcement"
+  },
+  {
+    "id": "lidske-zdroje",
+    "name": "LIDSKÉ ZDROJE",
+    "country_code": "CZ",
+    "genres": [
+      "punk",
+      "hardcore"
+    ],
+    "sources": [
+      "src-lidskezdroje-bandcamp",
+      "src-blankout-balkan-2024"
+    ],
+    "verification": "official_bandcamp_profile_and_tour_announcement"
   }
 ]

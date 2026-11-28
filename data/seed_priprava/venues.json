@@ -319,5 +319,113 @@
       "src-fialky-played-2025"
     ],
     "verification": "venue_name_and_city_listed_in_official_band_archive"
+  },
+  {
+    "id": "kapu-linz",
+    "name": "KAPU",
+    "city": "Linz",
+    "country_code": "AT",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-blankout-balkan-2024"
+    ],
+    "verification": "venue_and_city_listed_in_official_tour_announcement"
+  },
+  {
+    "id": "gromka-ljubljana",
+    "name": "Gromka",
+    "city": "Ljubljana",
+    "country_code": "SI",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-blankout-balkan-2024"
+    ],
+    "verification": "venue_and_city_listed_in_official_tour_announcement"
+  },
+  {
+    "id": "monte-paradiso-pula",
+    "name": "Monte Paradiso",
+    "city": "Pula",
+    "country_code": "HR",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-blankout-balkan-2024"
+    ],
+    "verification": "venue_and_city_listed_in_official_tour_announcement"
+  },
+  {
+    "id": "podrum-rijeka",
+    "name": "Podrum",
+    "city": "Rijeka",
+    "country_code": "HR",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-blankout-balkan-2024"
+    ],
+    "verification": "venue_and_city_listed_in_official_tour_announcement"
+  },
+  {
+    "id": "ag-club-sarajevo",
+    "name": "AG Club",
+    "city": "Sarajevo",
+    "country_code": "BA",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-blankout-balkan-2024"
+    ],
+    "verification": "venue_and_city_listed_in_official_tour_announcement"
+  },
+  {
+    "id": "akab-okretnica-belgrade",
+    "name": "AKAB Okretnica",
+    "city": "Beograd",
+    "country_code": "RS",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-blankout-balkan-2024"
+    ],
+    "verification": "venue_and_city_listed_in_official_tour_announcement"
+  },
+  {
+    "id": "ck13-novi-sad",
+    "name": "CK13",
+    "city": "Novi Sad",
+    "country_code": "RS",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-blankout-balkan-2024"
+    ],
+    "verification": "venue_and_city_listed_in_official_tour_announcement"
+  },
+  {
+    "id": "akc-attack-zagreb",
+    "name": "AKC Attack",
+    "city": "Zagreb",
+    "country_code": "HR",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-blankout-balkan-2024"
+    ],
+    "verification": "venue_and_city_listed_in_official_tour_announcement"
+  },
+  {
+    "id": "arena-beisl-vienna",
+    "name": "Arena Beisl",
+    "city": "Vídeň",
+    "country_code": "AT",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-blankout-balkan-2024"
+    ],
+    "verification": "venue_and_city_listed_in_official_tour_announcement"
   }
 ]

@@ -301,5 +301,58 @@
       "band_identity",
       "country_of_origin"
     ]
+  },
+  {
+    "id": "src-blankout-balkan-2024",
+    "name": "Blank Out – Balkan Tour 2024",
+    "url": "https://bandzone.cz/blankout?at=news",
+    "publisher": "Blank Out",
+    "source_type": "official_band_tour_announcement",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "tour_name",
+      "tour_dates",
+      "cities",
+      "venues",
+      "touring_bands"
+    ]
+  },
+  {
+    "id": "src-blankout-sarajevo-2024",
+    "name": "Blank Out – Live in Sarajevo (Balkan Tour 2024)",
+    "url": "https://blankout.bandcamp.com/track/live-in-sarajevo",
+    "publisher": "Blank Out",
+    "source_type": "official_band_release",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "tour_confirmation",
+      "touring_bands",
+      "sarajevo_stop"
+    ]
+  },
+  {
+    "id": "src-blankout-balkan-review-2024",
+    "name": "Blank Out – report z Balkan Tour 2024",
+    "url": "https://www.darkzin.cz/klubove-akce/trebicska-punkova-resuscitace-2024-report/",
+    "publisher": "Darkzin",
+    "source_type": "independent_tour_report",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "tour_length",
+      "countries",
+      "tour_context"
+    ]
+  },
+  {
+    "id": "src-lidskezdroje-bandcamp",
+    "name": "Lidské Zdroje – oficiální Bandcamp",
+    "url": "https://lidskezdroje.bandcamp.com/",
+    "publisher": "Lidské Zdroje",
+    "source_type": "official_band_profile",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "band_identity",
+      "country_of_origin"
+    ]
   }
 ]

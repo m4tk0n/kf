@@ -26,5 +26,40 @@
       "src-fialky-played-2025"
     ],
     "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "blank-out-lidske-zdroje-balkan-tour-2024",
+    "name": "Balkan Tour 2024",
+    "start_date": "2024-03-22",
+    "end_date": "2024-04-01",
+    "band_ids": [
+      "blank-out",
+      "lidske-zdroje"
+    ],
+    "event_ids": [
+      "blankout-balkan-2024-linz",
+      "blankout-balkan-2024-ljubljana",
+      "blankout-balkan-2024-pula",
+      "blankout-balkan-2024-rijeka",
+      "blankout-balkan-2024-sarajevo",
+      "blankout-balkan-2024-pancevo",
+      "blankout-balkan-2024-belgrade",
+      "blankout-balkan-2024-novi-sad",
+      "blankout-balkan-2024-zagreb",
+      "blankout-balkan-2024-vienna"
+    ],
+    "country_codes": [
+      "AT",
+      "SI",
+      "HR",
+      "BA",
+      "RS"
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ],
+    "verification": "official_band_announcement_confirmed_by_official_live_release_and_independent_report"
   }
 ]

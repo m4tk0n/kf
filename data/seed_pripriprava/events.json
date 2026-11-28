@@ -1,0 +1,1992 @@
+[
+  {
+    "id": "fest-pod-parou-2025",
+    "name": "Fest Pod Parou, vol. XXII",
+    "event_type": "festival",
+    "start_date": "2025-07-17",
+    "end_date": "2025-07-19",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "venue_id": "korunni-pevnustka-olomouc",
+    "lineup_completeness": "complete_official_program",
+    "performances": [
+      {
+        "date": "2025-07-17",
+        "start_time": "16:00",
+        "end_time": "16:40",
+        "stage": "1. stage",
+        "name": "BANDA",
+        "country_code": "CZ",
+        "band_id": "banda"
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "17:00",
+        "end_time": "17:40",
+        "stage": "1. stage",
+        "name": "JUST WÄR",
+        "country_code": "CZ",
+        "band_id": "just-war"
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "18:00",
+        "end_time": "18:40",
+        "stage": "1. stage",
+        "name": "CENSORSHIT",
+        "country_code": "CZ",
+        "band_id": "censorshit"
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "19:00",
+        "end_time": "19:50",
+        "stage": "1. stage",
+        "name": "FAST FOOD ORCHESTRA",
+        "country_code": "CZ",
+        "band_id": "fast-food-orchestra"
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "20:10",
+        "end_time": "21:05",
+        "stage": "1. stage",
+        "name": "DOWNSET",
+        "country_code": "US",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "21:25",
+        "end_time": "22:25",
+        "stage": "1. stage",
+        "name": "ONE WAY SYSTEM",
+        "country_code": "GB",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "22:45",
+        "end_time": "23:40",
+        "stage": "1. stage",
+        "name": "MOSCOW DEATH BRIGADE",
+        "country_code": "RU",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "00:00",
+        "end_time": "00:50",
+        "stage": "1. stage",
+        "name": "SLIME",
+        "country_code": "DE",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "01:10",
+        "end_time": "02:00",
+        "stage": "1. stage",
+        "name": "ČERTŮF PUNK",
+        "country_code": "CZ",
+        "band_id": "certuf-punk"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "10:00",
+        "end_time": "10:40",
+        "stage": "1. stage",
+        "name": "HLAVNÍ JISTIČ",
+        "country_code": "CZ",
+        "band_id": "hlavni-jistic"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "10:50",
+        "end_time": "11:25",
+        "stage": "1. stage",
+        "name": "TAKHLE VOLE",
+        "country_code": "CZ",
+        "band_id": "takhle-vole"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "11:40",
+        "end_time": "12:20",
+        "stage": "1. stage",
+        "name": "ROZTRHLEJ DEDÁČ",
+        "country_code": "CZ",
+        "band_id": "roztrhlej-dedac"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "12:35",
+        "end_time": "13:15",
+        "stage": "1. stage",
+        "name": "BARBAR PUNK",
+        "country_code": "CZ",
+        "band_id": "barbar-punk"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "13:30",
+        "end_time": "14:10",
+        "stage": "1. stage",
+        "name": "ZATREST",
+        "country_code": "CZ",
+        "band_id": "zatrest"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "14:30",
+        "end_time": "15:15",
+        "stage": "1. stage",
+        "name": "HANNIBAL LECTER",
+        "country_code": "CZ",
+        "band_id": "hannibal-lecter"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "15:30",
+        "end_time": "16:20",
+        "stage": "1. stage",
+        "name": "I.R.A.",
+        "country_code": "CO",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "16:40",
+        "end_time": "17:30",
+        "stage": "1. stage",
+        "name": "HÉTKÖZNAPI CSALÓDÁSOK",
+        "country_code": "HU",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "17:50",
+        "end_time": "18:40",
+        "stage": "1. stage",
+        "name": "THE DROWNS",
+        "country_code": "US",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "19:00",
+        "end_time": "19:50",
+        "stage": "1. stage",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "20:10",
+        "end_time": "21:05",
+        "stage": "1. stage",
+        "name": "CONFLICT",
+        "country_code": "GB",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "21:25",
+        "end_time": "22:25",
+        "stage": "1. stage",
+        "name": "COCKNEY REJECTS",
+        "country_code": "GB",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "22:45",
+        "end_time": "23:45",
+        "stage": "1. stage",
+        "name": "THE BABOON SHOW",
+        "country_code": "SE",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "00:05",
+        "end_time": "00:55",
+        "stage": "1. stage",
+        "name": "STO ZVÍŘAT",
+        "country_code": "CZ",
+        "band_id": "sto-zvirat"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "01:15",
+        "end_time": "02:00",
+        "stage": "1. stage",
+        "name": "APPLE JUICE",
+        "country_code": "CZ",
+        "band_id": "apple-juice"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "10:00",
+        "end_time": "10:40",
+        "stage": "1. stage",
+        "name": "SESSION",
+        "country_code": "CZ",
+        "band_id": "session"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "10:55",
+        "end_time": "11:35",
+        "stage": "1. stage",
+        "name": "GLEJT",
+        "country_code": "CZ",
+        "band_id": "glejt"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "11:50",
+        "end_time": "12:35",
+        "stage": "1. stage",
+        "name": "HAZYDECAY",
+        "country_code": "CZ",
+        "band_id": "hazydecay"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "12:45",
+        "end_time": "13:35",
+        "stage": "1. stage",
+        "name": "ZÁVIŠ",
+        "country_code": "CZ",
+        "band_id": "zavis"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "13:50",
+        "end_time": "14:35",
+        "stage": "1. stage",
+        "name": "ILEGALITY",
+        "country_code": "SK",
+        "band_id": "ilegality"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "14:55",
+        "end_time": "15:45",
+        "stage": "1. stage",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "16:05",
+        "end_time": "16:55",
+        "stage": "1. stage",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "17:15",
+        "end_time": "18:05",
+        "stage": "1. stage",
+        "name": "ULICZNY OPRYSZEK",
+        "country_code": "PL",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "18:25",
+        "end_time": "19:15",
+        "stage": "1. stage",
+        "name": "N.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "nvu"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "19:35",
+        "end_time": "20:25",
+        "stage": "1. stage",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "20:45",
+        "end_time": "21:35",
+        "stage": "1. stage",
+        "name": "TOTAL CHAOS",
+        "country_code": "US",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "21:55",
+        "end_time": "22:50",
+        "stage": "1. stage",
+        "name": "999",
+        "country_code": "GB",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "23:10",
+        "end_time": "00:00",
+        "stage": "1. stage",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2025-07-20",
+        "start_time": "00:15",
+        "end_time": "01:00",
+        "stage": "1. stage",
+        "name": "DESTRUCTIVE",
+        "country_code": "CA",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-20",
+        "start_time": "01:15",
+        "end_time": "02:00",
+        "stage": "1. stage",
+        "name": "DEGRADACE",
+        "country_code": "CZ",
+        "band_id": "degradace"
+      }
+    ],
+    "source_ids": [
+      "src-podparou-lineup-2025",
+      "src-podparou-venue-2025",
+      "src-podparou-history"
+    ]
+  },
+  {
+    "id": "punkaci-detom-2025",
+    "name": "Punkáči deťom 2025 (vol. 14)",
+    "event_type": "festival",
+    "start_date": "2025-08-28",
+    "end_date": "2025-08-30",
+    "city": "Opatovce",
+    "country_code": "SK",
+    "venue_id": "kemping-rybniky-opatovce",
+    "lineup_completeness": "partial_transcribed_from_official_program_snippet",
+    "performances": [
+      {
+        "date": "2025-08-28",
+        "name": "RAID SIREN",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "TRI GROŠE",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "NEKULTÚRA",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "ODPAD",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "POLEMIC",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "KONFRONT",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee",
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "NAČO NÁZOV",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "BREAKOUT",
+        "country_code": "FR",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "FEELME",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "ŠTAMGASTI",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "BRATISLAVSKÉ DIEVČATÁ",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "BERMUDSKEJ KVÁDR",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "ŠVINDL",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "BARIKÁDY Z POPELNÍC",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "UHOL DOPADU",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "BEAUTIFUL BASTARDS",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "SOUR BITCH",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "EXNI!TO",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid",
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni",
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "THE CARBURETORS",
+        "country_code": "NO",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "PIRATES OF THE PUBS",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "KOHOUT PLAŠÍ SMRT",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "STREET MACHINE",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "THE ROCKET DOGZ",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "ŽÁDNEJ STRES",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "P.U.M",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "SEX DEVIANTS",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "THE CHOICES",
+        "country_code": "FR",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "DUKLA VOZOVNA",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba",
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "MAD SIN",
+        "country_code": "DE",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "EVIL CONDUCT",
+        "country_code": "NL",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "ADACTA",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "DEGRADACE",
+        "country_code": "CZ",
+        "band_id": "degradace",
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "LENIWIEC",
+        "country_code": "PL",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      }
+    ],
+    "source_ids": [
+      "src-punkaci-program-2025",
+      "src-punkaci-home-2025",
+      "src-punkaci-history"
+    ]
+  },
+  {
+    "id": "punkgen-2020-zilina-hajovna-01-03",
+    "name": "Punk koncert – Hájovňa",
+    "event_type": "concert",
+    "start_date": "2020-01-03",
+    "end_date": "2020-01-03",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "hajovna-zilina",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2020-01-03",
+        "name": "RANA",
+        "country_code": "SK",
+        "band_id": "rana"
+      },
+      {
+        "date": "2020-01-03",
+        "name": "DISTAX",
+        "country_code": "SK",
+        "band_id": "distax"
+      },
+      {
+        "date": "2020-01-03",
+        "name": "JEŽIŠOVI PIVO NELEJ",
+        "country_code": "SK",
+        "band_id": "jezisovi-pivo-nelej"
+      },
+      {
+        "date": "2020-01-03",
+        "name": "DISKOTERROR SS",
+        "country_code": "SK",
+        "band_id": "diskoterror-ss"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2020"
+    ]
+  },
+  {
+    "id": "punkgen-2021-basta-bardejov-06-10",
+    "name": "Multižánrový festival v Baště",
+    "event_type": "festival",
+    "start_date": "2021-06-10",
+    "end_date": "2021-06-12",
+    "city": "Bardejov",
+    "country_code": "SK",
+    "venue_id": "basta-bardejov",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2021-06-11",
+        "name": "OTRAS",
+        "country_code": "SK",
+        "band_id": null
+      },
+      {
+        "date": "2021-06-11",
+        "name": "AHOJ",
+        "country_code": "SK",
+        "band_id": null
+      },
+      {
+        "date": "2021-06-11",
+        "name": "CAMELEON",
+        "country_code": "SK",
+        "band_id": null
+      },
+      {
+        "date": "2021-06-11",
+        "name": "NAZI TAMPONS",
+        "country_code": "SK",
+        "band_id": "nazi-tampons"
+      },
+      {
+        "date": "2021-06-11",
+        "name": "TVOI POSTOI",
+        "country_code": "SK",
+        "band_id": null
+      },
+      {
+        "date": "2021-06-12",
+        "name": "CTIB",
+        "country_code": "CZ",
+        "band_id": "ctib"
+      },
+      {
+        "date": "2021-06-12",
+        "name": "DÁŠA FON FĽAŠA",
+        "country_code": "SK",
+        "band_id": "dasa-fon-flasa"
+      },
+      {
+        "date": "2021-06-12",
+        "name": "MANON MEURT",
+        "country_code": "CZ",
+        "band_id": "manon-meurt"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2021"
+    ]
+  },
+  {
+    "id": "punkgen-2022-havlickuv-brod-07-01",
+    "name": "Punkový festival pod Chlístovskou skálou",
+    "event_type": "festival",
+    "start_date": "2022-07-01",
+    "end_date": "2022-07-02",
+    "city": "Havlíčkův Brod",
+    "country_code": "CZ",
+    "venue_id": "pod-chlistovskou-skalou-havlickuv-brod",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      },
+      {
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "e-e"
+      },
+      {
+        "name": "NAČO NÁZOV",
+        "country_code": "SK",
+        "band_id": "naco-nazov"
+      },
+      {
+        "name": "ILEGALITY",
+        "country_code": "SK",
+        "band_id": "ilegality"
+      },
+      {
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      },
+      {
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      },
+      {
+        "name": "DO ŘADY!",
+        "country_code": "CZ",
+        "band_id": "do-rady"
+      },
+      {
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2022"
+    ]
+  },
+  {
+    "id": "punkgen-2024-veseli-02-02",
+    "name": "ROZPOR / MARNO / DISTAX",
+    "event_type": "concert",
+    "start_date": "2024-02-02",
+    "end_date": "2024-02-02",
+    "city": "Veselí nad Moravou",
+    "country_code": "CZ",
+    "venue_id": "zarazicka-hospoda-veseli-nad-moravou",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2024-02-02",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      },
+      {
+        "date": "2024-02-02",
+        "name": "MARNO",
+        "country_code": "CZ",
+        "band_id": "marno"
+      },
+      {
+        "date": "2024-02-02",
+        "name": "DISTAX",
+        "country_code": "SK",
+        "band_id": "distax"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2024"
+    ]
+  },
+  {
+    "id": "punkgen-2024-znojmo-02-03",
+    "name": "ROZPOR / MARNO / DISTAX",
+    "event_type": "concert",
+    "start_date": "2024-02-03",
+    "end_date": "2024-02-03",
+    "city": "Znojmo",
+    "country_code": "CZ",
+    "venue_id": "gogo-znojmo",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2024-02-03",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      },
+      {
+        "date": "2024-02-03",
+        "name": "MARNO",
+        "country_code": "CZ",
+        "band_id": "marno"
+      },
+      {
+        "date": "2024-02-03",
+        "name": "DISTAX",
+        "country_code": "SK",
+        "band_id": "distax"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2024"
+    ]
+  },
+  {
+    "id": "punkgen-2025-kosice-03-14",
+    "name": "INTERPUNKCE / INCRIMINATE / LICKSPIT / DIKTÄT",
+    "event_type": "concert",
+    "start_date": "2025-03-14",
+    "end_date": "2025-03-14",
+    "city": "Košice",
+    "country_code": "SK",
+    "venue_id": "collosseum-kosice",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2025-03-14",
+        "name": "INTERPUNKCE",
+        "country_code": "CZ",
+        "band_id": "interpunkce"
+      },
+      {
+        "date": "2025-03-14",
+        "name": "INCRIMINATE",
+        "country_code": "SK",
+        "band_id": "incriminate"
+      },
+      {
+        "date": "2025-03-14",
+        "name": "LICKSPIT",
+        "country_code": "CZ",
+        "band_id": "lickspit"
+      },
+      {
+        "date": "2025-03-14",
+        "name": "DIKTÄT",
+        "country_code": "SK",
+        "band_id": "diktat"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2025"
+    ]
+  },
+  {
+    "id": "punkgen-2026-trnava-01-23",
+    "name": "50M ZNAK / BUCHTY/NOUZE / FAVORITE OBSSESION / GOOFY GINZ",
+    "event_type": "concert",
+    "start_date": "2026-01-23",
+    "end_date": "2026-01-23",
+    "city": "Trnava",
+    "country_code": "SK",
+    "venue_id": "kubik-trnava",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-01-23",
+        "name": "50M ZNAK",
+        "country_code": "CZ",
+        "band_id": "50m-znak"
+      },
+      {
+        "date": "2026-01-23",
+        "name": "BUCHTY/NOUZE",
+        "country_code": "CZ",
+        "band_id": "buchty-nouze"
+      },
+      {
+        "date": "2026-01-23",
+        "name": "FAVORITE OBSSESION",
+        "country_code": "CZ",
+        "band_id": null
+      },
+      {
+        "date": "2026-01-23",
+        "name": "GOOFY GINZ",
+        "country_code": "CZ",
+        "band_id": "goofy-ginz"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-uherske-hradiste-04-02",
+    "name": "ANCST / MÄRNO / DNO / NO GOD RHETORIC",
+    "event_type": "concert",
+    "start_date": "2026-04-02",
+    "end_date": "2026-04-02",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": "klub-mir-uherske-hradiste",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-04-02",
+        "name": "ANCST",
+        "country_code": "DE",
+        "band_id": "ancst"
+      },
+      {
+        "date": "2026-04-02",
+        "name": "MÄRNO",
+        "country_code": "CZ",
+        "band_id": null
+      },
+      {
+        "date": "2026-04-02",
+        "name": "DNO",
+        "country_code": "CZ",
+        "band_id": null
+      },
+      {
+        "date": "2026-04-02",
+        "name": "NO GOD RHETORIC",
+        "country_code": "CZ",
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-bratislava-04-04",
+    "name": "ANCST / MÄRNO / WARGAME",
+    "event_type": "concert",
+    "start_date": "2026-04-04",
+    "end_date": "2026-04-04",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": "zalar-bratislava",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-04-04",
+        "name": "ANCST",
+        "country_code": "DE",
+        "band_id": "ancst"
+      },
+      {
+        "date": "2026-04-04",
+        "name": "MÄRNO",
+        "country_code": "CZ",
+        "band_id": null
+      },
+      {
+        "date": "2026-04-04",
+        "name": "WARGAME",
+        "country_code": "SK",
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-brno-04-18",
+    "name": "MY O VLKOCH / INTERPUNKCE / KOMPLEX VINY / ROZRUCH / KURARE",
+    "event_type": "concert",
+    "start_date": "2026-04-18",
+    "end_date": "2026-04-18",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": "sibiř-brno",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-04-18",
+        "name": "MY O VLKOCH",
+        "country_code": "SK",
+        "band_id": "my-o-vlkoch"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "INTERPUNKCE",
+        "country_code": "CZ",
+        "band_id": "interpunkce"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "KOMPLEX VINY",
+        "country_code": "CZ",
+        "band_id": "komplex-viny"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "ROZRUCH",
+        "country_code": "CZ",
+        "band_id": "rozruch"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "KURARE",
+        "country_code": "CZ",
+        "band_id": "kurare"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-zilina-01-24",
+    "name": "50M ZNAK / BUCHTY/NOUZE / BARREN",
+    "event_type": "concert",
+    "start_date": "2026-01-24",
+    "end_date": "2026-01-24",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "hajovna-zilina",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-01-24",
+        "name": "50M ZNAK",
+        "country_code": "CZ",
+        "band_id": "50m-znak"
+      },
+      {
+        "date": "2026-01-24",
+        "name": "BUCHTY/NOUZE",
+        "country_code": "CZ",
+        "band_id": "buchty-nouze"
+      },
+      {
+        "date": "2026-01-24",
+        "name": "BARREN",
+        "country_code": "SK",
+        "band_id": "barren"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-zilina-01-30",
+    "name": "ZABLOUDIL/A / JADRAN / ROUILLEUX",
+    "event_type": "concert",
+    "start_date": "2026-01-30",
+    "end_date": "2026-01-30",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "hajovna-zilina",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-01-30",
+        "name": "ZABLOUDIL/A",
+        "country_code": "CZ",
+        "band_id": "zabloudil-a"
+      },
+      {
+        "date": "2026-01-30",
+        "name": "JADRAN",
+        "country_code": "CZ",
+        "band_id": "jadran"
+      },
+      {
+        "date": "2026-01-30",
+        "name": "ROUILLEUX",
+        "country_code": "CZ",
+        "band_id": "rouilleux"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-liptovsky-mikulas-01-31",
+    "name": "PIVNICA / FAJRONT / THE PLAN C / NÄ",
+    "event_type": "concert",
+    "start_date": "2026-01-31",
+    "end_date": "2026-01-31",
+    "city": "Liptovský Mikuláš",
+    "country_code": "SK",
+    "venue_id": "flak-liptovsky-mikulas",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-01-31",
+        "name": "PIVNICA",
+        "country_code": "SK",
+        "band_id": "pivnica"
+      },
+      {
+        "date": "2026-01-31",
+        "name": "FAJRONT",
+        "country_code": "SK",
+        "band_id": "fajront"
+      },
+      {
+        "date": "2026-01-31",
+        "name": "THE PLAN C",
+        "country_code": "SK",
+        "band_id": "the-plan-c"
+      },
+      {
+        "date": "2026-01-31",
+        "name": "NÄ",
+        "country_code": "SK",
+        "band_id": "na"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2025-banska-bystrica-01-04",
+    "name": "EYE FOR AN EYE / DIKTÄT / VEĽKOSKLAD / NÄ",
+    "event_type": "concert",
+    "start_date": "2025-01-04",
+    "end_date": "2025-01-04",
+    "city": "Banská Bystrica",
+    "country_code": "SK",
+    "venue_id": "bosorka-banska-bystrica",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2025-01-04",
+        "name": "EYE FOR AN EYE",
+        "country_code": "PL",
+        "band_id": null
+      },
+      {
+        "date": "2025-01-04",
+        "name": "DIKTÄT",
+        "country_code": "SK",
+        "band_id": "diktat"
+      },
+      {
+        "date": "2025-01-04",
+        "name": "VEĽKOSKLAD",
+        "country_code": "SK",
+        "band_id": null
+      },
+      {
+        "date": "2025-01-04",
+        "name": "NÄ",
+        "country_code": "SK",
+        "band_id": "na"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2025"
+    ]
+  },
+  {
+    "id": "punkgen-2025-poprad-01-17",
+    "name": "ATARAXIA / OROS / KOVOŠROT",
+    "event_type": "concert",
+    "start_date": "2025-01-17",
+    "end_date": "2025-01-17",
+    "city": "Poprad",
+    "country_code": "SK",
+    "venue_id": "kolaj-22-poprad",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2025-01-17",
+        "name": "ATARAXIA",
+        "country_code": "SK",
+        "band_id": "ataraxia"
+      },
+      {
+        "date": "2025-01-17",
+        "name": "OROS",
+        "country_code": "SK",
+        "band_id": "oros"
+      },
+      {
+        "date": "2025-01-17",
+        "name": "KOVOŠROT",
+        "country_code": "SK",
+        "band_id": "kovosrot"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2025"
+    ]
+  },
+  {
+    "id": "punkgen-2024-zilina-01-13",
+    "name": "DISIDENT / NAZI TAMPONS / DXFXFX",
+    "event_type": "concert",
+    "start_date": "2024-01-13",
+    "end_date": "2024-01-13",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "hajovna-zilina",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2024-01-13",
+        "name": "DISIDENT",
+        "country_code": "SK",
+        "band_id": "disident"
+      },
+      {
+        "date": "2024-01-13",
+        "name": "NAZI TAMPONS",
+        "country_code": "SK",
+        "band_id": "nazi-tampons"
+      },
+      {
+        "date": "2024-01-13",
+        "name": "DXFXFX",
+        "country_code": "SK",
+        "band_id": "dxfxfx"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2024"
+    ]
+  },
+  {
+    "id": "fialky-2025-warsaw-05-16",
+    "name": "The Fialky / Bulbulators / Lazy Class",
+    "event_type": "concert",
+    "start_date": "2025-05-16",
+    "end_date": "2025-05-16",
+    "city": "Warszawa",
+    "country_code": "PL",
+    "venue_id": "2kola-warsaw",
+    "lineup_completeness": "independent_listing",
+    "performances": [
+      {
+        "date": "2025-05-16",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-05-16",
+        "name": "BULBULATORS",
+        "country_code": "PL",
+        "band_id": null
+      },
+      {
+        "date": "2025-05-16",
+        "name": "LAZY CLASS",
+        "country_code": "PL",
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-punkowastrona-2025-05",
+      "src-fialky-2025-summer"
+    ]
+  },
+  {
+    "id": "fialky-2025-ruda-slaska-05-17",
+    "name": "The Fialky / Bulbulators / Blitzed / Zbeer",
+    "event_type": "concert",
+    "start_date": "2025-05-17",
+    "end_date": "2025-05-17",
+    "city": "Ruda Śląska",
+    "country_code": "PL",
+    "venue_id": "druid-pub-ruda-slaska",
+    "lineup_completeness": "independent_listing",
+    "performances": [
+      {
+        "date": "2025-05-17",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-05-17",
+        "name": "BULBULATORS",
+        "country_code": "PL",
+        "band_id": null
+      },
+      {
+        "date": "2025-05-17",
+        "name": "BLITZED",
+        "country_code": null,
+        "band_id": null
+      },
+      {
+        "date": "2025-05-17",
+        "name": "ZBEER",
+        "country_code": null,
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-punkowastrona-2025-05",
+      "src-fialky-2025-summer"
+    ]
+  },
+  {
+    "id": "fialky-2025-eggenthal-09-12",
+    "name": "The Fialky",
+    "event_type": "concert",
+    "start_date": "2025-09-12",
+    "end_date": "2025-09-12",
+    "city": "Eggenthal",
+    "country_code": "DE",
+    "venue_id": "underground-club-eggenthal",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-09-12",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-2025-summer",
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-wunstock-09-13",
+    "name": "Wunstock Festival 2025",
+    "event_type": "festival",
+    "start_date": "2025-09-12",
+    "end_date": "2025-09-14",
+    "city": "Wunsiedel",
+    "country_code": "DE",
+    "venue_id": "wunstock-festplatz-wunsiedel",
+    "lineup_completeness": "official_band_archive_and_festival_program",
+    "performances": [
+      {
+        "date": "2025-09-13",
+        "start_time": "20:30",
+        "end_time": "21:30",
+        "stage": null,
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-2025-summer",
+      "src-fialky-played-2025",
+      "src-wunstock-2025"
+    ]
+  },
+  {
+    "id": "minority-2025-dinkelscherben-07-25",
+    "name": "Dinkel-Festival 2025",
+    "event_type": "festival",
+    "start_date": "2025-07-24",
+    "end_date": "2025-07-27",
+    "city": "Dinkelscherben",
+    "country_code": "DE",
+    "venue_id": "raiffeisenhof-dinkelscherben",
+    "lineup_completeness": "official_program",
+    "performances": [
+      {
+        "date": "2025-07-25",
+        "start_time": "20:30",
+        "end_time": "21:30",
+        "stage": "HIP",
+        "name": "THE MINORITY",
+        "country_code": "SK",
+        "band_id": "the-minority"
+      }
+    ],
+    "source_ids": [
+      "src-dinkel-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-prague-03-01",
+    "name": "25 Punkrock years! + křest alba",
+    "event_type": "concert",
+    "start_date": "2025-03-01",
+    "end_date": "2025-03-01",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": "meetfactory-prague",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-03-01",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-03-01",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2025-03-01",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      },
+      {
+        "date": "2025-03-01",
+        "name": "CYANIDE PILLS",
+        "country_code": "GB",
+        "band_id": null
+      },
+      {
+        "date": "2025-03-01",
+        "name": "NASTY RUMOURS",
+        "country_code": "CH",
+        "band_id": null
+      },
+      {
+        "date": "2025-03-01",
+        "name": "BULBULATORS",
+        "country_code": "PL",
+        "band_id": "bulbulators"
+      },
+      {
+        "date": "2025-03-01",
+        "name": "BERLIN BLACKOUTS",
+        "country_code": "DE",
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-finsterwalde-03-07",
+    "name": "25 Punkrock years tour!",
+    "event_type": "concert",
+    "start_date": "2025-03-07",
+    "end_date": "2025-03-07",
+    "city": "Finsterwalde",
+    "country_code": "DE",
+    "venue_id": "l86-finsterwalde",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-03-07",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-03-07",
+        "name": "UPPERCUTS",
+        "country_code": "DE",
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-bratislava-03-15",
+    "name": "25 Punkrock years tour!",
+    "event_type": "concert",
+    "start_date": "2025-03-15",
+    "end_date": "2025-03-15",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": "mmc-bratislava",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-03-15",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-03-15",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2025-03-15",
+        "name": "STARÉ PUŠKY",
+        "country_code": "CZ",
+        "band_id": "stare-pusky"
+      },
+      {
+        "date": "2025-03-15",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      },
+      {
+        "date": "2025-03-15",
+        "name": "BRATISLAVSKÉ DIEVČATÁ",
+        "country_code": "SK",
+        "band_id": "bratislavske-dievcata"
+      },
+      {
+        "date": "2025-03-15",
+        "name": "ŠTAMGASTI",
+        "country_code": "CZ",
+        "band_id": "stamgasti"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-kosice-03-21",
+    "name": "25 Punkrock years tour!",
+    "event_type": "concert",
+    "start_date": "2025-03-21",
+    "end_date": "2025-03-21",
+    "city": "Košice",
+    "country_code": "SK",
+    "venue_id": "colloseum-kosice-2025",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-03-21",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-03-21",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2025-03-21",
+        "name": "NAZI TAMPONS",
+        "country_code": "SK",
+        "band_id": "nazi-tampons"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-zilina-03-22",
+    "name": "25 Punkrock years tour!",
+    "event_type": "concert",
+    "start_date": "2025-03-22",
+    "end_date": "2025-03-22",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "smer-klub-zilina",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-03-22",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-03-22",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2025-03-22",
+        "name": "STARÉ PUŠKY",
+        "country_code": "CZ",
+        "band_id": "stare-pusky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-falkirk-02-15",
+    "name": "Landing in Scotland!",
+    "event_type": "concert",
+    "start_date": "2025-02-15",
+    "end_date": "2025-02-15",
+    "city": "Falkirk",
+    "country_code": "GB",
+    "venue_id": "the-rock-bottom-falkirk",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-02-15",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-linz",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-22",
+    "end_date": "2024-03-22",
+    "city": "Linz",
+    "country_code": "AT",
+    "venue_id": "kapu-linz",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-22",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-22",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-ljubljana",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-23",
+    "end_date": "2024-03-23",
+    "city": "Ljubljana",
+    "country_code": "SI",
+    "venue_id": "gromka-ljubljana",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-23",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-23",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-pula",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-24",
+    "end_date": "2024-03-24",
+    "city": "Pula",
+    "country_code": "HR",
+    "venue_id": "monte-paradiso-pula",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-24",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-24",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-rijeka",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-25",
+    "end_date": "2024-03-25",
+    "city": "Rijeka",
+    "country_code": "HR",
+    "venue_id": "podrum-rijeka",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-25",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-25",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-sarajevo",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-27",
+    "end_date": "2024-03-27",
+    "city": "Sarajevo",
+    "country_code": "BA",
+    "venue_id": "ag-club-sarajevo",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-27",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-27",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-pancevo",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-28",
+    "end_date": "2024-03-28",
+    "city": "Pančevo",
+    "country_code": "RS",
+    "venue_id": null,
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-28",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-28",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-belgrade",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-29",
+    "end_date": "2024-03-29",
+    "city": "Beograd",
+    "country_code": "RS",
+    "venue_id": "akab-okretnica-belgrade",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-29",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-29",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-novi-sad",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-30",
+    "end_date": "2024-03-30",
+    "city": "Novi Sad",
+    "country_code": "RS",
+    "venue_id": "ck13-novi-sad",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-30",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-30",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-zagreb",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-03-31",
+    "end_date": "2024-03-31",
+    "city": "Zagreb",
+    "country_code": "HR",
+    "venue_id": "akc-attack-zagreb",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-03-31",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-03-31",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  },
+  {
+    "id": "blankout-balkan-2024-vienna",
+    "name": "Balkan Tour 2024",
+    "event_type": "concert",
+    "start_date": "2024-04-01",
+    "end_date": "2024-04-01",
+    "city": "Vídeň",
+    "country_code": "AT",
+    "venue_id": "arena-beisl-vienna",
+    "lineup_completeness": "official_tour_announcement",
+    "performances": [
+      {
+        "date": "2024-04-01",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2024-04-01",
+        "name": "LIDSKÉ ZDROJE",
+        "country_code": "CZ",
+        "band_id": "lidske-zdroje"
+      }
+    ],
+    "source_ids": [
+      "src-blankout-balkan-2024",
+      "src-blankout-sarajevo-2024",
+      "src-blankout-balkan-review-2024"
+    ]
+  }
+]
