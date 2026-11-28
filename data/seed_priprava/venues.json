@@ -404,12 +404,12 @@
     "name": "Podrum",
     "city": "Rijeka",
     "country_code": "HR",
-    "address": null,
+    "address": "Delta 5/I, 51000 Rijeka, Chorvatsko",
     "coordinates": null,
     "source_ids": [
       "src-blankout-balkan-2024"
     ],
-    "verification": "venue_and_city_listed_in_official_tour_announcement"
+    "verification": "address_provided_by_user"
   },
   {
     "id": "ag-club-sarajevo",
