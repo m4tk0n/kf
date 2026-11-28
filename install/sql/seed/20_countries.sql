@@ -249,4 +249,4 @@ INSERT INTO `{prefix}countries` (`iso2`, `iso3`, `name_cs`, `name_en`, `phone_pr
 ('YT', 'MYT', 'Mayotte', 'Mayotte', '+262', 'EUR'),
 ('ZA', 'ZAF', 'Jihoafrická republika', 'South Africa', '+27', 'ZAR'),
 ('ZM', 'ZMB', 'Zambie', 'Zambia', '+260', 'ZMW'),
-('ZW', 'ZWE', 'Zimbabwe', 'Zimbabwe', '+263');
+('ZW', 'ZWE', 'Zimbabwe', 'Zimbabwe', '+263', 'ZWG');
