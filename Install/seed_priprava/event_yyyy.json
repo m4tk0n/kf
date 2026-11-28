@@ -1,0 +1,16 @@
+{
+  "_purpose": "Tento soubor slouzi k postupnemu vyhledavani, overovani a identifikaci koncertnich akci pro seed databaze K&F. Nazev souboru event_YYYY.json oznacuje kalendarni rok konani akci; YYYY se pri pouziti nahradi konkretnim rokem. 'aktual' obsahuje prave proverovanou akci, 'ok' overene akce a 'next' akce cekajici na provereni. Zaznam obsahuje udaje potrebne pro databazi events a event_bands, identifikaci mista a zdroje pro overeni. Nejde o textovy popis akce.",
+  "_rules": {
+    "types": {
+      "concert": "Jednodenni hudebni akce. I kdyz program pokracuje po pulnoci, stale jde o koncert, pokud nejde o vice samostatnych koncertnich dni.",
+      "festival": "Vice-denni hudebni akce s programem ve vice dnech. Nazev obsahujici Fest nebo Festival sam o sobe typ neurcuje."
+    },
+    "tour": "Turne je samostatny nadrazeny zaznam se spolecnym nazvem. Kazda zastavka turne je vlastni akce v tomto souboru, ma vlastni datum, misto a lineup. K turne se akce priradi pouze tehdy, kdyz zdroj potvrzuje, ze jde o jeho zastavku.",
+    "dates": "U vice-denni akce zapisovat date_from a date_to. U jednodeni akce jsou obe data stejna. Neoverene datum ani cas neodhadovat.",
+    "lineup": "U kazde kapely uvest jeji presny nazev a podle moznosti cas vystoupeni. Poradi odpovida dolozenemu programu; pokud neni znamy, nevymyslet ho.",
+    "ids": "ID je poradove ID akce v ramci pripravy tohoto rocniku. Neni to budoucí databazove ID."
+  },
+  "aktual": [],
+  "ok": [],
+  "next": []
+}
