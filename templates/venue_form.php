@@ -13,28 +13,29 @@ declare(strict_types=1);
     </ul>
   <?php endif; ?>
 
-  <form method="post" action="<?= e(url('venue/new')) ?>" enctype="multipart/form-data" class="stack">
+  <form method="post" action="<?= e(url('venue/new')) ?>" enctype="multipart/form-data" class="stack" data-venue-form>
     <?= csrf_field() ?>
 
     <label><?= e(t('venue.f.name')) ?>
       <input type="text" name="name" value="<?= e((string)$old['name']) ?>" maxlength="120" required>
     </label>
 
-    <label><?= e(t('venue.f.city')) ?>
-      <select name="city_id" required>
-        <option value="0"><?= e(t('event.f.city_pick')) ?></option>
-        <?php $last = ''; foreach ($cities as $c): ?>
-          <?php if ($last !== (string)$c['country']): ?>
-            <?php if ($last !== ''): ?></optgroup><?php endif; ?>
-            <optgroup label="<?= e((string)$c['country']) ?>">
-            <?php $last = (string)$c['country']; ?>
-          <?php endif; ?>
-          <option value="<?= (int)$c['id'] ?>"<?= (int)$old['city_id'] === (int)$c['id'] ? ' selected' : '' ?>>
-            <?= e((string)$c['name']) ?> (<?= e((string)$c['iso2']) ?>)
-          </option>
-        <?php endforeach; ?>
-        <?php if ($last !== ''): ?></optgroup><?php endif; ?>
-      </select>
+    <label class="event-name-field"><?= e(t('venue.f.city')) ?>
+      <input type="hidden" name="city_id" value="<?= (int)$old['city_id'] ?>" data-venue-city-id>
+      <input type="text" name="city_name" value="<?= e((string)($old['city_name'] ?? '')) ?>" maxlength="120"
+        autocomplete="off" placeholder="<?= e(t('event.f.city_pick')) ?>"
+        data-venue-city-input data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
+        data-suggest-url="<?= e(url('venue/city-suggest')) ?>">
+      <div class="autocomplete-list" data-venue-city-suggestions role="listbox" hidden></div>
+    </label>
+
+    <label class="event-name-field"><?= e(t('venue.f.country')) ?>
+      <input type="hidden" name="country_id" value="<?= (int)$old['country_id'] ?>" data-venue-country-id>
+      <input type="text" name="country_name" value="<?= e((string)($old['country_name'] ?? '')) ?>" maxlength="120" required
+        autocomplete="off" placeholder="<?= e(t('venue.f.country')) ?>"
+        data-venue-country-input data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
+        data-suggest-url="<?= e(url('venue/country-suggest')) ?>">
+      <div class="autocomplete-list" data-venue-country-suggestions role="listbox" hidden></div>
     </label>
 
     <?php foreach (['address', 'email', 'phone', 'www', 'google_maps', 'mapy_maps'] as $k): ?>
@@ -50,20 +51,21 @@ declare(strict_types=1);
     </label>
 
     <label><?= e(t('venue.f.image')) ?>
-      <input type="file" name="image" accept="image/jpeg,image/png,image/webp,image/gif">
+      <input type="file" name="image" accept="image/jpeg,image/png,image/webp,image/gif" data-event-image>
     </label>
 
     <label><?= e(t('event.f.image_url')) ?>
-      <input type="text" name="image_url" maxlength="300" placeholder="https://">
+      <input type="text" name="image_url" maxlength="300" placeholder="https://" data-event-image-url>
     </label>
 
     <?php if ($imgUrl !== ''): ?>
       <label class="check">
         <input type="checkbox" name="remove_image" value="1"> <?= e(t('event.f.image_remove')) ?>
       </label>
-      <img class="event-preview" alt="" src="<?= e($imgUrl) ?>">
     <?php endif; ?>
+    <img class="event-preview" data-event-preview alt="" src="<?= e($imgUrl) ?>"<?= $imgUrl === '' ? ' hidden' : '' ?>>
 
     <button type="submit" class="btn"><?= e(t('event.btn.preview')) ?></button>
   </form>
 </section>
+<script src="<?= e(asset('js/venue-form.js')) ?>" defer></script>
