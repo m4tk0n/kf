@@ -583,7 +583,7 @@ function route_venue_name_suggest(): never
     }
 
     $rows = q(
-        "SELECT v.id, v.name, v.address, c.id AS city_id, c.name AS city, co.iso2 AS country FROM " . tbl('venues') . " v
+        "SELECT v.id, v.name, v.address, c.id AS city_id, c.name AS city, co.id AS country_id, co.iso2 AS country, co.`" . country_col() . "` AS country_name FROM " . tbl('venues') . " v
          JOIN " . tbl('cities') . " c ON c.id = v.city_id
          JOIN " . tbl('countries') . " co ON co.id = c.country_id
          WHERE LOWER(REPLACE(REPLACE(REPLACE(v.name, '–', '-'), '—', '-'), '‑', '-')) COLLATE utf8mb4_unicode_ci LIKE ?
@@ -597,6 +597,8 @@ function route_venue_name_suggest(): never
             'name' => (string)$row['name'],
             'city_id' => (int)$row['city_id'],
             'city' => (string)$row['city'],
+            'country_id' => (int)$row['country_id'],
+            'country_name' => (string)$row['country_name'],
             'country' => (string)$row['country'],
             'address' => (string)($row['address'] ?? ''),
         ], $rows),
