@@ -43,7 +43,7 @@ Zatím je automatické spouštění bezpečně vypnuté. V GitHubu v repozitář
 
 API používá Responses API s web search nástrojem a modelem gpt-6.2-astra. Použití OpenAI API může být zpoplatněné podle aktuálního API ceníku a účtu; není součástí běžného ChatGPT tarifu. Dokud proměnná není true, workflow rešerši nespustí a API se nevolá.
 
-Po zapnutí se workflow spouští dvakrát denně. Ručně jej lze spustit přes Actions → K&F – automatický výzkum koncertů → Run workflow. Výchozí limit jsou dvě rešeršní úlohy na běh; lze jej zvýšit na nejvýše osm.
+Po zapnutí se workflow spouští jednou denně (výchozí limit dvě rešeršní úlohy). Ručně jej lze spustit přes Actions → K&F – automatický výzkum koncertů → Run workflow. Výchozí limit jsou dvě rešeršní úlohy na běh; lze jej zvýšit na nejvýše osm.
 
 ## Důležité limity
 
