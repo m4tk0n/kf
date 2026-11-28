@@ -16,7 +16,23 @@
       "metal",
       "alternative"
     ],
-    "include_cz_sk_bands_abroad": true
+    "include_cz_sk_bands_abroad": true,
+    "band_origin_countries": [
+      "CZ",
+      "SK"
+    ],
+    "event_countries": [
+      "CZ",
+      "SK",
+      "DE",
+      "PL",
+      "GB",
+      "AT",
+      "SI",
+      "HR",
+      "BA",
+      "RS"
+    ]
   },
   "collection_status": "ongoing_verified_collection",
   "notes": [
