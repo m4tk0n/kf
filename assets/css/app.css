@@ -378,7 +378,7 @@ input[type="submit"].flash-success{
 /* Město, stát a úzký ISO2 input v jednom řádku formuláře klubu */
 .venue-location-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 4ch;gap:8px;align-items:start}
 .venue-location-grid>label{min-width:0}
-.venue-location-grid>label[aria-label="ISO2"]::before{content:"";height:1.5em}
+.venue-location-grid>label[aria-label="ISO2"]::before{content:"";display:block;height:1.5em}
 .venue-location-grid input[type=text]{width:100%;min-width:0}
 .venue-location-grid [data-venue-country-iso2]{display:block;width:4ch;min-width:0;text-align:center;text-transform:uppercase;letter-spacing:0;color:var(--text);font-size:.95rem;font-weight:700;line-height:36px}
 @media(max-width:380px){.venue-location-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr) 4ch;gap:6px}}
