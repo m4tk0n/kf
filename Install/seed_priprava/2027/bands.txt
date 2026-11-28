@@ -1,0 +1,12 @@
+# Kapely zjištěné v akcích roku 2027
+# Formát: název | město původu | stát původu | žánr | zdroje | poznámka
+# Neověřené údaje se nedoplňují odhadem.
+
+The Trousers | Budapešť | Maďarsko | garage rock / hard rock | 2027-S03; 2027-S09 | Identita odpovídá maďarské kapele z Budapešti, nikoli stejnojmenné kapele z Texasu.
+Henge | Manchester | Spojené království | neuvedeno | 2027-S06 |
+Haywire | Boston | USA | hardcore punk | 2027-S02 |
+Skinhead | Kalifornie; kořeny v Nové Anglii | USA | street punk / Oi! / hardcore | 2027-S02 | Původ popsán pořadatelem jako sídlo v Kalifornii a kořeny v Nové Anglii.
+Defiance | Portland, Oregon | USA | street punk / hardcore / anarchopunk | 2027-S02 |
+
+# Další kapely z line-upů jsou zaznamenány v souborech akcí.
+# Jejich původ a žánry doplnit až po samostatném ověření identity a důvěryhodných zdrojů.
