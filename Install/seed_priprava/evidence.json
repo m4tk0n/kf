@@ -111,6 +111,114 @@
       "source_type": "official_organizer",
       "retrieved_on": "2026-11-28",
       "supports": "Pořadatel uvádí 14. 3. 2026 akci Punk on the Road v MMC Bratislava a účinkující The Fialky, Totální Nasazení a Nežfaleš."
+    },
+    {
+      "id": "SRC-0012",
+      "url": "https://www.smsticket.cz/vstupenky/64415-punkrock-on-the-road-tour-2026-depo2015-plzen-totalni-nasazeni-nezfales",
+      "publisher": "SMS Ticket",
+      "title": "PUNKROCK ON THE ROAD – TOUR 2026 – DEPO2015 – Plzeň",
+      "source_type": "ticketing_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Akce 14. 2. 2026 od 20:00 v DEPO2015 Plzeň; hlavní trojice Totální nasazení, The Fialky a Nežfaleš; popis turné a střídavý support."
+    },
+    {
+      "id": "SRC-0013",
+      "url": "https://www.depo2015.cz/kontakty",
+      "publisher": "DEPO2015",
+      "title": "Kontakty",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální název prostoru DEPO2015 a adresa Presslova 14, 301 00 Plzeň."
+    },
+    {
+      "id": "SRC-0014",
+      "url": "https://dilemmaincinema.cz/",
+      "publisher": "Dilemma in Cinema",
+      "title": "Oficiální web a koncertní přehled",
+      "source_type": "official_band_archive",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální koncertní přehled Dilemma in Cinema uvádí účast 14. 2. 2026 v Plzni/Depo a 20. 3. 2026 v Českých Budějovicích/KD Vltava po boku Nežfaleš, The Fialky a Totálního nasazení."
+    },
+    {
+      "id": "SRC-0015",
+      "url": "https://www.nezfales.cz/punkrock-on-the-road-tour-je-za-nami-letni-davka-stesti-klepe-na-dvere/",
+      "publisher": "Nežfaleš",
+      "title": "Punkrock on the road tour je za námi!",
+      "source_type": "official_band_retrospective",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální shrnutí Nežfaleš potvrzuje dokončení jarního turné na 11 zastávkách a účast kapel Nežfaleš, Totální nasazení a The Fialky."
+    },
+    {
+      "id": "SRC-0016",
+      "url": "https://bandzone.cz/koncert/557845-2026-02-27-totaci-na-nove",
+      "publisher": "Bandzone",
+      "title": "PUNKROCK ON THE ROAD – TOUR 2026 – Volyně",
+      "source_type": "concert_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Záznam koncertu 27. 2. 2026 v místě Na Nové, Volyně; line-up a časy Deratizéři, Totální nasazení, Nežfaleš a The Fialky; adresa Nádražní 254."
+    },
+    {
+      "id": "SRC-0017",
+      "url": "https://kultura-volyne.cz/na-nove/",
+      "publisher": "Kultura Volyně",
+      "title": "Sál Na Nové",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální provozovatel popisuje Sál Na Nové jako multifunkční sál vhodný pro koncerty."
+    },
+    {
+      "id": "SRC-0018",
+      "url": "https://www.smsticket.cz/vstupenky/64417-punkrock-on-the-road-tour-2026-dum-kultury-teplice-totalni-nasazeni-nezfales",
+      "publisher": "SMS Ticket",
+      "title": "PUNKROCK ON THE ROAD – TOUR 2026 – Teplice",
+      "source_type": "ticketing_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Akce 13. 3. 2026 od 20:00 v Domě kultury Teplice; hlavní trojice Totální nasazení, The Fialky a Nežfaleš; seznam všech 11 zastávek."
+    },
+    {
+      "id": "SRC-0019",
+      "url": "https://www.firmy.cz/detail/12703258-dum-kultury-teplice-teplice.html",
+      "publisher": "Firmy.cz",
+      "title": "Dům kultury Teplice",
+      "source_type": "venue_directory",
+      "retrieved_on": "2026-11-28",
+      "supports": "Adresa Domu kultury Teplice: Mírové náměstí 2950, 415 01 Teplice; sekundární kontrola adresy."
+    },
+    {
+      "id": "SRC-0020",
+      "url": "https://www.kdvltava.com/kontakt/",
+      "publisher": "Kulturní dům Vltava",
+      "title": "Kontakt",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální název Kulturní dům Vltava a adresa Františka Ondříčka 1243/46, 370 11 České Budějovice."
+    },
+    {
+      "id": "SRC-0021",
+      "url": "https://www.darkzin.cz/shlednute-kapely/dilemma-in-cinema/",
+      "publisher": "Darkzin",
+      "title": "Dilemma in Cinema",
+      "source_type": "music_reference",
+      "retrieved_on": "2026-11-28",
+      "supports": "Sekundární profil uvádí Dilemma in Cinema jako českou punkrockovou kapelu ze Slaného."
+    },
+    {
+      "id": "SRC-0022",
+      "url": "https://deratizeri.cz/der08/index.php?show=kapela",
+      "publisher": "Deratizéři",
+      "title": "Kapela",
+      "source_type": "official_band_biography",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web potvrzuje identitu Deratizérů, slánský původ a vznik v roce 1999."
+    },
+    {
+      "id": "SRC-0023",
+      "url": "https://www.hudebniknihovna.cz/deratizeri.html",
+      "publisher": "Hudební knihovna",
+      "title": "Deratizéři",
+      "source_type": "music_reference",
+      "retrieved_on": "2026-11-28",
+      "supports": "Sekundární profil potvrzuje český původ, folk/punk žánr a původ ve Slaném."
     }
   ],
   "claims": [
@@ -522,6 +630,512 @@
       "status": "verified",
       "source_ids": [
         "SRC-0007"
+      ]
+    },
+    {
+      "id": "CLM-0036",
+      "entity_type": "event",
+      "entity_id": 3,
+      "field": "name",
+      "value": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0012"
+      ]
+    },
+    {
+      "id": "CLM-0037",
+      "entity_type": "event",
+      "entity_id": 3,
+      "field": "date",
+      "value": "2026-02-14",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0012",
+        "SRC-0014"
+      ]
+    },
+    {
+      "id": "CLM-0038",
+      "entity_type": "event",
+      "entity_id": 3,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015",
+        "SRC-0006"
+      ]
+    },
+    {
+      "id": "CLM-0039",
+      "entity_type": "event",
+      "entity_id": 3,
+      "field": "venue_id",
+      "value": 3,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0012",
+        "SRC-0013"
+      ]
+    },
+    {
+      "id": "CLM-0040",
+      "entity_type": "event",
+      "entity_id": 3,
+      "field": "lineup",
+      "value": "The Fialky; Totální nasazení; Nežfaleš; Dilemma in Cinema",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0012",
+        "SRC-0014"
+      ]
+    },
+    {
+      "id": "CLM-0041",
+      "entity_type": "event",
+      "entity_id": 3,
+      "field": "tour_id",
+      "value": "TOUR-003",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0007",
+        "SRC-0012"
+      ]
+    },
+    {
+      "id": "CLM-0042",
+      "entity_type": "venue",
+      "entity_id": 3,
+      "field": "name",
+      "value": "DEPO2015",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0012",
+        "SRC-0013"
+      ]
+    },
+    {
+      "id": "CLM-0043",
+      "entity_type": "venue",
+      "entity_id": 3,
+      "field": "address",
+      "value": "Presslova 14, 301 00 Plzeň",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0013"
+      ]
+    },
+    {
+      "id": "CLM-0044",
+      "entity_type": "venue",
+      "entity_id": 3,
+      "field": "city_country",
+      "value": "Plzeň, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0012",
+        "SRC-0013"
+      ]
+    },
+    {
+      "id": "CLM-0045",
+      "entity_type": "event",
+      "entity_id": 4,
+      "field": "name",
+      "value": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0016"
+      ]
+    },
+    {
+      "id": "CLM-0046",
+      "entity_type": "event",
+      "entity_id": 4,
+      "field": "date",
+      "value": "2026-02-27",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0016",
+        "SRC-0015"
+      ]
+    },
+    {
+      "id": "CLM-0047",
+      "entity_type": "event",
+      "entity_id": 4,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015"
+      ]
+    },
+    {
+      "id": "CLM-0048",
+      "entity_type": "event",
+      "entity_id": 4,
+      "field": "venue_id",
+      "value": 4,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0016",
+        "SRC-0017"
+      ]
+    },
+    {
+      "id": "CLM-0049",
+      "entity_type": "event",
+      "entity_id": 4,
+      "field": "lineup",
+      "value": "Deratizéři; Totální nasazení; Nežfaleš; The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0016"
+      ]
+    },
+    {
+      "id": "CLM-0050",
+      "entity_type": "event",
+      "entity_id": 4,
+      "field": "tour_id",
+      "value": "TOUR-003",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0007",
+        "SRC-0016"
+      ]
+    },
+    {
+      "id": "CLM-0051",
+      "entity_type": "venue",
+      "entity_id": 4,
+      "field": "name",
+      "value": "Sál Na Nové",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0016",
+        "SRC-0017"
+      ]
+    },
+    {
+      "id": "CLM-0052",
+      "entity_type": "venue",
+      "entity_id": 4,
+      "field": "address",
+      "value": "Nádražní 254, 387 01 Volyně",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0016"
+      ]
+    },
+    {
+      "id": "CLM-0053",
+      "entity_type": "venue",
+      "entity_id": 4,
+      "field": "city_country",
+      "value": "Volyně, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0016",
+        "SRC-0017"
+      ]
+    },
+    {
+      "id": "CLM-0054",
+      "entity_type": "event",
+      "entity_id": 5,
+      "field": "name",
+      "value": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0018"
+      ]
+    },
+    {
+      "id": "CLM-0055",
+      "entity_type": "event",
+      "entity_id": 5,
+      "field": "date",
+      "value": "2026-03-13",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0018"
+      ]
+    },
+    {
+      "id": "CLM-0056",
+      "entity_type": "event",
+      "entity_id": 5,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015"
+      ]
+    },
+    {
+      "id": "CLM-0057",
+      "entity_type": "event",
+      "entity_id": 5,
+      "field": "venue_id",
+      "value": 5,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0018",
+        "SRC-0019"
+      ]
+    },
+    {
+      "id": "CLM-0058",
+      "entity_type": "event",
+      "entity_id": 5,
+      "field": "lineup",
+      "value": "The Fialky; Totální nasazení; Nežfaleš",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0018"
+      ]
+    },
+    {
+      "id": "CLM-0059",
+      "entity_type": "event",
+      "entity_id": 5,
+      "field": "tour_id",
+      "value": "TOUR-003",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0007",
+        "SRC-0018"
+      ]
+    },
+    {
+      "id": "CLM-0060",
+      "entity_type": "venue",
+      "entity_id": 5,
+      "field": "name",
+      "value": "Dům kultury Teplice",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0018",
+        "SRC-0019"
+      ]
+    },
+    {
+      "id": "CLM-0061",
+      "entity_type": "venue",
+      "entity_id": 5,
+      "field": "address",
+      "value": "Mírové náměstí 2950, 415 01 Teplice",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0018",
+        "SRC-0019"
+      ]
+    },
+    {
+      "id": "CLM-0062",
+      "entity_type": "venue",
+      "entity_id": 5,
+      "field": "city_country",
+      "value": "Teplice, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0018",
+        "SRC-0019"
+      ]
+    },
+    {
+      "id": "CLM-0063",
+      "entity_type": "event",
+      "entity_id": 6,
+      "field": "name",
+      "value": "PUNKROCK ON THE ROAD – TOUR 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0014",
+        "SRC-0015"
+      ]
+    },
+    {
+      "id": "CLM-0064",
+      "entity_type": "event",
+      "entity_id": 6,
+      "field": "date",
+      "value": "2026-03-20",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0014"
+      ]
+    },
+    {
+      "id": "CLM-0065",
+      "entity_type": "event",
+      "entity_id": 6,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0015"
+      ]
+    },
+    {
+      "id": "CLM-0066",
+      "entity_type": "event",
+      "entity_id": 6,
+      "field": "venue_id",
+      "value": 6,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0014",
+        "SRC-0020"
+      ]
+    },
+    {
+      "id": "CLM-0067",
+      "entity_type": "event",
+      "entity_id": 6,
+      "field": "lineup",
+      "value": "The Fialky; Totální nasazení; Nežfaleš; Dilemma in Cinema",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0014"
+      ]
+    },
+    {
+      "id": "CLM-0068",
+      "entity_type": "event",
+      "entity_id": 6,
+      "field": "tour_id",
+      "value": "TOUR-003",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0007",
+        "SRC-0014"
+      ]
+    },
+    {
+      "id": "CLM-0069",
+      "entity_type": "venue",
+      "entity_id": 6,
+      "field": "name",
+      "value": "Kulturní dům Vltava",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0020"
+      ]
+    },
+    {
+      "id": "CLM-0070",
+      "entity_type": "venue",
+      "entity_id": 6,
+      "field": "address",
+      "value": "Františka Ondříčka 1243/46, 370 11 České Budějovice",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0020"
+      ]
+    },
+    {
+      "id": "CLM-0071",
+      "entity_type": "venue",
+      "entity_id": 6,
+      "field": "city_country",
+      "value": "České Budějovice, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0020"
+      ]
+    },
+    {
+      "id": "CLM-0072",
+      "entity_type": "band",
+      "entity_id": 5,
+      "field": "identity",
+      "value": "Dilemma in Cinema",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0014",
+        "SRC-0021"
+      ]
+    },
+    {
+      "id": "CLM-0073",
+      "entity_type": "band",
+      "entity_id": 5,
+      "field": "genre",
+      "value": "punk rock",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0021"
+      ]
+    },
+    {
+      "id": "CLM-0074",
+      "entity_type": "band",
+      "entity_id": 5,
+      "field": "country_city",
+      "value": "CZ, Slaný",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0021"
+      ]
+    },
+    {
+      "id": "CLM-0075",
+      "entity_type": "band",
+      "entity_id": 6,
+      "field": "identity",
+      "value": "Deratizéři",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0022",
+        "SRC-0023"
+      ]
+    },
+    {
+      "id": "CLM-0076",
+      "entity_type": "band",
+      "entity_id": 6,
+      "field": "genre",
+      "value": "folk punk",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0022",
+        "SRC-0023"
+      ]
+    },
+    {
+      "id": "CLM-0077",
+      "entity_type": "band",
+      "entity_id": 6,
+      "field": "country_city",
+      "value": "CZ, Slaný",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0022",
+        "SRC-0023"
       ]
     }
   ]
