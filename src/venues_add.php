@@ -28,7 +28,7 @@ function kf_venue_limit_error(int $uid): ?string {
     $n=(int)q('SELECT COUNT(*) FROM '.tbl('pending').' WHERE created_by=? AND type=?',[$uid,(int)cfg('enums.pending_type.venue')])->fetchColumn();
     if($n>=(int)cfg('limits.pending_per_type.venue'))return 'limit_pending';
     $today=(int)q('SELECT COUNT(*) FROM '.tbl('pending').' WHERE created_by=? AND created_at>=?',[$uid,strtotime('today')])->fetchColumn();
-    return $today>=(int)cfg('limits.submissions_per_day)?'limit_day':null;
+    return $today>=(int)cfg('limits.submissions_per_day')?'limit_day':null;
 }
 function kf_venue_publish(array $v,?string $srcL,int $uid): int {
     $pdo=db();$id=0;$base='';$pdo->beginTransaction();
