@@ -61,5 +61,214 @@
       "src-blankout-balkan-review-2024"
     ],
     "verification": "official_band_announcement_confirmed_by_official_live_release_and_independent_report"
+  },
+  {
+    "id": "sps-jsme-v-hajzlu-tour-2022",
+    "name": "Jsme v hajzlu (Turné 2022)",
+    "start_date": "2022-10-07",
+    "end_date": "2022-12-10",
+    "band_ids": [
+      "sps"
+    ],
+    "event_ids": [
+      "sps-2022-12-10-teplice",
+      "sps-2022-12-09-karlovy-vary",
+      "sps-2022-12-03-pec-pod-snezkou",
+      "sps-2022-11-26-jindrichuv-hradec",
+      "sps-2022-11-25-klatovy",
+      "sps-2022-11-19-ceske-budejovice",
+      "sps-2022-11-18-litomerice",
+      "sps-2022-10-29-brno",
+      "sps-2022-10-28-bratislava",
+      "sps-2022-10-22-as",
+      "sps-2022-10-21-praha",
+      "sps-2022-10-14-plzen",
+      "sps-2022-10-08-ostrava",
+      "sps-2022-10-07-liberec"
+    ],
+    "country_codes": [
+      "CZ",
+      "SK"
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "sps-jsme-v-hajzlu-tour-2023",
+    "name": "Jsme v hajzlu (Turné 2023)",
+    "start_date": "2023-03-03",
+    "end_date": "2023-04-22",
+    "band_ids": [
+      "sps"
+    ],
+    "event_ids": [
+      "sps-2023-04-22-vsetin",
+      "sps-2023-04-15-olomouc",
+      "sps-2023-04-01-pisek",
+      "sps-2023-03-31-velke-mezirici",
+      "sps-2023-03-25-racice-u-steti",
+      "sps-2023-03-24-nove-mesto-nad-metuji",
+      "sps-2023-03-18-pribram",
+      "sps-2023-03-10-vimperk",
+      "sps-2023-03-04-kladno",
+      "sps-2023-03-03-litvinov"
+    ],
+    "country_codes": [
+      "CZ"
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "sps-mista-neznama-tour-2024",
+    "name": "Místa Neznámá Tour 2024",
+    "start_date": "2024-03-01",
+    "end_date": "2024-04-19",
+    "band_ids": [
+      "sps"
+    ],
+    "event_ids": [
+      "sps-2024-04-19-klecany",
+      "sps-2024-04-13-jesenik",
+      "sps-2024-04-12-roudnice-nad-labem",
+      "sps-2024-04-06-zilina",
+      "sps-2024-03-29-pardubice",
+      "sps-2024-03-23-znojmo",
+      "sps-2024-03-22-tabor",
+      "sps-2024-03-16-mlada-boleslav",
+      "sps-2024-03-09-hodonin",
+      "sps-2024-03-08-svitavy",
+      "sps-2024-03-02-kladno",
+      "sps-2024-03-01-decin"
+    ],
+    "country_codes": [
+      "CZ",
+      "SK"
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "sps-fialky-tour-2024",
+    "name": "SPS + The Fialky Tour 2024",
+    "start_date": "2024-10-04",
+    "end_date": "2024-10-25",
+    "band_ids": [
+      "sps"
+    ],
+    "event_ids": [
+      "sps-2024-10-25-brno",
+      "sps-2024-10-19-pisek",
+      "sps-2024-10-11-praha",
+      "sps-2024-10-10-praha",
+      "sps-2024-10-05-pardubice",
+      "sps-2024-10-04-jihlava"
+    ],
+    "country_codes": [
+      "CZ"
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "sps-poprvý-spolu-tour-2024",
+    "name": "Poprvý spolu Tour 2024",
+    "start_date": "2024-11-22",
+    "end_date": "2024-11-30",
+    "band_ids": [
+      "sps"
+    ],
+    "event_ids": [
+      "sps-2024-11-30-kolin",
+      "sps-2024-11-29-olomouc",
+      "sps-2024-11-23-zlin",
+      "sps-2024-11-22-sadov"
+    ],
+    "country_codes": [
+      "CZ"
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "sps-punk-film-tour-2025",
+    "name": "Punk & Film Turné 2025",
+    "start_date": "2025-02-21",
+    "end_date": "2025-12-06",
+    "band_ids": [
+      "sps"
+    ],
+    "event_ids": [
+      "sps-2025-11-22-bratislava",
+      "sps-2025-11-21-ceske-budejovice",
+      "sps-2025-11-15-znojmo",
+      "sps-2025-11-14-klatovy",
+      "sps-2025-10-24-praha",
+      "sps-2025-10-18-pisek",
+      "sps-2025-10-17-plzen",
+      "sps-2025-10-04-uherske-hradiste",
+      "sps-2025-10-03-pardubice",
+      "sps-2025-04-12-kosice",
+      "sps-2025-04-05-mlada-boleslav",
+      "sps-2025-04-04-kladno",
+      "sps-2025-03-28-rakovnik",
+      "sps-2025-03-22-koprivnice",
+      "sps-2025-03-21-as",
+      "sps-2025-03-15-brno",
+      "sps-2025-03-14-teplice",
+      "sps-2025-03-01-karlovy-vary",
+      "sps-2025-02-28-trebic",
+      "sps-2025-02-22-pribram",
+      "sps-2025-02-21-jindrichuv-hradec",
+      "sps-2025-12-06-pec-pod-snezkou"
+    ],
+    "country_codes": [
+      "SK",
+      "CZ"
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "sps-god-save-punk-ii-2026",
+    "name": "God Save The Punk II. 2026",
+    "start_date": "2026-10-02",
+    "end_date": "2026-11-21",
+    "band_ids": [
+      "sps"
+    ],
+    "event_ids": [
+      "sps-2026-11-21-kralupy-nad-vltavou",
+      "sps-2026-11-20-mlada-boleslav",
+      "sps-2026-11-14-valasske-klobouky",
+      "sps-2026-11-13-ostrava",
+      "sps-2026-10-31-pisek",
+      "sps-2026-10-30-litomysl",
+      "sps-2026-10-17-brno",
+      "sps-2026-10-16-plzen",
+      "sps-2026-10-09-praha",
+      "sps-2026-10-08-praha",
+      "sps-2026-10-03-kolin",
+      "sps-2026-10-02-ceske-budejovice"
+    ],
+    "country_codes": [
+      "CZ"
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
   }
 ]

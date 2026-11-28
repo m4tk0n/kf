@@ -5120,28 +5120,6 @@
     ]
   },
   {
-    "id": "sps-2026-05-22-praha",
-    "name": "Tři Sestry Open Air – Zdeněk 60",
-    "event_type": "festival",
-    "start_date": "2026-05-22",
-    "end_date": "2026-05-22",
-    "city": "Praha",
-    "country_code": "CZ",
-    "venue_id": null,
-    "lineup_completeness": "official_band_calendar",
-    "performances": [
-      {
-        "date": "2026-05-22",
-        "name": "SPS",
-        "country_code": "CZ",
-        "band_id": "sps"
-      }
-    ],
-    "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
-  },
-  {
     "id": "sps-2026-05-16-lesnice",
     "name": "FO.GO. Fest Lesnice",
     "event_type": "festival",
@@ -5230,72 +5208,6 @@
     ]
   },
   {
-    "id": "sps-2026-04-25-brno",
-    "name": "Zdeněk 60 + Štamgasti",
-    "event_type": "concert",
-    "start_date": "2026-04-25",
-    "end_date": "2026-04-25",
-    "city": "Brno",
-    "country_code": "CZ",
-    "venue_id": null,
-    "lineup_completeness": "official_band_calendar",
-    "performances": [
-      {
-        "date": "2026-04-25",
-        "name": "SPS",
-        "country_code": "CZ",
-        "band_id": "sps"
-      }
-    ],
-    "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
-  },
-  {
-    "id": "sps-2026-03-20-jablonec-nad-nisou",
-    "name": "Zdeněk 60",
-    "event_type": "concert",
-    "start_date": "2026-03-20",
-    "end_date": "2026-03-20",
-    "city": "Jablonec nad Nisou",
-    "country_code": "CZ",
-    "venue_id": null,
-    "lineup_completeness": "official_band_calendar",
-    "performances": [
-      {
-        "date": "2026-03-20",
-        "name": "SPS",
-        "country_code": "CZ",
-        "band_id": "sps"
-      }
-    ],
-    "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
-  },
-  {
-    "id": "sps-2026-03-14-strenice-u-mlade-boleslavi",
-    "name": "Karel 50",
-    "event_type": "concert",
-    "start_date": "2026-03-14",
-    "end_date": "2026-03-14",
-    "city": "Střeníce u Mladé Boleslavi",
-    "country_code": "CZ",
-    "venue_id": null,
-    "lineup_completeness": "official_band_calendar",
-    "performances": [
-      {
-        "date": "2026-03-14",
-        "name": "SPS",
-        "country_code": "CZ",
-        "band_id": "sps"
-      }
-    ],
-    "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
-  },
-  {
     "id": "sps-2026-03-13-sadov-u-karlovych-varu",
     "name": "Zdeněk 60",
     "event_type": "concert",
@@ -5308,28 +5220,6 @@
     "performances": [
       {
         "date": "2026-03-13",
-        "name": "SPS",
-        "country_code": "CZ",
-        "band_id": "sps"
-      }
-    ],
-    "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
-  },
-  {
-    "id": "sps-2026-03-06-litomerice",
-    "name": "Zdeněk 60",
-    "event_type": "concert",
-    "start_date": "2026-03-06",
-    "end_date": "2026-03-06",
-    "city": "Litoměřice",
-    "country_code": "CZ",
-    "venue_id": null,
-    "lineup_completeness": "official_band_calendar",
-    "performances": [
-      {
-        "date": "2026-03-06",
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
@@ -8696,6 +8586,28 @@
     "performances": [
       {
         "date": "2020-06-12",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-sps-official-concert-calendar"
+    ]
+  },
+  {
+    "id": "sps-2025-12-06-pec-pod-snezkou",
+    "name": "Punk & Film Turné 2025",
+    "event_type": "concert",
+    "start_date": "2025-12-06",
+    "end_date": "2025-12-06",
+    "city": "Pec pod Sněžkou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2025-12-06",
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
