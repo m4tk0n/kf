@@ -2,7 +2,7 @@
 # Formát: název | město původu | stát původu | žánr | zdroje | poznámka
 # Neověřené údaje se nedoplňují odhadem.
 
-The Trousers | Budapešť | Maďarsko | garage rock / hard rock | 2027-S03; 2027-S09 | Identita odpovídá maďarské kapele z Budapešti, nikoli stejnojmenné kapele z Texasu.
+The Trousers | Budapešť | Maďarsko | garage rock / hard rock / rock'n'roll | 2027-S09; 2027-S13; 2027-S14; 2027-S15 | Stejná kanonická maďarská kapela jako v letech 2024 a 2026. Zdroje používají více žánrových popisů; všechny jsou ponechány jako doložené popisy téže kapely, nikoli jako důvod k vytvoření duplicit.
 Henge | Manchester | Spojené království | neuvedeno | 2027-S06 |
 Haywire | Boston | USA | hardcore punk | 2027-S02 |
 Skinhead | Kalifornie; kořeny v Nové Anglii | USA | street punk / Oi! / hardcore | 2027-S02 | Původ popsán pořadatelem jako sídlo v Kalifornii a kořeny v Nové Anglii.
