@@ -1,0 +1,669 @@
+[
+  {
+    "id": "fest-pod-parou-2025",
+    "name": "Fest Pod Parou, vol. XXII",
+    "event_type": "festival",
+    "start_date": "2025-07-17",
+    "end_date": "2025-07-19",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "venue_id": "korunni-pevnustka-olomouc",
+    "lineup_completeness": "complete_official_program",
+    "performances": [
+      {
+        "date": "2025-07-17",
+        "start_time": "16:00",
+        "end_time": "16:40",
+        "stage": "1. stage",
+        "name": "BANDA",
+        "country_code": "CZ",
+        "band_id": "banda"
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "17:00",
+        "end_time": "17:40",
+        "stage": "1. stage",
+        "name": "JUST WÄR",
+        "country_code": "CZ",
+        "band_id": "just-war"
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "18:00",
+        "end_time": "18:40",
+        "stage": "1. stage",
+        "name": "CENSORSHIT",
+        "country_code": "CZ",
+        "band_id": "censorshit"
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "19:00",
+        "end_time": "19:50",
+        "stage": "1. stage",
+        "name": "FAST FOOD ORCHESTRA",
+        "country_code": "CZ",
+        "band_id": "fast-food-orchestra"
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "20:10",
+        "end_time": "21:05",
+        "stage": "1. stage",
+        "name": "DOWNSET",
+        "country_code": "US",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "21:25",
+        "end_time": "22:25",
+        "stage": "1. stage",
+        "name": "ONE WAY SYSTEM",
+        "country_code": "GB",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-17",
+        "start_time": "22:45",
+        "end_time": "23:40",
+        "stage": "1. stage",
+        "name": "MOSCOW DEATH BRIGADE",
+        "country_code": "RU",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "00:00",
+        "end_time": "00:50",
+        "stage": "1. stage",
+        "name": "SLIME",
+        "country_code": "DE",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "01:10",
+        "end_time": "02:00",
+        "stage": "1. stage",
+        "name": "ČERTŮF PUNK",
+        "country_code": "CZ",
+        "band_id": "certuf-punk"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "10:00",
+        "end_time": "10:40",
+        "stage": "1. stage",
+        "name": "HLAVNÍ JISTIČ",
+        "country_code": "CZ",
+        "band_id": "hlavni-jistic"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "10:50",
+        "end_time": "11:25",
+        "stage": "1. stage",
+        "name": "TAKHLE VOLE",
+        "country_code": "CZ",
+        "band_id": "takhle-vole"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "11:40",
+        "end_time": "12:20",
+        "stage": "1. stage",
+        "name": "ROZTRHLEJ DEDÁČ",
+        "country_code": "CZ",
+        "band_id": "roztrhlej-dedac"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "12:35",
+        "end_time": "13:15",
+        "stage": "1. stage",
+        "name": "BARBAR PUNK",
+        "country_code": "CZ",
+        "band_id": "barbar-punk"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "13:30",
+        "end_time": "14:10",
+        "stage": "1. stage",
+        "name": "ZATREST",
+        "country_code": "CZ",
+        "band_id": "zatrest"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "14:30",
+        "end_time": "15:15",
+        "stage": "1. stage",
+        "name": "HANNIBAL LECTER",
+        "country_code": "CZ",
+        "band_id": "hannibal-lecter"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "15:30",
+        "end_time": "16:20",
+        "stage": "1. stage",
+        "name": "I.R.A.",
+        "country_code": "CO",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "16:40",
+        "end_time": "17:30",
+        "stage": "1. stage",
+        "name": "HÉTKÖZNAPI CSALÓDÁSOK",
+        "country_code": "HU",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "17:50",
+        "end_time": "18:40",
+        "stage": "1. stage",
+        "name": "THE DROWNS",
+        "country_code": "US",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "19:00",
+        "end_time": "19:50",
+        "stage": "1. stage",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "20:10",
+        "end_time": "21:05",
+        "stage": "1. stage",
+        "name": "CONFLICT",
+        "country_code": "GB",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "21:25",
+        "end_time": "22:25",
+        "stage": "1. stage",
+        "name": "COCKNEY REJECTS",
+        "country_code": "GB",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-18",
+        "start_time": "22:45",
+        "end_time": "23:45",
+        "stage": "1. stage",
+        "name": "THE BABOON SHOW",
+        "country_code": "SE",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "00:05",
+        "end_time": "00:55",
+        "stage": "1. stage",
+        "name": "STO ZVÍŘAT",
+        "country_code": "CZ",
+        "band_id": "sto-zvirat"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "01:15",
+        "end_time": "02:00",
+        "stage": "1. stage",
+        "name": "APPLE JUICE",
+        "country_code": "CZ",
+        "band_id": "apple-juice"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "10:00",
+        "end_time": "10:40",
+        "stage": "1. stage",
+        "name": "SESSION",
+        "country_code": "CZ",
+        "band_id": "session"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "10:55",
+        "end_time": "11:35",
+        "stage": "1. stage",
+        "name": "GLEJT",
+        "country_code": "CZ",
+        "band_id": "glejt"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "11:50",
+        "end_time": "12:35",
+        "stage": "1. stage",
+        "name": "HAZYDECAY",
+        "country_code": "CZ",
+        "band_id": "hazydecay"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "12:45",
+        "end_time": "13:35",
+        "stage": "1. stage",
+        "name": "ZÁVIŠ",
+        "country_code": "CZ",
+        "band_id": "zavis"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "13:50",
+        "end_time": "14:35",
+        "stage": "1. stage",
+        "name": "ILEGALITY",
+        "country_code": "SK",
+        "band_id": "ileg ality"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "14:55",
+        "end_time": "15:45",
+        "stage": "1. stage",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "16:05",
+        "end_time": "16:55",
+        "stage": "1. stage",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "17:15",
+        "end_time": "18:05",
+        "stage": "1. stage",
+        "name": "ULICZNY OPRYSZEK",
+        "country_code": "PL",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "18:25",
+        "end_time": "19:15",
+        "stage": "1. stage",
+        "name": "N.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "nvu"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "19:35",
+        "end_time": "20:25",
+        "stage": "1. stage",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "20:45",
+        "end_time": "21:35",
+        "stage": "1. stage",
+        "name": "TOTAL CHAOS",
+        "country_code": "US",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "21:55",
+        "end_time": "22:50",
+        "stage": "1. stage",
+        "name": "999",
+        "country_code": "GB",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-19",
+        "start_time": "23:10",
+        "end_time": "00:00",
+        "stage": "1. stage",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2025-07-20",
+        "start_time": "00:15",
+        "end_time": "01:00",
+        "stage": "1. stage",
+        "name": "DESTRUCTIVE",
+        "country_code": "CA",
+        "band_id": null
+      },
+      {
+        "date": "2025-07-20",
+        "start_time": "01:15",
+        "end_time": "02:00",
+        "stage": "1. stage",
+        "name": "DEGRADACE",
+        "country_code": "CZ",
+        "band_id": "degradace"
+      }
+    ],
+    "source_ids": [
+      "src-podparou-lineup-2025",
+      "src-podparou-venue-2025",
+      "src-podparou-history"
+    ]
+  },
+  {
+    "id": "punkaci-detom-2025",
+    "name": "Punkáči deťom 2025 (vol. 14)",
+    "event_type": "festival",
+    "start_date": "2025-08-28",
+    "end_date": "2025-08-30",
+    "city": "Opatovce",
+    "country_code": "SK",
+    "venue_id": "kemping-rybniky-opatovce",
+    "lineup_completeness": "partial_transcribed_from_official_program_snippet",
+    "performances": [
+      {
+        "date": "2025-08-28",
+        "name": "RAID SIREN",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "TRI GROŠE",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "NEKULTÚRA",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "ODPAD",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "POLEMIC",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "KONFRONT",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee",
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "NAČO NÁZOV",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "BREAKOUT",
+        "country_code": "FR",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "FEELME",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "ŠTAMGASTI",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "BRATISLAVSKÉ DIEVČATÁ",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "BERMUDSKEJ KVÁDR",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "ŠVINDL",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "BARIKÁDY Z POPELNÍC",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "UHOL DOPADU",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "BEAUTIFUL BASTARDS",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "SOUR BITCH",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "EXNI!TO",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid",
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni",
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "THE CARBURETORS",
+        "country_code": "NO",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "PIRATES OF THE PUBS",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "KOHOUT PLAŠÍ SMRT",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "STREET MACHINE",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "THE ROCKET DOGZ",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-29",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "ŽÁDNEJ STRES",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "P.U.M",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "SEX DEVIANTS",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "THE CHOICES",
+        "country_code": "FR",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "DUKLA VOZOVNA",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba",
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "MAD SIN",
+        "country_code": "DE",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "EVIL CONDUCT",
+        "country_code": "NL",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "ADACTA",
+        "country_code": null,
+        "band_id": null,
+        "origin_status": "not_explicitly_labelled_in_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "DEGRADACE",
+        "country_code": "CZ",
+        "band_id": "degradace",
+        "origin_status": "labelled_in_official_program"
+      },
+      {
+        "date": "2025-08-30",
+        "name": "LENIWIEC",
+        "country_code": "PL",
+        "band_id": null,
+        "origin_status": "labelled_in_official_program"
+      }
+    ],
+    "source_ids": [
+      "src-punkaci-program-2025",
+      "src-punkaci-home-2025",
+      "src-punkaci-history"
+    ]
+  }
+]

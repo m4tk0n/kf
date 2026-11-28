@@ -1,0 +1,81 @@
+[
+  {
+    "id": "src-podparou-lineup-2025",
+    "name": "Fest Pod Parou 2025 – oficiální program",
+    "url": "https://www.podparou.cz/lineup",
+    "publisher": "Fest Pod Parou",
+    "source_type": "official_program",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "event_dates",
+      "lineup",
+      "performance_times",
+      "band_country_codes"
+    ]
+  },
+  {
+    "id": "src-podparou-venue-2025",
+    "name": "Fest Pod Parou 2025 – místo konání",
+    "url": "https://www.podparou.cz/index.php/pruvodce/detail/id/12",
+    "publisher": "Fest Pod Parou",
+    "source_type": "official_venue_information",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_name",
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-podparou-history",
+    "name": "Fest Pod Parou – historie festivalu a změny areálů",
+    "url": "https://www.podparou.cz/pruvodce",
+    "publisher": "Fest Pod Parou",
+    "source_type": "official_history",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "festival_history",
+      "venue_history"
+    ]
+  },
+  {
+    "id": "src-punkaci-program-2025",
+    "name": "Punkáči deťom 2025 – oficiální program",
+    "url": "https://punkaci2024.dvebe.sk/program/",
+    "publisher": "Punkáči deťom",
+    "source_type": "official_program",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "event_dates",
+      "lineup",
+      "performance_times",
+      "explicit_cz_band_labels"
+    ]
+  },
+  {
+    "id": "src-punkaci-home-2025",
+    "name": "Punkáči deťom 2025 – oficiální informace o festivalu",
+    "url": "https://punkaci2024.dvebe.sk/",
+    "publisher": "Punkáči deťom",
+    "source_type": "official_event_information",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "event_dates",
+      "venue_name",
+      "venue_location"
+    ]
+  },
+  {
+    "id": "src-punkaci-history",
+    "name": "Punkáči deťom – archiv ročníků a historie místa",
+    "url": "https://www.darkzin.cz/festivaly-slovensko/punkaci-detom/",
+    "publisher": "Darkzin",
+    "source_type": "independent_event_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "festival_history",
+      "venue_history",
+      "event_archive",
+      "venue_coordinates"
+    ]
+  }
+]

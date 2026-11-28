@@ -1,0 +1,29 @@
+{
+  "project": "K&F seed preparation",
+  "format_version": 1,
+  "generated_at": "2026-11-28",
+  "database_used": false,
+  "scope": {
+    "countries": [
+      "CZ",
+      "SK"
+    ],
+    "years_from": 2000,
+    "years_to": 2027,
+    "genres": [
+      "punk",
+      "hardcore",
+      "metal",
+      "alternative"
+    ],
+    "include_cz_sk_bands_abroad": true
+  },
+  "collection_status": "initial_verified_batch",
+  "notes": [
+    "Záznamy obsahují pouze doložené údaje a vazby.",
+    "Neznámý původ kapely zůstává null; stát se neodhaduje.",
+    "Neověřená přesná adresa zůstává null.",
+    "Turné zatím nemají potvrzené záznamy.",
+    "Doplnění dalších ročníků festivalů a zahraničních koncertů pokračuje."
+  ]
+}

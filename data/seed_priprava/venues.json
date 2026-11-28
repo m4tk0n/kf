@@ -1,0 +1,30 @@
+[
+  {
+    "id": "korunni-pevnustka-olomouc",
+    "name": "Korunní pevnůstka",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "address": "17. listopadu 7, 779 00 Olomouc, Česká republika",
+    "coordinates": null,
+    "source_ids": [
+      "src-podparou-venue-2025"
+    ],
+    "verification": "official_address_confirmed"
+  },
+  {
+    "id": "kemping-rybniky-opatovce",
+    "name": "Kemping Rybníky Opatovce",
+    "city": "Opatovce",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": {
+      "latitude": 48.8598185,
+      "longitude": 17.9666783
+    },
+    "source_ids": [
+      "src-punkaci-home-2025",
+      "src-punkaci-history"
+    ],
+    "verification": "venue_name_and_location_confirmed_exact_street_address_not_confirmed"
+  }
+]
