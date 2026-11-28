@@ -22,8 +22,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
 @set_time_limit(240);
 
 $keyName = (string)cfg('seed_research.key_env', 'AI_WRITE_KEY');
-$expected = (string)env($keyName, '');
-$provided = (string)($_SERVER['HTTP_X_AI_KEY'] ?? '');
+$expected = (string)env($keyName, (string)(getenv($keyName) ?: ''));
+$headers = function_exists('getallheaders') ? getallheaders() : [];
+$provided = (string)($_SERVER['HTTP_X_AI_KEY'] ?? $headers['X-AI-Key'] ?? $headers['x-ai-key'] ?? '');
 if ($expected === '' || $provided === '' || !hash_equals($expected, $provided)) {
     security_log('seed_research_key_invalid');
     seed_reply(403, ['error' => 'forbidden']);
