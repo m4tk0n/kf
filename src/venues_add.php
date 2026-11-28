@@ -120,7 +120,7 @@ function route_venue_city_suggest(): never
     $sql .= " ORDER BY c.name COLLATE utf8mb4_unicode_ci LIMIT " . $limit;
     $rows = q($sql, $params)->fetchAll();
     echo json_encode(['items' => array_map(static fn(array $r): array => [
-        'id' => (int)$r['id'], 'name' => (string)$r['name'], 'iso2' => (string)$r['iso2'],
+        'id' => (int)$r['id'], 'name' => (string)$r['name'],
         'country_id' => (int)$r['country_id'], 'country' => (string)$r['country'], 'iso2' => (string)$r['iso2'],
     ], $rows)], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     exit;
@@ -144,7 +144,7 @@ function route_venue_country_suggest(): never
         " WHERE `" . country_col() . "` COLLATE utf8mb4_unicode_ci LIKE ? ORDER BY name COLLATE utf8mb4_unicode_ci LIMIT " . $limit,
         [addcslashes($search, '%_\\\\') . '%'])->fetchAll();
     echo json_encode(['items' => array_map(static fn(array $r): array => [
-        'id' => (int)$r['id'], 'name' => (string)$r['name'],
+        'id' => (int)$r['id'], 'name' => (string)$r['name'], 'iso2' => (string)$r['iso2'],
     ], $rows)], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     exit;
 }
