@@ -155,6 +155,66 @@
         "https://www.ldkv.cz/kontakty",
         "https://www.ldkv.cz/udalost/totalni-nasazeni-the-fialky-nezfales-punkrock-on-the-road-tour-2026"
       ]
+    },
+    {
+      "id": 13,
+      "name": "Kulturní a společenské středisko Vltava",
+      "city": "Kralupy nad Vltavou",
+      "country": "CZ",
+      "address": "náměstí Jaroslava Seiferta 706, 278 01 Kralupy nad Vltavou",
+      "url": "https://www.kasskralupy.cz/",
+      "sources": [
+        "https://www.kasskralupy.cz/?filterIndex=26",
+        "https://bandzone.cz/koncert/562542-2026-11-21-thefialky-kass-vltava"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Willax Klub Heineken",
+      "city": "Mladá Boleslav",
+      "country": "CZ",
+      "address": "Havlíčkova 1307, 293 01 Mladá Boleslav",
+      "url": "https://ukvakose.cz/",
+      "sources": [
+        "https://ukvakose.cz/",
+        "https://buyer-api.darkzin.cz/kluby-cesko/willax-klub-heineken/"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Barrák Music Club",
+      "city": "Ostrava",
+      "country": "CZ",
+      "address": "Fügnerova 595/1, 702 00 Ostrava",
+      "url": "https://www.barrak-club.cz/",
+      "sources": [
+        "https://goout.net/en/sps%2Bthe-fialky-god-save-the-punk-ii-2026/szkmtky/",
+        "https://www.barrak-club.cz/cz/kontakty"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Divadlo Pod čarou",
+      "city": "Písek",
+      "country": "CZ",
+      "address": "Tyršova 28, 397 01 Písek",
+      "url": "https://www.podcarou.cz/",
+      "sources": [
+        "https://kalendarium.piseckem.cz/cs/akce/?od=2026-10-23&view=info",
+        "https://www.podcarou.cz/kontakt/"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Music Club Kotelna",
+      "city": "Litomyšl",
+      "country": "CZ",
+      "address": "Kpt. Jaroše 1129, 570 01 Litomyšl",
+      "url": "https://www.mckotelna.cz/",
+      "sources": [
+        "https://www.litomysl.cz/kalendar_akci/kultura",
+        "https://www.mckotelna.cz/"
+      ]
     }
   ],
   "next": []
