@@ -1,4 +1,5 @@
 # Místa konání akcí 2026
 # Formát: název | typ | město | stát | adresa | zdroje | poznámka
 
+Randal Club | hudební klub | Bratislava | Slovensko | Karpatská 2, 811 05 Bratislava | 2026-S05 |
 Muzikum Klub & Bisztró | hudební klub | Budapešť | Maďarsko | Múzeum utca 7, 1088 Budapest | 2026-S01; 2026-S02 |
