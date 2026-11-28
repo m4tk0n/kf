@@ -1,5 +1,6 @@
 # Kapely zjištěné v akcích roku 2026
 # Formát: název | město původu | stát původu | žánr | zdroje | poznámka
 
-The Trousers | Budapešť | Maďarsko | garage rock / hard rock / rock'n'roll | 2026-S01; 2026-S03 | Stejná kanonická maďarská kapela jako v letech 2024 a 2027; rozdílné žánrové popisy jsou doloženy samostatnými zdroji, nejde o různé kapely.
+Tim Vantol | Hoofddorp (údaj v rozporu s Amsterdamem) | Nizozemsko | acoustic folk / acoustic punk folk / folk punk | 2026-S07; 2026-S08; 2026-S09; 2026-S10 | Oficiální profil pořadatele uvádí Acoustic Folk, ESNS acoustic punk folk a NPO Radio 2 folk punk. Zdroj 2026-S08 uvádí Hoofddorp, zdroj 2026-S10 Amsterdam; město původu zatím nepovažovat za definitivně vyřešené.
+The Trousers | Budapešť | Maďarsko | garage rock / hard rock / rock'n'roll | 2026-S01; 2026-S03; 2027-S13; 2027-S14; 2027-S15 | Stejná kanonická maďarská kapela jako v letech 2024 a 2027; rozdílné žánrové popisy jsou doloženy samostatnými zdroji, nejde o různé kapely.
 Asphalt Horsemen | Gödöllő | Maďarsko | southern rock | 2026-S01 | Původ a žánr uvádí pořadatelský/prodejní popis akce.
