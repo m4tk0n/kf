@@ -20,23 +20,30 @@ declare(strict_types=1);
       <input type="text" name="name" value="<?= e((string)$old['name']) ?>" maxlength="120" required>
     </label>
 
-    <label class="event-name-field"><?= e(t('venue.f.city')) ?>
-      <input type="hidden" name="city_id" value="<?= (int)$old['city_id'] ?>" data-venue-city-id>
-      <input type="text" name="city_name" value="<?= e((string)($old['city_name'] ?? '')) ?>" maxlength="120"
-        autocomplete="off" placeholder="<?= e(t('event.f.city_pick')) ?>"
-        data-venue-city-input data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
-        data-suggest-url="<?= e(url('venue/city-suggest')) ?>">
-      <div class="autocomplete-list" data-venue-city-suggestions role="listbox" hidden></div>
-    </label>
+    <div class="venue-location-grid">
+      <label class="event-name-field"><?= e(t('venue.f.city')) ?>
+        <input type="hidden" name="city_id" value="<?= (int)$old['city_id'] ?>" data-venue-city-id>
+        <input type="text" name="city_name" value="<?= e((string)($old['city_name'] ?? '')) ?>" maxlength="120"
+          autocomplete="off" placeholder="<?= e(t('event.f.city_pick')) ?>"
+          data-venue-city-input data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
+          data-suggest-url="<?= e(url('venue/city-suggest')) ?>">
+        <div class="autocomplete-list" data-venue-city-suggestions role="listbox" hidden></div>
+      </label>
 
-    <label class="event-name-field"><?= e(t('venue.f.country')) ?>
-      <input type="hidden" name="country_id" value="<?= (int)$old['country_id'] ?>" data-venue-country-id>
-      <input type="text" name="country_name" value="<?= e((string)($old['country_name'] ?? '')) ?>" maxlength="120" required
-        autocomplete="off" placeholder="<?= e(t('venue.f.country')) ?>"
-        data-venue-country-input data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
-        data-suggest-url="<?= e(url('venue/country-suggest')) ?>">
-      <div class="autocomplete-list" data-venue-country-suggestions role="listbox" hidden></div>
-    </label>
+      <label class="event-name-field"><?= e(t('venue.f.country')) ?>
+        <input type="hidden" name="country_id" value="<?= (int)$old['country_id'] ?>" data-venue-country-id>
+        <input type="text" name="country_name" value="<?= e((string)($old['country_name'] ?? '')) ?>" maxlength="120" required
+          autocomplete="off" placeholder="<?= e(t('venue.f.country')) ?>"
+          data-venue-country-input data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
+          data-suggest-url="<?= e(url('venue/country-suggest')) ?>">
+        <div class="autocomplete-list" data-venue-country-suggestions role="listbox" hidden></div>
+      </label>
+
+      <label><?= e('ISO2') ?>
+        <input type="text" name="country_iso2" value="<?= e((string)($old['country_iso2'] ?? '')) ?>"
+          maxlength="2" readonly aria-label="ISO2" data-venue-country-iso2>
+      </label>
+    </div>
 
     <?php foreach (['address', 'email', 'phone', 'www', 'google_maps', 'mapy_maps'] as $k): ?>
       <label><?= e(t('venue.f.' . $k)) ?>
