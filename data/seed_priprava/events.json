@@ -2594,7 +2594,7 @@
     "id": "sps-2025-08-23-slany",
     "name": "Valník 2025",
     "event_type": "festival",
-    "start_date": "2025-08-23",
+    "start_date": "2025-08-22",
     "end_date": "2025-08-23",
     "city": "Slaný",
     "country_code": "CZ",
@@ -2606,10 +2606,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2025-08-22",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-fialky-official-concert-archive"
     ]
   },
   {
@@ -9695,28 +9702,6 @@
     ]
   },
   {
-    "id": "fialky-2025-08-22-slany",
-    "name": "Valník",
-    "event_type": "festival",
-    "start_date": "2025-08-22",
-    "end_date": "2025-08-22",
-    "city": "Slaný",
-    "country_code": "CZ",
-    "venue_id": null,
-    "lineup_completeness": "official_band_calendar",
-    "performances": [
-      {
-        "date": "2025-08-22",
-        "name": "THE FIALKY",
-        "country_code": "CZ",
-        "band_id": "the-fialky"
-      }
-    ],
-    "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
-  },
-  {
     "id": "fialky-2025-08-21-hluboka-nad-vltavou",
     "name": "Baron Fest Hluboká",
     "event_type": "festival",
@@ -10172,10 +10157,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-11-09",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-sps-official-concert-calendar"
     ]
   },
   {
@@ -10194,10 +10186,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-11-08",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-sps-official-concert-calendar"
     ]
   },
   {
@@ -10216,10 +10215,17 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2024-10-18",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
+      "src-fialky-official-concert-archive",
+      "src-sps-official-concert-calendar"
     ]
   },
   {
