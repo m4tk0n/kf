@@ -38,3 +38,7 @@ KAPELY Z LINE-UPŮ | Všechny ostatní kapely uvedené v 2024–2027/events.txt 
 DATUM | 2026-11-28
 POSLEDNÍ DOKONČENÁ DÁVKA | Založení podkladů pro ročníky Brněnecfestu 2024/2025 a Festu Pod Parou 2025; doplnění kontrolní evidence.
 DALŠÍ KONKRÉTNÍ KROK | Rozpracovat kapely z line-upů Brněnecfestu 2024/2025/2026 a Pod Parou 2025; začít kontrolou identity a úplné historie jedné kapely, výsledky ukládat po malých dávkách.
+
+
+# Automatizace – stav přípravy (2026-11-28)
+AUTOMATIZACE | GitHub Actions + scripts/seed_research.py | připraveno, vypnuto | Skript ukládá kandidáty po jednotlivých úlohách, deduplikuje frontu kapel a obnovuje přerušené položky | candidates/*.jsonl; band_queue.json; automation_state.json; research_log.jsonl | Nastavit GitHub Secret OPENAI_API_KEY a Repository variable SEED_RESEARCH_ENABLED=true až po kontrole nákladů | Workflow je připraveno, ale běh není aktivní; žádné API volání ani automatické SQL.
