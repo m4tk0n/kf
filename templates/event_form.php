@@ -58,14 +58,15 @@ foreach ($cities as $c) {
         </select>
       </label>
       <label data-admission-text-field<?= ($old['admission_type'] ?? '') !== 'text' ? ' hidden' : '' ?>><?= e(t('event.f.admission_text')) ?>
-        <input type="text" name="admission_value" value="<?= e(($old['admission_type'] ?? '') === 'text' ? (string)$old['admission_value'] : '') ?>" maxlength="100" data-admission-text>
+        <input type="text" name="admission_text" value="<?= e(($old['admission_type'] ?? '') === 'text' ? (string)$old['admission_value'] : '') ?>" maxlength="100" data-admission-text>
       </label>
       <div class="admission-amount-grid" data-admission-amount-fields<?= ($old['admission_type'] ?? '') !== 'amount' ? ' hidden' : '' ?>>
         <label><?= e(t('event.f.admission_value')) ?>
-          <input type="number" name="admission_value" min="0" max="999999999" step="0.01" value="<?= e(($old['admission_type'] ?? '') === 'amount' ? (string)$old['admission_value'] : '') ?>" data-admission-amount>
+          <input type="number" name="admission_amount" min="0" max="999999999" step="0.01" value="<?= e(($old['admission_type'] ?? '') === 'amount' ? (string)$old['admission_value'] : '') ?>" data-admission-amount>
         </label>
         <label><?= e(t('event.f.currency')) ?>
           <select name="admission_currency" data-admission-currency data-country-currencies="<?= e(json_encode(array_column($countryCurrencies, 'currency_code', 'id'), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)) ?>">
+            <option value=""<?= (string)($old['admission_currency'] ?? '') === '' ? ' selected' : '' ?>>–</option>
             <?php foreach ($currencies as $currency): $code = (string)$currency['currency_code']; ?>
               <option value="<?= e($code) ?>"<?= (string)($old['admission_currency'] ?? '') === $code ? ' selected' : '' ?>><?= e($code) ?></option>
             <?php endforeach; ?>
