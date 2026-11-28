@@ -8,6 +8,13 @@ Haywire | Boston | USA | hardcore punk | 2027-S02 |
 Skinhead | Kalifornie; kořeny v Nové Anglii | USA | street punk / Oi! / hardcore | 2027-S02 | Původ popsán pořadatelem jako sídlo v Kalifornii a kořeny v Nové Anglii.
 Defiance | Portland, Oregon | USA | street punk / hardcore / anarchopunk | 2027-S02 |
 The Meffs | Essex (město původu neuvedeno) | Spojené království | Britpunk / punk rock / hardcore punk / alternative rock | 2027-S16; 2027-S17 | Punkové duo; zdroje se shodují na Essexu, přesné město zatím není potvrzeno.
+Tri Groše | Čadca | Slovensko | punk rock | 2027-S18; 2027-S19 | Identita, město původu a žánr potvrzeny profilem kapely a rozhovorem s jejím členem.
+Hasiací Prístroj | Banská Bystrica | Slovensko | punk rock | 2027-S20; 2027-S21 | Kapela vznikla v Banské Bystrici v roce 1990; historický profil ji zasazuje do slovenské punk-rockové scény.
+Hrubý Domáci Produkt | neuvedeno | Slovensko | rock | 2027-S22 | Oficiální web potvrzuje identitu rockové kapely; město původu není uvedeno.
+KONFLIKT | neuvedeno | Slovensko | punk rock | 2027-S23 | Oficiální web potvrzuje slovenskou punk-rockovou kapelu; město původu zatím nedoplněno.
+Bez Šance | Police nad Metují | Česko | punk / punk'n'roll | 2027-S24 | Oficiální web uvádí českou punkovou kapelu z Police nad Metují.
+Odpad | Martin (přesné sídlo kapely zatím ověřit) | Slovensko | punk | 2027-S25 | Oficiální web potvrzuje historii a punkové zaměření; město Martin je zatím pouze sekundárně identifikované v názvu profilu.
+Zatrest | Olomouc | Česko | punk | 2027-S26 | Profil GoOut uvádí olomoucký původ a punkový žánr.
 
 # Další kapely z line-upů jsou zaznamenány v souborech akcí.
 # Jejich původ a žánry doplnit až po samostatném ověření identity a důvěryhodných zdrojů.
