@@ -89,6 +89,19 @@ def seed_band_queue(queue):
    if name and key and key not in known:
     queue.append({"name":name,"key":key,"status":"pending","discovered_from":str(path.relative_to(ROOT)),"seed_year":year})
     known.add(key)
+ # Also seed from every already-recorded event lineup, not only bands.txt.
+ for path in sorted(BASE.glob("20[0-2][0-9]/events.txt")):
+  year=int(path.parent.name)
+  for line in path.read_text(encoding="utf-8").splitlines():
+   if not line.strip() or line.lstrip().startswith("#") or " | " not in line: continue
+   parts=line.split(" | ")
+   if len(parts)<8: continue
+   for name in parts[7].split(";"):
+    name=name.strip()
+    key=norm(name)
+    if not name or not key or key in known or key in ("neuvedeno","neuveden","supportneuveden","supporttba"): continue
+    queue.append({"name":name,"key":key,"status":"pending","discovered_from":str(path.relative_to(ROOT)),"seed_year":year})
+    known.add(key)
  return queue
 
 def load_state():
