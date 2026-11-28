@@ -16,13 +16,13 @@ Přidávání klubu je dostupné přihlášeným uživatelům s oprávněním su
 
 ### Pole
 
-- Povinné údaje: název, vybrané město, vybraný stát a alespoň jedna lokalizační informace (adresa nebo GPS odkaz Google Maps / Mapy.com).
+- Povinné údaje: název, název města, vybraný stát a alespoň jedna lokalizační informace (adresa nebo GPS odkaz Google Maps / Mapy.com).
 - Název klubu / místa
 - Lokalita je zobrazena v jednom řádku se třemi poli: Město, Stát a ISO2.
-- Město: textové pole s našeptávačem z tabulky cities.
+- Město: textové pole s našeptávačem z tabulky `cities` a s městy z vlastních návrhů uživatele (`pending`). Návrhy ostatních uživatelů se nezobrazují. Pokud město v databázi není, lze ponechat volný text; do návrhu se uloží `city_name` a `country_id`, `city_id` zůstane 0.
 - Stát: textové pole s našeptávačem z tabulky countries. Výběr města automaticky doplní odpovídající stát i jeho ISO2; při výběru státu se našeptávání měst omezí na tento stát. Pouhé psaní do pole města ani státu nesmí přepisovat obsah druhého pole. Stát se doplní až po výběru nalezeného města; psaní státu nesmí vymazat ani změnit město.
 - ISO2: automaticky doplňovaný textový údaj bez inputu; zobrazuje se podle vybraného státu.
-- Odeslání vyžaduje platné vybrané ID města i státu a server ověřuje jejich vzájemnou příslušnost. Název města musí mít alespoň 2 znaky.
+- Odeslání vyžaduje název města o délce alespoň 2 znaků a platné ID státu. Pokud je vybráno existující město, server ověří jeho příslušnost ke státu. Nové město se do `cities` nezapisuje při odeslání návrhu.
 - Adresa (pokud je vyplněna, musí mít alespoň 2 znaky; je povinná, pokud není vyplněn žádný GPS odkaz)
 - E-mail (pokud je vyplněn, musí mít platný formát)
 - Telefon
@@ -47,10 +47,10 @@ Na stránce /review se návrh klubu zobrazí stejně jako ostatní položky fron
 
 1. znovu ověří hodnoty a duplicita,
 2. vytvoří záznam v tabulce venues,
-3. uloží doplňující údaje do JSON v data/venues,
-4. uloží obrázek do img/venues ve variantách _s a _l,
-5. odstraní záznam a soubory z fronty pending,
-6. zvýší autorovi počet schválených příspěvků.
+4. uloží doplňující údaje do JSON v data/venues,
+5. uloží obrázek do img/venues ve variantách _s a _l,
+6. odstraní záznam a soubory z fronty pending,
+7. zvýší autorovi počet schválených příspěvků.
 
 Při zamítnutí se odstraní návrh i jeho obrázek.
 
