@@ -2188,7 +2188,8 @@
     ],
     "source_ids": [
       "src-punkaci-2024-official",
-      "src-punkaci-2024-goout"
+      "src-punkaci-2024-goout",
+      "src-fialky-official-concert-archive"
     ]
   },
   {
@@ -2657,10 +2658,10 @@
   },
   {
     "id": "sps-2025-08-08-vysoke-nad-jizerou",
-    "name": "Keltská Noc",
+    "name": "Keltská Noc 2025",
     "event_type": "festival",
     "start_date": "2025-08-08",
-    "end_date": "2025-08-08",
+    "end_date": "2025-08-09",
     "city": "Vysoké nad Jizerou",
     "country_code": "CZ",
     "venue_id": null,
@@ -2671,10 +2672,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2025-08-09",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-fialky-official-concert-archive"
     ]
   },
   {
@@ -9797,28 +9805,6 @@
     ]
   },
   {
-    "id": "fialky-2025-08-09-vysoke-nad-jizerou",
-    "name": "Keltská noc",
-    "event_type": "festival",
-    "start_date": "2025-08-09",
-    "end_date": "2025-08-09",
-    "city": "Vysoké nad Jizerou",
-    "country_code": "CZ",
-    "venue_id": null,
-    "lineup_completeness": "official_band_calendar",
-    "performances": [
-      {
-        "date": "2025-08-09",
-        "name": "THE FIALKY",
-        "country_code": "CZ",
-        "band_id": "the-fialky"
-      }
-    ],
-    "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
-  },
-  {
     "id": "fialky-2025-08-08-praha",
     "name": "Support Young Punk Blood II.",
     "event_type": "concert",
@@ -10227,28 +10213,6 @@
     "performances": [
       {
         "date": "2024-10-18",
-        "name": "THE FIALKY",
-        "country_code": "CZ",
-        "band_id": "the-fialky"
-      }
-    ],
-    "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
-  },
-  {
-    "id": "fialky-2024-08-31-trencin",
-    "name": "Punkáči deťom 2024",
-    "event_type": "festival",
-    "start_date": "2024-08-31",
-    "end_date": "2024-08-31",
-    "city": "Trenčín",
-    "country_code": "SK",
-    "venue_id": null,
-    "lineup_completeness": "official_band_calendar",
-    "performances": [
-      {
-        "date": "2024-08-31",
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
