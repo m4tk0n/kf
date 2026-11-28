@@ -14,7 +14,6 @@ Hrubý Domáci Produkt | neuvedeno | neuvedeno | rock | 2027-S22 | Oficiální w
 KONFLIKT | neuvedeno | Slovensko | punk rock | 2027-S23 | Oficiální web potvrzuje slovenskou punk-rockovou kapelu; město původu zatím nedoplněno.
 Bez Šance | Police nad Metují | Česko | punk / punk'n'roll | 2027-S24; 2027-S30 | Oficiální web uvádí českou punkovou kapelu z Police nad Metují; eventový záznam uvádí Bez Šance (CZ) na zastávce v Banské Bystrici.
 Odpad | Martin | Slovensko | punk / punk-metal | 2027-S25; 2027-S30 | Oficiální web kapely uvádí původ v Martině a její účast na stejné akci 20. 2. 2027 v Urban Spotu.
-Zatrest | Olomouc | Česko | punk | 2027-S26 | Profil GoOut uvádí olomoucký původ a punkový žánr; přímé potvrzení identity s účinkujícím v této konkrétní akci je ještě potřeba doplnit.
 
 # Další kapely z line-upů jsou zaznamenány v souborech akcí.
 # Jejich původ a žánry doplnit až po samostatném ověření identity a důvěryhodných zdrojů.
