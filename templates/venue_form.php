@@ -25,7 +25,7 @@ declare(strict_types=1);
         <input type="hidden" name="city_id" value="<?= (int)$old['city_id'] ?>" data-venue-city-id>
         <input type="text" name="city_name" value="<?= e((string)($old['city_name'] ?? '')) ?>" maxlength="120" minlength="2" required
           autocomplete="off" placeholder="<?= e(t('event.f.city_pick')) ?>"
-          data-venue-city-input data-validate-city data-city-id-selector="[data-venue-city-id]" data-invalid-message="<?= e(t('venue.err.city')) ?>" data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
+          data-venue-city-input data-validate-city data-invalid-message="<?= e(t('venue.err.city')) ?>" data-suggest-min="<?= max(1, (int)cfg('paging.autocomplete_min_chars', 2)) ?>"
           data-suggest-url="<?= e(url('venue/city-suggest')) ?>">
         <div class="autocomplete-list" data-venue-city-suggestions role="listbox" hidden></div>
       </label>
