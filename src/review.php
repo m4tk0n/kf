@@ -163,7 +163,9 @@ function route_review_post(): never
     if (!is_array($p['data']['values'] ?? null)) redirect('review?id=' . $id . '&m=review_unsupported');
     if ((int)$p['type'] === (int)cfg('enums.pending_type.venue')) {
         $v = kf_venue_clean($p['data']['values']);
-        if (kf_venue_validate($v) || kf_venue_duplicate($v, false)) redirect('review?id=' . $id . '&m=review_invalid');
+        if (kf_venue_validate($v)) redirect('review?id=' . $id . '&m=review_invalid');
+        $existingCity=kf_city_existing_id($v['city_id'],$v['city_name'],$v['country_id']);if($existingCity>0)$v['city_id']=$existingCity;
+        if (kf_venue_duplicate($v, false)) redirect('review?id=' . $id . '&m=review_duplicate');
         try {
             kf_venue_publish($v, kf_pending_image_path($id), (int)$p['created_by']);
         } catch (Throwable $e) {
