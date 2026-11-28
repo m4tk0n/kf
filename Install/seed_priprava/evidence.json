@@ -1038,6 +1038,78 @@
       "source_type": "official_venue",
       "retrieved_on": "2026-11-28",
       "supports": "Oficiální provozovatel potvrzuje adresu areálu Celní 1731/12a, 748 01 Hlučín."
+    },
+    {
+      "id": "SRC-0115",
+      "url": "https://www.sps.litvinoff.cz/_koncerty.php",
+      "publisher": "SPS",
+      "title": "Koncerty SPS",
+      "source_type": "official_band_archive",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální archiv SPS s minulými koncerty, daty, městy, místy, časy, názvy akcí a uváděnými dalšími účinkujícími; použit pro kandidátní záznamy 2023–2024."
+    },
+    {
+      "id": "SRC-0116",
+      "url": "https://www.houba.info/biografie/",
+      "publisher": "Houba",
+      "title": "Biografie skupiny",
+      "source_type": "official_band_biography",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální biografie kapely Houba, vznik v roce 1995 a punkrockový kontext."
+    },
+    {
+      "id": "SRC-0117",
+      "url": "https://www.eecka.eu/",
+      "publisher": "E!E",
+      "title": "Oficiální stránky E!E",
+      "source_type": "official_band_website",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web punkové kapely E!E."
+    },
+    {
+      "id": "SRC-0118",
+      "url": "https://www.visiondays.cz/historie_kapely",
+      "publisher": "Vision Days",
+      "title": "Historie kapely",
+      "source_type": "official_band_biography",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální historie Vision Days; vznik kapely v roce 1990 a původ v Brněnci."
+    },
+    {
+      "id": "SRC-0119",
+      "url": "https://vypsanafixa.cz/",
+      "publisher": "Vypsaná fiXa",
+      "title": "O kapele",
+      "source_type": "official_band_biography",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální profil potvrzuje vznik Vypsané fiXy v Pardubicích v roce 1994."
+    },
+    {
+      "id": "SRC-0120",
+      "url": "https://smolaahrusky.sk/bio/",
+      "publisher": "Smola a Hrušky",
+      "title": "Bio",
+      "source_type": "official_band_biography",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální biografie potvrzuje vznik kapely v roce 1997 ve Spišské Nové Vsi a hudební vlivy punku, reggae a ska."
+    },
+    {
+      "id": "SRC-0121",
+      "url": "https://www.znc.cz/",
+      "publisher": "Znouzectnost",
+      "title": "Oficiální web ZNC",
+      "source_type": "official_band_website",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web kapely ZNC."
+    },
+    {
+      "id": "SRC-0122",
+      "url": "https://www.hudebniknihovna.cz/covers-for-lovers.html",
+      "publisher": "Hudební knihovna",
+      "title": "Covers for Lovers",
+      "source_type": "secondary_band_profile",
+      "retrieved_on": "2026-11-28",
+      "supports": "Sekundární profil potvrzuje český původ, pražské působení a žánrové zařazení Covers for Lovers."
     }
   ],
   "claims": [
@@ -6254,6 +6326,820 @@
         "SRC-0001",
         "SRC-0113",
         "SRC-0114"
+      ]
+    },
+    {
+      "id": "CLM-0384",
+      "entity_type": "event",
+      "entity_id": 49,
+      "field": "date",
+      "value": "2024-10-25",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0385",
+      "entity_type": "event",
+      "entity_id": 49,
+      "field": "city_country",
+      "value": "Brno, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0386",
+      "entity_type": "event",
+      "entity_id": 49,
+      "field": "venue_id",
+      "value": 9,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0387",
+      "entity_type": "event",
+      "entity_id": 49,
+      "field": "lineup",
+      "value": "SPS; The Fialky",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0388",
+      "entity_type": "event",
+      "entity_id": 50,
+      "field": "date",
+      "value": "2024-10-19",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0389",
+      "entity_type": "event",
+      "entity_id": 50,
+      "field": "city_country",
+      "value": "Písek, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0390",
+      "entity_type": "event",
+      "entity_id": 50,
+      "field": "venue_id",
+      "value": 16,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0391",
+      "entity_type": "event",
+      "entity_id": 50,
+      "field": "lineup",
+      "value": "SPS; The Fialky",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0392",
+      "entity_type": "event",
+      "entity_id": 51,
+      "field": "date",
+      "value": "2024-10-11",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0393",
+      "entity_type": "event",
+      "entity_id": 51,
+      "field": "city_country",
+      "value": "Praha, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0394",
+      "entity_type": "event",
+      "entity_id": 51,
+      "field": "venue_id",
+      "value": 20,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0395",
+      "entity_type": "event",
+      "entity_id": 51,
+      "field": "lineup",
+      "value": "SPS; The Fialky",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0396",
+      "entity_type": "event",
+      "entity_id": 52,
+      "field": "date",
+      "value": "2024-10-10",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0397",
+      "entity_type": "event",
+      "entity_id": 52,
+      "field": "city_country",
+      "value": "Praha, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0398",
+      "entity_type": "event",
+      "entity_id": 52,
+      "field": "venue_id",
+      "value": 20,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0399",
+      "entity_type": "event",
+      "entity_id": 52,
+      "field": "lineup",
+      "value": "SPS; The Fialky",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0400",
+      "entity_type": "event",
+      "entity_id": 53,
+      "field": "date",
+      "value": "2024-10-05",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0401",
+      "entity_type": "event",
+      "entity_id": 53,
+      "field": "city_country",
+      "value": "Pardubice, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0402",
+      "entity_type": "event",
+      "entity_id": 53,
+      "field": "venue_id",
+      "value": 41,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0403",
+      "entity_type": "event",
+      "entity_id": 53,
+      "field": "lineup",
+      "value": "SPS; The Fialky",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0404",
+      "entity_type": "event",
+      "entity_id": 54,
+      "field": "date",
+      "value": "2024-10-04",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0405",
+      "entity_type": "event",
+      "entity_id": 54,
+      "field": "city_country",
+      "value": "Jihlava, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0406",
+      "entity_type": "event",
+      "entity_id": 54,
+      "field": "venue_id",
+      "value": 42,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0407",
+      "entity_type": "event",
+      "entity_id": 54,
+      "field": "lineup",
+      "value": "SPS; The Fialky",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0408",
+      "entity_type": "event",
+      "entity_id": 55,
+      "field": "date",
+      "value": "2023-08-18",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0409",
+      "entity_type": "event",
+      "entity_id": 55,
+      "field": "city_country",
+      "value": "Slaný, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0410",
+      "entity_type": "event",
+      "entity_id": 55,
+      "field": "venue_id",
+      "value": null,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0411",
+      "entity_type": "event",
+      "entity_id": 55,
+      "field": "lineup",
+      "value": "SPS; Houba; Totální nasazení; Smola a Hrušky; The Fialky; E!E; Nežfaleš",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0412",
+      "entity_type": "event",
+      "entity_id": 56,
+      "field": "date",
+      "value": "2023-06-29",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0413",
+      "entity_type": "event",
+      "entity_id": 56,
+      "field": "city_country",
+      "value": "Praha, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0414",
+      "entity_type": "event",
+      "entity_id": 56,
+      "field": "venue_id",
+      "value": 34,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0415",
+      "entity_type": "event",
+      "entity_id": 56,
+      "field": "lineup",
+      "value": "SPS; The Fialky; Nežfaleš; Houba; Punk Floid",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0416",
+      "entity_type": "event",
+      "entity_id": 57,
+      "field": "date",
+      "value": "2023-07-01",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0417",
+      "entity_type": "event",
+      "entity_id": 57,
+      "field": "city_country",
+      "value": "Brněnec, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0418",
+      "entity_type": "event",
+      "entity_id": 57,
+      "field": "venue_id",
+      "value": null,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0419",
+      "entity_type": "event",
+      "entity_id": 57,
+      "field": "lineup",
+      "value": "SPS; Totální nasazení; E!E; Vision Days; The Fialky; Punk Floid; Nežfaleš",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0420",
+      "entity_type": "event",
+      "entity_id": 58,
+      "field": "date",
+      "value": "2023-06-09",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0421",
+      "entity_type": "event",
+      "entity_id": 58,
+      "field": "city_country",
+      "value": "Chomutov, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0422",
+      "entity_type": "event",
+      "entity_id": 58,
+      "field": "venue_id",
+      "value": 32,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0423",
+      "entity_type": "event",
+      "entity_id": 58,
+      "field": "lineup",
+      "value": "SPS; Totální nasazení; The Fialky; Vision Days; Znouzectnost; Covers for Lovers",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0424",
+      "entity_type": "event",
+      "entity_id": 59,
+      "field": "date",
+      "value": "2023-03-10",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0425",
+      "entity_type": "event",
+      "entity_id": 59,
+      "field": "city_country",
+      "value": "Vimperk, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0426",
+      "entity_type": "event",
+      "entity_id": 59,
+      "field": "venue_id",
+      "value": 43,
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0427",
+      "entity_type": "event",
+      "entity_id": 59,
+      "field": "lineup",
+      "value": "SPS; The Fialky; Vision Days",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0428",
+      "entity_type": "band",
+      "entity_id": 8,
+      "field": "name",
+      "value": "Vypsaná fiXa",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0119"
+      ]
+    },
+    {
+      "id": "CLM-0429",
+      "entity_type": "band",
+      "entity_id": 8,
+      "field": "country",
+      "value": "CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0119"
+      ]
+    },
+    {
+      "id": "CLM-0430",
+      "entity_type": "band",
+      "entity_id": 8,
+      "field": "city",
+      "value": "Pardubice",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0119"
+      ]
+    },
+    {
+      "id": "CLM-0431",
+      "entity_type": "band",
+      "entity_id": 8,
+      "field": "genre",
+      "value": "alternative rock",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0119"
+      ]
+    },
+    {
+      "id": "CLM-0432",
+      "entity_type": "band",
+      "entity_id": 9,
+      "field": "name",
+      "value": "Smola a Hrušky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0120"
+      ]
+    },
+    {
+      "id": "CLM-0433",
+      "entity_type": "band",
+      "entity_id": 9,
+      "field": "country",
+      "value": "SK",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0120"
+      ]
+    },
+    {
+      "id": "CLM-0434",
+      "entity_type": "band",
+      "entity_id": 9,
+      "field": "city",
+      "value": "Spišská Nová Ves",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0120"
+      ]
+    },
+    {
+      "id": "CLM-0435",
+      "entity_type": "band",
+      "entity_id": 9,
+      "field": "genre",
+      "value": "rock; punk, ska a reggae vlivy",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0120"
+      ]
+    },
+    {
+      "id": "CLM-0436",
+      "entity_type": "band",
+      "entity_id": 10,
+      "field": "name",
+      "value": "E!E",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0117"
+      ]
+    },
+    {
+      "id": "CLM-0437",
+      "entity_type": "band",
+      "entity_id": 10,
+      "field": "country",
+      "value": "CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0117"
+      ]
+    },
+    {
+      "id": "CLM-0438",
+      "entity_type": "band",
+      "entity_id": 10,
+      "field": "genre",
+      "value": "punk",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0117"
+      ]
+    },
+    {
+      "id": "CLM-0439",
+      "entity_type": "band",
+      "entity_id": 11,
+      "field": "name",
+      "value": "Houba",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0116"
+      ]
+    },
+    {
+      "id": "CLM-0440",
+      "entity_type": "band",
+      "entity_id": 11,
+      "field": "country",
+      "value": "CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0116"
+      ]
+    },
+    {
+      "id": "CLM-0441",
+      "entity_type": "band",
+      "entity_id": 11,
+      "field": "genre",
+      "value": "punk rock",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0116"
+      ]
+    },
+    {
+      "id": "CLM-0442",
+      "entity_type": "band",
+      "entity_id": 12,
+      "field": "name",
+      "value": "Vision Days",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0118"
+      ]
+    },
+    {
+      "id": "CLM-0443",
+      "entity_type": "band",
+      "entity_id": 12,
+      "field": "country",
+      "value": "CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0118"
+      ]
+    },
+    {
+      "id": "CLM-0444",
+      "entity_type": "band",
+      "entity_id": 12,
+      "field": "city",
+      "value": "Brněnec",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0118"
+      ]
+    },
+    {
+      "id": "CLM-0445",
+      "entity_type": "band",
+      "entity_id": 12,
+      "field": "genre",
+      "value": "ska punk",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0118"
+      ]
+    },
+    {
+      "id": "CLM-0446",
+      "entity_type": "band",
+      "entity_id": 13,
+      "field": "name",
+      "value": "Znouzectnost",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0121"
+      ]
+    },
+    {
+      "id": "CLM-0447",
+      "entity_type": "band",
+      "entity_id": 13,
+      "field": "country",
+      "value": "CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0121"
+      ]
+    },
+    {
+      "id": "CLM-0448",
+      "entity_type": "band",
+      "entity_id": 14,
+      "field": "name",
+      "value": "Covers for Lovers",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0122"
+      ]
+    },
+    {
+      "id": "CLM-0449",
+      "entity_type": "band",
+      "entity_id": 14,
+      "field": "country",
+      "value": "CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0122"
+      ]
+    },
+    {
+      "id": "CLM-0450",
+      "entity_type": "band",
+      "entity_id": 14,
+      "field": "city",
+      "value": "Praha",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0122"
+      ]
+    },
+    {
+      "id": "CLM-0451",
+      "entity_type": "band",
+      "entity_id": 14,
+      "field": "genre",
+      "value": "punk / pop rock",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0122"
+      ]
+    },
+    {
+      "id": "CLM-0452",
+      "entity_type": "venue",
+      "entity_id": 41,
+      "field": "name",
+      "value": "Žlutý Pes",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0453",
+      "entity_type": "venue",
+      "entity_id": 41,
+      "field": "city_country",
+      "value": "Pardubice, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0454",
+      "entity_type": "venue",
+      "entity_id": 42,
+      "field": "name",
+      "value": "D Club",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0455",
+      "entity_type": "venue",
+      "entity_id": 42,
+      "field": "city_country",
+      "value": "Jihlava, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0456",
+      "entity_type": "venue",
+      "entity_id": 43,
+      "field": "name",
+      "value": "Hotel Zlatá Hvězda",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
+      ]
+    },
+    {
+      "id": "CLM-0457",
+      "entity_type": "venue",
+      "entity_id": 43,
+      "field": "city_country",
+      "value": "Vimperk, CZ",
+      "status": "unverified",
+      "source_ids": [
+        "SRC-0115"
       ]
     }
   ]
