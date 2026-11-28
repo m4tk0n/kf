@@ -53,11 +53,12 @@ function kf_venue_pending_create(array $v,?string $srcL,int $uid): int {
     }catch(Throwable $e){if($pdo->inTransaction())$pdo->rollBack();if($id>0)json_remove('pending',$id);if($img!=='')@unlink($img);throw $e;}
 }
 function kf_venue_form_page(array $v,array $errors=[],string $img='',int $status=200): never {
-    $selected=q('SELECT c.name AS city, c.country_id, co.`'.country_col().'` AS country FROM '.tbl('cities').' c JOIN '.tbl('countries').' co ON co.id=c.country_id WHERE c.id=?',[(int)($v['city_id']??0)])->fetch() ?: ['city'=>'','country_id'=>0,'country'=>''];
+    $selected=q('SELECT c.name AS city, c.country_id, co.iso2, co.`'.country_col().'` AS country FROM '.tbl('cities').' c JOIN '.tbl('countries').' co ON co.id=c.country_id WHERE c.id=?',[(int)($v['city_id']??0)])->fetch() ?: ['city'=>'','country_id'=>0,'country'=>''];
     $v['city_name']=(string)$selected['city'];
     $v['country_id']=(int)($v['country_id']?:$selected['country_id']);
     $v['country_name']=(string)$selected['country'];
-    if($v['country_id']>0){$countryName=q('SELECT `'.country_col().'` FROM '.tbl('countries').' WHERE id=?',[$v['country_id']])->fetchColumn();if($countryName!==false)$v['country_name']=(string)$countryName;}
+    $v['country_iso2']=(string)($selected['iso2']??'');
+    if($v['country_id']>0){$countryRow=q('SELECT `'.country_col().'` AS country, iso2 FROM '.tbl('countries').' WHERE id=?',[$v['country_id']])->fetch();if($countryRow){$v['country_name']=(string)$countryRow['country'];$v['country_iso2']=(string)$countryRow['iso2'];}}
     page(t('venue.new.title'),'venue_form',['old'=>$v,'errors'=>$errors,'imgUrl'=>$img!==''?url('venue/draft-image').'?v='.time():''],$status);
 }
 function kf_venue_draft_get(int $uid): ?array {$d=json_read_file(draft_rel($uid));return ($d['kind']??'')==='venue'&&is_array($d['values']??null)?$d:null;}
@@ -111,7 +112,7 @@ function route_venue_city_suggest(): never
         echo json_encode(['items' => []], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         exit;
     }
-    $sql = "SELECT c.id, c.name, co.id AS country_id, co.`" . country_col() . "` AS country
+    $sql = "SELECT c.id, c.name, co.id AS country_id, co.iso2, co.`" . country_col() . "` AS country
             FROM " . tbl('cities') . " c JOIN " . tbl('countries') . " co ON co.id=c.country_id
             WHERE c.name COLLATE utf8mb4_unicode_ci LIKE ?";
     $params = [addcslashes($search, '%_\\\\') . '%'];
@@ -119,8 +120,8 @@ function route_venue_city_suggest(): never
     $sql .= " ORDER BY c.name COLLATE utf8mb4_unicode_ci LIMIT " . $limit;
     $rows = q($sql, $params)->fetchAll();
     echo json_encode(['items' => array_map(static fn(array $r): array => [
-        'id' => (int)$r['id'], 'name' => (string)$r['name'],
-        'country_id' => (int)$r['country_id'], 'country' => (string)$r['country'],
+        'id' => (int)$r['id'], 'name' => (string)$r['name'], 'iso2' => (string)$r['iso2'],
+        'country_id' => (int)$r['country_id'], 'country' => (string)$r['country'], 'iso2' => (string)$r['iso2'],
     ], $rows)], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     exit;
 }
@@ -139,7 +140,7 @@ function route_venue_country_suggest(): never
         echo json_encode(['items' => []], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         exit;
     }
-    $rows = q("SELECT id, `" . country_col() . "` AS name FROM " . tbl('countries') .
+    $rows = q("SELECT id, iso2, `" . country_col() . "` AS name FROM " . tbl('countries') .
         " WHERE `" . country_col() . "` COLLATE utf8mb4_unicode_ci LIKE ? ORDER BY name COLLATE utf8mb4_unicode_ci LIMIT " . $limit,
         [addcslashes($search, '%_\\\\') . '%'])->fetchAll();
     echo json_encode(['items' => array_map(static fn(array $r): array => [
