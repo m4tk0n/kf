@@ -1,0 +1,7 @@
+# Koncertní historie kapely The Trousers – doložené akce roku 2010
+# Formát: název | typ | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka | turné
+
+The Trousers + Kinkiez + Kollaps | koncert | uskutečněno | 29. 1. 2010 | Budapešť | Maďarsko | Corvintető / Tűzraktér (rozpor zdrojů) | The Trousers; Kinkiez; Kollaps | 2010-S01; 2010-S02 | Oba dobové zdroje uvádějí stejný den a line-up, ale liší se v místě konání; místo zůstává nevyřešené. |
+In memoriam – Bon Scott R.I.P. Party | koncert | uskutečněno | 20. 2. 2010 | Budapešť | Maďarsko | Mappa Club (ex-Trafó Bár) | Supernem; The Trousers; Electric Bastards | 2010-S06 | Tribute večer k Bonu Scottovi; zdroj uvádí tři kapely a další hostující hudebníky. |
+The Trousers – Soul Machine release show | koncert | uskutečněno | 25. 9. 2010 | Budapešť | Maďarsko | Corvintető | The Trousers; Dead Pope's Company; Esti Kornél | 2010-S03 | Křest alba Soul Machine; po koncertech hráli DJs, ti nejsou vedeni jako kapely. |
+Obits + Auxes + The Trousers | koncert | uskutečněno | 20. 10. 2010 | Budapešť | Maďarsko | A38 Hajó | Obits; Auxes; The Trousers | 2010-S04; 2010-S05 | Oficiální archiv A38 a dobový program potvrzují datum, místo a tři kapely. |
