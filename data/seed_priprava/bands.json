@@ -480,16 +480,6 @@
     "verification": "country_code_labelled_in_punkgen_archive"
   },
   {
-    "id": "favorite-obsession",
-    "name": "FAVORITE OBSESSION",
-    "country_code": "CZ",
-    "genres": [],
-    "sources": [
-      "src-punkgen-archive"
-    ],
-    "verification": "country_code_labelled_in_punkgen_archive"
-  },
-  {
     "id": "goofy-ginz",
     "name": "GOOFY GINZ",
     "country_code": "CZ",
@@ -580,7 +570,7 @@
     "verification": "country_code_labelled_in_punkgen_archive"
   },
   {
-    "id": "fajr ont",
+    "id": "fajront",
     "name": "FAJRONT",
     "country_code": "SK",
     "genres": [],
