@@ -4,7 +4,10 @@ declare(strict_types=1);
 ?>
 <?php if ($mode === 'list'): ?>
 <section class="card">
-  <h1><?= e(t('review.title')) ?></h1>
+  <div class="page-title-row">
+    <h1><?= e(t('review.title')) ?></h1>
+    <a class="btn page-back" data-page-back href="<?= e(url('')) ?>"><?= e(t('common.back')) ?></a>
+  </div>
   <?php if (!$rows): ?><p class="muted"><?= e(t('review.empty')) ?></p>
   <?php else: ?>
   <div class="tablewrap"><table class="grid">
