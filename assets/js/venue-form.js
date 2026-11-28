@@ -102,7 +102,7 @@
             if (countryInput && countryId) {
               countryInput.value = item.country;
               countryId.value = String(item.country_id);
-              if (countryIso2) countryIso2.value = item.iso2 || '';
+              if (countryIso2) countryIso2.textContent = item.iso2 || '';
             }
           },
           function (item) { return item.name + ' · ' + item.country; });
@@ -116,7 +116,7 @@
   if (countryInput && countryId && countryList) {
     countryInput.addEventListener('input', function () {
       countryId.value = '0';
-      if (countryIso2) countryIso2.value = '';
+      if (countryIso2) countryIso2.textContent = '';
       if (cityId) cityId.value = '0';
       if (cityInput) cityInput.value = '';
       window.clearTimeout(timer);
