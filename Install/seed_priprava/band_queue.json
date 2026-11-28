@@ -1202,5 +1202,19 @@
     "status": "pending",
     "discovered_from": "Install/seed_priprava/2011/events.txt",
     "seed_year": 2011
+  },
+  {
+    "name": "Peter Hook & The Light",
+    "key": "peterhookthelight",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2013/events.txt",
+    "seed_year": 2013
+  },
+  {
+    "name": "Ozone Mama",
+    "key": "ozonemama",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2013/events.txt",
+    "seed_year": 2013
   }
 ]
