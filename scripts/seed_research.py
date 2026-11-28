@@ -1,244 +1,277 @@
 #!/usr/bin/env python3
-"""Resumable research worker. Writes sourced candidates only; never writes SQL or DB."""
+"""Resumable, file-first concert research. Candidates are never promoted to verified seed data."""
 from __future__ import annotations
-
-import json
-import os
-import pathlib
-import sys
-import time
-import urllib.error
-import urllib.request
+import hashlib, json, os, pathlib, re, subprocess, sys, time, unicodedata, urllib.error, urllib.request
 from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 BASE = ROOT / "Install" / "seed_priprava"
-STATE = BASE / "automation_state.json"
-QUEUE = BASE / "band_queue.jsonl"
+TARGETS_FILE = BASE / "source_targets.json"
+STATE_FILE = BASE / "automation_state.json"
+QUEUE_FILE = BASE / "band_queue.json"
+LOG_FILE = BASE / "research_log.jsonl"
 CANDIDATES = BASE / "candidates"
-TARGETS = BASE / "source_targets.json"
 API_URL = "https://api.openai.com/v1/responses"
 MODEL = os.getenv("OPENAI_MODEL", "gpt-6.2-astra")
-MAX_TASKS = int(os.getenv("MAX_TASKS", "4"))
-MAX_SECONDS = min(int(os.getenv("MAX_SECONDS", "3300")), 3300)
+MAX_TASKS = max(1, min(int(os.getenv("MAX_TASKS", "2")), 8))
+MAX_SECONDS = max(60, min(int(os.getenv("MAX_SECONDS", "3300")), 3300))
 STARTED = time.monotonic()
+YEARS = range(2000, 2028)
 
 SCHEMA = {
-    "type": "object",
-    "additionalProperties": False,
-    "properties": {
-        "summary": {"type": "string"},
-        "events": {"type": "array", "items": {
-            "type": "object", "additionalProperties": False,
-            "properties": {
-                "name": {"type": "string"}, "status": {"type": "string"},
-                "date_from": {"type": "string"}, "date_to": {"type": "string"},
-                "city": {"type": "string"}, "country": {"type": "string"},
-                "venue": {"type": "string"}, "event_type": {"type": "string"},
-                "bands": {"type": "array", "items": {"type": "string"}},
-                "tour_name": {"type": "string"},
-                "tour_stop_order": {"type": "integer"},
-                "sources": {"type": "array", "items": {"type": "string"}},
-                "notes": {"type": "string"}
-            },
-            "required": ["name","status","date_from","date_to","city","country","venue","event_type","bands","tour_name","tour_stop_order","sources","notes"]
-        }},
-        "venues": {"type": "array", "items": {
-            "type": "object", "additionalProperties": False,
-            "properties": {
-                "name":{"type":"string"},"city":{"type":"string"},
-                "country":{"type":"string"},"venue_type":{"type":"string"},
-                "sources":{"type":"array","items":{"type":"string"}}
-            },
-            "required":["name","city","country","venue_type","sources"]
-        }},
-        "bands": {"type": "array", "items": {
-            "type": "object", "additionalProperties": False,
-            "properties": {
-                "name":{"type":"string"},"origin_city":{"type":"string"},
-                "origin_country":{"type":"string"},"genre":{"type":"string"},
-                "sources":{"type":"array","items":{"type":"string"}}
-            },
-            "required":["name","origin_city","origin_country","genre","sources"]
-        }},
-        "sources": {"type": "array", "items": {
-            "type":"object","additionalProperties":False,
-            "properties":{"url":{"type":"string"},"supports":{"type":"string"},"source_type":{"type":"string"}},
-            "required":["url","supports","source_type"]
-        }},
-        "band_followups": {"type":"array","items":{"type":"string"}}
-    },
-    "required":["summary","events","venues","bands","sources","band_followups"]
+ "type":"object","additionalProperties":False,
+ "properties":{
+  "summary":{"type":"string"},
+  "events":{"type":"array","items":{"type":"object","additionalProperties":False,"properties":{
+   "name":{"type":"string"},"status":{"type":"string"},"date_from":{"type":"string"},"date_to":{"type":"string"},
+   "city":{"type":"string"},"country":{"type":"string"},"venue":{"type":"string"},"venue_type":{"type":"string"},
+   "event_type":{"type":"string"},"bands":{"type":"array","items":{"type":"string"}},
+   "tour_name":{"type":"string"},"tour_stop_order":{"type":"integer"},
+   "sources":{"type":"array","items":{"type":"string"}},"notes":{"type":"string"}},
+   "required":["name","status","date_from","date_to","city","country","venue","venue_type","event_type","bands","tour_name","tour_stop_order","sources","notes"]}},
+  "venues":{"type":"array","items":{"type":"object","additionalProperties":False,"properties":{
+   "name":{"type":"string"},"city":{"type":"string"},"country":{"type":"string"},"venue_type":{"type":"string"},
+   "address":{"type":"string"},"sources":{"type":"array","items":{"type":"string"}}},
+   "required":["name","city","country","venue_type","address","sources"]}},
+  "bands":{"type":"array","items":{"type":"object","additionalProperties":False,"properties":{
+   "name":{"type":"string"},"origin_city":{"type":"string"},"origin_country":{"type":"string"},
+   "genres":{"type":"array","items":{"type":"string"}},"sources":{"type":"array","items":{"type":"string"}}},
+   "required":["name","origin_city","origin_country","genres","sources"]}},
+  "sources":{"type":"array","items":{"type":"object","additionalProperties":False,"properties":{
+   "url":{"type":"string"},"title":{"type":"string"},"supports":{"type":"string"},"source_type":{"type":"string"}},
+   "required":["url","title","supports","source_type"]}},
+  "band_followups":{"type":"array","items":{"type":"string"}}
+ },
+ "required":["summary","events","venues","bands","sources","band_followups"]
 }
 
+def now():
+ return datetime.now(timezone.utc).isoformat()
+
+def norm(value):
+ value=unicodedata.normalize("NFKD",str(value)).encode("ascii","ignore").decode().casefold()
+ return re.sub(r"[^a-z0-9]+","",value)
+
+def digest(value):
+ return hashlib.sha256(value.encode("utf-8")).hexdigest()[:20]
+
 def read_json(path, default):
-    try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except FileNotFoundError:
-        return default
+ try: return json.loads(path.read_text(encoding="utf-8"))
+ except (FileNotFoundError,json.JSONDecodeError): return default
 
-def append_jsonl(path, item):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(item, ensure_ascii=False) + "\n")
+def read_jsonl(path):
+ if not path.exists(): return []
+ rows=[]
+ for line in path.read_text(encoding="utf-8").splitlines():
+  try: rows.append(json.loads(line))
+  except json.JSONDecodeError: continue
+ return rows
 
-def call_research(prompt):
-    key = os.environ.get("OPENAI_API_KEY", "")
-    if not key:
-        raise RuntimeError("Chybí GitHub Actions secret OPENAI_API_KEY.")
-    body = {
-        "model": MODEL,
-        "tools": [{"type":"web_search","search_context_size":"high"}],
-        "tool_choice": "required",
-        "input": prompt,
-        "text": {"format":{"type":"json_schema","name":"concert_research","strict":True,"schema":SCHEMA}}
-    }
-    req = urllib.request.Request(
-        API_URL, data=json.dumps(body).encode("utf-8"),
-        headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"},
-        method="POST"
-    )
-    with urllib.request.urlopen(req, timeout=900) as response:
-        payload = json.loads(response.read().decode("utf-8"))
-    for item in payload.get("output", []):
-        if item.get("type") == "message":
-            for part in item.get("content", []):
-                if part.get("type") == "output_text":
-                    return json.loads(part["text"])
-    raise RuntimeError("Responses API nevrátila očekávaný JSON výstup.")
+def append_jsonl(path,item):
+ path.parent.mkdir(parents=True,exist_ok=True)
+ with path.open("a",encoding="utf-8") as handle:
+  handle.write(json.dumps(item,ensure_ascii=False,sort_keys=True)+"\n")
 
-def existing_urls():
-    urls=set()
-    for path in BASE.glob("*/sources.txt"):
-        for line in path.read_text(encoding="utf-8").splitlines():
-            if " | " in line and line[:1].isdigit():
-                parts=line.split(" | ")
-                if len(parts)>1: urls.add(parts[1].strip().rstrip("/"))
-    for path in CANDIDATES.glob("*.jsonl"):
-        for line in path.read_text(encoding="utf-8").splitlines():
-            try:
-                row=json.loads(line)
-                for source in row.get("sources",[]): urls.add(source.get("url","").rstrip("/"))
-            except Exception: pass
-    return urls
+def save_json(path,value):
+ path.parent.mkdir(parents=True,exist_ok=True)
+ temp=path.with_suffix(path.suffix+".tmp")
+ temp.write_text(json.dumps(value,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+ temp.replace(path)
 
-def build_tasks():
-    targets=read_json(TARGETS,{}).get("targets",[])
-    state=read_json(STATE,{"year":2027,"target_index":0,"band_cursor":0,"completed":[]})
-    tasks=[]
-    # Newly discovered bands get their own concert-history research.
-    band_items=[]
-    if QUEUE.exists():
-        for line in QUEUE.read_text(encoding="utf-8").splitlines():
-            try: band_items.append(json.loads(line))
-            except Exception: continue
-    cursor=int(state.get("band_cursor",0))
-    while cursor < len(band_items) and len(tasks)<MAX_TASKS:
-        band=band_items[cursor]
-        tasks.append({"kind":"band","year":int(band.get("year",state.get("year",2027))),"name":band["name"]})
-        cursor+=1
-    state["band_cursor"]=cursor
-    year=int(state.get("year",2027))
-    idx=int(state.get("target_index",0))
-    while year>=2000 and len(tasks)<MAX_TASKS:
-        if not targets:
-            break
-        target=targets[idx % len(targets)]
-        tasks.append({"kind":"target","year":year,"target":target})
-        idx+=1
-        if idx % len(targets)==0:
-            year-=1
-    state["year"]=year
-    state["target_index"]=idx
-    return tasks,state
+def seed_band_queue(queue):
+ known={row.get("key") or norm(row.get("name","")) for row in queue}
+ for path in sorted(BASE.glob("20[0-2][0-9]/bands.txt")):
+  year=int(path.parent.name)
+  for line in path.read_text(encoding="utf-8").splitlines():
+   if not line.strip() or line.lstrip().startswith("#") or " | " not in line: continue
+   name=line.split(" | ",1)[0].strip()
+   key=norm(name)
+   if name and key and key not in known:
+    queue.append({"name":name,"key":key,"status":"pending","discovered_from":str(path.relative_to(ROOT)),"seed_year":year})
+    known.add(key)
+ return queue
 
-def prompt_for(task, known):
-    yr=task["year"]
-    if task["kind"]=="band":
-        subject=f"kapela {task['name']}"
-        scope=("Najdi doložené koncerty této kapely v ČR a SR v daném roce. "
-               "Navíc zahrň její doložené zahraniční klubové koncerty. "
-               "Zahraniční festivaly mimo ČR/SR vynech. Identitu stejnojmenných kapel ověř.")
-    else:
-        t=task["target"]
-        subject=f"{t['name']} ({t['type']}, území {t['territory']}, žánry {t['genres']})"
-        scope=("Prověř konkrétní ročník nebo koncertní program této akce/série. "
-               "Zahrň pouze doložené koncerty v ČR/SR. Pokud jde o klubovou sérii, "
-               "hledej konkrétní klubové koncerty. Kapely mohou být odkudkoliv.")
-    return f"""
-Jsi rešeršér historických koncertů pro databázi K&F. Rok: {yr}. Předmět: {subject}.
+def load_state():
+ state=read_json(STATE_FILE,{})
+ state.setdefault("target_year",2027); state.setdefault("target_index",0)
+ state.setdefault("completed_tasks",0); state.setdefault("last_run",""); state.setdefault("last_task","")
+ return state
+
+def load_queue():
+ queue=read_json(QUEUE_FILE,[])
+ if not isinstance(queue,list): queue=[]
+ for row in queue:
+  if row.get("status")=="in_progress": row["status"]="pending"
+ return seed_band_queue(queue)
+
+def next_task(queue,state,targets):
+ for row in queue:
+  if row.get("status")=="pending":
+   return {"kind":"band","name":row["name"],"key":row["key"]}
+ year=int(state["target_year"]); index=int(state["target_index"])
+ if year<2000 or not targets: return None
+ return {"kind":"target","year":year,"target":targets[index],"index":index}
+
+def make_prompt(task):
+ if task["kind"]=="band":
+  subject="KAPELA: "+task["name"]
+  scope="""Prověř koncertní historii této konkrétní kapely v celém období 2000–2027.
+Zahrň doložené koncerty v ČR a SR a také doložené koncerty v zahraničních KLUBECH.
+Zahraniční festivaly a neklubové akce mimo ČR/SR vynech. Hledej supporty, předkapely,
+společná turné a klubové koncerty; u každé akce zjisti celý doložený line-up a nové kapely."""
+ else:
+  t=task["target"]
+  subject=f"AKCE / SÉRIE: {t.get('name','')} | typ {t.get('type','')} | území {t.get('territory','')} | žánry {t.get('genres','')}"
+  scope=f"Prověř konkrétní ročník {task['year']} této akce nebo konkrétní koncerty této série. Zahrň pouze doložené akce v ČR a SR."
+ return f"""
+Jsi pečlivý historický rešeršér koncertů pro projekt K&F.
+{subject}
 {scope}
+
+Povinný způsob hledání:
+- Proveď více samostatných webových hledání, ne pouze jeden dotaz.
+- Vyzkoušej přesný název, varianty bez diakritiky, alternativní zápis, přezdívky a jazykové varianty.
+- Kombinuj název s výrazy koncerty, koncertní historie, tour, live, gig, festival, lineup, program,
+  plakát, klub, město, rok a názvy známých spoluúčinkujících.
+- Projdi oficiální archiv kapely, pořadatelů a klubů, dobové plakáty, koncertní databáze a reportáže.
+- U každého nalezeného koncertu zkontroluj line-up a zařaď nové kapely do band_followups.
+- Stejnojmenné kapely neslučuj bez ověření identity podle původu, členů, historie a diskografie.
+
 Pravidla:
-- Použij web search a pracuj pouze s konkrétními zdroji, které jsi skutečně otevřel/ověřil.
-- Nevymýšlej data, line-up, místo, adresu, původ kapely ani URL.
-- Zapiš jen události s alespoň jedním konkrétním zdrojovým URL; preferuj oficiální archivy, pořadatele, kluby, kapely, dobové plakáty a důvěryhodné archivy.
-- Stav musí být uskutečněno, plánováno nebo zrušeno; budoucí koncerty označ plánováno.
-- Pokud údaj neznáš, použij prázdný řetězec. Datum používej YYYY-MM-DD, neznámý konec = stejné datum jako začátek, pokud je doloženo jednodenní konání.
-- Zahraniční klubové koncerty jsou povolené pouze při průzkumu kapely. Zahraniční festivaly a neklubové akce mimo ČR/SR vynech.
-- Tour: pokud zdroj výslovně dokládá, že akce je zastávkou pojmenovaného turné, vyplň tour_name a tour_stop_order, pokud je pořadí doloženo. Jinak tour_name prázdné a pořadí 0. Neslučuj jednotlivé koncerty do jedné akce; každá zastávka je samostatná akce.
-- U každého zdroje uveď URL a přesně co dokládá. Neuváděj vyhledávací URL ani domnělé odkazy.
-- Neopakuj známé URL: {json.dumps(sorted(known)[:250],ensure_ascii=False)}
-Vrať pouze JSON podle předepsaného schématu. Pokud nic spolehlivého nenajdeš, vrať prázdná pole a vysvětli to v summary.
+- Zapiš pouze události podložené konkrétními zdroji, které jsi při rešerši skutečně našel.
+- Nevymýšlej datum, město, místo, line-up, původ, žánr ani URL. Neznámé údaje nech prázdné.
+- Každá zastávka turné je samostatná akce. Vyplň tour_name jen pokud zdroj výslovně potvrzuje společné turné/sérii.
+- Festival = vícedenní hudební akce; koncert = jednodenní hudební akce, i když název obsahuje Fest.
+  Přesah po půlnoci sám o sobě nedělá z koncertu festival.
+- Budoucí akce označ plánováno, zrušené zrušeno, minulé doložené uskutečněno.
+- U zahraniční akce v úloze kapely smí být pouze klubový koncert; venue_type uveď jako klub.
+- Každá akce musí mít alespoň jeden konkrétní zdroj URL. U zdrojů popiš, co přesně dokládají.
+- Pokud najdeš jen stopu bez ověřitelného data/místa/zdroje, nevkládej ji mezi events; vysvětli ji v summary.
+- Nepovažuj výsledek vyhledávače za potvrzení, pokud není dohledatelný zdroj.
+Vrať pouze JSON podle schématu. Nepřidávej domněnky.
 """
 
-def validate(result, year, known):
-    clean=[]
-    for ev in result.get("events",[]):
-        try:
-            if not ev.get("name") or not ev.get("sources"): continue
-            if not ev.get("date_from","").startswith(str(year)): continue
-            if ev.get("country") not in ("Česko","Česká republika","Slovensko","Czechia","Czech Republic","Slovakia",""):
-                if ev.get("event_type","").lower() not in ("klubový koncert","club concert"): continue
-            valid=[]
-            for u in ev.get("sources",[]):
-                if isinstance(u,str) and u.startswith("https://") and u.rstrip("/") not in known:
-                    valid.append(u)
-            if not valid: continue
-            ev["sources"]=valid
-            clean.append(ev)
-        except Exception: continue
-    result["events"]=clean
-    result["sources"]=[s for s in result.get("sources",[]) if s.get("url","").startswith("https://")]
-    return result
+def call_api(prompt):
+ key=os.getenv("OPENAI_API_KEY","").strip()
+ if not key: raise RuntimeError("Chybí GitHub Secret OPENAI_API_KEY.")
+ body={"model":MODEL,"tools":[{"type":"web_search","search_context_size":"high"}],
+       "tool_choice":"required","input":prompt,
+       "text":{"format":{"type":"json_schema","name":"kf_concert_research","strict":True,"schema":SCHEMA}}}
+ request=urllib.request.Request(API_URL,data=json.dumps(body).encode("utf-8"),
+  headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"},method="POST")
+ with urllib.request.urlopen(request,timeout=1200) as response:
+  payload=json.loads(response.read().decode("utf-8"))
+ for item in payload.get("output",[]):
+  if item.get("type")=="message":
+   for part in item.get("content",[]):
+    if part.get("type")=="output_text": return json.loads(part["text"])
+ raise RuntimeError("API nevrátila strukturovaný výsledek.")
+
+def valid_urls(result):
+ return {s.get("url","").strip().rstrip("/") for s in result.get("sources",[])
+         if s.get("url","").strip().startswith(("https://","http://"))}
+
+def enqueue_band(name,year,discovered_from):
+ name=str(name).strip()
+ if not name: return
+ queue=read_json(QUEUE_FILE,[])
+ key=norm(name)
+ if not key or any((row.get("key") or norm(row.get("name","")))==key for row in queue): return
+ queue.append({"name":name,"key":key,"status":"pending","discovered_from":discovered_from,"seed_year":year})
+ save_json(QUEUE_FILE,queue)
+
+def write_candidates(task,result):
+ urls=valid_urls(result); added={"events":0,"bands":0,"venues":0,"sources":0}
+ for event in result.get("events",[]):
+  date=event.get("date_from","")
+  if not re.fullmatch(r"20\d\d-\d\d-\d\d",date): continue
+  year=int(date[:4])
+  if year not in YEARS or (task["kind"]=="target" and year!=task["year"]): continue
+  refs=[u.rstrip("/") for u in event.get("sources",[]) if u.rstrip("/") in urls]
+  if not refs: continue
+  if task["kind"]=="band" and event.get("country","").casefold() not in ("česko","česká republika","czechia","czech republic","slovensko","slovakia"):
+   if "klub" not in event.get("venue_type","").casefold() and "club" not in event.get("venue_type","").casefold(): continue
+  record=dict(event); record["sources"]=refs
+  record.update({"review_status":"needs_manual_review","researched_at":now(),"research_task":task})
+  record["candidate_id"]=digest(norm(record.get("name",""))+"|"+date+"|"+norm(record.get("city",""))+"|"+norm(record.get("venue","")))
+  path=CANDIDATES/str(year)/"events.jsonl"
+  if record["candidate_id"] not in {r.get("candidate_id") for r in read_jsonl(path)}:
+   append_jsonl(path,record); added["events"]+=1
+  for band in event.get("bands",[]): enqueue_band(band,year,"line-up "+record["candidate_id"])
+ for band in result.get("bands",[]):
+  name=band.get("name","").strip()
+  refs=[u.rstrip("/") for u in band.get("sources",[]) if u.rstrip("/") in urls]
+  if not name or not refs: continue
+  record=dict(band); record["sources"]=refs
+  record.update({"review_status":"needs_manual_review","researched_at":now(),"candidate_id":digest(norm(name))})
+  path=CANDIDATES/"bands.jsonl"
+  if record["candidate_id"] not in {r.get("candidate_id") for r in read_jsonl(path)}:
+   append_jsonl(path,record); added["bands"]+=1
+  enqueue_band(name,task.get("year",2027),"band profile")
+ for venue in result.get("venues",[]):
+  refs=[u.rstrip("/") for u in venue.get("sources",[]) if u.rstrip("/") in urls]
+  if not venue.get("name") or not refs: continue
+  record=dict(venue); record["sources"]=refs
+  record.update({"review_status":"needs_manual_review","researched_at":now(),
+   "candidate_id":digest(norm(venue.get("name",""))+"|"+norm(venue.get("city",""))+"|"+norm(venue.get("country","")))})
+  path=CANDIDATES/"venues.jsonl"
+  if record["candidate_id"] not in {r.get("candidate_id") for r in read_jsonl(path)}:
+   append_jsonl(path,record); added["venues"]+=1
+ for source in result.get("sources",[]):
+  url=source.get("url","").rstrip("/")
+  if not url: continue
+  record=dict(source); record.update({"researched_at":now(),"research_task":task})
+  path=CANDIDATES/"sources.jsonl"
+  if url not in {r.get("url","").rstrip("/") for r in read_jsonl(path)}:
+   append_jsonl(path,record); added["sources"]+=1
+ for name in result.get("band_followups",[]): enqueue_band(name,task.get("year",2027),"recursive discovery")
+ return added
 
 def main():
-    CANDIDATES.mkdir(parents=True,exist_ok=True)
-    tasks,state=build_tasks()
-    if not tasks:
-        print("Fronta je prázdná nebo dokončená.")
-        return
-    known=existing_urls()
-    done=0
-    for task in tasks:
-        if done>=MAX_TASKS or time.monotonic()-STARTED>MAX_SECONDS:
-            break
-        year=task["year"]
-        print(f"Rešerše: {task['kind']} / {year}")
-        result=call_research(prompt_for(task,known))
-        result=validate(result,year,known)
-        record={
-            "researched_at":datetime.now(timezone.utc).isoformat(),
-            "task":task,"summary":result.get("summary",""),
-            "events":result.get("events",[]),"venues":result.get("venues",[]),
-            "bands":result.get("bands",[]),"sources":result.get("sources",[])
-        }
-        append_jsonl(CANDIDATES/f"{year}.jsonl",record)
-        for band in result.get("band_followups",[]):
-            if band.strip():
-                append_jsonl(QUEUE,{"name":band.strip(),"year":year})
-        for band in result.get("bands",[]):
-            if band.get("name"):
-                append_jsonl(QUEUE,{"name":band["name"],"year":year})
-        for src in result.get("sources",[]):
-            known.add(src.get("url","").rstrip("/"))
-        done+=1
-    state["last_run"]=datetime.now(timezone.utc).isoformat()
-    state["tasks_processed"]=int(state.get("tasks_processed",0))+done
-    STATE.write_text(json.dumps(state,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print(f"Dokončeno úloh: {done}; celkem: {state['tasks_processed']}")
+ if not os.getenv("OPENAI_API_KEY"): raise RuntimeError("Není nastaven OPENAI_API_KEY; výzkum nebyl spuštěn.")
+ CANDIDATES.mkdir(parents=True,exist_ok=True)
+ targets=read_json(TARGETS_FILE,{}).get("targets",[])
+ queue=load_queue(); save_json(QUEUE_FILE,queue)
+ state=load_state(); done=0
+ while done<MAX_TASKS and time.monotonic()-STARTED<MAX_SECONDS:
+  queue=read_json(QUEUE_FILE,[])
+  task=next_task(queue,state,targets)
+  if task is None:
+   print("Fronta kapel i seznam ročníků jsou dokončené."); break
+  if task["kind"]=="band":
+   for row in queue:
+    if row.get("key")==task["key"]: row["status"]="in_progress"; row["started_at"]=now()
+   save_json(QUEUE_FILE,queue)
+  print("Rešerše:",json.dumps(task,ensure_ascii=False))
+  try:
+   result=call_api(make_prompt(task))
+   added=write_candidates(task,result)
+   if task["kind"]=="band":
+    queue=read_json(QUEUE_FILE,[])
+    for row in queue:
+     if row.get("key")==task["key"]:
+      row["status"]="done"; row["completed_at"]=now(); row["summary"]=result.get("summary","")[:500]
+    save_json(QUEUE_FILE,queue)
+   else:
+    state["target_index"]+=1
+    if state["target_index"]>=len(targets):
+     state["target_index"]=0; state["target_year"]-=1
+   state["completed_tasks"]+=1; state["last_task"]=json.dumps(task,ensure_ascii=False); state["last_run"]=now()
+   append_jsonl(LOG_FILE,{"timestamp":now(),"task":task,"summary":result.get("summary",""),"added":added,"status":"completed"})
+   save_json(STATE_FILE,state); done+=1
+   print("Uloženo:",json.dumps(added,ensure_ascii=False))
+  except Exception as exc:
+   append_jsonl(LOG_FILE,{"timestamp":now(),"task":task,"status":"error","error":str(exc)})
+   if task["kind"]=="band":
+    queue=read_json(QUEUE_FILE,[])
+    for row in queue:
+     if row.get("key")==task["key"]: row["status"]="pending"; row["last_error"]=str(exc)[:500]
+    save_json(QUEUE_FILE,queue)
+   save_json(STATE_FILE,state)
+   raise
+ print(f"Hotovo: {done} úloh v tomto běhu; celkem {state['completed_tasks']}.")
 
 if __name__=="__main__":
-    try: main()
-    except (urllib.error.URLError,TimeoutError,RuntimeError) as exc:
-        print(f"Výzkumná úloha selhala: {exc}",file=sys.stderr)
-        raise
+ try: main()
+ except (urllib.error.URLError,TimeoutError,RuntimeError,ValueError) as error:
+  print("Výzkumný běh skončil chybou:",error,file=sys.stderr); raise
