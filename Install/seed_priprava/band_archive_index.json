@@ -1,0 +1,180 @@
+{
+  "_purpose": "Kontrolni rejstrik zdrojov koncertni historie kapely The Fialky. Nejde o hotovou evidenci akci; pocty z Bandzone jsou kontrolni pocty polozek v archivu a mohou zahrnovat soukrome, nepresne nebo pozdeji zmenene zaznamy. Kazdou polozku je nutne posoudit a overit.",
+  "_scope": {
+    "band_id": 1,
+    "band": "The Fialky",
+    "from_year": 2000,
+    "to_year": 2026,
+    "direction": "descending"
+  },
+  "_sources": [
+    {
+      "id": "ARCH-001",
+      "url": "https://thefialky.cz/koncerty-2000-2015/",
+      "coverage": "2000-2015",
+      "role": "official_band_archive",
+      "note": "Primarni archiv kapely s daty, nazvy akci, misty a casto uvedenymi dalsimi ucinkujicimi. Uvedene doprovodne kapely se nesmeji automaticky povazovat za potvrzene skutecne vystupujici."
+    },
+    {
+      "id": "ARCH-002",
+      "url": "https://thefialky.cz/odehrane-koncerty/",
+      "coverage": "2016-2026",
+      "role": "official_band_archive",
+      "note": "Primarni archiv odehranych koncertu kapely; pouzit pro kontrolu dat, mist, nazvu akci a casu vystoupeni."
+    },
+    {
+      "id": "ARCH-003",
+      "url": "https://bandzone.cz/thefialky?at=gig&gy=YYYY",
+      "coverage": "2006-2026",
+      "role": "band_profile_gig_archive",
+      "note": "Druhy archiv koncertu propojeny s profilem kapely. Pouzit jako krizovou kontrolu a kontrolni pocet polozek; neni sam o sobe dukazem, ze se kazda akce uskutecnila."
+    }
+  ],
+  "_rules": {
+    "counts": "bandzone_count je pocet polozek zobrazeny v rocnikovem archivu Bandzone pri pruzkumu dne 2026-11-28. Neni to automaticky cilovy pocet eventu v seed datech.",
+    "deduplication": "Jedna akce se eviduje pouze jednou, i kdyz se objevi ve vice archivech nebo pod vice kapelami.",
+    "inclusion": "Vyloucit zaznamy typu NEHRAJEME, studio/nahravani, pouhe setkani nebo neuskutecnene akce. Soukrome koncerty ponechat mimo verejnou evidenci, pokud K&F nebude evidovat soukrome akce.",
+    "lineup": "The Fialky jsou hlavni prozkoumavanou kapelou a jejich ucast musi byt dolozena. Dalsi kapely se do line-upu vlozi az po overeni jejich skutecne ucasti; pouhy ohlaseny program nestaci.",
+    "venue": "Misto musi byt identifikovano a overeno. Pokud zdroj uvadi jen mesto nebo neurcity prostor, venue_id zustane null a zaznam se neoznaci jako plne overeny.",
+    "dates": "Minule akce v archivu kapely nejsou automaticky potvrzenim skutecneho konani; u kazde akce overit datum a uskutečnění."
+  },
+  "years": [
+    {
+      "year": 2026,
+      "bandzone_count": 62,
+      "status": "in_progress",
+      "entered_events": 1,
+      "verified_events": 1
+    },
+    {
+      "year": 2025,
+      "bandzone_count": 32,
+      "status": "not_started"
+    },
+    {
+      "year": 2024,
+      "bandzone_count": 40,
+      "status": "not_started"
+    },
+    {
+      "year": 2023,
+      "bandzone_count": 31,
+      "status": "not_started"
+    },
+    {
+      "year": 2022,
+      "bandzone_count": 42,
+      "status": "not_started"
+    },
+    {
+      "year": 2021,
+      "bandzone_count": 32,
+      "status": "not_started"
+    },
+    {
+      "year": 2020,
+      "bandzone_count": 37,
+      "status": "not_started"
+    },
+    {
+      "year": 2019,
+      "bandzone_count": 51,
+      "status": "not_started"
+    },
+    {
+      "year": 2018,
+      "bandzone_count": 63,
+      "status": "not_started"
+    },
+    {
+      "year": 2017,
+      "bandzone_count": 57,
+      "status": "not_started"
+    },
+    {
+      "year": 2016,
+      "bandzone_count": 58,
+      "status": "not_started"
+    },
+    {
+      "year": 2015,
+      "bandzone_count": 62,
+      "status": "not_started"
+    },
+    {
+      "year": 2014,
+      "bandzone_count": 53,
+      "status": "not_started"
+    },
+    {
+      "year": 2013,
+      "bandzone_count": 61,
+      "status": "not_started"
+    },
+    {
+      "year": 2012,
+      "bandzone_count": 58,
+      "status": "not_started"
+    },
+    {
+      "year": 2011,
+      "bandzone_count": 70,
+      "status": "not_started"
+    },
+    {
+      "year": 2010,
+      "bandzone_count": 53,
+      "status": "not_started"
+    },
+    {
+      "year": 2009,
+      "bandzone_count": 45,
+      "status": "not_started"
+    },
+    {
+      "year": 2008,
+      "bandzone_count": 53,
+      "status": "not_started"
+    },
+    {
+      "year": 2007,
+      "bandzone_count": 50,
+      "status": "not_started"
+    },
+    {
+      "year": 2006,
+      "bandzone_count": 12,
+      "status": "not_started"
+    },
+    {
+      "year": 2005,
+      "bandzone_count": null,
+      "status": "not_started"
+    },
+    {
+      "year": 2004,
+      "bandzone_count": null,
+      "status": "not_started"
+    },
+    {
+      "year": 2003,
+      "bandzone_count": null,
+      "status": "not_started"
+    },
+    {
+      "year": 2002,
+      "bandzone_count": null,
+      "status": "not_started"
+    },
+    {
+      "year": 2001,
+      "bandzone_count": null,
+      "status": "not_started"
+    },
+    {
+      "year": 2000,
+      "bandzone_count": null,
+      "status": "not_started"
+    }
+  ]
+}
