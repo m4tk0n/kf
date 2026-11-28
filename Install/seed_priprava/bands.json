@@ -3,7 +3,9 @@
     {
       "name": "The Fialky",
       "genre": "punk rock",
-      "country": "CZ"
+      "country": "CZ",
+      "city": "Praha",
+      "url": "https://thefialky.cz/"
     }
   ],
   "ok": [],
