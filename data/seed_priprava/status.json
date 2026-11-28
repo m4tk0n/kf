@@ -56,6 +56,8 @@
     "Adresy jsou doplňovány pouze při dohledání ve veřejném zdroji; neověřené adresy a souřadnice zůstávají null.",
     "Aktuální počty po doplnění adres: 1 318 akcí, 129 kapel, 17 doložených turné, 64 míst a 90 zdrojů.",
     "Další ověřovací vlna doplnila adresy 8 míst: Zarazická Hospoda, Sibiř, Kubík, Smer Klub 77, MMC, MeetFactory, AKC Attack a Gogo. U pěti z nich byly doplněny také ověřené souřadnice.",
-    "Aktuální počty po druhé vlně oprav míst: 1 318 akcí, 129 kapel, 17 doložených turné, 64 míst a 98 zdrojů; přesnou adresu má 47 míst."
+    "Aktuální počty po druhé vlně oprav míst: 1 318 akcí, 129 kapel, 17 doložených turné, 64 míst a 98 zdrojů; přesnou adresu má 47 míst.",
+    "Třetí vlna dohledávání doplnila adresy míst Fläk, Druid Pub, The Rock Bottom a Arena Beisl. U Koľaje 22 je ponechána adresa null, protože se prostor po požáru přestěhoval a starší koncertní záznamy mohou odkazovat na původní areál.",
+    "Aktuální počty po třetí vlně oprav míst: 1 318 akcí, 129 kapel, 17 doložených turné, 64 míst a 102 zdrojů; přesnou adresu má 51 míst."
   ]
 }
