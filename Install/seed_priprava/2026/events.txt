@@ -1,0 +1,4 @@
+# Akce 2026 nalezené při navazujícím průzkumu kapel z ročníku 2027
+# Formát: název | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka
+
+The Trousers / Asphalt Horsemen live at Muzikum | uskutečněno | 17. 4. 2026, 20:00 | Budapešť | Maďarsko | Muzikum Klub & Bisztró | The Trousers; Asphalt Horsemen | 2026-S01; 2026-S02 | Zahraniční klubové vystoupení maďarské kapely The Trousers; zařazeno do její koncertní historie. Čas a místo potvrzuje pořadatel/prodejce Tixa, setlist.fm uvádí vystoupení The Trousers v témže klubu a datu.
