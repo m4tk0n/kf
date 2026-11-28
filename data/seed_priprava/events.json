@@ -397,7 +397,7 @@
         "date": "2025-08-28",
         "name": "NEKULTÚRA",
         "country_code": null,
-        "band_id": null,
+        "band_id": "nekultura",
         "origin_status": "not_explicitly_labelled_in_program"
       },
       {
@@ -418,7 +418,7 @@
         "date": "2025-08-28",
         "name": "KONFRONT",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "konfront",
         "origin_status": "labelled_in_official_program"
       },
       {
@@ -432,7 +432,7 @@
         "date": "2025-08-28",
         "name": "NAČO NÁZOV",
         "country_code": null,
-        "band_id": null,
+        "band_id": "naco-nazov",
         "origin_status": "not_explicitly_labelled_in_program"
       },
       {
@@ -453,35 +453,35 @@
         "date": "2025-08-28",
         "name": "ŠTAMGASTI",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "stamgasti",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-28",
         "name": "BRATISLAVSKÉ DIEVČATÁ",
         "country_code": null,
-        "band_id": null,
+        "band_id": "bratislavske-dievcata",
         "origin_status": "not_explicitly_labelled_in_program"
       },
       {
         "date": "2025-08-29",
         "name": "BERMUDSKEJ KVÁDR",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "bermud skej-kvadr",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-29",
         "name": "ŠVINDL",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "svindl",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-29",
         "name": "BARIKÁDY Z POPELNÍC",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "barikady-z-popelnic",
         "origin_status": "labelled_in_official_program"
       },
       {
@@ -502,14 +502,14 @@
         "date": "2025-08-29",
         "name": "SOUR BITCH",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "sour-bitch",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-29",
         "name": "EXNI!TO",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "exnito",
         "origin_status": "labelled_in_official_program"
       },
       {
@@ -537,56 +537,56 @@
         "date": "2025-08-29",
         "name": "PIRATES OF THE PUBS",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "pirates-of-the-pubs",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-29",
         "name": "KOHOUT PLAŠÍ SMRT",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "kohout-plasi-smrt",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-29",
         "name": "STREET MACHINE",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "street-machine",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-29",
         "name": "THE ROCKET DOGZ",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "the-rocket-dogz",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-29",
         "name": "VOLANT",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "volant",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-30",
         "name": "ŽÁDNEJ STRES",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "zadnej-stres",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-30",
         "name": "P.U.M",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "p-u-m",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-30",
         "name": "SEX DEVIANTS",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "sex-deviants",
         "origin_status": "labelled_in_official_program"
       },
       {
@@ -600,21 +600,21 @@
         "date": "2025-08-30",
         "name": "DRIÁK",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "driak",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-30",
         "name": "DUKLA VOZOVNA",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "dukla-vozovna",
         "origin_status": "labelled_in_official_program"
       },
       {
         "date": "2025-08-30",
         "name": "VISION DAYS",
         "country_code": "CZ",
-        "band_id": null,
+        "band_id": "vision-days",
         "origin_status": "labelled_in_official_program"
       },
       {
@@ -721,19 +721,19 @@
         "date": "2021-06-11",
         "name": "OTRAS",
         "country_code": "SK",
-        "band_id": null
+        "band_id": "otras"
       },
       {
         "date": "2021-06-11",
         "name": "AHOJ",
         "country_code": "SK",
-        "band_id": null
+        "band_id": "ahoj"
       },
       {
         "date": "2021-06-11",
         "name": "CAMELEON",
         "country_code": "SK",
-        "band_id": null
+        "band_id": "cameleon"
       },
       {
         "date": "2021-06-11",
@@ -745,7 +745,7 @@
         "date": "2021-06-11",
         "name": "TVOI POSTOI",
         "country_code": "SK",
-        "band_id": null
+        "band_id": "tvoi-postoi"
       },
       {
         "date": "2021-06-12",
@@ -1001,13 +1001,13 @@
         "date": "2026-04-02",
         "name": "DNO",
         "country_code": "CZ",
-        "band_id": null
+        "band_id": "dno"
       },
       {
         "date": "2026-04-02",
         "name": "NO GOD RHETORIC",
         "country_code": "CZ",
-        "band_id": null
+        "band_id": "no-god-rhetoric"
       }
     ],
     "source_ids": [
@@ -1041,7 +1041,7 @@
         "date": "2026-04-04",
         "name": "WARGAME",
         "country_code": "SK",
-        "band_id": null
+        "band_id": "wargame"
       }
     ],
     "source_ids": [
@@ -1229,7 +1229,7 @@
         "date": "2025-01-04",
         "name": "VEĽKOSKLAD",
         "country_code": "SK",
-        "band_id": null
+        "band_id": "velkosklad"
       },
       {
         "date": "2025-01-04",

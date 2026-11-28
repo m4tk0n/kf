@@ -1094,5 +1094,327 @@
       "src-punkaci-2024-goout"
     ],
     "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "konfront",
+    "name": "KONFRONT",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "bermud skej-kvadr",
+    "name": "BERMUDSKEJ KVÁDR",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "svindl",
+    "name": "ŠVINDL",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "barikady-z-popelnic",
+    "name": "BARIKÁDY Z POPELNÍC",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "sour-bitch",
+    "name": "SOUR BITCH",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "exnito",
+    "name": "EXNI!TO",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "pirates-of-the-pubs",
+    "name": "PIRATES OF THE PUBS",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "kohout-plasi-smrt",
+    "name": "KOHOUT PLAŠÍ SMRT",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "street-machine",
+    "name": "STREET MACHINE",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "the-rocket-dogz",
+    "name": "THE ROCKET DOGZ",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "volant",
+    "name": "VOLANT",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "zadnej-stres",
+    "name": "ŽÁDNEJ STRES",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "sex-deviants",
+    "name": "SEX DEVIANTS",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "dukla-vozovna",
+    "name": "DUKLA VOZOVNA",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "vision-days",
+    "name": "VISION DAYS",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "otras",
+    "name": "OTRAS",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "ahoj",
+    "name": "AHOJ",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "cameleon",
+    "name": "CAMELEON",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "tvoi-postoi",
+    "name": "TVOI POSTOI",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "dno",
+    "name": "DNO",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "no-god-rhetoric",
+    "name": "NO GOD RHETORIC",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "wargame",
+    "name": "WARGAME",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
+  },
+  {
+    "id": "velkosklad",
+    "name": "VEĽKOSKLAD",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-program-2025",
+      "src-punkgen-archive-2021",
+      "src-punkgen-archive-2026"
+    ],
+    "verification": "country_code_labelled_in_official_program_or_concert_archive"
   }
 ]
