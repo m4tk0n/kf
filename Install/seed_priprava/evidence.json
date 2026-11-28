@@ -1,0 +1,200 @@
+{
+  "_purpose": "Centralni registr dukazu pro pripravu seed dat. Uchovava zdroje a konkretni tvrzeni, ktera zdroje potvrzuji. Jeden zdroj muze potvrzovat vice tvrzeni a jedno tvrzeni muze mit vice zdroju.",
+  "_rules": {
+    "source_id": "Stabilni identifikator SRC-XXXX. Nikdy jej znovu nepouzivat pro jiny zdroj.",
+    "claim_id": "Stabilni identifikator CLM-XXXX. Kazde tvrzeni se eviduje samostatne.",
+    "statuses": {
+      "verified": "Tvrzeni je primo dolozeno uvedenym zdrojem nebo souhlasici sadou duveryhodnych zdroju.",
+      "unverified": "Tvrzeni bylo nalezeno, ale zatim nema dostatecny dukaz.",
+      "conflict": "Dostupne zdroje si v tvrzeni odporuji; nerozhodovat odhadem."
+    },
+    "source_quality": "Primarni zdroje jsou oficialni stranky kapely, poradatele nebo mista. Sekundarni zdroje slouzi k doplneni a krizove kontrole. Samotny agregator neni dostatecny dukaz, pokud existuje primarni zdroj.",
+    "negative_search": "To, ze se udaj nepodarilo dohledat, neni dukazem, ze se udalost nebo subjekt nestal/neexistuje.",
+    "granularity": "Kazde dulezite tvrzeni (nazev, datum, misto, adresa, line-up, puvod kapely, zanr, skutecne konani) ma vlastni zaznam a vlastni seznam source_ids."
+  },
+  "sources": [
+    {
+      "id": "SRC-0001",
+      "url": "https://thefialky.cz/odehrane-koncerty/",
+      "publisher": "The Fialky",
+      "title": "Odehrane koncerty",
+      "source_type": "official_band_archive",
+      "retrieved_on": "2026-11-28",
+      "supports": "Archiv odehranych koncertu The Fialky; zaznam 14. 11. 2026, Valasske Klobouky / KD, God Save The Punk II., cas 21:45 a uvedeni SPS."
+    },
+    {
+      "id": "SRC-0002",
+      "url": "https://www.kvs-vk.cz/aktualne/kalendar-akci/sps-the-fialky-406_362cs.html",
+      "publisher": "Kulturni a vzdelavaci stredisko Valasske Klobouky",
+      "title": "SPS + THE FIALKY",
+      "source_type": "official_organizer",
+      "retrieved_on": "2026-11-28",
+      "supports": "Poradatel potvrzuje datum 14. 11. 2026, koncert SPS + The Fialky, zacatek 20:00, misto Kulturni dum Klobucan, adresu a prislusnost ke God Save The Punk Tour II."
+    },
+    {
+      "id": "SRC-0003",
+      "url": "https://www.kdklobucan.cz/kontakt",
+      "publisher": "Kulturni dum Klobucan",
+      "title": "Kontakt",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficialni nazev mista a adresa Masarykovo namesti 942, 766 01 Valasske Klobouky."
+    },
+    {
+      "id": "SRC-0004",
+      "url": "https://slovnik.ceskyhudebnislovnik.cz/component/mdictionary/?id=1002761&task=record.record_detail",
+      "publisher": "Centrum hudebni lexikografie, Masarykova univerzita",
+      "title": "S.P.S.",
+      "source_type": "academic_reference",
+      "retrieved_on": "2026-11-28",
+      "supports": "S.P.S. je punkova skupina zalozena v Praze roku 1988."
+    },
+    {
+      "id": "SRC-0005",
+      "url": "https://sps.litvinoff.cz/_kapela.html",
+      "publisher": "SPS",
+      "title": "SPS - Kapela",
+      "source_type": "official_band_page",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficialni stranka kapely SPS a jeji historie."
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-0001",
+      "entity_type": "event",
+      "entity_id": 1,
+      "field": "name",
+      "value": "God Save The Punk II.",
+      "status": "verified",
+      "source_ids": ["SRC-0001", "SRC-0002"]
+    },
+    {
+      "id": "CLM-0002",
+      "entity_type": "event",
+      "entity_id": 1,
+      "field": "date",
+      "value": "2026-11-14",
+      "status": "verified",
+      "source_ids": ["SRC-0001", "SRC-0002"]
+    },
+    {
+      "id": "CLM-0003",
+      "entity_type": "event",
+      "entity_id": 1,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": ["SRC-0001"]
+    },
+    {
+      "id": "CLM-0004",
+      "entity_type": "event",
+      "entity_id": 1,
+      "field": "time_start",
+      "value": "20:00",
+      "status": "verified",
+      "source_ids": ["SRC-0002"],
+      "note": "Zacatek akce; nezamenovat s casem vystoupeni kapely."
+    },
+    {
+      "id": "CLM-0005",
+      "entity_type": "event",
+      "entity_id": 1,
+      "field": "venue_id",
+      "value": 1,
+      "status": "verified",
+      "source_ids": ["SRC-0002", "SRC-0003"]
+    },
+    {
+      "id": "CLM-0006",
+      "entity_type": "event",
+      "entity_id": 1,
+      "field": "lineup.band_id=2",
+      "value": "SPS",
+      "status": "verified",
+      "source_ids": ["SRC-0001", "SRC-0002", "SRC-0005"]
+    },
+    {
+      "id": "CLM-0007",
+      "entity_type": "event",
+      "entity_id": 1,
+      "field": "lineup.band_id=1",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": ["SRC-0001", "SRC-0002"]
+    },
+    {
+      "id": "CLM-0008",
+      "entity_type": "event",
+      "entity_id": 1,
+      "field": "lineup.band_id=1.time_play",
+      "value": "21:45",
+      "status": "verified",
+      "source_ids": ["SRC-0001"]
+    },
+    {
+      "id": "CLM-0009",
+      "entity_type": "event",
+      "entity_id": 1,
+      "field": "tour_id",
+      "value": "TOUR-002",
+      "status": "verified",
+      "source_ids": ["SRC-0002"]
+    },
+    {
+      "id": "CLM-0010",
+      "entity_type": "venue",
+      "entity_id": 1,
+      "field": "name",
+      "value": "Kulturni dum Klobucan",
+      "status": "verified",
+      "source_ids": ["SRC-0002", "SRC-0003"]
+    },
+    {
+      "id": "CLM-0011",
+      "entity_type": "venue",
+      "entity_id": 1,
+      "field": "address",
+      "value": "Masarykovo namesti 942, 766 01 Valasske Klobouky",
+      "status": "verified",
+      "source_ids": ["SRC-0002", "SRC-0003"]
+    },
+    {
+      "id": "CLM-0012",
+      "entity_type": "venue",
+      "entity_id": 1,
+      "field": "city_country",
+      "value": "Valasske Klobouky, CZ",
+      "status": "verified",
+      "source_ids": ["SRC-0002", "SRC-0003"]
+    },
+    {
+      "id": "CLM-0013",
+      "entity_type": "band",
+      "entity_id": 2,
+      "field": "genre",
+      "value": "punk",
+      "status": "verified",
+      "source_ids": ["SRC-0004", "SRC-0005"]
+    },
+    {
+      "id": "CLM-0014",
+      "entity_type": "band",
+      "entity_id": 2,
+      "field": "country_city",
+      "value": "CZ, Praha",
+      "status": "verified",
+      "source_ids": ["SRC-0004", "SRC-0005"]
+    },
+    {
+      "id": "CLM-0015",
+      "entity_type": "band",
+      "entity_id": 2,
+      "field": "identity",
+      "value": "SPS",
+      "status": "verified",
+      "source_ids": ["SRC-0004", "SRC-0005"]
+    }
+  ]
+}
