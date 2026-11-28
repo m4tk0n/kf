@@ -1,8 +1,5 @@
 # Zdroje pro koncertní historii The Trousers – rok 2015
 # Formát: ID | URL | co zdroj dokládá | poznámka
 
-2015-S01 | https://www.fejercic.hu/_user/browser/File/hirek/3_korzet.pdf | Dobový čtyřdenní program FEZEN 2015, 29. 7. – 1. 8.; rozpis scén a účinkujících. The Trousers jsou uvedeni 29. 7. v 17:00 na scéně FEZEN Csarnok. | Programový PDF dokument; line-up přepsán z více scén, názvy DJs a nehudebních programů vynechány.
-2015-S02 | https://www.okkfehervar.hu/index.php?pg=news_1_4635 | Oficiální tisková zpráva města potvrzuje termín 29. 7. – 1. 8. 2015 a hlavní interprety festivalu. | Primární městský zdroj; doplňuje hlavní line-up.
-2015-S03 | https://www.concertarchives.org/concerts/fezen-festival | Koncertní záznam FEZEN 29. 7. 2015 v Székesfehérváru; uvádí The Trousers a další kapely. | Doplňující koncertní databáze.
-2015-S04 | https://testv2.a38.hu/en/series/zenere-ehesen-koncert-vacsora-az-a38-hajon-2015 | Oficiální archiv A38 uvádí Black Stone Cherry a The Trousers dne 10. 8. 2015 v koncertním sále A38. | Primární zdroj místa konání.
-2015-S05 | https://www.shockmagazin.hu/koncert/black-stone-cherry-the-trousers-budapest-2015-augusztus-10 | Koncertní report potvrzuje datum 10. 8. 2015, A38 Hajó a pořadí kapel; The Trousers vystoupili před Black Stone Cherry. | Dobová reportáž po akci.
+2015-S01 | https://testv2.a38.hu/en/series/zenere-ehesen-koncert-vacsora-az-a38-hajon-2015 | Oficiální archiv A38 uvádí Black Stone Cherry a The Trousers dne 10. 8. 2015 v koncertním sále A38. | Primární zdroj místa konání.
+2015-S02 | https://www.shockmagazin.hu/koncert/black-stone-cherry-the-trousers-budapest-2015-augusztus-10 | Koncertní report potvrzuje datum 10. 8. 2015, A38 Hajó a pořadí kapel; The Trousers vystoupili před Black Stone Cherry. | Dobová reportáž po akci.
