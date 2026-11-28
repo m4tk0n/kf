@@ -230,6 +230,7 @@ return [
     'venue.err.name' => 'Enter the venue name.',
     'venue.err.city' => 'Select a city.',
     'venue.err.country' => 'Select a country.',
+    'venue.err.location' => 'Enter an address or at least one GPS link.',
     'venue.err.email' => 'Invalid e-mail address.',
     'venue.err.www' => 'Invalid website address.',
     'venue.err.google_maps' => 'Invalid Google Maps link.',
