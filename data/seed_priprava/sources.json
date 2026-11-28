@@ -1348,5 +1348,49 @@
     "supports": [
       "venue_address"
     ]
+  },
+  {
+    "id": "src-venue-flak-address",
+    "name": "Fläk – adresa",
+    "url": "https://www.mikulas.sk/kalendar-podujati/en/?event=17515",
+    "publisher": "Mesto Liptovský Mikuláš",
+    "source_type": "municipal_event_listing",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-druid-address",
+    "name": "Druid Pub – adresa",
+    "url": "https://pubdruid.eatbu.com/?lang=en",
+    "publisher": "Druid Pub",
+    "source_type": "official_venue_information",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-rock-bottom-address",
+    "name": "The Rock Bottom – adresa",
+    "url": "https://ratings.food.gov.uk/business/1764470/the-rock-bottom-callendar-riggs",
+    "publisher": "Food Standards Agency",
+    "source_type": "government_business_listing",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-arena-beisl-address",
+    "name": "Arena Beisl – adresa",
+    "url": "https://www.arenabeisl.at/",
+    "publisher": "Arena Beisl",
+    "source_type": "official_venue_information",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address"
+    ]
   }
 ]
