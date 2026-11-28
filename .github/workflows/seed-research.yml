@@ -36,6 +36,7 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: Install/seed_priprava/automation/requirements.txt
 
       - name: Install crawler dependency
         run: python -m pip install --disable-pip-version-check beautifulsoup4
