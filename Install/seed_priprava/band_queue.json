@@ -1216,5 +1216,355 @@
     "status": "pending",
     "discovered_from": "Install/seed_priprava/2013/events.txt",
     "seed_year": 2013
+  },
+  {
+    "name": "Judas Priest",
+    "key": "judaspriest",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "HIM",
+    "key": "him",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Ákos",
+    "key": "akos",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Sabaton",
+    "key": "sabaton",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Halott Pénz",
+    "key": "halottpenz",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Punnany Massif",
+    "key": "punnanymassif",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Black Label Society",
+    "key": "blacklabelsociety",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Soilwork",
+    "key": "soilwork",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Magna Cum Laude",
+    "key": "magnacumlaude",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Wellhello",
+    "key": "wellhello",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Brains",
+    "key": "brains",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Danko Jones",
+    "key": "dankojones",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Gus G.",
+    "key": "gusg",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Hooligans",
+    "key": "hooligans",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Péterfy Bori & Love Band",
+    "key": "peterfyboriloveband",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Vad Fruttik",
+    "key": "vadfruttik",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Hiperkarma",
+    "key": "hiperkarma",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Sex Action 25",
+    "key": "sexaction25",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Depresszió",
+    "key": "depresszio",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Subscribe",
+    "key": "subscribe",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Kalapács",
+    "key": "kalapacs",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Aurora",
+    "key": "aurora",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Road",
+    "key": "road",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Lord",
+    "key": "lord",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Kiscsillag",
+    "key": "kiscsillag",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Irie Maffia",
+    "key": "iriemaffia",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Cloud 9+",
+    "key": "cloud9",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Magashegyi Underground",
+    "key": "magashegyiunderground",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Moby Dick",
+    "key": "mobydick",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Dalriada",
+    "key": "dalriada",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Cadaveres",
+    "key": "cadaveres",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "The Biebers",
+    "key": "thebiebers",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "OchoMacho",
+    "key": "ochomacho",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "VL45",
+    "key": "vl45",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Ivan & the Parazol",
+    "key": "ivantheparazol",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Anima Sound System",
+    "key": "animasoundsystem",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Anna & the Barbies",
+    "key": "annathebarbies",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Burnout",
+    "key": "burnout",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Karai Anna",
+    "key": "karaianna",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Babel",
+    "key": "babel",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Kalef",
+    "key": "kalef",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "ED IS ON",
+    "key": "edison",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Good Time Boys",
+    "key": "goodtimeboys",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "A Nyughatatlan",
+    "key": "anyughatatlan",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Voler Mouche",
+    "key": "volermouche",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Exchanged",
+    "key": "exchanged",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "E.V.M.",
+    "key": "evm",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Kovbojok",
+    "key": "kovbojok",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "SKA-Pécs",
+    "key": "skapecs",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
+  },
+  {
+    "name": "Black Stone Cherry",
+    "key": "blackstonecherry",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2015/events.txt",
+    "seed_year": 2015
   }
 ]
