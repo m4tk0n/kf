@@ -739,7 +739,7 @@
         "date": "2021-06-11",
         "name": "NAZI TAMPONS",
         "country_code": "SK",
-        "band_id": null
+        "band_id": "nazi-tampons"
       },
       {
         "date": "2021-06-11",
@@ -748,19 +748,19 @@
         "band_id": null
       },
       {
-        "date": "2021-06-11",
+        "date": "2021-06-12",
         "name": "CTIB",
         "country_code": "CZ",
         "band_id": "ctib"
       },
       {
-        "date": "2021-06-11",
+        "date": "2021-06-12",
         "name": "DÁŠA FON FĽAŠA",
         "country_code": "SK",
         "band_id": "dasa-fon-flasa"
       },
       {
-        "date": "2021-06-11",
+        "date": "2021-06-12",
         "name": "MANON MEURT",
         "country_code": "CZ",
         "band_id": "manon-meurt"
@@ -782,49 +782,41 @@
     "lineup_completeness": "archive_listing",
     "performances": [
       {
-        "date": "2022-07-01",
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
       },
       {
-        "date": "2022-07-01",
         "name": "E!E",
         "country_code": "CZ",
         "band_id": "e-e"
       },
       {
-        "date": "2022-07-01",
         "name": "NAČO NÁZOV",
         "country_code": "SK",
         "band_id": "naco-nazov"
       },
       {
-        "date": "2022-07-01",
         "name": "ILEGALITY",
         "country_code": "SK",
         "band_id": "ilegality"
       },
       {
-        "date": "2022-07-01",
         "name": "KONFLIKT",
         "country_code": "SK",
         "band_id": "konflikt"
       },
       {
-        "date": "2022-07-01",
         "name": "ZEMĚŽLUČ",
         "country_code": "CZ",
         "band_id": "zemeluc"
       },
       {
-        "date": "2022-07-01",
         "name": "DO ŘADY!",
         "country_code": "CZ",
         "band_id": "do-rady"
       },
       {
-        "date": "2022-07-01",
         "name": "TOTÁLNÍ NASAZENÍ",
         "country_code": "CZ",
         "band_id": "totalni-nasazeni"
@@ -944,7 +936,7 @@
   },
   {
     "id": "punkgen-2026-trnava-01-23",
-    "name": "50M ZNAK / BUCHTY/NOUZE / FAVORITE OBSESSION / GOOFY GINZ",
+    "name": "50M ZNAK / BUCHTY/NOUZE / FAVORITE OBSSESION / GOOFY GINZ",
     "event_type": "concert",
     "start_date": "2026-01-23",
     "end_date": "2026-01-23",
@@ -957,7 +949,7 @@
         "date": "2026-01-23",
         "name": "50M ZNAK",
         "country_code": "CZ",
-        "band_id": null
+        "band_id": "50m-znak"
       },
       {
         "date": "2026-01-23",
@@ -967,9 +959,9 @@
       },
       {
         "date": "2026-01-23",
-        "name": "FAVORITE OBSESSION",
+        "name": "FAVORITE OBSSESION",
         "country_code": "CZ",
-        "band_id": "favorite-obsession"
+        "band_id": null
       },
       {
         "date": "2026-01-23",
@@ -993,6 +985,12 @@
     "venue_id": "klub-mir-uherske-hradiste",
     "lineup_completeness": "archive_listing",
     "performances": [
+      {
+        "date": "2026-04-02",
+        "name": "ANCST",
+        "country_code": "DE",
+        "band_id": "ancst"
+      },
       {
         "date": "2026-04-02",
         "name": "MÄRNO",
@@ -1027,6 +1025,12 @@
     "venue_id": "zal ar-bratislava",
     "lineup_completeness": "archive_listing",
     "performances": [
+      {
+        "date": "2026-04-04",
+        "name": "ANCST",
+        "country_code": "DE",
+        "band_id": "ancst"
+      },
       {
         "date": "2026-04-04",
         "name": "MÄRNO",
@@ -1066,10 +1070,244 @@
         "name": "INTERPUNKCE",
         "country_code": "CZ",
         "band_id": "interpunkce"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "KOMPLEX VINY",
+        "country_code": "CZ",
+        "band_id": "komplex-viny"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "ROZRUCH",
+        "country_code": "CZ",
+        "band_id": "rozruch"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "KURARE",
+        "country_code": "CZ",
+        "band_id": "kurare"
       }
     ],
     "source_ids": [
       "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-zilina-01-24",
+    "name": "50M ZNAK / BUCHTY/NOUZE / BARREN",
+    "event_type": "concert",
+    "start_date": "2026-01-24",
+    "end_date": "2026-01-24",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "hajovna-zilina",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-01-24",
+        "name": "50M ZNAK",
+        "country_code": "CZ",
+        "band_id": "50m-znak"
+      },
+      {
+        "date": "2026-01-24",
+        "name": "BUCHTY/NOUZE",
+        "country_code": "CZ",
+        "band_id": "buchty-nouze"
+      },
+      {
+        "date": "2026-01-24",
+        "name": "BARREN",
+        "country_code": "SK",
+        "band_id": "barren"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-zilina-01-30",
+    "name": "ZABLOUDIL/A / JADRAN / ROUILLEUX",
+    "event_type": "concert",
+    "start_date": "2026-01-30",
+    "end_date": "2026-01-30",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "hajovna-zilina",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-01-30",
+        "name": "ZABLOUDIL/A",
+        "country_code": "CZ",
+        "band_id": "zabloudil-a"
+      },
+      {
+        "date": "2026-01-30",
+        "name": "JADRAN",
+        "country_code": "CZ",
+        "band_id": "jadran"
+      },
+      {
+        "date": "2026-01-30",
+        "name": "ROUILLEUX",
+        "country_code": "CZ",
+        "band_id": "rouilleux"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2026-liptovsky-mikulas-01-31",
+    "name": "PIVNICA / FAJRONT / THE PLAN C / NÄ",
+    "event_type": "concert",
+    "start_date": "2026-01-31",
+    "end_date": "2026-01-31",
+    "city": "Liptovský Mikuláš",
+    "country_code": "SK",
+    "venue_id": "flak-liptovsky-mikulas",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2026-01-31",
+        "name": "PIVNICA",
+        "country_code": "SK",
+        "band_id": "pivnica"
+      },
+      {
+        "date": "2026-01-31",
+        "name": "FAJRONT",
+        "country_code": "SK",
+        "band_id": "fajr ont"
+      },
+      {
+        "date": "2026-01-31",
+        "name": "THE PLAN C",
+        "country_code": "SK",
+        "band_id": "the-plan-c"
+      },
+      {
+        "date": "2026-01-31",
+        "name": "NÄ",
+        "country_code": "SK",
+        "band_id": "na"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2026"
+    ]
+  },
+  {
+    "id": "punkgen-2025-banska-bystrica-01-04",
+    "name": "EYE FOR AN EYE / DIKTÄT / VEĽKOSKLAD / NÄ",
+    "event_type": "concert",
+    "start_date": "2025-01-04",
+    "end_date": "2025-01-04",
+    "city": "Banská Bystrica",
+    "country_code": "SK",
+    "venue_id": "bosorka-banska-bystrica",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2025-01-04",
+        "name": "EYE FOR AN EYE",
+        "country_code": "PL",
+        "band_id": null
+      },
+      {
+        "date": "2025-01-04",
+        "name": "DIKTÄT",
+        "country_code": "SK",
+        "band_id": "diktat"
+      },
+      {
+        "date": "2025-01-04",
+        "name": "VEĽKOSKLAD",
+        "country_code": "SK",
+        "band_id": null
+      },
+      {
+        "date": "2025-01-04",
+        "name": "NÄ",
+        "country_code": "SK",
+        "band_id": "na"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2025"
+    ]
+  },
+  {
+    "id": "punkgen-2025-poprad-01-17",
+    "name": "ATARAXIA / OROS / KOVOŠROT",
+    "event_type": "concert",
+    "start_date": "2025-01-17",
+    "end_date": "2025-01-17",
+    "city": "Poprad",
+    "country_code": "SK",
+    "venue_id": "kolaj-22-poprad",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2025-01-17",
+        "name": "ATARAXIA",
+        "country_code": "SK",
+        "band_id": "ataraxia"
+      },
+      {
+        "date": "2025-01-17",
+        "name": "OROS",
+        "country_code": "SK",
+        "band_id": "oros"
+      },
+      {
+        "date": "2025-01-17",
+        "name": "KOVOŠROT",
+        "country_code": "SK",
+        "band_id": "kovosrot"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2025"
+    ]
+  },
+  {
+    "id": "punkgen-2024-zilina-01-13",
+    "name": "DISIDENT / NAZI TAMPONS / DXFXFX",
+    "event_type": "concert",
+    "start_date": "2024-01-13",
+    "end_date": "2024-01-13",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "hajovna-zilina",
+    "lineup_completeness": "archive_listing",
+    "performances": [
+      {
+        "date": "2024-01-13",
+        "name": "DISIDENT",
+        "country_code": "SK",
+        "band_id": "disident"
+      },
+      {
+        "date": "2024-01-13",
+        "name": "NAZI TAMPONS",
+        "country_code": "SK",
+        "band_id": "nazi-tampons"
+      },
+      {
+        "date": "2024-01-13",
+        "name": "DXFXFX",
+        "country_code": "SK",
+        "band_id": "dxfxfx"
+      }
+    ],
+    "source_ids": [
+      "src-punkgen-archive-2024"
     ]
   }
 ]

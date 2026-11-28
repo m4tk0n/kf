@@ -528,5 +528,165 @@
       "src-punkgen-archive"
     ],
     "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "ancst",
+    "name": "ANCST",
+    "country_code": "DE",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "komplex-viny",
+    "name": "KOMPLEX VINY",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "rozruch",
+    "name": "ROZRUCH",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "kurare",
+    "name": "KURARE",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "pivnica",
+    "name": "PIVNICA",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "fajr ont",
+    "name": "FAJRONT",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "the-plan-c",
+    "name": "THE PLAN C",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "na",
+    "name": "NÄ",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "50m-znak",
+    "name": "50M ZNAK",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "rouilleux",
+    "name": "ROUILLEUX",
+    "country_code": "CZ",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "ataraxia",
+    "name": "ATARAXIA",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "oros",
+    "name": "OROS",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "kovosrot",
+    "name": "KOVOŠROT",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "disident",
+    "name": "DISIDENT",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "nazi-tampons",
+    "name": "NAZI TAMPONS",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
+  },
+  {
+    "id": "dxfxfx",
+    "name": "DXFXFX",
+    "country_code": "SK",
+    "genres": [],
+    "sources": [
+      "src-punkgen-archive"
+    ],
+    "verification": "country_code_labelled_in_punkgen_archive"
   }
 ]

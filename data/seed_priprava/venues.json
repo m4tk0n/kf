@@ -146,5 +146,41 @@
       "src-punkgen-archive"
     ],
     "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "bosorka-banska-bystrica",
+    "name": "Bosorka",
+    "city": "Banská Bystrica",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "kolaj-22-poprad",
+    "name": "Koľaj 22",
+    "city": "Poprad",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
+  },
+  {
+    "id": "flak-liptovsky-mikulas",
+    "name": "Fläk",
+    "city": "Liptovský Mikuláš",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-punkgen-archive"
+    ],
+    "verification": "venue_name_and_city_listed_in_concert_archive"
   }
 ]
