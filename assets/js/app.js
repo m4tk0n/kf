@@ -21,6 +21,19 @@
     } catch (e) {}
   });
 
+  // Detail moderace nesmí zůstat po schválení/odmítnutí v BFCache.
+  // Při návratu tlačítkem Zpět se stránka znovu načte a server ověří,
+  // zda záznam stále existuje ve frontě pending.
+  window.addEventListener('pageshow', function (ev) {
+    if (!ev.persisted) return;
+    try {
+      var current = new URL(window.location.href);
+      if (/\\/review\\/?$/.test(current.pathname) && current.searchParams.has('id')) {
+        window.location.reload();
+      }
+    } catch (e) {}
+  });
+
   // Jednotná normalizace pomlček při každém psaní i vložení do textových polí.
   function normalizeTextInput(el) {
     if (!el || !('value' in el) || typeof el.value !== 'string') return;
