@@ -4,9 +4,18 @@ declare(strict_types=1);
 
 function kf_pending_get(int $id): ?array
 {
-    $row = q('SELECT id, type, created_by, title, date_from, created_at FROM ' . tbl('pending') . ' WHERE id = ?', [$id])->fetch();
+    $row = q('SELECT id, type, created_by, title, date_from, created_at, payload FROM ' . tbl('pending') . ' WHERE id = ?', [$id])->fetch();
     if (!$row) return null;
-    $row['data'] = json_read_file(json_bucket_rel('pending', $id));
+    $rel = json_bucket_rel('pending', $id);
+    $row['data'] = json_read_file($rel);
+    if (!is_array($row['data']) && is_string($row['payload'] ?? null) && $row['payload'] !== '') {
+        $decoded = json_decode($row['payload'], true);
+        if (is_array($decoded)) {
+            $row['data'] = $decoded;
+            json_write_file($rel, $decoded, true);
+        }
+    }
+    unset($row['payload']);
     return $row;
 }
 
