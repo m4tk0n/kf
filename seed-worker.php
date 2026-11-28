@@ -22,11 +22,48 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
 @set_time_limit(240);
 
 $keyName = (string)cfg('seed_research.key_env', 'AI_WRITE_KEY');
-$expected = (string)env($keyName, (string)(getenv($keyName) ?: ''));
-$headers = function_exists('getallheaders') ? getallheaders() : [];
-$provided = (string)($_SERVER['HTTP_X_AI_KEY'] ?? $headers['X-AI-Key'] ?? $headers['x-ai-key'] ?? '');
-if ($expected === '' || $provided === '' || !hash_equals($expected, $provided)) {
-    security_log('seed_research_key_invalid');
+
+// Hodnota z .env má přednost před proměnnou prostředí webserveru.
+$envValue = env($keyName, null);
+$expected = is_string($envValue) ? trim($envValue) : '';
+$expectedSource = $expected !== '' ? 'dotenv' : 'server_env';
+if ($expected === '') {
+    $expected = trim((string)(getenv($keyName) ?: ''));
+}
+
+// Názvy HTTP hlaviček jsou case-insensitive. Některé hostingy navíc
+// předávají vlastní hlavičky jen přes getallheaders() nebo REDIRECT_*.
+$provided = '';
+$providedSource = '';
+foreach (['HTTP_X_AI_KEY', 'REDIRECT_HTTP_X_AI_KEY'] as $serverKey) {
+    if (isset($_SERVER[$serverKey]) && (string)$_SERVER[$serverKey] !== '') {
+        $provided = trim((string)$_SERVER[$serverKey]);
+        $providedSource = $serverKey;
+        break;
+    }
+}
+if ($provided === '' && function_exists('getallheaders')) {
+    foreach ((array)getallheaders() as $headerName => $headerValue) {
+        if (strcasecmp((string)$headerName, 'X-AI-Key') === 0) {
+            $provided = trim((string)$headerValue);
+            $providedSource = 'getallheaders';
+            break;
+        }
+    }
+}
+
+$keyMatches = $expected !== '' && $provided !== '' && hash_equals($expected, $provided);
+if (!$keyMatches) {
+    // Nikdy nelogovat klíč ani jeho část; pouze diagnostická metadata.
+    security_log('seed_research_key_invalid', [
+        'expected_found' => $expected !== '',
+        'expected_source' => $expectedSource,
+        'expected_length' => strlen($expected),
+        'provided_found' => $provided !== '',
+        'provided_source' => $providedSource !== '' ? $providedSource : 'missing',
+        'provided_length' => strlen($provided),
+        'matches' => false,
+    ]);
     seed_reply(403, ['error' => 'forbidden']);
 }
 
