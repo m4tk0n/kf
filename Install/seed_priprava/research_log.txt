@@ -22,3 +22,20 @@ Zapsano:
 Poznamka:
 - Zacatek akce 20:00 je cas uvedeny poradatelem; cas vystoupeni The Fialky 21:45 je uveden v archivu kapely. Nejde o rozpor.
 - Tato davka neznamena, ze je prozkoumany cely rok 2026. Jde o prvni potvrzenou zastavku; dalsi zaznamy roku 2026 je nutne projit a overit.
+
+## 2026-11-28 — The Fialky — zjištění úplných zdrojových archivů
+
+Nalezeny a propojeny tři zdroje pro kontrolu celé historie 2000–2026:
+- Oficiální archiv kapely 2000–2015: https://thefialky.cz/koncerty-2000-2015/
+- Oficiální archiv odehraných koncertů 2016–2026: https://thefialky.cz/odehrane-koncerty/
+- Bandzone archiv 2006–2026: https://bandzone.cz/thefialky?at=gig&gy=YYYY
+
+Bandzone uvádí tyto počty archivních položek:
+2026: 62; 2025: 32; 2024: 40; 2023: 31; 2022: 42; 2021: 32;
+2020: 37; 2019: 51; 2018: 63; 2017: 57; 2016: 58; 2015: 62;
+2014: 53; 2013: 61; 2012: 58; 2011: 70; 2010: 53; 2009: 45;
+2008: 53; 2007: 50; 2006: 12.
+
+Tyto počty jsou pouze kontrolní; před zařazením každé položky je nutné rozhodnout, zda jde o skutečnou akci kapely, soukromou akci, zrušenou akci, záznam studia nebo duplicitu. U každé zařazené akce se samostatně ověřuje datum, skutečné konání, místo a účinkující. Ohlášený line-up se automaticky nepovažuje za skutečně odehraný.
+
+Založen soubor band_archive_index.json. Je v něm zapsán celý rozsah a kontrolní počty. The Fialky zůstávají v bands.json/aktual; SPS zatím nezačínat zpracovávat.
