@@ -4,13 +4,15 @@ declare(strict_types=1);
 
 function kf_venue_clean(array $r): array {
     $s=static fn($k,$n)=>is_string($r[$k]??null)?mb_substr(trim($r[$k]),0,$n):'';
-    return ['name'=>$s('name',120),'city_id'=>is_scalar($r['city_id']??null)?(int)$r['city_id']:0,
+    return ['name'=>$s('name',120),'city_id'=>is_scalar($r['city_id']??null)?(int)$r['city_id']:0,'country_id'=>is_scalar($r['country_id']??null)?(int)$r['country_id']:0,
     'address'=>$s('address',255),'email'=>$s('email',120),'phone'=>$s('phone',30),'www'=>$s('www',300),
     'google_maps'=>$s('google_maps',500),'mapy_maps'=>$s('mapy_maps',500),'description'=>$s('description',5000)];
 }
 function kf_venue_validate(array $v): array {
     $e=[]; if($v['name']==='')$e[]='name';
-    if($v['city_id']<1||!q('SELECT 1 FROM '.tbl('cities').' WHERE id=?',[$v['city_id']])->fetchColumn())$e[]='city';
+    $city=q('SELECT country_id FROM '.tbl('cities').' WHERE id=?',[$v['city_id']])->fetchColumn();
+    if($v['city_id']<1||$city===false||($v['country_id']>0&&(int)$city!==$v['country_id']))$e[]='city';
+    if($v['country_id']<1||!q('SELECT 1 FROM '.tbl('countries').' WHERE id=?',[$v['country_id']])->fetchColumn())$e[]='country';
     if($v['email']!==''&&!filter_var($v['email'],FILTER_VALIDATE_EMAIL))$e[]='email';
     foreach(['www','google_maps','mapy_maps'] as $k)if($v[$k]!==''&&kf_safe_url($v[$k])===null)$e[]=$k;
     return array_values(array_unique($e));
@@ -51,8 +53,12 @@ function kf_venue_pending_create(array $v,?string $srcL,int $uid): int {
     }catch(Throwable $e){if($pdo->inTransaction())$pdo->rollBack();if($id>0)json_remove('pending',$id);if($img!=='')@unlink($img);throw $e;}
 }
 function kf_venue_form_page(array $v,array $errors=[],string $img='',int $status=200): never {
-    $cities=q('SELECT c.id,c.name,co.iso2,co.`'.country_col().'` AS country FROM '.tbl('cities').' c JOIN '.tbl('countries').' co ON co.id=c.country_id ORDER BY country,c.name')->fetchAll();
-    page(t('venue.new.title'),'venue_form',['old'=>$v,'errors'=>$errors,'cities'=>$cities,'imgUrl'=>$img!==''?url('venue/draft-image').'?v='.time():''],$status);
+    $selected=q('SELECT c.name AS city, c.country_id, co.`'.country_col().'` AS country FROM '.tbl('cities').' c JOIN '.tbl('countries').' co ON co.id=c.country_id WHERE c.id=?',[(int)($v['city_id']??0)])->fetch() ?: ['city'=>'','country_id'=>0,'country'=>''];
+    $v['city_name']=(string)$selected['city'];
+    $v['country_id']=(int)($v['country_id']?:$selected['country_id']);
+    $v['country_name']=(string)$selected['country'];
+    if($v['country_id']>0){$countryName=q('SELECT `'.country_col().'` FROM '.tbl('countries').' WHERE id=?',[$v['country_id']])->fetchColumn();if($countryName!==false)$v['country_name']=(string)$countryName;}
+    page(t('venue.new.title'),'venue_form',['old'=>$v,'errors'=>$errors,'imgUrl'=>$img!==''?url('venue/draft-image').'?v='.time():''],$status);
 }
 function kf_venue_draft_get(int $uid): ?array {$d=json_read_file(draft_rel($uid));return ($d['kind']??'')==='venue'&&is_array($d['values']??null)?$d:null;}
 function route_venue_new(): never {
@@ -88,3 +94,56 @@ function route_venue_submit(): never {
     kf_draft_clear($uid);redirect($direct?'?venue='.$id.'&m=venue_saved':'?m=venue_submitted');
 }
 function route_venue_cancel(): never { $u=guard('submit');kf_draft_clear((int)$u['id']);redirect('venue/new?m=venue_cancelled'); }
+
+
+/** Našeptávač měst; výsledky lze omezit již vybraným státem. */
+function route_venue_city_suggest(): never
+{
+    guard('submit');
+    $term = is_string($_GET['q'] ?? null) ? trim($_GET['q']) : '';
+    $countryId = max(0, (int)($_GET['country_id'] ?? 0));
+    $min = max(1, (int)cfg('paging.autocomplete_min_chars', 2));
+    $limit = max(1, min(30, (int)cfg('paging.autocomplete_limit', 10)));
+    $search = kf_text_normalize(mb_substr($term, 0, 100));
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: no-store');
+    if (mb_strlen($search) < $min) {
+        echo json_encode(['items' => []], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        exit;
+    }
+    $sql = "SELECT c.id, c.name, co.id AS country_id, co.`" . country_col() . "` AS country
+            FROM " . tbl('cities') . " c JOIN " . tbl('countries') . " co ON co.id=c.country_id
+            WHERE c.name COLLATE utf8mb4_unicode_ci LIKE ?";
+    $params = [addcslashes($search, '%_\\\\') . '%'];
+    if ($countryId > 0) { $sql .= " AND co.id=?"; $params[] = $countryId; }
+    $sql .= " ORDER BY c.name COLLATE utf8mb4_unicode_ci LIMIT " . $limit;
+    $rows = q($sql, $params)->fetchAll();
+    echo json_encode(['items' => array_map(static fn(array $r): array => [
+        'id' => (int)$r['id'], 'name' => (string)$r['name'],
+        'country_id' => (int)$r['country_id'], 'country' => (string)$r['country'],
+    ], $rows)], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    exit;
+}
+
+/** Našeptávač států z tabulky countries. */
+function route_venue_country_suggest(): never
+{
+    guard('submit');
+    $term = is_string($_GET['q'] ?? null) ? trim($_GET['q']) : '';
+    $min = max(1, (int)cfg('paging.autocomplete_min_chars', 2));
+    $limit = max(1, min(30, (int)cfg('paging.autocomplete_limit', 10)));
+    $search = kf_text_normalize(mb_substr($term, 0, 100));
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: no-store');
+    if (mb_strlen($search) < $min) {
+        echo json_encode(['items' => []], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        exit;
+    }
+    $rows = q("SELECT id, `" . country_col() . "` AS name FROM " . tbl('countries') .
+        " WHERE `" . country_col() . "` COLLATE utf8mb4_unicode_ci LIKE ? ORDER BY name COLLATE utf8mb4_unicode_ci LIMIT " . $limit,
+        [addcslashes($search, '%_\\\\') . '%'])->fetchAll();
+    echo json_encode(['items' => array_map(static fn(array $r): array => [
+        'id' => (int)$r['id'], 'name' => (string)$r['name'],
+    ], $rows)], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    exit;
+}
