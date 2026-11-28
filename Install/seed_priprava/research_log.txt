@@ -39,3 +39,26 @@ Bandzone uvádí tyto počty archivních položek:
 Tyto počty jsou pouze kontrolní; před zařazením každé položky je nutné rozhodnout, zda jde o skutečnou akci kapely, soukromou akci, zrušenou akci, záznam studia nebo duplicitu. U každé zařazené akce se samostatně ověřuje datum, skutečné konání, místo a účinkující. Ohlášený line-up se automaticky nepovažuje za skutečně odehraný.
 
 Založen soubor band_archive_index.json. Je v něm zapsán celý rozsah a kontrolní počty. The Fialky zůstávají v bands.json/aktual; SPS zatím nezačínat zpracovávat.
+
+
+## 2026-11-28 — The Fialky — PUNKROCK ON THE ROAD – JARO TOUR 2026 — zastávka Bratislava
+
+Prohledané a ověřovací zdroje:
+- Oficiální archiv odehraných koncertů: https://thefialky.cz/odehrane-koncerty/
+- Oficiální oznámení turné: https://thefialky.cz/author/kecup/
+- Pořadatel Punkáči deťom – seznam koncertů: https://punkacidetom.sk/koncerty/
+- Oficiální web Totální nasazení: https://totaci.cz/tn-english-info
+- Oficiální web Nežfaleš: https://www.nezfales.cz/
+- Oficiální kontakt MMC: https://majestic.sk/kontakt/
+
+Zapsáno:
+- event_2026.json: akce ID 2, 14. 3. 2026, Bratislava, Majestic Music Club; The Fialky, Totální nasazení, Nežfaleš; stav held.
+- venues.json: Majestic Music Club, ID 2, ověřená adresa Karpatská 2, 811 05 Bratislava.
+- bands.json: Totální nasazení ID 3 a Nežfaleš ID 4 v next; identita, žánr a město původu ověřeny.
+- tours.txt: TOUR-003, PUNKROCK ON THE ROAD – JARO TOUR 2026; zatím zapsaná ověřená zastávka Bratislava. Oficiální oznámení uvádí 11 zastávek; další se doplní průběžně.
+- evidence.json: zdroje SRC-0007 až SRC-0011 a tvrzení CLM-0019 až CLM-0035.
+
+Metodická změna podle pokynu uživatele:
+- Koncerty se nemusí zapisovat chronologicky. Každá nalezená a ověřená akce se zapíše hned do správného ročníku; mezi roky lze přeskakovat.
+- Oficiální stránka „Odehrané koncerty“ je seznam odehraných koncertů The Fialky. The Fialky jsou účinkující každé skutečné koncertní položky; názvy pod akcí označují další kapely.
+- Celá historie The Fialky se stále musí projít před přesunem kapely z aktual do ok.
