@@ -1,0 +1,7 @@
+# Koncertní historie kapely The Trousers – doložené akce roku 2011
+# Formát: název | typ | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka | turné
+
+The Trousers | koncert | uskutečněno | 20. 10. 2011 | Praha | Česko | Cross Club | The Trousers | 2011-S02 | Dobový koncertní přehled uvádí kapelu, datum a místo; další účinkující nejsou uvedeni. |
+The Trousers + Dead Pope's Company | koncert | uskutečněno | 21. 10. 2011 | Holešov | Česko | Wats Club | The Trousers; Dead Pope's Company | 2011-S02 | Dobový koncertní přehled výslovně uvádí společný koncert. |
+The Trousers | koncert | uskutečněno | 22. 10. 2011 | Šumperk | Česko | H-Klub | The Trousers | 2011-S02 | Dobový koncertní přehled uvádí kapelu, datum a místo; další účinkující nejsou uvedeni. |
+Carbovaris + Lo-fi Stereo + Superego + Moog + Pills + The Trousers + Zombie Girlfriend + Hol Van Ilyenkor a Rendőrség + Calico Island + Hammer of Gods | koncert | uskutečněno | 26. 12. 2011 | Budapešť | Maďarsko | Dürer Kert | Carbovaris; Lo-fi Stereo; Superego; Moog; Pills; The Trousers; Zombie Girlfriend; Hol Van Ilyenkor a Rendőrség; Calico Island; Hammer of Gods | 2011-S01 | Koncertní archiv uvádí deset kapel; Lamantin DJs nejsou zahrnuti mezi kapely. |
