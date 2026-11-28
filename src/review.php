@@ -71,6 +71,7 @@ function kf_pending_remove(int $id): void
 {
     $img = kf_pending_image_path($id);
     if ($img !== null) @unlink($img);
+    @unlink(abs_path(dirname(json_bucket_rel('pending', $id))) . '/' . $id . '_s.webp');
     json_remove('pending', $id);
     q('DELETE FROM ' . tbl('pending') . ' WHERE id = ?', [$id]);
 }
@@ -84,7 +85,13 @@ function route_pending_image(): never
         if ($row !== null) security_log('forbidden', ['action' => 'pending_image']);
         abort($row === null ? 404 : 403, t($row === null ? 'error.404' : 'error.403'));
     }
-    $p = kf_pending_image_path($id);
+    $size = (string)($_GET['size'] ?? 'l');
+    if ((int)$row['type'] === (int)cfg('enums.pending_type.band') && in_array($size, ['s','l'], true)) {
+        $candidate = abs_path(dirname(json_bucket_rel('pending', $id))) . '/' . $id . '_' . $size . '.webp';
+        $p = is_file($candidate) ? $candidate : null;
+    } else {
+        $p = kf_pending_image_path($id);
+    }
     if ($p === null) abort(404, t('error.404'));
     kf_serve_webp($p);
 }
@@ -128,7 +135,14 @@ function route_review(): never
             $venue = kf_venue_view_data(kf_venue_clean($p['data']['values']));
             $imgUrl = kf_pending_image_path($id) !== null ? url('pending/image?id=' . $id) : '';
         }
-        page(t('review.title'), 'review', ['mode'=>'detail','pend'=>$p,'ev'=>$ev,'venue'=>$venue,'imgUrl'=>$imgUrl,'lock'=>$lock,'lockMine'=>$mine,'canTakeover'=>can('manage_users')]);
+        $band = null; $bandImgS = ''; $bandImgL = '';
+        if ((int)$p['type'] === (int)cfg('enums.pending_type.band') && is_array($p['data']['values'] ?? null)) {
+            $band = kf_band_view_data(kf_band_clean($p['data']['values']));
+            $dir = abs_path(dirname(json_bucket_rel('pending', $id)));
+            $bandImgS = is_file($dir . '/' . $id . '_s.webp') ? url('pending/image?id=' . $id . '&size=s') : '';
+            $bandImgL = is_file($dir . '/' . $id . '_l.webp') ? url('pending/image?id=' . $id . '&size=l') : '';
+        }
+        page(t('review.title'), 'review', ['mode'=>'detail','pend'=>$p,'ev'=>$ev,'venue'=>$venue,'band'=>$band,'bandImgS'=>$bandImgS,'bandImgL'=>$bandImgL,'imgUrl'=>$imgUrl,'lock'=>$lock,'lockMine'=>$mine,'canTakeover'=>can('manage_users')]);
     }
     $rows = q('SELECT p.id, p.type, p.title, p.date_from, p.created_at, u.display_name FROM ' . tbl('pending') . ' p JOIN ' . tbl('users') . ' u ON u.id = p.created_by ORDER BY p.id LIMIT ' . (int)cfg('paging.max_per_page'))->fetchAll();
     foreach ($rows as &$row) $row['lock'] = kf_pending_lock_state((int)$row['id']);
@@ -175,6 +189,22 @@ function route_review_post(): never
         kf_pending_remove($id);
         user_approved_increment((int)$p['created_by']);
         security_log('pending_approved', ['id'=>$id, 'type'=>'venue']);
+        redirect('review?m=review_approved');
+    }
+    if ((int)$p['type'] === (int)cfg('enums.pending_type.band')) {
+        $v = kf_band_clean($p['data']['values']);
+        if (kf_band_validate($v)) redirect('review?id=' . $id . '&m=review_invalid');
+        $city = kf_city_existing_id($v['city_id'], $v['city_name'], $v['country_id']);
+        if ($city > 0) $v['city_id'] = $city;
+        if (kf_band_duplicate($v, false)) redirect('review?id=' . $id . '&m=review_duplicate');
+        $dir = abs_path(dirname(json_bucket_rel('pending', $id)));
+        $logo = is_file($dir . '/' . $id . '_s.webp') ? $dir . '/' . $id . '_s.webp' : null;
+        $large = is_file($dir . '/' . $id . '_l.webp') ? $dir . '/' . $id . '_l.webp' : null;
+        try { kf_band_publish($v, $logo, $large, (int)$p['created_by']); }
+        catch (Throwable $e) { error_log('band_approve: ' . $e->getMessage()); redirect('review?id=' . $id . '&m=save_failed'); }
+        kf_pending_remove($id);
+        user_approved_increment((int)$p['created_by']);
+        security_log('pending_approved', ['id'=>$id, 'type'=>'band']);
         redirect('review?m=review_approved');
     }
     if ((int)$p['type'] !== (int)cfg('enums.pending_type.event')) redirect('review?id=' . $id . '&m=review_unsupported');
