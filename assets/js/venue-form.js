@@ -62,7 +62,6 @@
     return valid;
   }
   if (cityInput) {
-    cityInput.addEventListener('input', validateCity);
     cityInput.addEventListener('blur', validateCity);
   }
   [addressInput, googleMapsInput, mapyMapsInput].forEach(function (input) {
@@ -130,6 +129,7 @@
   if (cityInput && cityId && cityList) {
     cityInput.addEventListener('input', function () {
       cityId.value = '0';
+      validateCity();
       window.clearTimeout(timer);
       timer = window.setTimeout(function () {
         load('city', cityInput, cityList, cityInput.getAttribute('data-suggest-url'),
