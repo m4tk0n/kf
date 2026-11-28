@@ -62,3 +62,27 @@ Metodická změna podle pokynu uživatele:
 - Koncerty se nemusí zapisovat chronologicky. Každá nalezená a ověřená akce se zapíše hned do správného ročníku; mezi roky lze přeskakovat.
 - Oficiální stránka „Odehrané koncerty“ je seznam odehraných koncertů The Fialky. The Fialky jsou účinkující každé skutečné koncertní položky; názvy pod akcí označují další kapely.
 - Celá historie The Fialky se stále musí projít před přesunem kapely z aktual do ok.
+
+
+## 2026-11-28 — The Fialky — PUNKROCK ON THE ROAD – TOUR 2026 — další čtyři zastávky
+
+Ověřené a zapsané zastávky:
+- 2026-02-14 — Plzeň / DEPO2015. The Fialky v oficiálním archivu odehraných koncertů; SMS Ticket potvrzuje termín, místo a hlavní trojici; oficiální web Dilemma in Cinema uvádí vlastní účast. Rock&Pop retrospektiva potvrzuje, že úvodní plzeňský koncert skutečně proběhl a dorazilo přes 700 návštěvníků.
+- 2026-02-27 — Volyně / Sál Na Nové. Oficiální archiv The Fialky; Bandzone detail koncertu uvádí line-up včetně Deratizérů a přesné časy vystoupení; oficiální web Kultura Volyně potvrzuje identitu sálu.
+- 2026-03-13 — Teplice / Dům kultury. Oficiální archiv The Fialky a SMS Ticket potvrzují termín, místo a hlavní trojici; další zdroj uvádí akci jako proběhlou. Adresa ověřena křížovou kontrolou.
+- 2026-03-20 — České Budějovice / Kulturní dům Vltava. Oficiální archiv The Fialky a oficiální web Dilemma in Cinema potvrzují koncertní datum, místo a společný line-up; oficiální kontakt KD Vltava potvrzuje adresu.
+
+Nové kapely:
+- Dilemma in Cinema — ID 5, CZ, Slaný, punk rock; účast potvrzena vlastním koncertním přehledem, původ a žánr sekundárním profilem.
+- Deratizéři — ID 6, CZ, Slaný, folk punk; účast na Volyni potvrzena detailním koncertním záznamem s časy, identita a původ oficiálním webem.
+
+Zapsáno:
+- event_2026.json: ID 3–6.
+- venues.json: ID 3–6.
+- bands.json: Dilemma in Cinema ID 5 a Deratizéři ID 6 v next.
+- tours.txt: TOUR-003 rozšířeno na pět ověřených zastávek.
+- evidence.json: zdroje SRC-0012 až SRC-0023 a tvrzení CLM-0036 až CLM-0077.
+
+Poznámka k časům:
+- U Volyně jsou převzaty časy kapel z detailního záznamu koncertu. Čas 18:30 jsou dveře, nikoli začátek vystoupení; proto není uložen jako time_start akce.
+- U dalších zastávek nebyly do eventu doplňovány časy, které nebyly jednoznačně doloženy.
