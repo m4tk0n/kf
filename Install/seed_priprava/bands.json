@@ -88,6 +88,19 @@
         "https://www.hudebniknihovna.cz/deratizeri.html"
       ],
       "note": "Identita, vznik, slánský původ a folk-punkový žánr ověřeny oficiálním webem a hudební encyklopedií. Vlastní koncertní historie zatím neprozkoumaná."
+    },
+    {
+      "id": 7,
+      "name": "Punk Floid",
+      "genre": "melodic punk rock",
+      "country": "CZ",
+      "city": "Zábřeh na Moravě",
+      "url": "https://www.punkfloid.com/",
+      "sources": [
+        "https://www.punkfloid.com/kapela",
+        "https://tourism.zabreh.cz/katalog-sluzby-firmy/punk-floid-o-s/"
+      ],
+      "note": "Identita, punkrockový žánr a původ v Zábřehu ověřeny oficiálním webem a TIC Zábřeh. Vlastní koncertní historie zatím neprozkoumaná."
     }
   ]
 }
