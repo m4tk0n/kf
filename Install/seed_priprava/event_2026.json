@@ -1117,14 +1117,14 @@
       "venue_id": 32,
       "bands": [
         {
-          "band_id": 3,
+          "band_id": 4,
           "sort_order": 1,
-          "time_play": "20:00"
+          "time_play": "18:45"
         },
         {
-          "band_id": 4,
+          "band_id": 3,
           "sort_order": 2,
-          "time_play": "18:45"
+          "time_play": "20:00"
         },
         {
           "band_id": 1,
@@ -1176,19 +1176,19 @@
       "venue_id": 34,
       "bands": [
         {
-          "band_id": 1,
-          "sort_order": 1,
-          "time_play": "19:50"
-        },
-        {
           "band_id": 4,
-          "sort_order": 2,
+          "sort_order": 1,
           "time_play": "17:30"
         },
         {
           "band_id": 7,
-          "sort_order": 3,
+          "sort_order": 2,
           "time_play": "18:40"
+        },
+        {
+          "band_id": 1,
+          "sort_order": 3,
+          "time_play": "19:50"
         }
       ],
       "sources": [
@@ -1237,14 +1237,14 @@
       "venue_id": 36,
       "bands": [
         {
-          "band_id": 1,
+          "band_id": 7,
           "sort_order": 1,
-          "time_play": "17:10"
+          "time_play": null
         },
         {
-          "band_id": 7,
+          "band_id": 1,
           "sort_order": 2,
-          "time_play": null
+          "time_play": "17:10"
         }
       ],
       "sources": [
