@@ -1,7 +1,7 @@
 {
-  "target_year": 2027,
-  "target_index": 0,
-  "completed_tasks": 0,
+  "queries_completed": 0,
   "last_run": "",
-  "last_task": ""
+  "last_band": "",
+  "last_query": "",
+  "last_result_count": 0
 }
