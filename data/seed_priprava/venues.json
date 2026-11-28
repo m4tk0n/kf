@@ -428,12 +428,12 @@
     "name": "AKAB Okretnica",
     "city": "Beograd",
     "country_code": "RS",
-    "address": null,
+    "address": "Pod Pančevačkim mostem, vedle železniční stanice Pančevački most, Beograd, Srbsko",
     "coordinates": null,
     "source_ids": [
       "src-blankout-balkan-2024"
     ],
-    "verification": "venue_and_city_listed_in_official_tour_announcement"
+    "verification": "location_description_confirmed_by_official_venue_contact_page"
   },
   {
     "id": "ck13-novi-sad",
