@@ -376,6 +376,78 @@
         "https://www.protheus.cz/koncert/benatska-2026/",
         "https://www.benatska.cz/uvod-2026/"
       ]
+    },
+    {
+      "id": 31,
+      "name": "Park 360",
+      "city": "Hradec Králové",
+      "country": "CZ",
+      "address": "Park 360, Hradec Králové, Česko (GPS 50°14’49.6″N 15°50’09.6″E)",
+      "url": "https://park360.cz/",
+      "sources": [
+        "https://rockforpeople.cz/kontakty/",
+        "https://rockforpeople.cz/info/jak-se-k-nam-dostat/"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Hřebíkárna",
+      "city": "Chomutov",
+      "country": "CZ",
+      "address": "Bezručova 5877, 430 03 Chomutov",
+      "url": "https://www.hrebikarna.cz/",
+      "sources": [
+        "https://www.hrebikarna.cz/cs/kontakt?format=html",
+        "https://visit.chomutov.cz/kalendar/hrebejkarna-punkfest-2026/"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Sportovní areál Třebětice",
+      "city": "Třebětice",
+      "country": "CZ",
+      "address": "Sportovní areál, Třebětice u Dačic, Česko (GPS 49°2'54.411″N 15°30'59.627″E)",
+      "url": "https://www.motakfest.cz/",
+      "sources": [
+        "https://www.motakfest.cz/informace",
+        "https://kdykam.com/cs/event/477/"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Modrá Vopice",
+      "city": "Praha",
+      "country": "CZ",
+      "address": "Roh ulic Spojovací a K Žižkovu, Praha 9 – Vysočany, Česko",
+      "url": "https://www.modravopice.cz/",
+      "sources": [
+        "https://www.modravopice.cz/kontakt/",
+        "https://www.punkfloid.com/praha-zakoule-punk-fest"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "ŠRZ Drienok",
+      "city": "Mošovce",
+      "country": "SK",
+      "address": "Na Drienok 460/10, 038 21 Mošovce, Slovensko",
+      "url": "https://www.drienok.sk/",
+      "sources": [
+        "https://www.drienok.sk/assets/documents/PrevadzkovyPoriadokPenzion.pdf",
+        "https://www.turiec.com/ubytovanie/kemping-srz-drienok-mosovce/"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Letiště Čápův Dvůr",
+      "city": "Tábor",
+      "country": "CZ",
+      "address": "Měšice 477, 391 56 Tábor, Česko",
+      "url": "https://www.mightysounds.cz/",
+      "sources": [
+        "https://www.mightysounds.cz/faq",
+        "https://kdykam.com/cs/event/474/"
+      ]
     }
   ],
   "next": []
