@@ -21,6 +21,7 @@ $clearFilterSession = (string)($_GET['clear_filter_session'] ?? '') === '1';
 <link rel="stylesheet" href="<?= e(asset('css/app.css')) ?>">
 <?php if ($isList): ?><link rel="stylesheet" href="<?= e(asset('css/pager.css')) ?>"><?php endif; ?>
 <?php if ($debugEnabled): kf_debug_assets(); endif; ?>
+<script src="<?= e(asset('js/form-validation.js')) ?>" defer></script>
 <script src="<?= e(asset('js/filters.js')) ?>" defer></script>
 <script src="<?= e(asset('js/app.js')) ?>" defer></script>
 <?php if ($isList): ?>
