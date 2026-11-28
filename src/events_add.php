@@ -279,7 +279,8 @@ function kf_event_input(): array
         'date_from' => $_POST['date_from'] ?? '', 'date_to' => $_POST['date_to'] ?? '', 'time_start' => $_POST['time_start'] ?? '',
         'city_id' => $_POST['city_id'] ?? 0, 'city_name' => $_POST['city_name'] ?? '', 'country_id' => $_POST['country_id'] ?? 0, 'venue_id' => $_POST['venue_id'] ?? 0,
         'description' => $_POST['description'] ?? '', 'www' => $_POST['www'] ?? '',
-        'admission_type' => $_POST['admission_type'] ?? '', 'admission_value' => $_POST['admission_value'] ?? '',
+        'admission_type' => $_POST['admission_type'] ?? '',
+        'admission_value' => ($_POST['admission_type'] ?? '') === 'text' ? ($_POST['admission_text'] ?? '') : ($_POST['admission_amount'] ?? ''),
         'admission_currency' => $_POST['admission_currency'] ?? '', 'bands' => $bands,
     ]);
     $err = kf_event_validate($v);
