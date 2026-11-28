@@ -3,3 +3,5 @@
 
 TOUR-001 | Cestujúci Punk Island vol.2 | neověřeno | 18. 12. 2026 – Bratislava – Randal Club; 23. 1. 2027 – Košice – Collosseum Club; 20. 2. 2027 – Banská Bystrica – Urban Spot | 2026-S04; 2027-S03; 2027-S07 | Původní pracovní položka. Zdrojové značky zatím nejsou propojené s URL v evidence.json; zastávky a line-upy je nutné znovu ověřit a poté založit jako samostatné záznamy event_YYYY.json.
 TOUR-002 | God Save The Punk Tour II | ověřeno | 14. 11. 2026 – Valašské Klobouky – Kulturní dům Klobučan – event_2026.json#1 | SRC-0001; SRC-0002 | Oficiální archiv kapely a pořadatel potvrzují tuto zastávku. Další zastávky doplnit až po samostatném ověření.
+
+TOUR-003 | PUNKROCK ON THE ROAD – JARO TOUR 2026 | ověřeno | 14. 3. 2026 – Bratislava – Majestic Music Club – event_2026.json#2 | SRC-0001; SRC-0006; SRC-0007; SRC-0011 | Oficiální archiv a pořadatel potvrzují zastávku s The Fialky, Totálním nasazením a Nežfaleš. Oficiální oznámení uvádí celkem 11 zastávek; další jednotlivé záznamy se doplní průběžně.
