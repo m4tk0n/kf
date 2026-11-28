@@ -501,6 +501,162 @@
         "https://www.ldkv.cz/udalost/totalni-nasazeni-the-fialky-nezfales-punkrock-on-the-road-tour-2026",
         "https://www.nezfales.cz/punkrock-on-the-road-tour-je-za-nami-letni-davka-stesti-klepe-na-dvere/"
       ]
+    },
+    {
+      "id": 13,
+      "name": "God Save The Punk II.",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-10-30",
+      "date_to": "2026-10-30",
+      "time_start": "20:00",
+      "city": "Litomyšl",
+      "country": "CZ",
+      "venue_id": 17,
+      "bands": [
+        {
+          "band_id": 2,
+          "sort_order": 1,
+          "time_play": "20:30"
+        },
+        {
+          "band_id": 1,
+          "sort_order": 2,
+          "time_play": "21:45"
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.sps.litvinoff.cz/_koncerty.php",
+        "https://www.litomysl.cz/kalendar_akci/kultura",
+        "https://www.mckotelna.cz/"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "God Save The Punk II.",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-10-31",
+      "date_to": "2026-10-31",
+      "time_start": "20:00",
+      "city": "Písek",
+      "country": "CZ",
+      "venue_id": 16,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "20:30"
+        },
+        {
+          "band_id": 2,
+          "sort_order": 2,
+          "time_play": null
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.sps.litvinoff.cz/_koncerty.php",
+        "https://kalendarium.piseckem.cz/cs/akce/?od=2026-10-23&view=info",
+        "https://www.podcarou.cz/kontakt/"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "God Save The Punk II.",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-11-13",
+      "date_to": "2026-11-13",
+      "time_start": "20:00",
+      "city": "Ostrava",
+      "country": "CZ",
+      "venue_id": 15,
+      "bands": [
+        {
+          "band_id": 2,
+          "sort_order": 1,
+          "time_play": null
+        },
+        {
+          "band_id": 1,
+          "sort_order": 2,
+          "time_play": "21:45"
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.sps.litvinoff.cz/_koncerty.php",
+        "https://goout.net/en/sps%2Bthe-fialky-god-save-the-punk-ii-2026/szkmtky/",
+        "https://www.barrak-club.cz/cz/kontakty"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "God Save The Punk II.",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-11-20",
+      "date_to": "2026-11-20",
+      "time_start": "20:00",
+      "city": "Mladá Boleslav",
+      "country": "CZ",
+      "venue_id": 14,
+      "bands": [
+        {
+          "band_id": 2,
+          "sort_order": 1,
+          "time_play": null
+        },
+        {
+          "band_id": 1,
+          "sort_order": 2,
+          "time_play": "21:45"
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.sps.litvinoff.cz/_koncerty.php",
+        "https://ukvakose.cz/",
+        "https://buyer-api.darkzin.cz/kluby-cesko/willax-klub-heineken/"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "God Save The Punk II.",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-11-21",
+      "date_to": "2026-11-21",
+      "time_start": null,
+      "city": "Kralupy nad Vltavou",
+      "country": "CZ",
+      "venue_id": 13,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "20:30"
+        },
+        {
+          "band_id": 2,
+          "sort_order": 2,
+          "time_play": "21:45"
+        }
+      ],
+      "tour_id": "TOUR-002",
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.sps.litvinoff.cz/_koncerty.php",
+        "https://www.kasskralupy.cz/?filterIndex=26",
+        "https://bandzone.cz/koncert/562542-2026-11-21-thefialky-kass-vltava",
+        "https://www.podcarou.cz/kontakt/"
+      ]
     }
   ],
   "next": []
