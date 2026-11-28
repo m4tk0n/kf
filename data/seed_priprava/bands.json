@@ -520,16 +520,6 @@
     "verification": "country_code_labelled_in_punkgen_archive"
   },
   {
-    "id": "ancst",
-    "name": "ANCST",
-    "country_code": "DE",
-    "genres": [],
-    "sources": [
-      "src-punkgen-archive"
-    ],
-    "verification": "country_code_labelled_in_punkgen_archive"
-  },
-  {
     "id": "komplex-viny",
     "name": "KOMPLEX VINY",
     "country_code": "CZ",
@@ -752,18 +742,6 @@
       "src-fialky-played-2025"
     ],
     "verification": "named_in_official_czech_band_tour_archive"
-  },
-  {
-    "id": "bulbulators",
-    "name": "BULBULATORS",
-    "country_code": "PL",
-    "genres": [
-      "punk"
-    ],
-    "sources": [
-      "src-fialky-played-2025"
-    ],
-    "verification": "country_labelled_in_official_tour_archive"
   },
   {
     "id": "blank-out",

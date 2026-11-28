@@ -989,7 +989,7 @@
         "date": "2026-04-02",
         "name": "ANCST",
         "country_code": "DE",
-        "band_id": "ancst"
+        "band_id": null
       },
       {
         "date": "2026-04-02",
@@ -1029,7 +1029,7 @@
         "date": "2026-04-04",
         "name": "ANCST",
         "country_code": "DE",
-        "band_id": "ancst"
+        "band_id": null
       },
       {
         "date": "2026-04-04",
@@ -1506,7 +1506,7 @@
         "date": "2025-03-01",
         "name": "BULBULATORS",
         "country_code": "PL",
-        "band_id": "bulbulators"
+        "band_id": null
       },
       {
         "date": "2025-03-01",
