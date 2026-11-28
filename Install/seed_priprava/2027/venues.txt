@@ -2,9 +2,9 @@
 # Formát: název | typ | město | stát | adresa | zdroje | poznámka
 
 Letiště Aeroklubu Tábor | festivalový areál / letiště | Tábor | Česko | areál Aeroklubu Tábor, přesná adresa zatím neuvedena | 2027-S11 | Oficiální FAQ potvrzuje přesné místo konání Mighty Sounds 2027.
-Collosseum Club | hudební klub | Košice | Slovensko | Vrátna 639/70, 040 01 Košice | 2027-S12 |
-Klub 007 | hudební klub | Praha | Česko | adresa zatím neověřena | 2027-S04 |
-Palác Akropolis | kulturní/koncertní klub | Praha | Česko | adresa zatím neověřena | 2027-S05 |
-Cargo Gallery | koncertní prostor/loď | Praha | Česko | adresa zatím neověřena | 2027-S06 |
-Urban Spot | kulturní a koncertní prostor | Banská Bystrica | Slovensko | adresa zatím neověřena | 2027-S07 |
-ROXY | hudební klub | Praha | Česko | adresa zatím neověřena | 2027-S08 |
+Collosseum Club | hudební klub | Košice | Slovensko | Dominikánske námestie 580/35, 040 01 Košice (hlavní vstup); boční vstup Vrátna 639/70 | 2027-S12; 2027-S28; 2027-S29 | Zdroje uvádějí dvě adresy vstupu do stejného klubu; nejde o dvě různá místa.
+Klub 007 Strahov | hudební klub | Praha | Česko | Koleje ČVUT, Blok 7, Chaloupeckého 1903/6, 169 00 Praha 6 | 2027-S31 |
+Palác Akropolis | kulturní/koncertní klub | Praha | Česko | Kubelíkova 1548/27, 130 00 Praha 3 | 2027-S32 |
+Cargo Gallery | koncertní prostor/loď | Praha | Česko | Hořejší nábřeží 5, 150 00 Praha 5 | 2027-S33 |
+Urban Spot | kulturní a koncertní prostor | Banská Bystrica | Slovensko | Skuteckého 3, Banská Bystrica | 2027-S30 |
+ROXY | hudební klub | Praha | Česko | Dlouhá 33, 110 00 Praha 1 | 2027-S34 |
