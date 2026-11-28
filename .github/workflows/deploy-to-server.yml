@@ -130,9 +130,22 @@ jobs:
               commands.append(f"put -O {q(remote_dir)} {q(path)}")
 
           # Remote deletion is performed only for paths explicitly deleted in this Git commit.
+          # Collect their parent directories so empty directories left behind are removed too.
+          directories_to_check = set()
           for path in deletions:
               remote_path = posixpath.join(remote_root, path)
               commands.append(f"rm -f {q(remote_path)}")
+              parent = posixpath.dirname(path)
+              while parent and parent != ".":
+                  if not is_excluded(parent):
+                      directories_to_check.add(parent)
+                  parent = posixpath.dirname(parent)
+
+          # Deepest directories first. rmdir only removes empty directories;
+          # non-empty directories (including ones with ignored/user data) remain untouched.
+          for directory in sorted(directories_to_check, key=lambda value: (value.count("/"), value), reverse=True):
+              remote_dir = posixpath.join(remote_root, directory)
+              commands.append(f"rmdir -f {q(remote_dir)}")
 
           commands.append("bye")
           with open("/tmp/kf-deploy.lftp", "w", encoding="utf-8") as f:
