@@ -199,12 +199,13 @@
     "name": "Fläk",
     "city": "Liptovský Mikuláš",
     "country_code": "SK",
-    "address": null,
+    "address": "Ulica 1. mája 709, 031 01 Liptovský Mikuláš, Slovensko",
     "coordinates": null,
     "source_ids": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-venue-flak-address"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "address_confirmed"
   },
   {
     "id": "2kola-warsaw",
@@ -224,13 +225,14 @@
     "name": "Druid Pub",
     "city": "Ruda Śląska",
     "country_code": "PL",
-    "address": null,
+    "address": "Piotra Niedurnego 69, 41-709 Ruda Śląska, Polsko",
     "coordinates": null,
     "source_ids": [
       "src-fialky-played-2025",
-      "src-punkowastrona-2025-05"
+      "src-punkowastrona-2025-05",
+      "src-venue-druid-address"
     ],
-    "verification": "venue_name_and_city_confirmed_by_event_source"
+    "verification": "address_confirmed"
   },
   {
     "id": "underground-club-eggenthal",
@@ -346,12 +348,13 @@
     "name": "The Rock Bottom",
     "city": "Falkirk",
     "country_code": "GB",
-    "address": null,
+    "address": "Unit 5, The Arcade, Callendar Riggs, Falkirk FK1 1XG, Spojené království",
     "coordinates": null,
     "source_ids": [
-      "src-fialky-played-2025"
+      "src-fialky-played-2025",
+      "src-venue-rock-bottom-address"
     ],
-    "verification": "venue_name_and_city_listed_in_official_band_archive"
+    "verification": "address_confirmed"
   },
   {
     "id": "kapu-linz",
@@ -459,12 +462,13 @@
     "name": "Arena Beisl",
     "city": "Vídeň",
     "country_code": "AT",
-    "address": null,
+    "address": "Baumgasse 80, 1030 Wien, Rakousko",
     "coordinates": null,
     "source_ids": [
-      "src-blankout-balkan-2024"
+      "src-blankout-balkan-2024",
+      "src-venue-arena-beisl-address"
     ],
-    "verification": "venue_and_city_listed_in_official_tour_announcement"
+    "verification": "address_confirmed"
   },
   {
     "id": "letiste-trencin",
