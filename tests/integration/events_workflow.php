@@ -225,8 +225,8 @@ function create_band_draft_with_images(int $userId, array $values): array
 
 $bandValues = kf_band_clean([
     'name' => 'KF test band submission',
-    'city_id' => $cityId,
-    'city_name' => 'Brno',
+    'city_id' => 0,
+    'city_name' => 'Nové testovací město kapely',
     'country_id' => $countryId,
     'genre_id' => $genreId,
     'www' => 'https://example.com/band',
@@ -246,6 +246,7 @@ run_route('band_submit', $userToken);
 $pendingBand = q('SELECT id, title FROM ' . tbl('pending') . ' WHERE created_by=? AND type=? AND title=?',
     [$users['user'], (int)cfg('enums.pending_type.band'), 'KF test band submission'])->fetch();
 check($pendingBand !== false, 'ordinary user submits a band into pending');
+check((int)q('SELECT COUNT(*) FROM ' . tbl('cities') . ' WHERE country_id=? AND name=?', [$countryId, 'Nové testovací město kapely'])->fetchColumn() === 0, 'new band city stays out of the public city catalogue while pending');
 $pendingBandId = (int)$pendingBand['id'];
 $pendingBandData = kf_pending_get($pendingBandId);
 check(($pendingBandData['data']['kind'] ?? '') === 'band'
@@ -264,6 +265,8 @@ run_route('review_approve', $reviewToken, $pendingBandId);
 $publishedBand = q('SELECT id, logo FROM ' . tbl('bands') . ' WHERE name=?', ['KF test band submission'])->fetch();
 check($publishedBand !== false && (int)$publishedBand['logo'] === 1, 'moderator approval publishes the band and marks its small logo');
 $publishedBandId = (int)$publishedBand['id'];
+$bandCityId = (int)q('SELECT city_id FROM ' . tbl('bands') . ' WHERE id=?', [$publishedBandId])->fetchColumn();
+check($bandCityId > 0 && (string)q('SELECT name FROM ' . tbl('cities') . ' WHERE id=?', [$bandCityId])->fetchColumn() === 'Nové testovací město kapely', 'approval creates the pending city and assigns its ID to the published band');
 $bandJson = json_read_file(json_bucket_rel('bands', $publishedBandId));
 check(($bandJson['description'] ?? '') === 'Popis testovací kapely.'
     && ($bandJson['www'] ?? '') === 'https://example.com/band'
