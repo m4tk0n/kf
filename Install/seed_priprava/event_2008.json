@@ -1,0 +1,39 @@
+{
+  "_purpose": "Evidence koncertnich akci pro konkretni kalendarni rok. Nazev souboru event_YYYY.json oznacuje rok konani; YYYY se nahradi konkretnim rokem. Kazdy rok ma vlastni aktual, ok a next, aby se data rozdelila do mensich souboru. Nove nalezene akce se ukladaji do next a po overeni do ok. ID akce je stabilni pracovni ID napric vsemi rocnikovymi soubory event_YYYY.json a nesmi se opakovat.",
+  "_rules": {
+    "types": {
+      "concert": "Jednodenni hudebni akce.",
+      "festival": "Vice-denni hudebni akce s programem ve vice dnech."
+    },
+    "tour": "Turne je nadrazeny zaznam v globalnim tours.txt. Kazda zastavka je samostatna akce s vlastnim datem, mistem a line-upem.",
+    "dates": "U vice-denni akce vyplnit date_from a date_to; u jednodeni akce jsou stejna. Neoverene udaje neodhadovat.",
+    "lineup": "Line-up obsahuje band_id odkazujici na bands.json, sort_order a pripadne time_play.",
+    "venue": "venue_id odkazuje na venues.json; nazev ani adresa mista se neopakuji.",
+    "ids": "ID akce je stabilni napric vsemi event_YYYY.json. Pred pridelenim zkontrolovat vsechny roky.",
+    "sources": "Ulozit URL zdroju potvrzujicich akci a jeji udaje."
+  },
+  "_record_template": {
+    "id": 1,
+    "name": "",
+    "type": "concert",
+    "status": "held",
+    "date_from": "YYYY-MM-DD",
+    "date_to": "YYYY-MM-DD",
+    "time_start": null,
+    "city": "",
+    "country": "",
+    "venue_id": null,
+    "bands": [
+      {
+        "band_id": 1,
+        "sort_order": 1,
+        "time_play": null
+      }
+    ],
+    "tour_id": null,
+    "sources": []
+  },
+  "aktual": [],
+  "ok": [],
+  "next": []
+}
