@@ -660,6 +660,141 @@
       "source_type": "municipal_band_profile",
       "retrieved_on": "2026-11-28",
       "supports": "TIC Zábřeh potvrzuje vznik kapely v Zábřehu na Moravě a melodický punkrockový žánr."
+    },
+    {
+      "id": "SRC-0073",
+      "url": "https://www.farak-fest.cz/",
+      "publisher": "Farák Fest",
+      "title": "Oficiální web a report 11. ročníku",
+      "source_type": "official_festival_report",
+      "retrieved_on": "2026-11-28",
+      "supports": "Organizátor potvrzuje, že Farák Fest 2026 proběhl 1. 8. 2026; oficiální program uvádí The Fialky."
+    },
+    {
+      "id": "SRC-0074",
+      "url": "https://www.farak-fest.cz/predprodej/",
+      "publisher": "Farák Fest",
+      "title": "Předprodej – Farák Fest 2026",
+      "source_type": "official_festival_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální stránka potvrzuje termín 1. 8. 2026 a konání 11. ročníku."
+    },
+    {
+      "id": "SRC-0075",
+      "url": "https://www.letsgofest.cz/",
+      "publisher": "Let’s GO fest",
+      "title": "Letní hudební festival v Třebízi",
+      "source_type": "official_festival_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web uvádí 31. 7.–1. 8. 2026, účast The Fialky a amfiteátr Pod Skálou v Třebízi."
+    },
+    {
+      "id": "SRC-0076",
+      "url": "https://vikendo.cz/events/let-s-go-fest-summer-vol-11",
+      "publisher": "Let’s GO fest",
+      "title": "Let’s GO fest summer vol.11",
+      "source_type": "festival_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Událost 31. 7.–1. 8. 2026, Amfiteátr Pod Skálou, Třebíz; lineup včetně The Fialky."
+    },
+    {
+      "id": "SRC-0077",
+      "url": "https://kravinfest.cz/",
+      "publisher": "Kravín Fest",
+      "title": "Oficiální web – 10. ročník",
+      "source_type": "official_festival_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web potvrzuje desátý ročník Kravín Festu, dvě festivalové noci a konání v Chválkově."
+    },
+    {
+      "id": "SRC-0078",
+      "url": "https://kravinfest.cz/zakladni-informace/",
+      "publisher": "Kravín Fest",
+      "title": "Základní informace",
+      "source_type": "official_venue_info",
+      "retrieved_on": "2026-11-28",
+      "supports": "Pořadatel uvádí, že festival probíhá v zemědělském areálu na okraji obce Chválkov."
+    },
+    {
+      "id": "SRC-0079",
+      "url": "https://www.darkzin.cz/archiv-probehlych-akci/kravin-fest-2026-vol-10-/",
+      "publisher": "Darkzin",
+      "title": "Kravín Fest 2026 (vol. 10)",
+      "source_type": "event_archive",
+      "retrieved_on": "2026-11-28",
+      "supports": "Záznam uvádí 31. 7.–1. 8. 2026, line-up a rozpis; The Fialky v pátek 21:15."
+    },
+    {
+      "id": "SRC-0080",
+      "url": "https://www.broumovsko.cz/akce/bez-sance-fest-xii",
+      "publisher": "Region Broumovsko",
+      "title": "Bez šance fest XII.",
+      "source_type": "regional_event_calendar",
+      "retrieved_on": "2026-11-28",
+      "supports": "Program 24.–25. 7. 2026 uvádí The Fialky v sobotu 25. 7. ve 20:50 a další kapely."
+    },
+    {
+      "id": "SRC-0081",
+      "url": "https://www.smsticket.cz/vstupenky/64199-bez-sance-fest-xii-hospudka-u-pavla-police-nad-metuji-volant-sps",
+      "publisher": "SMS Ticket",
+      "title": "Bez Šance Fest XII.",
+      "source_type": "ticketing_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Akce 24.–25. 7. 2026 v Hospůdce U Pavla, Police nad Metují; festivalový charakter a line-up."
+    },
+    {
+      "id": "SRC-0082",
+      "url": "https://www.firmy.cz/detail/13261299-hospudka-u-pavla-police-nad-metuji.html",
+      "publisher": "Firmy.cz",
+      "title": "Hospůdka U Pavla",
+      "source_type": "venue_directory",
+      "retrieved_on": "2026-11-28",
+      "supports": "Adresa Hospůdky U Pavla Žďěřina 390, 549 54 Police nad Metují."
+    },
+    {
+      "id": "SRC-0083",
+      "url": "https://www.policenm.cz/zivot-ve-meste/oznamene-venkovni-akce/",
+      "publisher": "Město Police nad Metují",
+      "title": "Oznámené venkovní akce",
+      "source_type": "official_city_event_register",
+      "retrieved_on": "2026-11-28",
+      "supports": "Město eviduje Bez Šance Fest XII. 24.–25. 7. 2026 v Hospůdce U Pavla."
+    },
+    {
+      "id": "SRC-0084",
+      "url": "https://www.benatska.cz/uvod-2026/",
+      "publisher": "Benátská!",
+      "title": "Benátská! s Impulsem 2026",
+      "source_type": "official_festival_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální web potvrzuje festival 23.–26. 7. 2026 v areálu Vesec, Liberec."
+    },
+    {
+      "id": "SRC-0085",
+      "url": "https://www.protheus.cz/koncert/benatska-2026/",
+      "publisher": "Protheus",
+      "title": "Benátská! 2026",
+      "source_type": "official_band_archive",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální koncertní přehled Protheus uvádí 23. 7. 2026, 22:15, areál Vesec a společný program s The Fialky."
+    },
+    {
+      "id": "SRC-0086",
+      "url": "https://www.arealvesec.cz/",
+      "publisher": "Sportovní areál Vesec",
+      "title": "Informace o uzavření areálu kvůli Benátské!",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální areál potvrzuje konání festivalu 23.–26. 7. 2026 v areálu Vesec."
+    },
+    {
+      "id": "SRC-0087",
+      "url": "https://www.benatska.cz/clanky/novinky/",
+      "publisher": "Benátská!",
+      "title": "Oficiální aftermovie a poděkování po ročníku 2026",
+      "source_type": "official_festival_report",
+      "retrieved_on": "2026-11-28",
+      "supports": "Pořadatel potvrzuje, že Benátská! 2026 proběhla a skončila 26. 7. 2026."
     }
   ],
   "claims": [
@@ -4220,6 +4355,566 @@
       "source_ids": [
         "SRC-0071",
         "SRC-0072"
+      ]
+    },
+    {
+      "id": "CLM-0264",
+      "entity_type": "event",
+      "entity_id": 28,
+      "field": "name",
+      "value": "Farák Fest",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0073",
+        "SRC-0074"
+      ]
+    },
+    {
+      "id": "CLM-0265",
+      "entity_type": "event",
+      "entity_id": 28,
+      "field": "date",
+      "value": "2026-08-01–2026-08-01",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0073",
+        "SRC-0074"
+      ]
+    },
+    {
+      "id": "CLM-0266",
+      "entity_type": "event",
+      "entity_id": 28,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0073",
+        "SRC-0074"
+      ]
+    },
+    {
+      "id": "CLM-0267",
+      "entity_type": "event",
+      "entity_id": 28,
+      "field": "venue_id",
+      "value": 26,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0073",
+        "SRC-0074"
+      ]
+    },
+    {
+      "id": "CLM-0268",
+      "entity_type": "event",
+      "entity_id": 28,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0073",
+        "SRC-0074"
+      ]
+    },
+    {
+      "id": "CLM-0269",
+      "entity_type": "venue",
+      "entity_id": 26,
+      "field": "name",
+      "value": "Areál Farák Fest",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0073",
+        "SRC-0074"
+      ]
+    },
+    {
+      "id": "CLM-0270",
+      "entity_type": "venue",
+      "entity_id": 26,
+      "field": "address",
+      "value": "Areál Farák Fest, Heřmanova Huť, 330 24, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0073",
+        "SRC-0074"
+      ]
+    },
+    {
+      "id": "CLM-0271",
+      "entity_type": "venue",
+      "entity_id": 26,
+      "field": "city_country",
+      "value": "Heřmanova Huť, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0073",
+        "SRC-0074"
+      ]
+    },
+    {
+      "id": "CLM-0272",
+      "entity_type": "event",
+      "entity_id": 29,
+      "field": "name",
+      "value": "Let’s GO fest summer vol. 11",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0075",
+        "SRC-0076"
+      ]
+    },
+    {
+      "id": "CLM-0273",
+      "entity_type": "event",
+      "entity_id": 29,
+      "field": "date",
+      "value": "2026-07-31–2026-08-01",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0075",
+        "SRC-0076"
+      ]
+    },
+    {
+      "id": "CLM-0274",
+      "entity_type": "event",
+      "entity_id": 29,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0075",
+        "SRC-0076"
+      ]
+    },
+    {
+      "id": "CLM-0275",
+      "entity_type": "event",
+      "entity_id": 29,
+      "field": "venue_id",
+      "value": 27,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0075",
+        "SRC-0076"
+      ]
+    },
+    {
+      "id": "CLM-0276",
+      "entity_type": "event",
+      "entity_id": 29,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0075",
+        "SRC-0076"
+      ]
+    },
+    {
+      "id": "CLM-0277",
+      "entity_type": "venue",
+      "entity_id": 27,
+      "field": "name",
+      "value": "Amfiteátr Pod Skálou",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0075",
+        "SRC-0076"
+      ]
+    },
+    {
+      "id": "CLM-0278",
+      "entity_type": "venue",
+      "entity_id": 27,
+      "field": "address",
+      "value": "Amfiteátr Pod Skálou, Třebíz, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0075",
+        "SRC-0076"
+      ]
+    },
+    {
+      "id": "CLM-0279",
+      "entity_type": "venue",
+      "entity_id": 27,
+      "field": "city_country",
+      "value": "Třebíz, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0075",
+        "SRC-0076"
+      ]
+    },
+    {
+      "id": "CLM-0280",
+      "entity_type": "event",
+      "entity_id": 30,
+      "field": "name",
+      "value": "Kravín Fest – 10. ročník",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0077",
+        "SRC-0078",
+        "SRC-0079"
+      ]
+    },
+    {
+      "id": "CLM-0281",
+      "entity_type": "event",
+      "entity_id": 30,
+      "field": "date",
+      "value": "2026-07-31–2026-08-01",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0077",
+        "SRC-0078",
+        "SRC-0079"
+      ]
+    },
+    {
+      "id": "CLM-0282",
+      "entity_type": "event",
+      "entity_id": 30,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0077",
+        "SRC-0078",
+        "SRC-0079"
+      ]
+    },
+    {
+      "id": "CLM-0283",
+      "entity_type": "event",
+      "entity_id": 30,
+      "field": "venue_id",
+      "value": 28,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0077",
+        "SRC-0078",
+        "SRC-0079"
+      ]
+    },
+    {
+      "id": "CLM-0284",
+      "entity_type": "event",
+      "entity_id": 30,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0077",
+        "SRC-0078",
+        "SRC-0079"
+      ]
+    },
+    {
+      "id": "CLM-0285",
+      "entity_type": "venue",
+      "entity_id": 28,
+      "field": "name",
+      "value": "Kravín Chválkov",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0077",
+        "SRC-0078",
+        "SRC-0079"
+      ]
+    },
+    {
+      "id": "CLM-0286",
+      "entity_type": "venue",
+      "entity_id": 28,
+      "field": "address",
+      "value": "Areál zemědělského objektu na okraji obce Chválkov, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0077",
+        "SRC-0078",
+        "SRC-0079"
+      ]
+    },
+    {
+      "id": "CLM-0287",
+      "entity_type": "venue",
+      "entity_id": 28,
+      "field": "city_country",
+      "value": "Chválkov, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0077",
+        "SRC-0078",
+        "SRC-0079"
+      ]
+    },
+    {
+      "id": "CLM-0288",
+      "entity_type": "event",
+      "entity_id": 31,
+      "field": "name",
+      "value": "Bez Šance Fest XII.",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0080",
+        "SRC-0081",
+        "SRC-0082",
+        "SRC-0083"
+      ]
+    },
+    {
+      "id": "CLM-0289",
+      "entity_type": "event",
+      "entity_id": 31,
+      "field": "date",
+      "value": "2026-07-24–2026-07-25",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0080",
+        "SRC-0081",
+        "SRC-0082",
+        "SRC-0083"
+      ]
+    },
+    {
+      "id": "CLM-0290",
+      "entity_type": "event",
+      "entity_id": 31,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0080",
+        "SRC-0081",
+        "SRC-0082",
+        "SRC-0083"
+      ]
+    },
+    {
+      "id": "CLM-0291",
+      "entity_type": "event",
+      "entity_id": 31,
+      "field": "venue_id",
+      "value": 29,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0080",
+        "SRC-0081",
+        "SRC-0082",
+        "SRC-0083"
+      ]
+    },
+    {
+      "id": "CLM-0292",
+      "entity_type": "event",
+      "entity_id": 31,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0080",
+        "SRC-0081",
+        "SRC-0082",
+        "SRC-0083"
+      ]
+    },
+    {
+      "id": "CLM-0293",
+      "entity_type": "venue",
+      "entity_id": 29,
+      "field": "name",
+      "value": "Hospůdka U Pavla",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0080",
+        "SRC-0081",
+        "SRC-0082",
+        "SRC-0083"
+      ]
+    },
+    {
+      "id": "CLM-0294",
+      "entity_type": "venue",
+      "entity_id": 29,
+      "field": "address",
+      "value": "Žďěřina 390, 549 54 Police nad Metují, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0080",
+        "SRC-0081",
+        "SRC-0082",
+        "SRC-0083"
+      ]
+    },
+    {
+      "id": "CLM-0295",
+      "entity_type": "venue",
+      "entity_id": 29,
+      "field": "city_country",
+      "value": "Police nad Metují, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0080",
+        "SRC-0081",
+        "SRC-0082",
+        "SRC-0083"
+      ]
+    },
+    {
+      "id": "CLM-0296",
+      "entity_type": "event",
+      "entity_id": 32,
+      "field": "name",
+      "value": "Benátská! s Impulsem 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0084",
+        "SRC-0085",
+        "SRC-0086",
+        "SRC-0087"
+      ]
+    },
+    {
+      "id": "CLM-0297",
+      "entity_type": "event",
+      "entity_id": 32,
+      "field": "date",
+      "value": "2026-07-23–2026-07-26",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0084",
+        "SRC-0085",
+        "SRC-0086",
+        "SRC-0087"
+      ]
+    },
+    {
+      "id": "CLM-0298",
+      "entity_type": "event",
+      "entity_id": 32,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0084",
+        "SRC-0085",
+        "SRC-0086",
+        "SRC-0087"
+      ]
+    },
+    {
+      "id": "CLM-0299",
+      "entity_type": "event",
+      "entity_id": 32,
+      "field": "venue_id",
+      "value": 30,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0084",
+        "SRC-0085",
+        "SRC-0086",
+        "SRC-0087"
+      ]
+    },
+    {
+      "id": "CLM-0300",
+      "entity_type": "event",
+      "entity_id": 32,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0084",
+        "SRC-0085",
+        "SRC-0086",
+        "SRC-0087"
+      ]
+    },
+    {
+      "id": "CLM-0301",
+      "entity_type": "venue",
+      "entity_id": 30,
+      "field": "name",
+      "value": "Sportovní areál Vesec",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0084",
+        "SRC-0085",
+        "SRC-0086",
+        "SRC-0087"
+      ]
+    },
+    {
+      "id": "CLM-0302",
+      "entity_type": "venue",
+      "entity_id": 30,
+      "field": "address",
+      "value": "Vesec 463 12, 463 12 Liberec – Vratislavice nad Nisou, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0084",
+        "SRC-0085",
+        "SRC-0086",
+        "SRC-0087"
+      ]
+    },
+    {
+      "id": "CLM-0303",
+      "entity_type": "venue",
+      "entity_id": 30,
+      "field": "city_country",
+      "value": "Liberec, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0084",
+        "SRC-0085",
+        "SRC-0086",
+        "SRC-0087"
       ]
     }
   ]
