@@ -39,7 +39,7 @@
   var countryId = form.querySelector('[data-venue-country-id]');
   var countryList = form.querySelector('[data-venue-country-suggestions]');
   var timer = 0;
-  var request = 0;
+  var request = { city: 0, country: 0 };
 
   function close(list) {
     if (!list) return;
@@ -64,9 +64,9 @@
     });
     list.hidden = list.childElementCount === 0;
   }
-  function load(input, list, endpoint, extra, choose, label) {
+  function load(key, input, list, endpoint, extra, choose, label) {
     var term = input.value.trim();
-    var current = ++request;
+    var current = ++request[key];
     var min = parseInt(input.getAttribute('data-suggest-min') || '2', 10);
     if (term.length < min) { close(list); return; }
     var query = '?q=' + encodeURIComponent(term);
@@ -81,10 +81,10 @@
       if (!response.ok) throw new Error('Suggestion request failed');
       return response.json();
     }).then(function (data) {
-      if (current !== request || term !== input.value.trim()) return;
+      if (current !== request[key] || term !== input.value.trim()) return;
       showOptions(input, list, Array.isArray(data.items) ? data.items : [], choose, label);
     }).catch(function () {
-      if (current === request) close(list);
+      if (current === request[key]) close(list);
     });
   }
 
@@ -93,7 +93,7 @@
       cityId.value = '0';
       window.clearTimeout(timer);
       timer = window.setTimeout(function () {
-        load(cityInput, cityList, cityInput.getAttribute('data-suggest-url'),
+        load('city', cityInput, cityList, cityInput.getAttribute('data-suggest-url'),
           { country_id: countryId ? countryId.value : '' },
           function (item) {
             cityInput.value = item.name;
@@ -118,7 +118,7 @@
       if (cityInput) cityInput.value = '';
       window.clearTimeout(timer);
       timer = window.setTimeout(function () {
-        load(countryInput, countryList, countryInput.getAttribute('data-suggest-url'), {},
+        load('country', countryInput, countryList, countryInput.getAttribute('data-suggest-url'), {},
           function (item) {
             countryInput.value = item.name;
             countryId.value = String(item.id);
