@@ -342,6 +342,9 @@ input[type="submit"].flash-success{
 .event-preview{max-width:100%;max-height:240px;border-radius:12px;border:1px solid var(--line)}
 .bands-box{display:grid;gap:8px;margin:0;padding:10px;border:1px solid var(--line);border-radius:10px}
 .bands-box legend{padding:0 6px;color:var(--muted);font-size:.85rem}
+.admission-amount-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:start}
+.admission-amount-grid>label{min-width:0}
+.admission-amount-grid[hidden],[data-admission-text-field][hidden]{display:none}
 .band-row{display:flex;gap:8px}
 .band-row[hidden]{display:none}
 .band-row select{flex:1;min-width:0}
