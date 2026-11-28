@@ -5,7 +5,7 @@
     "band": "The Fialky",
     "from_year": 2000,
     "to_year": 2026,
-    "direction": "descending"
+    "direction": "any_order"
   },
   "_sources": [
     {
@@ -34,17 +34,18 @@
     "counts": "bandzone_count je pocet polozek zobrazeny v rocnikovem archivu Bandzone pri pruzkumu dne 2026-11-28. Neni to automaticky cilovy pocet eventu v seed datech.",
     "deduplication": "Jedna akce se eviduje pouze jednou, i kdyz se objevi ve vice archivech nebo pod vice kapelami.",
     "inclusion": "Vyloucit zaznamy typu NEHRAJEME, studio/nahravani, pouhe setkani nebo neuskutecnene akce. Soukrome koncerty ponechat mimo verejnou evidenci, pokud K&F nebude evidovat soukrome akce.",
-    "lineup": "The Fialky jsou hlavni prozkoumavanou kapelou a jejich ucast musi byt dolozena. Dalsi kapely se do line-upu vlozi az po overeni jejich skutecne ucasti; pouhy ohlaseny program nestaci.",
+    "lineup": "The Fialky jsou hlavni prozkoumavanou kapelou a jejich ucast musi byt dolozena. Dalsi kapely se do line-upu vlozi az po overeni jejich skutecne ucasti; pouhy ohlaseny program nestaci. Stránka oficiálního archivu The Fialky je seznam jejich odehraných koncertů; The Fialky jsou tedy účinkující každé skutečné koncertní položky, i když nejsou zopakovány v seznamu dalších kapel pod názvem akce.",
     "venue": "Misto musi byt identifikovano a overeno. Pokud zdroj uvadi jen mesto nebo neurcity prostor, venue_id zustane null a zaznam se neoznaci jako plne overeny.",
-    "dates": "Minule akce v archivu kapely nejsou automaticky potvrzenim skutecneho konani; u kazde akce overit datum a uskutečnění."
+    "dates": "Minule akce v archivu kapely nejsou automaticky potvrzenim skutecneho konani; u kazde akce overit datum a uskutečnění.",
+    "processing_order": "Roky a jednotlivé koncerty lze zpracovávat v libovolném pořadí. Není nutné dokončit jeden rok před přechodem k jiné nalezené akci nebo roku. Každý rok však musí být před dokončením celé historie zkontrolován celý."
   },
   "years": [
     {
       "year": 2026,
       "bandzone_count": 62,
       "status": "in_progress",
-      "entered_events": 1,
-      "verified_events": 1
+      "entered_events": 2,
+      "verified_events": 2
     },
     {
       "year": 2025,
