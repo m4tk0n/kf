@@ -1,0 +1,11 @@
+# Koncertní historie kapely The Trousers – doložené akce roku 2023
+# Formát: název | typ | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka | turné
+
+The Trousers + Junkies | koncert | uskutečněno | 17. 2. 2023 | Budapešť | Maďarsko | Barba Negra Red Stage | The Trousers; Junkies | 2023-S04; 2023-S08 | The Trousers v rozhovoru uvádějí, že v únoru předskakovali Junkies; datum a místo potvrzuje koncertní archiv. |
+Monarchy Madness II – Budapest | koncert | uskutečněno | 16. 3. 2023 | Budapešť | Maďarsko | Robot | The Trousers; Degradace; Strompopper | 2023-S01 | Zahajovací zastávka turné; Strompopper je uveden jako místní host. | Monarchy Madness II
+Monarchy Madness II – Vienna | koncert | uskutečněno | 17. 3. 2023 | Vídeň | Rakousko | Café Carina | The Trousers; Degradace | 2023-S01; 2023-S03 | Zastávku ve Vídni potvrzuje itinerář turné; Café Carina a datum uvádí koncertní záznam Degradace. | Monarchy Madness II
+Fast & Loud: Degradace + The Trousers + další | koncert | uskutečněno | 18. 3. 2023 | Trenčín | Slovensko | Klub Lúč, Kniežaťa Pribinu 197/3 | Degradace; The Trousers; Copycats; Dafy and the Rafters | 2023-S01; 2023-S02 | Kompletní line-up a místo podle záznamu akce; třetí zastávka Monarchy Madness II. | Monarchy Madness II
+The Trousers – Harley-Davidson 120th Anniversary Festival | koncert | uskutečněno | 25. 6. 2023 | Budapešť | Maďarsko | Puskás Aréna Park | The Trousers | 2023-S04 | Jednodenní festivalový program; v koncertním archivu je doložena účast The Trousers, úplný line-up zatím není ověřen. |
+The Trousers | koncert | uskutečněno | 7. 10. 2023 | Budapešť | Maďarsko | Barba Negra Blue Stage | The Trousers | 2023-S04 | Koncertní archiv potvrzuje datum a scénu; další účinkující zatím nejsou ověřeni. |
+The Trousers + Akela | koncert | uskutečněno | 1. 12. 2023 | Sárvár | Maďarsko | Nádasdy-vár, Várkerület 1 | The Trousers; Akela | 2023-S05 | Program pořadatele uvádí The Trousers a Akelu ve stejném večerním programu. |
+The Trousers + HallucinatorZ + Jackmans | koncert | uskutečněno | 28. 12. 2023 | Budapešť | Maďarsko | Robot | The Trousers; HallucinatorZ; Jackmans | 2023-S06; 2023-S07 | Předvánoční/koncoroční koncert; line-up a datum potvrzují dva nezávislé hudební magazíny. |
