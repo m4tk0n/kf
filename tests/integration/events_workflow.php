@@ -61,7 +61,7 @@ foreach ([
     $users[$name] = (int)$pdo->lastInsertId();
 }
 
-q('INSERT INTO ' . tbl('countries') . ' (iso2, iso3, name_cs, name_en) VALUES (?, ?, ?, ?)', ['CZ', 'CZE', 'Česko', 'Czechia']);
+q('INSERT INTO ' . tbl('countries') . ' (iso2, iso3, name_cs, name_en, currency_code) VALUES (?, ?, ?, ?, ?)', ['CZ', 'CZE', 'Česko', 'Czechia', 'CZK']);
 $countryId = (int)$pdo->lastInsertId();
 q('INSERT INTO ' . tbl('cities') . ' (country_id, name, name_ascii) VALUES (?, ?, ?)', [$countryId, 'Brno', 'Brno']);
 $cityId = (int)$pdo->lastInsertId();
@@ -140,15 +140,21 @@ function create_draft_with_image(int $userId, array $values): string
 $eventDate = date('Y-m-d', strtotime('+30 days'));
 $userToken = session_token_for($users['user']);
 $userValues = event_values('Festival – test event approval', $eventDate, $cityId, $venueId, $bandId);
+$userValues['admission_type'] = 'amount';
+$userValues['admission_value'] = '250';
+$userValues['admission_currency'] = 'CZK';
 check($userValues['name'] === 'Festival - test event approval', 'shared text normalizer converts typographic dashes in event input');
 check(kf_event_validate($userValues) === [], 'validates complete event form data');
 $imageName = create_draft_with_image($users['user'], $userValues);
 $draftImage = kf_draft_image_path($users['user'], $imageName);
 check($draftImage !== null && is_file($draftImage), 'draft preview image is available');
 $formHtml = run_route('event_form', $userToken);
-check(str_contains($formHtml, 'Festival - test event approval') && str_contains($formHtml, 'event/draft-image'), 'new-event form route renders saved values and protected image preview');
+check(str_contains($formHtml, 'Festival - test event approval') && str_contains($formHtml, 'event/draft-image')
+    && str_contains($formHtml, 'data-admission-currency') && str_contains($formHtml, 'value="CZK"'), 'new-event form renders saved values, protected image and country-default currency');
+check(kf_event_validate($userValues) === [], 'validates numeric admission amount and supported currency');
 $previewHtml = run_route('event_preview', $userToken);
-check(str_contains($previewHtml, 'Festival - test event approval') && str_contains($previewHtml, 'Test klub'), 'event preview route renders the event detail before submission');
+check(str_contains($previewHtml, 'Festival - test event approval') && str_contains($previewHtml, 'Test klub')
+    && str_contains($previewHtml, '250 CZK'), 'event preview renders admission amount and currency');
 
 $submitOutput = run_route('event_submit', $userToken);
 $pending = q('SELECT id, title FROM ' . tbl('pending') . ' WHERE created_by = ? AND date_from = ?', [$users['user'], $eventDate])->fetch();
@@ -165,6 +171,9 @@ check($pending !== false && $pending['title'] === 'Festival - test event approva
 $pendingId = (int)$pending['id'];
 $pendingData = kf_pending_get($pendingId);
 check(($pendingData['data']['values']['name'] ?? '') === 'Festival - test event approval', 'pending JSON stores a normal hyphen');
+check(($pendingData['data']['values']['admission_type'] ?? '') === 'amount'
+    && ($pendingData['data']['values']['admission_value'] ?? '') === '250'
+    && ($pendingData['data']['values']['admission_currency'] ?? '') === 'CZK', 'pending JSON stores admission type, amount and currency');
 check(($pendingData['data']['kind'] ?? '') === 'event', 'pending JSON contains the event payload');
 check(is_file(kf_pending_image_path($pendingId) ?? ''), 'pending image is copied beside pending JSON');
 check(kf_draft_get($users['user']) === null && !is_file((string)$draftImage), 'successful submission clears draft and temporary image');
@@ -196,6 +205,11 @@ check(is_array($shortData) && ($shortData['items'] ?? []) === [], 'event-name au
 check((int)q('SELECT COUNT(*) FROM ' . tbl('event_bands') . ' WHERE event_id = ? AND band_id = ?', [$publishedId, $bandId])->fetchColumn() === 1, 'approval persists event-to-band relation and performance time');
 $eventJson = json_read_file(json_bucket_rel('events', $publishedId));
 check(($eventJson['description'] ?? '') === 'Automatický integrační test K&F.', 'approval writes event JSON details');
+check(($eventJson['admission']['type'] ?? '') === 'amount'
+    && (float)($eventJson['admission']['value'] ?? -1) === 250.0
+    && ($eventJson['admission']['currency'] ?? '') === 'CZK', 'published event JSON stores structured admission amount and currency');
+$eventDetail = kf_detail_load('event', $publishedId);
+check(($eventDetail['extra']['price'] ?? '') === '250 CZK', 'published event detail formats admission amount and currency');
 $eventBase = abs_path((string)cfg('img.subdirs.events')) . '/' . intdiv($publishedId, (int)cfg('img.folder_divisor')) . '/' . $publishedId;
 check(is_file($eventBase . '_l.webp') && is_file($eventBase . '_s.webp'), 'approval installs both final WebP image sizes');
 check(kf_pending_get($pendingId) === null && !is_file(dirname(abs_path(json_bucket_rel('pending', $pendingId))) . '/' . $pendingId . '_l.webp'), 'approval removes pending row, JSON and image');
@@ -285,11 +299,16 @@ check(kf_pending_get($pendingBandId) === null
 
 $trustedToken = session_token_for($users['trusted']);
 $trustedValues = event_values('KF test trusted direct publish', date('Y-m-d', strtotime('+31 days')), $cityId, $venueId, $bandId);
+$trustedValues['admission_type'] = 'text';
+$trustedValues['admission_value'] = 'Dobrovolné';
 check(kf_event_validate($trustedValues) === [], 'validates trusted-user event');
 $trustedImage = create_draft_with_image($users['trusted'], $trustedValues);
 run_route('event_submit', $trustedToken);
 $trustedEventId = (int)q('SELECT id FROM ' . tbl('events') . ' WHERE name = ?', ['KF test trusted direct publish'])->fetchColumn();
 check($trustedEventId > 0, 'role 2 (trusted) publishes directly according to current permission configuration');
+$trustedJson = json_read_file(json_bucket_rel('events', $trustedEventId));
+check(($trustedJson['admission']['type'] ?? '') === 'text'
+    && ($trustedJson['admission']['value'] ?? '') === 'Dobrovolné', 'published event JSON stores free-text admission');
 check((int)q('SELECT COUNT(*) FROM ' . tbl('pending') . ' WHERE title = ?', ['KF test trusted direct publish'])->fetchColumn() === 0, 'role 2 does not create a pending record under current rules');
 check(kf_draft_get($users['trusted']) === null, 'direct publication clears the trusted user draft');
 
