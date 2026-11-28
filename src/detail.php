@@ -49,9 +49,23 @@ function kf_detail_extra(string $kind, int $id): array
     $lng = $j['lng'] ?? null;
     $geo = is_numeric($lat) && is_numeric($lng) && abs((float)$lat) <= 90 && abs((float)$lng) <= 180
         ? [(float)$lat, (float)$lng] : null;
+    $admission = $j['admission'] ?? null;
+    $price = '';
+    if ($kind === 'event' && is_array($admission)) {
+        if (($admission['type'] ?? '') === 'text' && is_string($admission['value'] ?? null)) {
+            $price = mb_substr(trim($admission['value']), 0, 100);
+        } elseif (($admission['type'] ?? '') === 'amount' && is_numeric($admission['value'] ?? null)
+            && preg_match('/^[A-Z]{3}$/', (string)($admission['currency'] ?? ''))) {
+            $amount = rtrim(rtrim(number_format((float)$admission['value'], 2, '.', ''), '0'), '.');
+            $price = $amount . ' ' . $admission['currency'];
+        }
+    }
+    if ($price === '' && $kind === 'event') {
+        $price = kf_jtext($j, 'price', 100);
+    }
     return [
         'desc' => kf_jtext($j, 'description', 5000),
-        'price' => $kind === 'event' ? kf_jtext($j, 'price', 100) : '',
+        'price' => $price,
         'www' => kf_safe_url(kf_jtext($j, 'www', 300)),
         'email' => filter_var($email, FILTER_VALIDATE_EMAIL) ? $email : '',
         'phone' => trim((string)preg_replace('/[^0-9+() \-]/', '', kf_jtext($j, 'phone', 30))),
