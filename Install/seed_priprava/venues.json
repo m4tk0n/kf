@@ -531,6 +531,26 @@
         "https://www.sps.litvinoff.cz/_koncerty.php"
       ],
       "note": "Místo uvedené v oficiálním archivu SPS; přesný prostor konání a adresa čekají na ověření."
+    },
+    {
+      "id": 44,
+      "name": "Letní kino Slaný",
+      "city": "Slaný",
+      "country": "CZ",
+      "sources": [
+        "https://www.sps.litvinoff.cz/_koncerty.php"
+      ],
+      "note": "Prostor uvedený v oficiálním archivu SPS pro Valník 2025; přesná adresa čeká na ověření."
+    },
+    {
+      "id": 45,
+      "name": "Letní Parket Hořepník",
+      "city": "Hořepník",
+      "country": "CZ",
+      "sources": [
+        "https://www.sps.litvinoff.cz/_koncerty.php"
+      ],
+      "note": "Prostor uvedený v oficiálním archivu SPS pro koncert 14. 6. 2025; přesná adresa čeká na ověření."
     }
   ]
 }
