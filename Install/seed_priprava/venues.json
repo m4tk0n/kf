@@ -264,6 +264,56 @@
         "https://kultura.plzen.eu/kulturni-infrastruktura/objekty-a-zarizeni/hala-bilej-medved/",
         "https://bandzone.cz/klub/bilejmedved?at=contacts"
       ]
+    },
+    {
+      "id": 22,
+      "name": "Staré koupaliště",
+      "city": "Říčany",
+      "country": "CZ",
+      "address": "Staré koupaliště, v údolí Rokytky, Říčany, Česko",
+      "url": "https://starak.cz/",
+      "sources": [
+        "https://www.ricany.cz/udalost/starak-fest-3/",
+        "https://vikendo.cz/events/starak-fest-2026",
+        "https://www.ricany.cz/wp-content/uploads/2023/10/01_katalog_sportovist.pdf"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Koupaliště Volyně",
+      "city": "Volyně",
+      "country": "CZ",
+      "address": "Nábřeží Dr. Kafky 75, 387 01 Volyně",
+      "url": "https://plovarnavolyne.cz/",
+      "sources": [
+        "https://plovarnavolyne.cz/",
+        "https://bandzone.cz/klub/arealkoupaliste?at=contacts",
+        "https://www.kultura-volyne.cz/typ/akce/page/2/"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Camping Rybníky Opatovce",
+      "city": "Opatovce",
+      "country": "SK",
+      "address": "Camping Rybníky Opatovce, Opatovce, Slovensko (GPS 48.856780, 17.963672)",
+      "url": "https://punkacidetom.sk/",
+      "sources": [
+        "https://punkacidetom.sk/info/rady/",
+        "https://punkacidetom.sk/koncerty/"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Areál Na Bojišti",
+      "city": "Trutnov",
+      "country": "CZ",
+      "address": "Královédvorská 536, 541 01 Trutnov",
+      "url": "https://www.festivaltrutnoff.cz/",
+      "sources": [
+        "https://www.festivaltrutnoff.cz/cs/areal-na-bojisti",
+        "https://www.bojistetrutnov.cz/kontakty"
+      ]
     }
   ],
   "next": []
