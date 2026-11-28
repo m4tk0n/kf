@@ -1,18 +1,18 @@
-name: K&F historical concert research
+name: K&F – automatický výzkum koncertů
 
 on:
   workflow_dispatch:
     inputs:
       max_tasks:
-        description: "Maximum research tasks in this run"
+        description: Počet rešeršních úloh v tomto běhu (1–8)
         required: false
-        default: "4"
+        default: "2"
       max_seconds:
-        description: "Maximum run time in seconds (hard cap 3300)"
+        description: Časový limit běhu v sekundách
         required: false
         default: "3300"
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 */12 * * *"
 
 permissions:
   contents: write
@@ -32,25 +32,47 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Run resumable research worker
+      - name: Check research activation
+        id: activation
+        env:
+          ENABLED: \${{ vars.SEED_RESEARCH_ENABLED }}
+          API_KEY: \${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ "$ENABLED" != "true" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Automatický výzkum je vypnutý. Nastav Repository variable SEED_RESEARCH_ENABLED=true."
+            exit 0
+          fi
+          if [ -z "$API_KEY" ]; then
+            echo "::error::Chybí Repository secret OPENAI_API_KEY."
+            exit 1
+          fi
+          echo "enabled=true" >> "$GITHUB_OUTPUT"
+
+      - name: Run resumable file-first research
+        if: steps.activation.outputs.enabled == 'true'
         env:
           OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-6.2-astra
-          MAX_TASKS: \${{ inputs.max_tasks || '4' }}
+          MAX_TASKS: \${{ inputs.max_tasks || '2' }}
           MAX_SECONDS: \${{ inputs.max_seconds || '3300' }}
         run: |
           set -euo pipefail
           python3 scripts/seed_research.py
 
-      - name: Commit research candidates and checkpoint
+      - name: Commit candidates and checkpoint
+        if: always() && steps.activation.outputs.enabled == 'true'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Install/seed_priprava/candidates Install/seed_priprava/automation_state.json Install/seed_priprava/band_queue.jsonl
+          git add Install/seed_priprava/candidates \
+            Install/seed_priprava/automation_state.json \
+            Install/seed_priprava/band_queue.json \
+            Install/seed_priprava/research_log.jsonl
           if git diff --cached --quiet; then
-            echo "No new research candidates."
+            echo "Žádné nové soubory k uložení."
             exit 0
           fi
-          git commit -m "Update automated concert research candidates"
+          git commit -m "Update concert research candidates and checkpoint"
           git push origin HEAD:main
