@@ -1,46 +1,22 @@
-# Průběžný stav rešerše – kontrolní bod pro navazování práce
-# Tento soubor je pracovní fronta a checkpoint. Není náhradou ročních datových souborů.
-#
-# Formát:
-# TYP | ID/název | STAV | DOSUD OVĚŘENO | ZAPSÁNO KDE | DALŠÍ KROK | POZNÁMKA
-#
-# STAV: čeká / rozpracováno / dokončeno / blokováno
-# Dokončeno znamená, že byl prověřen deklarovaný rozsah, nikoli že byla nalezena
-# úplně každá historická akce. Rozsah rešerše musí být vždy výslovně uveden.
-#
-# Pravidla checkpointu:
-# - Po každé menší dávce zapsat výsledky do příslušných ročních souborů a aktualizovat tento soubor.
-# - Změny ukládat na GitHub průběžně, nečekat na dokončení celého roku nebo celé kapely.
-# - Nikdy znovu neověřovat dokončený údaj bez důvodu; při opakované kontrole uvést proč.
-# - Nová kapela nalezená v line-upu se přidá jako nový řádek se stavem čeká.
-# - Pokud se běh přeruší, pokračovat od prvního řádku čeká/rozpracováno.
-# - Každý záznam akce musí mít rok, datum, místo, line-up a zdroje v ročním events.txt/sources.txt.
-# - Každý záznam kapely musí mít ověřenou identitu, zdroje a odkazy na doložené akce.
-# - Neověřené stopy se nesmí označit jako dokončené.
-#
-# ZÁKLADNÍ ROZSAH: ročníky Brněnecfestu a Festu Pod Parou; následně všechny objevené
-# kapely a jejich doložené koncerty v ČR/SR 2000–2027 a klubové koncerty v zahraničí.
-#
-# Výchozí úkoly – historické ročníky festivalů
-FESTIVAL_ROČNÍKY | Brněnecfest 2024 | rozpracováno | Ročník XXIII přidán; line-up uložen jako jednodenní koncert; zdroje 2024-S05 až 2024-S06 | 2024/events.txt; 2024/sources.txt | Prověřit další dostupné ročníky a následně rozšířit line-up o koncertní historii všech kapel | Datum 22. 6. 2024; program pokračoval po půlnoci.
-FESTIVAL_ROČNÍKY | Brněnecfest 2025 | rozpracováno | Ročník XXIV přidán; line-up a dva zdroje uloženy | 2025/events.txt; 2025/sources.txt | Ověřit každou kapelu samostatně a dohledat další koncerty/line-upy | Rozpor v harmonogramu ohledně Muerti zachován jako poznámka.
-FESTIVAL_ROČNÍKY | Brněnecfest 2026 | rozpracováno | Ročník XXV přidán; line-up a tisková zpráva uloženy | 2026/events.txt; 2026/sources.txt | Ověřit každou kapelu samostatně a dohledat další koncerty/line-upy | Jednodenní hudební program 4. 7. 2026.
-FESTIVAL_ROČNÍKY | Fest Pod Parou 2025 | rozpracováno | Ročník 2025 přidán; line-up uložen podle oficiálního pořadatele | 2025/events.txt; 2025/sources.txt | Ověřit každou kapelu samostatně a dohledat další koncerty/line-upy | Třídenní ročník 17.–19. 7. 2025.
-FESTIVAL_ROČNÍKY | Fest Pod Parou 2026 | dokončeno | Zrušení ročníku 2026 zaznamenáno; starší ročníky zůstávají předmětem rešerše | 2026/events.txt; 2026/sources.txt | Nezakládat line-up 2026; pokračovat staršími skutečně uskutečněnými ročníky | Zrušení sdělil uživatel; původní termín a místo dokládá 2026-S30.
+# Průběžný stav průzkumu kapel a akcí
 
-# Fronta kapel
-# Zatím žádná z níže uvedených kapel nemá dokončenou úplnou rešerši koncertní historie.
-# Každou z nich je nutné samostatně prověřit; nové kapely z jejich koncertů přidat do fronty.
-KAPELA | The Trousers | rozpracováno | Doplněno 33 doložených akcí let 2010, 2011, 2013, 2014, 2015, 2017 a 2023; zahrnuty české, slovenské a zahraniční klubové koncerty; zahraniční festival FEZEN 2015 byl vyřazen podle pravidla rozsahu | 2010/events.txt; 2010/sources.txt; 2010/bands.txt; 2010/venues.txt; 2011/events.txt; 2011/sources.txt; 2011/bands.txt; 2011/venues.txt; 2013/events.txt; 2013/sources.txt; 2013/bands.txt; 2013/venues.txt; 2014/events.txt; 2014/sources.txt; 2014/bands.txt; 2014/venues.txt; 2015/events.txt; 2015/sources.txt; 2015/bands.txt; 2015/venues.txt; 2017/events.txt; 2017/sources.txt; 2017/bands.txt; 2017/venues.txt; 2023/events.txt; 2023/sources.txt; 2023/bands.txt; 2023/venues.txt; 2024/events.txt; 2024/sources.txt; 2026/events.txt; 2026/sources.txt; 2027/events.txt; 2027/sources.txt | Pokračovat roky 2008–2009, 2012, 2016 a 2018–2022; ověřit další koncerty, zahraniční klubové akce a spoluúčinkující | U turné Monarchy Madness II 2023 v Praze a Jindřichově Hradci zatím chybí přesná data a místa; nejsou proto založeny jako samostatné akce.
-KAPELY Z LINE-UPŮ | Všechny ostatní kapely uvedené v 2024–2027/events.txt a 2025/bands.txt | čeká | Účast pouze v rozsahu uvedených line-upů; samostatná historie většiny kapel dosud neprověřena | Příslušné roční events.txt, bands.txt a sources.txt | Vytvořit samostatné řádky pro každou kanonickou identitu; prověřit koncertní historii a přidávat nové kapely rekurzivně | Před zápisem porovnat názvy, členy, původ a diskografii; neplést Conflict a KONFLIKT ani N.V.Ú. a !V.V.Ú.
+# Hlavní fronta je v bands.json:
+# - aktual: jedna kapela, jejíž historii právě procházíme od roku 2026 do roku 2000
+# - next: nově objevené kapely čekající na zpracování
+# - ok: dokončené CZ/SK kapely a ověřené zahraniční kapely
+#
+# Nové akce se přidávají do events.json/next.
+# Nová místa se přidávají do venues.json/next.
+# Nové kapely z line-upů se přidávají do bands.json/next.
+# Zahraniční kapely po ověření země původu přesunout rovnou do bands.json/ok.
+# Po dokončení celé historie aktuální kapelu přesunout do bands.json/ok.
+# Poté přesunout další CZ/SK kapelu z bands.json/next do bands.json/aktual.
+#
+# Rozsah let: 2026 až 2000 včetně, sestupně.
+# Neověřené údaje se nikdy nevydávají za potvrzené.
+# Aktualizovat tento checkpoint po každé menší dávce práce.
 
-# Poslední checkpoint
 DATUM | 2026-11-28
-POSLEDNÍ DOKONČENÁ DÁVKA | Založení podkladů pro ročníky Brněnecfestu 2024/2025 a Festu Pod Parou 2025; doplnění kontrolní evidence.
-DALŠÍ KONKRÉTNÍ KROK | Rozpracovat kapely z line-upů Brněnecfestu 2024/2025/2026 a Pod Parou 2025; začít kontrolou identity a úplné historie jedné kapely, výsledky ukládat po malých dávkách.
-
-
-# Automatizace – stav přípravy (2026-11-28)
-AUTOMATIZACE | PHP seed-worker.php + GitHub Actions | nasazeno; první běh zastaven 403 | Endpoint je dostupný a PHP syntaxe prošla; server odmítl GitHub Secret AI_WRITE_KEY, protože se neshoduje s AI_WRITE_KEY na serveru v .env; žádné dotazy neproběhly | candidates/search_results.jsonl; candidates/search_queries.jsonl; band_queue.json; automation_state.json | Sjednotit hodnotu AI_WRITE_KEY v serverovém .env a GitHub Secrets; potom ručně spustit workflow | Bez modelového API a bez SQL; výsledky se zatím nevytvořily.
-
-FRONTA_AUTOMATIZACE | 181 kapel | čeká | Fronta sestavena z ročních bands.txt a line-upů v events.txt za dosud zpracované roky 2010–2027 | band_queue.json | Zpracovávat po jedné kapele, po každé úloze uložit kandidáty a checkpoint do GitHubu | Nově objevené kapely se přidávají automaticky; stejné názvy jsou zatím jedna rešeršní položka a identita se ověřuje v průběhu rešerše.
+AKTUALNI_KAPELA | The Fialky (bands.json, id 1)
+PROZKOUMANE_ROKY | Zatím žádné
+DALSI_KROK | Začít dohledávat doložené akce The Fialky v roce 2026; následně pokračovat po jednotlivých letech směrem k roku 2000.
