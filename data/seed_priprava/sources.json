@@ -1255,5 +1255,98 @@
       "venue_address",
       "venue_coordinates"
     ]
+  },
+  {
+    "id": "src-venue-zarazicka-address",
+    "name": "Zarazická hospoda – adresa a GPS",
+    "url": "https://www.darkzin.cz/mista-cesko/zarazicka-hospoda/",
+    "publisher": "Darkzin",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-sibir-address",
+    "name": "Sibiř – adresa a GPS",
+    "url": "https://www.darkzin.cz/kluby-cesko/sibir/",
+    "publisher": "Darkzin",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-kubik-address",
+    "name": "Kubík – adresa",
+    "url": "https://goout.net/sk/kubik/vzjxpd/",
+    "publisher": "GoOut",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-smer77-address",
+    "name": "Smer Klub 77 – kontakt, adresa a GPS",
+    "url": "https://www.smer77.sk/kontakt/",
+    "publisher": "Smer Klub 77",
+    "source_type": "official_venue_information",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-mmc-address",
+    "name": "Majestic Music Club – kontakt a adresa",
+    "url": "https://majestic.sk/kontakt/",
+    "publisher": "Majestic Music Club",
+    "source_type": "official_venue_information",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-meetfactory-address",
+    "name": "MeetFactory – adresa a GPS",
+    "url": "https://meetfactory.cz/en/kontakty",
+    "publisher": "MeetFactory",
+    "source_type": "official_venue_information",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address",
+      "venue_coordinates"
+    ]
+  },
+  {
+    "id": "src-venue-attack-address",
+    "name": "AKC Attack – adresa",
+    "url": "https://photorokaj.com/koncertne-lokacije/akc-attack-zagreb",
+    "publisher": "Photorokaj",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address"
+    ]
+  },
+  {
+    "id": "src-venue-gogo-address",
+    "name": "Gogo Music Club – adresa",
+    "url": "https://adresar.soundczech.cz/?genres%5B%5D=70&genres%5B%5D=76&regions%5B%5D=jihocesky-kraj&regions%5B%5D=jihomoravsky-kraj&regions%5B%5D=moravskoslezsky-kraj&regions%5B%5D=zlinsky-kraj&type=mista",
+    "publisher": "SoundCzech",
+    "source_type": "venue_directory",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "venue_address"
+    ]
   }
 ]
