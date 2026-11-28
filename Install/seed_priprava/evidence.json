@@ -807,12 +807,12 @@
     },
     {
       "id": "SRC-0089",
-      "url": "https://www.ireport.cz/clanky/recenze/rock-for-people-den-1-legendy-agnostic-front-the-exploited-a-duo-house-of-protection-ktere-vsechny-strcilo-do-kapsy",
-      "publisher": "iREPORT",
-      "title": "Rock for People – den 1",
-      "source_type": "post_event_report",
+      "url": "https://rockforpeople.cz/news/oficialni-aftermovie-rock-for-people-2026-je-tady/",
+      "publisher": "Rock for People",
+      "title": "Oficiální aftermovie Rock for People 2026",
+      "source_type": "official_festival_report",
       "retrieved_on": "2026-11-28",
-      "supports": "Report z prvního dne potvrzuje, že festival proběhl 11. 6. 2026; oficiální archiv The Fialky uvádí jejich vystoupení v tento den."
+      "supports": "Oficiální pořadatel 6. 8. 2026 zveřejnil aftermovie a potvrzuje uskutečnění festivalu Rock for People 2026."
     },
     {
       "id": "SRC-0090",
@@ -924,12 +924,12 @@
     },
     {
       "id": "SRC-0102",
-      "url": "https://www.ireport.cz/clanky/recenze/rock-for-people-den-1-legendy-agnostic-front-the-exploited-a-duo-house-of-protection-ktere-vsechny-strcilo-do-kapsy",
+      "url": "https://www.ireport.cz/clanky/recenze/mighty-sounds-den-1-legendy-agnostic-front-the-exploited-a-duo-house-of-protection-ktere-vsechny-strcilo-do-kapsy",
       "publisher": "iREPORT",
-      "title": "Mighty Sounds 2026 – páteční report",
+      "title": "Mighty Sounds 2026 – den první",
       "source_type": "post_event_report",
       "retrieved_on": "2026-11-28",
-      "supports": "Report z 27. 6. potvrzuje skutečná vystoupení Punk Floid a The Fialky v prvním dni festivalu."
+      "supports": "Report z 27. 6. 2026 potvrzuje skutečná vystoupení Punk Floid a The Fialky v prvním dni festivalu."
     },
     {
       "id": "SRC-0103",
