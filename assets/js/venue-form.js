@@ -105,6 +105,7 @@
               countryId.value = String(item.country_id);
               if (countryIso2) countryIso2.textContent = item.iso2 || '';
             }
+            if (window.KFFormValidation) window.KFFormValidation.validate(form);
           },
           function (item) { return item.name + ' · ' + item.country; });
       }, 180);
