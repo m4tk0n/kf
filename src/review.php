@@ -123,7 +123,12 @@ function route_review(): never
             $ev = kf_event_view_data(kf_event_clean($p['data']['values']));
             $imgUrl = kf_pending_image_path($id) !== null ? url('pending/image?id=' . $id) : '';
         }
-        page(t('review.title'), 'review', ['mode'=>'detail','pend'=>$p,'ev'=>$ev,'imgUrl'=>$imgUrl,'lock'=>$lock,'lockMine'=>$mine,'canTakeover'=>can('manage_users')]);
+        $venue = null;
+        if ((int)$p['type'] === (int)cfg('enums.pending_type.venue') && is_array($p['data']['values'] ?? null)) {
+            $venue = kf_venue_view_data(kf_venue_clean($p['data']['values']));
+            $imgUrl = kf_pending_image_path($id) !== null ? url('pending/image?id=' . $id) : '';
+        }
+        page(t('review.title'), 'review', ['mode'=>'detail','pend'=>$p,'ev'=>$ev,'venue'=>$venue,'imgUrl'=>$imgUrl,'lock'=>$lock,'lockMine'=>$mine,'canTakeover'=>can('manage_users')]);
     }
     $rows = q('SELECT p.id, p.type, p.title, p.date_from, p.created_at, u.display_name FROM ' . tbl('pending') . ' p JOIN ' . tbl('users') . ' u ON u.id = p.created_by ORDER BY p.id LIMIT ' . (int)cfg('paging.max_per_page'))->fetchAll();
     foreach ($rows as &$row) $row['lock'] = kf_pending_lock_state((int)$row['id']);
@@ -155,7 +160,22 @@ function route_review_post(): never
         security_log('pending_rejected', ['id'=>$id]);
         redirect('review?m=review_rejected');
     }
-    if ((int)$p['type'] !== (int)cfg('enums.pending_type.event') || !is_array($p['data']['values'] ?? null)) redirect('review?id=' . $id . '&m=review_unsupported');
+    if (!is_array($p['data']['values'] ?? null)) redirect('review?id=' . $id . '&m=review_unsupported');
+    if ((int)$p['type'] === (int)cfg('enums.pending_type.venue')) {
+        $v = kf_venue_clean($p['data']['values']);
+        if (kf_venue_validate($v) || kf_venue_duplicate($v, false)) redirect('review?id=' . $id . '&m=review_invalid');
+        try {
+            kf_venue_publish($v, kf_pending_image_path($id), (int)$p['created_by']);
+        } catch (Throwable $e) {
+            error_log('venue_approve: ' . $e->getMessage());
+            redirect('review?id=' . $id . '&m=save_failed');
+        }
+        kf_pending_remove($id);
+        user_approved_increment((int)$p['created_by']);
+        security_log('pending_approved', ['id'=>$id, 'type'=>'venue']);
+        redirect('review?m=review_approved');
+    }
+    if ((int)$p['type'] !== (int)cfg('enums.pending_type.event')) redirect('review?id=' . $id . '&m=review_unsupported');
     $v = kf_event_clean($p['data']['values']);
     if (kf_event_validate($v)) redirect('review?id=' . $id . '&m=review_invalid');
     if (kf_event_duplicate($v, false)) redirect('review?id=' . $id . '&m=review_duplicate');
