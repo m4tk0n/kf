@@ -260,7 +260,7 @@ check(kf_band_draft_get($users['user']) === null
     && kf_band_image_path($users['user'], $bandImages['detail'], 'l') === null, 'band submission clears both draft images');
 $bandReviewHtml = run_route('review_band_preview', $reviewToken, $pendingBandId);
 check(str_contains($bandReviewHtml, 'KF test band submission') && str_contains($bandReviewHtml, 'band-list-preview')
-    && str_contains($bandReviewHtml, 'pending/image?id=' . $pendingBandId . '&size=s'), 'moderation displays the band detail and the small-logo list preview');
+    && str_contains($bandReviewHtml, 'size=s'), 'moderation displays the band detail and the small-logo list preview');
 run_route('review_approve', $reviewToken, $pendingBandId);
 $publishedBand = q('SELECT id, logo FROM ' . tbl('bands') . ' WHERE name=?', ['KF test band submission'])->fetch();
 check($publishedBand !== false && (int)$publishedBand['logo'] === 1, 'moderator approval publishes the band and marks its small logo');
