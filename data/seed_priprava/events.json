@@ -5236,12 +5236,55 @@
         "name": "E!E",
         "country_code": "CZ",
         "band_id": "ee"
+      },
+      {
+        "date": "2026-08-21",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2026-08-21",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2026-08-21",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "CZ",
+        "band_id": "visaci-zamek"
+      },
+      {
+        "date": "2026-08-21",
+        "name": "ZNOUZECTNOST",
+        "country_code": "CZ",
+        "band_id": "znouzectnost"
+      },
+      {
+        "date": "2026-08-21",
+        "name": "N.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "nvu"
+      },
+      {
+        "date": "2026-08-21",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2026-08-21",
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
       "src-ee-bandzone-archive",
-      "src-ee-official-concerts"
+      "src-ee-official-concerts",
+      "src-zputnik-bandzone-archive"
     ],
     "venue_name": "CZ"
   },
@@ -5431,11 +5474,19 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2026-07-11",
+        "name": "ZPUTNIK",
+        "country_code": "festival",
+        "band_id": "zputnik"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "CZ"
   },
   {
     "id": "sps-2026-07-10-podebrady",
@@ -7581,11 +7632,25 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2022-08-12",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2022-08-12",
+        "name": "PLEXIS",
+        "country_code": "CZ",
+        "band_id": "plexis"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Starák Fest"
   },
   {
     "id": "sps-2022-08-06-kozarovice",
@@ -9047,6 +9112,48 @@
         "name": "E!E",
         "country_code": "CZ",
         "band_id": "ee"
+      },
+      {
+        "date": "2020-08-21",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-08-21",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2020-08-21",
+        "name": "ZNOUZECTNOST",
+        "country_code": "CZ",
+        "band_id": "znouzectnost"
+      },
+      {
+        "date": "2020-08-21",
+        "name": "N.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "nvu"
+      },
+      {
+        "date": "2020-08-21",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2020-08-21",
+        "name": "DUKLA VOZOVNA",
+        "country_code": "CZ",
+        "band_id": "dukla-vozovna"
+      },
+      {
+        "date": "2020-08-21",
+        "name": "DILEMMA IN CINEMA",
+        "country_code": "CZ",
+        "band_id": "dilemma-in-cinema"
       }
     ],
     "source_ids": [
@@ -9054,7 +9161,8 @@
       "src-nezfales-official-archive",
       "src-houba-official-archive",
       "src-ee-bandzone-archive",
-      "src-ee-official-concerts"
+      "src-ee-official-concerts",
+      "src-zputnik-bandzone-archive"
     ],
     "venue_name": "Rock na Valníku 2020"
   },
@@ -9192,11 +9300,37 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2020-07-11",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-07-11",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2020-07-11",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2020-07-11",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Jezero Poděbrady"
   },
   {
     "id": "sps-2020-07-11-strenice-u-mlade-boleslavi",
@@ -9236,11 +9370,19 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2020-07-10",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Jezero Poděbrady"
   },
   {
     "id": "sps-2020-06-13-velke-bilovice",
@@ -16301,12 +16443,44 @@
         "name": "ZEMĚŽLUČ",
         "country_code": "CZ",
         "band_id": "zemeluc"
+      },
+      {
+        "date": "2022-07-30",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2022-07-30",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2022-07-30",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2022-07-30",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": "driak"
+      },
+      {
+        "date": "2022-07-30",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
       }
     ],
     "source_ids": [
       "src-nezfales-official-archive",
-      "src-zemezluc-official-concert-calendar"
-    ]
+      "src-zemezluc-official-concert-calendar",
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Na Bojišti"
   },
   {
     "id": "nezfales-2022-07-23-tremosnice",
@@ -19995,10 +20169,65 @@
         "name": "PUNK FLOID",
         "country_code": "CZ",
         "band_id": "punk-floid"
+      },
+      {
+        "date": "2022-06-25",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2022-06-25",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2022-06-25",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      },
+      {
+        "date": "2022-06-25",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-06-25",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2022-06-25",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2022-06-25",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-06-25",
+        "name": "MUERTI",
+        "country_code": "CZ",
+        "band_id": "muerti"
+      },
+      {
+        "date": "2022-06-25",
+        "name": "TRAGEDIS",
+        "country_code": "CZ",
+        "band_id": "tragedis"
       }
     ],
     "source_ids": [
-      "src-punkfloid-official-archive"
+      "src-punkfloid-official-archive",
+      "src-zputnik-bandzone-archive"
     ],
     "venue_name": "Brněnec Fest"
   },
@@ -32222,7 +32451,8 @@
       }
     ],
     "source_ids": [
-      "src-vvu-bandzone-archive"
+      "src-vvu-bandzone-archive",
+      "src-zputnik-bandzone-archive"
     ],
     "venue_name": "Klub Kravín"
   },
@@ -32369,5 +32599,1048 @@
       "src-sas-bandzone-archive"
     ],
     "venue_name": "koupaliště"
+  },
+  {
+    "id": "zputnik-2020-01-18-kolin",
+    "name": "Lednová Žízeň 3",
+    "event_type": "festival",
+    "start_date": "2020-01-18",
+    "end_date": "2020-01-18",
+    "city": "Kolín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-01-18",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-01-18",
+        "name": "TRAGEDIS",
+        "country_code": "CZ",
+        "band_id": "tragedis"
+      },
+      {
+        "date": "2020-01-18",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "U Vodvárků"
+  },
+  {
+    "id": "zputnik-2020-02-28-ceske-budejovice",
+    "name": "Proč ne",
+    "event_type": "concert",
+    "start_date": "2020-02-28",
+    "end_date": "2020-02-28",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-02-28",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-02-28",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "MC Fabrika"
+  },
+  {
+    "id": "zputnik-2020-03-07-melnik",
+    "name": "Punková Mydlárna",
+    "event_type": "concert",
+    "start_date": "2020-03-07",
+    "end_date": "2020-03-07",
+    "city": "Mělník",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-03-07",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-03-07",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Stará Mydlárna"
+  },
+  {
+    "id": "zputnik-2020-04-04-mnich",
+    "name": "Indiánská rezervace, Zputnik, !V.V.Ú. a…",
+    "event_type": "vvu",
+    "start_date": "2020-04-04",
+    "end_date": "2020-04-04",
+    "city": "Mnich",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-04-04",
+        "name": "ZPUTNIK",
+        "country_code": "concert",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "zputnik-2020-04-11-ludvikovice",
+    "name": "Benefiční akce",
+    "event_type": "festival",
+    "start_date": "2020-04-11",
+    "end_date": "2020-04-11",
+    "city": "Ludvíkovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-04-11",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-04-11",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Kulturní dům"
+  },
+  {
+    "id": "zputnik-2020-06-27-rousinov",
+    "name": "RousFest 20",
+    "event_type": "festival",
+    "start_date": "2020-06-27",
+    "end_date": "2020-06-27",
+    "city": "Rousínov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-06-27",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Fotbalový stadion"
+  },
+  {
+    "id": "zputnik-2020-07-11-strelna",
+    "name": "PUNK FEST 2020",
+    "event_type": "festival",
+    "start_date": "2020-07-11",
+    "end_date": "2020-07-11",
+    "city": "Střelná",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-07-11",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-07-11",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2020-07-11",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      },
+      {
+        "date": "2020-07-11",
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "KD"
+  },
+  {
+    "id": "zputnik-2020-07-18-ujezd-u-chanovic",
+    "name": "CIDRE PUNK FEST 2020",
+    "event_type": "festival",
+    "start_date": "2020-07-18",
+    "end_date": "2020-07-18",
+    "city": "Újezd u Chanovic",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-07-18",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Moštárna Újezd"
+  },
+  {
+    "id": "zputnik-2020-07-31-chvalkov",
+    "name": "Kravín Fest 2020",
+    "event_type": "festival",
+    "start_date": "2020-07-31",
+    "end_date": "2020-07-31",
+    "city": "Chválkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-07-31",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-07-31",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2020-07-31",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2020-07-31",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      },
+      {
+        "date": "2020-07-31",
+        "name": "PLEXIS",
+        "country_code": "CZ",
+        "band_id": "plexis"
+      },
+      {
+        "date": "2020-07-31",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2020-07-31",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2020-07-31",
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
+      },
+      {
+        "date": "2020-07-31",
+        "name": "TRAGEDIS",
+        "country_code": "CZ",
+        "band_id": "tragedis"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Bývalý zemědělský objekt"
+  },
+  {
+    "id": "zputnik-2020-08-07-harrachov",
+    "name": "Keltská Noc 2020",
+    "event_type": "festival",
+    "start_date": "2020-08-07",
+    "end_date": "2020-08-07",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-08-07",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-08-07",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2020-08-07",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "areál festivalu"
+  },
+  {
+    "id": "zputnik-2020-09-02-litomerice",
+    "name": "VVU ZPUTNIK RUINEDFLOOR",
+    "event_type": "concert",
+    "start_date": "2020-09-02",
+    "end_date": "2020-09-02",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-09-02",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-09-02",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Baronka"
+  },
+  {
+    "id": "zputnik-2020-09-05-postoloprty",
+    "name": "Zámeckej fest",
+    "event_type": "festival",
+    "start_date": "2020-09-05",
+    "end_date": "2020-09-05",
+    "city": "Postoloprty",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-09-05",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Zámecká zahrada"
+  },
+  {
+    "id": "zputnik-2020-09-18-kostelec-nad-orlici",
+    "name": "(mini HC) Majáles 3",
+    "event_type": "festival",
+    "start_date": "2020-09-18",
+    "end_date": "2020-09-18",
+    "city": "Kostelec nad Orlicí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-09-18",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-09-18",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2020-09-18",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "koupaliště"
+  },
+  {
+    "id": "zputnik-2020-09-26-volduchy",
+    "name": "BENEFIČNÍ KONCERT",
+    "event_type": "sas",
+    "start_date": "2020-09-26",
+    "end_date": "2020-09-26",
+    "city": "Volduchy",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-09-26",
+        "name": "ZPUTNIK",
+        "country_code": "festival",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "zputnik-2020-11-13-nachod",
+    "name": "Autumn Punkrock",
+    "event_type": "concert",
+    "start_date": "2020-11-13",
+    "end_date": "2020-11-13",
+    "city": "Náchod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2020-11-13",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2020-11-13",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "BassWood Republic"
+  },
+  {
+    "id": "zputnik-2022-03-05-ceske-budejovice",
+    "name": "Budějcká Punkovaná vol. 2",
+    "event_type": "concert",
+    "start_date": "2022-03-05",
+    "end_date": "2022-03-05",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-03-05",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "mcFabrika"
+  },
+  {
+    "id": "zputnik-2022-04-02-litvinov",
+    "name": "ZPUTNIK & STATUS PRAESENTS V PONORCE",
+    "event_type": "concert",
+    "start_date": "2022-04-02",
+    "end_date": "2022-04-02",
+    "city": "Litvínov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-04-02",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Hudební klub Ponorka"
+  },
+  {
+    "id": "zputnik-2022-06-18-pilnikov",
+    "name": "Kohout plaší smrt, Zeměžluč a další…",
+    "event_type": "festival",
+    "start_date": "2022-06-18",
+    "end_date": "2022-06-18",
+    "city": "Pilníkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-06-18",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2022-06-18",
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Fotbalové hřiště"
+  },
+  {
+    "id": "zputnik-2022-07-09-prysk",
+    "name": "ČKSD fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-07-09",
+    "end_date": "2022-07-09",
+    "city": "Prysk",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-07-09",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Fotbalové hřiště"
+  },
+  {
+    "id": "zputnik-2022-07-09-tynec-nad-labem",
+    "name": "R.I.O. festival 2022",
+    "event_type": "festival",
+    "start_date": "2022-07-09",
+    "end_date": "2022-07-09",
+    "city": "Týnec nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-07-09",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Letní parket"
+  },
+  {
+    "id": "zputnik-2022-07-22-morkovice-slizany",
+    "name": "Freedom forever fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-07-22",
+    "end_date": "2022-07-22",
+    "city": "Morkovice-Slížany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-07-22",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2022-07-22",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      },
+      {
+        "date": "2022-07-22",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      },
+      {
+        "date": "2022-07-22",
+        "name": "N.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "nvu"
+      },
+      {
+        "date": "2022-07-22",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Cihelna Morkovice"
+  },
+  {
+    "id": "zputnik-2022-07-29-nekor",
+    "name": "Krychle-fest",
+    "start_date": "2022-07-29",
+    "end_date": "2022-07-29",
+    "city": "Nekoř",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-07-29",
+        "name": "ZPUTNIK",
+        "country_code": "festival",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "zputnik-2022-08-05-chvalkov",
+    "name": "KRAVÍN FEST 2022 – 6. ročník",
+    "event_type": "festival",
+    "start_date": "2022-08-05",
+    "end_date": "2022-08-05",
+    "city": "Chválkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-08-05",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2022-08-05",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2022-08-05",
+        "name": "PLEXIS",
+        "country_code": "CZ",
+        "band_id": "plexis"
+      },
+      {
+        "date": "2022-08-05",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      },
+      {
+        "date": "2022-08-05",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2022-08-05",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2022-08-05",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2022-08-05",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "areál"
+  },
+  {
+    "id": "zputnik-2022-08-13-klaster-hradiste-nad-jizerou",
+    "name": "Punk rumfest",
+    "event_type": "festival",
+    "start_date": "2022-08-13",
+    "end_date": "2022-08-13",
+    "city": "Klášter Hradiště nad Jizerou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-08-13",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2022-08-13",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "fotbalový areál"
+  },
+  {
+    "id": "zputnik-2022-08-20-nova-bystrice",
+    "name": "NB.foot.fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-08-20",
+    "end_date": "2022-08-20",
+    "city": "Nová Bystřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-08-20",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "fotbalové hřiště"
+  },
+  {
+    "id": "zputnik-2022-09-03-vodnany",
+    "name": "Frovfest 10",
+    "event_type": "festival",
+    "start_date": "2022-09-03",
+    "end_date": "2022-09-03",
+    "city": "Vodňany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-09-03",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Sportovní areál Blanice"
+  },
+  {
+    "id": "zputnik-2022-09-24-brno",
+    "name": "4th ANNIVERSARY PARTY",
+    "event_type": "concert",
+    "start_date": "2022-09-24",
+    "end_date": "2022-09-24",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2022-09-24",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Unleaded Coffee"
+  },
+  {
+    "id": "zputnik-2026-01-07-mlada-boleslav",
+    "name": "Punk koncert",
+    "event_type": "concert",
+    "start_date": "2026-01-07",
+    "end_date": "2026-01-07",
+    "city": "Mladá Boleslav",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-01-07",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Willax Klub Heineken"
+  },
+  {
+    "id": "zputnik-2026-02-14-nova-vcelnice",
+    "name": "Rock metalová noc",
+    "event_type": "concert",
+    "start_date": "2026-02-14",
+    "end_date": "2026-02-14",
+    "city": "Nová Včelnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-02-14",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Hotel Jelen"
+  },
+  {
+    "id": "zputnik-2026-03-21-nymburk",
+    "name": "Rasmane, Aldabra, Laters a Zputnik",
+    "event_type": "concert",
+    "start_date": "2026-03-21",
+    "end_date": "2026-03-21",
+    "city": "Nymburk",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-03-21",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "U Strejčka"
+  },
+  {
+    "id": "zputnik-2026-06-06-ostrava",
+    "name": "SORFEST 2026",
+    "event_type": "festival",
+    "start_date": "2026-06-06",
+    "end_date": "2026-06-06",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-06",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      },
+      {
+        "date": "2026-06-06",
+        "name": "VISACÍ ZÁMEK",
+        "country_code": "CZ",
+        "band_id": "visaci-zamek"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Slezskoostravský hrad"
+  },
+  {
+    "id": "zputnik-2026-06-12-trebetice",
+    "name": "Moták",
+    "event_type": "festival",
+    "start_date": "2026-06-12",
+    "end_date": "2026-06-12",
+    "city": "Třebětice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-12",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Třebětice"
+  },
+  {
+    "id": "zputnik-2026-06-13-petrovice",
+    "name": "Podejte mi skunk fest I.",
+    "event_type": "festival",
+    "start_date": "2026-06-13",
+    "end_date": "2026-06-13",
+    "city": "Petrovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-13",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "hřiště"
+  },
+  {
+    "id": "zputnik-2026-07-10-cesky-sternberk",
+    "name": "River Fest 13",
+    "event_type": "festival",
+    "start_date": "2026-07-10",
+    "end_date": "2026-07-10",
+    "city": "Český Šternberk",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-07-10",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Kemp u Karla"
+  },
+  {
+    "id": "zputnik-2026-08-22-zlutice",
+    "name": "Babar fest vol.6",
+    "event_type": "festival",
+    "start_date": "2026-08-22",
+    "end_date": "2026-08-22",
+    "city": "Žlutice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-08-22",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Koupaliště"
+  },
+  {
+    "id": "zputnik-2026-10-17-plzen",
+    "name": "Gauneři, Zputnik a Šanov 1",
+    "event_type": "concert",
+    "start_date": "2026-10-17",
+    "end_date": "2026-10-17",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-10-17",
+        "name": "ZPUTNIK",
+        "country_code": "CZ",
+        "band_id": "zputnik"
+      }
+    ],
+    "source_ids": [
+      "src-zputnik-bandzone-archive"
+    ],
+    "venue_name": "Divadlo pod lampou"
   }
 ]
