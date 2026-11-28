@@ -1254,6 +1254,133 @@
         "https://www.ireport.cz/clanky/recenze/mighty-sounds-den-1-legendy-agnostic-front-the-exploited-a-duo-house-of-protection-ktere-vsechny-strcilo-do-kapsy",
         "https://www.setlist.fm/setlist/the-fialky/2026/letist-apv-dvr-tabor-czechia-b75cdb2.html"
       ]
+    },
+    {
+      "id": 45,
+      "name": "Den fotbalu Polička 2026",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-07-03",
+      "date_to": "2026-07-04",
+      "time_start": "14:00",
+      "city": "Polička",
+      "country": "CZ",
+      "venue_id": 37,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "17:10"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://denfotbalu.cz/informace/",
+        "https://denfotbalu.cz/home/",
+        "https://bandzone.cz/koncert/559138-policka-stadion-sk-policka-den-fotbalu-policka-2026"
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Brněnecfest XXV aneb Punkovej klystýr",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-07-04",
+      "date_to": "2026-07-04",
+      "time_start": "09:00",
+      "city": "Brněnec",
+      "country": "CZ",
+      "venue_id": 38,
+      "bands": [
+        {
+          "band_id": 4,
+          "sort_order": 1,
+          "time_play": "11:40"
+        },
+        {
+          "band_id": 3,
+          "sort_order": 2,
+          "time_play": "16:45"
+        },
+        {
+          "band_id": 7,
+          "sort_order": 3,
+          "time_play": "17:50"
+        },
+        {
+          "band_id": 1,
+          "sort_order": 4,
+          "time_play": "18:55"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.totaci.cz/koncerty",
+        "https://www.nezfales.cz/odehrane-koncerty/",
+        "https://www.punkfloid.com/sezona-26-prehled",
+        "https://www.lacultura.cz/brnenecfest-xxv-jubilejni-rocnik-punkoveho-festivalu-opet-rozbouri-brnenec/tiskova-zprava/",
+        "https://www.smsticket.cz/vstupenky/61921-brnenecfest-xxv-aneb-punkovej-klystyr-brnenec-brnenec-los-fastidios-visaci-zamek-totalni-nasazeni"
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Barvy léta 2026",
+      "type": "festival",
+      "status": "held",
+      "date_from": "2026-07-10",
+      "date_to": "2026-07-11",
+      "time_start": null,
+      "city": "Poděbrady",
+      "country": "CZ",
+      "venue_id": 39,
+      "bands": [
+        {
+          "band_id": 3,
+          "sort_order": 1,
+          "time_play": "19:20"
+        },
+        {
+          "band_id": 2,
+          "sort_order": 2,
+          "time_play": "20:40"
+        },
+        {
+          "band_id": 1,
+          "sort_order": 3,
+          "time_play": "23:35"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://www.barvyleta.cz/?page=o-akci",
+        "https://collaborate.darkzin.cz/archiv-probehlych-akci/barvy-leta-2026-podebrady-vol-25-/",
+        "https://rocklist.cz/fotoreport-z-festivalu-barvy-leta-2026-patek/",
+        "https://koupalistejezero.cz/kontakty"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Staré Pušky fest",
+      "type": "concert",
+      "status": "held",
+      "date_from": "2026-07-11",
+      "date_to": "2026-07-11",
+      "time_start": null,
+      "city": "Hlučín",
+      "country": "CZ",
+      "venue_id": 40,
+      "bands": [
+        {
+          "band_id": 1,
+          "sort_order": 1,
+          "time_play": "22:20"
+        }
+      ],
+      "sources": [
+        "https://thefialky.cz/odehrane-koncerty/",
+        "https://bandzone.cz/koncert/560767-hlucin-sterkovna-stare-pusky-fest",
+        "https://www.sak-hlucin.cz/cs/hlucinske-jezero/informace-o-arealu-hlucinskeho-jezera/a-1626"
+      ]
     }
   ],
   "next": []
