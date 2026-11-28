@@ -229,7 +229,9 @@
     "country_code": "SK",
     "genres": [],
     "sources": [
-      "src-podparou-lineup-2025"
+      "src-podparou-lineup-2025",
+      "src-konflikt-gigography",
+      "src-konflikt-official"
     ],
     "verification": "country_confirmed_by_official_program_label"
   },
@@ -373,7 +375,8 @@
     "country_code": "SK",
     "genres": [],
     "sources": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-rozpor-gigography"
     ],
     "verification": "country_code_labelled_in_punkgen_archive"
   },
@@ -1418,5 +1421,17 @@
       "src-zputnik-bandzone-archive"
     ],
     "verification": "Bandzone_band_archive"
+  },
+  {
+    "id": "plexis",
+    "name": "PLEXIS",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-plexis-bandzone-archive"
+    ],
+    "verification": "Bandzone_archive"
   }
 ]

@@ -3033,11 +3033,19 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2025-06-21",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Kulturní dům"
   },
   {
     "id": "sps-2025-06-21-petrovice-u-sedlcan",
@@ -7455,12 +7463,20 @@
         "name": "NEŽFALEŠ",
         "country_code": "CZ",
         "band_id": "nezfales"
+      },
+      {
+        "date": "2022-08-26",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
       }
     ],
     "source_ids": [
       "src-sps-official-concert-calendar",
-      "src-nezfales-official-archive"
-    ]
+      "src-nezfales-official-archive",
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Letiště Trenčín"
   },
   {
     "id": "sps-2022-08-20-slany",
@@ -8087,11 +8103,19 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2022-04-22",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
-    ]
+      "src-sps-official-concert-calendar",
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Modrá Vopice"
   },
   {
     "id": "sps-2022-04-16-mladosovice-u-trebone",
@@ -27126,11 +27150,26 @@
         "name": "ZEMĚŽLUČ",
         "country_code": "CZ",
         "band_id": "zemeluc"
+      },
+      {
+        "date": "2024-07-26",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      },
+      {
+        "date": "2024-07-26",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
       }
     ],
     "source_ids": [
-      "src-zemezluc-official-concert-calendar"
-    ]
+      "src-zemezluc-official-concert-calendar",
+      "src-konflikt-gigography",
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Bojiště"
   },
   {
     "id": "zemeluc-2024-07-27-spisska-bela",
@@ -27531,7 +27570,7 @@
   {
     "id": "zemeluc-2023-04-15-frydek-mistek",
     "name": "Zeměžluč – koncert",
-    "event_type": "concert",
+    "event_type": "festival",
     "start_date": "2023-04-15",
     "end_date": "2023-04-15",
     "city": "Frýdek-Místek",
@@ -27544,11 +27583,19 @@
         "name": "ZEMĚŽLUČ",
         "country_code": "CZ",
         "band_id": "zemeluc"
+      },
+      {
+        "date": "2023-04-15",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
       }
     ],
     "source_ids": [
-      "src-zemezluc-official-concert-calendar"
-    ]
+      "src-zemezluc-official-concert-calendar",
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Zkušebna Art Club"
   },
   {
     "id": "zemeluc-2023-04-22-horovice",
@@ -31003,5 +31050,991 @@
       "src-visaci-official-archive"
     ],
     "venue_name": "CZ"
+  },
+  {
+    "id": "konflikt-2026-07-11-slatinany",
+    "name": "Proč Fest 2026",
+    "event_type": "festival",
+    "start_date": "2026-07-11",
+    "end_date": "2026-07-11",
+    "city": "Slatiňany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2026-07-11",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Sokolovna"
+  },
+  {
+    "id": "konflikt-2026-06-25-bela-nad-cirochou",
+    "name": "Rock Pod Kameňom 2026",
+    "event_type": "festival",
+    "start_date": "2026-06-25",
+    "end_date": "2026-06-25",
+    "city": "Belá nad Cirochou",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2026-06-25",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Areál Topovné"
+  },
+  {
+    "id": "konflikt-2026-02-21-ceske-budejovice",
+    "name": "Konflikt + support: Hrubý domácí produkt",
+    "event_type": "concert",
+    "start_date": "2026-02-21",
+    "end_date": "2026-02-21",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2026-02-21",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Club Lucerna"
+  },
+  {
+    "id": "konflikt-2025-10-25-nova-role",
+    "name": "Kids and heroes punk day",
+    "event_type": "festival",
+    "start_date": "2025-10-25",
+    "end_date": "2025-10-25",
+    "city": "Nová Role",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2025-10-25",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Kulturní dům"
+  },
+  {
+    "id": "konflikt-2025-09-20-jirikov",
+    "name": "Goodbye Summer Fest 2025",
+    "event_type": "festival",
+    "start_date": "2025-09-20",
+    "end_date": "2025-09-20",
+    "city": "Jiříkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2025-09-20",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Areál Spartak"
+  },
+  {
+    "id": "konflikt-2025-09-19-kladno",
+    "name": "zakázanÝovoce + Konflikt + Hrubý domáci produkt",
+    "event_type": "concert",
+    "start_date": "2025-09-19",
+    "end_date": "2025-09-19",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2025-09-19",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Black Road Café"
+  },
+  {
+    "id": "konflikt-2025-08-16-dubnany",
+    "name": "Metla Fest 2025",
+    "event_type": "festival",
+    "start_date": "2025-08-16",
+    "end_date": "2025-08-16",
+    "city": "Dubňany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2025-08-16",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Přírodní areál"
+  },
+  {
+    "id": "konflikt-2025-07-19-olomouc",
+    "name": "Fest Pod Parou 2025",
+    "event_type": "festival",
+    "start_date": "2025-07-19",
+    "end_date": "2025-07-19",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2025-07-19",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Korunní pevnůstka"
+  },
+  {
+    "id": "konflikt-2025-06-28-snina",
+    "name": "Rock Pod Kameňom 2025",
+    "event_type": "festival",
+    "start_date": "2025-06-28",
+    "end_date": "2025-06-28",
+    "city": "Snina",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2025-06-28",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "RO Sninské Rybníky"
+  },
+  {
+    "id": "konflikt-2025-05-24-budapest",
+    "name": "Punk Legends fest 2025",
+    "event_type": "festival",
+    "start_date": "2025-05-24",
+    "end_date": "2025-05-24",
+    "city": "Budapest",
+    "country_code": "HU",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2025-05-24",
+        "name": "KONFLIKT",
+        "country_code": "HU",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Barba Negra"
+  },
+  {
+    "id": "konflikt-2024-10-12-valasske-klobouky",
+    "name": "Klobucké punkování 2024",
+    "event_type": "festival",
+    "start_date": "2024-10-12",
+    "end_date": "2024-10-12",
+    "city": "Valašské Klobouky",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2024-10-12",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "KD Klobučan"
+  },
+  {
+    "id": "konflikt-2024-09-27-oravska-lesna",
+    "name": "Orava Rock 2024",
+    "event_type": "festival",
+    "start_date": "2024-09-27",
+    "end_date": "2024-09-27",
+    "city": "Oravská Lesná",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2024-09-27",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Grizzly Aréna"
+  },
+  {
+    "id": "konflikt-2024-06-29-snina",
+    "name": "Rock Pod Kameňom 2024",
+    "event_type": "festival",
+    "start_date": "2024-06-29",
+    "end_date": "2024-06-29",
+    "city": "Snina",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2024-06-29",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "RO Sninské Rybníky"
+  },
+  {
+    "id": "konflikt-2024-05-11-uherske-hradiste",
+    "name": "Konflikt",
+    "event_type": "concert",
+    "start_date": "2024-05-11",
+    "end_date": "2024-05-11",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2024-05-11",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Klub Kino Mír"
+  },
+  {
+    "id": "konflikt-2024-05-10-ostrava",
+    "name": "Konflikt + HDP + IQ:60",
+    "event_type": "concert",
+    "start_date": "2024-05-10",
+    "end_date": "2024-05-10",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2024-05-10",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Barrák Club"
+  },
+  {
+    "id": "konflikt-2024-05-04-brno",
+    "name": "Konflikt (SK), Hrubý Domácí Produkt",
+    "event_type": "concert",
+    "start_date": "2024-05-04",
+    "end_date": "2024-05-04",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2024-05-04",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Melodka"
+  },
+  {
+    "id": "konflikt-2023-11-10-chrudim",
+    "name": "Konflikt",
+    "event_type": "concert",
+    "start_date": "2023-11-10",
+    "end_date": "2023-11-10",
+    "city": "Chrudim",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2023-11-10",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "R Klub"
+  },
+  {
+    "id": "konflikt-2023-11-04-teplice",
+    "name": "KONFLIKT + guests",
+    "event_type": "concert",
+    "start_date": "2023-11-04",
+    "end_date": "2023-11-04",
+    "city": "Teplice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2023-11-04",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "KNAK music klub"
+  },
+  {
+    "id": "konflikt-2023-07-27-trutnov",
+    "name": "Pod Parou 2023",
+    "event_type": "festival",
+    "start_date": "2023-07-27",
+    "end_date": "2023-07-27",
+    "city": "Trutnov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2023-07-27",
+        "name": "KONFLIKT",
+        "country_code": "CZ",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Bojiště"
+  },
+  {
+    "id": "konflikt-2023-06-24-trnovec-nad-vahom",
+    "name": "Konflikt",
+    "event_type": "concert",
+    "start_date": "2023-06-24",
+    "end_date": "2023-06-24",
+    "city": "Trnovec nad Váhom",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2023-06-24",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "festival"
+  },
+  {
+    "id": "konflikt-2022-10-06-miami",
+    "name": "Konflikt",
+    "event_type": "concert",
+    "start_date": "2022-10-06",
+    "end_date": "2022-10-06",
+    "city": "Miami",
+    "country_code": "US",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2022-10-06",
+        "name": "KONFLIKT",
+        "country_code": "US",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "E11even Miami"
+  },
+  {
+    "id": "konflikt-2022-09-14-bratislava",
+    "name": "Konflikt",
+    "event_type": "concert",
+    "start_date": "2022-09-14",
+    "end_date": "2022-09-14",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2022-09-14",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Randal Club"
+  },
+  {
+    "id": "konflikt-2022-09-10-budapest",
+    "name": "Konflikt",
+    "event_type": "concert",
+    "start_date": "2022-09-10",
+    "end_date": "2022-09-10",
+    "city": "Budapest",
+    "country_code": "HU",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2022-09-10",
+        "name": "KONFLIKT",
+        "country_code": "HU",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Aréna Garden"
+  },
+  {
+    "id": "konflikt-2021-09-03-ziharec",
+    "name": "Konflikt",
+    "event_type": "concert",
+    "start_date": "2021-09-03",
+    "end_date": "2021-09-03",
+    "city": "Žihárec",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2021-09-03",
+        "name": "KONFLIKT",
+        "country_code": "SK",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "Futballpálya"
+  },
+  {
+    "id": "konflikt-2021-08-27-malinovo",
+    "name": "Punk Rock Fest",
+    "start_date": "2021-08-27",
+    "end_date": "2021-08-27",
+    "city": "Malinovo",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2021-08-27",
+        "name": "KONFLIKT",
+        "country_code": "festival",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "SK"
+  },
+  {
+    "id": "konflikt-2021-08-07-jaslovske-bohunice",
+    "name": "Slávnosti",
+    "start_date": "2021-08-07",
+    "end_date": "2021-08-07",
+    "city": "Jaslovské Bohunice",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2021-08-07",
+        "name": "KONFLIKT",
+        "country_code": "festival",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "SK"
+  },
+  {
+    "id": "konflikt-2021-07-24-snina",
+    "name": "Rock pod Kameňom 2021",
+    "start_date": "2021-07-24",
+    "end_date": "2021-07-24",
+    "city": "Snina",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2021-07-24",
+        "name": "KONFLIKT",
+        "country_code": "festival",
+        "band_id": "konflikt"
+      }
+    ],
+    "source_ids": [
+      "src-konflikt-gigography"
+    ],
+    "venue_name": "SK"
+  },
+  {
+    "id": "rozpor-2026-07-08-trencin",
+    "name": "Pohoda Festival 2026",
+    "event_type": "festival",
+    "start_date": "2026-07-08",
+    "end_date": "2026-07-08",
+    "city": "Trenčín",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2026-07-08",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Letiště Trenčín"
+  },
+  {
+    "id": "rozpor-2026-05-01-plzen",
+    "name": "Rozpor",
+    "event_type": "concert",
+    "start_date": "2026-05-01",
+    "end_date": "2026-05-01",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2026-05-01",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Divadlo pod Lampou"
+  },
+  {
+    "id": "rozpor-2026-03-14-praha",
+    "name": "Zputnik & Rozpor",
+    "event_type": "concert",
+    "start_date": "2026-03-14",
+    "end_date": "2026-03-14",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2026-03-14",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Kamina boat"
+  },
+  {
+    "id": "rozpor-2026-02-13-brno",
+    "name": "Rozpor + Adacta + Mental Tension + Wargame",
+    "event_type": "concert",
+    "start_date": "2026-02-13",
+    "end_date": "2026-02-13",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2026-02-13",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Kabinet Múz"
+  },
+  {
+    "id": "rozpor-2025-10-25-valasske-klobouky",
+    "name": "Klobucké Punkování 2025",
+    "event_type": "festival",
+    "start_date": "2025-10-25",
+    "end_date": "2025-10-25",
+    "city": "Valašské Klobouky",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2025-10-25",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "KD Klobučan"
+  },
+  {
+    "id": "rozpor-2025-01-11-praha",
+    "name": "Winter Oi! Is Coming",
+    "event_type": "festival",
+    "start_date": "2025-01-11",
+    "end_date": "2025-01-11",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2025-01-11",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Futurum Music Bar"
+  },
+  {
+    "id": "rozpor-2024-08-30-opatovce",
+    "name": "Punkáči deťom 2024",
+    "event_type": "festival",
+    "start_date": "2024-08-30",
+    "end_date": "2024-08-30",
+    "city": "Opatovce",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2024-08-30",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Rybníky Farma Ryby"
+  },
+  {
+    "id": "rozpor-2024-07-20-police-nad-metuji",
+    "name": "Bez Šance Fest 2024",
+    "event_type": "festival",
+    "start_date": "2024-07-20",
+    "end_date": "2024-07-20",
+    "city": "Police nad Metují",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2024-07-20",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Hospůdka U Pavla"
+  },
+  {
+    "id": "rozpor-2024-06-14-praha",
+    "name": "Prague Sharp Fest 2024",
+    "event_type": "festival",
+    "start_date": "2024-06-14",
+    "end_date": "2024-06-14",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2024-06-14",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Klub 007 Strahov"
+  },
+  {
+    "id": "rozpor-2024-05-25-bratislava",
+    "name": "Rozpor + Distax + Märnø",
+    "event_type": "concert",
+    "start_date": "2024-05-25",
+    "end_date": "2024-05-25",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2024-05-25",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Pink Whale"
+  },
+  {
+    "id": "rozpor-2024-05-03-orlova",
+    "name": "No Clash Fest: Rozpor + Märnø + další",
+    "event_type": "festival",
+    "start_date": "2024-05-03",
+    "end_date": "2024-05-03",
+    "city": "Orlová",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2024-05-03",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Futra"
+  },
+  {
+    "id": "rozpor-2023-09-23-uherske-hradiste",
+    "name": "Hot Dog Fest 2023",
+    "event_type": "festival",
+    "start_date": "2023-09-23",
+    "end_date": "2023-09-23",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2023-09-23",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Klub Kino Mír"
+  },
+  {
+    "id": "rozpor-2023-07-07-trencin",
+    "name": "Pohoda Festival 2023",
+    "event_type": "festival",
+    "start_date": "2023-07-07",
+    "end_date": "2023-07-07",
+    "city": "Trenčín",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2023-07-07",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Letiště Trenčín"
+  },
+  {
+    "id": "rozpor-2023-03-25-brno",
+    "name": "RozpoR + Vydrapená Bužírka Punk System",
+    "event_type": "concert",
+    "start_date": "2023-03-25",
+    "end_date": "2023-03-25",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2023-03-25",
+        "name": "ROZPOR",
+        "country_code": "CZ",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Kabinet Múz"
+  },
+  {
+    "id": "rozpor-2023-02-24-liptovsky-mikulas",
+    "name": "Rock s Ukrajinou",
+    "event_type": "concert",
+    "start_date": "2023-02-24",
+    "end_date": "2023-02-24",
+    "city": "Liptovský Mikuláš",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2023-02-24",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "KASSa"
+  },
+  {
+    "id": "rozpor-2022-07-29-turany",
+    "name": "Festival Kulturák 2022",
+    "event_type": "festival",
+    "start_date": "2022-07-29",
+    "end_date": "2022-07-29",
+    "city": "Turany",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "band_and_gigography_archives",
+    "performances": [
+      {
+        "date": "2022-07-29",
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      }
+    ],
+    "source_ids": [
+      "src-rozpor-gigography"
+    ],
+    "venue_name": "Strelnica Tibín"
   }
 ]

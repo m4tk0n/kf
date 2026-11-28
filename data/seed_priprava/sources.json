@@ -711,5 +711,50 @@
       "venues",
       "foreign_concerts"
     ]
+  },
+  {
+    "id": "src-konflikt-gigography",
+    "name": "KONFLIKT – koncertní historie",
+    "url": "https://festivaly.eu/en/artists/konflikt/2419/gigography",
+    "publisher": "KONFLIKT",
+    "source_type": "band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "foreign_concerts",
+      "tour_names"
+    ]
+  },
+  {
+    "id": "src-konflikt-official",
+    "name": "KONFLIKT – oficiální web",
+    "url": "https://www.konflikt.sk/",
+    "publisher": "KONFLIKT",
+    "source_type": "band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "foreign_concerts",
+      "tour_names"
+    ]
+  },
+  {
+    "id": "src-rozpor-gigography",
+    "name": "ROZPOR – koncertní historie",
+    "url": "https://festivaly.eu/en/artists/rozpor/228447/gigography",
+    "publisher": "ROZPOR",
+    "source_type": "band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "foreign_concerts",
+      "tour_names"
+    ]
   }
 ]
