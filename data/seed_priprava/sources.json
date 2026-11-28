@@ -399,5 +399,25 @@
     "limitations": [
       "Archiv neobsahuje úplný line-up všech ročníků."
     ]
+  },
+  {
+    "id": "src-sps-official-concert-calendar",
+    "name": "SPS – oficiální archiv koncertů",
+    "url": "https://www.sps.litvinoff.cz/_koncerty.php",
+    "publisher": "SPS",
+    "source_type": "official_band_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venue_names",
+      "tour_names",
+      "festival_appearances",
+      "foreign_concerts"
+    ],
+    "limitations": [
+      "Zrušené termíny a volné dny nejsou importovány jako odehrané akce.",
+      "U festivalů nemusí archiv uvádět úplný program."
+    ]
   }
 ]
