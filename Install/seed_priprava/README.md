@@ -4,28 +4,35 @@
 
 Postupně vybudovat ověřenou propojenou evidenci českých a slovenských kapel, jejich akcí, line-upů a míst konání v letech **2026 až 2000**. Základním bodem průzkumu je vždy jedna kapela. Každá její nalezená akce rozšíří evidenci akcí, míst a dalších účinkujících kapel.
 
-V této fázi se vytvářejí pouze pracovní JSON soubory. SQL se nevytváří a nic se nezapisuje do databáze.
+Pracovní data se ukládají do JSON souborů. Akce jsou rozdělené podle kalendářních roků, protože jich bude nejvíce a jeden společný soubor by zbytečně narůstal. SQL se v této fázi nevytváří a nic se nezapisuje do databáze.
 
 ## Hlavní postup
 
 1. Vezmi kapelu z `bands.json` v poli `aktual`.
 2. Procházej její doloženou koncertní historii postupně od roku 2026 zpět do roku 2000.
-3. U každé nalezené akce ověř, zda už existuje v `events.json` v některém z polí `aktual`, `ok` nebo `next`. Pokud ne, přidej ji do `events.json` do `next`.
-4. U každého místa konání ověř, zda už existuje v `venues.json`. Pokud ne, přidej nové místo do `venues.json` do `next`.
-5. Projdi celý line-up akce. Každou novou kapelu, která ještě není v `bands.json` v `aktual`, `ok` ani `next`, přidej do `bands.json` do `next`.
-6. U nové kapely ověř zemi původu. České a slovenské kapely zůstávají v `next` a čekají na vlastní průzkum. Zahraniční kapely po ověření původu přesuň rovnou do `ok`; jejich koncertní historii neprocházej.
-7. Po dokončení všech let 2026–2000 aktuální kapelu přesuň z `aktual` do `ok`.
-8. Vezmi další kapelu z `next`, přesuň ji do `aktual` a postup opakuj.
+3. Akci ukládej do souboru `event_YYYY.json` podle roku jejího konání. Pokud už je v příslušném souboru v poli `aktual`, `ok` nebo `next`, znovu ji nezakládej.
+4. Novou akci přidej do `next` příslušného ročního souboru. Po ověření ji přesuň do `ok`.
+5. U každého místa konání ověř, zda už existuje v `venues.json`. Pokud ne, přidej nové místo do `venues.json/next`.
+6. Projdi celý line-up akce. Každou novou kapelu, která ještě není v `bands.json` v `aktual`, `ok` ani `next`, přidej do `bands.json/next`.
+7. České a slovenské kapely zůstávají v `next` a čekají na vlastní průzkum. Zahraniční kapely po ověření původu přesuň rovnou do `ok`; jejich koncertní historii neprocházej.
+8. Po dokončení všech let 2026–2000 aktuální kapelu přesuň z `bands.json/aktual` do `bands.json/ok`.
+9. Vezmi další českou nebo slovenskou kapelu z `bands.json/next`, přesuň ji do `aktual` a postup opakuj.
 
-## Význam pracovních stavů
+## Rozdělení souborů a pracovních stavů
 
-V souborech se používají pole:
+- `bands.json` — centrální seznam kapel a fronta jejich zpracování.
+- `venues.json` — centrální seznam fyzických míst konání.
+- `event_2026.json` až `event_2000.json` — samostatná evidence akcí pro každý kalendářní rok.
+- `tours.txt` — globální evidence turné, která mohou zasahovat do více roků.
+- `research_progress.txt` — checkpoint průzkumu a informace, kde pokračovat.
 
-- `aktual` — právě zpracovávaný záznam nebo právě zpracovávaná kapela.
-- `ok` — ověřené a dokončené záznamy.
+Každý soubor s kapelami, místy i akcemi používá pole `aktual`, `ok` a `next`:
+
+- `aktual` — právě zpracovávaný záznam.
+- `ok` — ověřené záznamy.
 - `next` — nově objevené záznamy čekající na ověření nebo další krok.
 
-U kapel je v `aktual` vždy pouze jedna právě procházená česká nebo slovenská kapela. U akcí a míst se nové nálezy nejprve ukládají do `next`; po ověření se přesunou do `ok`.
+V `bands.json/aktual` je vždy jedna právě procházená česká nebo slovenská kapela. Akce se zapisují do ročníku odpovídajícího datu konání.
 
 ## Pravidla evidence
 
@@ -44,23 +51,25 @@ U kapel je v `aktual` vždy pouze jedna právě procházená česká nebo sloven
 - Nově objevené místo přidej do `next`, po ověření přesuň do `ok`.
 - Eviduj název, město, stát, ověřenou adresu a případně URL.
 - Před založením porovnej také historické názvy a adresu. Přejmenování téhož prostoru nesmí bez kontroly vytvořit duplicitu.
-- V akci se místo uvádí pouze jako `venue_id`; název ani adresa místa se v `events.json` neopakují.
+- V akci se místo uvádí pouze jako `venue_id`; název ani adresa místa se v ročníkovém souboru neopakují.
 - Pokud místo nelze spolehlivě identifikovat, nevymýšlej jeho ID ani údaje. Akce může mít `venue_id: null`, dokud se místo nepodaří ověřit.
 
-### Akce a line-up — `events.json`
+### Akce a line-up — `event_YYYY.json`
 
-- Každá konkrétní akce má jedno stabilní pracovní `id` a patří do `aktual`, `ok` nebo `next`.
-- Nově objevenou akci přidej do `next`; po ověření údajů a zdrojů ji přesuň do `ok`.
+- Každý soubor obsahuje akce jednoho kalendářního roku a vlastní pole `aktual`, `ok` a `next`.
+- Každá konkrétní akce má stabilní pracovní `id`. ID musí být jedinečné napříč všemi ročníkovými soubory.
+- Nově objevenou akci přidej do `next` souboru příslušného roku; po ověření údajů a zdrojů ji přesuň do `ok`.
 - Typ je `concert` nebo `festival`. Koncert je jednodenní hudební akce; festival má hudební program ve více dnech. Samotné slovo Fest/Festival v názvu typ neurčuje.
 - U vícedenní akce vyplň `date_from` a `date_to`; u jednodenní akce jsou stejné.
-- Uváděj město a stát konání. Místo odkazuj přes `venue_id`.
-- Line-up obsahuje odkazy `band_id`, pořadí `sort_order` a případně `time_play`. Název kapely se neopakuje.
-- Každá zastávka turné je samostatná akce s vlastním datem, místem a line-upem. Nadřazené turné se eviduje jednou v globálním souboru `tours.txt`; akce na něj odkazuje přes `tour_id`.
+- Uváděj město a stát konání. Místo odkazuj přes `venue_id` z `venues.json`.
+- Line-up obsahuje odkazy `band_id` z `bands.json`, pořadí `sort_order` a případně `time_play`. Název kapely se neopakuje.
+- Každá zastávka turné je samostatná akce v ročníku podle data konání. Nadřazené turné se eviduje jednou v globálním souboru `tours.txt`; akce na něj odkazuje přes `tour_id`.
 - Pokud je údaj neověřený, ponech jej jako `null` nebo jej vynech podle šablony. Nic neodhaduj.
 
 ## Identifikace a duplicity
 
-- Před založením akce porovnej název, datum, město, místo, line-up a zdroje. Stejná akce nalezená u více kapel se zapíše pouze jednou.
+- Před založením akce zkontroluj odpovídající ročníkový soubor. Porovnej název, datum, město, místo, line-up a zdroje. Stejná akce nalezená při průzkumu více kapel se zapíše pouze jednou.
+- Před přidělením ID nové akce zkontroluj i ostatní ročníkové soubory, aby se pracovní ID neopakovalo.
 - Před založením místa porovnej název, adresu, město, stát a historické názvy.
 - Před založením kapely ověř, zda nejde o jinou kapelu se stejným nebo podobným názvem.
 - Pokud se objeví rozpor ve zdrojích, zaznamenej jej a nepovažuj údaj za potvrzený.
@@ -68,7 +77,7 @@ U kapel je v `aktual` vždy pouze jedna právě procházená česká nebo sloven
 
 ## Turné
 
-Turné je samostatný nadřazený záznam se společným názvem. Každá zastávka je vlastní akce v `events.json`, má vlastní datum, místo a line-up. Zastávky mohou být napříč roky. Do turné spojuj pouze akce, u kterých zdroj potvrzuje společné turné; podobný název nebo blízká data nestačí. Globální evidence turné zůstává v `tours.txt`.
+Turné je samostatný nadřazený záznam se společným názvem. Každá zastávka je vlastní akce v ročníkovém souboru podle data konání, má vlastní datum, místo a line-up. Zastávky mohou být napříč roky. Do turné spojuj pouze akce, u kterých zdroj potvrzuje společné turné; podobný název nebo blízká data nestačí. Globální evidence turné zůstává v `tours.txt`.
 
 ## Rozsah a úplnost
 
