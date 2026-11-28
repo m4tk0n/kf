@@ -8,8 +8,8 @@
       "CZ",
       "SK"
     ],
-    "years_from": 2000,
-    "years_to": 2027,
+    "years_from": 2020,
+    "years_to": 2026,
     "genres": [
       "punk",
       "hardcore",
@@ -20,10 +20,12 @@
   },
   "collection_status": "initial_verified_batch",
   "notes": [
+    "Časový rozsah akcí je 2020–2026 včetně.",
+    "Kapely a místa se evidují jako samostatné entity, pokud mají vazbu na akci v tomto období.",
     "Záznamy obsahují pouze doložené údaje a vazby.",
     "Neznámý původ kapely zůstává null; stát se neodhaduje.",
     "Neověřená přesná adresa zůstává null.",
     "Turné zatím nemají potvrzené záznamy.",
-    "Doplnění dalších ročníků festivalů a zahraničních koncertů pokračuje."
+    "Doplnění dalších ročníků festivalů, koncertů a zahraničních akcí pokračuje."
   ]
 }
