@@ -303,5 +303,111 @@
       "src-fialky-official-concert-archive"
     ],
     "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "the-fialky-punk-rock-radio-tour-2022",
+    "name": "Punk rock rádio tour 2022",
+    "start_date": "2022-02-25",
+    "end_date": "2022-04-09",
+    "band_ids": [
+      "the-fialky"
+    ],
+    "event_ids": [
+      "fialky-2022-02-25-rakovnik",
+      "fialky-2022-02-26-plzen",
+      "fialky-2022-03-11-liberec",
+      "fialky-2022-03-12-ceske-budejovice",
+      "fialky-2022-03-18-strakonice",
+      "fialky-2022-03-19-kolin",
+      "fialky-2022-03-25-ostrava",
+      "fialky-2022-03-26-uherske-hradiste",
+      "fialky-2022-04-01-brno",
+      "fialky-2022-04-02-bratislava",
+      "fialky-2022-04-08-teplice",
+      "fialky-2022-04-09-praha"
+    ],
+    "country_codes": [
+      "CZ",
+      "SK"
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "the-fialky-dont-worry-be-punk-tour-2023",
+    "name": "Don't worry be punk tour 2023",
+    "start_date": "2023-02-24",
+    "end_date": "2023-04-15",
+    "band_ids": [
+      "the-fialky"
+    ],
+    "event_ids": [
+      "fialky-2023-02-24-chrudim",
+      "fialky-2023-02-25-teplice",
+      "fialky-2023-03-11-plzen",
+      "fialky-2023-03-17-uherske-hradiste",
+      "fialky-2023-03-18-bratislava",
+      "fialky-2023-03-24-praha",
+      "fialky-2023-03-25-ceske-budejovice",
+      "fialky-2023-04-14-brno",
+      "fialky-2023-04-15-ostrava"
+    ],
+    "country_codes": [
+      "CZ",
+      "SK"
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "the-fialky-winter-punkrock-show-2023",
+    "name": "Winter Punkrock show 2023",
+    "start_date": "2023-01-13",
+    "end_date": "2023-02-04",
+    "band_ids": [
+      "the-fialky"
+    ],
+    "event_ids": [
+      "fialky-2023-01-13-valasske-mezirici",
+      "fialky-2023-01-14-znojmo",
+      "fialky-2023-01-20-kutna-hora",
+      "fialky-2023-01-21-klatovy",
+      "fialky-2023-02-03-litvinov",
+      "fialky-2023-02-04-harrachov"
+    ],
+    "country_codes": [
+      "CZ"
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  },
+  {
+    "id": "the-fialky-winter-punk-mini-tour-2026",
+    "name": "Winter punk mini tour 2026",
+    "start_date": "2026-01-24",
+    "end_date": "2026-02-13",
+    "band_ids": [
+      "the-fialky"
+    ],
+    "event_ids": [
+      "fialky-2026-02-13-zdarna",
+      "fialky-2026-02-07-harrachov",
+      "fialky-2026-01-31-klatovy",
+      "fialky-2026-01-30-litvinov",
+      "fialky-2026-01-24-trebic"
+    ],
+    "country_codes": [
+      "CZ"
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
   }
 ]

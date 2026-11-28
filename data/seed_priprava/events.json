@@ -6315,10 +6315,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2023-06-09",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-fialky-official-concert-archive"
     ]
   },
   {
@@ -6645,10 +6652,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2023-03-10",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-fialky-official-concert-archive"
     ]
   },
   {
@@ -8361,10 +8375,17 @@
         "name": "SPS",
         "country_code": "CZ",
         "band_id": "sps"
+      },
+      {
+        "date": "2021-06-24",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
       }
     ],
     "source_ids": [
-      "src-sps-official-concert-calendar"
+      "src-sps-official-concert-calendar",
+      "src-fialky-official-concert-archive"
     ]
   },
   {
@@ -10932,6 +10953,1854 @@
     "performances": [
       {
         "date": "2024-01-19",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-01-13-valasske-mezirici",
+    "name": "Winter Punkrock show 2023",
+    "event_type": "concert",
+    "start_date": "2023-01-13",
+    "end_date": "2023-01-13",
+    "city": "Valašské Meziříčí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-01-13",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-01-14-znojmo",
+    "name": "Winter Punkrock show 2023",
+    "event_type": "concert",
+    "start_date": "2023-01-14",
+    "end_date": "2023-01-14",
+    "city": "Znojmo",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-01-14",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-01-20-kutna-hora",
+    "name": "Winter Punkrock show 2023",
+    "event_type": "concert",
+    "start_date": "2023-01-20",
+    "end_date": "2023-01-20",
+    "city": "Kutná Hora",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-01-20",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-01-21-klatovy",
+    "name": "Winter Punkrock show 2023",
+    "event_type": "concert",
+    "start_date": "2023-01-21",
+    "end_date": "2023-01-21",
+    "city": "Klatovy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-01-21",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-02-03-litvinov",
+    "name": "Winter Punkrock show 2023",
+    "event_type": "concert",
+    "start_date": "2023-02-03",
+    "end_date": "2023-02-03",
+    "city": "Litvínov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-02-03",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-02-04-harrachov",
+    "name": "Winter Punkrock show 2023",
+    "event_type": "concert",
+    "start_date": "2023-02-04",
+    "end_date": "2023-02-04",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-02-04",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-02-24-chrudim",
+    "name": "Don't worry be punk tour 2023",
+    "event_type": "concert",
+    "start_date": "2023-02-24",
+    "end_date": "2023-02-24",
+    "city": "Chrudim",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-02-24",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-02-25-teplice",
+    "name": "Don't worry be punk tour 2023",
+    "event_type": "concert",
+    "start_date": "2023-02-25",
+    "end_date": "2023-02-25",
+    "city": "Teplice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-02-25",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-03-11-plzen",
+    "name": "Don't worry be punk tour 2023",
+    "event_type": "concert",
+    "start_date": "2023-03-11",
+    "end_date": "2023-03-11",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-11",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-03-17-uherske-hradiste",
+    "name": "Don't worry be punk tour 2023",
+    "event_type": "concert",
+    "start_date": "2023-03-17",
+    "end_date": "2023-03-17",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-17",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-03-18-bratislava",
+    "name": "Don't worry be punk tour 2023",
+    "event_type": "concert",
+    "start_date": "2023-03-18",
+    "end_date": "2023-03-18",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-18",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-03-24-praha",
+    "name": "Don't worry be punk tour 2023",
+    "event_type": "concert",
+    "start_date": "2023-03-24",
+    "end_date": "2023-03-24",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-24",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-03-25-ceske-budejovice",
+    "name": "Don't worry be punk tour 2023",
+    "event_type": "concert",
+    "start_date": "2023-03-25",
+    "end_date": "2023-03-25",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-03-25",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-04-14-brno",
+    "name": "Don't worry be punk tour 2023",
+    "event_type": "concert",
+    "start_date": "2023-04-14",
+    "end_date": "2023-04-14",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-04-14",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-04-15-ostrava",
+    "name": "Don't worry be punk tour 2023",
+    "event_type": "concert",
+    "start_date": "2023-04-15",
+    "end_date": "2023-04-15",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-04-15",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-04-22-praha",
+    "name": "Číro Fest 2023",
+    "event_type": "festival",
+    "start_date": "2023-04-22",
+    "end_date": "2023-04-22",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-04-22",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-05-13-lesnice",
+    "name": "Fo.Go. Fest",
+    "event_type": "festival",
+    "start_date": "2023-05-13",
+    "end_date": "2023-05-13",
+    "city": "Lesnice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-05-13",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-06-01-praha",
+    "name": "The Fialky – Praha",
+    "event_type": "concert",
+    "start_date": "2023-06-01",
+    "end_date": "2023-06-01",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-01",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-06-02-letohrad",
+    "name": "JamRock",
+    "event_type": "festival",
+    "start_date": "2023-06-02",
+    "end_date": "2023-06-02",
+    "city": "Letohrad",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-02",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-06-03-ostrov-u-macochy",
+    "name": "Wostrovfest",
+    "event_type": "festival",
+    "start_date": "2023-06-03",
+    "end_date": "2023-06-03",
+    "city": "Ostrov u Macochy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-03",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-06-10-strasice",
+    "name": "Koupák vítá léto fest",
+    "event_type": "festival",
+    "start_date": "2023-06-10",
+    "end_date": "2023-06-10",
+    "city": "Strašice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-10",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-06-10-ohrazeni-u-ceskych-budejovic",
+    "name": "Vohradník fest",
+    "event_type": "festival",
+    "start_date": "2023-06-10",
+    "end_date": "2023-06-10",
+    "city": "Ohrazení u Českých Budějovic",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-10",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-06-16-slany",
+    "name": "Narozeniny 50 Sváťa",
+    "event_type": "concert",
+    "start_date": "2023-06-16",
+    "end_date": "2023-06-16",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-16",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-06-17-brno",
+    "name": "Rock in Brünn",
+    "event_type": "festival",
+    "start_date": "2023-06-17",
+    "end_date": "2023-06-17",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-17",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2023-06-22-spalene-porici",
+    "name": "Basinfirefest",
+    "event_type": "festival",
+    "start_date": "2023-06-22",
+    "end_date": "2023-06-22",
+    "city": "Spálené Poříčí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2023-06-22",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-02-25-rakovnik",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-02-25",
+    "end_date": "2022-02-25",
+    "city": "Rakovník",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-02-25",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-02-26-plzen",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-02-26",
+    "end_date": "2022-02-26",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-02-26",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-03-11-liberec",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-03-11",
+    "end_date": "2022-03-11",
+    "city": "Liberec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-03-11",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-03-12-ceske-budejovice",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-03-12",
+    "end_date": "2022-03-12",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-03-12",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-03-18-strakonice",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-03-18",
+    "end_date": "2022-03-18",
+    "city": "Strakonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-03-18",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-03-19-kolin",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-03-19",
+    "end_date": "2022-03-19",
+    "city": "Kolín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-03-19",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-03-25-ostrava",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-03-25",
+    "end_date": "2022-03-25",
+    "city": "Ostrava",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-03-25",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-03-26-uherske-hradiste",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-03-26",
+    "end_date": "2022-03-26",
+    "city": "Uherské Hradiště",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-03-26",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-04-01-brno",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-04-01",
+    "end_date": "2022-04-01",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-01",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-04-02-bratislava",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-04-02",
+    "end_date": "2022-04-02",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-02",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-04-08-teplice",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-04-08",
+    "end_date": "2022-04-08",
+    "city": "Teplice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-08",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-04-09-praha",
+    "name": "Punk rock rádio tour 2022",
+    "event_type": "concert",
+    "start_date": "2022-04-09",
+    "end_date": "2022-04-09",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-04-09",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-10-14-olomouc",
+    "name": "The Fialky – Olomouc",
+    "event_type": "concert",
+    "start_date": "2022-10-14",
+    "end_date": "2022-10-14",
+    "city": "Olomouc",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-14",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-10-15-nachod",
+    "name": "The Fialky – Náchod",
+    "event_type": "concert",
+    "start_date": "2022-10-15",
+    "end_date": "2022-10-15",
+    "city": "Náchod",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-15",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-10-21-decin",
+    "name": "The Fialky – Děčín",
+    "event_type": "concert",
+    "start_date": "2022-10-21",
+    "end_date": "2022-10-21",
+    "city": "Děčín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-21",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-10-22-kolin",
+    "name": "The Fialky – Kolín",
+    "event_type": "concert",
+    "start_date": "2022-10-22",
+    "end_date": "2022-10-22",
+    "city": "Kolín",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-22",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-10-28-ceske-budejovice",
+    "name": "The Fialky – České Budějovice",
+    "event_type": "concert",
+    "start_date": "2022-10-28",
+    "end_date": "2022-10-28",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-28",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-10-29-sedlcany",
+    "name": "The Fialky – Sedlčany",
+    "event_type": "concert",
+    "start_date": "2022-10-29",
+    "end_date": "2022-10-29",
+    "city": "Sedlčany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-10-29",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-11-18-praha",
+    "name": "The Fialky – Praha",
+    "event_type": "concert",
+    "start_date": "2022-11-18",
+    "end_date": "2022-11-18",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-11-18",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-11-19-pardubice",
+    "name": "Volant Fest 2022",
+    "event_type": "festival",
+    "start_date": "2022-11-19",
+    "end_date": "2022-11-19",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-11-19",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2022-12-17-praha",
+    "name": "Punk rock X-mas 2022",
+    "event_type": "concert",
+    "start_date": "2022-12-17",
+    "end_date": "2022-12-17",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2022-12-17",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-11-26-brno",
+    "name": "The Fialky – Brno",
+    "event_type": "concert",
+    "start_date": "2021-11-26",
+    "end_date": "2021-11-26",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-11-26",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-11-05-praha",
+    "name": "The Fialky – Praha",
+    "event_type": "concert",
+    "start_date": "2021-11-05",
+    "end_date": "2021-11-05",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-11-05",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-10-22-klatovy",
+    "name": "The Fialky – Klatovy",
+    "event_type": "concert",
+    "start_date": "2021-10-22",
+    "end_date": "2021-10-22",
+    "city": "Klatovy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-10-22",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-10-16-roudnice-nad-labem",
+    "name": "The Fialky – Roudnice",
+    "event_type": "concert",
+    "start_date": "2021-10-16",
+    "end_date": "2021-10-16",
+    "city": "Roudnice nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-10-16",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-10-09-praha",
+    "name": "30 let Totální Nasazení",
+    "event_type": "concert",
+    "start_date": "2021-10-09",
+    "end_date": "2021-10-09",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-10-09",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-09-25-kostelec-nad-orlici",
+    "name": "Narozeniny Galba 50",
+    "event_type": "concert",
+    "start_date": "2021-09-25",
+    "end_date": "2021-09-25",
+    "city": "Kostelec nad Orlicí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-09-25",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-09-17-privrat-u-ceske-trebove",
+    "name": "35. Přívratské Vinobraní",
+    "event_type": "festival",
+    "start_date": "2021-09-17",
+    "end_date": "2021-09-17",
+    "city": "Přívrat u České Třebové",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-09-17",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-09-04-pisek",
+    "name": "Slavnosti piva Písek",
+    "event_type": "festival",
+    "start_date": "2021-09-04",
+    "end_date": "2021-09-04",
+    "city": "Písek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-09-04",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-09-03-litomerice",
+    "name": "The Fialky – Litoměřice",
+    "event_type": "concert",
+    "start_date": "2021-09-03",
+    "end_date": "2021-09-03",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-09-03",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-08-21-slany",
+    "name": "Valník",
+    "event_type": "festival",
+    "start_date": "2021-08-21",
+    "end_date": "2021-08-21",
+    "city": "Slaný",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-08-21",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-08-13-ricany-u-prahy",
+    "name": "Starák Fest",
+    "event_type": "festival",
+    "start_date": "2021-08-13",
+    "end_date": "2021-08-13",
+    "city": "Říčany u Prahy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-08-13",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-08-07-vlctejn",
+    "name": "Prasofest 2021",
+    "event_type": "festival",
+    "start_date": "2021-08-07",
+    "end_date": "2021-08-07",
+    "city": "Vlčtejn",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-08-07",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-08-06-harrachov",
+    "name": "Keltská noc",
+    "event_type": "festival",
+    "start_date": "2021-08-06",
+    "end_date": "2021-08-06",
+    "city": "Harrachov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-08-06",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-07-24-police-nad-metuji",
+    "name": "Bez Šance Fest",
+    "event_type": "festival",
+    "start_date": "2021-07-24",
+    "end_date": "2021-07-24",
+    "city": "Police nad Metují",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-24",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-07-17-vrchlabi",
+    "name": "Punk fest",
+    "event_type": "festival",
+    "start_date": "2021-07-17",
+    "end_date": "2021-07-17",
+    "city": "Vrchlabí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-17",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-07-16-olesko",
+    "name": "Oleško Fest 2021",
+    "event_type": "festival",
+    "start_date": "2021-07-16",
+    "end_date": "2021-07-16",
+    "city": "Oleško",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-16",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-07-09-tabor",
+    "name": "Mighty Sounds 2021",
+    "event_type": "festival",
+    "start_date": "2021-07-09",
+    "end_date": "2021-07-09",
+    "city": "Tábor",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-07-09",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-06-25-brno",
+    "name": "The Fialky – Brno",
+    "event_type": "concert",
+    "start_date": "2021-06-25",
+    "end_date": "2021-06-25",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-06-25",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-06-19-chodov",
+    "name": "Chodov Sobě 2021",
+    "event_type": "festival",
+    "start_date": "2021-06-19",
+    "end_date": "2021-06-19",
+    "city": "Chodov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-06-19",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-06-18-praha",
+    "name": "Svatba Sherpa – soukromá akce",
+    "event_type": "concert",
+    "start_date": "2021-06-18",
+    "end_date": "2021-06-18",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-06-18",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-06-05-pavlikov",
+    "name": "Footsal Fest",
+    "event_type": "concert",
+    "start_date": "2021-06-05",
+    "end_date": "2021-06-05",
+    "city": "Pavlíkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-06-05",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-05-29-chomutov",
+    "name": "The Fialky – Chomutov",
+    "event_type": "concert",
+    "start_date": "2021-05-29",
+    "end_date": "2021-05-29",
+    "city": "Chomutov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-05-29",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-05-22-stribro",
+    "name": "The Fialky – Stříbro",
+    "event_type": "concert",
+    "start_date": "2021-05-22",
+    "end_date": "2021-05-22",
+    "city": "Stříbro",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-05-22",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-05-15-hermanuv-mestec",
+    "name": "Sokolovna Fest",
+    "event_type": "festival",
+    "start_date": "2021-05-15",
+    "end_date": "2021-05-15",
+    "city": "Heřmanův Městec",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-05-15",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-05-15-kunice",
+    "name": "KunFest 2021",
+    "event_type": "festival",
+    "start_date": "2021-05-15",
+    "end_date": "2021-05-15",
+    "city": "Kunice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-05-15",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2021-05-08-pardubice",
+    "name": "The Fialky – Pardubice",
+    "event_type": "concert",
+    "start_date": "2021-05-08",
+    "end_date": "2021-05-08",
+    "city": "Pardubice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2021-05-08",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-10-03-roudnice-nad-labem",
+    "name": "Punk rock night",
+    "event_type": "concert",
+    "start_date": "2020-10-03",
+    "end_date": "2020-10-03",
+    "city": "Roudnice nad Labem",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-10-03",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-09-04-litomerice",
+    "name": "Zahájení sezóny v Baronce",
+    "event_type": "concert",
+    "start_date": "2020-09-04",
+    "end_date": "2020-09-04",
+    "city": "Litoměřice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-09-04",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-08-28-strakonice",
+    "name": "Festpival",
+    "event_type": "festival",
+    "start_date": "2020-08-28",
+    "end_date": "2020-08-28",
+    "city": "Strakonice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-28",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-08-15-vyskov",
+    "name": "Fest Pod Parou",
+    "event_type": "festival",
+    "start_date": "2020-08-15",
+    "end_date": "2020-08-15",
+    "city": "Vyškov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-15",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-08-14-volyne",
+    "name": "Summer Punk Párty",
+    "event_type": "festival",
+    "start_date": "2020-08-14",
+    "end_date": "2020-08-14",
+    "city": "Volyně",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-14",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-08-02-ceske-budejovice",
+    "name": "Punk rock kino fest",
+    "event_type": "concert",
+    "start_date": "2020-08-02",
+    "end_date": "2020-08-02",
+    "city": "České Budějovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-02",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-08-01-trebiz",
+    "name": "Let's GO fest",
+    "event_type": "festival",
+    "start_date": "2020-08-01",
+    "end_date": "2020-08-01",
+    "city": "Třebíz",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-01",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-08-01-beroun",
+    "name": "Rockovej Královák",
+    "event_type": "festival",
+    "start_date": "2020-08-01",
+    "end_date": "2020-08-01",
+    "city": "Beroun",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-08-01",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-07-30-praha",
+    "name": "Léto bez proudu (akustický koncert)",
+    "event_type": "concert",
+    "start_date": "2020-07-30",
+    "end_date": "2020-07-30",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-07-30",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-07-11-janovice-nad-uhlavou",
+    "name": "Léto bez proudu (akustický koncert)",
+    "event_type": "concert",
+    "start_date": "2020-07-11",
+    "end_date": "2020-07-11",
+    "city": "Janovice nad Úhlavou",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-07-11",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-07-10-kladno",
+    "name": "Léto bez proudu (akustický koncert)",
+    "event_type": "concert",
+    "start_date": "2020-07-10",
+    "end_date": "2020-07-10",
+    "city": "Kladno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-07-10",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-official-concert-archive"
+    ]
+  },
+  {
+    "id": "fialky-2020-07-04-benesov",
+    "name": "Punkrock for Ferdinand",
+    "event_type": "festival",
+    "start_date": "2020-07-04",
+    "end_date": "2020-07-04",
+    "city": "Benešov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "official_band_calendar",
+    "performances": [
+      {
+        "date": "2020-07-04",
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
