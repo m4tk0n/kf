@@ -354,5 +354,33 @@
       "band_identity",
       "country_of_origin"
     ]
+  },
+  {
+    "id": "src-punkaci-2024-official",
+    "name": "Punkáči deťom 2024 – oficiální web festivalu",
+    "url": "https://punkaci2024.dvebe.sk/",
+    "publisher": "Punkáči deťom",
+    "source_type": "official_festival_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "event_dates",
+      "festival_venue",
+      "event_identity",
+      "lineup_overview"
+    ]
+  },
+  {
+    "id": "src-punkaci-2024-goout",
+    "name": "Punkáči deťom 2024 – lineup a místo konání",
+    "url": "https://goout.net/cs/punkaci-detom-2024/szrvbkw/",
+    "publisher": "GoOut",
+    "source_type": "event_listing",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "event_dates",
+      "venue_name_and_location",
+      "performing_bands",
+      "band_country_labels"
+    ]
   }
 ]

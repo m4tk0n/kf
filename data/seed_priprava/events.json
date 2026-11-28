@@ -1988,5 +1988,207 @@
       "src-blankout-sarajevo-2024",
       "src-blankout-balkan-review-2024"
     ]
+  },
+  {
+    "id": "punkaci-detom-2024",
+    "name": "Punkáči deťom 2024",
+    "event_type": "festival",
+    "start_date": "2024-08-29",
+    "end_date": "2024-08-31",
+    "city": "Opatovce",
+    "country_code": "SK",
+    "venue_id": "kemping-rybniky-opatovce",
+    "lineup_completeness": "artist_list_from_goout_and_official_festival_archive",
+    "performances": [
+      {
+        "name": "THE LOCOS",
+        "country_code": "ES",
+        "band_id": null
+      },
+      {
+        "name": "THE SKINFLICKS",
+        "country_code": "LU",
+        "band_id": null
+      },
+      {
+        "name": "SLOBODNÁ EURÓPA",
+        "country_code": "SK",
+        "band_id": "slobodna-europa"
+      },
+      {
+        "name": "THE CLOVERHEARTS",
+        "country_code": null,
+        "band_id": null
+      },
+      {
+        "name": "GUTALAX",
+        "country_code": "CZ",
+        "band_id": "gutalax"
+      },
+      {
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "name": "NAČO NÁZOV",
+        "country_code": "SK",
+        "band_id": "naco-nazov"
+      },
+      {
+        "name": "JAKSI TAKSI",
+        "country_code": "CZ",
+        "band_id": "j aksi-taksi"
+      },
+      {
+        "name": "ZNOUZECTNOST",
+        "country_code": "CZ",
+        "band_id": "zn ouzectnost"
+      },
+      {
+        "name": "MUERTI",
+        "country_code": "CZ",
+        "band_id": "muerti"
+      },
+      {
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      },
+      {
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": "driak"
+      },
+      {
+        "name": "ZEMĚŽLUČ",
+        "country_code": "CZ",
+        "band_id": "zemeluc"
+      },
+      {
+        "name": "TRAGEDIS",
+        "country_code": "CZ",
+        "band_id": "tragedis"
+      },
+      {
+        "name": "BRATISLAVSKÉ DIEVČATÁ",
+        "country_code": "SK",
+        "band_id": "bratislavske-dievcata"
+      },
+      {
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vv u"
+      },
+      {
+        "name": "BIJOUTERRIER",
+        "country_code": "SK",
+        "band_id": "bijouterrier"
+      },
+      {
+        "name": "ŠTAMGASTI",
+        "country_code": "CZ",
+        "band_id": "stamgasti"
+      },
+      {
+        "name": "NEKULTÚRA",
+        "country_code": "SK",
+        "band_id": "nekultura"
+      },
+      {
+        "name": "PLUS MÍNUS",
+        "country_code": "SK",
+        "band_id": "plus-minus"
+      },
+      {
+        "name": "MUNICIA",
+        "country_code": "SK",
+        "band_id": "municia"
+      },
+      {
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
+      },
+      {
+        "name": "MARHULE",
+        "country_code": "SK",
+        "band_id": "marhule"
+      },
+      {
+        "name": "HEAD2DOWN",
+        "country_code": "SK",
+        "band_id": "head2down"
+      },
+      {
+        "name": "FUERA FONDO",
+        "country_code": "SK",
+        "band_id": "fuera-fondo"
+      },
+      {
+        "name": "GROBIANI",
+        "country_code": "SK",
+        "band_id": "grobiani"
+      },
+      {
+        "name": "VÝSTRAHA",
+        "country_code": "SK",
+        "band_id": "vystraha"
+      },
+      {
+        "name": "ČISTÁ RYŽA",
+        "country_code": "SK",
+        "band_id": "cista-ryza"
+      },
+      {
+        "name": "FRAKTÚRA",
+        "country_code": "SK",
+        "band_id": "fraktura"
+      },
+      {
+        "name": "EMPTY HALL OF FAME",
+        "country_code": "CZ",
+        "band_id": "empty-hall-of-fame"
+      },
+      {
+        "name": "ROZPOR",
+        "country_code": "SK",
+        "band_id": "rozpor"
+      },
+      {
+        "name": "PROTI SMĚRU",
+        "country_code": "CZ",
+        "band_id": "proti-smeru"
+      },
+      {
+        "name": "EDITOR",
+        "country_code": "SK",
+        "band_id": "editor"
+      },
+      {
+        "name": "SITŇAN",
+        "country_code": "SK",
+        "band_id": "sitnan"
+      },
+      {
+        "name": "VYSOKÉ NAPĚTÍ",
+        "country_code": "CZ",
+        "band_id": "vysoke-napeti"
+      },
+      {
+        "name": "BEZ ŠANCE",
+        "country_code": "CZ",
+        "band_id": "bez-sance"
+      },
+      {
+        "name": "S.B.A.",
+        "country_code": "SK",
+        "band_id": "sba"
+      }
+    ],
+    "source_ids": [
+      "src-punkaci-2024-official",
+      "src-punkaci-2024-goout"
+    ]
   }
 ]

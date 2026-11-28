@@ -792,5 +792,329 @@
       "src-blankout-balkan-2024"
     ],
     "verification": "official_bandcamp_profile_and_tour_announcement"
+  },
+  {
+    "id": "slobodna-europa",
+    "name": "SLOBODNÁ EURÓPA",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "j aksi-taksi",
+    "name": "JAKSI TAKSI",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "zn ouzectnost",
+    "name": "ZNOUZECTNOST",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "muerti",
+    "name": "MUERTI",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "gutalax",
+    "name": "GUTALAX",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "driak",
+    "name": "DRIÁK",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "tragedis",
+    "name": "TRAGEDIS",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "vv u",
+    "name": "!V.V.Ú.",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "bijouterrier",
+    "name": "BIJOUTERRIER",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "nekultura",
+    "name": "NEKULTÚRA",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "plus-minus",
+    "name": "PLUS MÍNUS",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "municia",
+    "name": "MUNICIA",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "p-u-m",
+    "name": "P.U.M.",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "marhule",
+    "name": "MARHULE",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "head2down",
+    "name": "HEAD2DOWN",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "fuera-fondo",
+    "name": "FUERA FONDO",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "grobiani",
+    "name": "GROBIANI",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "vystraha",
+    "name": "VÝSTRAHA",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "cista-ryza",
+    "name": "ČISTÁ RYŽA",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "fraktura",
+    "name": "FRAKTÚRA",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "empty-hall-of-fame",
+    "name": "EMPTY HALL OF FAME",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "proti-smeru",
+    "name": "PROTI SMĚRU",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "editor",
+    "name": "EDITOR",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "sitnan",
+    "name": "SITŇAN",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "vysoke-napeti",
+    "name": "VYSOKÉ NAPĚTÍ",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "bez-sance",
+    "name": "BEZ ŠANCE",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
+  },
+  {
+    "id": "sba",
+    "name": "S.B.A.",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-punkaci-2024-goout"
+    ],
+    "verification": "country_of_origin_labelled_by_event_listing"
   }
 ]
