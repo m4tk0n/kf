@@ -126,6 +126,8 @@ return [
             'venue' => 5,
             'city' => 5,
             'genre' => 5,
+            'source' => 6, // historické zdroje v přípravném seedu
+            'tour' => 7,   // turné v přípravném seedu
         ],
         'submissions_per_day' => 20,
         'favorites_max' => 500, // max. oblíbených položek jednoho typu na uživatele
