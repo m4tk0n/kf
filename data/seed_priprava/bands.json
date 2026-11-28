@@ -873,7 +873,8 @@
       "punk"
     ],
     "sources": [
-      "src-punkaci-2024-goout"
+      "src-punkaci-2024-goout",
+      "src-vvu-bandzone-archive"
     ],
     "verification": "country_of_origin_labelled_by_event_listing"
   },
@@ -1433,5 +1434,17 @@
       "src-plexis-bandzone-archive"
     ],
     "verification": "Bandzone_archive"
+  },
+  {
+    "id": "sas",
+    "name": "S.A.S.",
+    "country_code": "CZ",
+    "genres": [
+      "punk-rock"
+    ],
+    "sources": [
+      "src-sas-bandzone-archive"
+    ],
+    "verification": "Bandzone_band_archive"
   }
 ]

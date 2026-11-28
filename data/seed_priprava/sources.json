@@ -756,5 +756,33 @@
       "foreign_concerts",
       "tour_names"
     ]
+  },
+  {
+    "id": "src-vvu-bandzone-archive",
+    "name": "!V.V.Ú. – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/vvuofficial?at=gig&gy=2026",
+    "publisher": "Bandzone",
+    "source_type": "band_profile_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "lineups"
+    ]
+  },
+  {
+    "id": "src-sas-bandzone-archive",
+    "name": "S.A.S. – Bandzone archiv koncertů",
+    "url": "https://bandzone.cz/sas?at=gig&gy=2026",
+    "publisher": "Bandzone",
+    "source_type": "band_profile_concert_archive",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "concert_dates",
+      "cities",
+      "venues",
+      "lineups"
+    ]
   }
 ]
