@@ -448,6 +448,57 @@
         "https://www.mightysounds.cz/faq",
         "https://kdykam.com/cs/event/474/"
       ]
+    },
+    {
+      "id": 37,
+      "name": "Stadion SK Polička",
+      "city": "Polička",
+      "country": "CZ",
+      "address": "U Liboháje 60, 572 01 Polička, Česko",
+      "url": "https://www.skpolicka.cz/",
+      "sources": [
+        "https://denfotbalu.cz/kontakt/",
+        "https://vikendo.cz/events/den-fotbalu-policka-2026",
+        "https://bandzone.cz/koncert/559138-policka-stadion-sk-policka-den-fotbalu-policka-2026"
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Areál firmy Composite Components",
+      "city": "Brněnec",
+      "country": "CZ",
+      "address": "Brněnec 55, 569 04 Brněnec, Česko",
+      "url": "https://www.brnenecfest.cz/",
+      "sources": [
+        "https://www.lacultura.cz/brnenecfest-xxv-jubilejni-rocnik-punkoveho-festivalu-opet-rozbouri-brnenec/tiskova-zprava/",
+        "https://www.smsticket.cz/vstupenky/61921-brnenecfest-xxv-aneb-punkovej-klystyr-brnenec-brnenec-los-fastidios-visaci-zamek-totalni-nasazeni"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Jezero Poděbrady",
+      "city": "Poděbrady",
+      "country": "CZ",
+      "address": "Pražská 50, 290 01 Poděbrady, Česko",
+      "url": "https://koupalistejezero.cz/",
+      "sources": [
+        "https://www.barvyleta.cz/?page=o-akci",
+        "https://collaborate.darkzin.cz/archiv-probehlych-akci/barvy-leta-2026-podebrady-vol-25-/",
+        "https://koupalistejezero.cz/kontakty"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Štěrkovna Hlučín",
+      "city": "Hlučín",
+      "country": "CZ",
+      "address": "Celní 1731/12a, 748 01 Hlučín, Česko",
+      "url": "https://www.sak-hlucin.cz/",
+      "sources": [
+        "https://bandzone.cz/koncert/560767-hlucin-sterkovna-stare-pusky-fest",
+        "https://www.sak-hlucin.cz/cs/hlucinske-jezero/informace-o-arealu-hlucinskeho-jezera/a-1626",
+        "https://www.khsova.cz/obcanum/koupaci-mista/1601?pr=2"
+      ]
     }
   ],
   "next": []
