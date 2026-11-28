@@ -1,0 +1,9 @@
+# Zdroje pro koncertní historii The Trousers – rok 2010
+# Formát: ID | URL | co zdroj dokládá | poznámka
+
+2010-S01 | https://mymusic.hu/hirek/archivum.php?label=424 | Archivní pozvánka na koncert The Trousers, Kinkiez a Kollaps dne 29. 1. 2010; text uvádí Tűzraktér. | Dobový zdroj; místo je v rozporu se záznamem Zene.hu 2010-S02.
+2010-S02 | https://zene.hu/programok/lista.php?date=2010-01-29&page=2&ti=m&ym=2009-04 | Programový přehled uvádí The Trousers, Kinkiez a Kollaps dne 29. 1. 2010 v Corvintető. | Dobový zdroj; místo je v rozporu s MyMusic 2010-S01.
+2010-S03 | https://langologitarok.blog.hu/2010/09/24/the_trousers_lemezbemutato_a_corvinteton | Křest alba Soul Machine dne 25. 9. 2010 v Corvintető; účinkující The Trousers, Dead Pope's Company a Esti Kornél. | Dobová pozvánka zveřejněná den před akcí.
+2010-S04 | https://www.a38.hu/hu/programok/archiv-programok?datum=2010-10-17 | Oficiální archiv A38: 20. 10. 2010, Obits (US), Auxes (US), The Trousers a Gumipop DJs. | Primární zdroj místa konání.
+2010-S05 | https://zene.hu/cikkek/cikk.php?id=24082 | Dobový článek potvrzuje koncert Obits, Auxes a The Trousers dne 20. 10. 2010 v A38 Hajó. | Doplňující potvrzení programu.
+2010-S06 | https://mymusic.hu/20100131_in_memoriam__bon_scott_rip_party | Program In memoriam – Bon Scott R.I.P. Party dne 20. 2. 2010 v Mappa Clubu; účinkují Supernem, The Trousers a Electric Bastards. | Datum v URL a nadpisu stránky je datum zveřejnění, skutečný termín akce je 20. 2. 2010.
