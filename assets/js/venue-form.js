@@ -40,42 +40,6 @@
   var countryList = form.querySelector('[data-venue-country-suggestions]');
   var countryIso2 = form.querySelector('[data-venue-country-iso2]');
 
-  var addressInput = form.querySelector('[name="address"]');
-  var googleMapsInput = form.querySelector('[name="google_maps"]');
-  var mapyMapsInput = form.querySelector('[name="mapy_maps"]');
-  var locationMessage = form.getAttribute('data-location-required') || 'Enter an address or a GPS link.';
-  var addressMessage = form.getAttribute('data-address-invalid') || 'Address must contain at least 2 characters.';
-  var cityMessage = form.getAttribute('data-city-invalid') || 'Select a valid city.';
-  function validateLocation() {
-    var address = addressInput ? addressInput.value.trim() : '';
-    var hasGps = [googleMapsInput, mapyMapsInput].some(function (input) {
-      return input && input.value.trim() !== '';
-    });
-    var hasLocation = address.length >= 2 || hasGps;
-    if (addressInput) addressInput.setCustomValidity(address.length === 1 ? addressMessage : (hasLocation ? '' : locationMessage));
-    return hasLocation && address.length !== 1;
-  }
-  function validateCity() {
-    if (!cityInput) return true;
-    var valid = cityInput.value.trim().length >= 2 && cityId && Number(cityId.value) > 0;
-    cityInput.setCustomValidity(valid ? '' : cityMessage);
-    return valid;
-  }
-  if (cityInput) {
-    cityInput.addEventListener('blur', validateCity);
-  }
-  [addressInput, googleMapsInput, mapyMapsInput].forEach(function (input) {
-    if (input) input.addEventListener('input', validateLocation);
-  });
-  form.addEventListener('submit', function (event) {
-    var locationValid = validateLocation();
-    var cityValid = validateCity();
-    if (!locationValid || !cityValid) {
-      event.preventDefault();
-      if (!cityValid && cityInput) cityInput.reportValidity();
-      else if (addressInput) addressInput.reportValidity();
-    }
-  });
   var timer = 0;
   var request = { city: 0, country: 0 };
 
@@ -129,7 +93,6 @@
   if (cityInput && cityId && cityList) {
     cityInput.addEventListener('input', function () {
       cityId.value = '0';
-      validateCity();
       window.clearTimeout(timer);
       timer = window.setTimeout(function () {
         load('city', cityInput, cityList, cityInput.getAttribute('data-suggest-url'),
@@ -137,8 +100,7 @@
           function (item) {
             cityInput.value = item.name;
             cityId.value = String(item.id);
-            validateCity();
-            if (countryInput && countryId) {
+                  if (countryInput && countryId) {
               countryInput.value = item.country;
               countryId.value = String(item.country_id);
               if (countryIso2) countryIso2.textContent = item.iso2 || '';
