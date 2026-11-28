@@ -22,6 +22,7 @@ declare(strict_types=1);
 <?php else: ?>
 <p class="back"><a href="<?= e(url('review')) ?>">← <?= e(t('review.title')) ?></a></p>
 <?php if ($ev !== null): ?><?php require __DIR__ . '/event_view.php'; ?>
+<?php elseif ($venue !== null): ?><?php require __DIR__ . '/venue_view.php'; ?>
 <?php else: ?><section class="card"><h1><?= e((string)$pend['title']) ?></h1><p class="muted"><?= e(t('flash.review_unsupported')) ?></p></section><?php endif; ?>
 <section class="card narrow">
   <?php if (!$lockMine): ?>
@@ -31,8 +32,8 @@ declare(strict_types=1);
   <?php else: ?>
     <p class="muted"><?= e(str_replace('{min}', (string)ceil(max(60,(int)cfg('review.lock_ttl_sec',900))/60), t('review.lock_mine'))) ?></p>
     <div class="inline">
-      <?php if ($ev !== null): ?><a class="btn" href="<?= e(url('review/edit?id=' . (int)$pend['id'])) ?>"><?= e(t('review.btn.edit')) ?></a>
-      <form method="post" action="<?= e(url('review')) ?>"><?= csrf_field() ?><input type="hidden" name="id" value="<?= (int)$pend['id'] ?>"><button class="btn" name="action" value="approve"><?= e(t('review.approve')) ?></button></form><?php endif; ?>
+      <?php if ($ev !== null): ?><a class="btn" href="<?= e(url('review/edit?id=' . (int)$pend['id'])) ?>"><?= e(t('review.btn.edit')) ?></a><?php endif; ?>
+      <?php if ($ev !== null || $venue !== null): ?><form method="post" action="<?= e(url('review')) ?>"><?= csrf_field() ?><input type="hidden" name="id" value="<?= (int)$pend['id'] ?>"><button class="btn" name="action" value="approve"><?= e(t('review.approve')) ?></button></form><?php endif; ?>
       <form method="post" action="<?= e(url('review')) ?>"><?= csrf_field() ?><input type="hidden" name="id" value="<?= (int)$pend['id'] ?>"><button class="btn danger" name="action" value="reject" data-confirm="<?= e(t('review.reject_confirm')) ?>"><?= e(t('review.reject')) ?></button></form>
       <form method="post" action="<?= e(url('review')) ?>"><?= csrf_field() ?><input type="hidden" name="id" value="<?= (int)$pend['id'] ?>"><button class="btn ghost" name="action" value="unlock"><?= e(t('review.btn.release')) ?></button></form>
     </div>
