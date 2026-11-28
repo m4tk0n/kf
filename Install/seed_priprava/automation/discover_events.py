@@ -24,7 +24,7 @@ BANDS = ROOT / "bands.json"
 HEADERS = {"User-Agent": "KF-EventDiscovery/1.0 (+https://github.com/m4tk0n/kf)"}
 DATE_RE = re.compile(r"(?<!\d)(?:\d{1,2}[.\-/]\s?\d{1,2}[.\-/]\s?\d{2,4}|\d{4}-\d{2}-\d{2}|\d{1,2}\.\s*\d{1,2}\.\s*\d{4})(?!\d)")
 PUNK_RE = re.compile(r"\b(punk|punk\s*[-–]?\s*rock|streetpunk|ska\s*[-–]?\s*punk|hardcore\s*[-–]?\s*punk|oi!?|crust|anarcho[- ]punk)\b", re.I)
-EVENT_PATH_RE = re.compile(r"(akce|koncert|event|program|kalend|punk|festival|gig)", re.I)
+EVENT_PATH_RE = re.compile(r"(akce|koncert|event|program|kalend|punk|festival|gig|pgf0=|tot0=|year=|rok=|mesic=|tag%5b)", re.I)
 
 
 def fetch(url: str) -> str:
