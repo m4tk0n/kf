@@ -62,6 +62,32 @@
         "https://www.nezfales.cz/"
       ],
       "note": "Identita, pražský původ a punkrockový žánr ověřeny na oficiálním webu. Vlastní koncertní historie zatím neprozkoumaná."
+    },
+    {
+      "id": 5,
+      "name": "Dilemma in Cinema",
+      "genre": "punk rock",
+      "country": "CZ",
+      "city": "Slaný",
+      "url": "https://dilemmaincinema.cz/",
+      "sources": [
+        "https://dilemmaincinema.cz/",
+        "https://www.darkzin.cz/shlednute-kapely/dilemma-in-cinema/"
+      ],
+      "note": "Identita ověřena oficiálním webem; původ ve Slaném a punkrockový žánr ověřeny sekundárním profilem. Vlastní koncertní historie zatím neprozkoumaná."
+    },
+    {
+      "id": 6,
+      "name": "Deratizéři",
+      "genre": "folk punk",
+      "country": "CZ",
+      "city": "Slaný",
+      "url": "https://deratizeri.cz/der08/index.php?show=kapela",
+      "sources": [
+        "https://deratizeri.cz/der08/index.php?show=kapela",
+        "https://www.hudebniknihovna.cz/deratizeri.html"
+      ],
+      "note": "Identita, vznik, slánský původ a folk-punkový žánr ověřeny oficiálním webem a hudební encyklopedií. Vlastní koncertní historie zatím neprozkoumaná."
     }
   ]
 }
