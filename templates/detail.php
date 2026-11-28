@@ -86,7 +86,12 @@ $evList = static function (array $rows): string {
     ?>
   </dl>
 
-  <?php if ($kind === 'venue' && $x['geo'] !== null):
+  <?php if ($kind === 'venue' && ($x['mapy_maps'] !== '' || $x['google_maps'] !== '')): ?>
+    <div class="maplinks" aria-label="<?= e(t('detail.map')) ?>">
+      <?php if ($x['mapy_maps'] !== ''): ?><a class="btn small ghost" target="_blank" rel="noopener" href="<?= e($x['mapy_maps']) ?>">Mapy.com</a><?php endif; ?>
+      <?php if ($x['google_maps'] !== ''): ?><a class="btn small ghost" target="_blank" rel="noopener" href="<?= e($x['google_maps']) ?>">Google Maps</a><?php endif; ?>
+    </div>
+  <?php elseif ($kind === 'venue' && $x['geo'] !== null):
       $lat = number_format($x['geo'][0], 5, '.', '');
       $lng = number_format($x['geo'][1], 5, '.', '');
   ?>
