@@ -201,6 +201,64 @@ check(is_file($eventBase . '_l.webp') && is_file($eventBase . '_s.webp'), 'appro
 check(kf_pending_get($pendingId) === null && !is_file(dirname(abs_path(json_bucket_rel('pending', $pendingId))) . '/' . $pendingId . '_l.webp'), 'approval removes pending row, JSON and image');
 check((int)q('SELECT approved_count FROM ' . tbl('users') . ' WHERE id = ?', [$users['user']])->fetchColumn() === 1, 'approval increments the author approved counter');
 
+function create_band_draft_with_images(int $userId, array $values): array
+{
+    $tmp = abs_path((string)cfg('storage.tmp_dir'));
+    $names = ['logo' => 'u' . $userId . '_' . random_hex(8), 'detail' => 'u' . $userId . '_' . random_hex(8)];
+    foreach ($names as $name) {
+        $image = imagecreatetruecolor(8, 8);
+        if (!$image instanceof GdImage) throw new RuntimeException('GD image creation failed for band fixture');
+        $background = imagecolorallocate($image, 70, 110, 150);
+        imagefill($image, 0, 0, $background);
+        kf_img_write($image, $tmp . '/' . $name);
+        imagedestroy($image);
+    }
+    json_write_file(draft_rel($userId), [
+        'kind' => 'band', 'values' => $values,
+        'logo_image' => $names['logo'], 'detail_image' => $names['detail'], 'ts' => time(),
+    ]);
+    check(kf_band_draft_get($userId) !== null, 'saves and reloads a band draft with two independent images');
+    check(kf_band_image_path($userId, $names['logo'], 's') !== null
+        && kf_band_image_path($userId, $names['detail'], 'l') !== null, 'keeps the small logo and detail image in separate draft files');
+    return $names;
+}
+
+$bandValues = kf_band_clean([
+    'name' => 'KF test band submission',
+    'city_id' => $cityId,
+    'city_name' => 'Brno',
+    'country_id' => $countryId,
+    'genre_id' => $genreId,
+    'www' => 'https://example.com/band',
+    'facebook' => 'https://facebook.com/exampleband',
+    'bandzone' => 'https://bandzone.cz/exampleband',
+    'description' => 'Popis testovací kapely.',
+]);
+check(kf_band_validate($bandValues) === [], 'validates the band name, city, country, genre and optional links');
+$bandImages = create_band_draft_with_images($users['user'], $bandValues);
+$bandFormHtml = run_route('band_form', $userToken);
+check(str_contains($bandFormHtml, 'KF test band submission') && str_contains($bandFormHtml, 'data-band-image="logo"')
+    && str_contains($bandFormHtml, 'data-band-image="detail"'), 'band form renders values and two separate image controls');
+$bandPreviewHtml = run_route('band_preview', $userToken);
+check(str_contains($bandPreviewHtml, 'KF test band submission') && str_contains($bandPreviewHtml, 'band-list-preview')
+    && str_contains($bandPreviewHtml, 'band/draft-image?which=logo'), 'band preview renders detail and the real list-row layout with the small logo');
+run_route('band_submit', $userToken);
+$pendingBand = q('SELECT id, title FROM ' . tbl('pending') . ' WHERE created_by=? AND type=? AND title=?',
+    [$users['user'], (int)cfg('enums.pending_type.band'), 'KF test band submission'])->fetch();
+check($pendingBand !== false, 'ordinary user submits a band into pending');
+$pendingBandId = (int)$pendingBand['id'];
+$pendingBandData = kf_pending_get($pendingBandId);
+check(($pendingBandData['data']['kind'] ?? '') === 'band'
+    && ($pendingBandData['data']['values']['facebook'] ?? '') === 'https://facebook.com/exampleband'
+    && ($pendingBandData['data']['values']['bandzone'] ?? '') === 'https://bandzone.cz/exampleband', 'pending JSON stores band links and descriptive data');
+$pendingBandDir = dirname(abs_path(json_bucket_rel('pending', $pendingBandId)));
+check(is_file($pendingBandDir . '/' . $pendingBandId . '_s.webp')
+    && is_file($pendingBandDir . '/' . $pendingBandId . '_l.webp'), 'pending band keeps separate small and large WebP images');
+check(kf_band_draft_get($users['user']) === null
+    && kf_band_image_path($users['user'], $bandImages['logo'], 's') === null
+    && kf_band_image_path($users['user'], $bandImages['detail'], 'l') === null, 'band submission clears both draft images');
+$bandReviewHtml = run_route('review_band_preview', $reviewToken, $pendingBandId);
+
 $trustedToken = session_token_for($users['trusted']);
 $trustedValues = event_values('KF test trusted direct publish', date('Y-m-d', strtotime('+31 days')), $cityId, $venueId, $bandId);
 check(kf_event_validate($trustedValues) === [], 'validates trusted-user event');
