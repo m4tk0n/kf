@@ -16,7 +16,7 @@
     "name": "Kemping Rybníky Opatovce",
     "city": "Opatovce",
     "country_code": "SK",
-    "address": null,
+    "address": "Opatovce 173, 913 11 Opatovce, Slovensko",
     "coordinates": {
       "latitude": 48.8598185,
       "longitude": 17.9666783
@@ -26,33 +26,36 @@
       "src-punkaci-history",
       "src-punkaci-2024-official",
       "src-punkaci-2024-goout",
-      "src-punkaci-darkzin-archive"
+      "src-punkaci-darkzin-archive",
+      "src-venue-kemping-opatovce-address"
     ],
-    "verification": "venue_name_and_location_confirmed_exact_street_address_not_confirmed"
+    "verification": "address_confirmed"
   },
   {
     "id": "hajovna-zilina",
     "name": "Hájovňa",
     "city": "Žilina",
     "country_code": "SK",
-    "address": null,
+    "address": "Cesta k Paľovej búde 27, 010 03 Žilina, Slovensko",
     "coordinates": null,
     "source_ids": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-venue-hajovna-address"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "address_confirmed"
   },
   {
     "id": "basta-bardejov",
     "name": "Bašta",
     "city": "Bardejov",
     "country_code": "SK",
-    "address": null,
+    "address": "Na hradbách 94/3, 085 01 Bardejov, Slovensko",
     "coordinates": null,
     "source_ids": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-venue-basta-address"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "address_confirmed"
   },
   {
     "id": "pod-chlistovskou-skalou-havlickuv-brod",
@@ -95,12 +98,13 @@
     "name": "Collosseum",
     "city": "Košice",
     "country_code": "SK",
-    "address": null,
+    "address": "Vrátna 639/70, 040 01 Košice, Slovensko",
     "coordinates": null,
     "source_ids": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-venue-collosseum-address"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "address_confirmed"
   },
   {
     "id": "sibiř-brno",
@@ -131,36 +135,42 @@
     "name": "Mír",
     "city": "Uherské Hradiště",
     "country_code": "CZ",
-    "address": null,
-    "coordinates": null,
+    "address": "Náměstí Míru 765, 686 01 Uherské Hradiště, Česká republika",
+    "coordinates": {
+      "latitude": 49.067411,
+      "longitude": 17.466891
+    },
     "source_ids": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-venue-mir-address"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "address_and_coordinates_confirmed"
   },
   {
     "id": "zalar-bratislava",
     "name": "Žalár",
     "city": "Bratislava",
     "country_code": "SK",
-    "address": null,
+    "address": "Štefánikova 47, 811 04 Bratislava, Slovensko",
     "coordinates": null,
     "source_ids": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-venue-zalar-address"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "address_confirmed"
   },
   {
     "id": "bosorka-banska-bystrica",
     "name": "Bosorka",
     "city": "Banská Bystrica",
     "country_code": "SK",
-    "address": null,
+    "address": "Horná 4, 974 01 Banská Bystrica, Slovensko",
     "coordinates": null,
     "source_ids": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-venue-bosorka-address"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "address_confirmed"
   },
   {
     "id": "kolaj-22-poprad",
@@ -230,14 +240,15 @@
     "name": "Festplatz Burgermühlweiher",
     "city": "Wunsiedel",
     "country_code": "DE",
-    "address": null,
+    "address": "Burgermühlweiher 1, 95632 Wunsiedel, Německo",
     "coordinates": null,
     "source_ids": [
       "src-fialky-2025-summer",
       "src-fialky-played-2025",
-      "src-wunstock-2025"
+      "src-wunstock-2025",
+      "src-venue-wunstock-address"
     ],
-    "verification": "venue_name_and_city_confirmed_by_event_source"
+    "verification": "address_confirmed"
   },
   {
     "id": "raiffeisenhof-dinkelscherben",
@@ -292,12 +303,13 @@
     "name": "Colloseum",
     "city": "Košice",
     "country_code": "SK",
-    "address": null,
+    "address": "Vrátna 639/70, 040 01 Košice, Slovensko",
     "coordinates": null,
     "source_ids": [
-      "src-fialky-played-2025"
+      "src-fialky-played-2025",
+      "src-venue-collosseum-address"
     ],
-    "verification": "venue_name_and_city_listed_in_official_band_archive"
+    "verification": "address_confirmed"
   },
   {
     "id": "smer-klub-zilina",
@@ -340,12 +352,16 @@
     "name": "Gromka",
     "city": "Ljubljana",
     "country_code": "SI",
-    "address": null,
-    "coordinates": null,
+    "address": "AKC Metelkova mesto, Masarykova 24, 1000 Ljubljana, Slovinsko",
+    "coordinates": {
+      "latitude": 46.05664,
+      "longitude": 14.51737
+    },
     "source_ids": [
-      "src-blankout-balkan-2024"
+      "src-blankout-balkan-2024",
+      "src-venue-gromka-address"
     ],
-    "verification": "venue_and_city_listed_in_official_tour_announcement"
+    "verification": "venue_location_and_coordinates_confirmed_address_is_complex_site"
   },
   {
     "id": "monte-paradiso-pula",
@@ -436,12 +452,13 @@
     "name": "Letiště Trenčín",
     "city": "Trenčín",
     "country_code": "SK",
-    "address": null,
+    "address": "Legionárska 160, 911 04 Trenčín, Slovensko",
     "coordinates": null,
     "source_ids": [
-      "src-punkaci-darkzin-archive"
+      "src-punkaci-darkzin-archive",
+      "src-venue-letiste-trencin-address"
     ],
-    "verification": "venue_and_city_listed_in_independent_festival_archive"
+    "verification": "address_confirmed"
   },
   {
     "id": "smer-klub-77-zilina",
