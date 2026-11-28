@@ -30,6 +30,12 @@
     }
   });
 
+  var cityInput = document.querySelector('[data-venue-city-input]');
+  var cityId = document.querySelector('[data-venue-city-id]');
+  var countryInput = document.querySelector('[data-venue-country-input]');
+  var countryId = document.querySelector('[data-venue-country-id]');
+  var countryIso2 = document.querySelector('[data-venue-country-iso2]');
+
   // Společné ovládání našeptávačů ve formuláři (název akce a klub/místo).
   Array.prototype.forEach.call(document.querySelectorAll('[data-autocomplete-input]'), function (nameInput) {
     var suggestionsId = nameInput.getAttribute('data-autocomplete-suggestions-target');
@@ -42,11 +48,6 @@
     var requestNumber = 0;
     var minSuggestChars = parseInt(nameInput.getAttribute('data-suggest-min') || '2', 10);
     var venueId = nameInput.parentNode.querySelector('[data-venue-id]');
-    var cityInput = document.querySelector('[data-venue-city-input]');
-    var cityId = document.querySelector('[data-venue-city-id]');
-    var countryInput = document.querySelector('[data-venue-country-input]');
-    var countryId = document.querySelector('[data-venue-country-id]');
-    var countryIso2 = document.querySelector('[data-venue-country-iso2]');
 
     function closeSuggestions() {
       suggestions.hidden = true;
@@ -127,7 +128,7 @@
         var term=input.value.trim(), current=++request;
         if(term.length<parseInt(input.getAttribute('data-suggest-min')||'2',10)){close();return;}
         var query='?q='+encodeURIComponent(term);
-        Object.keys(extraParams||{}).forEach(function(k){if(extraParams[k])query+='&'+encodeURIComponent(k)+'='+encodeURIComponent(extraParams[k]);});
+        Object.keys(extraParams||{}).forEach(function(k){var value=typeof extraParams[k]==='function'?extraParams[k]():extraParams[k];if(value)query+='&'+encodeURIComponent(k)+'='+encodeURIComponent(value);});
         fetch(input.getAttribute('data-suggest-url')+query,{credentials:'same-origin',headers:{'Accept':'application/json'},cache:'no-store'})
           .then(function(r){if(!r.ok)throw new Error('Suggestion request failed');return r.json();})
           .then(function(data){
