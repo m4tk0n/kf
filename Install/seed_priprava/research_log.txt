@@ -175,3 +175,22 @@ Zapsáno:
 Poznámka:
 - U Starák Festu a Trutnoff jsou v line-upu zatím uvedeni pouze The Fialky, protože další konkrétní vystoupení nebyla v této fázi doložena po jednotlivých kapelách.
 - U Summer Punk Party je rovněž ponechán pouze potvrzený záznam The Fialky; další kapely se doplní po ověření jejich identity a skutečné účasti.
+
+
+## 2026-11-28 — The Fialky — červenec/srpen 2026 — dalších pět ověřených festivalů
+
+Doplněno:
+- 2026-08-01 — Farák Fest / Heřmanova Huť. Oficiální web pořadatele potvrzuje, že 11. ročník proběhl, a uvádí The Fialky v programu; archiv The Fialky uvádí jejich čas 14:00.
+- 2026-07-31 až 2026-08-01 — Let’s GO fest summer vol. 11 / Amfiteátr Pod Skálou, Třebíz. Oficiální web festivalu uvádí The Fialky a termín; archiv The Fialky potvrzuje vystoupení 1. 8. ve 22:00.
+- 2026-07-31 až 2026-08-01 — Kravín Fest – 10. ročník / Kravín Chválkov. Oficiální web pořadatele potvrzuje festival; archiv The Fialky a detailní program Darkzin potvrzují vystoupení 31. 7. ve 21:15.
+- 2026-07-24 až 2026-07-25 — Bez Šance Fest XII. / Hospůdka U Pavla, Police nad Metují. Regionální kalendář potvrzuje konkrétní rozpis, The Fialky v sobotu 25. 7. ve 20:50; město eviduje akci a ověřena adresa místa.
+- 2026-07-23 až 2026-07-26 — Benátská! s Impulsem 2026 / Sportovní areál Vesec, Liberec. Oficiální web pořadatele potvrzuje čtyřdenní festival a následný aftermovie; oficiální koncertní přehled Protheus potvrzuje čtvrteční program s The Fialky; archiv kapely uvádí jejich čas 17:45.
+
+Zapsáno:
+- event_2026.json: akce ID 28–32.
+- venues.json: místa ID 26–30.
+- evidence.json: zdroje SRC-0073 až SRC-0087 a tvrzení CLM-0264 až CLM-0303.
+
+Poznámka:
+- V této dávce jsou v line-upu uvedeny pouze The Fialky. Další kapely z festivalových plakátů se doplní až po ověření skutečného vystoupení a identity.
+- U Farák Festu jde o jednodenní festival, ale podle projektového rozlišení koncert/festival je typ nastaven jako concert, protože festivalový typ používáme pro vícedenní akce.
