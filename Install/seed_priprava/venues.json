@@ -215,6 +215,55 @@
         "https://www.litomysl.cz/kalendar_akci/kultura",
         "https://www.mckotelna.cz/"
       ]
+    },
+    {
+      "id": 18,
+      "name": "MC Fabrika",
+      "city": "České Budějovice",
+      "country": "CZ",
+      "address": "Jeronýmova 6, 370 01 České Budějovice",
+      "url": "https://www.mcfabrika.cz/",
+      "sources": [
+        "https://www.mcfabrika.cz/kontakt",
+        "https://www.mcfabrika.cz/o-klubu"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Městský společenský dům Kolín",
+      "city": "Kolín",
+      "country": "CZ",
+      "address": "Zámecká 109, 280 02 Kolín",
+      "url": "https://www.msd-kolin.cz/",
+      "sources": [
+        "https://www.msd-kolin.cz/vyrocni_zprava.pdf",
+        "https://www.smsticket.cz/mista/850-mestsky-spolecensky-dum-kolin"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Rock Café",
+      "city": "Praha",
+      "country": "CZ",
+      "address": "Národní 20, 110 00 Praha 1",
+      "url": "https://rockcafe.cz/",
+      "sources": [
+        "https://rockcafe.cz/cs/info-a-kontakty/",
+        "https://rockcafe.cz/en/program/god-save-the-punk-ii-sps-the-fialky/"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Bílej Medvěd",
+      "city": "Plzeň",
+      "country": "CZ",
+      "address": "Prokopova 336/30, 301 00 Plzeň",
+      "url": "https://medvedclubs.cz/",
+      "sources": [
+        "https://goout.net/en/god-save-the-punk-ii-sps%2Bthe-fialky/sznnrky/",
+        "https://kultura.plzen.eu/kulturni-infrastruktura/objekty-a-zarizeni/hala-bilej-medved/",
+        "https://bandzone.cz/klub/bilejmedved?at=contacts"
+      ]
     }
   ],
   "next": []
