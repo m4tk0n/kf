@@ -9,7 +9,12 @@
     "source_ids": [
       "src-podparou-venue-2025"
     ],
-    "verification": "official_address_confirmed"
+    "verification": "official_address_confirmed",
+    "event_ids": [
+      "fest-pod-parou-2025",
+      "konflikt-2025-07-19-olomouc"
+    ],
+    "status": "pending"
   },
   {
     "id": "kemping-rybniky-opatovce",
@@ -29,7 +34,14 @@
       "src-punkaci-darkzin-archive",
       "src-venue-kemping-opatovce-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punkaci-detom-2025",
+      "punkaci-detom-2024",
+      "punkaci-detom-2023",
+      "punkaci-detom-2026"
+    ],
+    "status": "pending"
   },
   {
     "id": "hajovna-zilina",
@@ -42,7 +54,14 @@
       "src-punkgen-archive",
       "src-venue-hajovna-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punkgen-2020-zilina-hajovna-01-03",
+      "punkgen-2026-zilina-01-24",
+      "punkgen-2026-zilina-01-30",
+      "punkgen-2024-zilina-01-13"
+    ],
+    "status": "pending"
   },
   {
     "id": "basta-bardejov",
@@ -55,7 +74,11 @@
       "src-punkgen-archive",
       "src-venue-basta-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punkgen-2021-basta-bardejov-06-10"
+    ],
+    "status": "pending"
   },
   {
     "id": "pod-chlistovskou-skalou-havlickuv-brod",
@@ -70,7 +93,11 @@
     "source_ids": [
       "src-punkgen-archive"
     ],
-    "verification": "location_and_coordinates_provided_by_user"
+    "verification": "location_and_coordinates_provided_by_user",
+    "event_ids": [
+      "punkgen-2022-havlickuv-brod-07-01"
+    ],
+    "status": "pending"
   },
   {
     "id": "zarazicka-hospoda-veseli-nad-moravou",
@@ -86,7 +113,11 @@
       "src-punkgen-archive",
       "src-venue-zarazicka-address"
     ],
-    "verification": "address_and_coordinates_confirmed"
+    "verification": "address_and_coordinates_confirmed",
+    "event_ids": [
+      "punkgen-2024-veseli-02-02"
+    ],
+    "status": "pending"
   },
   {
     "id": "gogo-znojmo",
@@ -99,7 +130,11 @@
       "src-punkgen-archive",
       "src-venue-gogo-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punkgen-2024-znojmo-02-03"
+    ],
+    "status": "pending"
   },
   {
     "id": "collosseum-kosice",
@@ -112,7 +147,12 @@
       "src-punkgen-archive",
       "src-venue-collosseum-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punkgen-2025-kosice-03-14",
+      "totalni-nasazeni-2022-11-11-kosice"
+    ],
+    "status": "pending"
   },
   {
     "id": "sibiř-brno",
@@ -128,7 +168,11 @@
       "src-punkgen-archive",
       "src-venue-sibir-address"
     ],
-    "verification": "address_and_coordinates_confirmed"
+    "verification": "address_and_coordinates_confirmed",
+    "event_ids": [
+      "punkgen-2026-brno-04-18"
+    ],
+    "status": "pending"
   },
   {
     "id": "kubik-trnava",
@@ -141,7 +185,11 @@
       "src-punkgen-archive",
       "src-venue-kubik-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punkgen-2026-trnava-01-23"
+    ],
+    "status": "pending"
   },
   {
     "id": "klub-mir-uherske-hradiste",
@@ -157,7 +205,12 @@
       "src-punkgen-archive",
       "src-venue-mir-address"
     ],
-    "verification": "address_and_coordinates_confirmed"
+    "verification": "address_and_coordinates_confirmed",
+    "event_ids": [
+      "punkgen-2026-uherske-hradiste-04-02",
+      "houba-2026-04-24-uherske-hradiste"
+    ],
+    "status": "pending"
   },
   {
     "id": "zalar-bratislava",
@@ -170,7 +223,11 @@
       "src-punkgen-archive",
       "src-venue-zalar-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punkgen-2026-bratislava-04-04"
+    ],
+    "status": "pending"
   },
   {
     "id": "bosorka-banska-bystrica",
@@ -183,7 +240,11 @@
       "src-punkgen-archive",
       "src-venue-bosorka-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punkgen-2025-banska-bystrica-01-04"
+    ],
+    "status": "pending"
   },
   {
     "id": "kolaj-22-poprad",
@@ -195,7 +256,11 @@
     "source_ids": [
       "src-punkgen-archive"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "venue_name_and_city_listed_in_concert_archive",
+    "event_ids": [
+      "punkgen-2025-poprad-01-17"
+    ],
+    "status": "pending"
   },
   {
     "id": "flak-liptovsky-mikulas",
@@ -208,7 +273,11 @@
       "src-punkgen-archive",
       "src-venue-flak-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punkgen-2026-liptovsky-mikulas-01-31"
+    ],
+    "status": "pending"
   },
   {
     "id": "2kola-warsaw",
@@ -221,7 +290,11 @@
       "src-fialky-played-2025",
       "src-punkowastrona-2025-05"
     ],
-    "verification": "venue_name_and_city_confirmed_by_event_source"
+    "verification": "venue_name_and_city_confirmed_by_event_source",
+    "event_ids": [
+      "fialky-2025-warsaw-05-16"
+    ],
+    "status": "pending"
   },
   {
     "id": "druid-pub-ruda-slaska",
@@ -235,7 +308,11 @@
       "src-punkowastrona-2025-05",
       "src-venue-druid-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2025-ruda-slaska-05-17"
+    ],
+    "status": "pending"
   },
   {
     "id": "underground-club-eggenthal",
@@ -248,7 +325,11 @@
       "src-fialky-2025-summer",
       "src-fialky-played-2025"
     ],
-    "verification": "venue_name_and_city_confirmed_by_event_source"
+    "verification": "venue_name_and_city_confirmed_by_event_source",
+    "event_ids": [
+      "fialky-2025-eggenthal-09-12"
+    ],
+    "status": "pending"
   },
   {
     "id": "wunstock-festplatz-wunsiedel",
@@ -263,7 +344,11 @@
       "src-wunstock-2025",
       "src-venue-wunstock-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2025-wunstock-09-13"
+    ],
+    "status": "pending"
   },
   {
     "id": "raiffeisenhof-dinkelscherben",
@@ -275,7 +360,11 @@
     "source_ids": [
       "src-dinkel-2025"
     ],
-    "verification": "venue_name_and_city_confirmed_by_event_source"
+    "verification": "venue_name_and_city_confirmed_by_event_source",
+    "event_ids": [
+      "minority-2025-dinkelscherben-07-25"
+    ],
+    "status": "pending"
   },
   {
     "id": "meetfactory-prague",
@@ -291,7 +380,11 @@
       "src-fialky-played-2025",
       "src-venue-meetfactory-address"
     ],
-    "verification": "address_and_coordinates_confirmed"
+    "verification": "address_and_coordinates_confirmed",
+    "event_ids": [
+      "fialky-2025-prague-03-01"
+    ],
+    "status": "pending"
   },
   {
     "id": "l86-finsterwalde",
@@ -303,7 +396,11 @@
     "source_ids": [
       "src-fialky-played-2025"
     ],
-    "verification": "venue_name_and_city_listed_in_official_band_archive"
+    "verification": "venue_name_and_city_listed_in_official_band_archive",
+    "event_ids": [
+      "fialky-2025-finsterwalde-03-07"
+    ],
+    "status": "pending"
   },
   {
     "id": "mmc-bratislava",
@@ -319,7 +416,11 @@
       "src-fialky-played-2025",
       "src-venue-mmc-address"
     ],
-    "verification": "address_and_coordinates_confirmed"
+    "verification": "address_and_coordinates_confirmed",
+    "event_ids": [
+      "fialky-2025-bratislava-03-15"
+    ],
+    "status": "pending"
   },
   {
     "id": "colloseum-kosice-2025",
@@ -332,7 +433,11 @@
       "src-fialky-played-2025",
       "src-venue-collosseum-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2025-kosice-03-21"
+    ],
+    "status": "pending"
   },
   {
     "id": "smer-klub-zilina",
@@ -344,7 +449,11 @@
     "source_ids": [
       "src-fialky-played-2025"
     ],
-    "verification": "venue_name_and_city_listed_in_official_band_archive"
+    "verification": "venue_name_and_city_listed_in_official_band_archive",
+    "event_ids": [
+      "fialky-2025-zilina-03-22"
+    ],
+    "status": "pending"
   },
   {
     "id": "the-rock-bottom-falkirk",
@@ -357,7 +466,11 @@
       "src-fialky-played-2025",
       "src-venue-rock-bottom-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2025-falkirk-02-15"
+    ],
+    "status": "pending"
   },
   {
     "id": "kapu-linz",
@@ -369,7 +482,11 @@
     "source_ids": [
       "src-blankout-balkan-2024"
     ],
-    "verification": "venue_and_city_listed_in_official_tour_announcement"
+    "verification": "venue_and_city_listed_in_official_tour_announcement",
+    "event_ids": [
+      "blankout-balkan-2024-linz"
+    ],
+    "status": "pending"
   },
   {
     "id": "gromka-ljubljana",
@@ -385,7 +502,11 @@
       "src-blankout-balkan-2024",
       "src-venue-gromka-address"
     ],
-    "verification": "venue_location_and_coordinates_confirmed_address_is_complex_site"
+    "verification": "venue_location_and_coordinates_confirmed_address_is_complex_site",
+    "event_ids": [
+      "blankout-balkan-2024-ljubljana"
+    ],
+    "status": "pending"
   },
   {
     "id": "monte-paradiso-pula",
@@ -397,7 +518,11 @@
     "source_ids": [
       "src-blankout-balkan-2024"
     ],
-    "verification": "venue_and_city_listed_in_official_tour_announcement"
+    "verification": "venue_and_city_listed_in_official_tour_announcement",
+    "event_ids": [
+      "blankout-balkan-2024-pula"
+    ],
+    "status": "pending"
   },
   {
     "id": "podrum-rijeka",
@@ -409,7 +534,11 @@
     "source_ids": [
       "src-blankout-balkan-2024"
     ],
-    "verification": "address_provided_by_user"
+    "verification": "address_provided_by_user",
+    "event_ids": [
+      "blankout-balkan-2024-rijeka"
+    ],
+    "status": "pending"
   },
   {
     "id": "ag-club-sarajevo",
@@ -421,7 +550,11 @@
     "source_ids": [
       "src-blankout-balkan-2024"
     ],
-    "verification": "venue_and_city_listed_in_official_tour_announcement"
+    "verification": "venue_and_city_listed_in_official_tour_announcement",
+    "event_ids": [
+      "blankout-balkan-2024-sarajevo"
+    ],
+    "status": "pending"
   },
   {
     "id": "akab-okretnica-belgrade",
@@ -433,7 +566,11 @@
     "source_ids": [
       "src-blankout-balkan-2024"
     ],
-    "verification": "location_description_confirmed_by_official_venue_contact_page"
+    "verification": "location_description_confirmed_by_official_venue_contact_page",
+    "event_ids": [
+      "blankout-balkan-2024-belgrade"
+    ],
+    "status": "pending"
   },
   {
     "id": "ck13-novi-sad",
@@ -445,7 +582,11 @@
     "source_ids": [
       "src-blankout-balkan-2024"
     ],
-    "verification": "address_provided_by_user"
+    "verification": "address_provided_by_user",
+    "event_ids": [
+      "blankout-balkan-2024-novi-sad"
+    ],
+    "status": "pending"
   },
   {
     "id": "akc-attack-zagreb",
@@ -458,7 +599,11 @@
       "src-blankout-balkan-2024",
       "src-venue-attack-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "blankout-balkan-2024-zagreb"
+    ],
+    "status": "pending"
   },
   {
     "id": "arena-beisl-vienna",
@@ -471,7 +616,11 @@
       "src-blankout-balkan-2024",
       "src-venue-arena-beisl-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "blankout-balkan-2024-vienna"
+    ],
+    "status": "pending"
   },
   {
     "id": "letiste-trencin",
@@ -484,7 +633,15 @@
       "src-punkaci-darkzin-archive",
       "src-venue-letiste-trencin-address"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punkaci-detom-2021",
+      "punkaci-detom-2022",
+      "sps-2022-08-26-trencin",
+      "rozpor-2026-07-08-trencin",
+      "rozpor-2023-07-07-trencin"
+    ],
+    "status": "pending"
   },
   {
     "id": "smer-klub-77-zilina",
@@ -500,7 +657,12 @@
       "src-punkaci-darkzin-archive",
       "src-venue-smer77-address"
     ],
-    "verification": "address_and_coordinates_confirmed"
+    "verification": "address_and_coordinates_confirmed",
+    "event_ids": [
+      "punkaci-detom-winter-2025",
+      "punkaci-detom-winter-2026"
+    ],
+    "status": "pending"
   },
   {
     "id": "modra-vopice-praha",
@@ -515,7 +677,18 @@
     "source_ids": [
       "src-venue-modra-vopice"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "sps-2022-04-22-praha",
+      "fialky-2023-04-22-praha",
+      "nezfales-2023-04-21-praha",
+      "ee-2026-09-12-praha",
+      "ee-2021-04-23-praha",
+      "p-u-m-2022-02-26-praha",
+      "vvu-2025-04-25-praha",
+      "vvu-2025-09-13-praha"
+    ],
+    "status": "pending"
   },
   {
     "id": "vagon-praha",
@@ -526,7 +699,26 @@
     "source_ids": [
       "src-venue-vagon"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2025-12-06-praha",
+      "fialky-2024-12-07-praha",
+      "houba-2026-03-13-praha",
+      "punk-floid-2026-11-27-praha",
+      "totalni-nasazeni-2022-02-12-praha",
+      "totalni-nasazeni-2022-10-15-praha",
+      "totalni-nasazeni-2022-12-09-praha",
+      "totalni-nasazeni-2020-01-10-praha",
+      "ee-2023-03-11-praha",
+      "ee-2021-11-18-praha",
+      "dilemma-in-cinema-2021-12-10-praha",
+      "dilemma-in-cinema-2023-12-08-praha",
+      "vision-days-2024-02-03-praha",
+      "vision-days-2022-02-05-praha",
+      "driak-2023-02-04-praha",
+      "volant-2023-03-31-praha"
+    ],
+    "status": "pending"
   },
   {
     "id": "mc-fabrika-ceske-budejovice",
@@ -537,7 +729,18 @@
     "source_ids": [
       "src-venue-mc-fabrika"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2023-03-25-ceske-budejovice",
+      "houba-2026-04-10-ceske-budejovice",
+      "punk-floid-2025-10-04-ceske-budejovice",
+      "totalni-nasazeni-2025-03-07-ceske-budejovice",
+      "totalni-nasazeni-2022-10-07-ceske-budejovice",
+      "ee-2023-11-25-ceske-budejovice",
+      "zputnik-2020-02-28-ceske-budejovice",
+      "zputnik-2022-03-05-ceske-budejovice"
+    ],
+    "status": "pending"
   },
   {
     "id": "barrak-ostrava",
@@ -548,7 +751,15 @@
     "source_ids": [
       "src-venue-barrak"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2022-03-25-ostrava",
+      "houba-2026-04-11-ostrava",
+      "punk-floid-2025-09-27-ostrava",
+      "totalni-nasazeni-2025-04-12-ostrava",
+      "ee-2025-11-08-ostrava"
+    ],
+    "status": "pending"
   },
   {
     "id": "kabinet-muz-brno",
@@ -559,7 +770,13 @@
     "source_ids": [
       "src-venue-kabinet-muz"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "dilemma-in-cinema-2022-02-05-brno",
+      "rozpor-2026-02-13-brno",
+      "rozpor-2023-03-25-brno"
+    ],
+    "status": "pending"
   },
   {
     "id": "klub-007-strahov-praha",
@@ -570,7 +787,12 @@
     "source_ids": [
       "src-venue-klub-007"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2025-09-26-praha",
+      "rozpor-2024-06-14-praha"
+    ],
+    "status": "pending"
   },
   {
     "id": "rock-cafe-praha",
@@ -581,7 +803,12 @@
     "source_ids": [
       "src-venue-rock-cafe"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punk-floid-2023-11-24-praha",
+      "dilemma-in-cinema-2025-09-10-praha"
+    ],
+    "status": "pending"
   },
   {
     "id": "zluty-pes-pardubice",
@@ -592,7 +819,12 @@
     "source_ids": [
       "src-venue-zluty-pes"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "totalni-nasazeni-2025-03-15-pardubice",
+      "totalni-nasazeni-2022-10-21-pardubice"
+    ],
+    "status": "pending"
   },
   {
     "id": "letni-kino-slany",
@@ -603,7 +835,11 @@
     "source_ids": [
       "src-venue-letni-kino-slany"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "sps-2025-08-23-slany"
+    ],
+    "status": "pending"
   },
   {
     "id": "hrebikarna-chomutov",
@@ -614,7 +850,13 @@
     "source_ids": [
       "src-venue-hrebikarna"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "sps-2025-06-13-chomutov",
+      "dilemma-in-cinema-2022-06-17-chomutov",
+      "dilemma-in-cinema-2024-06-07-chomutov"
+    ],
+    "status": "pending"
   },
   {
     "id": "divadlo-pod-carou-pisek",
@@ -625,7 +867,13 @@
     "source_ids": [
       "src-venue-pod-carou"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "sps-2022-04-23-pisek",
+      "ee-2022-11-27-pisek",
+      "ee-2021-11-27-pisek"
+    ],
+    "status": "pending"
   },
   {
     "id": "knak-teplice",
@@ -636,7 +884,13 @@
     "source_ids": [
       "src-venue-knak"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2024-03-15-teplice",
+      "fialky-2023-02-25-teplice",
+      "fialky-2022-04-08-teplice"
+    ],
+    "status": "pending"
   },
   {
     "id": "lucky-pery-jindrichuv-hradec",
@@ -651,7 +905,16 @@
     "source_ids": [
       "src-venue-lucky-pery"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "nezfales-2026-11-21-jindrichuv-hradec",
+      "punk-floid-2022-04-02-jindrichuv-hradec",
+      "totalni-nasazeni-2025-03-21-jindrichuv-hradec",
+      "ee-2026-02-06-jindrichuv-hradec",
+      "ee-2025-02-07-jindrichuv-hradec",
+      "ee-2021-10-09-jindrichuv-hradec"
+    ],
+    "status": "pending"
   },
   {
     "id": "futurum-music-bar-praha",
@@ -662,7 +925,16 @@
     "source_ids": [
       "src-venue-futurum"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "sps-2023-10-13-praha",
+      "fialky-2022-04-09-praha",
+      "punk-floid-2026-03-19-praha",
+      "totalni-nasazeni-2025-03-08-praha",
+      "ee-2025-02-14-praha",
+      "rozpor-2025-01-11-praha"
+    ],
+    "status": "pending"
   },
   {
     "id": "bilej-medved-plzen",
@@ -673,7 +945,14 @@
     "source_ids": [
       "src-venue-bilej-medved"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2024-03-23-plzen",
+      "totalni-nasazeni-2025-03-29-plzen",
+      "ee-2023-11-24-plzen",
+      "dilemma-in-cinema-2025-11-29-plzen"
+    ],
+    "status": "pending"
   },
   {
     "id": "bunkr-rock-club-liberec",
@@ -688,7 +967,14 @@
     "source_ids": [
       "src-venue-bunkr-liberec"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2022-03-11-liberec",
+      "houba-2022-04-15-liberec",
+      "punk-floid-2026-04-18-liberec",
+      "totalni-nasazeni-2025-03-28-liberec"
+    ],
+    "status": "pending"
   },
   {
     "id": "prvni-patro-brno",
@@ -699,7 +985,16 @@
     "source_ids": [
       "src-venue-prvni-patro"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2024-04-05-brno",
+      "houba-2026-03-21-brno",
+      "punk-floid-2026-02-27-brno",
+      "totalni-nasazeni-2025-04-05-brno",
+      "dilemma-in-cinema-2023-03-31-brno",
+      "dilemma-in-cinema-2024-10-11-brno"
+    ],
+    "status": "pending"
   },
   {
     "id": "black-road-cafe-kladno",
@@ -710,7 +1005,13 @@
     "source_ids": [
       "src-venue-black-road"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punk-floid-2023-12-01-kladno",
+      "dilemma-in-cinema-2024-12-06-kladno",
+      "konflikt-2025-09-19-kladno"
+    ],
+    "status": "pending"
   },
   {
     "id": "tyjatr-svitavy",
@@ -725,7 +1026,13 @@
     "source_ids": [
       "src-venue-tyjatr"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "vision-days-2024-01-27-svitavy",
+      "vision-days-2022-01-14-svitavy",
+      "vision-days-2025-02-15-svitavy"
+    ],
+    "status": "pending"
   },
   {
     "id": "randal-club-bratislava",
@@ -736,7 +1043,12 @@
     "source_ids": [
       "src-venue-randal"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "totalni-nasazeni-2022-11-04-bratislava",
+      "konflikt-2022-09-14-bratislava"
+    ],
+    "status": "pending"
   },
   {
     "id": "abc-klub-pardubice",
@@ -747,7 +1059,12 @@
     "source_ids": [
       "src-venue-abc-klub"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "ee-2022-10-30-pardubice",
+      "vision-days-2021-10-30-pardubice"
+    ],
+    "status": "pending"
   },
   {
     "id": "meetfactory-praha",
@@ -762,7 +1079,11 @@
     "source_ids": [
       "src-venue-meetfactory"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2026-03-21-praha"
+    ],
+    "status": "pending"
   },
   {
     "id": "depo2015-plzen",
@@ -773,7 +1094,11 @@
     "source_ids": [
       "src-venue-depo2015"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2026-02-14-plzen"
+    ],
+    "status": "pending"
   },
   {
     "id": "ponorka-litvinov",
@@ -784,7 +1109,12 @@
     "source_ids": [
       "src-venue-ponorka-litvinov"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "vvu-2026-04-04-litvinov",
+      "zputnik-2022-04-02-litvinov"
+    ],
+    "status": "pending"
   },
   {
     "id": "stara-mydlarna-melnik",
@@ -795,7 +1125,12 @@
     "source_ids": [
       "src-venue-stara-mydlarna"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "dilemma-in-cinema-2023-04-22-melnik",
+      "zputnik-2020-03-07-melnik"
+    ],
+    "status": "pending"
   },
   {
     "id": "lucerna-velky-sal-praha",
@@ -806,7 +1141,11 @@
     "source_ids": [
       "src-venue-lucerna-velky-sal"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "fialky-2021-10-09-praha"
+    ],
+    "status": "pending"
   },
   {
     "id": "unleaded-coffee-brno",
@@ -817,6 +1156,13 @@
     "source_ids": [
       "src-venue-unleaded-coffee"
     ],
-    "verification": "address_confirmed"
+    "verification": "address_confirmed",
+    "event_ids": [
+      "punk-floid-2025-01-11-brno",
+      "driak-2023-01-21-brno",
+      "zputnik-2022-09-24-brno",
+      "sas-2026-09-19-brno"
+    ],
+    "status": "pending"
   }
 ]
