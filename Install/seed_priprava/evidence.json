@@ -525,6 +525,141 @@
       "source_type": "concert_listing",
       "retrieved_on": "2026-11-28",
       "supports": "Záznam koncertu 17. 10. 2026 v Prvním Patře, Brno; uvádí účinkující The Fialky a SPS."
+    },
+    {
+      "id": "SRC-0058",
+      "url": "https://www.ricany.cz/udalost/starak-fest-3/",
+      "publisher": "Město Říčany",
+      "title": "STARÁK FEST",
+      "source_type": "official_city_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Město Říčany potvrzuje konání Starák Festu 14. 8. 2026 na Starém koupališti a uvádí The Fialky v programu."
+    },
+    {
+      "id": "SRC-0059",
+      "url": "https://vikendo.cz/events/starak-fest-2026",
+      "publisher": "Vikendo / pořadatelský program",
+      "title": "STARÁK FEST 2026",
+      "source_type": "festival_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Festival 14.–15. 8. 2026, místo a rozpis scén; uvádí The Fialky."
+    },
+    {
+      "id": "SRC-0060",
+      "url": "https://www.findglocal.com/CZ/Ricany/308694282544774/STAR%C3%81K-FEST",
+      "publisher": "STARÁK FEST",
+      "title": "Fotoreport po festivalu",
+      "source_type": "organizer_social_report",
+      "retrieved_on": "2026-11-28",
+      "supports": "Pořadatel po skončení festivalu zveřejnil záběry z vystoupení The Fialky a potvrdil uskutečnění akce."
+    },
+    {
+      "id": "SRC-0061",
+      "url": "https://kultura-volyne.cz/typ/akce/page/2/",
+      "publisher": "Kultura Volyně",
+      "title": "SUMMER PUNK PARTY",
+      "source_type": "official_city_venue_event",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální kulturní portál Volyně potvrzuje 15. ročník Summer Punk Party 14.–15. 8. 2026 a účast The Fialky."
+    },
+    {
+      "id": "SRC-0062",
+      "url": "https://vikendo.cz/events/summer-punk-party-volyne-vol-xv",
+      "publisher": "Summer Punk Párty Volyně",
+      "title": "Summer Punk Párty Volyně vol. XV",
+      "source_type": "organizer_event_listing",
+      "retrieved_on": "2026-11-28",
+      "supports": "Pořadatelský program uvádí termín, místo a lineup včetně The Fialky."
+    },
+    {
+      "id": "SRC-0063",
+      "url": "https://www.ireport.cz/fotoreporty/krav-boca-h2o-a-mad-rabbit-divoke-finale-summer-punk-party-ve-volyni",
+      "publisher": "iREPORT",
+      "title": "Krav Boca, H2O a Mad Rabbits: Divoké finále Summer Punk Party ve Volyni",
+      "source_type": "post_event_report",
+      "retrieved_on": "2026-11-28",
+      "supports": "Report z druhého dne festivalu potvrzuje, že Summer Punk Party proběhla; popisuje vystoupení The Fialky a dalších účinkujících."
+    },
+    {
+      "id": "SRC-0064",
+      "url": "https://plovarnavolyne.cz/",
+      "publisher": "Plovárna Volyně",
+      "title": "Oficiální web a kontakt",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální adresa koupaliště Nábřeží dr. Kafky, Volyně."
+    },
+    {
+      "id": "SRC-0065",
+      "url": "https://www.festivaltrutnoff.cz/bands/",
+      "publisher": "Festival TrutnOFF",
+      "title": "Program & Bands 2026",
+      "source_type": "official_festival_lineup",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální program festivalu TrutnOFF 13.–16. 8. 2026 uvádí The Fialky mezi účinkujícími."
+    },
+    {
+      "id": "SRC-0066",
+      "url": "https://www.festivaltrutnoff.cz/",
+      "publisher": "Festival TrutnOFF",
+      "title": "Po festivalu – Poslední Mohykáni",
+      "source_type": "official_festival_report",
+      "retrieved_on": "2026-11-28",
+      "supports": "Organizátor 19. 8. 2026 potvrzuje dokončení čtyřdenního festivalu a úklid areálu."
+    },
+    {
+      "id": "SRC-0067",
+      "url": "https://www.bojistetrutnov.cz/kontakty",
+      "publisher": "Bojiště Trutnov",
+      "title": "Kontakty",
+      "source_type": "official_venue",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální adresa areálu Na Bojišti, Královédvorská 536, 541 01 Trutnov."
+    },
+    {
+      "id": "SRC-0068",
+      "url": "https://punkacidetom.sk/2026/08/13/casovy-rozpis-punkaci-detom-2026/",
+      "publisher": "Punkáči deťom",
+      "title": "Časový rozpis Punkáči deťom 2026",
+      "source_type": "official_festival_schedule",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální časový rozpis uvádí 28. 8. Nežfaleš 20:00, The Fialky 21:30 a Punk Floid 23:10."
+    },
+    {
+      "id": "SRC-0069",
+      "url": "https://punkacidetom.sk/2026/09/02/15-rocnik-punkaci-detom-dopadol-skvele-vdaka-vam/",
+      "publisher": "Punkáči deťom",
+      "title": "15. ročník Punkáči deťom sa vydaril",
+      "source_type": "official_festival_report",
+      "retrieved_on": "2026-11-28",
+      "supports": "Organizátor po festivalu potvrzuje jeho konání a výslovně zmiňuje The Fialky, Nežfaleš, Punk Floid a další skutečně vystupující kapely."
+    },
+    {
+      "id": "SRC-0070",
+      "url": "https://punkacidetom.sk/info/rady/",
+      "publisher": "Punkáči deťom",
+      "title": "Rady – doprava a GPS",
+      "source_type": "official_venue_info",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální navigační informace pro areál Camping Rybníky Opatovce včetně GPS 48.856780, 17.963672."
+    },
+    {
+      "id": "SRC-0071",
+      "url": "https://www.punkfloid.com/kapela",
+      "publisher": "Punk Floid",
+      "title": "Kapela",
+      "source_type": "official_band_biography",
+      "retrieved_on": "2026-11-28",
+      "supports": "Oficiální profil potvrzuje název Punk Floid, melodický punk rock a původ v Zábřehu na Moravě."
+    },
+    {
+      "id": "SRC-0072",
+      "url": "https://tourism.zabreh.cz/katalog-sluzby-firmy/punk-floid-o-s/",
+      "publisher": "Turistické informační centrum Zábřeh",
+      "title": "PUNK FLOID",
+      "source_type": "municipal_band_profile",
+      "retrieved_on": "2026-11-28",
+      "supports": "TIC Zábřeh potvrzuje vznik kapely v Zábřehu na Moravě a melodický punkrockový žánr."
     }
   ],
   "claims": [
@@ -3593,6 +3728,498 @@
         "SRC-0036",
         "SRC-0056",
         "SRC-0057"
+      ]
+    },
+    {
+      "id": "CLM-0228",
+      "entity_type": "event",
+      "entity_id": 24,
+      "field": "name",
+      "value": "Starák Fest",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0058",
+        "SRC-0059",
+        "SRC-0060"
+      ]
+    },
+    {
+      "id": "CLM-0229",
+      "entity_type": "event",
+      "entity_id": 24,
+      "field": "date",
+      "value": "2026-08-14–2026-08-15",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0058",
+        "SRC-0059",
+        "SRC-0060"
+      ]
+    },
+    {
+      "id": "CLM-0230",
+      "entity_type": "event",
+      "entity_id": 24,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0058",
+        "SRC-0059",
+        "SRC-0060"
+      ]
+    },
+    {
+      "id": "CLM-0231",
+      "entity_type": "event",
+      "entity_id": 24,
+      "field": "venue_id",
+      "value": 22,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0058",
+        "SRC-0059",
+        "SRC-0060"
+      ]
+    },
+    {
+      "id": "CLM-0232",
+      "entity_type": "event",
+      "entity_id": 24,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0058",
+        "SRC-0059",
+        "SRC-0060"
+      ]
+    },
+    {
+      "id": "CLM-0233",
+      "entity_type": "venue",
+      "entity_id": 22,
+      "field": "name",
+      "value": "Staré koupaliště",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0058",
+        "SRC-0059",
+        "SRC-0060"
+      ]
+    },
+    {
+      "id": "CLM-0234",
+      "entity_type": "venue",
+      "entity_id": 22,
+      "field": "address",
+      "value": "Staré koupaliště, v údolí Rokytky, Říčany, Česko",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0058",
+        "SRC-0059",
+        "SRC-0060"
+      ]
+    },
+    {
+      "id": "CLM-0235",
+      "entity_type": "venue",
+      "entity_id": 22,
+      "field": "city_country",
+      "value": "Říčany, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0058",
+        "SRC-0059",
+        "SRC-0060"
+      ]
+    },
+    {
+      "id": "CLM-0236",
+      "entity_type": "event",
+      "entity_id": 25,
+      "field": "name",
+      "value": "Summer Punk Párty Volyně vol. XV",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0061",
+        "SRC-0062",
+        "SRC-0063",
+        "SRC-0064"
+      ]
+    },
+    {
+      "id": "CLM-0237",
+      "entity_type": "event",
+      "entity_id": 25,
+      "field": "date",
+      "value": "2026-08-14–2026-08-15",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0061",
+        "SRC-0062",
+        "SRC-0063",
+        "SRC-0064"
+      ]
+    },
+    {
+      "id": "CLM-0238",
+      "entity_type": "event",
+      "entity_id": 25,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0061",
+        "SRC-0062",
+        "SRC-0063",
+        "SRC-0064"
+      ]
+    },
+    {
+      "id": "CLM-0239",
+      "entity_type": "event",
+      "entity_id": 25,
+      "field": "venue_id",
+      "value": 23,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0061",
+        "SRC-0062",
+        "SRC-0063",
+        "SRC-0064"
+      ]
+    },
+    {
+      "id": "CLM-0240",
+      "entity_type": "event",
+      "entity_id": 25,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0061",
+        "SRC-0062",
+        "SRC-0063",
+        "SRC-0064"
+      ]
+    },
+    {
+      "id": "CLM-0241",
+      "entity_type": "venue",
+      "entity_id": 23,
+      "field": "name",
+      "value": "Koupaliště Volyně",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0061",
+        "SRC-0062",
+        "SRC-0063",
+        "SRC-0064"
+      ]
+    },
+    {
+      "id": "CLM-0242",
+      "entity_type": "venue",
+      "entity_id": 23,
+      "field": "address",
+      "value": "Nábřeží Dr. Kafky 75, 387 01 Volyně",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0061",
+        "SRC-0062",
+        "SRC-0063",
+        "SRC-0064"
+      ]
+    },
+    {
+      "id": "CLM-0243",
+      "entity_type": "venue",
+      "entity_id": 23,
+      "field": "city_country",
+      "value": "Volyně, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0061",
+        "SRC-0062",
+        "SRC-0063",
+        "SRC-0064"
+      ]
+    },
+    {
+      "id": "CLM-0244",
+      "entity_type": "event",
+      "entity_id": 26,
+      "field": "name",
+      "value": "Trutnoff Open Air",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0065",
+        "SRC-0066",
+        "SRC-0067"
+      ]
+    },
+    {
+      "id": "CLM-0245",
+      "entity_type": "event",
+      "entity_id": 26,
+      "field": "date",
+      "value": "2026-08-13–2026-08-16",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0065",
+        "SRC-0066",
+        "SRC-0067"
+      ]
+    },
+    {
+      "id": "CLM-0246",
+      "entity_type": "event",
+      "entity_id": 26,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0065",
+        "SRC-0066",
+        "SRC-0067"
+      ]
+    },
+    {
+      "id": "CLM-0247",
+      "entity_type": "event",
+      "entity_id": 26,
+      "field": "venue_id",
+      "value": 25,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0065",
+        "SRC-0066",
+        "SRC-0067"
+      ]
+    },
+    {
+      "id": "CLM-0248",
+      "entity_type": "event",
+      "entity_id": 26,
+      "field": "lineup",
+      "value": "The Fialky",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0065",
+        "SRC-0066",
+        "SRC-0067"
+      ]
+    },
+    {
+      "id": "CLM-0249",
+      "entity_type": "venue",
+      "entity_id": 25,
+      "field": "name",
+      "value": "Areál Na Bojišti",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0065",
+        "SRC-0066",
+        "SRC-0067"
+      ]
+    },
+    {
+      "id": "CLM-0250",
+      "entity_type": "venue",
+      "entity_id": 25,
+      "field": "address",
+      "value": "Královédvorská 536, 541 01 Trutnov",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0065",
+        "SRC-0066",
+        "SRC-0067"
+      ]
+    },
+    {
+      "id": "CLM-0251",
+      "entity_type": "venue",
+      "entity_id": 25,
+      "field": "city_country",
+      "value": "Trutnov, CZ",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0065",
+        "SRC-0066",
+        "SRC-0067"
+      ]
+    },
+    {
+      "id": "CLM-0252",
+      "entity_type": "event",
+      "entity_id": 27,
+      "field": "name",
+      "value": "Punkáči deťom 2026",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0070"
+      ]
+    },
+    {
+      "id": "CLM-0253",
+      "entity_type": "event",
+      "entity_id": 27,
+      "field": "date",
+      "value": "2026-08-27–2026-08-29",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0070"
+      ]
+    },
+    {
+      "id": "CLM-0254",
+      "entity_type": "event",
+      "entity_id": 27,
+      "field": "status",
+      "value": "held",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0070"
+      ]
+    },
+    {
+      "id": "CLM-0255",
+      "entity_type": "event",
+      "entity_id": 27,
+      "field": "venue_id",
+      "value": 24,
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0070"
+      ]
+    },
+    {
+      "id": "CLM-0256",
+      "entity_type": "event",
+      "entity_id": 27,
+      "field": "lineup",
+      "value": "The Fialky; Nežfaleš; Punk Floid",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0070"
+      ]
+    },
+    {
+      "id": "CLM-0257",
+      "entity_type": "venue",
+      "entity_id": 24,
+      "field": "name",
+      "value": "Camping Rybníky Opatovce",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0070"
+      ]
+    },
+    {
+      "id": "CLM-0258",
+      "entity_type": "venue",
+      "entity_id": 24,
+      "field": "address",
+      "value": "Camping Rybníky Opatovce, Opatovce, Slovensko (GPS 48.856780, 17.963672)",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0070"
+      ]
+    },
+    {
+      "id": "CLM-0259",
+      "entity_type": "venue",
+      "entity_id": 24,
+      "field": "city_country",
+      "value": "Opatovce, SK",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0001",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0070"
+      ]
+    },
+    {
+      "id": "CLM-0260",
+      "entity_type": "band",
+      "entity_id": 7,
+      "field": "identity",
+      "value": "Punk Floid",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0071",
+        "SRC-0072"
+      ]
+    },
+    {
+      "id": "CLM-0261",
+      "entity_type": "band",
+      "entity_id": 7,
+      "field": "genre",
+      "value": "melodic punk rock",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0071",
+        "SRC-0072"
+      ]
+    },
+    {
+      "id": "CLM-0262",
+      "entity_type": "band",
+      "entity_id": 7,
+      "field": "country_city",
+      "value": "CZ, Zábřeh na Moravě",
+      "status": "verified",
+      "source_ids": [
+        "SRC-0071",
+        "SRC-0072"
       ]
     }
   ]
