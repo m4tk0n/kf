@@ -261,3 +261,5 @@ Z oficiálního archivu SPS byly doplněny další čtyři společné akce s The
 - 23. 8. 2025 — Valník, Slaný — event_2025.json#60
 
 Založeny kandidátní prostory Letní kino Slaný (venue 44) a Letní Parket Hořepník (venue 45). Doplněna kapela zakázanÝovoce (band 15) podle oficiálního webu. Akce zůstávají v next do nezávislé kontroly a doplnění úplného line-upu.
+
+Další kontrola archivu SPS doplnila tři společné akce roku 2024: Prasofest (20. 7., Vlčtejn, event 64), Brněnec Punk Fest (22. 6., event 65) a Glády V Před Fest (25. 5., Mostiště, event 66). Všechny zůstávají v next do nezávislého ověření.
