@@ -251,3 +251,13 @@ Doplněno do kandidátních dat:
 - tours.txt: TOUR-004 SPS + The Fialky Tour 2024 a TOUR-005 Jsme v hajzlu – Turné 2023.
 
 Všechny nové akce z SPS archivu jsou zatím v poli next a související claims mají stav unverified. Oficiální archiv SPS je primární zdroj, ale další nezávislé ověření a kontrola úplnosti line-upu stále probíhají.
+
+## 2026-11-28 — SPS a společné akce 2025
+
+Z oficiálního archivu SPS byly doplněny další čtyři společné akce s The Fialky:
+- 14. 6. 2025 — Letní Parket Hořepník — event_2025.json#63
+- 19. 6. 2025 — Za Koule Fest, Modrá Vopice, Praha — event_2025.json#62
+- 5. 7. 2025 — Brněnec Punkfest — event_2025.json#61
+- 23. 8. 2025 — Valník, Slaný — event_2025.json#60
+
+Založeny kandidátní prostory Letní kino Slaný (venue 44) a Letní Parket Hořepník (venue 45). Doplněna kapela zakázanÝovoce (band 15) podle oficiálního webu. Akce zůstávají v next do nezávislé kontroly a doplnění úplného line-upu.
