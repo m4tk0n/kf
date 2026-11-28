@@ -55,7 +55,7 @@ if ($provided === '' && function_exists('getallheaders')) {
 $keyMatches = $expected !== '' && $provided !== '' && hash_equals($expected, $provided);
 if (!$keyMatches) {
     // Nikdy nelogovat klíč ani jeho část; pouze diagnostická metadata.
-    security_log('seed_research_key_invalid', [
+    $diagnostic = [
         'expected_found' => $expected !== '',
         'expected_source' => $expectedSource,
         'expected_length' => strlen($expected),
@@ -63,8 +63,10 @@ if (!$keyMatches) {
         'provided_source' => $providedSource !== '' ? $providedSource : 'missing',
         'provided_length' => strlen($provided),
         'matches' => false,
-    ]);
-    seed_reply(403, ['error' => 'forbidden']);
+    ];
+    security_log('seed_research_key_invalid', $diagnostic);
+    // Diagnostika neobsahuje klíč ani jeho část; pomůže určit příčinu 403.
+    seed_reply(403, ['error' => 'forbidden', 'diagnostic' => $diagnostic]);
 }
 
 $body = file_get_contents('php://input', false, null, 0, 2049);
