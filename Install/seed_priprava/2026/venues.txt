@@ -1,6 +1,12 @@
 # Místa konání akcí 2026
 # Formát: název | typ | město | stát | adresa | zdroje | poznámka
 
+Bílej Medvěd | koncertní areál / hala | Plzeň | Česko | přesná adresa zatím neověřena | 2026-S28 | Akce proběhla venku v areálu; za deště byl připraven přesun do haly.
+Zámek Ptení | zámek / koncertní areál | Ptení | Česko | Ptení 60 | 2026-S18; 2026-S19; 2026-S20 |
+Areál Brněnecfestu (firma Composite Components) | venkovní festivalový areál | Brněnec | Česko | přesná adresa zatím neuzavřena | 2026-S21; 2026-S22; 2026-S23 | Zdroje uvádějí areál firmy Composite Components, hasičské hřiště za teplárnou a různé adresy. Identita místa je stejná, přesnou adresu je nutné dále ověřit.
+Hřiště u kulturního domu Trpík | venkovní areál | Trpík | Česko | Trpík 6, 563 01 Trpík | 2026-S24; 2026-S25; 2026-S26 |
+Vrbětice 17 | venkovní areál | Vrbětice | Česko | Vrbětice 17 | 2026-S27 |
+Korunní pevnost | historický areál / venkovní kulturní prostor | Olomouc | Česko | 17. listopadu 939/7, 779 00 Olomouc | 2026-S30; 2026-S31 | Místo bylo oznámeno pro plánovaný ročník Festu Pod Parou 2026; ročník je podle sekundárního přehledu zrušen.
 Café v lese | hudební klub / koncertní prostor | Praha | Česko | Krymská 12, 101 00 Praha 10 – Vršovice | 2026-S17 |
 Randal Club | hudební klub | Bratislava | Slovensko | Karpatská 2, 811 05 Bratislava | 2026-S05 |
 Muzikum Klub & Bisztró | hudební klub | Budapešť | Maďarsko | Múzeum utca 7, 1088 Budapest | 2026-S01; 2026-S02 |
