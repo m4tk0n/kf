@@ -1139,5 +1139,68 @@
     "status": "pending",
     "discovered_from": "Install/seed_priprava/2010/events.txt",
     "seed_year": 2010
+  },
+  {
+    "name": "Carbovaris",
+    "key": "carbovaris",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2011/events.txt",
+    "seed_year": 2011
+  },
+  {
+    "name": "Lo-fi Stereo",
+    "key": "lofistereo",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2011/events.txt",
+    "seed_year": 2011
+  },
+  {
+    "name": "Superego",
+    "key": "superego",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2011/events.txt",
+    "seed_year": 2011
+  },
+  {
+    "name": "Moog",
+    "key": "moog",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2011/events.txt",
+    "seed_year": 2011
+  },
+  {
+    "name": "Pills",
+    "key": "pills",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2011/events.txt",
+    "seed_year": 2011
+  },
+  {
+    "name": "Zombie Girlfriend",
+    "key": "zombiegirlfriend",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2011/events.txt",
+    "seed_year": 2011
+  },
+  {
+    "name": "Hol Van Ilyenkor a Rendőrség",
+    "key": "holvanilyenkorarendorseg",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2011/events.txt",
+    "seed_year": 2011
+  },
+  {
+    "name": "Calico Island",
+    "key": "calicoisland",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2011/events.txt",
+    "seed_year": 2011
+  },
+  {
+    "name": "Hammer of Gods",
+    "key": "hammerofgods",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2011/events.txt",
+    "seed_year": 2011
   }
 ]
