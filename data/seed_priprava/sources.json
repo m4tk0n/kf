@@ -203,5 +203,21 @@
       "Komunitní archiv; údaje o zrušených akcích a změnách je nutné ověřovat.",
       "U záznamů bez explicitního označení původu kapely se country_code nedoplňuje odhadem."
     ]
+  },
+  {
+    "id": "src-punkgen-archive",
+    "name": "PUNKGEN – archiv koncertů",
+    "url": "https://www.punkgen.sk/koncerty.php",
+    "publisher": "PUNKGEN",
+    "source_type": "community_concert_archive_index",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "band_names",
+      "country_labels_when_present",
+      "venue_names_and_cities"
+    ],
+    "limitations": [
+      "Komunitní archiv; záznamy je nutné ověřovat proti plakátům nebo pořadatelům."
+    ]
   }
 ]
