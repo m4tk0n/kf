@@ -1,0 +1,7 @@
+# Místa konání doložených akcí The Trousers – rok 2011
+# Formát: název | typ | město | stát | adresa | zdroje | poznámka
+
+Cross Club | klub | Praha | Česko | neuvedeno | 2011-S02 |
+Wats Club | klub | Holešov | Česko | neuvedeno | 2011-S02 |
+H-Klub | klub | Šumperk | Česko | neuvedeno | 2011-S02 |
+Dürer Kert | klub | Budapešť | Maďarsko | neuvedeno | 2011-S01 |
