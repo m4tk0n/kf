@@ -1,5 +1,12 @@
 {
-  "_purpose": "Tento soubor slouzi k postupnemu vyhledavani, overovani a identifikaci kapel pro seed databaze K&F. Udaje u kapely (name, genre, country, city a pripadne url) jsou identifikatory, podle kterych se kapela rozpoznava a overuje, ze jde o spravny zaznam. Nejde o kompletni profil kapely ani o definitivni databazovy zaznam. 'aktual' obsahuje prave proverovanou kapelu, 'ok' overene kapely a 'next' kapely cekajici na provereni. ID je poradove ID kapely v ramci teto pripravy; nove kapely dostavaji dalsi volne ID.",
+  "_purpose": "Evidence kapel pro postupny pruzkum koncertni historie. Zpracovavaji se pouze kapely z Ceske republiky a Slovenska. U kazde aktualni kapely se prochazi akce od roku 2026 zpetne do roku 2000. Kapely objevene v line-upu se pridávaji do next, pokud jeste nejsou evidovane. Po dokonceni cele historie se aktualni kapela presune do ok. Zahranicni kapely se eviduji kvuli line-upu, ale jejich historii neprochazime a po overeni statu se presouvaji rovnou do ok. ID je stabilni pracovni ID kapely; v zaznamech akci se pouziva band_id.",
+  "_workflow": {
+    "aktual": "Jedina kapela, jejiz koncertni historie se prave prochazi od roku 2026 do roku 2000.",
+    "ok": "Kapely s dokoncenym pruzkumem (CZ/SK) nebo overene zahranicni kapely, jejichz historii neprochazime.",
+    "next": "Nove objevene kapely cekajici na identifikaci a pripadne pruzkum.",
+    "new_band": "Pred pridanim porovnat nazev, mesto, stat, cleny, diskografii a oficialni profily, aby nevznikaly duplicity.",
+    "foreign_band": "Pokud je overeno, ze kapela neni z CZ/SK, presunout ji z next rovnou do ok. Nezahranicni puvod neodhadovat; neznamy stat zustava ve fronte k overeni."
+  },
   "aktual": [
     {
       "id": 1,
