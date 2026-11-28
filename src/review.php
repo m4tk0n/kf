@@ -4,11 +4,16 @@ declare(strict_types=1);
 
 function kf_pending_get(int $id): ?array
 {
-    $row = q('SELECT id, type, created_by, title, date_from, created_at, payload FROM ' . tbl('pending') . ' WHERE id = ?', [$id])->fetch();
+    try {
+        $row = q('SELECT id, type, created_by, title, date_from, created_at, payload FROM ' . tbl('pending') . ' WHERE id = ?', [$id])->fetch();
+    } catch (Throwable $e) {
+        // Existing databases may not yet have the payload column; keep their queue usable.
+        $row = q('SELECT id, type, created_by, title, date_from, created_at FROM ' . tbl('pending') . ' WHERE id = ?', [$id])->fetch();
+    }
     if (!$row) return null;
     $rel = json_bucket_rel('pending', $id);
     $row['data'] = json_read_file($rel);
-    if (!is_array($row['data']) && is_string($row['payload'] ?? null) && $row['payload'] !== '') {
+    if ((!is_array($row['data']) || $row['data'] === []) && is_string($row['payload'] ?? null) && $row['payload'] !== '') {
         $decoded = json_decode($row['payload'], true);
         if (is_array($decoded)) {
             $row['data'] = $decoded;
