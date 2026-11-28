@@ -228,7 +228,7 @@ def write_candidates(task,result):
   refs=[u.rstrip("/") for u in band.get("sources",[]) if u.rstrip("/") in urls]
   if not name or not refs: continue
   record=dict(band); record["sources"]=refs
-  record.update({"review_status":"needs_manual_review","researched_at":now(),"candidate_id":digest(norm(name))})
+  record.update({"review_status":"needs_manual_review","researched_at":now(),"candidate_id":digest(norm(name)+"|"+norm(record.get("origin_city",""))+"|"+norm(record.get("origin_country","")))})
   path=CANDIDATES/"bands.jsonl"
   if record["candidate_id"] not in {r.get("candidate_id") for r in read_jsonl(path)}:
    append_jsonl(path,record); added["bands"]+=1
