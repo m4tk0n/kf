@@ -23,9 +23,9 @@ AKTUALNI_KAPELA | The Fialky (bands.json, id 1)
 ROZSAH | 2026 až 2000 včetně; průzkum probíhá průběžně a v libovolném pořadí
 ZDROJE_ARCHIVU | Oficiální archiv The Fialky 2000–2015; oficiální archiv odehraných koncertů 2016–2026; Bandzone archiv 2006–2026
 KONTROLNI_INDEX | band_archive_index.json
-ROK_2026 | rozpracováno; v event_2026.json jsou 2 ověřené akce; zjištěno dalších 11 zastávek PUNKROCK ON THE ROAD – JARO TOUR 2026, budou se doplňovat jednotlivě po ověření
+ROK_2026 | rozpracováno; v event_2026.json je 6 ověřených akcí; z 11 zastávek PUNKROCK ON THE ROAD – JARO TOUR 2026 je samostatně zapsáno 5 (Plzeň, Volyně, Teplice, Bratislava, České Budějovice)
 ROKY_2025_2000 | dosud nezpracováno
-NOVE_KAPELY | SPS (id 2), Totální nasazení (id 3), Nežfaleš (id 4); ověřená identita, původ a žánr; vlastní historie čeká na dokončení The Fialky
-NOVA_MISTA | Kulturní dům Klobučan (id 1) a Majestic Music Club, Bratislava (id 2; ověřeno)
-NOVE_AKCE | God Save The Punk II., 14. 11. 2026 (id 1) a PUNKROCK ON THE ROAD – TOUR 2026, 14. 3. 2026 (id 2; ověřeno)
-DALSI_KROK | Průběžně doplňovat další nalezené koncerty The Fialky v libovolném pořadí. Jako další zpracovat další zastávky PUNKROCK ON THE ROAD – JARO TOUR 2026 a následně další akce z dostupných archivů.
+NOVE_KAPELY | SPS (id 2), Totální nasazení (id 3), Nežfaleš (id 4), Dilemma in Cinema (id 5), Deratizéři (id 6); identita, původ a žánr ověřeny; vlastní historie čeká na dokončení The Fialky
+NOVA_MISTA | Kulturní dům Klobučan (id 1), Majestic Music Club (id 2), DEPO2015 (id 3), Sál Na Nové (id 4), Dům kultury Teplice (id 5), Kulturní dům Vltava (id 6); ověřeno
+NOVE_AKCE | 6 ověřených akcí: God Save The Punk II. (id 1); PUNKROCK ON THE ROAD – TOUR 2026: Bratislava (id 2), Plzeň (id 3), Volyně (id 4), Teplice (id 5), České Budějovice (id 6)
+DALSI_KROK | Doplnit zbývajících 6 zastávek PUNKROCK ON THE ROAD – JARO TOUR 2026 (Praha, Zlín, Brno, Pardubice, Liberec, Karlovy Vary), poté pokračovat dalšími koncerty z archivů 2026–2000.
