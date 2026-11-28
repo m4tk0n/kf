@@ -1,6 +1,8 @@
 # Akce 2026 nalezené při průzkumu kapel a putovních koncertních sérií
 # Formát: název | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka | turné (pracovní ID)
 
+Tim Vantol (NL) + support | plánováno | 10. 12. 2026, 19:00 | Praha | Česko | Café v lese | Tim Vantol; support neuveden | 2026-S06 | Oficiální stránka pořadatele potvrzuje datum, čas, místo a vystoupení Tima Vantola. |
+
 Cestujúci Punk Island vol.2 – Bratislava | plánováno | 18. 12. 2026, začátek 18:00 (otevření 17:30) | Bratislava | Slovensko | Randal Club | The Trousers; P.U.M.; Hrubý Domáci Produkt; Punkreas; KONFLIKT; !V.V.Ú.; Lecsapunk | 2026-S04 | První ze tří klubových zastávek putovní série; pořadatel uvádí také Košice a Banskou Bystrici. | TOUR-001
 
 The Trousers / Asphalt Horsemen live at Muzikum | uskutečněno | 17. 4. 2026, 20:00 | Budapešť | Maďarsko | Muzikum Klub & Bisztró | The Trousers; Asphalt Horsemen | 2026-S01; 2026-S02 | Zahraniční klubové vystoupení maďarské kapely The Trousers; zařazeno do její koncertní historie. Čas a místo potvrzuje pořadatel/prodejce Tixa, setlist.fm uvádí vystoupení The Trousers v témže klubu a datu.
