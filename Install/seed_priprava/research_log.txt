@@ -153,3 +153,25 @@ Zapsáno:
 
 Poznámka:
 - U 2. 10. a 3. 10. jsou doloženy časy začátku programu z archivu SPS, nikoli přesné časy nástupu obou kapel; časy vystoupení se proto nedoplňují bez rozpisu.
+
+
+## 2026-11-28 — The Fialky — festivaly léto 2026 — čtyři ověřené akce
+
+Doplněno:
+- 2026-08-14 až 15 — Starák Fest / Staré koupaliště, Říčany. Město Říčany potvrzuje datum a line-up včetně The Fialky; pořadatel po festivalu zveřejnil záběry z vystoupení kapely. Čas The Fialky 19:15 podle oficiálního archivu.
+- 2026-08-14 až 15 — Summer Punk Párty Volyně vol. XV / Koupaliště Volyně. Oficiální portál Kultura Volyně potvrzuje akci a The Fialky; report iREPORT z druhého dne popisuje vystoupení The Fialky a dalších kapel. Čas 18:40 podle oficiálního archivu.
+- 2026-08-13 až 16 — Trutnoff Open Air / Areál Na Bojišti, Trutnov. Oficiální festivalový lineup uvádí The Fialky; archiv kapely potvrzuje jejich vystoupení 16. 8. v 14:55; organizátor po akci potvrdil dokončení festivalu.
+- 2026-08-27 až 29 — Punkáči deťom 2026 / Camping Rybníky Opatovce. Oficiální program potvrzuje Nežfaleš 20:00, The Fialky 21:30 a Punk Floid 23:10; následný report pořadatele potvrzuje konání a vystoupení těchto kapel. Oficiální dopravní informace poskytují GPS areálu.
+
+Nová kapela:
+- Punk Floid — ID 7, CZ, Zábřeh na Moravě, melodický punk rock. Ověřeno oficiálním webem kapely a TIC Zábřeh; přidáno do bands.json → next.
+
+Zapsáno:
+- event_2026.json: akce ID 24–27.
+- venues.json: místa ID 22–25.
+- bands.json: Punk Floid ID 7 v next.
+- evidence.json: zdroje SRC-0058 až SRC-0072 a tvrzení CLM-0228 až CLM-0263.
+
+Poznámka:
+- U Starák Festu a Trutnoff jsou v line-upu zatím uvedeni pouze The Fialky, protože další konkrétní vystoupení nebyla v této fázi doložena po jednotlivých kapelách.
+- U Summer Punk Party je rovněž ponechán pouze potvrzený záznam The Fialky; další kapely se doplní po ověření jejich identity a skutečné účasti.
