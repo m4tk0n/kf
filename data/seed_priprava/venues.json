@@ -74,24 +74,29 @@
     "name": "Zarazická Hospoda",
     "city": "Veselí nad Moravou",
     "country_code": "CZ",
-    "address": null,
-    "coordinates": null,
+    "address": "Zarazická 22, 698 01 Veselí nad Moravou, Česká republika",
+    "coordinates": {
+      "latitude": 48.9413796,
+      "longitude": 17.3654411
+    },
     "source_ids": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-venue-zarazicka-address"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "address_and_coordinates_confirmed"
   },
   {
     "id": "gogo-znojmo",
     "name": "Gogo",
     "city": "Znojmo",
     "country_code": "CZ",
-    "address": null,
+    "address": "Pražská 19, 669 02 Znojmo, Česká republika",
     "coordinates": null,
     "source_ids": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-venue-gogo-address"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "address_confirmed"
   },
   {
     "id": "collosseum-kosice",
@@ -111,24 +116,29 @@
     "name": "Sibiř",
     "city": "Brno",
     "country_code": "CZ",
-    "address": null,
-    "coordinates": null,
+    "address": "Dukelská třída 123/50, 614 00 Brno, Česká republika",
+    "coordinates": {
+      "latitude": 49.2116116,
+      "longitude": 16.6341111
+    },
     "source_ids": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-venue-sibir-address"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "address_and_coordinates_confirmed"
   },
   {
     "id": "kubik-trnava",
     "name": "Kubík",
     "city": "Trnava",
     "country_code": "SK",
-    "address": null,
+    "address": "Štefánikova 4, 917 01 Trnava, Slovensko",
     "coordinates": null,
     "source_ids": [
-      "src-punkgen-archive"
+      "src-punkgen-archive",
+      "src-venue-kubik-address"
     ],
-    "verification": "venue_name_and_city_listed_in_concert_archive"
+    "verification": "address_confirmed"
   },
   {
     "id": "klub-mir-uherske-hradiste",
@@ -267,12 +277,16 @@
     "name": "MeetFactory",
     "city": "Praha",
     "country_code": "CZ",
-    "address": null,
-    "coordinates": null,
+    "address": "Ke Sklárně 3213/15, 150 00 Praha 5, Česká republika",
+    "coordinates": {
+      "latitude": 50.053653,
+      "longitude": 14.408441
+    },
     "source_ids": [
-      "src-fialky-played-2025"
+      "src-fialky-played-2025",
+      "src-venue-meetfactory-address"
     ],
-    "verification": "venue_name_and_city_listed_in_official_band_archive"
+    "verification": "address_and_coordinates_confirmed"
   },
   {
     "id": "l86-finsterwalde",
@@ -291,12 +305,16 @@
     "name": "MMC",
     "city": "Bratislava",
     "country_code": "SK",
-    "address": null,
-    "coordinates": null,
+    "address": "Karpatská 2, 811 05 Bratislava, Slovensko",
+    "coordinates": {
+      "latitude": 48.1569556,
+      "longitude": 17.1137148
+    },
     "source_ids": [
-      "src-fialky-played-2025"
+      "src-fialky-played-2025",
+      "src-venue-mmc-address"
     ],
-    "verification": "venue_name_and_city_listed_in_official_band_archive"
+    "verification": "address_and_coordinates_confirmed"
   },
   {
     "id": "colloseum-kosice-2025",
@@ -428,12 +446,13 @@
     "name": "AKC Attack",
     "city": "Zagreb",
     "country_code": "HR",
-    "address": null,
+    "address": "Pierottijeva 11, 10000 Zagreb, Chorvatsko",
     "coordinates": null,
     "source_ids": [
-      "src-blankout-balkan-2024"
+      "src-blankout-balkan-2024",
+      "src-venue-attack-address"
     ],
-    "verification": "venue_and_city_listed_in_official_tour_announcement"
+    "verification": "address_confirmed"
   },
   {
     "id": "arena-beisl-vienna",
@@ -465,12 +484,16 @@
     "name": "Smer Klub 77",
     "city": "Žilina",
     "country_code": "SK",
-    "address": null,
-    "coordinates": null,
+    "address": "Romualda Zaymusa 72/8, 010 01 Žilina, Slovensko",
+    "coordinates": {
+      "latitude": 49.221554,
+      "longitude": 18.740007
+    },
     "source_ids": [
-      "src-punkaci-darkzin-archive"
+      "src-punkaci-darkzin-archive",
+      "src-venue-smer77-address"
     ],
-    "verification": "venue_and_city_listed_in_independent_festival_archive"
+    "verification": "address_and_coordinates_confirmed"
   },
   {
     "id": "modra-vopice-praha",
