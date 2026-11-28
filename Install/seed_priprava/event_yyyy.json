@@ -5,10 +5,35 @@
       "concert": "Jednodenni hudebni akce. I kdyz program pokracuje po pulnoci, stale jde o koncert, pokud nejde o vice samostatnych koncertnich dni.",
       "festival": "Vice-denni hudebni akce s programem ve vice dnech. Nazev obsahujici Fest nebo Festival sam o sobe typ neurcuje."
     },
-    "tour": "Turne je samostatny nadrazeny zaznam se spolecnym nazvem. Kazda zastavka turne je vlastni akce v tomto souboru, ma vlastni datum, misto a lineup. K turne se akce priradi pouze tehdy, kdyz zdroj potvrzuje, ze jde o jeho zastavku.",
+    "tour": "Turne je samostatny nadrazeny zaznam se spolecnym nazvem. Kazda zastavka turne je vlastni akce v tomto souboru, ma vlastni datum, misto a lineup. K turne se akce priradi pouze tehdy, kdyz zdroj potvrzuje, ze jde o jeho zastavku. Turne muze zasahovat do vice let; jeho spolecny zaznam a seznam vsech zastavek se eviduje take v globalnim souboru tours.txt.",
     "dates": "U vice-denni akce zapisovat date_from a date_to. U jednodeni akce jsou obe data stejna. Neoverene datum ani cas neodhadovat.",
     "lineup": "U kazde kapely uvest jeji presny nazev a podle moznosti cas vystoupeni. Poradi odpovida dolozenemu programu; pokud neni znamy, nevymyslet ho.",
-    "ids": "ID je poradove ID akce v ramci pripravy tohoto rocniku. Neni to budoucí databazove ID."
+    "ids": "ID je poradove ID akce v ramci pripravy tohoto rocniku. Neni to budoucí databazove ID.",
+    "database": "Pole type je zde slovni hodnota concert nebo festival; pri tvorbe SQL se prevede na ciselny kod podle aplikace. city_id a venue_id se pri priprave urcuji pres odpovidajici zaznamy v cities.json a venues.json, nejsou to ID z tohoto souboru."
+  },
+  "_record_template": {
+    "id": 1,
+    "name": "",
+    "type": "concert",
+    "status": "held",
+    "date_from": "YYYY-MM-DD",
+    "date_to": "YYYY-MM-DD",
+    "time_start": null,
+    "city": "",
+    "country": "",
+    "venue": {
+      "name": "",
+      "address": ""
+    },
+    "bands": [
+      {
+        "name": "",
+        "sort_order": 1,
+        "time_play": null
+      }
+    ],
+    "tour": null,
+    "sources": []
   },
   "aktual": [],
   "ok": [],
