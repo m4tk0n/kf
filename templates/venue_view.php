@@ -3,8 +3,8 @@ declare(strict_types=1);
 $v=$venue['v'];$place=e((string)$venue['city']).' <abbr title="'.e((string)$venue['country']).'">('.e((string)$venue['iso2']).')</abbr>';
 $row=static fn(string $l,string $h):string=>'<dt>'.e($l).'</dt><dd>'.$h.'</dd>';
 ?>
-<article class="card detail detail-venue"><div class="detail-head"><h1><?=e((string)$v['name'])?></h1></div>
-<?php if($imgUrl!==''):?><div class="detail-img"><img src="<?=e($imgUrl)?>" alt="<?=e((string)$v['name'])?>"></div><?php endif;?>
+<article class="card detail detail-venue"><?php if($imgUrl!==''):?><div class="detail-img"><img src="<?=e($imgUrl)?>" alt="<?=e((string)$v['name'])?>"></div><?php endif;?>
+<div class="detail-head"><h1><?=e((string)$v['name'])?></h1></div>
 <dl class="kv"><?=$row(t('detail.place'),$place)?>
 <?php if($v['address']!==''):?><?=$row(t('detail.address'),e((string)$v['address']))?><?php endif;?>
 <?php if($v['www']!==''):?><?=$row(t('detail.www'),'<a href="'.e((string)$v['www']).'" target="_blank" rel="noopener">'.e((string)preg_replace('~^https?://~i','',(string)$v['www'])).'</a>')?><?php endif;?>
