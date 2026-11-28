@@ -18,14 +18,16 @@
     ],
     "include_cz_sk_bands_abroad": true
   },
-  "collection_status": "initial_verified_batch",
+  "collection_status": "ongoing_verified_collection",
   "notes": [
     "Časový rozsah akcí je 2020–2026 včetně.",
     "Kapely a místa se evidují jako samostatné entity, pokud mají vazbu na akci v tomto období.",
+    "Zahraniční koncerty českých a slovenských kapel se evidují jako akce v zemi konání.",
+    "Turné se zakládá pouze tehdy, když je jeho název nebo trasa doložena zdrojem; jednotlivé koncerty se automaticky nespojují do turné.",
     "Záznamy obsahují pouze doložené údaje a vazby.",
     "Neznámý původ kapely zůstává null; stát se neodhaduje.",
     "Neověřená přesná adresa zůstává null.",
-    "Turné zatím nemají potvrzené záznamy.",
+    "Záznamy z komunitních archivů jsou označeny zdrojem a vyžadují případné další ověření.",
     "Doplnění dalších ročníků festivalů, koncertů a zahraničních akcí pokračuje."
   ]
 }
