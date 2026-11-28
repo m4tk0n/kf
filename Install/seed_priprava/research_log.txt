@@ -194,3 +194,24 @@ Zapsáno:
 Poznámka:
 - V této dávce jsou v line-upu uvedeny pouze The Fialky. Další kapely z festivalových plakátů se doplní až po ověření skutečného vystoupení a identity.
 - U Farák Festu jde o jednodenní festival, ale podle projektového rozlišení koncert/festival je typ nastaven jako concert, protože festivalový typ používáme pro vícedenní akce.
+
+
+## 2026-11-28 — The Fialky — červen 2026 — šest ověřených akcí
+
+Doplněno:
+- 2026-06-11 až 13 — Rock for People / Park 360, Hradec Králové. Oficiální archiv The Fialky uvádí 11. 6. ve 21:30; oficiální festivalové zdroje potvrzují místo a následný report potvrzuje konání.
+- 2026-06-12 — Hřebejkárna 2026 / Hřebíkárna, Chomutov. Městský kalendář označuje akci jako proběhlou; rozpis ForFun Agency potvrzuje hlavní sestavu a The Fialky ve 21:15. Oficiální místo potvrzuje adresu.
+- 2026-06-12 až 13 — Moták Fest / sportovní areál Třebětice. Oficiální pořadatel potvrzuje areál a GPS; záznam KdyKAM označený „proběhlo“ potvrzuje termín a line-up včetně The Fialky; archiv kapely uvádí 13. 6. ve 13:40.
+- 2026-06-18 — Zakoule Punk Fest 2026 / Modrá Vopice, Praha. Oficiální archiv Punk Floid uvádí konkrétní rozpis včetně The Fialky 19:50, Nežfaleš a Punk Floid; oficiální archiv Nežfaleš potvrzuje jejich účast; klub potvrzuje adresu a GPS.
+- 2026-06-19 až 21 — Motozraz Drienok 2026 / ŠRZ Drienok, Mošovce. Archiv The Fialky uvádí vystoupení 20. 6. ve 22:00; záznam akce potvrzuje termín, oficiální dokument místa potvrzuje adresu a video z 21. 6. potvrzuje, že akce proběhla.
+- 2026-06-26 až 28 — Mighty Sounds vol. 20 / Letiště Čápův Dvůr, Tábor. Oficiální archiv The Fialky uvádí 26. 6. v 17:10; report iREPORT potvrzuje skutečné vystoupení The Fialky a Punk Floid; oficiální web festivalu potvrzuje místo a termín.
+
+Zapsáno:
+- event_2026.json: akce ID 39–44.
+- venues.json: místa ID 31–36.
+- evidence.json: zdroje SRC-0088 až SRC-0103 a tvrzení CLM-0304 až CLM-0351.
+
+Poznámka:
+- U Moták Festu je potvrzen dvoudenní termín 12.–13. 6.; The Fialky vystoupily 13. 6. ve 13:40.
+- U Motozrazu Drienok nebyl v této dávce dohledán samostatný potvrzený rozpis ostatních kapel; ponechána pouze ověřená účast The Fialky.
+- U Rock for People a Mighty Sounds jsou uvedeni pouze účinkující, jejichž skutečné vystoupení bylo v této fázi doloženo.
