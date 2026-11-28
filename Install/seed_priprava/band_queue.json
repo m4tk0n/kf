@@ -1083,5 +1083,61 @@
     "status": "pending",
     "discovered_from": "Install/seed_priprava/2014/events.txt",
     "seed_year": 2014
+  },
+  {
+    "name": "Kinkiez",
+    "key": "kinkiez",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2010/events.txt",
+    "seed_year": 2010
+  },
+  {
+    "name": "Kollaps",
+    "key": "kollaps",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2010/events.txt",
+    "seed_year": 2010
+  },
+  {
+    "name": "Supernem",
+    "key": "supernem",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2010/events.txt",
+    "seed_year": 2010
+  },
+  {
+    "name": "Electric Bastards",
+    "key": "electricbastards",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2010/events.txt",
+    "seed_year": 2010
+  },
+  {
+    "name": "Dead Pope's Company",
+    "key": "deadpopescompany",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2010/events.txt",
+    "seed_year": 2010
+  },
+  {
+    "name": "Esti Kornél",
+    "key": "estikornel",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2010/events.txt",
+    "seed_year": 2010
+  },
+  {
+    "name": "Obits",
+    "key": "obits",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2010/events.txt",
+    "seed_year": 2010
+  },
+  {
+    "name": "Auxes",
+    "key": "auxes",
+    "status": "pending",
+    "discovered_from": "Install/seed_priprava/2010/events.txt",
+    "seed_year": 2010
   }
 ]
