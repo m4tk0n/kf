@@ -1,0 +1,23 @@
+{
+  "_purpose": "Seznam veřejných zdrojů pro hromadné vyhledávání punkových a punkrockových koncertů v ČR a SR. Zdroje jsou pouze vstupní body; každý nález se ukládá jako neověřený kandidát.",
+  "sources": [
+    {
+      "id": "PUNKCZ",
+      "url": "https://www.punk.cz/index.asp?menu=603&mesic=1&rok=2026",
+      "kind": "punk_calendar",
+      "curated_punk": true
+    },
+    {
+      "id": "VEVEUCKA",
+      "url": "https://www.veveucka.cz/koncerty",
+      "kind": "band_calendar",
+      "curated_punk": true
+    },
+    {
+      "id": "LIVEMUSICRADAR_CZ",
+      "url": "https://livemusicradar.net/czechia/genre/punk-hardcore",
+      "kind": "genre_calendar",
+      "curated_punk": true
+    }
+  ]
+}
