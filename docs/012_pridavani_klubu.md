@@ -16,18 +16,19 @@ Přidávání klubu je dostupné přihlášeným uživatelům s oprávněním su
 
 ### Pole
 
+- Povinné údaje: název, vybrané město, vybraný stát a alespoň jedna lokalizační informace (adresa nebo GPS odkaz Google Maps / Mapy.com).
 - Název klubu / místa
 - Lokalita je zobrazena v jednom řádku se třemi poli: Město, Stát a ISO2.
 - Město: textové pole s našeptávačem z tabulky cities.
 - Stát: textové pole s našeptávačem z tabulky countries. Výběr města automaticky doplní odpovídající stát i jeho ISO2; při výběru státu se našeptávání měst omezí na tento stát. Pouhé psaní do pole města ani státu nesmí přepisovat obsah druhého pole. Stát se doplní až po výběru nalezeného města; psaní státu nesmí vymazat ani změnit město.
 - ISO2: automaticky doplňovaný textový údaj bez inputu; zobrazuje se podle vybraného státu.
 - Odeslání vyžaduje platné vybrané ID města i státu a server ověřuje jejich vzájemnou příslušnost.
-- Adresa
+- Adresa (povinná, pokud není vyplněn žádný GPS odkaz)
 - E-mail
 - Telefon
 - Webová adresa
-- Odkaz / GPS Google Maps
-- Odkaz / GPS Mapy.com
+- Odkaz / GPS Google Maps (alternativa k adrese)
+- Odkaz / GPS Mapy.com (alternativa k adrese)
 - Popis
 - Obrázek (soubor nebo URL)
 
