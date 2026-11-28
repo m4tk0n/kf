@@ -464,7 +464,7 @@ function kf_event_form_page(array $v, array $errors, string $image, int $status 
         $v['admission_currency'] = $v['country_currency'];
     }
     $countryCurrencies = q('SELECT id,currency_code FROM ' . tbl('countries'))->fetchAll();
-    $currencies = q('SELECT DISTINCT currency_code FROM ' . tbl('countries') . ' WHERE currency_code IS NOT NULL AND currency_code <> "" ORDER BY currency_code')->fetchAll();
+    $currencies = q("SELECT DISTINCT currency_code FROM " . tbl('countries') . " WHERE currency_code IS NOT NULL AND currency_code <> '' ORDER BY currency_code")->fetchAll();
     $bands = q('SELECT id, name FROM ' . tbl('bands') . ' ORDER BY name')->fetchAll();
     page((string)($options['pageTitle'] ?? t('event.new.title')), 'event_form', [
         'old' => $v, 'errors' => $errors, 'cities' => $cities, 'bands' => $bands,
