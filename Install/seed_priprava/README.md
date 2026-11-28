@@ -16,12 +16,15 @@ Toto procházení se opakuje, dokud přibývají nové ověřitelné akce a kape
 ## Rozsah hledání
 
 - Časové období: kalendářní roky **2000 až 2027 včetně**.
-- Priorita: akce pořádané na území **České republiky a Slovenska**.
+- Postupovat **od roku 2027 směrem do minulosti**, rok po roce.
+- Základní územní rozsah akcí: **Česká republika a Slovensko**.
 - Zahrnout festivaly, klubové koncerty, koncertní série i další veřejné hudební akce.
 - U velkých a známých festivalů procházet jednotlivé ročníky a jejich programy.
 - Kapely mohou pocházet z libovolné země.
-- U zahraničních kapel se jejich historie pro tento projekt rozšiřuje pouze o akce konané v ČR nebo SR. **Nerozšiřovat pátrání na koncerty v jejich domovské zemi ani v dalších zemích.**
+- Při průzkumu historie každé kapely zapisovat také její doložená vystoupení v **klubech v zahraničí** (mimo ČR a SR). U takového vystoupení uložit konkrétní akci i klub/místo, datum, město, stát a zdroje. Tato zahraniční klubová vystoupení se evidují kvůli úplnějšímu přehledu koncertní historie kapely.
+- Zahraniční festivaly a jiné neklubové akce mimo ČR/SR se do tohoto rozšířeného rozsahu nepřidávají; výjimku lze doplnit pouze podle dalšího výslovného pokynu.
 - Neomezovat se na punk. Zahrnout také další žánry, pokud odpovídají dohledaným akcím.
+- U akcí, které se teprve mají konat, výslovně označit stav **plánováno**. Budoucí akci nikdy neoznačovat jako uskutečněnou.
 
 ## Výchozí zdroje a festivaly
 
@@ -38,20 +41,20 @@ U každého festivalu hledat jednotlivé ročníky samostatně. Název festivalu
 
 ## Hlavní postup: rozšiřování přes kapely
 
-1. Vybrat výchozí festival nebo jinou známou akci.
-2. Dohledat konkrétní ročníky v letech 2000–2027.
+1. Začít rokem 2027 a vybrat výchozí festival nebo jinou známou akci.
+2. Dohledat konkrétní akce daného roku; po jeho zpracování pokračovat rokem 2026, 2025 atd. až do roku 2000.
 3. Pro každý ročník ověřit datum, název akce, místo, město, stát a účinkující.
 4. Zapsat akci, místo, všechny ověřené účinkující kapely a zdroje.
-5. Vzít každou nově nalezenou kapelu a projít její koncertní historii v ČR a SR v období 2000–2027.
+5. Vzít každou nově nalezenou kapelu a projít její koncertní historii v ČR a SR v období 2000–2027; při tomto průzkumu zaznamenat také doložené zahraniční klubové koncerty.
 6. U každého nalezeného koncertu zjistit další účinkující, přesné místo a zdroje.
 7. Nově objevené kapely zařadit do fronty kapel k prozkoumání.
 8. Stejným způsobem pokračovat přes další akce a kapely.
 9. Průběžně kontrolovat, zda už akce, místo nebo kapela v některém ročníku není. V ročníkových souborech se mohou stejné kapely, akce i místa opakovat, protože každý ročník je samostatný pracovní celek.
 10. Pokračovat, dokud se daří nacházet nové ověřitelné vazby.
 
-### Důležité pravidlo pro zahraniční kapely
+### Pravidlo pro zahraniční vystoupení kapel
 
-Pokud například na Brněnec Festu vystoupí zahraniční kapela, její účast na festivalu se zapíše. Potom se prověří další její vystoupení v ČR a SR. Nehledají se její koncerty v zahraničí. Pokud se při rešerši objeví další zahraniční kapela, platí pro ni stejné pravidlo.
+Pokud například na Brněnec Festu vystoupí zahraniční kapela, její účast na festivalu se zapíše. Potom se prověří její další vystoupení v ČR a SR a také doložené koncerty v zahraničních klubech. U každého nalezeného zahraničního klubového koncertu se uloží samostatná akce a klub/místo, aby bylo možné zobrazit kompletní časovou osu vystoupení kapely. Zahraniční festivaly mimo ČR/SR se zatím nezapisují.
 
 ## Adresářová struktura
 
@@ -87,6 +90,7 @@ Adresáře a soubory zakládat podle potřeby. Pracovní data zapisovat do adres
 Každý konkrétní ročník nebo samostatná akce je samostatný záznam. Uvádět:
 
 - název akce,
+- stav akce (plánováno / uskutečněno / zrušeno, pokud je doloženo),
 - datum nebo přesný rozsah dat,
 - město,
 - stát,
