@@ -2,8 +2,7 @@
 declare(strict_types=1);
 
 /** Chráněný PHP worker volaný GitHub Actions. Bez modelu a bez placeného vyhledávacího API. */
-define('KF_ROOT', __DIR__);
-require_once KF_ROOT . '/bootstrap.php';
+require_once __DIR__ . '/bootstrap.php';
 
 function seed_reply(int $status, array $data): never
 {
