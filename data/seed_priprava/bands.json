@@ -703,5 +703,65 @@
       "src-dinkel-2025"
     ],
     "verification": "festival_program_and_independent_report"
+  },
+  {
+    "id": "nezfales",
+    "name": "NEŽFALEŠ",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "named_in_official_czech_band_tour_archive"
+  },
+  {
+    "id": "stare-pusky",
+    "name": "STARÉ PUŠKY",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "named_in_official_czech_band_tour_archive"
+  },
+  {
+    "id": "bratislavske-dievcata",
+    "name": "BRATISLAVSKÉ DIEVČATÁ",
+    "country_code": "SK",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "named_in_official_tour_archive"
+  },
+  {
+    "id": "stamgasti",
+    "name": "ŠTAMGASTI",
+    "country_code": "CZ",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "named_in_official_czech_band_tour_archive"
+  },
+  {
+    "id": "bulbulators",
+    "name": "BULBULATORS",
+    "country_code": "PL",
+    "genres": [
+      "punk"
+    ],
+    "sources": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "country_labelled_in_official_tour_archive"
   }
 ]

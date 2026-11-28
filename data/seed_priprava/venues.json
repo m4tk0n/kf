@@ -191,10 +191,8 @@
     "address": null,
     "coordinates": null,
     "source_ids": [
-      "src-fialky-2025-summer",
-      "src-punkowastrona-2025-05",
-      "src-wunstock-2025",
-      "src-dinkel-2025"
+      "src-fialky-played-2025",
+      "src-punkowastrona-2025-05"
     ],
     "verification": "venue_name_and_city_confirmed_by_event_source"
   },
@@ -206,10 +204,8 @@
     "address": null,
     "coordinates": null,
     "source_ids": [
-      "src-fialky-2025-summer",
-      "src-punkowastrona-2025-05",
-      "src-wunstock-2025",
-      "src-dinkel-2025"
+      "src-fialky-played-2025",
+      "src-punkowastrona-2025-05"
     ],
     "verification": "venue_name_and_city_confirmed_by_event_source"
   },
@@ -222,9 +218,7 @@
     "coordinates": null,
     "source_ids": [
       "src-fialky-2025-summer",
-      "src-punkowastrona-2025-05",
-      "src-wunstock-2025",
-      "src-dinkel-2025"
+      "src-fialky-played-2025"
     ],
     "verification": "venue_name_and_city_confirmed_by_event_source"
   },
@@ -237,9 +231,8 @@
     "coordinates": null,
     "source_ids": [
       "src-fialky-2025-summer",
-      "src-punkowastrona-2025-05",
-      "src-wunstock-2025",
-      "src-dinkel-2025"
+      "src-fialky-played-2025",
+      "src-wunstock-2025"
     ],
     "verification": "venue_name_and_city_confirmed_by_event_source"
   },
@@ -251,11 +244,80 @@
     "address": null,
     "coordinates": null,
     "source_ids": [
-      "src-fialky-2025-summer",
-      "src-punkowastrona-2025-05",
-      "src-wunstock-2025",
       "src-dinkel-2025"
     ],
     "verification": "venue_name_and_city_confirmed_by_event_source"
+  },
+  {
+    "id": "meetfactory-prague",
+    "name": "MeetFactory",
+    "city": "Praha",
+    "country_code": "CZ",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "venue_name_and_city_listed_in_official_band_archive"
+  },
+  {
+    "id": "l86-finsterwalde",
+    "name": "L'86",
+    "city": "Finsterwalde",
+    "country_code": "DE",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "venue_name_and_city_listed_in_official_band_archive"
+  },
+  {
+    "id": "mmc-bratislava",
+    "name": "MMC",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "venue_name_and_city_listed_in_official_band_archive"
+  },
+  {
+    "id": "colloseum-kosice-2025",
+    "name": "Colloseum",
+    "city": "Košice",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "venue_name_and_city_listed_in_official_band_archive"
+  },
+  {
+    "id": "smer-klub-zilina",
+    "name": "Smer Klub",
+    "city": "Žilina",
+    "country_code": "SK",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "venue_name_and_city_listed_in_official_band_archive"
+  },
+  {
+    "id": "the-rock-bottom-falkirk",
+    "name": "The Rock Bottom",
+    "city": "Falkirk",
+    "country_code": "GB",
+    "address": null,
+    "coordinates": null,
+    "source_ids": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "venue_name_and_city_listed_in_official_band_archive"
   }
 ]

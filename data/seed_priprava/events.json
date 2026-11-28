@@ -1460,5 +1460,233 @@
     "source_ids": [
       "src-dinkel-2025"
     ]
+  },
+  {
+    "id": "fialky-2025-prague-03-01",
+    "name": "25 Punkrock years! + křest alba",
+    "event_type": "concert",
+    "start_date": "2025-03-01",
+    "end_date": "2025-03-01",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": "meetfactory-prague",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-03-01",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-03-01",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2025-03-01",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      },
+      {
+        "date": "2025-03-01",
+        "name": "CYANIDE PILLS",
+        "country_code": "GB",
+        "band_id": null
+      },
+      {
+        "date": "2025-03-01",
+        "name": "NASTY RUMOURS",
+        "country_code": "CH",
+        "band_id": null
+      },
+      {
+        "date": "2025-03-01",
+        "name": "BULBULATORS",
+        "country_code": "PL",
+        "band_id": "bulbulators"
+      },
+      {
+        "date": "2025-03-01",
+        "name": "BERLIN BLACKOUTS",
+        "country_code": "DE",
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-finsterwalde-03-07",
+    "name": "25 Punkrock years tour!",
+    "event_type": "concert",
+    "start_date": "2025-03-07",
+    "end_date": "2025-03-07",
+    "city": "Finsterwalde",
+    "country_code": "DE",
+    "venue_id": "l86-finsterwalde",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-03-07",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-03-07",
+        "name": "UPPERCUTS",
+        "country_code": "DE",
+        "band_id": null
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-bratislava-03-15",
+    "name": "25 Punkrock years tour!",
+    "event_type": "concert",
+    "start_date": "2025-03-15",
+    "end_date": "2025-03-15",
+    "city": "Bratislava",
+    "country_code": "SK",
+    "venue_id": "mmc-bratislava",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-03-15",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-03-15",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2025-03-15",
+        "name": "STARÉ PUŠKY",
+        "country_code": "CZ",
+        "band_id": "stare-pusky"
+      },
+      {
+        "date": "2025-03-15",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      },
+      {
+        "date": "2025-03-15",
+        "name": "BRATISLAVSKÉ DIEVČATÁ",
+        "country_code": "SK",
+        "band_id": "bratislavske-dievcata"
+      },
+      {
+        "date": "2025-03-15",
+        "name": "ŠTAMGASTI",
+        "country_code": "CZ",
+        "band_id": "stamgasti"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-kosice-03-21",
+    "name": "25 Punkrock years tour!",
+    "event_type": "concert",
+    "start_date": "2025-03-21",
+    "end_date": "2025-03-21",
+    "city": "Košice",
+    "country_code": "SK",
+    "venue_id": "colloseum-kosice-2025",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-03-21",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-03-21",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2025-03-21",
+        "name": "NAZI TAMPONS",
+        "country_code": "SK",
+        "band_id": "nazi-tampons"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-zilina-03-22",
+    "name": "25 Punkrock years tour!",
+    "event_type": "concert",
+    "start_date": "2025-03-22",
+    "end_date": "2025-03-22",
+    "city": "Žilina",
+    "country_code": "SK",
+    "venue_id": "smer-klub-zilina",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-03-22",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-03-22",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2025-03-22",
+        "name": "STARÉ PUŠKY",
+        "country_code": "CZ",
+        "band_id": "stare-pusky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
+  },
+  {
+    "id": "fialky-2025-falkirk-02-15",
+    "name": "Landing in Scotland!",
+    "event_type": "concert",
+    "start_date": "2025-02-15",
+    "end_date": "2025-02-15",
+    "city": "Falkirk",
+    "country_code": "GB",
+    "venue_id": "the-rock-bottom-falkirk",
+    "lineup_completeness": "official_band_archive",
+    "performances": [
+      {
+        "date": "2025-02-15",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      }
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ]
   }
 ]

@@ -289,5 +289,17 @@
       "performance_times",
       "stage_location"
     ]
+  },
+  {
+    "id": "src-minority-official",
+    "name": "The Minority – oficiální biografie",
+    "url": "https://en.theminority.sk/kapela",
+    "publisher": "The Minority",
+    "source_type": "official_band_bio",
+    "accessed_on": "2026-11-28",
+    "supports": [
+      "band_identity",
+      "country_of_origin"
+    ]
   }
 ]

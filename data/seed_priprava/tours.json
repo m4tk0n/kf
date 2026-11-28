@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": "the-fialky-25-punkrock-years-tour-2025",
+    "name": "25 Punkrock years tour!",
+    "start_date": "2025-03-01",
+    "end_date": "2025-05-17",
+    "band_ids": [
+      "the-fialky"
+    ],
+    "event_ids": [
+      "fialky-2025-prague-03-01",
+      "fialky-2025-finsterwalde-03-07",
+      "fialky-2025-bratislava-03-15",
+      "fialky-2025-kosice-03-21",
+      "fialky-2025-zilina-03-22",
+      "fialky-2025-warsaw-05-16",
+      "fialky-2025-ruda-slaska-05-17"
+    ],
+    "country_codes": [
+      "CZ",
+      "DE",
+      "SK",
+      "PL"
+    ],
+    "source_ids": [
+      "src-fialky-played-2025"
+    ],
+    "verification": "tour_name_and_stops_listed_in_official_band_archive"
+  }
+]
