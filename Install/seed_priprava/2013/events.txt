@@ -1,0 +1,6 @@
+# Koncertní historie kapely The Trousers – doložené akce roku 2013
+# Formát: název | typ | stav | datum/čas | město | stát | místo | účinkující | zdroje | poznámka | turné
+
+The Trousers + Peter Hook & The Light | koncert | uskutečněno | 25. 3. 2013 | Budapešť | Maďarsko | A38 Hajó | The Trousers; Peter Hook & The Light | 2013-S01; 2013-S02 | The Trousers vystoupili jako předkapela Petera Hooka a jeho kapely The Light. |
+The Trousers – klippremier és koncert | koncert | uskutečněno | 14. 2. 2013 | Budapešť | Maďarsko | Filter Otherground Music Pub | The Trousers | 2013-S03 | Koncert a premiéra videoklipu; programový archiv uvádí datum a místo. |
+The Trousers + Ozone Mama | koncert | uskutečněno | 25. 7. 2013 | Budapešť | Maďarsko | A38 Hajó – PestiEst Tetőterasz | The Trousers; Ozone Mama | 2013-S02; 2013-S04 | Koncert na venkovní terase A38; zdroje uvádějí oba účinkující a datum. |
