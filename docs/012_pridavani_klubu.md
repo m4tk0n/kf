@@ -66,3 +66,7 @@ Je potřeba prakticky vyzkoušet:
 - zamítnutí klubu,
 - přímé zveřejnění rolí trusted a vyšších,
 - zobrazení detailu a ověření, že seznam klubů zůstává bez obrázků.
+
+## Společná validace formulářů
+
+Validace je centralizována v `src/form_validation.php` (server) a `assets/js/form-validation.js` (prohlížeč). Společné funkce kontrolují formát e-mailu a URL a minimální délku adresy a města. Formulář klubu navíc vyžaduje adresu alespoň 2 znaky nebo platný GPS odkaz. Formulář akce používá stejnou kontrolu URL. Další formuláře, včetně samostatného formuláře kapely, mají používat stejné funkce a datové atributy; pravidla se nemají kopírovat do jejich vlastních JS souborů.
