@@ -10328,11 +10328,43 @@
         "name": "PUNK FLOID",
         "country_code": "CZ",
         "band_id": "punk-floid"
+      },
+      {
+        "date": "2025-11-15",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2025-11-15",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2025-11-15",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2025-11-15",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2025-11-15",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
       }
     ],
     "source_ids": [
       "src-fialky-official-concert-archive",
-      "src-punkfloid-official-archive"
+      "src-punkfloid-official-archive",
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
     ],
     "venue_name": "Krásný Volant Fest 2025"
   },
@@ -10528,11 +10560,26 @@
         "name": "THE FIALKY",
         "country_code": "CZ",
         "band_id": "the-fialky"
+      },
+      {
+        "date": "2025-09-26",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2025-09-26",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
       }
     ],
     "source_ids": [
-      "src-fialky-official-concert-archive"
-    ]
+      "src-fialky-official-concert-archive",
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Klub 007 Strahov"
   },
   {
     "id": "fialky-2025-09-05-litomerice",
@@ -14817,12 +14864,67 @@
         "name": "VISACÍ ZÁMEK",
         "country_code": "festival",
         "band_id": "visaci-zamek"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "THE FIALKY",
+        "country_code": "CZ",
+        "band_id": "the-fialky"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "TOTÁLNÍ NASAZENÍ",
+        "country_code": "CZ",
+        "band_id": "totalni-nasazeni"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": "driak"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "TRAGEDIS",
+        "country_code": "CZ",
+        "band_id": "tragedis"
       }
     ],
     "source_ids": [
       "src-nezfales-official-archive",
       "src-punkfloid-official-archive",
-      "src-visaci-official-archive"
+      "src-visaci-official-archive",
+      "src-vvu-bandzone-archive"
     ],
     "venue_name": "Brněnec Fest"
   },
@@ -19423,10 +19525,17 @@
         "name": "PUNK FLOID",
         "country_code": "CZ",
         "band_id": "punk-floid"
+      },
+      {
+        "date": "2026-06-13",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
       }
     ],
     "source_ids": [
-      "src-punkfloid-official-archive"
+      "src-punkfloid-official-archive",
+      "src-sas-bandzone-archive"
     ],
     "venue_name": "Punkplugged"
   },
@@ -22940,6 +23049,12 @@
         "name": "S.A.S.",
         "country_code": "CZ",
         "band_id": "sas"
+      },
+      {
+        "date": "2025-02-01",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
       }
     ],
     "source_ids": [
@@ -23093,11 +23208,25 @@
         "name": "DRIÁK",
         "country_code": "CZ",
         "band_id": "driak"
+      },
+      {
+        "date": "2025-11-08",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2025-11-08",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
       }
     ],
     "source_ids": [
       "src-ee-bandzone-archive",
-      "src-ee-official-concerts"
+      "src-ee-official-concerts",
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
     ],
     "venue_name": "Barrák"
   },
@@ -29905,10 +30034,36 @@
         "name": "VISACÍ ZÁMEK",
         "country_code": "festival",
         "band_id": "visaci-zamek"
+      },
+      {
+        "date": "2025-08-23",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2025-08-23",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      },
+      {
+        "date": "2025-08-23",
+        "name": "ZNOUZECTNOST",
+        "country_code": "CZ",
+        "band_id": "znouzectnost"
+      },
+      {
+        "date": "2025-08-23",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
       }
     ],
     "source_ids": [
-      "src-visaci-official-archive"
+      "src-visaci-official-archive",
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
     ],
     "venue_name": "CZ"
   },
@@ -30411,10 +30566,17 @@
         "name": "VISACÍ ZÁMEK",
         "country_code": "concert",
         "band_id": "visaci-zamek"
+      },
+      {
+        "date": "2025-03-08",
+        "name": "S.A.S.",
+        "country_code": "concert",
+        "band_id": "sas"
       }
     ],
     "source_ids": [
-      "src-visaci-official-archive"
+      "src-visaci-official-archive",
+      "src-sas-bandzone-archive"
     ],
     "venue_name": "CZ"
   },
@@ -32416,7 +32578,8 @@
       }
     ],
     "source_ids": [
-      "src-vvu-bandzone-archive"
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
     ],
     "venue_name": "Hudební klub Ponorka"
   },
@@ -33642,5 +33805,811 @@
       "src-zputnik-bandzone-archive"
     ],
     "venue_name": "Divadlo pod lampou"
+  },
+  {
+    "id": "vvu-2026-05-23-kostelec-nad-orlici",
+    "name": "Kostlivec fest",
+    "event_type": "festival",
+    "start_date": "2026-05-23",
+    "end_date": "2026-05-23",
+    "city": "Kostelec nad Orlicí",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-05-23",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      }
+    ],
+    "source_ids": [
+      "src-vvu-bandzone-archive"
+    ],
+    "venue_name": "Koupaliště"
+  },
+  {
+    "id": "vvu-2026-05-29-radomysl",
+    "name": "Apokalypsa II",
+    "event_type": "festival",
+    "start_date": "2026-05-29",
+    "end_date": "2026-05-29",
+    "city": "Radomyšl",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-05-29",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      }
+    ],
+    "source_ids": [
+      "src-vvu-bandzone-archive"
+    ],
+    "venue_name": "Koupaliště"
+  },
+  {
+    "id": "vvu-2026-06-12-ujezd-u-prelouce",
+    "name": "PUNKPLUGGED ACOUSTIC FEST",
+    "event_type": "festival",
+    "start_date": "2026-06-12",
+    "end_date": "2026-06-12",
+    "city": "Újezd u Přelouče",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-12",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2026-06-12",
+        "name": "SPS",
+        "country_code": "CZ",
+        "band_id": "sps"
+      },
+      {
+        "date": "2026-06-12",
+        "name": "E!E",
+        "country_code": "CZ",
+        "band_id": "ee"
+      },
+      {
+        "date": "2026-06-12",
+        "name": "PUNK FLOID",
+        "country_code": "CZ",
+        "band_id": "punk-floid"
+      },
+      {
+        "date": "2026-06-12",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2026-06-12",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      },
+      {
+        "date": "2026-06-12",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": "driak"
+      }
+    ],
+    "source_ids": [
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Letní parket"
+  },
+  {
+    "id": "vvu-2026-07-25-prelovice",
+    "name": "OFF-SIDE",
+    "event_type": "festival",
+    "start_date": "2026-07-25",
+    "end_date": "2026-07-25",
+    "city": "Přelovice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-07-25",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      }
+    ],
+    "source_ids": [
+      "src-vvu-bandzone-archive"
+    ],
+    "venue_name": "hřiště"
+  },
+  {
+    "id": "vvu-2025-04-25-praha",
+    "name": "Čírofest 2025",
+    "event_type": "festival",
+    "start_date": "2025-04-25",
+    "end_date": "2025-04-25",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-04-25",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2025-04-25",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": "driak"
+      },
+      {
+        "date": "2025-04-25",
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
+      },
+      {
+        "date": "2025-04-25",
+        "name": "NEŽFALEŠ",
+        "country_code": "CZ",
+        "band_id": "nezfales"
+      },
+      {
+        "date": "2025-04-25",
+        "name": "MUERTI",
+        "country_code": "CZ",
+        "band_id": "muerti"
+      },
+      {
+        "date": "2025-04-25",
+        "name": "VOLANT",
+        "country_code": "CZ",
+        "band_id": "volant"
+      },
+      {
+        "date": "2025-04-25",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2025-04-25",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Modrá Vopice"
+  },
+  {
+    "id": "vvu-2025-05-31-sobinov",
+    "name": "Underground Festival",
+    "event_type": "festival",
+    "start_date": "2025-05-31",
+    "end_date": "2025-05-31",
+    "city": "Sobíňov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-05-31",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2025-05-31",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Letní parket"
+  },
+  {
+    "id": "vvu-2025-06-07-okrouhlicka",
+    "name": "Šejdorf Fest / Hubertka Open Air",
+    "event_type": "festival",
+    "start_date": "2025-06-07",
+    "end_date": "2025-06-07",
+    "city": "Okrouhlička",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-06-07",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2025-06-07",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Louka areálu Hubertka"
+  },
+  {
+    "id": "vvu-2025-07-18-bustehrad",
+    "name": "FEST A PŮL vol.1",
+    "event_type": "festival",
+    "start_date": "2025-07-18",
+    "end_date": "2025-07-18",
+    "city": "Buštěhrad",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-07-18",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2025-07-18",
+        "name": "HOUBA",
+        "country_code": "CZ",
+        "band_id": "houba"
+      },
+      {
+        "date": "2025-07-18",
+        "name": "BLANK OUT",
+        "country_code": "CZ",
+        "band_id": "blank-out"
+      },
+      {
+        "date": "2025-07-18",
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
+      },
+      {
+        "date": "2025-07-18",
+        "name": "DRIÁK",
+        "country_code": "CZ",
+        "band_id": "driak"
+      },
+      {
+        "date": "2025-07-18",
+        "name": "MUERTI",
+        "country_code": "CZ",
+        "band_id": "muerti"
+      },
+      {
+        "date": "2025-07-18",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "open air"
+  },
+  {
+    "id": "vvu-2025-07-26-hukvaldy",
+    "name": "Rock Bike Fest 2025",
+    "event_type": "festival",
+    "start_date": "2025-07-26",
+    "end_date": "2025-07-26",
+    "city": "Hukvaldy",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-07-26",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2025-07-26",
+        "name": "VISION DAYS",
+        "country_code": "CZ",
+        "band_id": "vision-days"
+      },
+      {
+        "date": "2025-07-26",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Koupaliště"
+  },
+  {
+    "id": "vvu-2025-08-09-nova-role",
+    "name": "Občasfest",
+    "event_type": "festival",
+    "start_date": "2025-08-09",
+    "end_date": "2025-08-09",
+    "city": "Nová Role",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-08-09",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2025-08-09",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "u fotbalistů"
+  },
+  {
+    "id": "vvu-2025-09-13-praha",
+    "name": "PunkdistroFEST!",
+    "event_type": "festival",
+    "start_date": "2025-09-13",
+    "end_date": "2025-09-13",
+    "city": "Praha",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-09-13",
+        "name": "!V.V.Ú.",
+        "country_code": "CZ",
+        "band_id": "vvu"
+      },
+      {
+        "date": "2025-09-13",
+        "name": "P.U.M.",
+        "country_code": "CZ",
+        "band_id": "p-u-m"
+      },
+      {
+        "date": "2025-09-13",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-vvu-bandzone-archive",
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Modrá Vopice"
+  },
+  {
+    "id": "sas-2026-02-20-stribro",
+    "name": "S.A.S. a T.B.N.",
+    "event_type": "concert",
+    "start_date": "2026-02-20",
+    "end_date": "2026-02-20",
+    "city": "Stříbro",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-02-20",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Peronka"
+  },
+  {
+    "id": "sas-2026-03-21-plzen",
+    "name": "JARNÍ BOUŘE, S.A.S. 25 let",
+    "event_type": "concert",
+    "start_date": "2026-03-21",
+    "end_date": "2026-03-21",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-03-21",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Klub Pod kopcem"
+  },
+  {
+    "id": "sas-2026-03-28-nyrany",
+    "name": "Kubovo a rumunské ženy narozeninová párty",
+    "event_type": "concert",
+    "start_date": "2026-03-28",
+    "end_date": "2026-03-28",
+    "city": "Nýřany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-03-28",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Vinárna Kamenný Újezd"
+  },
+  {
+    "id": "sas-2026-05-08-zaluzi",
+    "name": "S.T.B. pořádají benefičku",
+    "event_type": "festival",
+    "start_date": "2026-05-08",
+    "end_date": "2026-05-08",
+    "city": "Záluží",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-05-08",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "U rybníka"
+  },
+  {
+    "id": "sas-2026-05-23-svastalova-lhota",
+    "name": "Zelesa fest",
+    "event_type": "festival",
+    "start_date": "2026-05-23",
+    "end_date": "2026-05-23",
+    "city": "Švastalova Lhota",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-05-23",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Zelesa fest"
+  },
+  {
+    "id": "sas-2026-06-06-malesice",
+    "name": "Jedeme na vodu! 5. ročník",
+    "event_type": "festival",
+    "start_date": "2026-06-06",
+    "end_date": "2026-06-06",
+    "city": "Malesice",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-06",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Fotbalové hřiště"
+  },
+  {
+    "id": "sas-2026-06-12-rasna",
+    "name": "S.P.A. Moto Guzzi sraz",
+    "event_type": "festival",
+    "start_date": "2026-06-12",
+    "end_date": "2026-06-12",
+    "city": "Řásná",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-12",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "kemp"
+  },
+  {
+    "id": "sas-2026-06-26-plzen",
+    "name": "Gočiho narozky",
+    "event_type": "concert",
+    "start_date": "2026-06-26",
+    "end_date": "2026-06-26",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-06-26",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Restaurace U Jána"
+  },
+  {
+    "id": "sas-2026-07-24-stedra",
+    "name": "Mix music fest Štědrá",
+    "event_type": "festival",
+    "start_date": "2026-07-24",
+    "end_date": "2026-07-24",
+    "city": "Štědrá",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-07-24",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Zámecký park"
+  },
+  {
+    "id": "sas-2026-08-07-plzen",
+    "name": "Vilda na Habeši",
+    "event_type": "concert",
+    "start_date": "2026-08-07",
+    "end_date": "2026-08-07",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-08-07",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Na Habeši"
+  },
+  {
+    "id": "sas-2026-08-16-plzen",
+    "name": "Festival na ulici",
+    "start_date": "2026-08-16",
+    "end_date": "2026-08-16",
+    "city": "Plzeň",
+    "country_code": "festival",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-08-16",
+        "name": "S.A.S.",
+        "country_code": "festival",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "CZ"
+  },
+  {
+    "id": "sas-2026-08-29-nyrany",
+    "name": "Den horníků",
+    "event_type": "festival",
+    "start_date": "2026-08-29",
+    "end_date": "2026-08-29",
+    "city": "Nýřany",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-08-29",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Na Lazarce"
+  },
+  {
+    "id": "sas-2026-09-12-plzen",
+    "name": "Vyvrhells v Parláči",
+    "event_type": "concert",
+    "start_date": "2026-09-12",
+    "end_date": "2026-09-12",
+    "city": "Plzeň",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-09-12",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Parlament Club"
+  },
+  {
+    "id": "sas-2026-09-19-brno",
+    "name": "OI!PUNX FOREVER",
+    "event_type": "festival",
+    "start_date": "2026-09-19",
+    "end_date": "2026-09-19",
+    "city": "Brno",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-09-19",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Unleaded Coffee"
+  },
+  {
+    "id": "sas-2026-10-03-pisek",
+    "name": "PUNK V PÍSKU",
+    "event_type": "festival",
+    "start_date": "2026-10-03",
+    "end_date": "2026-10-03",
+    "city": "Písek",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2026-10-03",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Smart club"
+  },
+  {
+    "id": "sas-2025-02-15-branickov",
+    "name": "MOTOGUZZY MASAKR!",
+    "event_type": "concert",
+    "start_date": "2025-02-15",
+    "end_date": "2025-02-15",
+    "city": "Braníčkov",
+    "country_code": "CZ",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-02-15",
+        "name": "S.A.S.",
+        "country_code": "CZ",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "Hospoda"
+  },
+  {
+    "id": "sas-2025-02-22-vesely-zdar",
+    "name": "S.A.S.",
+    "start_date": "2025-02-22",
+    "end_date": "2025-02-22",
+    "city": "Veselý Žďár",
+    "country_code": "concert",
+    "venue_id": null,
+    "lineup_completeness": "bandzone_archive",
+    "performances": [
+      {
+        "date": "2025-02-22",
+        "name": "S.A.S.",
+        "country_code": "concert",
+        "band_id": "sas"
+      }
+    ],
+    "source_ids": [
+      "src-sas-bandzone-archive"
+    ],
+    "venue_name": "CZ"
   }
 ]
