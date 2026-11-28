@@ -57,6 +57,8 @@ function kf_detail_extra(string $kind, int $id): array
         'phone' => trim((string)preg_replace('/[^0-9+() \-]/', '', kf_jtext($j, 'phone', 30))),
         'address' => kf_jtext($j, 'address', 200),
         'geo' => $kind === 'venue' ? $geo : null,
+        'google_maps' => $kind === 'venue' ? (kf_safe_url(kf_jtext($j, 'google_maps', 500)) ?? '') : '',
+        'mapy_maps' => $kind === 'venue' ? (kf_safe_url(kf_jtext($j, 'mapy_maps', 500)) ?? '') : '',
         'large' => !empty($j[$flag]),
     ];
 }
