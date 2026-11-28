@@ -27,6 +27,7 @@ Pracovní data se ukládají do JSON souborů. Akce jsou rozdělené podle kalen
 - `research_progress.txt` — checkpoint průzkumu a informace, kde pokračovat.
 - `evidence.json` — registr zdrojů a jednotlivých tvrzení, která zdroje potvrzují.
 - `research_log.txt` — stručný chronologický protokol dokončených dávek a dalších kroků.
+- `band_archive_index.json` — kontrolní seznam zdrojových archivů a ročních počtů položek pro aktuálně zpracovávanou kapelu; slouží ke kontrole, že nebyl přeskočen celý rok nebo část archivu.
 
 Každý soubor s kapelami, místy i akcemi používá pole `aktual`, `ok` a `next`:
 
@@ -90,6 +91,14 @@ V `bands.json/aktual` je vždy jedna právě procházená česká nebo slovensk�
 ## Turné
 
 Turné je samostatný nadřazený záznam se společným názvem. Každá zastávka je vlastní akce v ročníkovém souboru podle data konání, má vlastní datum, místo a line-up. Zastávky mohou být napříč roky. Do turné spojuj pouze akce, u kterých zdroj potvrzuje společné turné; podobný název nebo blízká data nestačí. Globální evidence turné zůstává v `tours.txt`.
+
+## Kontrola úplnosti koncertní historie
+
+- Před zahájením zápisu jedné kapely zjisti všechny dostupné primární a sekundární archivy a zapiš je do `band_archive_index.json`.
+- Každý rok zpracuj celý, ne pouze několik prvních nalezených akcí. Počet položek v kontrolních archivech porovnej s počtem posouzených položek; rozdíly vysvětli (duplicitní záznam, soukromá akce, zrušení, ne koncert apod.).
+- Pokud existují dva nezávislé archivy, použij je ke křížové kontrole. Rozdílné počty nejsou automaticky chybou; každou odlišnost je nutné vysvětlit.
+- Dokud nejsou zkontrolovány všechny roky 2026–2000 a vyřešeny rozdíly v dostupných archivech, kapela zůstává v `bands.json/aktual`.
+- Průběžný stav každého roku zapisuj do `band_archive_index.json` a `research_progress.txt`.
 
 ## Rozsah a úplnost
 
